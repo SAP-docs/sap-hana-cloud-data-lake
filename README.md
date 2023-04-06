@@ -1,13 +1,45 @@
-# @SAP-docs/repository-template
-Default templates of SAP docs' repositories. Provides template files including LICENSE, .reuse/dep5, etc... All repositories on github.com/SAP-docs will be created based on this template.
+[![REUSE status]()]()
 
-# Containing files
+# Contributions to SAP HANA Cloud, Data Lake Documentation
 
-1. The LICENSE file:
-In the most cases, the license of projects in org `/sap-docs` is `CC-BY-4.0`.
+Found a mistake in our documentation? Always wanted to add a step in one of our procedures that could save many others much time? Then you're at the right place! All contributions made to the Markdown files in the [docs](docs) directory are reviewed, and if deemed valuable be added to our [official documentation on SAP Help Portal](https://help.sap.com/docs/SAP_HANA_DATA_LAKE). The easiest way is to start there, and choose _Edit_ to find the right Markdown file to contribute to.
 
-2. The .reuse/dep5 file: 
-The [Reuse Tool](https://reuse.software/) must be used for your open source project. You can find the .reuse/dep5 in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
+You can currently make contributions to the following guides in this repository:
+* [SAP HANA Cloud, Data Lake Developer Guide for Data Lake Relational Engine](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/a894a54d84f21015b142ffe773888f8c)
+* [SAP HANA Cloud, Data Lake SQL Reference for Data Lake Relational Engine](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/19b3964099384f178ad08f2d348232a9)
 
-3. The README.md file (This file):
-Please edit this file as it is the primary description file for your project.
+## Requirements
+
+For contributions, it's required that you have a GitHub account. For more information, see [Signing up for a new GitHub account](https://docs.github.com/en/github/getting-started-with-github/signing-up-for-a-new-github-account) in the GitHub documentation.
+
+
+## Contributing
+
+We recommend using the SAP HANA Cloud, Data Lake documentation on SAP Help Portal as a starting point for contributions:
+
+1. Open one of the guides that support contributions, listed above.
+1. You can either:
+    * Choose *Edit* to suggest a change for the current page you see in the Help Portal viewer, or
+    * Choose *Feedback* to open a GitHub issue in this repository.
+
+If you only make a small contribution, that's the quickest way to propose a change. For larger contributions, we recommend forking this repository to work locally. The filenames in the [docs](docs) directory are created based on the title of the page on SAP Help Portal.
+
+More information: [Contribution Guidelines](https://help.sap.com/products/open-documentation-initiative/contribution-guidelines/readme.html)
+
+## Code of Conduct
+
+Adhere to the [SAP Open Source Code of Conduct](https://github.com/SAP-docs/.github/blob/main/CODE_OF_CONDUCT.md) to ensure a welcoming and open culture for everyone involved in contributions to SAP documentation.
+
+## Licensing
+
+See our [LICENSE](LICENSE) for copyright and license information.
+
+
+
+
+
+
+
+
+
+
