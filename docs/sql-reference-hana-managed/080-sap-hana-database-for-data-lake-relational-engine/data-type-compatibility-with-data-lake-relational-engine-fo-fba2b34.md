@@ -1,0 +1,652 @@
+<!-- loiofba2b34b411f418e9cf7e35974a35199 -->
+
+# Data Type Compatibility with Data Lake Relational Engine for CREATE VIRTUAL TABLE Statement in SAP HANA Database
+
+The WITH REMOTE clause, in the SAP HANA database CREATE VIRTUAL TABLE statement, lets you create a physical table in data lake Relational Engine and an SAP HANA Database virtual table pointing to the data lake Relational Engine table in one step.
+
+
+
+Since the CREATE VIRTUAL TABLE statement is an SAP HANA database statement, when you define the columns of the data lake Relational Engine physical table, you must specify SAP HANA database data types. In the event an SAP HANA database data type isn't supported in data lake Relational Engine, where possible, SAP HANA database automatically substitutes an equivalent data lake Relational Engine data type in the physical table.
+
+
+
+For example, the SAP HANA database data type SECONDATE is not supported in data lake Relational Engine, but data lake Relational Engine does support the data type TIMESTAMP, which is equivalent to SECONDATE. So, in the data lake Relational Engine physical table, SAP HANA database automatically substitutes TIMESTAMP for SECONDATE.
+
+In the event no equivalent data type is available, the SAP HANA database CREATE VIRTUAL TABLE statement fails and neither the data lake Relational Engine physical table, nor the SAP HANA database virtual table are created.
+
+Use this table to understand the data type mapping between SAP HANA database and data lake Relational Engine when using the SAP HANA database CREATE VIRTUAL TABLE statement.
+
+
+
+
+<table>
+<tr>
+<th valign="top">
+
+Data Type Classification
+
+
+
+</th>
+<th valign="top">
+
+SAP HANA Database Data Type
+
+
+
+</th>
+<th valign="top">
+
+Supports a Matching Data Type in Data Lake Relational Engine Virtual Tables?
+
+
+
+</th>
+<th valign="top">
+
+If No, What Data Type Is Substituted in Data Lake Relational Engine Virtual Tables?
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+Binary
+
+
+
+</td>
+<td valign="top">
+
+BLOB
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+LONG BINARY
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+VARBINARY
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+N/A
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+VARBINARY\(*<n\>*\)
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+N/A
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+BOOLEAN
+
+
+
+</td>
+<td valign="top">
+
+BOOLEAN
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+BIT
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="3">
+
+Character
+
+
+
+</td>
+<td valign="top">
+
+CLOB
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+LONG NVARCHAR
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NCLOB
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+LONG NVARCHAR
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NVARCHAR and its alias VARCHAR
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+VARCHAR \(n CHAR\)
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="4">
+
+Datetime
+
+
+
+</td>
+<td valign="top">
+
+DATE
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+N/A
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SECONDDATE
+
+
+
+</td>
+<td valign="top">
+
+ 
+
+
+
+</td>
+<td valign="top">
+
+DATETIMEX
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+TIME
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+N/A
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+TIMESTAMP
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+N/A
+
+SAP HANA Database supports 7 digits of subsecond precision for the TIMESTAMP data type, while Data Lake Relational Engine only supports 6 digits. Therefore, when the SAP HANA Database TIMESTAMP data type is replaced with a Data Lake Relational Engine TIMESTAMP data type, the last digit of precision from SAP HANA Database is lost.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="9">
+
+Numeric
+
+
+
+</td>
+<td valign="top">
+
+SMALLDECIMAL
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+DECIMAL
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+BIGINT
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+N/A
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+DECIMAL and DECIMAL\(*<p\>*,*<s\>*\)
+
+
+
+</td>
+<td valign="top">
+
+No - DECIMAL with no precision
+
+Yes - DECIMAL with precision
+
+
+
+</td>
+<td valign="top">
+
+DECIMAL with no precision and scale is not supported.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+REAL
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+FLOAT
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+FLOAT
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+DOUBLE
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+DOUBLE
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+N/A
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+TINYINT
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+N/A
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SMALLINT
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+N/A
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+INTEGER or INT
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+N/A
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="4">
+
+Other
+
+
+
+</td>
+<td valign="top">
+
+BOOLEAN
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+Not supported
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ST\_GEOMETRY
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+Not supported
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ST\_POINT
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+Not supported
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ARRAY
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+Not supported
+
+
+
+</td>
+</tr>
+</table>
+

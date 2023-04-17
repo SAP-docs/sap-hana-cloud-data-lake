@@ -1,0 +1,50 @@
+<!-- loio74de36ec9d494ef5a2b4b0bf95536805 -->
+
+# LAST USER Special Value in Data Lake Relational Engine \(SAP HANA DB-Managed\)
+
+Returns the name of the user who last modified the row.
+
+
+
+> ### Restriction:  
+> Data lake Relational Engine \(SAP HANA DB-Managed\) special values can be used when connected as follows:
+> 
+> -   To use a special value as a column default when creating a table, you must be:
+>     -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
+> 
+>         -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](../030-sql-statements/remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+> 
+> 
+> -   To return an expression as part of a SELECT statement that returns a value, you must be:
+>     -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXEUCTE\_QUERY function.
+>         -   For information on using the REMOTE\_EXECUTE\_QUERY procedure, see [Query Using the REMOTE_EXECUTE_QUERY procedure in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/4192f252c2af4136aebadbd1a806b139.html "Use the REMOTE_EXECUTE_QUERY procedure to execute SELECT queries on data lake Relational Engine objects without using an SAP HANA database virtual table in the query.") :arrow_upper_right:.
+
+
+
+<a name="loio74de36ec9d494ef5a2b4b0bf95536805__section_vrg_3qr_btb"/>
+
+## Data Type
+
+STRING
+
+
+
+<a name="loio74de36ec9d494ef5a2b4b0bf95536805__section_tsp_3qr_btb"/>
+
+## Remarks
+
+On INSERT and LOAD, this constant has the same effect as CURRENT USER. On UPDATE, if a column with a default value of LAST USER is not explicitly modified, it is changed to the name of the current user.
+
+When combined with the DEFAULT TIMESTAMP, a default value of LAST USER can be used to record \(in separate columns\) both the user and the date and time a row was last changed.
+
+LAST USER can be used as a default value in columns with character data types.
+
+**Related Information**  
+
+
+[CURRENT TIMESTAMP Special Value in Data Lake Relational Engine \(SAP HANA DB-Managed\)](current-timestamp-special-value-in-data-lake-relational-engine-sap-hana-db-managed-4bbfdd6.md "Combines CURRENT DATE and CURRENT TIME to form a TIMESTAMP value containing the year, month, day, hour, minute, second, and fraction of a second.")
+
+[CURRENT USER Special Value in Data Lake Relational Engine \(SAP HANA DB-Managed\)](current-user-special-value-in-data-lake-relational-engine-sap-hana-db-managed-336e6f1.md "Returns a string that contains the user ID of the current connection.")
+
+[USER Special Value in Data Lake Relational Engine \(SAP HANA DB-Managed\)](user-special-value-in-data-lake-relational-engine-sap-hana-db-managed-8eda34d.md "Returns a string that contains the user ID of the current connection.")
+

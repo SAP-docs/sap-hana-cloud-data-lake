@@ -1,0 +1,360 @@
+<!-- loio7a370d0d94cb4061a4de45b28ddbac36 -->
+
+# WEIGHTED\_AVG Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)
+
+Calculates an arithmetically \(or linearly\) weighted average.
+
+
+
+```
+WEIGHTED_AVG (<expression>) OVER (<window-spec>)
+```
+
+
+
+<a name="loio7a370d0d94cb4061a4de45b28ddbac36__section_bfb_tdv_vrb"/>
+
+## Parameters
+
+ *<expression\>*
+ :   A numeric expression for which a weighted value is being computed.
+
+  *<window-spec\>*
+ :   Specified when using this function as a window function.
+
+ 
+
+<a name="loio7a370d0d94cb4061a4de45b28ddbac36__section_al5_tdv_vrb"/>
+
+## Remarks
+
+A weighted average is an average in which each quantity to be averaged is assigned a weight. Weightings determine the relative importance of each quantity that make up the average.
+
+Use the `WEIGHTED_AVG` function to create a weighted moving average. In a weighted moving average, weights decrease arithmetically over time. Weights decrease from the highest weight for the most recent data points, down to zero.
+
+   
+  
+**WEIGHTED\_AVG Calculation**
+
+![WEIGHTED_AVG calculation](images/weighted_avg_gif_a16ffb9.gif "WEIGHTED_AVG Calculation")
+
+To exaggerate the weighting, you can average two or more weighted moving averages together, or use an `EXP_WEIGHTED_AVG` function instead.
+
+The *<window-spec\>* parameter represents usage as a window function in a `SELECT` statement. As such, you can specify elements of *<window-spec\>* either in the function syntax \(inline\), or with a `WINDOW` clause in the `SELECT` statement.
+
+-   Must contain an ORDER BY specifier.
+-   Cannot contain FOLLOWING or RANGE specifiers.
+-   The second argument of the ROW specifier — if provided — must be CURRENT ROW.
+-   Cannot contain NULL values.
+-   Cannot contain the DISTINCT specifier.
+-   UNBOUNDED PRECEDING is supported, but may result in poor performance if used
+
+
+
+<a name="loio7a370d0d94cb4061a4de45b28ddbac36__section_b5j_5dv_vrb"/>
+
+## Standards and Compatibility
+
+-   SQL – vendor extension to ISO/ANSI SQL grammar
+
+
+
+<a name="loio7a370d0d94cb4061a4de45b28ddbac36__section_v55_5dv_vrb"/>
+
+## Example
+
+The following example returns a weighted average of salaries by department for employees in Florida, with the salary of recently hired employees contributing the most weight to the average:
+
+```
+SELECT DepartmentID, Surname, Salary,
+WEIGHTED_AVG(Salary) OVER (PARTITION BY DepartmentID
+ORDER BY YEAR(StartDate) DESC) as "W_AVG"
+FROM Employees
+WHERE State IN ('FL') ORDER BY DepartmentID
+```
+
+The returned result set is:
+
+
+<table>
+<tr>
+<th valign="top" rowspan="1">
+
+DepartmentID
+
+
+
+</th>
+<th valign="top" rowspan="1">
+
+Surname
+
+
+
+</th>
+<th valign="top" rowspan="1">
+
+Salary
+
+
+
+</th>
+<th valign="top" rowspan="1">
+
+W\_AVG
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top" rowspan="1">
+
+100
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+Lull
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+87,900.000
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+87,900.000000
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="1">
+
+100
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+Gowda
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+59,840.000
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+69,193.333333
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="1">
+
+200
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+Sterling
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+64,900.000
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+64,900.000000
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="1">
+
+200
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+Kelly
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+87,500.000
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+79,966.666667
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="1">
+
+300
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+Litton
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+58,930.000
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+58,930.000000
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="1">
+
+400
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+Evans
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+68,940.000
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+68,940.000000
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="1">
+
+400
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+Charlton
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+28,300.000
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+41,846.666667
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="1">
+
+400
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+Francis
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+53,870.000
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+47,858.333333
+
+
+
+</td>
+</tr>
+</table>
+
+**Related Information**  
+
+
+[WINDOW Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/window-clause-for-data-lake-relational-engine-sap-hana-db-managed-c83b61b.md "Defines all or part of a window for use with window functions such as AVG and RANK in a SELECT statement.")
+
+[EXP\_WEIGHTED\_AVG Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](exp-weighted-avg-function-for-data-lake-relational-engine-sap-hana-db-managed-ac831a0.md "Calculates an exponential weighted moving average. Weightings determine the relative importance of each quantity that makes up the average.")
+
+[WEIGHTED_AVG Function [Aggregate] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a590e30584f210158df8d2242a037242.html "Calculates an arithmetically (or linearly) weighted average.") :arrow_upper_right:
+
