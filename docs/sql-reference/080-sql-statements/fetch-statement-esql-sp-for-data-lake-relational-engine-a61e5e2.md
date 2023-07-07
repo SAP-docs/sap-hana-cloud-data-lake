@@ -6,11 +6,6 @@ Retrieves one row from the named cursor. The cursor must have been previously op
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -33,66 +28,193 @@ FETCH
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa61e5e2484f2101598b898b5613275f6__IQ_Parameters"/>
 
 ## Parameters
 
- NEXT
- :   \(Default\) Causes the cursor to advance one row before the row is fetched.
 
-  PRIOR
- :   Moves the cursor back one row before fetching.
+<dl>
+<dt><b>
 
-  ABSOLUTE *<row-count\>*
- :   Used to go to a particular row. A zero indicates the position before the first row.
+NEXT
 
-    A one \(1\) indicates the first row, and so on. Negative numbers are used to specify an absolute position from the end of the cursor. A negative one \(-1\) indicates the last row of the cursor. FIRST is a short form for ABSOLUTE 1. LAST is a short form for ABSOLUTE -1.
+</b></dt>
+<dd>
 
-    > ### Note:  
-    > Data lake Relational Engine handles the FIRST, LAST, ABSOLUTE, and negative RELATIVE clauses less efficiently than some other DBMS products, so there is a performance impact when using them.
+\(Default\) Causes the cursor to advance one row before the row is fetched.
 
-  RELATIVE
- :   Moves the cursor by a specified number of rows in either direction before fetching.
 
-    A positive number indicates moving forward and a negative number indicates moving backwards. Thus, a NEXT is equivalent to RELATIVE 1 and PRIOR is equivalent to RELATIVE -1. RELATIVE 0 retrieves the same row as the last fetch statement on this cursor.
 
-  *<row-count\>*
- :   Number or host variable
+</dd><dt><b>
 
-  *<cursor-name\>*
- :   Identifier or host variable
+PRIOR
 
-  INTO *<host-variable-list\>*
- :   \(Embedded SQL only\) May contain indicator variables
+</b></dt>
+<dd>
 
-  USING DESCRIPTOR *<sqlda-name\>*
- :   \(Embedded SQL only\) Identifier
+Moves the cursor back one row before fetching.
 
-  *<fetch-count\>*
- :   Integer or host variable
 
-  INTO *<variable-list\>*
- :   If it is not specified, then `FETCH` positions the cursor only .OPEN initially positions the cursor before the first row. An optional positional parameter can be specified that allows the cursor to be moved before a row is fetched.
 
-  PURGE
- :   \(Embedded SQL only\) Causes the client to flush its buffers of all rows and then send the fetch request to the server. This fetch request may return a block of rows.
+</dd><dt><b>
 
-  BLOCK *<n\>*
- :   \(Embedded SQL only\) Gives the client and server a hint as to how many rows may be fetched by the application. The special value of 0 means the request is sent to the server and a single row is returned \(no row blocking\).
+ABSOLUTE *<row-count\>*
 
-  ARRAY *<fetch-count\>*
- :   \(Embedded SQL only\) Allows wide fetches, which retrieve more than one row at a time, and which might improve performance. To use wide fetches in Embedded SQL, include the `FETCH` statement in your code, where `ARRAY nnn` is the last item of the `FETCH` statement:
+</b></dt>
+<dd>
 
-    ```
-    EXEC SQL FETCH . . . ARRAY nnn
-    ```
+Used to go to a particular row. A zero indicates the position before the first row.
 
-    The fetch count nnn can be a host variable. The SQLDA must contain nnn \* \(columns per row\) variables. The first row is placed in SQLDA variables 0 to \(columns per row\) -1, and so on.
+A one \(1\) indicates the first row, and so on. Negative numbers are used to specify an absolute position from the end of the cursor. A negative one \(-1\) indicates the last row of the cursor. FIRST is a short form for ABSOLUTE 1. LAST is a short form for ABSOLUTE -1.
 
-  IQ CACHE *<row-count\>*
- :   Specifies the maximum number of rows buffered in the FIFO queue. If you do not specify a value for IQ CACHE, the value of the `CURSOR_WINDOW_ROWS` database option is used. The default setting of `CURSOR_WINDOW_ROWS` is 200.
+> ### Note:  
+> Data lake Relational Engine handles the FIRST, LAST, ABSOLUTE, and negative RELATIVE clauses less efficiently than some other DBMS products, so there is a performance impact when using them.
 
- 
+
+
+</dd><dt><b>
+
+RELATIVE
+
+</b></dt>
+<dd>
+
+Moves the cursor by a specified number of rows in either direction before fetching.
+
+A positive number indicates moving forward and a negative number indicates moving backwards. Thus, a NEXT is equivalent to RELATIVE 1 and PRIOR is equivalent to RELATIVE -1. RELATIVE 0 retrieves the same row as the last fetch statement on this cursor.
+
+
+
+</dd><dt><b>
+
+*<row-count\>*
+
+</b></dt>
+<dd>
+
+Number or host variable
+
+
+
+</dd><dt><b>
+
+*<cursor-name\>*
+
+</b></dt>
+<dd>
+
+Identifier or host variable
+
+
+
+</dd><dt><b>
+
+INTO *<host-variable-list\>*
+
+</b></dt>
+<dd>
+
+\(Embedded SQL only\) May contain indicator variables
+
+
+
+</dd><dt><b>
+
+USING DESCRIPTOR *<sqlda-name\>*
+
+</b></dt>
+<dd>
+
+\(Embedded SQL only\) Identifier
+
+
+
+</dd><dt><b>
+
+*<fetch-count\>*
+
+</b></dt>
+<dd>
+
+Integer or host variable
+
+
+
+</dd><dt><b>
+
+INTO *<variable-list\>*
+
+</b></dt>
+<dd>
+
+If it is not specified, then `FETCH` positions the cursor only .OPEN initially positions the cursor before the first row. An optional positional parameter can be specified that allows the cursor to be moved before a row is fetched.
+
+
+
+</dd><dt><b>
+
+PURGE
+
+</b></dt>
+<dd>
+
+\(Embedded SQL only\) Causes the client to flush its buffers of all rows and then send the fetch request to the server. This fetch request may return a block of rows.
+
+
+
+</dd><dt><b>
+
+BLOCK *<n\>*
+
+</b></dt>
+<dd>
+
+\(Embedded SQL only\) Gives the client and server a hint as to how many rows may be fetched by the application. The special value of 0 means the request is sent to the server and a single row is returned \(no row blocking\).
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+ARRAY *<fetch-count\>*
+
+</b></dt>
+<dd>
+
+\(Embedded SQL only\) Allows wide fetches, which retrieve more than one row at a time, and which might improve performance. To use wide fetches in Embedded SQL, include the `FETCH` statement in your code, where `ARRAY nnn` is the last item of the `FETCH` statement:
+
+```
+EXEC SQL FETCH . . . ARRAY nnn
+```
+
+The fetch count nnn can be a host variable. The SQLDA must contain nnn \* \(columns per row\) variables. The first row is placed in SQLDA variables 0 to \(columns per row\) -1, and so on.
+
+
+
+</dd><dt><b>
+
+IQ CACHE *<row-count\>*
+
+</b></dt>
+<dd>
+
+Specifies the maximum number of rows buffered in the FIFO queue. If you do not specify a value for IQ CACHE, the value of the `CURSOR_WINDOW_ROWS` database option is used. The default setting of `CURSOR_WINDOW_ROWS` is 200.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61e5e2484f2101598b898b5613275f6__IQ_Usage"/>
 

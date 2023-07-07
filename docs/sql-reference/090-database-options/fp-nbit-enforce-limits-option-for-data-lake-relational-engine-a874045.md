@@ -189,7 +189,7 @@ Using sp\_iqrebuildindex to increase the number of distinct values beyond curren
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[FP_NBIT_ENFORCE_LIMITS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/2e6a10d296ec4bd6a7209e65e0171171.html "Enforces sizing limits for explicit and implicit NBit columns.") :arrow_upper_right:
+[FP_NBIT_ENFORCE_LIMITS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/2e6a10d296ec4bd6a7209e65e0171171.html "Enforces sizing limits for explicit and implicit NBit columns.") :arrow_upper_right:
 
 [FP\_NBIT\_AUTOSIZE\_LIMIT Option for Data Lake Relational Engine](fp-nbit-autosize-limit-option-for-data-lake-relational-engine-a873755.md "Limits the number of distinct values in columns that implicitly load as NBit FP.")
 

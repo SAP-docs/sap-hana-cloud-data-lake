@@ -6,11 +6,6 @@ Replaces an existing procedure with a modified version. Include the entire modif
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -19,13 +14,8 @@ Replaces an existing procedure with a modified version. Include the entire modif
 
 
 ```
-ALTER PROCEDURE [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) { [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] } (span].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <procedure-name> (varname] 
-   { [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <procedure-definition> (varname]
+ALTER PROCEDURE [ { <owner> | <schema-name> }.]<procedure-name> 
+   { <procedure-definition>
    | REPLICATE { ON | OFF }
    | SET HIDDEN
    | RECOMPILE }
@@ -33,32 +23,82 @@ ALTER PROCEDURE [ [/pandoc/div/div/horizontalrule/codeblock/span/span
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa612e25a84f210158dbcdec111da3e96__alter_proc_parameters1"/>
 
 ## Parameters
 
- REPLICATE \{ ON | OFF \}
- :   If a procedure needs to be relocated to other sites using SAP Replication Server, use the REPLICATE ON clause.
 
-  SET HIDDEN
- :   To obfuscate the definition of the associated procedure and cause it to become unreadable. The procedure can be unloaded and reloaded into other databases.
+<dl>
+<dt><b>
 
-    > ### Caution:  
-    > This setting is irreversible. You should retain the original procedure definition outside of the database.
+REPLICATE \{ ON | OFF \}
 
-  RECOMPILE
- :   Recompiles a stored procedure. When you recompile a procedure, the definition stored in the catalog is re-parsed and the syntax is verified. The procedure definition is not changed by recompiling. You can recompile procedures with definitions hidden with the SET HIDDEN clause, but their definitions remain hidden.
+</b></dt>
+<dd>
 
-  RESULT
- :   For procedures that generate a result set, but do not include a RESULT clause, the database server attempts to determine the result set characteristics for the procedure and stores the information in the catalog. This can be useful if a table referenced by the procedure has been altered to add, remove, or rename columns since the procedure was created.
+If a procedure needs to be relocated to other sites using SAP Replication Server, use the REPLICATE ON clause.
 
-  *<environment-name\>*
- :   DISALLOW is the default. ALLOW indicates that server-side connections are allowed.
 
-    > ### Note:  
-    > -   Do not specify ALLOW unless necessary. Use of the ALLOW clause slows down certain types of data lake Relational Engine table joins.
 
- 
+</dd><dt><b>
+
+SET HIDDEN
+
+</b></dt>
+<dd>
+
+To obfuscate the definition of the associated procedure and cause it to become unreadable. The procedure can be unloaded and reloaded into other databases.
+
+> ### Caution:  
+> This setting is irreversible. You should retain the original procedure definition outside of the database.
+
+
+
+</dd><dt><b>
+
+RECOMPILE
+
+</b></dt>
+<dd>
+
+Recompiles a stored procedure. When you recompile a procedure, the definition stored in the catalog is re-parsed and the syntax is verified. The procedure definition is not changed by recompiling. You can recompile procedures with definitions hidden with the SET HIDDEN clause, but their definitions remain hidden.
+
+
+
+</dd><dt><b>
+
+RESULT
+
+</b></dt>
+<dd>
+
+For procedures that generate a result set, but do not include a RESULT clause, the database server attempts to determine the result set characteristics for the procedure and stores the information in the catalog. This can be useful if a table referenced by the procedure has been altered to add, remove, or rename columns since the procedure was created.
+
+
+
+</dd><dt><b>
+
+*<environment-name\>*
+
+</b></dt>
+<dd>
+
+DISALLOW is the default. ALLOW indicates that server-side connections are allowed.
+
+> ### Note:  
+> -   Do not specify ALLOW unless necessary. Use of the ALLOW clause slows down certain types of data lake Relational Engine table joins.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa612e25a84f210158dbcdec111da3e96__alter_proc_remarks1"/>
 
@@ -111,7 +151,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
 
-[ALTER PROCEDURE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/96adbf340029431f89eac847e1068eac.html "Replaces an existing procedure with a modified version. Include the entire modified procedure in the ALTER PROCEDURE statement, and reassign user permissions on the procedure.") :arrow_upper_right:
+[ALTER PROCEDURE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/96adbf340029431f89eac847e1068eac.html "Replaces an existing procedure with a modified version. Include the entire modified procedure in the ALTER PROCEDURE statement, and reassign user permissions on the procedure.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

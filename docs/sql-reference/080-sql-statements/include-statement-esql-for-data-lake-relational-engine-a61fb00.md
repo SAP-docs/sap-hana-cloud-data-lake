@@ -6,8 +6,7 @@ Includes a file into a source program to be scanned by the SQL source language p
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -24,14 +23,32 @@ INCLUDE <filename>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa61fb00f84f21015a3cfb4fb0db739ea__IQ_Parameters"/>
 
 ## Parameters
 
- *<filename\>*
- :   Identifier
 
- 
+<dl>
+<dt><b>
+
+*<filename\>*
+
+</b></dt>
+<dd>
+
+Identifier
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61fb00f84f21015a3cfb4fb0db739ea__IQ_Usage"/>
 

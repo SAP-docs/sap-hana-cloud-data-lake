@@ -16,13 +16,34 @@ REPLICATE ( <string-expression>, <integer-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string to be repeated.
 
-  *<integer-expression\>*
- :   The number of times the string is to be repeated.
+<dl>
+<dt><b>
 
- 
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string to be repeated.
+
+
+
+</dd><dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number of times the string is to be repeated.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa57a156384f2101597df9d785635d3b0__REPLICATE_returns1"/>
 
@@ -70,5 +91,5 @@ SELECT REPLICATE( 'repeat', 3 ) FROM iq_dummy
 
 [REPLACE Function \[String\] for Data Lake Relational Engine](replace-function-string-for-data-lake-relational-engine-a579952.md "Replaces all occurrences of a substring with another substring.")
 
-[REPLICATE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/1cb52e270b6c4ce4bc6ed9a00e09af0f.html "Concatenates a string a specified number of times.") :arrow_upper_right:
+[REPLICATE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/1cb52e270b6c4ce4bc6ed9a00e09af0f.html "Concatenates a string a specified number of times.") :arrow_upper_right:
 

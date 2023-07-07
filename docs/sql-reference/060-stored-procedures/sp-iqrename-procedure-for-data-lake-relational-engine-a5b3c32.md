@@ -23,28 +23,57 @@ sp_iqrename <object-name>, <new-name> [, <object-type> ]
 
 ## Parameters
 
- *<object-name\>*
- :   The original name of the user-created object.
 
-    Optionally, *<owner-name\>* can be specified as part of *<object-name\>* as *<owner-name.object-name\>*, where *<owner-name\>* is the name of the owner of the object being renamed. If *<owner-name\>* is not specified, the user calling sp\_iqrename is assumed to be the owner of the object. The object is successfully renamed only if the user calling sp\_iqrename has the required privileges to rename the object.
+<dl>
+<dt><b>
 
-    If the object to be renamed is a column, index, or constraint, you must specify the name of the table with which the object is associated. For a column, index, or constraint, *<object-name\>* can be of the form *<table-name.object-name\>* or *<owner-name.table-name.object-name\>*.
+*<object-name\>*
 
-  *<new-name\>*
- :   The new name of the object. The name must conform to the rules for identifiers and must be unique for the type of object being renamed.
+</b></dt>
+<dd>
 
-  *<object-type\>*
- :   \(Optional\) A parameter that specifies the type of the user-created object being renamed, that is, the type of the object *<object-name\>*. The *<object-type\>* parameter can be specified in either upper or lowercase.
+The original name of the user-created object.
 
-    Valid values are:
+Optionally, *<owner-name\>* can be specified as part of *<object-name\>* as *<owner-name.object-name\>*, where *<owner-name\>* is the name of the owner of the object being renamed. If *<owner-name\>* is not specified, the user calling sp\_iqrename is assumed to be the owner of the object. The object is successfully renamed only if the user calling sp\_iqrename has the required privileges to rename the object.
 
-    -   column – object being renamed is a column.
-    -   index – object being renamed is an index.
-    -   constraint – object being renamed is a unique, primary key, check, or referential \(foreign key\) constraint.
-    -   procedure – object being renamed is a function.
-    -   object-type not specified – object being renamed is a table.
+If the object to be renamed is a column, index, or constraint, you must specify the name of the table with which the object is associated. For a column, index, or constraint, *<object-name\>* can be of the form *<table-name.object-name\>* or *<owner-name.table-name.object-name\>*.
 
- > ### Caution:  
+
+
+</dd><dt><b>
+
+*<new-name\>*
+
+</b></dt>
+<dd>
+
+The new name of the object. The name must conform to the rules for identifiers and must be unique for the type of object being renamed.
+
+
+
+</dd><dt><b>
+
+*<object-type\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) A parameter that specifies the type of the user-created object being renamed, that is, the type of the object *<object-name\>*. The *<object-type\>* parameter can be specified in either upper or lowercase.
+
+Valid values are:
+
+-   column – object being renamed is a column.
+-   index – object being renamed is an index.
+-   constraint – object being renamed is a unique, primary key, check, or referential \(foreign key\) constraint.
+-   procedure – object being renamed is a function.
+-   object-type not specified – object being renamed is a table.
+
+
+
+</dd>
+</dl>
+
+> ### Caution:  
 > The sp\_iqrename procedure does not automatically update the definitions of dependent objects. You need to change these definitions manually.
 
 
@@ -67,20 +96,13 @@ You can also rename using the RENAME clause of the ALTER TABLE statement and ALT
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure and exclusive access to any object referenced by the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). If you own the object referenced by the procedure, no additional privilege is required. 
+Requires EXECUTE object-level privilege on the procedure. If you own the object referenced by the procedure, no additional privilege is required. 
 
-For objects owned by others, additional privileges are needed, depending on the object type.
+For objects owned by others, additional privileges are required, depending on the object type being renamed.
 
 
 <table>
 <tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
 <th valign="top">
 
 Task Allowed
@@ -90,27 +112,13 @@ Task Allowed
 </th>
 <th valign="top">
 
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
+Privilege Name
 
 
 
 </th>
 </tr>
 <tr>
-<td valign="top">
-
-ALTER ANY OBJECT
-
-
-
-</td>
 <td valign="top">
 
 Rename any object.
@@ -118,29 +126,15 @@ Rename any object.
 
 
 </td>
-<td valign="top" rowspan="3">
+<td valign="top">
 
-System privileges
-
-
-
-</td>
-<td valign="top" rowspan="3">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
+ALTER ANY OBJECT system privilege
 
 
 
 </td>
 </tr>
 <tr>
-<td valign="top">
-
-ALTER ANY TABLE
-
-
-
-</td>
 <td valign="top">
 
 Rename any table, column or constraint.
@@ -148,15 +142,15 @@ Rename any table, column or constraint.
 
 
 </td>
-</tr>
-<tr>
 <td valign="top">
 
-ALTER ANY INDEX
+ALTER ANY TABLE system privilege
 
 
 
 </td>
+</tr>
+<tr>
 <td valign="top">
 
 Rename any index, but not tables or columns.
@@ -164,15 +158,15 @@ Rename any index, but not tables or columns.
 
 
 </td>
-</tr>
-<tr>
 <td valign="top">
 
-REFERENCES privilege on the table
+ALTER ANY INDEX system privilege
 
 
 
 </td>
+</tr>
+<tr>
 <td valign="top">
 
 Rename indexes of that table only.
@@ -180,16 +174,9 @@ Rename indexes of that table only.
 
 
 </td>
-<td valign="top" rowspan="2">
+<td valign="top">
 
-Object-level privileges
-
-
-
-</td>
-<td valign="top" rowspan="2">
-
-[GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md)
+REFERENCES object-level privilege on the table
 
 
 
@@ -198,14 +185,14 @@ Object-level privileges
 <tr>
 <td valign="top">
 
-ALTER privilege on the table
+Rename that table, its columns, and constraints only.
 
 
 
 </td>
 <td valign="top">
 
-Rename that table, its columns, and constraints only.
+ALTER object-level privilege on the table
 
 
 

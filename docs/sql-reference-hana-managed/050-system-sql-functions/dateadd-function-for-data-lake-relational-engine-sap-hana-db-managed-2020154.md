@@ -16,16 +16,45 @@ DATEADD ( <date-part>, <numeric-expression>, <date-expression> )
 
 ## Parameters
 
- *<date-part\>*
- :   The date part to be added to the date.
 
-  *<numeric-expression\>*
- :   The number of date parts to be added to the date. *<numeric-expression\>* can be any numeric type; the value is truncated to an integer. The maximum microsecond in *<numeric-expression\>* is 2147483647, that is, 35:47.483647 \(35 minutes 47 seconds 483647 microseconds\).
+<dl>
+<dt><b>
 
-  *<date-expression\>*
- :   The date expression in the format `{ date | time | timestamp }`.
+*<date-part\>*
 
- 
+</b></dt>
+<dd>
+
+The date part to be added to the date.
+
+
+
+</dd><dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The number of date parts to be added to the date. *<numeric-expression\>* can be any numeric type; the value is truncated to an integer. The maximum microsecond in *<numeric-expression\>* is 2147483647, that is, 35:47.483647 \(35 minutes 47 seconds 483647 microseconds\).
+
+
+
+</dd><dt><b>
+
+*<date-expression\>*
+
+</b></dt>
+<dd>
+
+The date expression in the format `{ date | time | timestamp }`.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio202015428c2c49239a2aec8d572a0613__section_qkn_bgm_srb"/>
 

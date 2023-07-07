@@ -22,13 +22,34 @@ WITHIN GROUP ( ORDER BY <expression2> [ ASC | DESC ] )
 
 ## Parameters
 
- *<expression1\>*
- :   A constant of numeric data type and range from 0 to 1 \(inclusive\). If the argument is NULL, then a “wrong argument for percentile” error is returned. If the argument value is less than 0 or greater than 1, then a “data value out of range” error is returned.
 
-  *<expression2\>*
- :   A sort specification that must be a single expression involving a column reference. Multiple expressions are not allowed and no rank analytical functions, set functions, or subqueries are allowed in this sort expression.
+<dl>
+<dt><b>
 
- 
+*<expression1\>*
+
+</b></dt>
+<dd>
+
+A constant of numeric data type and range from 0 to 1 \(inclusive\). If the argument is NULL, then a “wrong argument for percentile” error is returned. If the argument value is less than 0 or greater than 1, then a “data value out of range” error is returned.
+
+
+
+</dd><dt><b>
+
+*<expression2\>*
+
+</b></dt>
+<dd>
+
+A sort specification that must be a single expression involving a column reference. Multiple expressions are not allowed and no rank analytical functions, set functions, or subqueries are allowed in this sort expression.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa56e219484f21015b3a4f46749d3faf5__PERCENTILE_DISC_remarks1"/>
 
@@ -104,5 +125,5 @@ South            500
 **Related Information**  
 
 
-[PERCENTILE_DISC Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/bebc33271f5545ff9e6a7fe0bb25b608.html "Given a percentile, returns the value that corresponds to that percentile. Assumes a discrete distribution data model.") :arrow_upper_right:
+[PERCENTILE_DISC Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/bebc33271f5545ff9e6a7fe0bb25b608.html "Given a percentile, returns the value that corresponds to that percentile. Assumes a discrete distribution data model.") :arrow_upper_right:
 

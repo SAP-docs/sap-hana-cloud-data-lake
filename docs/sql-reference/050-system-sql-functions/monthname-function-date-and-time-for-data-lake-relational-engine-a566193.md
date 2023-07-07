@@ -16,10 +16,23 @@ MONTHNAME ( <date-expression> )
 
 ## Parameters
 
- *<date-expression\>*
- :   The datetime value.
 
- 
+<dl>
+<dt><b>
+
+*<date-expression\>*
+
+</b></dt>
+<dd>
+
+The datetime value.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa566193184f2101587e8896021cbc6c7__MONTHNAME_returns1"/>
 
@@ -50,5 +63,5 @@ SELECT MONTHNAME( '1998-09-05' ) FROM iq_dummy
 **Related Information**  
 
 
-[MONTHNAME Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/2a2b0c17b30f48c296c26c8fb26c7ace.html "Returns the name of the month from the specified date expression.") :arrow_upper_right:
+[MONTHNAME Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/2a2b0c17b30f48c296c26c8fb26c7ace.html "Returns the name of the month from the specified date expression.") :arrow_upper_right:
 

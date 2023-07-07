@@ -16,19 +16,56 @@ BYTE_STUFF( <source_string> , <start_position> , <length> , <insert_string> )
 
 ## Parameters
 
-  *<source\_string\>* 
- :   The byte string to be modified by the BYTE\_STUFF function. *<source\_string\>* can be any length.
 
-   *<start\_position\>* 
- :   The byte position at which to begin deleting bytes. The first byte in the string is position 1.
+<dl>
+<dt><b>
 
-   *<length\>* 
- :   The number of bytes to delete.
+ *<source\_string\>* 
 
-   *<insert\_string\>* 
- :   The string to be inserted. To delete a portion of a string using the BYTE\_STUFF function, use a NULL replacement string.
+</b></dt>
+<dd>
 
- 
+The byte string to be modified by the BYTE\_STUFF function. *<source\_string\>* can be any length.
+
+
+
+</dd><dt><b>
+
+ *<start\_position\>* 
+
+</b></dt>
+<dd>
+
+The byte position at which to begin deleting bytes. The first byte in the string is position 1.
+
+
+
+</dd><dt><b>
+
+ *<length\>* 
+
+</b></dt>
+<dd>
+
+The number of bytes to delete.
+
+
+
+</dd><dt><b>
+
+ *<insert\_string\>* 
+
+</b></dt>
+<dd>
+
+The string to be inserted. To delete a portion of a string using the BYTE\_STUFF function, use a NULL replacement string.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio538f342383bd4520a088b814fc76ac65__section_brx_1dl_srb"/>
 

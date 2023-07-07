@@ -241,16 +241,45 @@ TINYINT
 
 The type of refresh. One of:
 
- 1
- :   MANUAL
 
-  2
- :   AUTO
+<dl>
+<dt><b>
 
-  3
- :   IMMEDIATE
+1
 
- 
+</b></dt>
+<dd>
+
+MANUAL
+
+
+
+</dd><dt><b>
+
+2
+
+</b></dt>
+<dd>
+
+AUTO
+
+
+
+</dd><dt><b>
+
+3
+
+</b></dt>
+<dd>
+
+IMMEDIATE
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>

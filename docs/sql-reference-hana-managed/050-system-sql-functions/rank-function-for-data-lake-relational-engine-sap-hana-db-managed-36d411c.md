@@ -16,10 +16,23 @@ RANK () OVER ( [ PARTITION BY ] ORDER BY <expression> [ ASC | DESC ] )
 
 ## Parameters
 
- *<expression\>*
- :   A sort specification that can be any valid expression involving a column reference, aggregates, or expressions invoking these items.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+A sort specification that can be any valid expression involving a column reference, aggregates, or expressions invoking these items.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio36d411cb841f42c792858d7cab19b626__section_pnl_2m5_vrb"/>
 

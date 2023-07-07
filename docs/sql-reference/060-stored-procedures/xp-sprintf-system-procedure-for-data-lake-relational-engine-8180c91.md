@@ -27,16 +27,45 @@ xp_sprintf(
 
 ## Parameters
 
-  *<buffer\>* 
- :   This is a CHAR\(254\) OUT parameter that is filled in with the formatted result.
 
-   *<format\>* 
- :   Use this CHAR\(254\) parameter to specify how to format the result string, using place holders \(%s\) for each *<param\>* argument. There can be up to fifty place holders in the *<format\>* argument, and there should be the same number of place holders as *<param\>* arguments. Only the %s string format is supported.
+<dl>
+<dt><b>
 
-   *<param1, param2\>* 
- :   The input strings that are used in the result string. You can specify up to 50 of these CHAR\(254\) arguments.
+ *<buffer\>* 
 
- 
+</b></dt>
+<dd>
+
+This is a CHAR\(254\) OUT parameter that is filled in with the formatted result.
+
+
+
+</dd><dt><b>
+
+ *<format\>* 
+
+</b></dt>
+<dd>
+
+Use this CHAR\(254\) parameter to specify how to format the result string, using place holders \(%s\) for each *<param\>* argument. There can be up to fifty place holders in the *<format\>* argument, and there should be the same number of place holders as *<param\>* arguments. Only the %s string format is supported.
+
+
+
+</dd><dt><b>
+
+ *<param1, param2\>* 
+
+</b></dt>
+<dd>
+
+The input strings that are used in the result string. You can specify up to 50 of these CHAR\(254\) arguments.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio8180c9106ce21014894dc48bcbd02bb5__xp_sprintfs_remarks1"/>
 
@@ -46,11 +75,15 @@ The result placed in the output parameter is truncated to 254 characters.
 
 
 
-<a name="loio8180c9106ce21014894dc48bcbd02bb5__section_fdb_b3j_snb"/>
+<a name="loio8180c9106ce21014894dc48bcbd02bb5__xp_sprintfs_priv1"/>
 
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure.
+
+
+### 
+
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -73,5 +106,5 @@ SELECT result;
 **Related Information**  
 
 
-[xp_sprintf System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/bcaf180e679e43d78733830fb7e4c2fa.html "Builds a result string from a set of input strings.") :arrow_upper_right:
+[xp_sprintf System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/bcaf180e679e43d78733830fb7e4c2fa.html "Builds a result string from a set of input strings.") :arrow_upper_right:
 

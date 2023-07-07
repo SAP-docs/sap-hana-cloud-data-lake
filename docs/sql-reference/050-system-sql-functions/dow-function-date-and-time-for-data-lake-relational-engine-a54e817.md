@@ -16,10 +16,23 @@ DOW ( <date-expression> )
 
 ## Parameters
 
- *<date-expression\>*
- :   The date.
 
- 
+<dl>
+<dt><b>
+
+*<date-expression\>*
+
+</b></dt>
+<dd>
+
+The date.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa54e817784f21015bfbbc50ea9eaecba__DOW_returns1"/>
 
@@ -58,5 +71,5 @@ SELECT DOW( '1998-07-09' ) FROM iq_dummy
 **Related Information**  
 
 
-[DOW Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/aae6da55cdb5426d9b6a06e2c7e5b2b4.html "Returns a number from 1 to 7 representing the day of the week of the specified date, with Sunday=1, Monday=2, and so on.") :arrow_upper_right:
+[DOW Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/aae6da55cdb5426d9b6a06e2c7e5b2b4.html "Returns a number from 1 to 7 representing the day of the week of the specified date, with Sunday=1, Monday=2, and so on.") :arrow_upper_right:
 

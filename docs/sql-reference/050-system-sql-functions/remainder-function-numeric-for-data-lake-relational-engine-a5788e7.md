@@ -16,13 +16,34 @@ REMAINDER ( <dividend>, <divisor> )
 
 ## Parameters
 
- *<dividend\>*
- :   The dividend, or numerator of the division.
 
-  *<divisor\>*
- :   The divisor, or denominator of the division.
+<dl>
+<dt><b>
 
- 
+*<dividend\>*
+
+</b></dt>
+<dd>
+
+The dividend, or numerator of the division.
+
+
+
+</dd><dt><b>
+
+*<divisor\>*
+
+</b></dt>
+<dd>
+
+The divisor, or denominator of the division.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5788e7284f21015a4caecc7b2f96b10__REMAINDER_returns1"/>
 
@@ -65,5 +86,5 @@ SELECT REMAINDER( 5, 3 ) FROM iq_dummy
 
 [MOD Function \[Numeric\] for Data Lake Relational Engine](mod-function-numeric-for-data-lake-relational-engine-a5650e7.md "Returns the remainder when one whole number is divided by another.")
 
-[REMAINDER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/c575f2fac8f94b1eaf49f8b8797a509f.html "Returns the remainder when one whole number is divided by another.") :arrow_upper_right:
+[REMAINDER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/c575f2fac8f94b1eaf49f8b8797a509f.html "Returns the remainder when one whole number is divided by another.") :arrow_upper_right:
 

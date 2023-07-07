@@ -6,11 +6,6 @@ Groups `CREATE INDEX` statements together for execution at the same time.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -27,14 +22,32 @@ Groups `CREATE INDEX` statements together for execution at the same time.
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loio6632c2b487bf49449b7652a9e3bce605__section_cry_gbl_sqb"/>
 
 ## Parameters
 
- *<statement-list\>*
- :   A list of `CREATE INDEX` statements
 
- 
+<dl>
+<dt><b>
+
+*<statement-list\>*
+
+</b></dt>
+<dd>
+
+A list of `CREATE INDEX` statements
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio6632c2b487bf49449b7652a9e3bce605__section_rkr_3bl_sqb"/>
 
@@ -55,7 +68,10 @@ The `BEGIN PARALLEL IQ … END PARALLEL IQ` statement lets you execute a group o
 
 ### 
 
- You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\). 
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

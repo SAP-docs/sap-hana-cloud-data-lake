@@ -26,33 +26,62 @@ sp_displayroles(
 
 ## Parameters
 
- *<user\_role\_name\>*
- :   The user role name. Valid values are:
 
-    -   A valid system privilege name or system privilege role name
-    -   A valid user-defined role name
-    -   A valid user name
+<dl>
+<dt><b>
 
-    By default, if no argument is specified, the current login user is used.
+*<user\_role\_name\>*
 
-  *<display\_mode\>*
- :   The display mode. Valid values are:
+</b></dt>
+<dd>
 
-    -   EXPAND\_UP – shows all roles granted the input role or system privilege; that is the role hierarchy tree for the parent levels.
-    -   EXPAND\_DOWN – shows all roles or system privileges granted to the input role or user; that is, the role hierarchy tree for the child levels.
+The user role name. Valid values are:
 
-    If no argument is specified \(default\), only the directly granted roles or system privileges appear.
+-   A valid system privilege name or system privilege role name
+-   A valid user-defined role name
+-   A valid user name
 
-  *<grant\_type\>*
- :   The grant type. Valid values are:
+By default, if no argument is specified, the current login user is used.
 
-    -   ALL – shows all roles or system privileges granted.
-    -   NO\_ADMIN – shows all roles or system privileges granted with the WITH NO ADMIN OPTION or WITH ADMIN OPTION clause.
-    -   ADMIN – shows all roles or system privileges granted with the WITH ADMIN OPTION or WITH ADMIN ONLY OPTION clause.
 
-    If no argument is specified, `ALL` is used.
 
- 
+</dd><dt><b>
+
+*<display\_mode\>*
+
+</b></dt>
+<dd>
+
+The display mode. Valid values are:
+
+-   EXPAND\_UP – shows all roles granted the input role or system privilege; that is the role hierarchy tree for the parent levels.
+-   EXPAND\_DOWN – shows all roles or system privileges granted to the input role or user; that is, the role hierarchy tree for the child levels.
+
+If no argument is specified \(default\), only the directly granted roles or system privileges appear.
+
+
+
+</dd><dt><b>
+
+*<grant\_type\>*
+
+</b></dt>
+<dd>
+
+The grant type. Valid values are:
+
+-   ALL – shows all roles or system privileges granted.
+-   NO\_ADMIN – shows all roles or system privileges granted with the WITH NO ADMIN OPTION or WITH ADMIN OPTION clause.
+-   ADMIN – shows all roles or system privileges granted with the WITH ADMIN OPTION or WITH ADMIN ONLY OPTION clause.
+
+If no argument is specified, `ALL` is used.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa44ba32684f2101598cba97bb3b1b4d4__sp_displayroles_resultset1"/>
 
@@ -192,13 +221,17 @@ For:
 
 
 
-<a name="loioa44ba32684f2101598cba97bb3b1b4d4__section_yxz_n2j_snb"/>
+<a name="loioa44ba32684f2101598cba97bb3b1b4d4__sp_displayroles_priv1"/>
 
 ## Privileges
 
-You must have EXECUTE privilege on the system procedure.
 
-To return the system privileges or roles for another user ID or a role, you must also have the MANAGE ROLES system privilege.
+
+### 
+
+Requires EXECUTE object-level privilege on the procedure.
+
+To return the system privileges or roles for another user ID or a role, require the MANAGE ROLES system privilege.
 
 
 
@@ -210,7 +243,7 @@ None
 
 
 
-<a name="loioa44ba32684f2101598cba97bb3b1b4d4__sp_displayroles_examples"/>
+<a name="loioa44ba32684f2101598cba97bb3b1b4d4__sp_displayroles_examples1"/>
 
 ## Examples
 
@@ -263,59 +296,29 @@ GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
     </tr>
     <tr>
     <td valign="top">
-
-    r7
+    
+        r7
 
 
     
     </td>
     <td valign="top">
-
-    NULL
+    
+        NULL
 
 
     
     </td>
     <td valign="top">
-
-    ADMIN
+    
+        ADMIN
 
 
     
     </td>
     <td valign="top">
-
-    1
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    PUBLIC
-
-
-    
-    </td>
-    <td valign="top">
-
-    NULL
-
-
-    
-    </td>
-    <td valign="top">
-
-    NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-
-    1
+        1
 
 
     
@@ -323,59 +326,29 @@ GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
     </tr>
     <tr>
     <td valign="top">
-
-    dbo
+    
+        PUBLIC
 
 
     
     </td>
     <td valign="top">
-
-    PUBLIC
+    
+        NULL
 
 
     
     </td>
     <td valign="top">
-
-    NO ADMIN
+    
+        NO ADMIN
 
 
     
     </td>
     <td valign="top">
-
-    2
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    r1
-
-
-    
-    </td>
-    <td valign="top">
-
-    r7
-
-
-    
-    </td>
-    <td valign="top">
-
-    NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-
-    2
+        1
 
 
     
@@ -383,59 +356,29 @@ GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
     </tr>
     <tr>
     <td valign="top">
-
-    r2
+    
+        dbo
 
 
     
     </td>
     <td valign="top">
-
-    r1
+    
+        PUBLIC
 
 
     
     </td>
     <td valign="top">
-
-    ADMIN
+    
+        NO ADMIN
 
 
     
     </td>
     <td valign="top">
-
-    3
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    CHECKPOINT
-
-
-    
-    </td>
-    <td valign="top">
-
-    r1
-
-
-    
-    </td>
-    <td valign="top">
-
-    NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-
-    3
+        2
 
 
     
@@ -443,59 +386,29 @@ GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
     </tr>
     <tr>
     <td valign="top">
-
-    r3
+    
+        r1
 
 
     
     </td>
     <td valign="top">
-
-    r2
+    
+        r7
 
 
     
     </td>
     <td valign="top">
-
-    NO ADMIN
+    
+        NO ADMIN
 
 
     
     </td>
     <td valign="top">
-
-    4
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    MONITOR
-
-
-    
-    </td>
-    <td valign="top">
-
-    r2
-
-
-    
-    </td>
-    <td valign="top">
-
-    NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-
-    4
+        2
 
 
     
@@ -503,29 +416,149 @@ GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
     </tr>
     <tr>
     <td valign="top">
-
-    r4
+    
+        r2
 
 
     
     </td>
     <td valign="top">
-
-    r3
+    
+        r1
 
 
     
     </td>
     <td valign="top">
-
-    ADMIN ONLY
+    
+        ADMIN
 
 
     
     </td>
     <td valign="top">
+    
+        3
 
-    5
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        CHECKPOINT
+
+
+    
+    </td>
+    <td valign="top">
+    
+        r1
+
+
+    
+    </td>
+    <td valign="top">
+    
+        NO ADMIN
+
+
+    
+    </td>
+    <td valign="top">
+    
+        3
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        r3
+
+
+    
+    </td>
+    <td valign="top">
+    
+        r2
+
+
+    
+    </td>
+    <td valign="top">
+    
+        NO ADMIN
+
+
+    
+    </td>
+    <td valign="top">
+    
+        4
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        MONITOR
+
+
+    
+    </td>
+    <td valign="top">
+    
+        r2
+
+
+    
+    </td>
+    <td valign="top">
+    
+        NO ADMIN
+
+
+    
+    </td>
+    <td valign="top">
+    
+        4
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        r4
+
+
+    
+    </td>
+    <td valign="top">
+    
+        r3
+
+
+    
+    </td>
+    <td valign="top">
+    
+        ADMIN ONLY
+
+
+    
+    </td>
+    <td valign="top">
+    
+        5
 
 
     
@@ -569,59 +602,29 @@ GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
     </tr>
     <tr>
     <td valign="top">
-
-    r7
+    
+        r7
 
 
     
     </td>
     <td valign="top">
-
-    NULL
+    
+        NULL
 
 
     
     </td>
     <td valign="top">
-
-    ADMIN
+    
+        ADMIN
 
 
     
     </td>
     <td valign="top">
-
-    1
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    PUBLIC
-
-
-    
-    </td>
-    <td valign="top">
-
-    NULL
-
-
-    
-    </td>
-    <td valign="top">
-
-    NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-
-    1
+        1
 
 
     
@@ -629,59 +632,29 @@ GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
     </tr>
     <tr>
     <td valign="top">
-
-    dbo
+    
+        PUBLIC
 
 
     
     </td>
     <td valign="top">
-
-    PUBLIC
+    
+        NULL
 
 
     
     </td>
     <td valign="top">
-
-    NO ADMIN
+    
+        NO ADMIN
 
 
     
     </td>
     <td valign="top">
-
-    2
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    r1
-
-
-    
-    </td>
-    <td valign="top">
-
-    r7
-
-
-    
-    </td>
-    <td valign="top">
-
-    NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-
-    2
+        1
 
 
     
@@ -689,59 +662,29 @@ GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
     </tr>
     <tr>
     <td valign="top">
-
-    r2
+    
+        dbo
 
 
     
     </td>
     <td valign="top">
-
-    r1
+    
+        PUBLIC
 
 
     
     </td>
     <td valign="top">
-
-    ADMIN
+    
+        NO ADMIN
 
 
     
     </td>
     <td valign="top">
-
-    3
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    CHECKPOINT
-
-
-    
-    </td>
-    <td valign="top">
-
-    r1
-
-
-    
-    </td>
-    <td valign="top">
-
-    NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-
-    3
+        2
 
 
     
@@ -749,29 +692,29 @@ GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
     </tr>
     <tr>
     <td valign="top">
-
-    r3
+    
+        r1
 
 
     
     </td>
     <td valign="top">
-
-    r2
+    
+        r7
 
 
     
     </td>
     <td valign="top">
-
-    NO ADMIN
+    
+        NO ADMIN
 
 
     
     </td>
     <td valign="top">
-
-    4
+    
+        2
 
 
     
@@ -779,29 +722,119 @@ GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
     </tr>
     <tr>
     <td valign="top">
-
-    MONITOR
+    
+        r2
 
 
     
     </td>
     <td valign="top">
-
-    r2
+    
+        r1
 
 
     
     </td>
     <td valign="top">
-
-    NO ADMIN
+    
+        ADMIN
 
 
     
     </td>
     <td valign="top">
+    
+        3
 
-    4
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        CHECKPOINT
+
+
+    
+    </td>
+    <td valign="top">
+    
+        r1
+
+
+    
+    </td>
+    <td valign="top">
+    
+        NO ADMIN
+
+
+    
+    </td>
+    <td valign="top">
+    
+        3
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        r3
+
+
+    
+    </td>
+    <td valign="top">
+    
+        r2
+
+
+    
+    </td>
+    <td valign="top">
+    
+        NO ADMIN
+
+
+    
+    </td>
+    <td valign="top">
+    
+        4
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        MONITOR
+
+
+    
+    </td>
+    <td valign="top">
+    
+        r2
+
+
+    
+    </td>
+    <td valign="top">
+    
+        NO ADMIN
+
+
+    
+    </td>
+    <td valign="top">
+    
+        4
 
 
     
@@ -845,59 +878,29 @@ GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
     </tr>
     <tr>
     <td valign="top">
-
-    r1
+    
+        r1
 
 
     
     </td>
     <td valign="top">
-
-    r7
+    
+        r7
 
 
     
     </td>
     <td valign="top">
-
-    NO ADMIN
+    
+        NO ADMIN
 
 
     
     </td>
     <td valign="top">
-
-    \-2
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    r2
-
-
-    
-    </td>
-    <td valign="top">
-
-    r1
-
-
-    
-    </td>
-    <td valign="top">
-
-    ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-
-    \-1
+        \-2
 
 
     
@@ -905,29 +908,59 @@ GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
     </tr>
     <tr>
     <td valign="top">
-
-    r3
+    
+        r2
 
 
     
     </td>
     <td valign="top">
-
-    r2
+    
+        r1
 
 
     
     </td>
     <td valign="top">
-
-    NO ADMIN
+    
+        ADMIN
 
 
     
     </td>
     <td valign="top">
+    
+        \-1
 
-    0
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        r3
+
+
+    
+    </td>
+    <td valign="top">
+    
+        r2
+
+
+    
+    </td>
+    <td valign="top">
+    
+        NO ADMIN
+
+
+    
+    </td>
+    <td valign="top">
+    
+        0
 
 
     
@@ -971,29 +1004,29 @@ GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
     </tr>
     <tr>
     <td valign="top">
-
-    r1
+    
+        r1
 
 
     
     </td>
     <td valign="top">
-
-    r7
+    
+        r7
 
 
     
     </td>
     <td valign="top">
-
-    NO ADMIN
+    
+        NO ADMIN
 
 
     
     </td>
     <td valign="top">
-
-    0
+    
+        0
 
 
     
@@ -1005,5 +1038,5 @@ GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
 **Related Information**  
 
 
-[sp_displayroles System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/8c15112761fa4dba8aa2d0cb3a89db92.html "Displays all roles granted to a user-defined role or a user, or displays the entire hierarchical tree of roles.") :arrow_upper_right:
+[sp_displayroles System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/8c15112761fa4dba8aa2d0cb3a89db92.html "Displays all roles granted to a user-defined role or a user, or displays the entire hierarchical tree of roles.") :arrow_upper_right:
 

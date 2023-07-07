@@ -16,13 +16,34 @@ CHARINDEX ( <string-expression1>, <string-expression2> )
 
 ## Parameters
 
- *<string-expression1\>*
- :   The string for which you are searching. This string is limited to 255 bytes.
 
-  *<string-expression2\>*
- :   The string to be searched. The position of the first character in the string being searched is 1.
+<dl>
+<dt><b>
 
- 
+*<string-expression1\>*
+
+</b></dt>
+<dd>
+
+The string for which you are searching. This string is limited to 255 bytes.
+
+
+
+</dd><dt><b>
+
+*<string-expression2\>*
+
+</b></dt>
+<dd>
+
+The string to be searched. The position of the first character in the string being searched is 1.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa53cde2984f210158cbd968731b1879c__CHARINDEX_returns1"/>
 
@@ -146,5 +167,5 @@ Moira
 
 [SUBSTRING Function \[String\] for Data Lake Relational Engine](substring-function-string-for-data-lake-relational-engine-a58787e.md "Returns a substring of a string.")
 
-[CHARINDEX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/ae499513aa0346978ca7d3c6f34656da.html "Returns the position of the first occurrence of a specified string in another string.") :arrow_upper_right:
+[CHARINDEX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ae499513aa0346978ca7d3c6f34656da.html "Returns the position of the first occurrence of a specified string in another string.") :arrow_upper_right:
 

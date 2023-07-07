@@ -28,10 +28,23 @@ On UPDATE, columns with a default value of USER aren’t changed.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- **Related Information**  
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+**Related Information**  
 
 
 [CURRENT USER Special Value in Data Lake Relational Engine](current-user-special-value-in-data-lake-relational-engine-a50a173.md "Returns a string that contains the user ID of the current connection.")

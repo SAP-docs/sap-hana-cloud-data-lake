@@ -17,18 +17,15 @@ When syntax within the REMOTE\_EXECUTE procedure contains single quotes, they mu
 Procedure sp\_iqtablesize returns information on the size of table T1. To see this information, within the REMOTE\_EXECUTE procedure, you create a data lake Relational Engine view that returns the procedure information as part of a SELECT statement. Since the system procedure allows you to specify the table owner and name, the string must be enclosed in two single quotes.
 
 ```
-CALL [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.REMOTE_EXECUTE ('
-   CREATE VIEW SIZE_T1 AS SELECT * FROM sp_iqtablesize (' '[/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.T1' ')
+CALL SYSHDL_CONTAINER1.REMOTE_EXECUTE ('
+   CREATE VIEW SIZE_T1 AS SELECT * FROM sp_iqtablesize (' 'SYSHDL_CONTAINER1.T1' ')
 ');
 ```
 
 To see the results set of the procedure, execute a query using the system created SAP HANA database virtual table named SIZE\_T1 in the SAP HANA database relational container schema to return all values.
 
 ```
-SELECT * FROM [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.SIZE_T1;
+SELECT * FROM SYSHDL_CONTAINER1.SIZE_T1;
 ```
 
 For assistance creating a data lake Relational Engine view, see
@@ -45,8 +42,7 @@ For assistance creating a data lake Relational Engine view, see
 Procedure sa\_enable\_auditing\_type enables which events to include in auditing. The procedure has no results set so there is no need to create a data lake Relational Engine view to capture the results. To execute the procedure, within the REMOTE\_EXECUTE procedure, you execute the CALL statement and specify the procedure. Since this system procedure allows you to specify the auditing types to enable, the string must be enclosed in two single quotes.
 
 ```
-CALL [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.REMOTE_EXECUTE ('
+CALL SYSHDL_CONTAINER1.REMOTE_EXECUTE ('
    CALL sa_enable_auditing_type (' 'all' ')
 ');
 ```

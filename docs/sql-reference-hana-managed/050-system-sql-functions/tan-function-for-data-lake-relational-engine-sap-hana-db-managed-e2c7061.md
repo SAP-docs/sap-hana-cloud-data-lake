@@ -16,10 +16,23 @@ TAN ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   An angle, in radians.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+An angle, in radians.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioe2c70619ddcb41a58cd65f42dc1bab7f__section_z4w_1kv_vrb"/>
 

@@ -16,13 +16,34 @@ ATAN2 ( <numeric-expression1>, <numeric-expression2> )
 
 ## Parameters
 
- *<numeric-expression1\>*
- :   The numerator in the ratio whose arc tangent is calculated.
 
-  *<numeric-expression2\>*
- :   The denominator in the ratio whose arc-tangent is calculated.
+<dl>
+<dt><b>
 
- 
+*<numeric-expression1\>*
+
+</b></dt>
+<dd>
+
+The numerator in the ratio whose arc tangent is calculated.
+
+
+
+</dd><dt><b>
+
+*<numeric-expression2\>*
+
+</b></dt>
+<dd>
+
+The denominator in the ratio whose arc-tangent is calculated.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio8081001d5f8e4323a5f13cc57fb91cf1__section_ltv_m3k_srb"/>
 

@@ -6,11 +6,6 @@ Creates a user-defined data type in the database.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -53,16 +48,34 @@ CREATE { DOMAIN | DATATYPE } <domain-name> <data-type>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa616d8e584f2101588c5f0f67774d346__IQ_Parameters"/>
 
 ## Parameters
 
- *<data-type\>*
- :   Built-in data type, with precision and scale.
 
-    You can also specify a %TYPE or %ROWTYPE attribute to set the data type to the data type of a column or row in a table or view. However, specifying a table reference variable for the %ROWTYPE \(TABLE REF \(table-reference-variable\) %ROWTYPE\) is not allowed.
+<dl>
+<dt><b>
 
- 
+*<data-type\>*
+
+</b></dt>
+<dd>
+
+Built-in data type, with precision and scale.
+
+You can also specify a %TYPE or %ROWTYPE attribute to set the data type to the data type of a column or row in a table or view. However, specifying a table reference variable for the %ROWTYPE \(TABLE REF \(table-reference-variable\) %ROWTYPE\) is not allowed.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa616d8e584f2101588c5f0f67774d346__IQ_Usage"/>
 

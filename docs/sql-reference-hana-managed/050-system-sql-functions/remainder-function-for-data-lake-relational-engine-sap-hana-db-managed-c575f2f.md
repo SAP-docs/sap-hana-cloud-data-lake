@@ -16,13 +16,34 @@ REMAINDER ( <dividend>, <divisor> )
 
 ## Parameters
 
- *<dividend\>*
- :   The dividend, or numerator of the division.
 
-  *<divisor\>*
- :   The divisor, or denominator of the division.
+<dl>
+<dt><b>
 
- 
+*<dividend\>*
+
+</b></dt>
+<dd>
+
+The dividend, or numerator of the division.
+
+
+
+</dd><dt><b>
+
+*<divisor\>*
+
+</b></dt>
+<dd>
+
+The divisor, or denominator of the division.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioc575f2fac8f94b1eaf49f8b8797a509f__section_zv3_ln3_wrb"/>
 

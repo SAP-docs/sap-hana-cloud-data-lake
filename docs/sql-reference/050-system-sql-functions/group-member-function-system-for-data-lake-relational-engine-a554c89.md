@@ -16,13 +16,34 @@ GROUP_MEMBER ( <group-name-string-expression>[ , <user-name-string-expression
 
 ## Parameters
 
- *<group-name-string-expression\>*
- :   Identifies the group to be considered.
 
-  *<user-name-string-expression \>*
- :   Identifies the user to be considered. If not supplied, then the current user name is assumed.
+<dl>
+<dt><b>
 
- 
+*<group-name-string-expression\>*
+
+</b></dt>
+<dd>
+
+Identifies the group to be considered.
+
+
+
+</dd><dt><b>
+
+*<user-name-string-expression \>*
+
+</b></dt>
+<dd>
+
+Identifies the user to be considered. If not supplied, then the current user name is assumed.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa554c89b84f210158881bb412d8dc9e9__iq_refbb_574"/>
 

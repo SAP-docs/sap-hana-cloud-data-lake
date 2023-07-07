@@ -26,13 +26,34 @@ sp_trace_events(
 
 ## Parameters
 
-  *<event\_name\>* 
- :   Use this optional CHAR\(256\) parameter to specify the trace event name. The default is NULL.
 
-   *<include\_audit\_events\>* 
- :   Use this optional BIT parameter to specify whether or not audit events are returned. This parameter can be 0 \(do not return audit events\) or 1 \(return audit events\). By default, audit events are not returned \(0 is the default\).
+<dl>
+<dt><b>
 
- 
+ *<event\_name\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(256\) parameter to specify the trace event name. The default is NULL.
+
+
+
+</dd><dt><b>
+
+ *<include\_audit\_events\>* 
+
+</b></dt>
+<dd>
+
+Use this optional BIT parameter to specify whether or not audit events are returned. This parameter can be 0 \(do not return audit events\) or 1 \(return audit events\). By default, audit events are not returned \(0 is the default\).
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio8179d2976ce210148418a9a15900e7e2__sp_trace_events_resultset1"/>
 
@@ -306,9 +327,19 @@ DEBUG
 
 
 
+<a name="loio8179d2976ce210148418a9a15900e7e2__sp_trace_events_priv1"/>
+
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure, as well as the MANAGE ANY TRACE SESSION system privilege. You also need the MANAGE AUDITING system privilege if *<include\_audit\_events\>* isn’t set.
+
+
+### 
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure
+-   MANAGE ANY TRACE SESSION system privilege
+-   MANAGE AUDITING system privilege
 
 
 
@@ -330,5 +361,5 @@ WHERE is_system = 0;
 **Related Information**  
 
 
-[sp_trace_events System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/9897bebbf9314d72a926d9adae52ead8.html "Returns information about the trace events in the database.") :arrow_upper_right:
+[sp_trace_events System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/9897bebbf9314d72a926d9adae52ead8.html "Returns information about the trace events in the database.") :arrow_upper_right:
 

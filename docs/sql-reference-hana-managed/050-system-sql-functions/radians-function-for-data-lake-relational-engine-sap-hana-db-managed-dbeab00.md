@@ -16,10 +16,23 @@ RADIANS ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   A number, in degrees. This angle is converted to radians
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+A number, in degrees. This angle is converted to radians
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiodbeab0046dff49e89f016a8496e978f8__section_lvz_zm5_vrb"/>
 

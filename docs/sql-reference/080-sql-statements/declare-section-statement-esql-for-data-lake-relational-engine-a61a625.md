@@ -6,11 +6,6 @@ Declares host variables in an Embedded SQL program. Host variables are used to e
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -23,6 +18,11 @@ EXEC SQL BEGIN DECLARE SECTION;
 ... <C declarations>
 EXEC SQL END DECLARE SECTION;
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 

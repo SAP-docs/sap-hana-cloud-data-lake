@@ -16,10 +16,23 @@ UUIDTOSTR ( <uuid-expression> )
 
 ## Parameters
 
- *<uuid-expression\>*
- :   A unique identifier value.
 
- 
+<dl>
+<dt><b>
+
+*<uuid-expression\>*
+
+</b></dt>
+<dd>
+
+A unique identifier value.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa58e3ffd84f2101593c5c09c7d64fec4__UUIDTOSTR_returns1"/>
 
@@ -63,5 +76,5 @@ SELECT UUIDTOSTR(pk) FROM T3
 **Related Information**  
 
 
-[UUIDTOSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/60f4cba865204365bd10f0d9cfb44fc6.html "Converts a unique identifier value (UUID, also known as GUID) to a string value.") :arrow_upper_right:
+[UUIDTOSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/60f4cba865204365bd10f0d9cfb44fc6.html "Converts a unique identifier value (UUID, also known as GUID) to a string value.") :arrow_upper_right:
 

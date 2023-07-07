@@ -259,7 +259,7 @@ If the TEMP\_EXTRACT\_DIRECTORY option is:
 -   Set to an invalid directory path, then an error occurs: ***Files does not exist File: *<invalid path\>****
 -   Blank, then temporary extract files are placed in directories according to their specification in TEMP\_EXTRACT\_NAME*<N\>*.
 
-For example syntax, see [(Deprecated) Unloading Data to the External Object Store Using the Data Extraction Facility](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_1_QRC/en-US/a732a39184f21015979f85151aea1b30.html "The data extraction facility is a group of database options that unload data to the external object store.") :arrow_upper_right:.
+For example syntax, see [(Deprecated) Unloading Data to the External Object Store Using the Data Extraction Facility](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_2_QRC/en-US/a732a39184f21015979f85151aea1b30.html "The data extraction facility is a group of database options that unload data to the external object store.") :arrow_upper_right:.
 
 **Related Information**  
 
@@ -272,11 +272,11 @@ For example syntax, see [(Deprecated) Unloading Data to the External Object Stor
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[TEMP_EXTRACT_DIRECTORY Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/b9f214cdab094fc885a1900d77570fff.html "Controls whether a user is allowed to use the data extraction facility. Also controls the directory into which temp extract files are placed, and overrides a directory path specified in the TEMP_EXTRACT_NAMEN option.") :arrow_upper_right:
+[TEMP_EXTRACT_DIRECTORY Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/b9f214cdab094fc885a1900d77570fff.html "Controls whether a user is allowed to use the data extraction facility. Also controls the directory into which temp extract files are placed, and overrides a directory path specified in the TEMP_EXTRACT_NAMEN option.") :arrow_upper_right:
 
-[(Deprecated) Extract Table Data from Data Lake Relational Engine to Azure Blob Storage](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_1_QRC/en-US/72f882141a704328a7ff18c7b0b1914e.html "Use data lake Relational Engine TEMP_EXTRACT database options in your extraction query to extract data lake Relational Engine data to one or more block blobs in an Azure storage account container.") :arrow_upper_right:
+[(Deprecated) Extract Table Data from Data Lake Relational Engine to Azure Blob Storage](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_2_QRC/en-US/72f882141a704328a7ff18c7b0b1914e.html "Use data lake Relational Engine TEMP_EXTRACT database options in your extraction query to extract data lake Relational Engine data to one or more block blobs in an Azure storage account container.") :arrow_upper_right:
 
-[(Deprecated) Extract Table Data from Data Lake Relational Engine to an Amazon S3 Bucket](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_1_QRC/en-US/5389c53044504f4b9c5865c8f9366ebe.html "Use data lake Relational Engine TEMP_EXTRACT database options in your extraction query to extract data lake Relational Engine data to one or more objects in an Amazon S3 bucket.") :arrow_upper_right:
+[(Deprecated) Extract Table Data from Data Lake Relational Engine to an Amazon S3 Bucket](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_2_QRC/en-US/5389c53044504f4b9c5865c8f9366ebe.html "Use data lake Relational Engine TEMP_EXTRACT database options in your extraction query to extract data lake Relational Engine data to one or more objects in an Amazon S3 bucket.") :arrow_upper_right:
 
 [TEMP\_EXTRACT\_NAME<N\> Option for Data Lake Relational Engine](temp-extract-name-n-option-for-data-lake-relational-engine-a65dd19.md "Specifies the data lake Filescontainer object file name, or theAzure block blob name, or the Amazon S3 bucket object name you’re extracting to. You must specify the name when extracting data from data lake Relational Engine to cloud storage.")
 

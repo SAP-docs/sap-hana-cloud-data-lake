@@ -16,16 +16,45 @@ DATEDIFF ( <date-part>, <date-expression1>, <date-expression2> )
 
 ## Parameters
 
- *<date-part\>*
- :   The date part in which the interval is to be measured.
 
-  *<date-expression1\>*
- :   The starting date for the interval. This value is subtracted from *<date-expression2\>* to return the number of date parts between the two arguments.
+<dl>
+<dt><b>
 
-  *<date-expression2\>*
- :   The ending date for the interval. *<date-expression1\>* is subtracted from this value to return the number of date parts between the two arguments.
+*<date-part\>*
 
- 
+</b></dt>
+<dd>
+
+The date part in which the interval is to be measured.
+
+
+
+</dd><dt><b>
+
+*<date-expression1\>*
+
+</b></dt>
+<dd>
+
+The starting date for the interval. This value is subtracted from *<date-expression2\>* to return the number of date parts between the two arguments.
+
+
+
+</dd><dt><b>
+
+*<date-expression2\>*
+
+</b></dt>
+<dd>
+
+The ending date for the interval. *<date-expression1\>* is subtracted from this value to return the number of date parts between the two arguments.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa545a63784f210158075c22cd6f85d3a__DATEDIFF_returns1"/>
 
@@ -182,5 +211,5 @@ DATEDIFF(MINUTE,
 
 [Date Parts in Data Lake Relational Engine](date-parts-in-data-lake-relational-engine-a52b8dd.md "Many of the date functions use dates built from date parts.")
 
-[DATEDIFF Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/7bf7fa8d313a453c8bc224f2f29c65b5.html "Returns the interval between two dates.") :arrow_upper_right:
+[DATEDIFF Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7bf7fa8d313a453c8bc224f2f29c65b5.html "Returns the interval between two dates.") :arrow_upper_right:
 

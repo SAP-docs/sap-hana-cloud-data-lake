@@ -16,10 +16,23 @@ NEXT_DATABASE ( { NULL | <database-id> } )
 
 ## Parameters
 
- *<database-id\>*
- :   An integer that specifies the ID number of the database.
 
- 
+<dl>
+<dt><b>
+
+*<database-id\>*
+
+</b></dt>
+<dd>
+
+An integer that specifies the ID number of the database.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Returns
 

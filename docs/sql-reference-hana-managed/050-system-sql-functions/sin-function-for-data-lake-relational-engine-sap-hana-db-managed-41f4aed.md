@@ -16,10 +16,23 @@ SIN ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The angle, in radians.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The angle, in radians.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio41f4aed677bc4981bfab2a667390fe1a__section_nt4_my5_vrb"/>
 

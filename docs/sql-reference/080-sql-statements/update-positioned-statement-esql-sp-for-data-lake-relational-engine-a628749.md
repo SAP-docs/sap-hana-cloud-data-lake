@@ -6,11 +6,6 @@ Modifies the data at the current location of a cursor.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -31,23 +26,65 @@ UPDATE <table-list>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa628749684f21015958edc0cde107b63__IQ_Parameters"/>
 
 ## Parameters
 
- *<cursor-name\>*
- :   Identifier or hostvar.
 
-  SET
- :   The columns that are referenced in set-item must be in the base table that is updated. They cannot refer to aliases, nor to columns from other tables or views. If the table you are updating is given a correlation name in the cursor specification, you must use the correlation name in the SET clause. The expression on the right side of the SET clause may reference columns, constants, variables, and expressions from the `SELECT` clause of the query.
+<dl>
+<dt><b>
 
-  *<set-item\>*
- :   Expression cannot contain functions or expressions.
+*<cursor-name\>*
 
-  WHERE CURRENT OF
- :   Avoid using ORDER BY in the WHERE CURRENT OF clause. The ORDER BY columns may be updated, but the result set does not reorder. The results appear to fetch out of order and appear to be incorrect.
+</b></dt>
+<dd>
 
- 
+Identifier or hostvar.
+
+
+
+</dd><dt><b>
+
+SET
+
+</b></dt>
+<dd>
+
+The columns that are referenced in set-item must be in the base table that is updated. They cannot refer to aliases, nor to columns from other tables or views. If the table you are updating is given a correlation name in the cursor specification, you must use the correlation name in the SET clause. The expression on the right side of the SET clause may reference columns, constants, variables, and expressions from the `SELECT` clause of the query.
+
+
+
+</dd><dt><b>
+
+*<set-item\>*
+
+</b></dt>
+<dd>
+
+Expression cannot contain functions or expressions.
+
+
+
+</dd><dt><b>
+
+WHERE CURRENT OF
+
+</b></dt>
+<dd>
+
+Avoid using ORDER BY in the WHERE CURRENT OF clause. The ORDER BY columns may be updated, but the result set does not reorder. The results appear to fetch out of order and appear to be incorrect.
+
+
+
+</dd>
+</dl>
+
+
 
 This example shows an `UPDATE` statement using WHERE CURRENT OF cursor:
 

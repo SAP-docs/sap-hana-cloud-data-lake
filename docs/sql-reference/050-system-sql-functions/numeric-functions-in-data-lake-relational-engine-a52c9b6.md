@@ -23,7 +23,7 @@ The following functions are available:
 -   [CEIL Function \[Numeric\] for Data Lake Relational Engine](ceil-function-numeric-for-data-lake-relational-engine-a53a419.md)
 -   [CEILING Function \[Numeric\] for Data Lake Relational Engine](ceiling-function-numeric-for-data-lake-relational-engine-a53acd1.md)
 -   [COS Function \[Numeric\] for Data Lake Relational Engine](cos-function-numeric-for-data-lake-relational-engine-a5406e3.md)
--   [COT Function \[Numeric\]for Data Lake Relational Engine](cot-function-numeric-for-data-lake-relational-engine-a540f97.md)
+-   [COT Function \[Numeric\] for Data Lake Relational Engine](cot-function-numeric-for-data-lake-relational-engine-a540f97.md)
 -   [DEGREES Function \[Numeric\] for Data Lake Relational Engine](degrees-function-numeric-for-data-lake-relational-engine-a54c87d.md)
 -   [EXP Function \[Numeric\] for Data Lake Relational Engine](exp-function-numeric-for-data-lake-relational-engine-a55131d.md)
 -   [FLOOR Function \[Numeric\] for Data Lake Relational Engine](floor-function-numeric-for-data-lake-relational-engine-a552c1c.md)

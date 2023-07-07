@@ -86,22 +86,67 @@ CHAR\(1\)
 
 The type of constraint:
 
- C
- :   column check constraint
 
-  T
- :   table constraint
+<dl>
+<dt><b>
 
-  P
- :   primary key
+C
 
-  F
- :   foreign key
+</b></dt>
+<dd>
 
-  U
- :   unique constraint
+column check constraint
 
- 
+
+
+</dd><dt><b>
+
+T
+
+</b></dt>
+<dd>
+
+table constraint
+
+
+
+</dd><dt><b>
+
+P
+
+</b></dt>
+<dd>
+
+primary key
+
+
+
+</dd><dt><b>
+
+F
+
+</b></dt>
+<dd>
+
+foreign key
+
+
+
+</dd><dt><b>
+
+U
+
+</b></dt>
+<dd>
+
+unique constraint
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>

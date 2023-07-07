@@ -16,10 +16,23 @@ REVERSE ( <expression> | <uchar_expr> )
 
 ## Parameters
 
- *<expression\>*
- :   A character or binary-type column name, variable, or constant expression of `CHAR`, `VARCHAR`, `NCHAR`, `NVARCHAR`, `BINARY`, or `VARBINARY` type.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+A character or binary-type column name, variable, or constant expression of `CHAR`, `VARCHAR`, `NCHAR`, `NVARCHAR`, `BINARY`, or `VARBINARY` type.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa57a972e84f2101584c3b9d17a08b0f9__REVERSE_returns1"/>
 
@@ -88,5 +101,5 @@ SQL – Transact-SQL extension to ISO/ANSI SQL grammar
 
 [String Operators in Data Lake Relational Engine](../010-sql-language-elements/string-operators-in-data-lake-relational-engine-a4f1c6d.md "These string operators are available in data lake Relational Engine.")
 
-[REVERSE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/3310f4b18b7c478f8003d97e82fdbc6a.html "Takes one argument as an input of type BINARY or STRING and returns the specified string with characters listed in reverse order.") :arrow_upper_right:
+[REVERSE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3310f4b18b7c478f8003d97e82fdbc6a.html "Takes one argument as an input of type BINARY or STRING and returns the specified string with characters listed in reverse order.") :arrow_upper_right:
 

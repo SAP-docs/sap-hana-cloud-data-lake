@@ -6,11 +6,6 @@ Assigns an alternate login name and password to be used when communicating with 
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -27,23 +22,65 @@ CREATE EXTERNLOGIN <login-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa61766ae84f210158170ef9548a5e449__IQ_Parameters"/>
 
 ## Parameters
 
- *<login-name\>*
- :   Specifies the local user login name. When using integrated logins, the *<login-name\>* is the database user to which the Windows user ID is mapped.
 
-  TO *<remote-server\>*
- :   Specifies the name of the remote server.
+<dl>
+<dt><b>
 
-  REMOTE LOGIN *<remote-user\>*
- :   Specifies the user account on *<remote-server\>* for the local user *<login-name\>*.
+*<login-name\>*
 
-  IDENTIFIED BY *<remote-password\>*
- :   \(Optional\) Specifies that *<remote-password\>* is the password for *<remote-user\>*. If you omit the IDENTIFIED BY clause, the password is sent to the remote server as NULL. If you specify IDENTIFIED BY " " \(an empty string\), the password sent is the empty string.
+</b></dt>
+<dd>
 
- 
+Specifies the local user login name. When using integrated logins, the *<login-name\>* is the database user to which the Windows user ID is mapped.
+
+
+
+</dd><dt><b>
+
+TO *<remote-server\>*
+
+</b></dt>
+<dd>
+
+Specifies the name of the remote server.
+
+
+
+</dd><dt><b>
+
+REMOTE LOGIN *<remote-user\>*
+
+</b></dt>
+<dd>
+
+Specifies the user account on *<remote-server\>* for the local user *<login-name\>*.
+
+
+
+</dd><dt><b>
+
+IDENTIFIED BY *<remote-password\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) Specifies that *<remote-password\>* is the password for *<remote-user\>*. If you omit the IDENTIFIED BY clause, the password is sent to the remote server as NULL. If you specify IDENTIFIED BY " " \(an empty string\), the password sent is the empty string.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61766ae84f210158170ef9548a5e449__IQ_Usage"/>
 

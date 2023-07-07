@@ -16,23 +16,52 @@ COUNT ( * | <expression> | DISTINCT <column-name> )
 
 ## Parameters
 
- \*
- :   Returns the number of rows in each group.
 
-    > ### Note:  
-    > When the query results are displayed, the \* is not displayed in the column header, and appears as:
-    > 
-    > ```
-    > Count()
-    > ```
+<dl>
+<dt><b>
 
-  *<expression\>*
- :   Returns the number of rows in each group where expression is not the NULL value.
+\*
 
-  DISTINCT *<column-name\>*
- :   Returns the number of different values in column-name. Rows where the value is the NULL value are not included in the count.
+</b></dt>
+<dd>
 
- 
+Returns the number of rows in each group.
+
+> ### Note:  
+> When the query results are displayed, the \* is not displayed in the column header, and appears as:
+> 
+> ```
+> Count()
+> ```
+
+
+
+</dd><dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+Returns the number of rows in each group where expression is not the NULL value.
+
+
+
+</dd><dt><b>
+
+DISTINCT *<column-name\>*
+
+</b></dt>
+<dd>
+
+Returns the number of different values in column-name. Rows where the value is the NULL value are not included in the count.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiobd71ba2eab21415e8d3ce875005fc9b9__section_pkj_hnl_srb"/>
 

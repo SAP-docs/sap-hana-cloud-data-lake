@@ -6,11 +6,6 @@ Creates a remote server.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -20,12 +15,15 @@ Creates a remote server.
 
 ```
 CREATE SERVER <server-name> 
-   CLASS '{ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) ASEODBC |  (span]HANAODBC | ODBC | IQODBC }' 
-   USING '[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <SQL_endpoint> (varname]' 
+   CLASS '{ ASEODBC | HANAODBC | ODBC | IQODBC }' 
+   USING '<SQL_endpoint>' 
    [ READ ONLY ]
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -33,13 +31,34 @@ CREATE SERVER <server-name>
 
 ## Parameters
 
- *<SQL\_endpoint\>*
- :   The ODBC connection parameters for the remote server are dictated by the ODBC driver being used. Only TLS connections are supported.
 
-  READ ONLY
- :   Specifies that the remote server is a read-only data source. Any update request is rejected by data lake Relational Engine.
+<dl>
+<dt><b>
 
- 
+*<SQL\_endpoint\>*
+
+</b></dt>
+<dd>
+
+The ODBC connection parameters for the remote server are dictated by the ODBC driver being used. Only TLS connections are supported.
+
+
+
+</dd><dt><b>
+
+READ ONLY
+
+</b></dt>
+<dd>
+
+Specifies that the remote server is a read-only data source. Any update request is rejected by data lake Relational Engine.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa619187d84f210158b3081e7245e94a0__create_server_remarks1"/>
 

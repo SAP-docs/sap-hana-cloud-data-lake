@@ -25,10 +25,23 @@ sa_refresh_materialized_views( [ <ignore_errors> ] )
 
 ## Parameters
 
-  *<ignore\_errors\>* 
- :   Use this optional INTEGER parameter to specify whether to return errors during the recompilation. If you specify 0, an error is returned for each view for which column definition failed. If you specify 1, or any value other than 0, no errors are returned. The default is 0.
 
- 
+<dl>
+<dt><b>
+
+ *<ignore\_errors\>* 
+
+</b></dt>
+<dd>
+
+Use this optional INTEGER parameter to specify whether to return errors during the recompilation. If you specify 0, an error is returned for each view for which column definition failed. If you specify 1, or any value other than 0, no errors are returned. The default is 0.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3b20ca4caa7e4ecb9000e15b95d23644__section_gtr_2zd_srb"/>
 
@@ -42,7 +55,10 @@ You can also use the REFRESH MATERIALIZED VIEW statement to initialize a materia
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

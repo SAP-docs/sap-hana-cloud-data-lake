@@ -18,13 +18,34 @@ DAYS ( <datetime-expression> )
 
 ## Parameters
 
- *<datetime-expression\>*
- :   A date and time.
 
-  *<integer-expression\>*
- :   The number of days to be added to the *<datetime-expression\>*. If the *<integer-expression\>* is negative, the appropriate number of days are subtracted from the date and time. If you supply an integer expression, the *<datetime-expression\>* must be explicitly cast as a date.
+<dl>
+<dt><b>
 
- 
+*<datetime-expression\>*
+
+</b></dt>
+<dd>
+
+A date and time.
+
+
+
+</dd><dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number of days to be added to the *<datetime-expression\>*. If the *<integer-expression\>* is negative, the appropriate number of days are subtracted from the date and time. If you supply an integer expression, the *<datetime-expression\>* must be explicitly cast as a date.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio80456cf5652446c4b1279d5fb21e21dd__section_eqm_1bm_srb"/>
 

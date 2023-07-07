@@ -6,11 +6,6 @@ Adds a user-defined message to the `SYSUSERMESSAGES` system table for use by `PR
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -25,19 +20,45 @@ CREATE MESSAGE <message-number>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa61829d784f210158a99f4e03b39b150__IQ_Parameters"/>
 
 ## Parameters
 
- *<message-number\>*
- :   The message number of the message to add. The message number for a user-defined message must be 20000 or greater.
 
-  *<message\_text\>*
- :   The text of the message to add. The maximum length is 255 bytes. `PRINT` and `RAISERROR` recognize placeholders in the message text to print out. A single message can contain up to 20 unique placeholders in any order. These placeholders are replaced with the formatted contents of any arguments that follow the message when the text of the message is sent to the client.
+<dl>
+<dt><b>
 
-    Placeholders are numbered to allow reordering of the arguments when translating a message to a language with a different grammatical structure. A placeholder for an argument appears as “%nn!” — a percent sign \(%\), followed by an integer from 1 to 20, followed by an exclamation mark \(!\) — where the integer represents the position of the argument in the argument list, “%1!” is the first argument, “%2!” is the second argument, and so on.
+*<message-number\>*
 
- 
+</b></dt>
+<dd>
+
+The message number of the message to add. The message number for a user-defined message must be 20000 or greater.
+
+
+
+</dd><dt><b>
+
+*<message\_text\>*
+
+</b></dt>
+<dd>
+
+The text of the message to add. The maximum length is 255 bytes. `PRINT` and `RAISERROR` recognize placeholders in the message text to print out. A single message can contain up to 20 unique placeholders in any order. These placeholders are replaced with the formatted contents of any arguments that follow the message when the text of the message is sent to the client.
+
+Placeholders are numbered to allow reordering of the arguments when translating a message to a language with a different grammatical structure. A placeholder for an argument appears as “%nn!” — a percent sign \(%\), followed by an integer from 1 to 20, followed by an exclamation mark \(!\) — where the integer represents the position of the argument in the argument list, “%1!” is the first argument, “%2!” is the second argument, and so on.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61829d784f210158a99f4e03b39b150__IQ_Usage"/>
 

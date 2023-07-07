@@ -18,46 +18,170 @@ CSCONVERT(
 
 ## Parameters
 
- *<string-expression\>*
- :   The string to be converted.
 
-  *<target-charset-string\>*
- :   The destination character set. *<target-charset-string\>* can be any of the supported character set labels. It can also be:
+<dl>
+<dt><b>
 
-     db\_charset
-     :   Equivalent to char\_charset. Specify this to use the CHAR character set used by the database.
+*<string-expression\>*
 
-      os\_charset
-     :   Specify this to use the character set used by the operating system that is hosting the database server.
+</b></dt>
+<dd>
 
-      char\_charset
-     :   Equivalent to db\_charset. Specify this to use the CHAR character set used by the database.
+The string to be converted.
 
-      nchar\_charset
-     :   Specify this to use the NCHAR character set used by the database.
 
-   *<source-charset-string\>*
- :   The character set used for *<string-expression\>*. The default is db\_charset \(the database character set\). *<source-charset-string\>* can be any of the supported character set labels. It can also be:
 
-     db\_charset
-     :   Equivalent to char\_charset. Specify this to use the CHAR character set used by the database.
+</dd><dt><b>
 
-      os\_charset
-     :   Specify this to use the character set used by the operating system that is hosting the database server.
+*<target-charset-string\>*
 
-      char\_charset
-     :   Equivalent to db\_charset. Specify this to use the CHAR character set used by the database.
+</b></dt>
+<dd>
 
-      nchar\_charset
-     :   Specify this to use the NCHAR character set used by the database.
+The destination character set. *<target-charset-string\>* can be any of the supported character set labels. It can also be:
 
-   options
- :   You can specify either or both of the following options:
 
-     Read or write a byte order mark \(BOM\)
-     :   Specify ***read\_bom=on*** or ***read\_bom=off*** to turn on or off reading byte order marks. Specify ***write\_bom=on*** or ***write\_bom=off*** to turn on or off writing byte order marks. By default, the behavior is read\_bom=on and write\_bom=off.
+<dl>
+<dt><b>
 
-  
+db\_charset
+
+</b></dt>
+<dd>
+
+Equivalent to char\_charset. Specify this to use the CHAR character set used by the database.
+
+
+
+</dd><dt><b>
+
+os\_charset
+
+</b></dt>
+<dd>
+
+Specify this to use the character set used by the operating system that is hosting the database server.
+
+
+
+</dd><dt><b>
+
+char\_charset
+
+</b></dt>
+<dd>
+
+Equivalent to db\_charset. Specify this to use the CHAR character set used by the database.
+
+
+
+</dd><dt><b>
+
+nchar\_charset
+
+</b></dt>
+<dd>
+
+Specify this to use the NCHAR character set used by the database.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+*<source-charset-string\>*
+
+</b></dt>
+<dd>
+
+The character set used for *<string-expression\>*. The default is db\_charset \(the database character set\). *<source-charset-string\>* can be any of the supported character set labels. It can also be:
+
+
+<dl>
+<dt><b>
+
+db\_charset
+
+</b></dt>
+<dd>
+
+Equivalent to char\_charset. Specify this to use the CHAR character set used by the database.
+
+
+
+</dd><dt><b>
+
+os\_charset
+
+</b></dt>
+<dd>
+
+Specify this to use the character set used by the operating system that is hosting the database server.
+
+
+
+</dd><dt><b>
+
+char\_charset
+
+</b></dt>
+<dd>
+
+Equivalent to db\_charset. Specify this to use the CHAR character set used by the database.
+
+
+
+</dd><dt><b>
+
+nchar\_charset
+
+</b></dt>
+<dd>
+
+Specify this to use the NCHAR character set used by the database.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+options
+
+</b></dt>
+<dd>
+
+You can specify either or both of the following options:
+
+
+<dl>
+<dt><b>
+
+Read or write a byte order mark \(BOM\)
+
+</b></dt>
+<dd>
+
+Specify ***read\_bom=on*** or ***read\_bom=off*** to turn on or off reading byte order marks. Specify ***write\_bom=on*** or ***write\_bom=off*** to turn on or off writing byte order marks. By default, the behavior is read\_bom=on and write\_bom=off.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+
 
 ## Returns
 
@@ -67,10 +191,23 @@ LONG BINARY
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard. In the ANSI/ISO SQL Standard, conversion of string data from one charset to another is accomplished with the CONVERT function \(not to be confused with the CONVERT function provided in the software\) which has different arguments than CSCONVERT.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard. In the ANSI/ISO SQL Standard, conversion of string data from one charset to another is accomplished with the CONVERT function \(not to be confused with the CONVERT function provided in the software\) which has different arguments than CSCONVERT.
+
+
+
+</dd>
+</dl>
+
+
 
 ## 1
 

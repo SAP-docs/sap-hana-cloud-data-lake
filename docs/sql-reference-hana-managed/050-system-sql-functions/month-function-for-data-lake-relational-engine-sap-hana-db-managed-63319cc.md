@@ -16,10 +16,23 @@ MONTH ( <date-expression> )
 
 ## Parameters
 
- *<date-expression\>*
- :   A date/time value.
 
- 
+<dl>
+<dt><b>
+
+*<date-expression\>*
+
+</b></dt>
+<dd>
+
+A date/time value.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio63319ccc3d6847fab168f3418d0fec07__section_j1h_jfn_vrb"/>
 

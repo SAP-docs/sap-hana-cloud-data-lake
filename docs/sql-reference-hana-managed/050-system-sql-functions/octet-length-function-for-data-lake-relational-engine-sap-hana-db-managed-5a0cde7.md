@@ -16,10 +16,23 @@ OCTET_LENGTH( <column-name> )
 
 ## Parameters
 
- *<column-name\>*
- :   The name of a column.
 
- 
+<dl>
+<dt><b>
+
+*<column-name\>*
+
+</b></dt>
+<dd>
+
+The name of a column.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio5a0cde720c794a5e877759b652354e75__section_vw1_jmn_vrb"/>
 

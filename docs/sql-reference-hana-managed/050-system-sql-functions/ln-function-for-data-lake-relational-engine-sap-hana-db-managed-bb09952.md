@@ -16,10 +16,23 @@ LN ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   A column, variable, or expression with a data type that is either exact numeric, approximate numeric, money, or any type that can be implicitly converted to one of these types. For other data types, the LN function generates an error. The return value is of DOUBLE data type.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+A column, variable, or expression with a data type that is either exact numeric, approximate numeric, money, or any type that can be implicitly converted to one of these types. For other data types, the LN function generates an error. The return value is of DOUBLE data type.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiobb099528303b4a94b070c07d2956b0b1__section_pmq_m1h_trb"/>
 

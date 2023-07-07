@@ -6,11 +6,6 @@ Adds or replaces a certificate in the database from the given file or string.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -20,22 +15,48 @@ Adds or replaces a certificate in the database from the given file or string.
 
 ```
 CREATE [ OR REPLACE ] CERTIFICATE <certificate-name>
-   [ PURPOSE  FOR PROVIDER <provider_name> ]
+   [ PURPOSE { JWT | X509 } FOR PROVIDER <provider_name> ]
    FROM { <certificate-string> | <variable-name> }
 
 ```
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 ## Parameters
 
- PURPOSE clause
- :   Specifies the provider of the purpose for the certificate.
 
-  FROM clause
- :   Specifies a string or variable containing a certificate.
+<dl class="glossary">
+<dt><b>
 
- 
+PURPOSE clause
+
+</b></dt>
+<dd>
+
+Specifies the provider of the purpose for the certificate.
+
+
+
+</dd><dt><b>
+
+FROM clause
+
+</b></dt>
+<dd>
+
+Specifies a string or variable containing a certificate.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -43,7 +64,7 @@ The CREATE CERTIFICATE statement adds or replaces a certificate in the database 
 
 Certificates that are stored in the database can be used by web service procedures and functions that make secure HTTPS connections to a web server. Certificates with a specified PURPOSE can be used for user authentication.
 
-The certificate is validated at log in time, not when the certificate is created.
+The certificate is validated at login time, not when the certificate is created.
 
 When you add a certificate, it is added to the ISYSCERTIFICATE system table. Use the corresponding system view SYSCERTIFICATE to view the table.
 
@@ -67,10 +88,23 @@ Automatic commit.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio816b6bb36ce21014a7a7a27482e677e1__section_gwx_f3p_p4b"/>
 
@@ -82,7 +116,16 @@ This example creates a certificate with a JWT purpose.
 CREATE CERTIFICATE my_cert1
 PURPOSE JWT FOR PROVIDER my_jwt_provider
 FROM '-----BEGIN CERTIFICATE-----
-...-----END CERTIFICATE-----':
+...-----END CERTIFICATE-----'
+```
+
+This example creates a certificate with an X.509 purpose.
+
+```
+CREATE CERTIFICATE my_cert2
+PURPOSE X509 FOR PROVIDER my_X509_provider
+FROM '-----BEGIN CERTIFICATE-----
+...-----END CERTIFICATE-----'
 ```
 
 **Related Information**  

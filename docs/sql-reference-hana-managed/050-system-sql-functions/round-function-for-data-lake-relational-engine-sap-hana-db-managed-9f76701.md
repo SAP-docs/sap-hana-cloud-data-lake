@@ -16,13 +16,34 @@ ROUND ( <numeric-expression>, <integer-expression> )
 
 ## Parameters
 
-  *<numeric-expression\>* 
- :   The number, passed to the function, to be rounded.
 
-  *<integer-expression\>*
- :   A positive integer specifies the number of significant digits to the right of the decimal point at which to round. A negative expression specifies the number of significant digits to the left of the decimal point at which to round.
+<dl>
+<dt><b>
 
- 
+ *<numeric-expression\>* 
+
+</b></dt>
+<dd>
+
+The number, passed to the function, to be rounded.
+
+
+
+</dd><dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+A positive integer specifies the number of significant digits to the right of the decimal point at which to round. A negative expression specifies the number of significant digits to the left of the decimal point at which to round.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio9f767014ddd542479d75822573eec6cd__section_ymp_vst_vrb"/>
 
@@ -75,31 +96,15 @@ When `ROUND_TO_EVEN` database option is set ON, the `ROUND` function rounds data
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    123.4567
+    
+        123.4567
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    round \(a.n,4\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    123.4570
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    round \(a.n,3\)
+        round \(a.n,4\)
 
 
     
@@ -107,31 +112,15 @@ When `ROUND_TO_EVEN` database option is set ON, the `ROUND` function rounds data
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    123.4600
+    
+        123.4570
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    round \(a.n,2\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    123.5000
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    round \(a.n,1\)
+        round \(a.n,3\)
 
 
     
@@ -139,31 +128,15 @@ When `ROUND_TO_EVEN` database option is set ON, the `ROUND` function rounds data
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    123.0000
+    
+        123.4600
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    round \(a.n, 0\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    120.0000
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    round \(a.n,-1\)
+        round \(a.n,2\)
 
 
     
@@ -171,15 +144,15 @@ When `ROUND_TO_EVEN` database option is set ON, the `ROUND` function rounds data
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    100.0000
+    
+        123.5000
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    round \(a.n,-2\)
+    
+        round \(a.n,1\)
 
 
     
@@ -187,15 +160,63 @@ When `ROUND_TO_EVEN` database option is set ON, the `ROUND` function rounds data
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    0.0000
+    
+        123.0000
 
 
     
     </td>
     <td valign="top" rowspan="1">
+    
+        round \(a.n, 0\)
 
-    round \(a.n,-3\)
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        120.0000
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        round \(a.n,-1\)
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        100.0000
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        round \(a.n,-2\)
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        0.0000
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        round \(a.n,-3\)
 
 
     
@@ -239,29 +260,29 @@ When `ROUND_TO_EVEN` database option is set ON, the `ROUND` function rounds data
     </tr>
     <tr>
     <td valign="top">
-
-    ROUND \(convert \(double, 123.45001\), 1\)
+    
+        ROUND \(convert \(double, 123.45001\), 1\)
 
 
     
     </td>
     <td valign="top">
-
-    123.5
+    
+        123.5
 
 
     
     </td>
     <td valign="top">
-
-    123.5
+    
+        123.5
 
 
     
     </td>
     <td valign="top">
-
-    0.05001 is more than half of 0.1
+    
+        0.05001 is more than half of 0.1
 
 
     
@@ -269,29 +290,29 @@ When `ROUND_TO_EVEN` database option is set ON, the `ROUND` function rounds data
     </tr>
     <tr>
     <td valign="top">
-
-    ROUND \(convert \(double, 123.45000\), 1\)
+    
+        ROUND \(convert \(double, 123.45000\), 1\)
 
 
     
     </td>
     <td valign="top">
-
-    123.4
+    
+        123.4
 
 
     
     </td>
     <td valign="top">
-
-    123.5
+    
+        123.5
 
 
     
     </td>
     <td valign="top">
-
-    0.0500 is half of 0.1
+    
+        0.0500 is half of 0.1
 
 
     

@@ -16,16 +16,45 @@ REPLACE ( <string_expr1>, <string_expr2>, <string_expr3> )
 
 ## Parameters
 
- *<string\_expr1\>*
- :   The source string, or the string expression to be searched, expressed as VARCHAR, VARBINARY, or BINARY data type.
 
-  *<string\_expr2\>*
- :   The pattern string, or the string expression to find within the first expression \(*<string\_expr1\>*\) and is expressed as VARCHAR, VARBINARY, or BINARY data type.
+<dl>
+<dt><b>
 
-  *<string\_expr3\>*
- :   The replacement string expression, expressed as VARCHAR, VARBINARY, or BINARY data type.
+*<string\_expr1\>*
 
- 
+</b></dt>
+<dd>
+
+The source string, or the string expression to be searched, expressed as VARCHAR, VARBINARY, or BINARY data type.
+
+
+
+</dd><dt><b>
+
+*<string\_expr2\>*
+
+</b></dt>
+<dd>
+
+The pattern string, or the string expression to find within the first expression \(*<string\_expr1\>*\) and is expressed as VARCHAR, VARBINARY, or BINARY data type.
+
+
+
+</dd><dt><b>
+
+*<string\_expr3\>*
+
+</b></dt>
+<dd>
+
+The replacement string expression, expressed as VARCHAR, VARBINARY, or BINARY data type.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5857e0a84f210158b54cac40679f568__STR_REPLACE_remarks1"/>
 
@@ -102,5 +131,5 @@ SQL – Transact-SQL extension to ISO/ANSI SQL grammar
 
 [String Functions in Data Lake Relational Engine](string-functions-in-data-lake-relational-engine-a52d1d9.md "String functions perform conversion, extraction, or manipulation operations on strings, or return information about strings.")
 
-[STR_REPLACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/d0e04740ba8f44cfb34a48fe3c6e06ae.html "Takes three arguments as input of type BINARY or STRING and replaces any instances of the second string expression (string_expr2) that occur within the first string expression (string_expr1) with a third expression (string_expr3).") :arrow_upper_right:
+[STR_REPLACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/d0e04740ba8f44cfb34a48fe3c6e06ae.html "Takes three arguments as input of type BINARY or STRING and replaces any instances of the second string expression (string_expr2) that occur within the first string expression (string_expr1) with a third expression (string_expr3).") :arrow_upper_right:
 

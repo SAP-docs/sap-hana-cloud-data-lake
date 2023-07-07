@@ -6,11 +6,6 @@ Sets the default schema for the connection
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -26,11 +21,8 @@ SET SCHEMA [ <schema_name> ]
 
 
 
-<a name="loio819f6ce2e6ef4d78ba11c7fcc194ea6e__section_hgp_pjr_btb"/>
-
-## Remarks
-
-When executing a SQL statement that references a database object, if a schema name is not specified, then the current value of the SET SCHEMA statement is cleared. The SET schema remains in effect for the duration of the connection or until reset to another schema name or cleared.
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -42,7 +34,18 @@ When executing a SQL statement that references a database object, if a schema na
 
 ### 
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+
+
+<a name="loio819f6ce2e6ef4d78ba11c7fcc194ea6e__section_hgp_pjr_btb"/>
+
+## Remarks
+
+When executing a SQL statement that references a database object, if a schema name is not specified, then the current value of the SET SCHEMA statement is cleared. The SET schema remains in effect for the duration of the connection or until reset to another schema name or cleared.
 
 
 

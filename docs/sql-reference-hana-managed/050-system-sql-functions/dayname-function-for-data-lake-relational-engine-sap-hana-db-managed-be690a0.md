@@ -16,10 +16,23 @@ DAYNAME ( <date-expression> )
 
 ## Parameters
 
- *<date-expression\>*
- :   The date.
 
- 
+<dl>
+<dt><b>
+
+*<date-expression\>*
+
+</b></dt>
+<dd>
+
+The date.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiobe690a0aa62c4e67986070c70f25b3fe__section_z2w_4bm_srb"/>
 

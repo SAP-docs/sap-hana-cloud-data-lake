@@ -6,11 +6,6 @@ Drops a connection with the database.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,17 +19,43 @@ DISCONNECT [ { <connection-name> | CURRENT | ALL } ]
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa61bf2a484f2101586c89bad47992194__IQ_Parameters"/>
 
 ## Parameters
 
- ALL
- :   Drops all of the connections of the application to all database environments.
 
-  CURRENT
- :   \(Default\) drops the current connection.
+<dl>
+<dt><b>
 
- 
+ALL
+
+</b></dt>
+<dd>
+
+Drops all of the connections of the application to all database environments.
+
+
+
+</dd><dt><b>
+
+CURRENT
+
+</b></dt>
+<dd>
+
+\(Default\) drops the current connection.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61bf2a484f2101586c89bad47992194__IQ_Usage"/>
 

@@ -16,10 +16,23 @@ CUME_DIST () OVER (<window-spec>)
 
 ## Parameters
 
- *<window-spec\>*
- :   Specified when using this function as a window function.
 
- 
+<dl>
+<dt><b>
+
+*<window-spec\>*
+
+</b></dt>
+<dd>
+
+Specified when using this function as a window function.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio65729084257448758370d2196d0f1021__section_lbv_tml_srb"/>
 

@@ -24,16 +24,55 @@ sp_iqindexinfo '{ database | [ table <table-name> | index <index-name> ] [...] 
 
 ## Parameters
 
- *<table-name\>*
- :   The name of the table.
 
-  *<index-name\>*
- :   The name of the index.
+<dl>
+<dt><b>
 
-  *<resource-percent\>*
- :   The resources percentage allows you to limit the CPU utilization of the sp\_iqindexinfo procedure by specifying the percent of total CPUs to use. *<resource-percent\>* must be an integer greater than 0.
+*<table-name\>*
 
- 
+</b></dt>
+<dd>
+
+The name of the table.
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+*<index-name\>*
+
+</b></dt>
+<dd>
+
+The name of the index.
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+*<resource-percent\>*
+
+</b></dt>
+<dd>
+
+The resources percentage allows you to limit the CPU utilization of the sp\_iqindexinfo procedure by specifying the percent of total CPUs to use. *<resource-percent\>* must be an integer greater than 0.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5ac909e84f210158be2ec9a4fd2e670__section_xvl_gcz_mbb"/>
 
@@ -175,59 +214,7 @@ sp\_iqindexinfo shows the DBA on which dbspaces a given object resides. The DBA 
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
-
-You also need:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-MANAGE ANY DBSPACE
-
-
-
-</td>
-<td valign="top">
-
-System privilege
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+Requires EXECUTE object-level privilege on the procedure, along with the MANAGE ANY DBSPACE system privilee.
 
 
 
@@ -574,5 +561,5 @@ iq\_main
 
 [sp\_iqindexsize Procedure for Data Lake Relational Engine](sp-iqindexsize-procedure-for-data-lake-relational-engine-a5ad8fe.md "Gives the size of the specified index.")
 
-[Cloud Dbspaces](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2023_1_QRC/en-US/493eb818429e4996b3da4153192a9efa.html "Cloud dbspace is a new offering where the database engine stores a user dbspace in object storage solutions such as Microsoft Azure Blob Storage, AWS Simple Storage Service (S3), or Google Cloud Storage. In a cloud dbspace, database pages are physically stored as objects as opposed to regular file system blocks.") :arrow_upper_right:
+[Cloud Dbspaces](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2023_2_QRC/en-US/493eb818429e4996b3da4153192a9efa.html "Cloud dbspace is a new offering where the database engine stores a user dbspace in object storage solutions such as Microsoft Azure Blob Storage, AWS Simple Storage Service (S3), or Google Cloud Storage. In a cloud dbspace, database pages are physically stored as objects as opposed to regular file system blocks.") :arrow_upper_right:
 

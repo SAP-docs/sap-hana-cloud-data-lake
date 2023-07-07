@@ -32,22 +32,54 @@ ALTER TABLE <remote-schema-name>.<remote-table-name> IN FILES_SERVICE
 
 ## Parameters
 
- *<remote-schema-name\>*
- :   The name of the schema. If a schema name is not provided, the current schema is used.
 
-  *<remote-table-name\>*
- :   The name of the table.
+<dl>
+<dt><b>
 
-  *<datasource-name\>*
- :   The name of the datasource being dropped.
+*<remote-schema-name\>*
 
- 
+</b></dt>
+<dd>
+
+The name of the schema. If a schema name is not provided, the current schema is used.
+
+
+
+</dd><dt><b>
+
+*<remote-table-name\>*
+
+</b></dt>
+<dd>
+
+The name of the table.
+
+
+
+</dd><dt><b>
+
+*<datasource-name\>*
+
+</b></dt>
+<dd>
+
+The name of the datasource being dropped.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio1e570afca5014f4098f36be8db1129b6__section_srk_zhb_nqb"/>
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

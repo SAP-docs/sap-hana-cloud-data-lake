@@ -16,13 +16,34 @@ REPLICATE ( <string-expression>, <integer-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string to be repeated.
 
-  *<integer-expression\>*
- :   The number of times the string is to be repeated.
+<dl>
+<dt><b>
 
- 
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string to be repeated.
+
+
+
+</dd><dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number of times the string is to be repeated.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio1cb52e270b6c4ce4bc6ed9a00e09af0f__section_lwn_5c5_vrb"/>
 

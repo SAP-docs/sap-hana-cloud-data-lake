@@ -16,13 +16,34 @@ REPEAT ( <string-expression>, <integer-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string to be repeated.
 
-  *<integer-expression\>*
- :   The number of times the string is to be repeated. If *<integer-expression\>* is negative, an empty string is returned.
+<dl>
+<dt><b>
 
- 
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string to be repeated.
+
+
+
+</dd><dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number of times the string is to be repeated. If *<integer-expression\>* is negative, an empty string is returned.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio0248da66d3bf4d7ba425f5b4f20ba6cc__section_mxp_nn3_wrb"/>
 

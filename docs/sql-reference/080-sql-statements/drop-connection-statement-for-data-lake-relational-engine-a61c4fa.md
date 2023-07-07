@@ -6,11 +6,6 @@ Drops any user connection to the database.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,18 +19,36 @@ DROP CONNECTION <connection-id>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa61c4fa184f21015b43ac105d9d73fe2__IQ_Parameters"/>
 
 ## Parameters
 
- *<connection-id\>*
- :   Obtained using the `CONNECTION_PROPERTY` function to request the connection number. This statement returns the connection ID of the current connection:
 
-    ```
-    SELECT connection_property( 'number' )
-    ```
+<dl>
+<dt><b>
 
- 
+*<connection-id\>*
+
+</b></dt>
+<dd>
+
+Obtained using the `CONNECTION_PROPERTY` function to request the connection number. This statement returns the connection ID of the current connection:
+
+```
+SELECT connection_property( 'number' )
+```
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61c4fa184f21015b43ac105d9d73fe2__IQ_Usage"/>
 

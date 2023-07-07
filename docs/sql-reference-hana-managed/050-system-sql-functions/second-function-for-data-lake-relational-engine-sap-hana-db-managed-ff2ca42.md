@@ -16,10 +16,23 @@ SECOND ( <datetime-expression> )
 
 ## Parameters
 
- *<datetime-expression\>*
- :   The date and time value.
 
- 
+<dl>
+<dt><b>
+
+*<datetime-expression\>*
+
+</b></dt>
+<dd>
+
+The date and time value.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioff2ca422e5af48f58bd55ec839860dd4__section_slc_zz5_vrb"/>
 

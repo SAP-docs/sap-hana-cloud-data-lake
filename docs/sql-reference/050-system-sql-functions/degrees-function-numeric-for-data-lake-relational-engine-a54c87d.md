@@ -16,10 +16,23 @@ DEGREES ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   An angle in radians.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+An angle in radians.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa54c87d684f21015a9b9f518179a73ff__DEGREES_resturns1"/>
 
@@ -52,5 +65,5 @@ SELECT DEGREES( 0.52 ) FROM iq_dummy
 **Related Information**  
 
 
-[DEGREES Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/0e25a5ef993c45a582df334ea2178db7.html "Converts a number from radians to degrees.") :arrow_upper_right:
+[DEGREES Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/0e25a5ef993c45a582df334ea2178db7.html "Converts a number from radians to degrees.") :arrow_upper_right:
 

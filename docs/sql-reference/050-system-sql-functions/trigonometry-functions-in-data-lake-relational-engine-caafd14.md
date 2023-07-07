@@ -17,7 +17,7 @@ Some numeric functions return trigonometric information.
 
 [COS Function \[Numeric\] for Data Lake Relational Engine](cos-function-numeric-for-data-lake-relational-engine-a5406e3.md "Returns the cosine of a number, expressed in radians.")
 
-[COT Function \[Numeric\]for Data Lake Relational Engine](cot-function-numeric-for-data-lake-relational-engine-a540f97.md "Returns the cotangent of a number, expressed in radians.")
+[COT Function \[Numeric\] for Data Lake Relational Engine](cot-function-numeric-for-data-lake-relational-engine-a540f97.md "Returns the cotangent of a number, expressed in radians.")
 
 [SIN Function \[Numeric\] for Data Lake Relational Engine](sin-function-numeric-for-data-lake-relational-engine-a57fd70.md "Returns the sine of a number, expressed in radians.")
 

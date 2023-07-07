@@ -7,8 +7,7 @@ Create a new data lake Relational Engine schema in a relational container.
 
 
 ```
-CALL SYSHDL.CREATE_SCHEMA( '[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <relational_container_schema_name> (varname]' ); 
+CALL SYSHDL_<relational_container_schema_name>.CREATE_SCHEMA( '<relational_container_schema_name>' ); 
 ```
 
 
@@ -17,10 +16,23 @@ CALL SYSHDL.CREATE_SCHEMA( '[/pandoc/div/div/horizontalrule/codeblock/span/varna
 
 ## Parameters
 
- *<relational\_container\_schema\_name\>*
- :   Specifies the name of the new schema in the relational container. This name must be unique.
 
- 
+<dl>
+<dt><b>
+
+*<relational\_container\_schema\_name\>*
+
+</b></dt>
+<dd>
+
+Specifies the name of the new schema in the relational container. This name must be unique.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio173f6bf8e1614f6eaae5523084be64db__section_zhc_rnx_cjb"/>
 
@@ -34,7 +46,7 @@ The schema name combines the name of the relational container and the name of th
 
 ## Privileges
 
-You are a member of the container group administrator role, SYSHDL\_<relational\_container\_name\>\_ROLE.
+You are a member of the container group administrator role, SYSHDL\_<relational\_container\_name\>\_ROLE, for the relational container.
 
 
 
@@ -45,6 +57,6 @@ You are a member of the container group administrator role, SYSHDL\_<relational\
 The following example creates relational container CONTAINER1 and assigns USER1 as its administrator.
 
 ```
-CALL SYSHDL.CREATE_SCHEMA('MY_SCHEMA');
+CALL SYSHDL_CONTAINER1.CREATE_SCHEMA('MY_SCHEMA');
 ```
 

@@ -22,13 +22,34 @@ WITHIN GROUP ( ORDER BY <expression2> [ ASC | DESC ] )
 
 ## Parameters
 
- *<expression1\>*
- :   A constant of numeric data type and range from 0 to 1 \(inclusive\). If the argument is NULL, a “wrong argument for percentile” error is returned. If the argument value is less than 0 or greater than 1, a “data value out of range” error is returned
 
-  *<expression2\>*
- :   A sort specification that must be a single expression involving a column reference. Multiple expressions are not allowed and no rank analytical functions, set functions, or subqueries are allowed in this sort expression.
+<dl>
+<dt><b>
 
- 
+*<expression1\>*
+
+</b></dt>
+<dd>
+
+A constant of numeric data type and range from 0 to 1 \(inclusive\). If the argument is NULL, a “wrong argument for percentile” error is returned. If the argument value is less than 0 or greater than 1, a “data value out of range” error is returned
+
+
+
+</dd><dt><b>
+
+*<expression2\>*
+
+</b></dt>
+<dd>
+
+A sort specification that must be a single expression involving a column reference. Multiple expressions are not allowed and no rank analytical functions, set functions, or subqueries are allowed in this sort expression.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio126ea72fa1b94e76828493c4602e8942__section_rqp_zkn_vrb"/>
 

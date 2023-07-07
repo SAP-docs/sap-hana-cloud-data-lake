@@ -6,19 +6,40 @@ Returns the first value from a set of values.
 
 
 
- Syntax 1: Windowed aggregate syntax
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1: Windowed aggregate syntax
+
+</b></dt>
+<dd>
+
+```
 FIRST_VALUE (<expression> [IGNORE NULLS | RESPECT NULLS])
 OVER (<window-spec>)
 ```
 
-  Syntax 2: Simple aggregate syntax
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2: Simple aggregate syntax
+
+</b></dt>
+<dd>
+
+```
 FIRST_VALUE (<input expression> [IGNORE NULLS | RESPECT NULLS] 
 ORDER BY <ordering expression>)
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio9994e0a4b12c4073a74b5a37d5e25f2e__section_gdc_2rg_trb"/>
 
@@ -176,45 +197,22 @@ You can specify elements of *<window-spec\>* either in the function syntax \(inl
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    500
+    
+        500
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    1,658
+    
+        1,658
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    100.000000000000000000000
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    500
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    1,570
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    138.842709713689113761394
+        100.000000000000000000000
 
 
     
@@ -222,45 +220,22 @@ You can specify elements of *<window-spec\>* either in the function syntax \(inl
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    500
+    
+        500
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    1,615
+    
+        1,570
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    110.428462434244870095972
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    500
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    1,013
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    109.585190539292454724330
+        138.842709713689113761394
 
 
     
@@ -268,45 +243,22 @@ You can specify elements of *<window-spec\>* either in the function syntax \(inl
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    500
+    
+        500
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    750
+    
+        1,615
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    137.734409508894510701521
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    500
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    921
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    167.449704854836766654619
+        110.428462434244870095972
 
 
     
@@ -314,45 +266,22 @@ You can specify elements of *<window-spec\>* either in the function syntax \(inl
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    500
+    
+        500
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    868
+    
+        1,013
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    113.239368750752921334778
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    500
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    703
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    222.867927558928643135365
+        109.585190539292454724330
 
 
     
@@ -360,45 +289,22 @@ You can specify elements of *<window-spec\>* either in the function syntax \(inl
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    500
+    
+        500
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    191
+    
+        750
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    119.664297474199895594908
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    400
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    1,684
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    100.000000000000000000000
+        137.734409508894510701521
 
 
     
@@ -406,45 +312,22 @@ You can specify elements of *<window-spec\>* either in the function syntax \(inl
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    400
+    
+        500
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    1,740
+    
+        921
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    76.128652163477274215016
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    400
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    1,751
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    76.353400685155687446813
+        167.449704854836766654619
 
 
     
@@ -452,45 +335,22 @@ You can specify elements of *<window-spec\>* either in the function syntax \(inl
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    400
+    
+        500
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    1,607
+    
+        868
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    133.758100765890593292456
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    400
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    1,507
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    77.996465120338650199655
+        113.239368750752921334778
 
 
     
@@ -498,22 +358,183 @@ You can specify elements of *<window-spec\>* either in the function syntax \(inl
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    400
+    
+        500
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    1,576
+    
+        703
 
 
     
     </td>
     <td valign="top" rowspan="1">
+    
+        222.867927558928643135365
 
-    150.428767810774836893669
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        500
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        191
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        119.664297474199895594908
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        400
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        1,684
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        100.000000000000000000000
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        400
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        1,740
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        76.128652163477274215016
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        400
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        1,751
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        76.353400685155687446813
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        400
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        1,607
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        133.758100765890593292456
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        400
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        1,507
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        77.996465120338650199655
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        400
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        1,576
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        150.428767810774836893669
 
 
     

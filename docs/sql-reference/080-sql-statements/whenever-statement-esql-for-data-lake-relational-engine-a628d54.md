@@ -6,11 +6,6 @@ Specifies error handling in an Embedded SQL program.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -23,6 +18,11 @@ WHENEVER
    { SQLERROR | SQLWARNING | NOTFOUND }
    … { GOTO <label> | STOP | CONTINUE | <C code;> }
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 

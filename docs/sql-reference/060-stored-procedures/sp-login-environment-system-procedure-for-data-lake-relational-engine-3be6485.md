@@ -29,7 +29,7 @@ Do not edit this procedure. Instead, to change the login environment, set the lo
 
 ## Privileges
 
-You need to have EXECUTE privilege on the system procedure.
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

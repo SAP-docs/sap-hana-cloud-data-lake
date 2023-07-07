@@ -302,5 +302,5 @@ FOREIGN KEY (view_object_id) references SYS.ISYSOBJECT (object_id) MATCH UNIQUE 
 **Related Information**  
 
 
-[SYSVIEW System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/1681f580168444a9b138cd2a8b51382b.html "Each row in the SYS.SYSVIEW system view describes a view in the database. SYS.SYSVIEW list both normal views and materialized views.") :arrow_upper_right:
+[SYSVIEW System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/1681f580168444a9b138cd2a8b51382b.html "Each row in the SYS.SYSVIEW system view describes a view in the database. SYS.SYSVIEW list both normal views and materialized views.") :arrow_upper_right:
 

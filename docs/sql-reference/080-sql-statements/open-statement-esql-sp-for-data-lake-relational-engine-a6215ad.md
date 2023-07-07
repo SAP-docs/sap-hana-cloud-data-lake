@@ -6,11 +6,6 @@ Opens a previously declared cursor to access information from the database.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -26,25 +21,67 @@ OPEN <cursor-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa6215ada84f2101596dfe103bbef22a4__IQ_Parameters"/>
 
 ## Parameters
 
- *<cursor-name\>*
- :   Identifier or host-variable.
 
-    If the cursor name is specified by an identifier or string, then the corresponding `DECLARE CURSOR` statement must appear prior to the `OPEN` in the C program; if the cursor name is specified by a host variable, then the `DECLARE CURSOR` statement must execute before the `OPEN` statement.
+<dl>
+<dt><b>
 
-  USING
- :   Specifies the host variables that are bound to the placeholder bind variables in the `SELECT` statement for which the cursor has been declared.
+*<cursor-name\>*
 
-  *<sqlda-name\>*
- :   Identifier
+</b></dt>
+<dd>
 
-  WITH HOLD
- :   Keeps the cursor open for subsequent transactions. The cursor remains open until the end of the current connection or until an explicit `CLOSE` statement is executed. Cursors are automatically closed when a connection is terminated.
+Identifier or host-variable.
 
- 
+If the cursor name is specified by an identifier or string, then the corresponding `DECLARE CURSOR` statement must appear prior to the `OPEN` in the C program; if the cursor name is specified by a host variable, then the `DECLARE CURSOR` statement must execute before the `OPEN` statement.
+
+
+
+</dd><dt><b>
+
+USING
+
+</b></dt>
+<dd>
+
+Specifies the host variables that are bound to the placeholder bind variables in the `SELECT` statement for which the cursor has been declared.
+
+
+
+</dd><dt><b>
+
+*<sqlda-name\>*
+
+</b></dt>
+<dd>
+
+Identifier
+
+
+
+</dd><dt><b>
+
+WITH HOLD
+
+</b></dt>
+<dd>
+
+Keeps the cursor open for subsequent transactions. The cursor remains open until the end of the current connection or until an explicit `CLOSE` statement is executed. Cursors are automatically closed when a connection is terminated.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa6215ada84f2101596dfe103bbef22a4__IQ_Usage"/>
 

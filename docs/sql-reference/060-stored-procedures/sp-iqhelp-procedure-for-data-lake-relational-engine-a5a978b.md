@@ -23,34 +23,71 @@ sp_iqhelp [ <obj-name> ], [ <obj-owner> ], [ <obj-category> ], [ <obj-typ
 
 ## Parameters
 
- *<obj-name\>* 
- :   The name of the object.
 
-  *<obj-owner\>*
- :   The owner of the object.
+<dl>
+<dt><b>
 
-  *<obj-category\>*
- :   \(Optional\) A parameter that specifies the category of the object.
+*<obj-name\>* 
 
-    Columns, constraints, and indexes are associated with tables and cannot be queried directly. When a table is queried, the information about columns, indexes, and constraints associated with that table is displayed.
+</b></dt>
+<dd>
 
-    If the specified object category is not one of the allowed values, displays an ***Invalid object category*** message.
+The name of the object.
 
-    Allowed values are:
 
-    -   table – object is a base table
-    -   view – object is a view
-    -   procedure – object is a stored procedure or function
-    -   event – object is an event
-    -   datatype – object is a system or user-defined data type
 
-  *<obj-type\>*
- :   The type of object. Allowed values are:
+</dd><dt><b>
 
-    -   SYSTEM – displays information about system objects \(objects owned by user SYS or dbo\) only
-    -   ALL – displays information about all objects. By default, only information about non-system objects is displayed. If the specified object type is not SYSTEM or ALL, displays an ***Invalid object type*** message.
+*<obj-owner\>*
 
- The sp\_iqhelp procedure can be invoked without any parameters. If no parameters are specified, sp\_iqhelp displays information about all independent objects in the database, that is, base tables, views, stored procedures, functions, events, and data types.
+</b></dt>
+<dd>
+
+The owner of the object.
+
+
+
+</dd><dt><b>
+
+*<obj-category\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) A parameter that specifies the category of the object.
+
+Columns, constraints, and indexes are associated with tables and cannot be queried directly. When a table is queried, the information about columns, indexes, and constraints associated with that table is displayed.
+
+If the specified object category is not one of the allowed values, displays an ***Invalid object category*** message.
+
+Allowed values are:
+
+-   table – object is a base table
+-   view – object is a view
+-   procedure – object is a stored procedure or function
+-   event – object is an event
+-   datatype – object is a system or user-defined data type
+
+
+
+</dd><dt><b>
+
+*<obj-type\>*
+
+</b></dt>
+<dd>
+
+The type of object. Allowed values are:
+
+-   SYSTEM – displays information about system objects \(objects owned by user SYS or dbo\) only
+-   ALL – displays information about all objects. By default, only information about non-system objects is displayed. If the specified object type is not SYSTEM or ALL, displays an ***Invalid object type*** message.
+
+
+
+</dd>
+</dl>
+
+The sp\_iqhelp procedure can be invoked without any parameters. If no parameters are specified, sp\_iqhelp displays information about all independent objects in the database, that is, base tables, views, stored procedures, functions, events, and data types.
 
 
 
@@ -263,7 +300,7 @@ For descriptions of the individual output columns, refer to the related stored p
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

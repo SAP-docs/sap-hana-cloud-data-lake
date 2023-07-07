@@ -16,10 +16,23 @@ SPACE ( <integer-expression> )
 
 ## Parameters
 
- *<integer-expression\>*
- :   The number of spaces to return.
 
- 
+<dl>
+<dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number of spaces to return.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioad081410a2bf423c888257b5d0f621a3__section_bpv_gx5_vrb"/>
 

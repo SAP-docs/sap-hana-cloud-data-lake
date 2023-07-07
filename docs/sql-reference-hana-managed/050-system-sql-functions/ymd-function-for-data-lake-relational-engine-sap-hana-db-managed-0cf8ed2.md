@@ -16,16 +16,45 @@ YMD ( <integer-expression1>, <integer-expression2>, <integer-expression3> )
 
 ## Parameters
 
- *<integer-expression1\>*
- :   The year.
 
-  *<integer-expression2\>*
- :   The number of the month. If the month is outside the range 1–12, the year is adjusted accordingly.
+<dl>
+<dt><b>
 
-  *<integer-expression3\>*
- :   The day number. The day is allowed to be any integer, the date is adjusted accordingly.
+*<integer-expression1\>*
 
- 
+</b></dt>
+<dd>
+
+The year.
+
+
+
+</dd><dt><b>
+
+*<integer-expression2\>*
+
+</b></dt>
+<dd>
+
+The number of the month. If the month is outside the range 1–12, the year is adjusted accordingly.
+
+
+
+</dd><dt><b>
+
+*<integer-expression3\>*
+
+</b></dt>
+<dd>
+
+The day number. The day is allowed to be any integer, the date is adjusted accordingly.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio0cf8ed274a1d4591baedd1691a352a48__section_uz2_rp3_wrb"/>
 

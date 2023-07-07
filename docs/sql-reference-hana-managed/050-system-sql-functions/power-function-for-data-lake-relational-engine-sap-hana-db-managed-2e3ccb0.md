@@ -16,13 +16,34 @@ POWER ( <numeric-expression1>, <numeric-expression2> )
 
 ## Parameters
 
- *<numeric-expression1\>*
- :   The base.
 
-  *<numeric-expression2\>*
- :   The exponent.
+<dl>
+<dt><b>
 
- 
+*<numeric-expression1\>*
+
+</b></dt>
+<dd>
+
+The base.
+
+
+
+</dd><dt><b>
+
+*<numeric-expression2\>*
+
+</b></dt>
+<dd>
+
+The exponent.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio2e3ccb0baaf948029be3400b9c368722__section_j4s_fpn_vrb"/>
 

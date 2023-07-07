@@ -23,10 +23,23 @@ sp_iqstatistics [ <stat_name> ]
 
 ## Parameter
 
- *<stat\_name\>*
- :   \(Optional\) A VARCHAR parameter that specifies the name of a statistic.
 
- 
+<dl>
+<dt><b>
+
+*<stat\_name\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) A VARCHAR parameter that specifies the name of a statistic.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5b7d32a84f21015b4c2b681f35bc231__iq_refbb_1774"/>
 
@@ -1154,59 +1167,7 @@ When stat\_name is provided, sp\_iqstatistics returns one row for the given stat
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
-
-You also need:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-MANAGE ANY STATISTICS
-
-
-
-</td>
-<td valign="top">
-
-System privilege
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+Requires EXECUTE object-level privilege on the procedure along with the MANAGE ANY STATISTICS system privilege.
 
 
 
@@ -1273,73 +1234,36 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    7
+    
+        7
 
 
     
     </td>
     <td valign="top">
-
-    MainCacheCurrentSize
+    
+        MainCacheCurrentSize
 
 
     
     </td>
     <td valign="top">
-
-    Main dbspace current size in megabytes
+    
+        Main dbspace current size in megabytes
 
 
     
     </td>
     <td valign="top">
-
-    64
+    
+        64
 
 
     
     </td>
     <td valign="top">
-
-    mb
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    8
-
-
-    
-    </td>
-    <td valign="top">
-
-    MainCacheFinds
-
-
-    
-    </td>
-    <td valign="top">
-
-    Main dbspace total number of lookup requests
-
-
-    
-    </td>
-    <td valign="top">
-
-    95303
-
-
-    
-    </td>
-    <td valign="top">
-
-     
+        mb
 
 
     
@@ -1347,73 +1271,36 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    9
+    
+        8
 
 
     
     </td>
     <td valign="top">
-
-    MainCacheHits
+    
+        MainCacheFinds
 
 
     
     </td>
     <td valign="top">
-
-    Main dbspace total number of hits
+    
+        Main dbspace total number of lookup requests
 
 
     
     </td>
     <td valign="top">
-
-    95283
+    
+        95303
 
 
     
     </td>
     <td valign="top">
-
-     
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    10
-
-
-    
-    </td>
-    <td valign="top">
-
-    MainCachePagesPinned
-
-
-    
-    </td>
-    <td valign="top">
-
-    Main dbspace number of pages pinned
-
-
-    
-    </td>
-    <td valign="top">
-
-    0
-
-
-    
-    </td>
-    <td valign="top">
-
-    page
+         
 
 
     
@@ -1421,73 +1308,36 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    11
+    
+        9
 
 
     
     </td>
     <td valign="top">
-
-    MainCachePagesPinnedPercentage
+    
+        MainCacheHits
 
 
     
     </td>
     <td valign="top">
-
-    Percentage of cache dbspace pages pinned
+    
+        Main dbspace total number of hits
 
 
     
     </td>
     <td valign="top">
-
-    0
+    
+        95283
 
 
     
     </td>
     <td valign="top">
-
-    %
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    12
-
-
-    
-    </td>
-    <td valign="top">
-
-    MainCachePagesDirtyPercentage
-
-
-    
-    </td>
-    <td valign="top">
-
-    Percentage of cache dbspace pages dirtied
-
-
-    
-    </td>
-    <td valign="top">
-
-    0.39
-
-
-    
-    </td>
-    <td valign="top">
-
-    %
+         
 
 
     
@@ -1495,36 +1345,147 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    13
+    
+        10
 
 
     
     </td>
     <td valign="top">
-
-    MainCachePagesInUsePercentage
+    
+        MainCachePagesPinned
 
 
     
     </td>
     <td valign="top">
-
-    Percentage of cache dbspace pages in use
+    
+        Main dbspace number of pages pinned
 
 
     
     </td>
     <td valign="top">
-
-    4.44
+    
+        0
 
 
     
     </td>
     <td valign="top">
+    
+        page
 
-    %
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        11
+
+
+    
+    </td>
+    <td valign="top">
+    
+        MainCachePagesPinnedPercentage
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Percentage of cache dbspace pages pinned
+
+
+    
+    </td>
+    <td valign="top">
+    
+        0
+
+
+    
+    </td>
+    <td valign="top">
+    
+        %
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        12
+
+
+    
+    </td>
+    <td valign="top">
+    
+        MainCachePagesDirtyPercentage
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Percentage of cache dbspace pages dirtied
+
+
+    
+    </td>
+    <td valign="top">
+    
+        0.39
+
+
+    
+    </td>
+    <td valign="top">
+    
+        %
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        13
+
+
+    
+    </td>
+    <td valign="top">
+    
+        MainCachePagesInUsePercentage
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Percentage of cache dbspace pages in use
+
+
+    
+    </td>
+    <td valign="top">
+    
+        4.44
+
+
+    
+    </td>
+    <td valign="top">
+    
+        %
 
 
     

@@ -16,10 +16,23 @@ BIT_LENGTH( <column-name> )
 
 ## Parameters
 
- *<column-name\>*
- :   The name of a column
 
- 
+<dl>
+<dt><b>
+
+*<column-name\>*
+
+</b></dt>
+<dd>
+
+The name of a column
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio7d6e331baa6d4f8c90ff55b51d4bbb8e__section_n5w_tgl_srb"/>
 

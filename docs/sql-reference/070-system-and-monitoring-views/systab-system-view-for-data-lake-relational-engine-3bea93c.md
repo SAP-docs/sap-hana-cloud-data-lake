@@ -310,31 +310,100 @@ TINYINT
 
 The type of table or view. Values include:
 
- 1
- :   Base table
 
-  2
- :   Materialized view
+<dl>
+<dt><b>
 
-  3
- :   Global temporary table
+1
 
-  4
- :   Local temporary table
+</b></dt>
+<dd>
 
-  5
- :   Text index base table
+Base table
 
-  6
- :   Text index global temporary table
 
-  7
- :   Table partition
 
-  21
- :   View
+</dd><dt><b>
 
- 
+2
+
+</b></dt>
+<dd>
+
+Materialized view
+
+
+
+</dd><dt><b>
+
+3
+
+</b></dt>
+<dd>
+
+Global temporary table
+
+
+
+</dd><dt><b>
+
+4
+
+</b></dt>
+<dd>
+
+Local temporary table
+
+
+
+</dd><dt><b>
+
+5
+
+</b></dt>
+<dd>
+
+Text index base table
+
+
+
+</dd><dt><b>
+
+6
+
+</b></dt>
+<dd>
+
+Text index global temporary table
+
+
+
+</dd><dt><b>
+
+7
+
+</b></dt>
+<dd>
+
+Table partition
+
+
+
+</dd><dt><b>
+
+21
+
+</b></dt>
+<dd>
+
+View
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>
@@ -380,16 +449,45 @@ TINYINT
 
 The location of the data for the underlying table. Values include:
 
- 1
- :   Local server
 
-  2
- :   IQ table
+<dl>
+<dt><b>
 
-  3
- :   Remote server
+1
 
- 
+</b></dt>
+<dd>
+
+Local server
+
+
+
+</dd><dt><b>
+
+2
+
+</b></dt>
+<dd>
+
+IQ table
+
+
+
+</dd><dt><b>
+
+3
+
+</b></dt>
+<dd>
+
+Remote server
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>
@@ -596,19 +694,56 @@ CHAR\(13\)
 
 Readable value for table\_type. Values include:
 
- BASE
- :   Base table
 
-  MAT VIEW
- :   Materialized view
+<dl>
+<dt><b>
 
-  GBL TEMP
- :   Global temporary table
+BASE
 
-  VIEW
- :   View
+</b></dt>
+<dd>
 
- 
+Base table
+
+
+
+</dd><dt><b>
+
+MAT VIEW
+
+</b></dt>
+<dd>
+
+Materialized view
+
+
+
+</dd><dt><b>
+
+GBL TEMP
+
+</b></dt>
+<dd>
+
+Global temporary table
+
+
+
+</dd><dt><b>
+
+VIEW
+
+</b></dt>
+<dd>
+
+View
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>
@@ -640,5 +775,5 @@ The UTC time at which the data in the table was last modified. This column is on
 **Related Information**  
 
 
-[SYSTAB System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/9f67d02bffc5494fa10c6e2c245cd3ee.html "Each row of the SYSTAB system view describes one table or view in the database. Additional information for views can be found in the SYSVIEW system view. The underlying system table for this view is ISYSTAB.") :arrow_upper_right:
+[SYSTAB System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/9f67d02bffc5494fa10c6e2c245cd3ee.html "Each row of the SYSTAB system view describes one table or view in the database. Additional information for views can be found in the SYSVIEW system view. The underlying system table for this view is ISYSTAB.") :arrow_upper_right:
 

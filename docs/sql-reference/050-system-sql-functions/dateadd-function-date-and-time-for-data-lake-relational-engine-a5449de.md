@@ -16,16 +16,45 @@ DATEADD ( <date-part>, <numeric-expression>, <date-expression> )
 
 ## Parameters
 
- *<date-part\>*
- :   The date part to be added to the date.
 
-  *<numeric-expression\>*
- :   The number of date parts to be added to the date. *<numeric-expression\>* can be any numeric type; the value is truncated to an integer. The maximum microsecond in *<numeric-expression\>* is 2147483647, that is, 35:47.483647 \(35 minutes 47 seconds 483647 microseconds\).
+<dl>
+<dt><b>
 
-  *<date-expression\>*
- :   The date expression in the format `{ date | time | timestamp }`.
+*<date-part\>*
 
- 
+</b></dt>
+<dd>
+
+The date part to be added to the date.
+
+
+
+</dd><dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The number of date parts to be added to the date. *<numeric-expression\>* can be any numeric type; the value is truncated to an integer. The maximum microsecond in *<numeric-expression\>* is 2147483647, that is, 35:47.483647 \(35 minutes 47 seconds 483647 microseconds\).
+
+
+
+</dd><dt><b>
+
+*<date-expression\>*
+
+</b></dt>
+<dd>
+
+The date expression in the format `{ date | time | timestamp }`.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5449deb84f210159a75e748a099539f__DATEADD_retunrs1"/>
 
@@ -107,5 +136,5 @@ DATEADD is a Transact-SQL compatible data manipulation function.
 
 [Date Parts in Data Lake Relational Engine](date-parts-in-data-lake-relational-engine-a52b8dd.md "Many of the date functions use dates built from date parts.")
 
-[DATEADD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/202015428c2c49239a2aec8d572a0613.html "Returns the date produced by adding the specified number of the specified date parts to a date.") :arrow_upper_right:
+[DATEADD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/202015428c2c49239a2aec8d572a0613.html "Returns the date produced by adding the specified number of the specified date parts to a date.") :arrow_upper_right:
 

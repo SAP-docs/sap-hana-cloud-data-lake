@@ -6,11 +6,6 @@ Creates a new procedure that is compatible with SAP Adaptive Server Enterprise.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -23,9 +18,7 @@ This subset of the Transact-SQL CREATE PROCEDURE statement is supported in data 
 
 
 ```
-CREATE [ OR REPLACE ] PROCEDURE { [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname] }.]<procedure-name>
+CREATE [ OR REPLACE ] PROCEDURE { <owner> | <schema-name> }.]<procedure-name>
    … [ [ ( ] <@parameter_name> <data-type> [ = <default> ] [ OUTPUT ] [ , … ] [ ) ] ]
    … [ WITH RECOMPILE ]
    … AS
@@ -34,17 +27,43 @@ CREATE [ OR REPLACE ] PROCEDURE { [/pandoc/div/div/horizontalrule/codeblock/span
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa618891584f210158ae1b5a5cdce0a34__create_tsql_proc_parameters1"/>
 
 ## Parameters
 
- CREATE
- :   Creates a new procedure.
 
-  OR REPLACE
- :   Replaces an existing procedure with the same name. This clause changes the definition of the procedure, but preserves existing permissions.
+<dl>
+<dt><b>
 
- 
+CREATE
+
+</b></dt>
+<dd>
+
+Creates a new procedure.
+
+
+
+</dd><dt><b>
+
+OR REPLACE
+
+</b></dt>
+<dd>
+
+Replaces an existing procedure with the same name. This clause changes the definition of the procedure, but preserves existing permissions.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa618891584f210158ae1b5a5cdce0a34__create_tsql_proc_remarks1"/>
 
@@ -145,5 +164,5 @@ Automatic commit
 **Related Information**  
 
 
-[CREATE PROCEDURE Statement [T-SQL] for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/873f31b35574493f8d3a7974681eccb3.html "Creates a new procedure that is compatible with SAP Adaptive Server Enterprise.") :arrow_upper_right:
+[CREATE PROCEDURE Statement [T-SQL] for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/873f31b35574493f8d3a7974681eccb3.html "Creates a new procedure that is compatible with SAP Adaptive Server Enterprise.") :arrow_upper_right:
 

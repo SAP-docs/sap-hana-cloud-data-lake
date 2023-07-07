@@ -16,10 +16,23 @@ HTML_DECODE( <string> )
 
 ## Parameters
 
-  *<string\>* 
- :   Arbitrary literal string used in an HTML document.
 
- 
+<dl>
+<dt><b>
+
+ *<string\>* 
+
+</b></dt>
+<dd>
+
+Arbitrary literal string used in an HTML document.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio81f8bbdd6ce21014a76ca7e38126b096__HTML_DECODE_returns1"/>
 
@@ -180,10 +193,23 @@ When a Unicode codepoint is specified, if the value can be converted to a charac
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following statement returns the string `<p>The piano was made by 'Steinway & Sons'.</p>`:
 
@@ -201,5 +227,5 @@ SELECT HTML_DECODE('&lt;p&gt;It cost &euro;85.000,000.&lt;/p&gt;');
 **Related Information**  
 
 
-[HTML_DECODE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/76ddacf92fe949c3a5deee67aae74a46.html "Decodes special character entities that appear in HTML literal strings.") :arrow_upper_right:
+[HTML_DECODE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/76ddacf92fe949c3a5deee67aae74a46.html "Decodes special character entities that appear in HTML literal strings.") :arrow_upper_right:
 

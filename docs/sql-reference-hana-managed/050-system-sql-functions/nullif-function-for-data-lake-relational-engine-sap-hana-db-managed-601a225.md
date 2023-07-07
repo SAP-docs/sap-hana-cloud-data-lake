@@ -16,13 +16,34 @@ NULLIF ( <expression1>, <expression2> )
 
 ## Parameters
 
- *<expression1\>*
- :   An expression to be compared.
 
-  *<expression2\>*
- :   An expression to be compared.
+<dl>
+<dt><b>
 
- 
+*<expression1\>*
+
+</b></dt>
+<dd>
+
+An expression to be compared.
+
+
+
+</dd><dt><b>
+
+*<expression2\>*
+
+</b></dt>
+<dd>
+
+An expression to be compared.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio601a225cec8f4647a3a612f92994e087__section_vns_2nn_vrb"/>
 

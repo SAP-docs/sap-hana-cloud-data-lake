@@ -16,13 +16,34 @@ DATEFORMAT ( <datetime-expression>, <string-expression> )
 
 ## Parameters
 
- *<datetime-expression\>*
- :   The date and time to be converted, in the form of a date, time, timestamp, or character string.
 
-  *<string-expression\>*
- :   The format of the converted date.
+<dl>
+<dt><b>
 
- 
+*<datetime-expression\>*
+
+</b></dt>
+<dd>
+
+The date and time to be converted, in the form of a date, time, timestamp, or character string.
+
+
+
+</dd><dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The format of the converted date.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa546abe884f21015bc048c3994136804__DATEFORMAT_returns1"/>
 
@@ -82,5 +103,5 @@ SELECT DATEFORMAT (start_date, 'yy') + '?' FROM Employees;
 **Related Information**  
 
 
-[DATEFORMAT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/d8071cc3053447a9bd6d90807082d61a.html "Returns a string representing a date expression in the specified format.") :arrow_upper_right:
+[DATEFORMAT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/d8071cc3053447a9bd6d90807082d61a.html "Returns a string representing a date expression in the specified format.") :arrow_upper_right:
 

@@ -31,7 +31,19 @@ On INSERT and LOAD, DEFAULT TIMESTAMP has the same effect as CURRENT TIMESTAMP. 
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+

@@ -6,11 +6,6 @@ Creates a schema in the current instance.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -26,17 +21,43 @@ CREATE SCHEMA [ <owner>.]<schema_name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loio7988025f66db454aae19ae0c7a4fe042__section_wgv_jlr_btb"/>
 
 ## Parameters
 
- *<owner\>*
- :   Specifies who owns the schema. If none specified, the current user becomes the owner. An owner must be a user. It cannot be a role or another schema.
 
-  *<schema\_name\>*
- :   Specifies the name of the schema. The name must be unique for the database. Multiple users cannot have the same schema name and the schema name cannot be the same as any user or role.
+<dl>
+<dt><b>
 
- 
+*<owner\>*
+
+</b></dt>
+<dd>
+
+Specifies who owns the schema. If none specified, the current user becomes the owner. An owner must be a user. It cannot be a role or another schema.
+
+
+
+</dd><dt><b>
+
+*<schema\_name\>*
+
+</b></dt>
+<dd>
+
+Specifies the name of the schema. The name must be unique for the database. Multiple users cannot have the same schema name and the schema name cannot be the same as any user or role.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio7988025f66db454aae19ae0c7a4fe042__section_qz3_klr_btb"/>
 
@@ -68,5 +89,8 @@ SELECT * FROM USER2.SCHEMA_2.T2;
 
 ### 
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 

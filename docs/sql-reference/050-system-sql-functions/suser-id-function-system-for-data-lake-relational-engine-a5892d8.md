@@ -16,10 +16,23 @@ SUSER_ID ( [ <user-name> ] )
 
 ## Parameters
 
- *<user-name\>*
- :   The user name.
 
- 
+<dl>
+<dt><b>
+
+*<user-name\>*
+
+</b></dt>
+<dd>
+
+The user name.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Returns
 

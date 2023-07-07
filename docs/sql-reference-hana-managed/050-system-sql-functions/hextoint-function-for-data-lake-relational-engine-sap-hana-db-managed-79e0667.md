@@ -16,22 +16,35 @@ HEXTOINT ( <hexadecimal-string> )
 
 ## Parameters
 
- *<hexadecimal-string\>*
- :   The string to be converted to an integer. Input can be in the following forms, with either a lowercase or uppercase “x” in the prefix, or no prefix:
 
-    ```
-    0x<hex-string>
-    ```
+<dl>
+<dt><b>
 
-    ```
-    0X<hex-string>
-    ```
+*<hexadecimal-string\>*
 
-    ```
-    <hex-string>
-    ```
+</b></dt>
+<dd>
 
- 
+The string to be converted to an integer. Input can be in the following forms, with either a lowercase or uppercase “x” in the prefix, or no prefix:
+
+```
+0x<hex-string>
+```
+
+```
+0X<hex-string>
+```
+
+```
+<hex-string>
+```
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio79e066782ff645e8b6014d4f4d1e0d9e__section_l4x_fpg_trb"/>
 

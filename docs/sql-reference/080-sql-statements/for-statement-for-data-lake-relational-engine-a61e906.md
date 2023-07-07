@@ -6,11 +6,6 @@ Repeats the execution of a statement list once for each row in a cursor.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -39,26 +34,76 @@ Repeats the execution of a statement list once for each row in a cursor.
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa61e906784f210158fadf7350f8470f5__IQ_Parameters"/>
 
 ## Parameters
 
- NO SCROLL
- :   A cursor declared NO SCROLL is restricted to moving forward through the result set using FETCH NEXT and FETCH RELATIVE 0 seek operations. As rows cannot be returned to once the cursor leaves the row, there are no sensitivity restrictions on the cursor. When a NO SCROLL cursor is requested, the database server supplies the most efficient kind of cursor, which is an asensitive cursor.
 
-  DYNAMIC SCROLL
- :   DYNAMIC SCROLL is the default cursor type. DYNAMIC SCROLL cursors can use all formats of the FETCH statement. When a DYNAMIC SCROLL cursor is requested, the database server supplies an asensitive cursor. When using cursors there is always a trade-off between efficiency and consistency. Asensitive cursors provide efficient performance at the expense of consistency.
+<dl>
+<dt><b>
 
-  SCROLL
- :   A cursor declared SCROLL can use all formats of the FETCH statement. When a SCROLL cursor is requested, the database server supplies a value-sensitive cursor. The database server must execute value-sensitive cursors in such a way that result set membership is guaranteed. DYNAMIC SCROLL cursors are more efficient and should be used unless the consistent behavior of SCROLL cursors is required
+NO SCROLL
 
-  INSENSITIVE
- :   A cursor declared INSENSITIVE has its values and membership fixed over its lifetime. The result set of the SELECT statement is materialized when the cursor is opened. FETCHING from an INSENSITIVE cursor does not see the effect of any other INSERT, UPDATE, MERGE, PUT, or DELETE statement from any connection, including the connection that opened the cursor.
+</b></dt>
+<dd>
 
-  SENSITIVE
- :   A cursor declared SENSITIVE is sensitive to changes to membership or values of the result set.
+A cursor declared NO SCROLL is restricted to moving forward through the result set using FETCH NEXT and FETCH RELATIVE 0 seek operations. As rows cannot be returned to once the cursor leaves the row, there are no sensitivity restrictions on the cursor. When a NO SCROLL cursor is requested, the database server supplies the most efficient kind of cursor, which is an asensitive cursor.
 
- 
+
+
+</dd><dt><b>
+
+DYNAMIC SCROLL
+
+</b></dt>
+<dd>
+
+DYNAMIC SCROLL is the default cursor type. DYNAMIC SCROLL cursors can use all formats of the FETCH statement. When a DYNAMIC SCROLL cursor is requested, the database server supplies an asensitive cursor. When using cursors there is always a trade-off between efficiency and consistency. Asensitive cursors provide efficient performance at the expense of consistency.
+
+
+
+</dd><dt><b>
+
+SCROLL
+
+</b></dt>
+<dd>
+
+A cursor declared SCROLL can use all formats of the FETCH statement. When a SCROLL cursor is requested, the database server supplies a value-sensitive cursor. The database server must execute value-sensitive cursors in such a way that result set membership is guaranteed. DYNAMIC SCROLL cursors are more efficient and should be used unless the consistent behavior of SCROLL cursors is required
+
+
+
+</dd><dt><b>
+
+INSENSITIVE
+
+</b></dt>
+<dd>
+
+A cursor declared INSENSITIVE has its values and membership fixed over its lifetime. The result set of the SELECT statement is materialized when the cursor is opened. FETCHING from an INSENSITIVE cursor does not see the effect of any other INSERT, UPDATE, MERGE, PUT, or DELETE statement from any connection, including the connection that opened the cursor.
+
+
+
+</dd><dt><b>
+
+SENSITIVE
+
+</b></dt>
+<dd>
+
+A cursor declared SENSITIVE is sensitive to changes to membership or values of the result set.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61e906784f210158fadf7350f8470f5__IQ_Usage"/>
 

@@ -26,10 +26,23 @@ The fraction of a second is stored to six decimal places, but the accuracy of th
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- **Related Information**  
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+**Related Information**  
 
 
 [CURRENT TIMESTAMP Special Value in Data Lake Relational Engine](current-timestamp-special-value-in-data-lake-relational-engine-a50992b.md "Combines CURRENT DATE and CURRENT TIME to form a TIMESTAMP value containing the year, month, day, hour, minute, second, and fraction of a second.")

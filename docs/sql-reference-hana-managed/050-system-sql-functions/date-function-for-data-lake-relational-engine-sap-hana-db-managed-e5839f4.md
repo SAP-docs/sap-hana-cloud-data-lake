@@ -16,10 +16,23 @@ DATE ( <expression> )
 
 ## Parameters
 
- *<expression\>*
- :   The value to be converted to date format. The expression is usually a string.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The value to be converted to date format. The expression is usually a string.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioe5839f4e21a9431984d1705f1691f2fa__section_pnz_mgm_srb"/>
 

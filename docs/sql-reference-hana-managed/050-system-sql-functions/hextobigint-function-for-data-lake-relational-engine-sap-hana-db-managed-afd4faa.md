@@ -16,22 +16,35 @@ HEXTOBIGINT ( <hexadecimal-string> )
 
 ## Parameters
 
- *<hexadecimal-string\>*
- :   The hexadecimal value to be converted to a big integer \(BIGINT\). Input can be in the following forms, with either a lowercase or uppercase “0x” in the prefix, or no prefix:
 
-    ```
-    0x<hex-string>
-    ```
+<dl>
+<dt><b>
 
-    ```
-    0X<hex-string>
-    ```
+*<hexadecimal-string\>*
 
-    ```
-    <hex-string>
-    ```
+</b></dt>
+<dd>
 
- 
+The hexadecimal value to be converted to a big integer \(BIGINT\). Input can be in the following forms, with either a lowercase or uppercase “0x” in the prefix, or no prefix:
+
+```
+0x<hex-string>
+```
+
+```
+0X<hex-string>
+```
+
+```
+<hex-string>
+```
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioafd4faa8d87d4e4c90a0159fb250d01d__section_r5c_spg_trb"/>
 

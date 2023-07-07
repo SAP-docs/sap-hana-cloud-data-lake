@@ -125,11 +125,15 @@ The size of a database page in bytes. This is calculated based on the compressio
 
 
 
-<a name="loio4ef0219c16ec4f578395e34785797cfe__iq_refbb_1703"/>
+<a name="loio4ef0219c16ec4f578395e34785797cfe__sp_iqclouddbspace_priv1"/>
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+
+
+### 
+
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -218,7 +222,7 @@ user\_object\_store
 **Related Information**  
 
 
-[Cloud Dbspaces](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2023_1_QRC/en-US/493eb818429e4996b3da4153192a9efa.html "Cloud dbspace is a new offering where the database engine stores a user dbspace in object storage solutions such as Microsoft Azure Blob Storage, AWS Simple Storage Service (S3), or Google Cloud Storage. In a cloud dbspace, database pages are physically stored as objects as opposed to regular file system blocks.") :arrow_upper_right:
+[Cloud Dbspaces](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2023_2_QRC/en-US/493eb818429e4996b3da4153192a9efa.html "Cloud dbspace is a new offering where the database engine stores a user dbspace in object storage solutions such as Microsoft Azure Blob Storage, AWS Simple Storage Service (S3), or Google Cloud Storage. In a cloud dbspace, database pages are physically stored as objects as opposed to regular file system blocks.") :arrow_upper_right:
 
-[sp_iqclouddbspace System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/4240c9a98ce04c2cb85a37ada268acb4.html "") :arrow_upper_right:
+[sp_iqclouddbspace System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/4240c9a98ce04c2cb85a37ada268acb4.html "") :arrow_upper_right:
 

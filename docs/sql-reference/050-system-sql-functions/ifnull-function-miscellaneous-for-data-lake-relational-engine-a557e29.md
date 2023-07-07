@@ -16,16 +16,45 @@ IFNULL ( <expression1>, <expression2> [ , <expression3> ] )
 
 ## Parameters
 
- *<expression1\>*
- :   The expression to be evaluated. Its value determines whether *<expression2\>* or *<expression3\>* is returned.
 
-  *<expression2\>*
- :   The return value if *<expression1\>* is NULL
+<dl>
+<dt><b>
 
-  *<expression3\>*
- :   \(Optional\) The return value if *<expression1\>* is not NULL.
+*<expression1\>*
 
- 
+</b></dt>
+<dd>
+
+The expression to be evaluated. Its value determines whether *<expression2\>* or *<expression3\>* is returned.
+
+
+
+</dd><dt><b>
+
+*<expression2\>*
+
+</b></dt>
+<dd>
+
+The return value if *<expression1\>* is NULL
+
+
+
+</dd><dt><b>
+
+*<expression3\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) The return value if *<expression1\>* is not NULL.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa557e29b84f21015b460f69ff0fed6da__IFNULL_returns1"/>
 
@@ -71,5 +100,5 @@ If the first expression is the NULL value, then the value of the second expressi
 **Related Information**  
 
 
-[IFNULL Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/059555a4b6fd4824851aa1d544d77a10.html "Returns the first non-null expression, or NULL.") :arrow_upper_right:
+[IFNULL Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/059555a4b6fd4824851aa1d544d77a10.html "Returns the first non-null expression, or NULL.") :arrow_upper_right:
 

@@ -29,16 +29,45 @@ xp_sprintf(
 
 ## Parameters
 
-  *<buffer\>* 
- :   This is a CHAR\(254\) OUT parameter that is filled in with the formatted result.
 
-   *<format\>* 
- :   Use this CHAR\(254\) parameter to specify how to format the result string, using place holders \(%s\) for each *<param\>* argument. There can be up to fifty place holders in the *<format\>* argument, and there should be the same number of place holders as *<param\>* arguments. Only the %s string format is supported.
+<dl>
+<dt><b>
 
-   *<param1, param2\>* 
- :   The input strings that are used in the result string. You can specify up to 50 of these CHAR\(254\) arguments.
+ *<buffer\>* 
 
- 
+</b></dt>
+<dd>
+
+This is a CHAR\(254\) OUT parameter that is filled in with the formatted result.
+
+
+
+</dd><dt><b>
+
+ *<format\>* 
+
+</b></dt>
+<dd>
+
+Use this CHAR\(254\) parameter to specify how to format the result string, using place holders \(%s\) for each *<param\>* argument. There can be up to fifty place holders in the *<format\>* argument, and there should be the same number of place holders as *<param\>* arguments. Only the %s string format is supported.
+
+
+
+</dd><dt><b>
+
+ *<param1, param2\>* 
+
+</b></dt>
+<dd>
+
+The input strings that are used in the result string. You can specify up to 50 of these CHAR\(254\) arguments.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiobcaf180e679e43d78733830fb7e4c2fa__section_wxy_x42_srb"/>
 
@@ -50,7 +79,10 @@ The result placed in the output parameter is truncated to 254 characters.
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

@@ -205,7 +205,7 @@ For example syntax, see *Extract Data Lake Relational Engine Table Data to Azure
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[TEMP_EXTRACT_NAME&lt;N&gt; Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/1f0b3e1f87c948fd881490465f5eea24.html "") :arrow_upper_right:
+[TEMP_EXTRACT_NAME&lt;N&gt; Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/1f0b3e1f87c948fd881490465f5eea24.html "Specifies the data lake Filescontainer object file name, or theAzure block blob name, or the Amazon S3 bucket object name you’re extracting to. You must specify the name when extracting data from data lake Relational Engine to cloud storage.") :arrow_upper_right:
 
 [TEMP\_EXTRACT\_APPEND Option for Data Lake Relational Engine](temp-extract-append-option-for-data-lake-relational-engine-a65b43e.md "Specifies that any rows extracted by the data extraction facility are added to the end of an output file.")
 

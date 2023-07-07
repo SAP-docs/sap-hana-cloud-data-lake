@@ -17,20 +17,41 @@ sp_list_directory(
 
 ## Parameters
 
-  *<root\_path\>* 
- :   Use this LONG NVARCHAR parameter to specify the directory path.
 
-    For diagnostic files, *<root\_path\>* requires the common prefix:
+<dl>
+<dt><b>
 
-    -   `/diag/logs/` for diagnostic logs
+ *<root\_path\>* 
 
-    -   `/diag/audit/` for auditing \(ETD\) files
+</b></dt>
+<dd>
+
+Use this LONG NVARCHAR parameter to specify the directory path.
+
+For diagnostic files, *<root\_path\>* requires the common prefix:
+
+-   `/diag/logs/` for diagnostic logs
+
+-   `/diag/audit/` for auditing \(ETD\) files
 
 
-   *<max\_depth\>* 
- :   Use this optional INTEGER parameter to specify the maximum number of directories to traverse. A max\_depth of NULL, 0, or a negative value results in all subdirectories of *<root\_path\>* being traversed. The default is NULL.
 
- 
+
+</dd><dt><b>
+
+ *<max\_depth\>* 
+
+</b></dt>
+<dd>
+
+Use this optional INTEGER parameter to specify the maximum number of directories to traverse. A max\_depth of NULL, 0, or a negative value results in all subdirectories of *<root\_path\>* being traversed. The default is NULL.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Result Set
 
@@ -198,16 +219,32 @@ These columns are useful for diagnostics:
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 Example result:
 

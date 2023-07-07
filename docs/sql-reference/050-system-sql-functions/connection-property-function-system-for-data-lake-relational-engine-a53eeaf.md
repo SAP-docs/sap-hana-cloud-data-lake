@@ -17,16 +17,45 @@ CONNECTION_PROPERTY ( { <integer-expression1> | <string-expression> }
 
 ## Parameters
 
- *<integer-expression1\>*
- :   In most cases, it is more convenient to supply a string expression as the first argument. If you do supply integer-expression1, it is the connection property ID. You can determine this using the PROPERTY\_NUMBER function.
 
-  *<string-expression\>*
- :   The connection property name. Specify either the property ID or the property name.
+<dl>
+<dt><b>
 
-  *<integer-expression2\>*
- :   The connection ID of the current database connection. The current connection is used if this argument is omitted.
+*<integer-expression1\>*
 
- 
+</b></dt>
+<dd>
+
+In most cases, it is more convenient to supply a string expression as the first argument. If you do supply integer-expression1, it is the connection property ID. You can determine this using the PROPERTY\_NUMBER function.
+
+
+
+</dd><dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The connection property name. Specify either the property ID or the property name.
+
+
+
+</dd><dt><b>
+
+*<integer-expression2\>*
+
+</b></dt>
+<dd>
+
+The connection ID of the current database connection. The current connection is used if this argument is omitted.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Returns
 
@@ -66,11 +95,11 @@ SELECT connection_property( 'PrepStmt' )FROM iq_dummy
 **Related Information**  
 
 
-[Properties Available for the Server](../040-system-information/properties-available-for-the-server-a52ea6d.md "Retrieve the value of a specific server property or the values of all server properties.")
+[Properties Available for the Server](../properties-available-for-the-server-a52ea6d.md "Retrieve the value of a specific server property or the values of all server properties.")
 
-[Properties Available for Each Database](../040-system-information/properties-available-for-each-database-a52f368.md "Retrieve the value of a specific database property or the values of all database properties. Database properties apply to an entire database.")
+[Properties Available for Each Database](../properties-available-for-each-database-a52f368.md "Retrieve the value of a specific database property or the values of all database properties. Database properties apply to an entire database.")
 
-[Properties Available for Each Connection](../040-system-information/properties-available-for-each-connection-a52e243.md "Retrieve the value of a specific connection property or the values of all connection properties.")
+[Properties Available for Each Connection](../properties-available-for-each-connection-a52e243.md "Retrieve the value of a specific connection property or the values of all connection properties.")
 
 [PROPERTY Function \[System\] for Data Lake Relational Engine](property-function-system-for-data-lake-relational-engine-a56fa4d.md "Returns the value of the specified server-level property as a string.")
 

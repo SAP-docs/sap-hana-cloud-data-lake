@@ -16,13 +16,34 @@ OBJECT_NAME ( <object-id> [ , <database-id> ] )
 
 ## Parameters
 
- *<object-id\>*
- :   The object ID.
 
-  *<database-id\>*
- :   The database ID.
+<dl>
+<dt><b>
 
- 
+*<object-id\>*
+
+</b></dt>
+<dd>
+
+The object ID.
+
+
+
+</dd><dt><b>
+
+*<database-id\>*
+
+</b></dt>
+<dd>
+
+The database ID.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa56b844884f21015ba6d84cedfda5d23__iq_refbb_830"/>
 

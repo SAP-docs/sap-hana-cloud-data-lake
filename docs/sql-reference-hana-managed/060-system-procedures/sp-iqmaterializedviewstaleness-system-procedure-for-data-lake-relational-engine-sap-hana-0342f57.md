@@ -25,13 +25,34 @@ sp_iqmaterializedviewstaleness( ' <view-name>[, <owner-name> ] ' )
 
 ## Parameter
 
- *<view-name\>*
- :   The name of the materialized view.
 
-  *<owner-name\>*
- :   The owner of the materialized view.
+<dl>
+<dt><b>
 
- 
+*<view-name\>*
+
+</b></dt>
+<dd>
+
+The name of the materialized view.
+
+
+
+</dd><dt><b>
+
+*<owner-name\>*
+
+</b></dt>
+<dd>
+
+The owner of the materialized view.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio0342f57672ee4657adbbfe5f124a9d48__section_wfg_wc2_qrb"/>
 
@@ -213,7 +234,10 @@ The start time of the active transaction.
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

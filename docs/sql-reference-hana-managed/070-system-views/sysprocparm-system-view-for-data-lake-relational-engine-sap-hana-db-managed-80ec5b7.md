@@ -109,22 +109,67 @@ SMALLINT
 
 The type of parameter is one of the following:
 
- 0
- :   Normal parameter \(variable\)
 
-  1
- :   Result column - used with a procedure that returns result sets
+<dl>
+<dt><b>
 
-  2
- :   SQLSTATE error value
+0
 
-  3
- :   SQLCODE error value
+</b></dt>
+<dd>
 
-  4
- :   Return value from function
+Normal parameter \(variable\)
 
- 
+
+
+</dd><dt><b>
+
+1
+
+</b></dt>
+<dd>
+
+Result column - used with a procedure that returns result sets
+
+
+
+</dd><dt><b>
+
+2
+
+</b></dt>
+<dd>
+
+SQLSTATE error value
+
+
+
+</dd><dt><b>
+
+3
+
+</b></dt>
+<dd>
+
+SQLCODE error value
+
+
+
+</dd><dt><b>
+
+4
+
+</b></dt>
+<dd>
+
+Return value from function
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>

@@ -16,16 +16,45 @@ DATEDIFF ( <date-part>, <date-expression1>, <date-expression2> )
 
 ## Parameters
 
- *<date-part\>*
- :   The date part in which the interval is to be measured.
 
-  *<date-expression1\>*
- :   The starting date for the interval. This value is subtracted from *<date-expression2\>* to return the number of date parts between the two arguments.
+<dl>
+<dt><b>
 
-  *<date-expression2\>*
- :   The ending date for the interval. *<date-expression1\>* is subtracted from this value to return the number of date parts between the two arguments.
+*<date-part\>*
 
- 
+</b></dt>
+<dd>
+
+The date part in which the interval is to be measured.
+
+
+
+</dd><dt><b>
+
+*<date-expression1\>*
+
+</b></dt>
+<dd>
+
+The starting date for the interval. This value is subtracted from *<date-expression2\>* to return the number of date parts between the two arguments.
+
+
+
+</dd><dt><b>
+
+*<date-expression2\>*
+
+</b></dt>
+<dd>
+
+The ending date for the interval. *<date-expression1\>* is subtracted from this value to return the number of date parts between the two arguments.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio7bf7fa8d313a453c8bc224f2f29c65b5__section_xxx_ffm_srb"/>
 

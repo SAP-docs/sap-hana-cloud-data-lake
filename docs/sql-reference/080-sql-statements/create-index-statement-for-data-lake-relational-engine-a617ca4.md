@@ -6,11 +6,6 @@ Creates an index on a specified table, or pair of tables. Once an index is creat
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -19,23 +14,12 @@ Creates an index on a specified table, or pair of tables. Once an index is creat
 
 
 ```
-CREATE [ UNIQUE ] [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <index-type> (varname] ] INDEX [ IF NOT EXISTS ] [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <index-name> (varname]
-   … ON [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) { [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] } (span].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <table-name> (varname]
-   … ( [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <column-name> (varname] [ , [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <column-name> (varname] ] … )
-   … [ NOTIFY [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <integer> (varname] ]
-   … [ DELIMITED BY '[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <separators-string> (varname]' ]
-   … [ LIMIT [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <maxwordsize-integer> (varname] ]
+CREATE [ UNIQUE ] [ <index-type> ] INDEX [ IF NOT EXISTS ] <index-name>
+   … ON [ { <owner> | <schema-name> }.]<table-name>
+   … ( <column-name> [ , <column-name> ] … )
+   … [ NOTIFY <integer> ]
+   … [ DELIMITED BY '<separators-string>' ]
+   … [ LIMIT <maxwordsize-integer> ]
 ```
 
 ```
@@ -45,136 +29,210 @@ CREATE [ UNIQUE ] [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa617ca4484f21015b2cdfdebbf4a5eee__create_index_parameters1"/>
 
 ## Parameters
 
- *<index-type\>*
- :   For columns in data lake Relational Engine tables, you can specify an *<index-type\>* of the following:
 
-    -   CMP
-    -   DATE
-    -   DTTM – Datetime
-    -   HG – High\_Group \(default\)
-    -   HNG
-    -   TEXT
-    -   TIME
-    -   WD – Word
+<dl>
+<dt><b>
 
-    If you do not specify an *<index-type\>*, an HG index is created by default.
+*<index-type\>*
 
-    To create an index on the relationship between two columns in an IQ main store table, you can specify an *<index-type\>* of CMP \(Compare\). Columns must be of identical data type, precision and scale. For a CHAR, VARCHAR, BINARY or VARBINARY column, precision means that both columns have the same width.
+</b></dt>
+<dd>
 
-    For maximum query speed, the correct type of index for a column depends on:
+For columns in data lake Relational Engine tables, you can specify an *<index-type\>* of the following:
 
-    -   The number of unique values in the column
-    -   How the column is going to be used in queries
-    -   The amount of storage space available
+-   CMP
+-   DATE
+-   DTTM – Datetime
+-   HG – High\_Group \(default\)
+-   HNG
+-   TEXT
+-   TIME
+-   WD – Word
 
-    You can specify multiple indexes on a column of an IQ main store table, but these must be of different index types. CREATE INDEX does not let you add a duplicate index type. Data lake Relational Engine chooses the fastest index available for the current query or portion of the query. However, each additional index type might significantly add to the space requirements of that table.
+If you do not specify an *<index-type\>*, an HG index is created by default.
 
-  *<column-name\>*
- :   Specifies the name of the column to be indexed. A column name is an identifier preceded by an optional correlation name. \(A correlation name is usually a table name. For more information on correlation names, see *FROM Clause*.\) If a column name has characters other than letters, digits, and underscore, enclose it in quotation marks \(“”\).
+To create an index on the relationship between two columns in an IQ main store table, you can specify an *<index-type\>* of CMP \(Compare\). Columns must be of identical data type, precision and scale. For a CHAR, VARCHAR, BINARY or VARBINARY column, precision means that both columns have the same width.
 
-    Only the HG and CMP index types can be specified on a multi-column index.
+For maximum query speed, the correct type of index for a column depends on:
 
-    Foreign keys require nonunique indexes and composite foreign keys require nonunique composite HG indexes. CHAR, VARCHAR, BINARY, and VARBINARY data cannot be more than 5300 bytes in a single-column HG index. A multi-column HG index \(both unique and non-unique\) can contain a single CHAR, VARCHAR, or BINARY column of up to 5297 bytes.
+-   The number of unique values in the column
+-   How the column is going to be used in queries
+-   The amount of storage space available
 
-  UNIQUE
- :   Permitted for index type HG only. Ensures that no two rows in the table have identical values in all the columns in the index. Each index key must be unique or contain a NULL in at least one column.
-
-    Data lake Relational Engine allows the use of NULL in data values on a user created unique multicolumn HG index, if the column definition allows for NULL values and a constraint \(primary key or unique\) is not being enforced.
-
-  IF NOT EXISTS
- :   If the named object already exists, no changes are made and an error is not returned.
-
-  DELIMITED BY
- :   Specifies separators to use in parsing a column string into the words to be stored in the WD index of that column. If you omit this clause or specify the value as an empty string, data lake Relational Engine uses the default set of separators. The default set of separators is designed for the default collation order \(ISO-BINENG\). It includes all 7-bit ASCII characters that are not 7-bit ASCII alphanumeric characters, except for the hyphen and the single quotation mark. The hyphen and the single quotation mark are part of words by default. There are 64 separators in the default separator set. For example, if the column value is this string:
-
-    ```
-    The cat is on the mat
-    ```
-
-    and the database was created with the CASE IGNORE setting using default separators, these words are stored in the WD index from this string:
-
-    ```
-    cat is mat on the
-    ```
-
-    If you specify multiple DELIMITED BY and LIMIT clauses, no error is returned, but only the last clause of each type is used.
-
-  *<separators-string\>*
- :   Must be a sequence of 0 or more characters in the collation order used when the database was created. Each character in the separators string is treated as a separator. If there are no characters in the separators string, the default set of separators is used. \(Each separator must be a single character in the collation sequence being used.\) There cannot be more than 256 characters \(separators\) in the separators string.
-
-    To specify tab as a delimiter, you can either type a [TAB\] character within the separator string, or use the hexadecimal ASCII code of the tab character, \\x09. “\\t” specifies two separators, \\ and the letter t. To specify newline as a delimiter, you can type a [RETURN\] character or the hexadecimal ASCII code \\x0a.
-
-    For example, the clause DELIMITED BY ' :;.\\/t' specifies these seven separators: space : ; . \\ / t
+You can specify multiple indexes on a column of an IQ main store table, but these must be of different index types. CREATE INDEX does not let you add a duplicate index type. Data lake Relational Engine chooses the fastest index available for the current query or portion of the query. However, each additional index type might significantly add to the space requirements of that table.
 
 
-    <table>
-    <tr>
-    <th valign="top">
 
-    Delimiter
+</dd><dt><b>
 
+*<column-name\>*
 
-    
-    </th>
-    <th valign="top">
+</b></dt>
+<dd>
 
-    Separator String for the DELIMITED BY Clause
+Specifies the name of the column to be indexed. A column name is an identifier preceded by an optional correlation name. \(A correlation name is usually a table name. For more information on correlation names, see *FROM Clause*.\) If a column name has characters other than letters, digits, and underscore, enclose it in quotation marks \(“”\).
 
+Only the HG and CMP index types can be specified on a multi-column index.
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    tab
+Foreign keys require nonunique indexes and composite foreign keys require nonunique composite HG indexes. CHAR, VARCHAR, BINARY, and VARBINARY data cannot be more than 5300 bytes in a single-column HG index. A multi-column HG index \(both unique and non-unique\) can contain a single CHAR, VARCHAR, or BINARY column of up to 5297 bytes.
 
 
-    
-    </td>
-    <td valign="top">
 
-    Either of the following:
+</dd><dt><b>
 
-    -   ' ' \(type [TAB\]\)
-    -   '\\x09'
+UNIQUE
 
+</b></dt>
+<dd>
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+Permitted for index type HG only. Ensures that no two rows in the table have identical values in all the columns in the index. Each index key must be unique or contain a NULL in at least one column.
 
-    newline
+Data lake Relational Engine allows the use of NULL in data values on a user created unique multicolumn HG index, if the column definition allows for NULL values and a constraint \(primary key or unique\) is not being enforced.
 
 
-    
-    </td>
-    <td valign="top">
 
-    Either of the following:
+</dd><dt><b>
 
-    -   ' ' \(type [RETURN\]\)
-    -   '\\x0a'
+IF NOT EXISTS
+
+</b></dt>
+<dd>
+
+If the named object already exists, no changes are made and an error is not returned.
 
 
-    
-    </td>
-    </tr>
-    </table>
-    
-  LIMIT
- :   Can be used for the creation of the WD index only. Specifies the maximum word length that is permitted in the WD index. Longer words found during parsing causes an error. The default is 255 bytes. The minimum permitted value is 1 and the maximum permitted value is 255. If the maximum word length specified in the CREATE INDEX statement or determined by default exceeds the column width, the used maximum word length is silently reduced to the column width. Using a lower maximum permitted word length allows insertions, deletions, and updates to use less space and time. The empty word \(two adjacent separators\) is silently ignored. After a WD index is created, any insertions into its column are parsed using the separators and maximum word size determined at create time. These separators and maximum word size cannot be changed after the index is created.
 
-  NOTIFY
- :   Gives notification messages after n records are successfully added for the index. The messages are sent to the standard output device. A message contains information about memory usage, database space, and how many buffers are in use. The default is 100,000 records. To turn off NOTIFY, set it to 0.
+</dd><dt><b>
 
- 
+DELIMITED BY
+
+</b></dt>
+<dd>
+
+Specifies separators to use in parsing a column string into the words to be stored in the WD index of that column. If you omit this clause or specify the value as an empty string, data lake Relational Engine uses the default set of separators. The default set of separators is designed for the default collation order \(ISO-BINENG\). It includes all 7-bit ASCII characters that are not 7-bit ASCII alphanumeric characters, except for the hyphen and the single quotation mark. The hyphen and the single quotation mark are part of words by default. There are 64 separators in the default separator set. For example, if the column value is this string:
+
+```
+The cat is on the mat
+```
+
+and the database was created with the CASE IGNORE setting using default separators, these words are stored in the WD index from this string:
+
+```
+cat is mat on the
+```
+
+If you specify multiple DELIMITED BY and LIMIT clauses, no error is returned, but only the last clause of each type is used.
+
+
+
+</dd><dt><b>
+
+*<separators-string\>*
+
+</b></dt>
+<dd>
+
+Must be a sequence of 0 or more characters in the collation order used when the database was created. Each character in the separators string is treated as a separator. If there are no characters in the separators string, the default set of separators is used. \(Each separator must be a single character in the collation sequence being used.\) There cannot be more than 256 characters \(separators\) in the separators string.
+
+To specify tab as a delimiter, you can either type a [TAB\] character within the separator string, or use the hexadecimal ASCII code of the tab character, \\x09. “\\t” specifies two separators, \\ and the letter t. To specify newline as a delimiter, you can type a [RETURN\] character or the hexadecimal ASCII code \\x0a.
+
+For example, the clause DELIMITED BY ' :;.\\/t' specifies these seven separators: space : ; . \\ / t
+
+
+<table>
+<tr>
+<th valign="top">
+
+Delimiter
+
+
+
+</th>
+<th valign="top">
+
+Separator String for the DELIMITED BY Clause
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+tab
+
+
+
+</td>
+<td valign="top">
+
+Either of the following:
+
+-   ' ' \(type [TAB\]\)
+-   '\\x09'
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+newline
+
+
+
+</td>
+<td valign="top">
+
+Either of the following:
+
+-   ' ' \(type [RETURN\]\)
+-   '\\x0a'
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+</dd><dt><b>
+
+LIMIT
+
+</b></dt>
+<dd>
+
+Can be used for the creation of the WD index only. Specifies the maximum word length that is permitted in the WD index. Longer words found during parsing causes an error. The default is 255 bytes. The minimum permitted value is 1 and the maximum permitted value is 255. If the maximum word length specified in the CREATE INDEX statement or determined by default exceeds the column width, the used maximum word length is silently reduced to the column width. Using a lower maximum permitted word length allows insertions, deletions, and updates to use less space and time. The empty word \(two adjacent separators\) is silently ignored. After a WD index is created, any insertions into its column are parsed using the separators and maximum word size determined at create time. These separators and maximum word size cannot be changed after the index is created.
+
+
+
+</dd><dt><b>
+
+NOTIFY
+
+</b></dt>
+<dd>
+
+Gives notification messages after n records are successfully added for the index. The messages are sent to the standard output device. A message contains information about memory usage, database space, and how many buffers are in use. The default is 100,000 records. To turn off NOTIFY, set it to 0.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa617ca4484f21015b2cdfdebbf4a5eee__create_index_remarks1"/>
 
@@ -415,7 +473,7 @@ Automatic commit
 
 [FROM Clause for Data Lake Relational Engine](from-clause-for-data-lake-relational-engine-a7749cf.md "Specifies the database tables or views involved in a SELECT statement.")
 
-[CREATE INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/afc9ba646bb842d6b4c5975aa7d17d16.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
+[CREATE INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/afc9ba646bb842d6b4c5975aa7d17d16.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

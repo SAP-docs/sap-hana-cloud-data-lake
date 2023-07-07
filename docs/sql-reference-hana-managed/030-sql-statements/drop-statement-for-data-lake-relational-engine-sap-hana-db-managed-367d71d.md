@@ -6,11 +6,6 @@ Removes objects from the database.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -22,32 +17,18 @@ Removes objects from the database.
 
 ```
 DROP
-   { [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) INDEX [ IF EXISTS ] [ [/pandoc/div/div/horizontalrule/codeblock/span/span/span
-     {""}) [/pandoc/div/div/horizontalrule/codeblock/span/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <table-name> (varname].][/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <index-name> (varname] (span]
-   | [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) TABLE [ IF EXISTS ] [ [/pandoc/div/div/horizontalrule/codeblock/span/span/span
-     {""}) [/pandoc/div/div/horizontalrule/codeblock/span/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <table-name> (varname] (span]
-   | [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) VIEW [ IF EXISTS ] [ [/pandoc/div/div/horizontalrule/codeblock/span/span/span
-     {""}) [/pandoc/div/div/horizontalrule/codeblock/span/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <view-name> (varname] (span]
-   | [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) MATERIALIZED VIEW [ IF EXISTS ] [ [/pandoc/div/div/horizontalrule/codeblock/span/span/span
-     {""}) [/pandoc/div/div/horizontalrule/codeblock/span/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <mat-view-name> (varname] (span][/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) 
-   | SCHEMA [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema_name> (varname] [ RESTRICT ] (span]
+   { INDEX [ IF EXISTS ] [ <schema-name>.]<table-name>.]<index-name>
+   | TABLE [ IF EXISTS ] [ <schema-name>.]<table-name>
+   | VIEW [ IF EXISTS ] [ <schema-name>.]<view-name>
+   | MATERIALIZED VIEW [ IF EXISTS ] [ <schema-name>.]<mat-view-name>
+   | SCHEMA <schema_name> [ RESTRICT ]
    }
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -55,42 +36,95 @@ DROP
 
 ## Parameters
 
- IF EXISTS
- :   Use if you do not want an error returned when the DROP statement attempts to remove a database object that does not exist.
 
-  SCHEMA
- :   If you drop a schema, then any schema synonym that references it is also dropped. You cannot drop a user if they own a schema.
+<dl>
+<dt><b>
 
-  RESTRICT
- :   RESTRICT drops the schema, but only when there are no objects in it. If there are still objects in the schema, then an error is returned.
+IF EXISTS
 
-  INDEX
- :   DROP INDEX deletes any explicitly created index. It deletes an implicitly created index only if there are no unique or foreign-key constraints or associated primary key.
+</b></dt>
+<dd>
 
-    You can't drop an index when the statement affects a table that is currently being used by another connection.
+Use if you do not want an error returned when the DROP statement attempts to remove a database object that does not exist.
 
-    For a nonunique HG index, DROP INDEX fails if an associated unenforced foreign key exists.
 
-    > ### Caution:  
-    > Do not delete views owned by the DBO user. Deleting such views or changing them into tables might cause problems.
 
-  TABLE
- :   DROP TABLE is prevented whenever the statement affects a table that is currently being used by another connection or if the primary table has foreign-key constraints associated with it, including unenforced foreign-key constraints. It is also prevented if the table has an IDENTITY column and IDENTITY\_INSERT is set to that table. To drop the table, you must clear IDENTITY\_INSERT, that is, set IDENTITY\_INSERT to ' ' \(an empty string\), or set to another table name.
+</dd><dt><b>
 
-    A foreign key can have either a nonunique single or a multicolumn HG index. A primary key may have unique single or multicolumn HG indexes. You cannot drop the HG index implicitly created for an existing foreign key, primary key, and unique constraint.
+SCHEMA
 
-    The four initial dbspaces are SYSTEM, IQ\_SYSTEM\_MAIN, IQ\_SYSTEM\_TEMP, and IQ\_SYSTEM\_MSG. You cannot drop these initial dbspaces, but you may drop dbspaces from the IQ main store or catalog store, which may contain multiple dbspaces, as long as at least one dbspace remains with readwrite mode.
+</b></dt>
+<dd>
 
-  MATERIALIZED VIEW
- :   All data in the table is automatically deleted as part of the dropping process. All indexes and keys for the materialized view are dropped as well.
+If you drop a schema, then any schema synonym that references it is also dropped. You cannot drop a user if they own a schema.
 
-    Use the IF EXISTS clause if you do not want an error returned when the DROP MATERIALIZED VIEW statement attempts to remove a materialized view that does not exist.
 
-    You cannot execute a DROP MATERIALIZED VIEW statement on an object that is currently being used by another connection.
 
-    Executing a DROP MATERIALIZED VIEW statement changes the status of all dependent regular views to INVALID. To determine view dependencies before dropping a materialized view, use the sa\_dependent\_views system procedure.
+</dd><dt><b>
 
- 
+RESTRICT
+
+</b></dt>
+<dd>
+
+RESTRICT drops the schema, but only when there are no objects in it. If there are still objects in the schema, then an error is returned.
+
+
+
+</dd><dt><b>
+
+INDEX
+
+</b></dt>
+<dd>
+
+DROP INDEX deletes any explicitly created index. It deletes an implicitly created index only if there are no unique or foreign-key constraints or associated primary key.
+
+You can't drop an index when the statement affects a table that is currently being used by another connection.
+
+For a nonunique HG index, DROP INDEX fails if an associated unenforced foreign key exists.
+
+> ### Caution:  
+> Do not delete views owned by the DBO user. Deleting such views or changing them into tables might cause problems.
+
+
+
+</dd><dt><b>
+
+TABLE
+
+</b></dt>
+<dd>
+
+DROP TABLE is prevented whenever the statement affects a table that is currently being used by another connection or if the primary table has foreign-key constraints associated with it, including unenforced foreign-key constraints. It is also prevented if the table has an IDENTITY column and IDENTITY\_INSERT is set to that table. To drop the table, you must clear IDENTITY\_INSERT, that is, set IDENTITY\_INSERT to ' ' \(an empty string\), or set to another table name.
+
+A foreign key can have either a nonunique single or a multicolumn HG index. A primary key may have unique single or multicolumn HG indexes. You cannot drop the HG index implicitly created for an existing foreign key, primary key, and unique constraint.
+
+The four initial dbspaces are SYSTEM, IQ\_SYSTEM\_MAIN, IQ\_SYSTEM\_TEMP, and IQ\_SYSTEM\_MSG. You cannot drop these initial dbspaces, but you may drop dbspaces from the IQ main store or catalog store, which may contain multiple dbspaces, as long as at least one dbspace remains with readwrite mode.
+
+
+
+</dd><dt><b>
+
+MATERIALIZED VIEW
+
+</b></dt>
+<dd>
+
+All data in the table is automatically deleted as part of the dropping process. All indexes and keys for the materialized view are dropped as well.
+
+Use the IF EXISTS clause if you do not want an error returned when the DROP MATERIALIZED VIEW statement attempts to remove a materialized view that does not exist.
+
+You cannot execute a DROP MATERIALIZED VIEW statement on an object that is currently being used by another connection.
+
+Executing a DROP MATERIALIZED VIEW statement changes the status of all dependent regular views to INVALID. To determine view dependencies before dropping a materialized view, use the sa\_dependent\_views system procedure.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio367d71dcf7dc49d180e1872c19bf8188__IQ_Usage"/>
 
@@ -110,7 +144,10 @@ Global temporary tables cannot be dropped unless all users that have referenced 
 
 ### 
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

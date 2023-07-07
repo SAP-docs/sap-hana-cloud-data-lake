@@ -17,16 +17,45 @@ EXP_WEIGHTED_AVG (<expression>, <period-expression>)
 
 ## Parameters
 
- *<expression\>*
- :   A numeric expression for which a weighted value is being computed.
 
-  *<period-expression\>*
- :   A numeric expression specifying the period for which the average is to be computed.
+<dl>
+<dt><b>
 
-  *<window-spec\>*
- :   Specified when using this function as a window function.
+*<expression\>*
 
- 
+</b></dt>
+<dd>
+
+A numeric expression for which a weighted value is being computed.
+
+
+
+</dd><dt><b>
+
+*<period-expression\>*
+
+</b></dt>
+<dd>
+
+A numeric expression specifying the period for which the average is to be computed.
+
+
+
+</dd><dt><b>
+
+*<window-spec\>*
+
+</b></dt>
+<dd>
+
+Specified when using this function as a window function.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioac831a074ab343628271364a30d557bf__section_tvs_5rg_trb"/>
 

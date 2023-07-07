@@ -402,7 +402,7 @@ Multibyte characters are not supported in format strings. Only single-byte chara
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[TIMESTAMP_FORMAT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/002566cefa3a43bca454142befc1cdac.html "Sets the format used for timestamps retrieved from the database.") :arrow_upper_right:
+[TIMESTAMP_FORMAT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/002566cefa3a43bca454142befc1cdac.html "Sets the format used for timestamps retrieved from the database.") :arrow_upper_right:
 
 [DATE\_FORMAT Option for Data Lake Relational Engine](date-format-option-for-data-lake-relational-engine-a632563.md "Sets the format used for dates retrieved from the database.")
 

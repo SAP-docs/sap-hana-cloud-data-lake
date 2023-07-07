@@ -12,10 +12,7 @@ To generate the query, execute:
 
 ```
 SELECT <hana_select_criteria> FROM REMOTE_EXECUTE_QUERY ('
-   [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_[/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <relational_container_name> (varname] (span]_SOURCE', 
+   SYSHDL_<relational_container_name>_SOURCE', 
    'SELECT <data_lake_select_criteria>');
 ```
 
@@ -25,8 +22,7 @@ For example, to query the data lake Relational Engine SYSIQTABCOL system view, e
 
 ```
 SELECT <*> FROM REMOTE_EXECUTE_QUERY (
-   '[/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1_SOURCE', 
+   'SYSHDL_CONTAINER1_SOURCE', 
    'SELECT * FROM SYSIQTABCOL');
 ```
 

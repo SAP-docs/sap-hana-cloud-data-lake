@@ -6,34 +6,84 @@ Returns a 4-digit number corresponding to the year of a given date/time, returns
 
 
 
- Syntax 1: Return the number of years between year 0000 and a TIMESTAMP value
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1: Return the number of years between year 0000 and a TIMESTAMP value
+
+</b></dt>
+<dd>
+
+```
 YEARS( <timestamp-expression> )
 ```
 
-  Syntax 2: Return the number of years between two TIMESTAMP values
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2: Return the number of years between two TIMESTAMP values
+
+</b></dt>
+<dd>
+
+```
 YEARS( <timestamp-expression>, <timestamp-expression> )
 ```
 
-  Syntax 3: Add years to a TIMESTAMP value
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 3: Add years to a TIMESTAMP value
+
+</b></dt>
+<dd>
+
+```
 YEARS( <timestamp-expression>, <integer-expression> )
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio1d6751f84bf14c8ca120407566bb798f__section_lpg_4p3_wrb"/>
 
 ## Parameters
 
-  *<timestamp-expression\>* 
- :   A date and time value of type TIMESTAMP.
 
-  *<integer-expression\>*
- :   The number of years \(as a SMALLINT value\) to be added to *<timestamp-expression\>*. If *<integer-expression\>* is negative, the appropriate number of years are subtracted from *<timestamp-expression\>*. If you supply an *<integer-expression\>*, the *<timestamp-expression\>* must be explicitly cast as a DATE, TIME, or TIMESTAMP value. If *<timestamp-expression\>* is a TIME, the current year is assumed.
+<dl>
+<dt><b>
 
- 
+ *<timestamp-expression\>* 
+
+</b></dt>
+<dd>
+
+A date and time value of type TIMESTAMP.
+
+
+
+</dd><dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number of years \(as a SMALLINT value\) to be added to *<timestamp-expression\>*. If *<integer-expression\>* is negative, the appropriate number of years are subtracted from *<timestamp-expression\>*. If you supply an *<integer-expression\>*, the *<timestamp-expression\>* must be explicitly cast as a DATE, TIME, or TIMESTAMP value. If *<timestamp-expression\>* is a TIME, the current year is assumed.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio1d6751f84bf14c8ca120407566bb798f__section_aj2_lcv_vrb"/>
 

@@ -16,10 +16,23 @@ OBJECT_ID ( <object-name> )
 
 ## Parameters
 
- *<object-name\>*
- :   The name of the object.
 
- 
+<dl>
+<dt><b>
+
+*<object-name\>*
+
+</b></dt>
+<dd>
+
+The name of the object.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa56b078284f210158dec9fd05131e60d__iq_refbb_825"/>
 

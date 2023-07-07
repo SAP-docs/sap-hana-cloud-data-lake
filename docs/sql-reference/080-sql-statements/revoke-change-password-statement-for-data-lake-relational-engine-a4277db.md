@@ -6,11 +6,6 @@ Removes the ability of a user to manage passwords and administer the system priv
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -29,23 +24,65 @@ REVOKE [ ADMIN OPTION FOR ] CHANGE PASSWORD
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa4277db384f21015b89afd8851d4c373__IQ_Parameters"/>
 
 ## Parameters
 
- *<target\_user\_list\>*
- :   Users the grantee has the potential to impersonate. The list must consist of existing users or user-extended roles with login passwords. Separate the user\_IDs in the list with commas.
 
-  ANY
- :   All database users with login passwords become potential target users to manage passwords for each grantee.
+<dl>
+<dt><b>
 
-  ANY WITH ROLES *<target\_role\_list\>*
- :   List of target roles for each grantee. Any users who are granted any of the target roles become potential target users for each grantee. The *<target\_role\_list\>* must consist of existing roles and the users who are granted said roles must consist of database users with login passwords. Use commas to separate multiple user\_IDs.
+*<target\_user\_list\>*
 
-  *<user\_id\>*
- :   Must be the name of an existing user or role that has a login password. Separate multiple user\_ids with commas.
+</b></dt>
+<dd>
 
- 
+Users the grantee has the potential to impersonate. The list must consist of existing users or user-extended roles with login passwords. Separate the user\_IDs in the list with commas.
+
+
+
+</dd><dt><b>
+
+ANY
+
+</b></dt>
+<dd>
+
+All database users with login passwords become potential target users to manage passwords for each grantee.
+
+
+
+</dd><dt><b>
+
+ANY WITH ROLES *<target\_role\_list\>*
+
+</b></dt>
+<dd>
+
+List of target roles for each grantee. Any users who are granted any of the target roles become potential target users for each grantee. The *<target\_role\_list\>* must consist of existing roles and the users who are granted said roles must consist of database users with login passwords. Use commas to separate multiple user\_IDs.
+
+
+
+</dd><dt><b>
+
+*<user\_id\>*
+
+</b></dt>
+<dd>
+
+Must be the name of an existing user or role that has a login password. Separate multiple user\_ids with commas.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa4277db384f21015b89afd8851d4c373__IQ_Usage"/>
 

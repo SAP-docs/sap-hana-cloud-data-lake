@@ -6,11 +6,6 @@ Deletes the data at the current location of a cursor.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -25,22 +20,40 @@ DELETE [ FROM [ <owner>.]<correlation-name> ]
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa61b84ab84f21015a60dd050d25ceb67__IQ_Parameters"/>
 
 ## Parameters
 
- FROM
- :   The table FROM which rows are deleted is determined as follows:
 
-    -   If no FROM clause is included, the cursor can only be on a single table.
-    -   If the cursor is for a joined query \(including using a view containing a join\), you must use the FROM clause. Only the current row of the specified table is deleted. The other tables involved in the join are not affected.
-    -   If you include a FROM clause and do not specify table owner, table-spec is first matched against any correlation names.
-        -   If a correlation name exists, `table-spec` is identified with the correlation name.
-        -   If a correlation name does not exist, `table-spec` must be unambiguously identifiable as a table name in the cursor.
+<dl>
+<dt><b>
 
-    -   If a FROM clause is included, and a table owner is specified, table-spec must be unambiguously identifiable as a table name in the cursor.
+FROM
 
- 
+</b></dt>
+<dd>
+
+The table FROM which rows are deleted is determined as follows:
+
+-   If no FROM clause is included, the cursor can only be on a single table.
+-   If the cursor is for a joined query \(including using a view containing a join\), you must use the FROM clause. Only the current row of the specified table is deleted. The other tables involved in the join are not affected.
+-   If you include a FROM clause and do not specify table owner, table-spec is first matched against any correlation names.
+    -   If a correlation name exists, `table-spec` is identified with the correlation name.
+    -   If a correlation name does not exist, `table-spec` must be unambiguously identifiable as a table name in the cursor.
+
+-   If a FROM clause is included, and a table owner is specified, table-spec must be unambiguously identifiable as a table name in the cursor.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61b84ab84f21015a60dd050d25ceb67__IQ_Usage"/>
 

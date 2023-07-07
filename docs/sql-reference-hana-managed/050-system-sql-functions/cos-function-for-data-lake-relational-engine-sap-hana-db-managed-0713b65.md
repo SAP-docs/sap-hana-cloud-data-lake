@@ -16,10 +16,23 @@ COS ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The angle, in radians.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The angle, in radians.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio0713b652c6864115aa6b767dbf8531a3__section_wrl_dql_srb"/>
 

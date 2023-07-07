@@ -16,10 +16,23 @@ MONTHNAME ( <date-expression> )
 
 ## Parameters
 
- *<date-expression\>*
- :   The datetime value.
 
- 
+<dl>
+<dt><b>
+
+*<date-expression\>*
+
+</b></dt>
+<dd>
+
+The datetime value.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio2a2b0c17b30f48c296c26c8fb26c7ace__section_tk4_x2n_vrb"/>
 

@@ -16,10 +16,23 @@ QUARTER( <date-expression> )
 
 ## Parameters
 
- *<date-expression\>*
- :   A date.
 
- 
+<dl>
+<dt><b>
+
+*<date-expression\>*
+
+</b></dt>
+<dd>
+
+A date.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio57330a53cc29480ebf71c3bc97486052__section_pjv_wn5_vrb"/>
 

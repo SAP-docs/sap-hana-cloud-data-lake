@@ -16,10 +16,23 @@ STRTOUUID ( <string-expression> )
 
 ## Parameters
 
-  *<string-expression\>* 
- :   A string in the format *<xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\>*
 
- 
+<dl>
+<dt><b>
+
+ *<string-expression\>* 
+
+</b></dt>
+<dd>
+
+A string in the format *<xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\>*
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa58683c184f21015bb5cb68f114bbcb9__STRTOUUID_returns1"/>
 
@@ -64,5 +77,5 @@ INSERT INTO T (pk, c1)
 **Related Information**  
 
 
-[STRTOUUID Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/5572345aa04d4c2fbd9b9589ed18e296.html "Converts a string value to a unique identifier (UUID or GUID) value.") :arrow_upper_right:
+[STRTOUUID Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/5572345aa04d4c2fbd9b9589ed18e296.html "Converts a string value to a unique identifier (UUID or GUID) value.") :arrow_upper_right:
 

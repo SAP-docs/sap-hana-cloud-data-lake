@@ -16,16 +16,45 @@ RPAD ( <str>, <n> [, <pattern> ] )
 
 ## Parameters
 
- *<str\>*
- :   The string to be padded.
 
-  *<n\>*
- :   The length to pad *<str\>*. *<n\>* must be an integer.
+<dl>
+<dt><b>
 
-  *<pattern\>*
- :   A string of characters, rather than spaces, to use for padding.
+*<str\>*
 
- 
+</b></dt>
+<dd>
+
+The string to be padded.
+
+
+
+</dd><dt><b>
+
+*<n\>*
+
+</b></dt>
+<dd>
+
+The length to pad *<str\>*. *<n\>* must be an integer.
+
+
+
+</dd><dt><b>
+
+*<pattern\>*
+
+</b></dt>
+<dd>
+
+A string of characters, rather than spaces, to use for padding.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio6c4ea243716a46e789d87818e8be6df1__section_g4t_crt_vrb"/>
 
@@ -43,10 +72,23 @@ RPAD returns an empty string value if *<n\>* is less than 1.
 
 ## Standards and Compatibility
 
- SQL/2008
- :   Vendor extension.
 
- 
+<dl>
+<dt><b>
+
+SQL/2008
+
+</b></dt>
+<dd>
+
+Vendor extension.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio6c4ea243716a46e789d87818e8be6df1__section_pxm_drt_vrb"/>
 

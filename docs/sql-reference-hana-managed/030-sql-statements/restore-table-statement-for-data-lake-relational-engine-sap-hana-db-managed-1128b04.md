@@ -6,11 +6,6 @@ Restore backed up tables in data lake Relational Engine.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -21,8 +16,7 @@ Restore backed up tables in data lake Relational Engine.
 
 
 ```
-RESTORE TABLE [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname].<table_name> 
+RESTORE TABLE <schema-name>.<table_name> 
    FROM <location>
    KEY <encryption_key> 
    CONNECTION_STRING <connection_string>
@@ -34,116 +28,248 @@ RESTORE TABLE [/pandoc/div/div/horizontalrule/codeblock/span/varname
 
 ## Parameters
 
- *<location\>*
- :   Location of the table backup dump to be restored from in the relevant object store. It is formatted as follows:
 
-    -   Data lake Files
+<dl>
+<dt><b>
 
-        <code>hdlfs:///<i class="varname">&lt;backup-prefix&gt;</i></code>
+*<location\>*
 
-    -   Azure Blob Storage
+</b></dt>
+<dd>
 
-        <code>bb://<i class="varname">&lt;container-name&gt;</i>/<i class="varname">&lt;backup-prefix&gt;</i></code>
+Location of the table backup dump to be restored from in the relevant object store. It is formatted as follows:
 
-    -   Amazon S3 bucketand S3-compliant providers, such as SAP Converged Cloud
+-   Data lake Files
 
-        <code>s3://<i class="varname">&lt;bucket-name&gt;</i>/<i class="varname">&lt;backup-prefix&gt;</i></code>
+    <code>hdlfs:///<i class="varname">&lt;backup-prefix&gt;</i></code>
 
-    -   Google Cloud Storage
+-   Azure Blob Storage
 
-        <code>gs://<i class="varname">&lt;bucket-name&gt;</i>/<i class="varname">&lt;backup-prefix&gt;</i></code>
+    <code>bb://<i class="varname">&lt;container-name&gt;</i>/<i class="varname">&lt;backup-prefix&gt;</i></code>
+
+-   Amazon S3 bucketand S3-compliant providers, such as SAP Converged Cloud
+
+    <code>s3://<i class="varname">&lt;bucket-name&gt;</i>/<i class="varname">&lt;backup-prefix&gt;</i></code>
+
+-   Google Cloud Storage
+
+    <code>gs://<i class="varname">&lt;bucket-name&gt;</i>/<i class="varname">&lt;backup-prefix&gt;</i></code>
 
 
-  *<encryption\_key\>*
- :   The encryption key that was used for encrypting the table backup file. Supplying the encryption key is mandatory – you cannot restore the table backup without it.
 
-  CONNECTION\_STRING *<connection\_string\>*
- :   Connection information for the object store in use:
 
-    ```
-    <connection_string> ::= 
-       { <azure_connection> 
-       | <s3_connection>
-       | <google_connection> }
-    ```
+</dd><dt><b>
 
-    ***<azure\_connection\>***
+*<encryption\_key\>*
 
-    ```
-    <azure_connection> ::= 'DEFAULTENDPOINTSPROTOCOL=<endpoint-protocol>;
-    	ACCOUNTNAME=<account-name>;
-    	ACCOUNTKEY=<account-key>;
-    	ENDPOINTSUFFIX=core.windows.net'
-    ```
+</b></dt>
+<dd>
 
-    Find your *<azure\_connection\_string\>*, including the access keys from your storage account, in the Azure portal. Locate the *Connection string* section and copy the connection string to the clipboard.
+The encryption key that was used for encrypting the table backup file. Supplying the encryption key is mandatory – you cannot restore the table backup without it.
 
-    ***<google\_connection\>***
 
-    ```
-    <google_connection> ::= 'CLIENT_EMAIL='<client-email>';
-    	PRIVATE_KEY='<private-key>';
-         PRIVATE_KEY_ID='<private-key-id>'
-    ```
 
-    Find your *<google\_connection\_string\>* comprising the fields *<client\_email\>*, *<private\_key\>*, *<private\_key\_id\>* in the Google Cloud Storage Platform console on the *Service Accounts* page.
+</dd><dt><b>
 
-    ***<s3\_connection\>***
+CONNECTION\_STRING *<connection\_string\>*
 
-    ```
-    <s3_connection> ::= 'ENDPOINT=<endpoint>; 
-    	ENDPOINT_TYPE={PATH | VIRTUAL_HOST}; 
-    	ACCESS_KEY_ID=<access-key-string>; 
-    	SECRET_ACCESS_KEY=<secret-key-string>; 
-    	REGION=<region-string>; 
-    	SESSION_TOKEN=<session-token>'
-    ```
+</b></dt>
+<dd>
 
-    Find your Amazon S3 option values in the AWS Management Console.
+Connection information for the object store in use:
 
-    For Amazon S3 and any S3-compliant storage providers, such as SAP Converged Cloud, specify the following options for the *<connection\_string\>* clause:
+```
+<connection_string> ::= 
+   { <azure_connection> 
+   | <s3_connection>
+   | <google_connection> }
+```
 
-     ENDPOINT
-     :   \(Optional for Amazon S3, mandatory for other S3-compliant providers\) When specified for Amazon S3 connections, the Amazon S3 client SDK uses its value as the endpoint to override. You can use this instead of REGION. If both this and the REGION option are specified, the value for REGION needs to be consistent with the value for ENDPOINT.
+***<azure\_connection\>***
 
-     :   If a value is not specified for Amazon S3, the endpoint is determined by the Amazon S3 client SDK and you need to specify a value for the REGION option.
+```
+<azure_connection> ::= 'DEFAULTENDPOINTSPROTOCOL=<endpoint-protocol>;
+	ACCOUNTNAME=<account-name>;
+	ACCOUNTKEY=<account-key>;
+	ENDPOINTSUFFIX=core.windows.net'
+```
 
-      ENDPOINT\_TYPE
-     :   \(Only specify if ENDPOINT is defined\) Indicates how to construct the S3 endpoint when communicating with the object store provider. Values accepted are PATH or VIRTUAL\_HOST. If PATH is specified, Amazon S3 client SDK will construct a path-styled endpoint. If VIRTUAL\_HOST is specified, the Amazon S3 client SDK will construct a virtual-styled endpoint.
+Find your *<azure\_connection\_string\>*, including the access keys from your storage account, in the Azure portal. Locate the *Connection string* section and copy the connection string to the clipboard.
 
-     :   Default value is VIRTUAL\_HOST.
+***<google\_connection\>***
 
-      ACCESS\_KEY\_ID
-     :   \(Mandatory\) For Amazon S3, you can find this option value in the AWS Management Console.
+```
+<google_connection> ::= 'CLIENT_EMAIL='<client-email>';
+	PRIVATE_KEY='<private-key>';
+     PRIVATE_KEY_ID='<private-key-id>'
+```
 
-      SECRET\_ACCESS\_KEY\_ID
-     :   \(Mandatory\) For Amazon S3, you can find this option value in the AWS Management Console.
+Find your *<google\_connection\_string\>* comprising the fields *<client\_email\>*, *<private\_key\>*, *<private\_key\_id\>* in the Google Cloud Storage Platform console on the *Service Accounts* page.
 
-      REGION
-     :   You can use this instead of ENDPOINT for Amazon S3. It allows you to work with Amazon S3 and any S3-compliant data sources.
+***<s3\_connection\>***
 
-     :   If you do not specify this option, the value defaults to server option `iqdl_aws_region` which defaults to `us-east-1`.
+```
+<s3_connection> ::= 'ENDPOINT=<endpoint>; 
+	ENDPOINT_TYPE={PATH | VIRTUAL_HOST}; 
+	ACCESS_KEY_ID=<access-key-string>; 
+	SECRET_ACCESS_KEY=<secret-key-string>; 
+	REGION=<region-string>; 
+	SESSION_TOKEN=<session-token>'
+```
 
-     :   If both this and the ENDPOINT option are specified, the value for REGION needs to be consistent with the value for ENDPOINT.
+Find your Amazon S3 option values in the AWS Management Console.
 
-     :   If specified, but no value is provided, you are connected to a backend that uses a single server with no concept of regions.
+For Amazon S3 and any S3-compliant storage providers, such as SAP Converged Cloud, specify the following options for the *<connection\_string\>* clause:
 
-      SESSION\_TOKEN
-     :   If specified, the Amazon S3 client SDK will use its value when creating Amazon S3 credentials. If not specified it will be treated as an absence of MFA access for the account.
 
-     ***<aws\_connection\>***\(DEPRECATED\) The following syntax is deprecated as of QRC 2, 2022. Instead, use the syntax above for Amazon S3 and any S3-compliant storage providers.
+<dl>
+<dt><b>
 
-    ```
-    
-     <aws_connection> ::=
-    	ACCESS_KEY_ID '<access_key_id>'
-    	SECRET_ACCESS_KEY '<secret_access_key>' 
-    	REGION '<AWS_region>'
-    ```
+ENDPOINT
 
-    Find your AWS *<access\_key\_id\>*, *<secret\_access\_key\>*, and *<AWS\_region\>* in the AWS Management Console.
+</b></dt>
+<dd>
 
- 
+\(Optional for Amazon S3, mandatory for other S3-compliant providers\) When specified for Amazon S3 connections, the Amazon S3 client SDK uses its value as the endpoint to override. You can use this instead of REGION. If both this and the REGION option are specified, the value for REGION needs to be consistent with the value for ENDPOINT.
+
+
+
+</dd>
+<dd>
+
+If a value is not specified for Amazon S3, the endpoint is determined by the Amazon S3 client SDK and you need to specify a value for the REGION option.
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+ENDPOINT\_TYPE
+
+</b></dt>
+<dd>
+
+\(Only specify if ENDPOINT is defined\) Indicates how to construct the S3 endpoint when communicating with the object store provider. Values accepted are PATH or VIRTUAL\_HOST. If PATH is specified, Amazon S3 client SDK will construct a path-styled endpoint. If VIRTUAL\_HOST is specified, the Amazon S3 client SDK will construct a virtual-styled endpoint.
+
+
+
+</dd>
+<dd>
+
+Default value is VIRTUAL\_HOST.
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+ACCESS\_KEY\_ID
+
+</b></dt>
+<dd>
+
+\(Mandatory\) For Amazon S3, you can find this option value in the AWS Management Console.
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+SECRET\_ACCESS\_KEY\_ID
+
+</b></dt>
+<dd>
+
+\(Mandatory\) For Amazon S3, you can find this option value in the AWS Management Console.
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+REGION
+
+</b></dt>
+<dd>
+
+You can use this instead of ENDPOINT for Amazon S3. It allows you to work with Amazon S3 and any S3-compliant data sources.
+
+
+
+</dd>
+<dd>
+
+If you do not specify this option, the value defaults to server option `iqdl_aws_region` which defaults to `us-east-1`.
+
+
+
+</dd>
+<dd>
+
+If both this and the ENDPOINT option are specified, the value for REGION needs to be consistent with the value for ENDPOINT.
+
+
+
+</dd>
+<dd>
+
+If specified, but no value is provided, you are connected to a backend that uses a single server with no concept of regions.
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+SESSION\_TOKEN
+
+</b></dt>
+<dd>
+
+If specified, the Amazon S3 client SDK will use its value when creating Amazon S3 credentials. If not specified it will be treated as an absence of MFA access for the account.
+
+
+
+</dd>
+</dl>
+
+***<aws\_connection\>***\(DEPRECATED\) The following syntax is deprecated as of QRC 2, 2022. Instead, use the syntax above for Amazon S3 and any S3-compliant storage providers.
+
+```
+
+ <aws_connection> ::=
+	ACCESS_KEY_ID '<access_key_id>'
+	SECRET_ACCESS_KEY '<secret_access_key>' 
+	REGION '<AWS_region>'
+```
+
+Find your AWS *<access\_key\_id\>*, *<secret\_access\_key\>*, and *<AWS\_region\>* in the AWS Management Console.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio1128b04e1d5b4d36a35367e1f3c8cbf4__section_l5k_snw_brb"/>
 
@@ -207,7 +333,10 @@ RESTORE TABLE [/pandoc/div/div/horizontalrule/codeblock/span/varname
 
 ### 
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

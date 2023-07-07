@@ -6,11 +6,6 @@ Allows user-defined errors to be signaled, and sends a message on the client.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,21 +19,47 @@ RAISERROR <error-number> [ <format-string> ] [, <arg-list >]
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa6227d8984f210159ad580e8826fdac0__IQ_Parameters"/>
 
 ## Parameters
 
- *<error-number\>*
- :   A 5-digit integer greater than 17000. The error number is stored in the global variable *<@@error\>*.
 
-  *<format-string\>*
- :   If not supplied or is empty, the error number is used to locate an error message in the system tables. SAP Adaptive Server Enterprise obtains messages 17000-19999 from the `SYSMESSAGES` table. In data lake Relational Engine, this table is an empty view, so errors in this range should provide a format string. Messages for error numbers of 20000 or greater are obtained from the `SYS.SYSUSERMESSAGES` table.
+<dl>
+<dt><b>
 
-    The *<format-string\>* can be up to 255 bytes long. This is the same as in SAP ASE.
+*<error-number\>*
 
-    The format string can contain placeholders for the arguments in the optional argument list. These placeholders are of the form `%nn!`, where *<nn\>* is an integer between 1 and 20.
+</b></dt>
+<dd>
 
- 
+A 5-digit integer greater than 17000. The error number is stored in the global variable *<@@error\>*.
+
+
+
+</dd><dt><b>
+
+*<format-string\>*
+
+</b></dt>
+<dd>
+
+If not supplied or is empty, the error number is used to locate an error message in the system tables. SAP Adaptive Server Enterprise obtains messages 17000-19999 from the `SYSMESSAGES` table. In data lake Relational Engine, this table is an empty view, so errors in this range should provide a format string. Messages for error numbers of 20000 or greater are obtained from the `SYS.SYSUSERMESSAGES` table.
+
+The *<format-string\>* can be up to 255 bytes long. This is the same as in SAP ASE.
+
+The format string can contain placeholders for the arguments in the optional argument list. These placeholders are of the form `%nn!`, where *<nn\>* is an integer between 1 and 20.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa6227d8984f210159ad580e8826fdac0__IQ_Usage"/>
 

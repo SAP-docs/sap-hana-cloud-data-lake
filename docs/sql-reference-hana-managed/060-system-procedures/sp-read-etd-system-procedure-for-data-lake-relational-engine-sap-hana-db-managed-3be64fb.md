@@ -35,152 +35,229 @@ sp_read_etd(
 
 ## Parameters
 
-  *<filename\_pattern\>* 
- :   Enter a file name pattern for ETD file name matching. Accepts the wildcard characters ***\**** and ***?*** .
 
-    This ARRAY of LONG NVARCHAR values specifies the names of the ETD files to be processed. When multiple files are specified, the function aggregates the results from all specified ETD files and returns the entries in ascending order by timestamp.
+<dl>
+<dt><b>
 
-   *<event\_names\>* 
- :   This LONG NVARCHAR provides a comma-separated list of events for which data will be returned.
+ *<filename\_pattern\>* 
 
-   *<host\_names\>* 
- :   This LONG NVARCHAR provides a comma-separated list of hosts that have generated events.
+</b></dt>
+<dd>
 
-   *<severity\_level\>* 
- :   This LONG NVARCHAR specifies the maximum severity level to retrieve. A NULL returns all severity levels. The severity levels are:
+Enter a file name pattern for ETD file name matching. Accepts the wildcard characters ***\**** and ***?*** .
 
-
-    <table>
-    <tr>
-    <th valign="top">
-
-    Severity level
+This ARRAY of LONG NVARCHAR values specifies the names of the ETD files to be processed. When multiple files are specified, the function aggregates the results from all specified ETD files and returns the entries in ascending order by timestamp.
 
 
-    
-    </th>
-    <th valign="top">
 
-    Value
+</dd><dt><b>
 
+ *<event\_names\>* 
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
+</b></dt>
+<dd>
 
-    ALWAYS
+This LONG NVARCHAR provides a comma-separated list of events for which data will be returned.
 
 
-    
-    </td>
-    <td valign="top">
 
-    0
+</dd><dt><b>
 
+ *<host\_names\>* 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+</b></dt>
+<dd>
 
-    CRITICAL
+This LONG NVARCHAR provides a comma-separated list of hosts that have generated events.
 
 
-    
-    </td>
-    <td valign="top">
 
-    50
+</dd><dt><b>
 
+ *<severity\_level\>* 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+</b></dt>
+<dd>
 
-    ERROR
+This LONG NVARCHAR specifies the maximum severity level to retrieve. A NULL returns all severity levels. The severity levels are:
 
 
-    
-    </td>
-    <td valign="top">
+<table>
+<tr>
+<th valign="top">
 
-    100
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    WARNING
+Severity level
 
 
-    
-    </td>
-    <td valign="top">
 
-    150
+</th>
+<th valign="top">
 
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    INFORMATION
+Value
 
 
-    
-    </td>
-    <td valign="top">
 
-    200
+</th>
+</tr>
+<tr>
+<td valign="top">
 
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    DEBUG
+ALWAYS
 
 
-    
-    </td>
-    <td valign="top">
 
-    250
+</td>
+<td valign="top">
+
+0
 
 
-    
-    </td>
-    </tr>
-    </table>
-    
-   *<record\_start\>* 
- :   This UNSIGNED INT identifies the first record number to retrieve. A value of NULL is treated as a 1. The first record number is 1.
 
-   *<record\_end\>* 
- :   Use this UNSIGNED INT to identify the last record number to retrieve. A value of NULL means return all records from the starting record to the last available record.
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-   *<timestamp\_start\>* 
- :   Use this TIMESTAMP WITH TIME ZONE to identify the starting timestamp.
+CRITICAL
 
-   *<timestamp\_end\>* 
- :   Use this TIMESTAMP WITH TIME ZONE to identify the ending timestamp.
 
-   *<regex\>* 
- :   Use this LONG NVARCHAR to specify a regular string expression to filter event fields containing string values. The filtering is treated as a logical AND operation. For parameters consisting of comma-separated lists, the filtering is treated as a logical OR operation.
 
- 
+</td>
+<td valign="top">
+
+50
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ERROR
+
+
+
+</td>
+<td valign="top">
+
+100
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+WARNING
+
+
+
+</td>
+<td valign="top">
+
+150
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+INFORMATION
+
+
+
+</td>
+<td valign="top">
+
+200
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+DEBUG
+
+
+
+</td>
+<td valign="top">
+
+250
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+</dd><dt><b>
+
+ *<record\_start\>* 
+
+</b></dt>
+<dd>
+
+This UNSIGNED INT identifies the first record number to retrieve. A value of NULL is treated as a 1. The first record number is 1.
+
+
+
+</dd><dt><b>
+
+ *<record\_end\>* 
+
+</b></dt>
+<dd>
+
+Use this UNSIGNED INT to identify the last record number to retrieve. A value of NULL means return all records from the starting record to the last available record.
+
+
+
+</dd><dt><b>
+
+ *<timestamp\_start\>* 
+
+</b></dt>
+<dd>
+
+Use this TIMESTAMP WITH TIME ZONE to identify the starting timestamp.
+
+
+
+</dd><dt><b>
+
+ *<timestamp\_end\>* 
+
+</b></dt>
+<dd>
+
+Use this TIMESTAMP WITH TIME ZONE to identify the ending timestamp.
+
+
+
+</dd><dt><b>
+
+ *<regex\>* 
+
+</b></dt>
+<dd>
+
+Use this LONG NVARCHAR to specify a regular string expression to filter event fields containing string values. The filtering is treated as a logical AND operation. For parameters consisting of comma-separated lists, the filtering is treated as a logical OR operation.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3be64fbd6c5f1014abaea34c00918824__section_b5d_xj2_srb"/>
 
@@ -491,7 +568,10 @@ X is the number of fields for the event, Y is the field name, YY is the field ty
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

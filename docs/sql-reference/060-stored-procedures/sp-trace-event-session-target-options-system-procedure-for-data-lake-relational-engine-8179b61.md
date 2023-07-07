@@ -27,16 +27,45 @@ sp_trace_event_session_target_options(
 
 ## Parameters
 
-  *<session\_name\>* 
- :   Use this optional CHAR\(256\) parameter to specify the name of the trace event session. The default is NULL. If a session name is not specified or is NULL, information is returned for all trace event sessions.
 
-   *<include\_server\_sessions\>* 
- :   Use this optional BIT parameter to specify whether or not engine-level trace event sessions are returned. This parameter can be 0 \(do not return engine-level trace event sessions\) or 1 \(return engine-level trace event sessions\). The default is 0.
+<dl>
+<dt><b>
 
-   *<include\_audit\_events\>* 
- :   Use this optional BIT parameter to specify whether or not audit events are returned. This parameter can be 0 \(do not return audit events\) or 1 \(return audit events\). The default is 0.
+ *<session\_name\>* 
 
- 
+</b></dt>
+<dd>
+
+Use this optional CHAR\(256\) parameter to specify the name of the trace event session. The default is NULL. If a session name is not specified or is NULL, information is returned for all trace event sessions.
+
+
+
+</dd><dt><b>
+
+ *<include\_server\_sessions\>* 
+
+</b></dt>
+<dd>
+
+Use this optional BIT parameter to specify whether or not engine-level trace event sessions are returned. This parameter can be 0 \(do not return engine-level trace event sessions\) or 1 \(return engine-level trace event sessions\). The default is 0.
+
+
+
+</dd><dt><b>
+
+ *<include\_audit\_events\>* 
+
+</b></dt>
+<dd>
+
+Use this optional BIT parameter to specify whether or not audit events are returned. This parameter can be 0 \(do not return audit events\) or 1 \(return audit events\). The default is 0.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio8179b61a6ce210148e4db24e40891e7d__sp_trace_event_session_target_options_resultset1"/>
 
@@ -171,9 +200,19 @@ This procedure returns option information for one, or all, trace event sessions 
 
 
 
+<a name="loio8179b61a6ce210148e4db24e40891e7d__sp_trace_event_session_target_options_priv1"/>
+
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure, as well as the MANAGE ANY TRACE SESSION system privilege. You also need the MANAGE AUDITING system privilege if *<include\_audit\_events\>* isn’t set.
+
+
+### 
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure
+-   MANAGE ANY TRACE SESSION system privilege
+-   MANAGE AUDITING system privilege
 
 
 
@@ -194,5 +233,5 @@ SELECT * FROM dbo.sp_trace_event_session_target_options( );
 **Related Information**  
 
 
-[sp_trace_event_session_target_options System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/aae165896e5d4689b72835021f67795e.html "Lists the target options for a trace event session.") :arrow_upper_right:
+[sp_trace_event_session_target_options System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/aae165896e5d4689b72835021f67795e.html "Lists the target options for a trace event session.") :arrow_upper_right:
 

@@ -16,10 +16,23 @@ ISDATE ( <string> )
 
 ## Parameters
 
- *<string\>*
- :   The string to be analyzed to determine whether the string represents a valid date.
 
- 
+<dl>
+<dt><b>
+
+*<string\>*
+
+</b></dt>
+<dd>
+
+The string to be analyzed to determine whether the string represents a valid date.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiof28668e5060b4c6db2bc8832b9a5f4cd__section_d3v_4nh_trb"/>
 

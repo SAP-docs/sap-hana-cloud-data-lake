@@ -41,15 +41,41 @@ Only one row limitation clause can be specified for a SELECT clause. When specif
 
 ## Parameters
 
+
+<dl>
+<dt><b>
+
 *<row-limitation-option-1\>*
-:   This type of clause can be used in SELECT query blocks only. The TOP and START AT arguments can be simple arithmetic expressions over host variables, integer constants, or integer variables. The TOP argument must evaluate to a value greater than or equal to 0. The START AT argument must evaluate to a value greater than 0. If ::= integer | variable | \( simple-expression \) | \( simple-expression \{ + | - | \* \} simple-expression \)*<startat-expression\>* is not specified the default is 1.
 
-    The expression `limit-expression + startat-expression -1` ::= must evaluate to a value less than 9223372036854775807 = 2^64-1. If the argument of TOP is ALL, all rows starting at startat-expression are returned.
+</b></dt>
+<dd>
 
-    The `TOP limit-expression START AT startat-expression` clause is equivalent to `LIMIT (startat-expression-1)`, `limit-expression` or `LIMIT limit-expression OFFSET (startat-expression-1)`.
+This type of clause can be used in SELECT query blocks only. The TOP and START AT arguments can be simple arithmetic expressions over host variables, integer constants, or integer variables. The TOP argument must evaluate to a value greater than or equal to 0. The START AT argument must evaluate to a value greater than 0. If ::= integer | variable | \( simple-expression \) | \( simple-expression \{ + | - | \* \} simple-expression \)*<startat-expression\>* is not specified the default is 1.
+
+The expression `limit-expression + startat-expression -1` ::= must evaluate to a value less than 9223372036854775807 = 2^64-1. If the argument of TOP is ALL, all rows starting at startat-expression are returned.
+
+The `TOP limit-expression START AT startat-expression` clause is equivalent to `LIMIT (startat-expression-1)`, `limit-expression` or `LIMIT limit-expression OFFSET (startat-expression-1)`.
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
 
 *<row-limitation-option-2\>*
-:   This type of clause can be used in SELECT query blocks only. The LIMIT and OFFSET arguments can be simple arithmetic expressions over host variables, integer constants, or integer variables. The LIMIT argument must evaluate to a value greater than or equal to 0. The OFFSET argument must evaluate to a value greater than or equal to 0. If offset-expression is not specified, the default is 0. The expression `limit-expression + offset-expression` must evaluate to a value less than 9223372036854775807 = 2^64-1.
+
+</b></dt>
+<dd>
+
+This type of clause can be used in SELECT query blocks only. The LIMIT and OFFSET arguments can be simple arithmetic expressions over host variables, integer constants, or integer variables. The LIMIT argument must evaluate to a value greater than or equal to 0. The OFFSET argument must evaluate to a value greater than or equal to 0. If offset-expression is not specified, the default is 0. The expression `limit-expression + offset-expression` must evaluate to a value less than 9223372036854775807 = 2^64-1.
+
+
+
+</dd>
+</dl>
 
 The row-limitation clause `LIMIT offset-expression, limit-expression` is equivalent to `LIMIT limit-expression OFFSET offset-expression`. Both of these constructs are equivalent to `TOP limit-expression START AT (offset-expression + 1)`.
 

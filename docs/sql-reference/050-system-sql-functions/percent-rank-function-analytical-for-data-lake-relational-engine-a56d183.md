@@ -16,16 +16,45 @@ PERCENT_RANK () OVER ( ORDER BY <expression> [ ASC | DESC ] )
 
 ## Parameters
 
- OVER \(ORDER BY\)
- :   The `ORDER BY` clause specifies the parameter on which ranking is performed and the order in which the rows are sorted in each group.
 
-  *<expression\>*
- :   A sort specification that can be any valid expression involving a column reference, aggregates, or expressions invoking these items.
+<dl>
+<dt><b>
 
-  ASC | DESC
- :   The ASC or DESC parameter specifies the ordering sequence ascending or descending. Ascending order is the default.
+OVER \(ORDER BY\)
 
- 
+</b></dt>
+<dd>
+
+The `ORDER BY` clause specifies the parameter on which ranking is performed and the order in which the rows are sorted in each group.
+
+
+
+</dd><dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+A sort specification that can be any valid expression involving a column reference, aggregates, or expressions invoking these items.
+
+
+
+</dd><dt><b>
+
+ASC | DESC
+
+</b></dt>
+<dd>
+
+The ASC or DESC parameter specifies the ordering sequence ascending or descending. Ascending order is the default.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa56d183584f21015881bb3f46bb765ee__PERCENT_RANK_returns1"/>
 
@@ -90,5 +119,5 @@ supplier#021     10000             1
 **Related Information**  
 
 
-[PERCENT_RANK Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/fc8f0fd4618e4a47b712f7cc235fe437.html "Computes the (fractional) position of one row returned from a query with respect to the other rows returned by the query, as defined by the ORDER BY clause.") :arrow_upper_right:
+[PERCENT_RANK Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/fc8f0fd4618e4a47b712f7cc235fe437.html "Computes the (fractional) position of one row returned from a query with respect to the other rows returned by the query, as defined by the ORDER BY clause.") :arrow_upper_right:
 

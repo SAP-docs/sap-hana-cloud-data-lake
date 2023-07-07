@@ -806,7 +806,10 @@ CALL sa_server_option( 'RequestTiming','ON' );
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). You must also have the MONITOR system privilege.
+Requires all of:
+
+-   EXECUTE object-level privilege on the procedure
+-   MONITOR system privilege
 
 
 

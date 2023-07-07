@@ -21,13 +21,34 @@ sp_find_top_statements( <stmt_text>, <stmt_hash> )
 
 ## Parameters
 
-  *<stmt\_text\>* 
- :   \(Optional\) A LONG VARCHAR parameter that specifies a SQL statement string. The default is NULL.
 
-   *<stmt\_hash\>* 
- :   \(Optional\) An UNSIGNED BIGINT parameter that specifies a statement hash. The default is NULL.
+<dl>
+<dt><b>
 
- 
+ *<stmt\_text\>* 
+
+</b></dt>
+<dd>
+
+\(Optional\) A LONG VARCHAR parameter that specifies a SQL statement string. The default is NULL.
+
+
+
+</dd><dt><b>
+
+ *<stmt\_hash\>* 
+
+</b></dt>
+<dd>
+
+\(Optional\) An UNSIGNED BIGINT parameter that specifies a statement hash. The default is NULL.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Result Set
 
@@ -581,7 +602,11 @@ This system procedure returns all of the data collected by the server, unless yo
 
 ## Privileges
 
-You must have the MONITOR and MANAGE PROFILING privileges on the system procedure.
+Require all of:
+
+-   EXECUTE object-level privilege on the procedure
+-   MONITOR system privilege
+-   MANAGE PROFILING system privilege
 
 
 

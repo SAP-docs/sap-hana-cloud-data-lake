@@ -16,13 +16,34 @@ EXTRACT( <date-part> FROM <timestamp-expression> )
 
 ## Parameters
 
-  *<date-part\>* 
- :   The date part to be returned. The valid values are YEAR, MONTH, DAY, HOUR, MINUTE, and SECOND.
 
-   *<timestamp-expression\>* 
- :   The DATE, TIME, or TIMESTAMP value.
+<dl>
+<dt><b>
 
- 
+ *<date-part\>* 
+
+</b></dt>
+<dd>
+
+The date part to be returned. The valid values are YEAR, MONTH, DAY, HOUR, MINUTE, and SECOND.
+
+
+
+</dd><dt><b>
+
+ *<timestamp-expression\>* 
+
+</b></dt>
+<dd>
+
+The DATE, TIME, or TIMESTAMP value.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio5abf14024b6949cd9539ee8467acfb10__section_qn4_ypd_gsb"/>
 

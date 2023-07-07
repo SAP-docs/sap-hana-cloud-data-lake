@@ -24,23 +24,44 @@ CREATE [REMOTE] SERVER <server-name> CLASS 'FILES_SERVICE'
 
 ## Parameters
 
- *<server-name\>*
- :   The server name must be a unique name.
 
-  READ ONLY
- :   Specifies that the remote server is a read-only data source. Any update request is rejected by data lake Relational Engine. `READ ONLY` must be specified. The default is `OFF`.
+<dl>
+<dt><b>
 
-    The `ON` and `VALUE`*<variable\>* clauses are optional, but if the `VALUE`*<variable\>* clause is specified then the value of the variable must be `ON`.
+*<server-name\>*
 
-    For example:
+</b></dt>
+<dd>
 
-    ```
-    CREATE VARIABLE readonly_var long varchar;
-    ​SET readonly_var = 'on';
-    ​CREATE REMOTE SERVER server1 CLASS 'FILES_SERVICE' READ ONLY readonly_var;
-    ```
+The server name must be a unique name.
 
- 
+
+
+</dd><dt><b>
+
+READ ONLY
+
+</b></dt>
+<dd>
+
+Specifies that the remote server is a read-only data source. Any update request is rejected by data lake Relational Engine. `READ ONLY` must be specified. The default is `OFF`.
+
+The `ON` and `VALUE`*<variable\>* clauses are optional, but if the `VALUE`*<variable\>* clause is specified then the value of the variable must be `ON`.
+
+For example:
+
+```
+CREATE VARIABLE readonly_var long varchar;
+​SET readonly_var = 'on';
+​CREATE REMOTE SERVER server1 CLASS 'FILES_SERVICE' READ ONLY readonly_var;
+```
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 

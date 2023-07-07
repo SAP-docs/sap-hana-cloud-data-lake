@@ -16,13 +16,34 @@ RIGHT ( <string-expression>, <numeric-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string to be left-truncated.
 
-  *<numeric-expression\>*
- :   The number of characters at the end of the string to return.
+<dl>
+<dt><b>
 
- 
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string to be left-truncated.
+
+
+
+</dd><dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The number of characters at the end of the string to return.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio03fba12b431c4d80bcb8933cd7e984ab__section_yk1_htt_vrb"/>
 

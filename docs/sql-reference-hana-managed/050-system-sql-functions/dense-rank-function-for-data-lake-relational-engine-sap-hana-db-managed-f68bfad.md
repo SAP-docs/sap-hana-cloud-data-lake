@@ -16,10 +16,23 @@ DENSE_RANK () OVER ( ORDER BY <expression> [ ASC | DESC ] )
 
 ## Parameters
 
- *<expression\>*
- :   A sort specification that can be any valid expression involving a column reference, aggregates, or expressions invoking these items.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+A sort specification that can be any valid expression involving a column reference, aggregates, or expressions invoking these items.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiof68bfad26916474fba05b8e4555bf58e__section_zqn_c1m_srb"/>
 

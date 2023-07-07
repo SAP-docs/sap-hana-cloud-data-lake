@@ -28,13 +28,34 @@ dbo.sp_iqrowdensity ( '<target>' )
 
 ## Parameter
 
- *<table-name\>*
- :   Reports on all columns in the named table.
 
-  *<column-name\>*
- :   Reports on the named column in the target table. You may specify multiple target columns, but must repeat the keyword each time.
+<dl>
+<dt><b>
 
- 
+*<table-name\>*
+
+</b></dt>
+<dd>
+
+Reports on all columns in the named table.
+
+
+
+</dd><dt><b>
+
+*<column-name\>*
+
+</b></dt>
+<dd>
+
+Reports on the named column in the target table. You may specify multiple target columns, but must repeat the keyword each time.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5b5cb9b84f2101585b8e3b5e25893af__iq_refbb_1749"/>
 
@@ -58,64 +79,16 @@ Unlike the FP\(1\), FP\(2\), FP\(3\) dictionary compression in previous releases
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). If you own the object referenced by the procedure, no additional privilege is required. 
+Requires EXECUTE object-level privilege on the procedure. If you own the object referenced by the procedure, no additional privilege is required. 
 
 For objects owned by others, you need one of the following privileges:
 
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
--   ALTER ANY INDEX
--   ALTER ANY OBJECT
--   CREATE ANY INDEX
--   CREATE ANY OBJECT
--   MANAGE ANY DBSPACE
--   MONITOR
-
-
-
-</td>
-<td valign="top">
-
-System privileges
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+-   ALTER ANY INDEX system privilege
+-   ALTER ANY OBJECT system privilege
+-   CREATE ANY INDEX system privilege
+-   CREATE ANY OBJECT system privilege
+-   MANAGE ANY DBSPACE system privilege
+-   MONITOR system privilege
 
 
 

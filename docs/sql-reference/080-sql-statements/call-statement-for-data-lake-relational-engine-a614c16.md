@@ -6,11 +6,6 @@ Invokes a procedure.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -23,9 +18,7 @@ Invokes a procedure.
 ### Syntax 1
 
 ```
-[ <variable> = ] CALL { [/pandoc/div/div/horizontalrule/horizontalrule/codeblock/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname] }<procedure-name> ( [ <expression> ] [ , … ] ) 
+[ <variable> = ] CALL { <owner> | <schema-name> }<procedure-name> ( [ <expression> ] [ , … ] ) 
     [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ]
 ```
 
@@ -34,9 +27,7 @@ Invokes a procedure.
 ### Syntax 2
 
 ```
-[ <variable> = ] CALL { [/pandoc/div/div/horizontalrule/horizontalrule/codeblock/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname] }<procedure-name> ( [ <parameter-name> = <expression> ] [ , … ] ) 
+[ <variable> = ] CALL { <owner> | <schema-name> }<procedure-name> ( [ <parameter-name> = <expression> ] [ , … ] ) 
     [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ]
 ```
 
@@ -46,13 +37,26 @@ Invokes a procedure.
 
 ## Parameters
 
- AS USER ... IDENTIFIED BY clause
- :   \(Optional\) Calls a procedure or function as a different user. The database server verifies that the user ID and password provided are valid, and then executes the procedure or function as the specified user. The invoker of the procedure is the specified user. Upon exiting the procedure or function, the user context is restored to its original state.
 
-    > ### Note:  
-    > All string values must be enclosed in single quotes; otherwise the database server interprets them as variable names.
+<dl>
+<dt><b>
 
- 
+AS USER ... IDENTIFIED BY clause
+
+</b></dt>
+<dd>
+
+\(Optional\) Calls a procedure or function as a different user. The database server verifies that the user ID and password provided are valid, and then executes the procedure or function as the specified user. The invoker of the procedure is the specified user. Upon exiting the procedure or function, the user context is restored to its original state.
+
+> ### Note:  
+> All string values must be enclosed in single quotes; otherwise the database server interprets them as variable names.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa614c16084f21015bc34dd15aeb50bde__call_remarks1"/>
 
@@ -157,7 +161,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[CALL Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/04d3a41e1d0c48aaaa788980a565bbe0.html "Invokes a procedure.") :arrow_upper_right:
+[CALL Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/04d3a41e1d0c48aaaa788980a565bbe0.html "Invokes a procedure.") :arrow_upper_right:
 
 [CREATE PROCEDURE Statement for Data Lake Relational Engine](create-procedure-statement-for-data-lake-relational-engine-a6185b2.md "Creates a new user-defined SQL procedure in the database.")
 

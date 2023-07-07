@@ -505,5 +505,5 @@ The first version of the table schema in which this column exists.
 **Related Information**  
 
 
-[SYSTABCOL System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/b48617e016a04f69953a0bdf8c812ab7.html "The SYS.SYSTABCOL system view contains one row for each column of each table and view in the database.") :arrow_upper_right:
+[SYSTABCOL System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/b48617e016a04f69953a0bdf8c812ab7.html "The SYS.SYSTABCOL system view contains one row for each column of each table and view in the database.") :arrow_upper_right:
 

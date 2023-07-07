@@ -5,7 +5,6 @@
 Found a mistake in our documentation? Always wanted to add a step in one of our procedures that could save many others much time? Then you're at the right place! All contributions made to the Markdown files in the [docs](docs) directory are reviewed, and if deemed valuable be added to our [official documentation on SAP Help Portal](https://help.sap.com/docs/SAP_HANA_DATA_LAKE). The easiest way is to start there, and choose _Edit_ to find the right Markdown file to contribute to.
 
 You can currently make contributions to the following guides in this repository:
-* [SAP HANA Cloud, Data Lake Developer Guide for Data Lake Relational Engine](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/a894a54d84f21015b142ffe773888f8c)
 * [SAP HANA Cloud, Data Lake SQL Reference for Data Lake Relational Engine](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/19b3964099384f178ad08f2d348232a9)
 * [SAP HANA Cloud, Data Lake SQL Reference for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/a898e08b84f21015969fa437e89860c8/74814c5dca454066804e5670fa2fe4f5.html)
 

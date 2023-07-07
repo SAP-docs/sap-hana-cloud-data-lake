@@ -6,11 +6,6 @@ Creates a view on the database. Views are used to give a different perspective o
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -20,16 +15,15 @@ Creates a view on the database. Views are used to give a different perspective o
 
 ```
 CREATE [ OR REPLACE ] VIEW
-   [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) { [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] } (span].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <view-name> (varname] [ ( [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <column-name> (varname] [ , … ] ) ]
-   AS [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <select-statement> (varname]
+   [ { <owner> | <schema-name> }.]<view-name> [ ( <column-name> [ , … ] ) ]
+   AS <select-statement>
    [ WITH CHECK OPTION ]
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -37,19 +31,56 @@ CREATE [ OR REPLACE ] VIEW
 
 ## Parameters
 
- OR REPLACE
- :   Replaces an existing view with the same name. Existing permissions are preserved , but INSTEAD OF triggers on the view are dropped.
 
-  *<view-name\>*
- :   The default owner of a view is the current user ID. A view name can be used in place of a table name in SELECT, DELETE, UPDATE, and INSERT statements. Views, however, do not physically exist in the database as tables. They are derived each time they are used. The view is derived as the result of the SELECT statement specified in the CREATE VIEW statement. Table names used in a view should be qualified by the user ID of the table owner. Otherwise, a different user ID might not be able to find the table or might get the wrong table.
+<dl>
+<dt><b>
 
-  AS *<select-statement\>*
- :   The SELECT statement on which the view is based must not contain an ORDER BY clause, a subquery in the SELECT list, or a TOP or FIRST qualification. It may have a GROUP BY clause and may be a UNION.
+OR REPLACE
 
-  WITH CHECK OPTION
- :   Rejects any updates and inserts to the view that do not meet the criteria of the views as defined by its SELECT statement. However, data lake Relational Engine currently ignores this option \(it supports the syntax for compatibility reasons\).
+</b></dt>
+<dd>
 
- 
+Replaces an existing view with the same name. Existing permissions are preserved , but INSTEAD OF triggers on the view are dropped.
+
+
+
+</dd><dt><b>
+
+*<view-name\>*
+
+</b></dt>
+<dd>
+
+The default owner of a view is the current user ID. A view name can be used in place of a table name in SELECT, DELETE, UPDATE, and INSERT statements. Views, however, do not physically exist in the database as tables. They are derived each time they are used. The view is derived as the result of the SELECT statement specified in the CREATE VIEW statement. Table names used in a view should be qualified by the user ID of the table owner. Otherwise, a different user ID might not be able to find the table or might get the wrong table.
+
+
+
+</dd><dt><b>
+
+AS *<select-statement\>*
+
+</b></dt>
+<dd>
+
+The SELECT statement on which the view is based must not contain an ORDER BY clause, a subquery in the SELECT list, or a TOP or FIRST qualification. It may have a GROUP BY clause and may be a UNION.
+
+
+
+</dd><dt><b>
+
+WITH CHECK OPTION
+
+</b></dt>
+<dd>
+
+Rejects any updates and inserts to the view that do not meet the criteria of the views as defined by its SELECT statement. However, data lake Relational Engine currently ignores this option \(it supports the syntax for compatibility reasons\).
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61a051684f210158cced2d83231bd8a__create_view_remarks1"/>
 
@@ -148,7 +179,7 @@ Automatic commit
 
 [SELECT Statement for Data Lake Relational Engine](select-statement-for-data-lake-relational-engine-a624e72.md "Retrieves information from the database.")
 
-[CREATE VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/4d411288dcae4da3a64d44865a0574e9.html "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.") :arrow_upper_right:
+[CREATE VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/4d411288dcae4da3a64d44865a0574e9.html "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

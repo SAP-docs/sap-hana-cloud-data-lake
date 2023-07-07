@@ -408,16 +408,45 @@ Indicates whether RESTORE TABLE privileges have been granted. Possible values ar
 
 There are several types of privileges that can be granted. Each privilege can have one of the following three values.
 
- N
- :   No, the grantee hasn’t been granted this privilege by the grantor.
 
-  Y
- :   Yes, the grantee has been given this privilege by the grantor.
+<dl>
+<dt><b>
 
-  G
- :   The grantee has been given this privilege and can grant the same privilege to another user.
+N
 
- 
+</b></dt>
+<dd>
+
+No, the grantee hasn’t been granted this privilege by the grantor.
+
+
+
+</dd><dt><b>
+
+Y
+
+</b></dt>
+<dd>
+
+Yes, the grantee has been given this privilege by the grantor.
+
+
+
+</dd><dt><b>
+
+G
+
+</b></dt>
+<dd>
+
+The grantee has been given this privilege and can grant the same privilege to another user.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio7808ea6465984320b56b55cebdb45ae1__section_qkg_hcf_xrb"/>
 

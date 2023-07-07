@@ -16,13 +16,34 @@ PROPERTY_DESCRIPTION ( { <property-id> | <property-name> } )
 
 ## Parameters
 
- *<property-id\>*
- :   An integer that is the property number of the property. This number can be determined from the `PROPERTY_NUMBER` function. The *<property-id\>* is commonly used when looping through a set of properties.
 
-  *<property-name\>*
- :   A string giving the name of the property.
+<dl>
+<dt><b>
 
- 
+*<property-id\>*
+
+</b></dt>
+<dd>
+
+An integer that is the property number of the property. This number can be determined from the `PROPERTY_NUMBER` function. The *<property-id\>* is commonly used when looping through a set of properties.
+
+
+
+</dd><dt><b>
+
+*<property-name\>*
+
+</b></dt>
+<dd>
+
+A string giving the name of the property.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Returns
 

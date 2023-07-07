@@ -6,11 +6,6 @@ Removes object-level privileges that were given using the `GRANT` statement.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -24,12 +19,14 @@ Removes object-level privileges that were given using the `GRANT` statement.
 
 ```
 REVOKE { <object-level-privilege> [,...]
-   ON { [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <owner> (varname].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <object-name> (varname] | SCHEMA [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname] } 
+   ON { [ <owner>.]<object-name> | SCHEMA <schema-name> } 
    FROM <user_role_shema> [,...]
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -37,49 +34,78 @@ REVOKE { <object-level-privilege> [,...]
 
 ## Parameters
 
- *<user\_role\_schema\>*
- :   Must be the name of existing users, immutable roles, or schemas. Separate the list with commas.
 
-  *<object-level-privilege\>*
- :   Specifies the object or schema privilege being revoked.
+<dl>
+<dt><b>
 
-    ```
-    <object-level-privilege> ::=
-       ALL [ PRIVILEGES ] 
-       | ALTER 
-       | BACKUP TABLE
-       | CREATE ANY**
-       | DELETE 
-       | DROP**
-       | EXECUTE
-       | EXECUTE PROCEDURE**
-       | INSERT
-       | LOAD
-       | REFERENCES [ ( <column-name> [, …] ) ] 
-       | RESTORE TABLE
-       | SELECT [ ( <column-name> [, …] ) ] 
-       | TRUNCATE
-       | UPDATE [ ( <column-name>, …) ]
-       | USAGE*
-    
-    **CREATE ANY, DROP, and EXECUTE PROCEDURE are only supported by SCHEMA <schema-name>
-    *USAGE is only supported by [ <owner>.]<object-name>
-    ```
+*<user\_role\_schema\>*
 
-    For an explanation of each object-level privilege, see [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right:.
+</b></dt>
+<dd>
 
-  *<object-name\>*
- :   Specifies the type of object the privilege applies to.
+Must be the name of existing users, immutable roles, or schemas. Separate the list with commas.
 
-    ```
-    <object-name> ::=
-       <table_name>
-       | <view_name>
-       | {<procedure-name> | <user-defined-function-name>}
-       | <sequence_name>
-    ```
 
- 
+
+</dd><dt><b>
+
+*<object-level-privilege\>*
+
+</b></dt>
+<dd>
+
+Specifies the object or schema privilege being revoked.
+
+```
+<object-level-privilege> ::=
+   ALL [ PRIVILEGES ] 
+   | ALTER 
+   | BACKUP TABLE
+   | CREATE ANY**
+   | DELETE 
+   | DROP**
+   | EXECUTE
+   | EXECUTE PROCEDURE**
+   | INSERT
+   | LOAD
+   | REFERENCES [ ( <column-name> [, …] ) ] 
+   | RESTORE TABLE
+   | SELECT [ ( <column-name> [, …] ) ] 
+   | TRUNCATE
+   | UPDATE [ ( <column-name>, …) ]
+   | USAGE*
+
+**CREATE ANY, DROP, and EXECUTE PROCEDURE are only supported by SCHEMA <schema-name>
+*USAGE is only supported by [ <owner>.]<object-name>
+```
+
+For an explanation of each object-level privilege, see [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right:.
+
+
+
+</dd><dt><b>
+
+*<object-name\>*
+
+</b></dt>
+<dd>
+
+Specifies the type of object the privilege applies to.
+
+```
+<object-name> ::=
+   <table_name>
+   | <view_name>
+   | {<procedure-name> | <user-defined-function-name>}
+   | <sequence_name>
+```
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiof14139fa124d4e5da23c1da6a5009417__section_qfx_n2y_wwb"/>
 
@@ -91,17 +117,41 @@ REVOKE { <object-level-privilege> [,...]
 
 The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
 
- Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
- :   You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
-  Connected directly to data lake Relational Engine as a data lake Relational Engine user:
- :   Requires one of:
+<dl>
+<dt><b>
 
-    -   You own the object.
-    -   You have been granted the specific object privilege with the WITH GRANT OPTION clause on the object.
-    -   MANAGE ANY OBJECT PRIVILEGE system privilege.
+Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
 
- 
+</b></dt>
+<dd>
+
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+
+
+</dd><dt><b>
+
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+Requires one of:
+
+-   You own the object.
+-   You have been granted the specific object privilege with the WITH GRANT OPTION clause on the object.
+-   MANAGE ANY OBJECT PRIVILEGE system privilege.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiof14139fa124d4e5da23c1da6a5009417__section_mpx_ngl_gtb"/>
 

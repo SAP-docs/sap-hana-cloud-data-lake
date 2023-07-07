@@ -6,11 +6,6 @@ Sets database options in an SAP Adaptive Server Enterprise-compatible manner.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -35,42 +30,116 @@ SET <option-name> <option-value>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa62546b384f2101588d3bfd494dfc800__IQ_Parameters"/>
 
 ## Parameters
 
- ANSINULL
- :   The default behavior for comparing values to NULL in data lake Relational Engine and SAP ASE is different. Setting ANSINULL to OFF provides Transact-SQL compatible comparisons with NULL.
 
-  ANSI\_PERMISSIONS
- :   The default behavior in data lake Relational Engine and SAP ASE regarding permissions required to carry out a DELETE containing a column reference is different. Setting ANSI\_PERMISSIONS to OFF provides Transact-SQL-compatible permissions on DELETE.
+<dl>
+<dt><b>
 
-  CLOSE\_ON\_ENDTRANS
- :   When set to ON \(the default and only allowable value\), cursors are closed at the end of a transaction. With the option set ON, CLOSE\_ON\_ENDTRANS provides Transact-SQL-compatible behavior.
+ANSINULL
 
-  QUOTED\_IDENTIFIER
- :   Controls whether strings enclosed in double quotes are interpreted as identifiers \(ON\) or as literal strings \(OFF\).
+</b></dt>
+<dd>
 
-  ROWCOUNT
- :   In the Transact-SQL, limits to the specified integer the number of rows fetched for any cursor. This includes rows fetched by repositioning the cursor. Any fetches beyond this maximum return a warning. The setting is considered when returning the estimate of the number of rows for a cursor on an `OPEN` request.
+The default behavior for comparing values to NULL in data lake Relational Engine and SAP ASE is different. Setting ANSINULL to OFF provides Transact-SQL compatible comparisons with NULL.
 
-    > ### Note:  
-    > Data lake Relational Engine supports the *<@@rowcount\>* global variable. `SELECT`, `INSERT`, `DELETE`, and `UPDATE` statements affect the value of the ROWCOUNT clause. The `ROWCOUNT` clause has no effect on cursor operation, the `IF` statement, or creating or dropping a table or procedure.
 
-    In data lake Relational Engine, if ROWCOUNT is greater than the number of rows that `dbisql` can display, `dbisql` may do extra fetches to reposition the cursor. The number of rows actually displayed may be less than the number requested. Also, if any rows are refetched due to truncation warnings, the count might be inaccurate.
 
-    A value of zero resets the option to get all rows.
+</dd><dt><b>
 
-  STRING\_RTRUNCATION
- :   The default behavior in data lake Relational Engine and SAP ASE when nonspace characters are truncated on assigning SQL string data is different. Setting STRING\_RTRUNCATION to ON provides Transact-SQL-compatible string comparisons, including hexadecimal string \(binary data type\) comparisons.
+ANSI\_PERMISSIONS
 
-  TRANSACTION ISOLATION LEVEL
- :   Sets the locking isolation level for the current connection For SAP ASE, only 1 and 3 are valid options. For data lake Relational Engine, only 3 is a valid option.
+</b></dt>
+<dd>
 
-  SET PREFETCH
- :   Is allowed by data lake Relational Engine for compatibility, but has no effect.
+The default behavior in data lake Relational Engine and SAP ASE regarding permissions required to carry out a DELETE containing a column reference is different. Setting ANSI\_PERMISSIONS to OFF provides Transact-SQL-compatible permissions on DELETE.
 
- 
+
+
+</dd><dt><b>
+
+CLOSE\_ON\_ENDTRANS
+
+</b></dt>
+<dd>
+
+When set to ON \(the default and only allowable value\), cursors are closed at the end of a transaction. With the option set ON, CLOSE\_ON\_ENDTRANS provides Transact-SQL-compatible behavior.
+
+
+
+</dd><dt><b>
+
+QUOTED\_IDENTIFIER
+
+</b></dt>
+<dd>
+
+Controls whether strings enclosed in double quotes are interpreted as identifiers \(ON\) or as literal strings \(OFF\).
+
+
+
+</dd><dt><b>
+
+ROWCOUNT
+
+</b></dt>
+<dd>
+
+In the Transact-SQL, limits to the specified integer the number of rows fetched for any cursor. This includes rows fetched by repositioning the cursor. Any fetches beyond this maximum return a warning. The setting is considered when returning the estimate of the number of rows for a cursor on an `OPEN` request.
+
+> ### Note:  
+> Data lake Relational Engine supports the *<@@rowcount\>* global variable. `SELECT`, `INSERT`, `DELETE`, and `UPDATE` statements affect the value of the ROWCOUNT clause. The `ROWCOUNT` clause has no effect on cursor operation, the `IF` statement, or creating or dropping a table or procedure.
+
+In data lake Relational Engine, if ROWCOUNT is greater than the number of rows that `dbisql` can display, `dbisql` may do extra fetches to reposition the cursor. The number of rows actually displayed may be less than the number requested. Also, if any rows are refetched due to truncation warnings, the count might be inaccurate.
+
+A value of zero resets the option to get all rows.
+
+
+
+</dd><dt><b>
+
+STRING\_RTRUNCATION
+
+</b></dt>
+<dd>
+
+The default behavior in data lake Relational Engine and SAP ASE when nonspace characters are truncated on assigning SQL string data is different. Setting STRING\_RTRUNCATION to ON provides Transact-SQL-compatible string comparisons, including hexadecimal string \(binary data type\) comparisons.
+
+
+
+</dd><dt><b>
+
+TRANSACTION ISOLATION LEVEL
+
+</b></dt>
+<dd>
+
+Sets the locking isolation level for the current connection For SAP ASE, only 1 and 3 are valid options. For data lake Relational Engine, only 3 is a valid option.
+
+
+
+</dd><dt><b>
+
+SET PREFETCH
+
+</b></dt>
+<dd>
+
+Is allowed by data lake Relational Engine for compatibility, but has no effect.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa62546b384f2101588d3bfd494dfc800__IQ_Usage"/>
 

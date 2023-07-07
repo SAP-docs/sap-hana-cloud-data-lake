@@ -16,10 +16,23 @@ EXP ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The exponent.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The exponent.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio982ccd1f2f84468d9753761e3be45fca__section_msw_2sg_trb"/>
 

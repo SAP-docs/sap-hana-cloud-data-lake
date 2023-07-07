@@ -48,7 +48,7 @@ Each error indicates its severity. If there are no errors, the procedure returns
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

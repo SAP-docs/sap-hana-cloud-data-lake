@@ -30,13 +30,34 @@ sp_remote_schemas(
 
 ## Parameters
 
-  *<remote-server-name\>* 
- :   Use this CHAR\(128\) parameter to specify the remote server name. *<remote-server-name\>* must be specified.
 
-  *<remote-schema-name\>*
- :   The name of the schema.
+<dl>
+<dt><b>
 
- 
+ *<remote-server-name\>* 
+
+</b></dt>
+<dd>
+
+Use this CHAR\(128\) parameter to specify the remote server name. *<remote-server-name\>* must be specified.
+
+
+
+</dd><dt><b>
+
+*<remote-schema-name\>*
+
+</b></dt>
+<dd>
+
+The name of the schema.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioe9fdd659ccd646848bdf02d401046679__SPRS_results"/>
 

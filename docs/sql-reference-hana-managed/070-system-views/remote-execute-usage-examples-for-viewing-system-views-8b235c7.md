@@ -11,8 +11,7 @@ The system view SYSTAB returns information on tables and views in data lake Rela
 Create a data lake Relational Engine view named VIEW\_SYSTAB that performs a SELECT query against the stem view.
 
 ```
-CALL [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.REMOTE_EXECUTE ('
+CALL SYSHDL_CONTAINER1.REMOTE_EXECUTE ('
    CREATE VIEW VIEW_SYSTAB AS SELECT * FROM SYS.SYSTAB 
 ');
 ```
@@ -22,7 +21,6 @@ Data lake Relational Engine automatically creates a corresponding virtual table 
 Execute a query using the virtual table to display the information.
 
 ```
-SELECT * FROM [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.VIEW_SYSTAB
+SELECT * FROM SYSHDL_CONTAINER1.VIEW_SYSTAB
 ```
 

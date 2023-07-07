@@ -6,11 +6,6 @@ Changes the definition of an event or its associated handler for automating pred
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -71,70 +66,189 @@ ALTER EVENT <event-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa61251b484f21015bebaad7232f40857__alter_event_parm1"/>
 
 ## Parameters
 
- DELETE TYPE
- :   Removes an association of the event with an event type.
 
-  ADD | MODIFY | DELETE SCHEDULE
- :    Changes the definition of a schedule. Only one schedule can be altered in any one ALTER EVENT statement.
+<dl>
+<dt><b>
 
-  WHERE *<trigger-condition\>*
- :   The trigger condition determines the condition under which an event is fired. For example, to take an action when the storage space containing the transaction log becomes more than 80 percent full, use this triggering condition:
+DELETE TYPE
 
-    ```
-    ...
-                  WHERE event_condition( 'LogDiskSpacePercentFree' ) < 20
-                  ...
-    ```
+</b></dt>
+<dd>
 
-    The argument to the EVENT\_CONDITION function must be valid for the event type. You can use multiple AND conditions to make up the WHERE clause, but you cannot use OR conditions or other conditions.
+Removes an association of the event with an event type.
 
-    You can specify a variable name for the event\_condition value.
 
-  TYPE *<event-type\>*
- :   One of a set of system-defined event types. The event types are case-insensitive. To specify the conditions under which this *<event-type\>* triggers the event, use the WHERE clause.
 
-     BackupEnd
-     :   Take action at the end of a backup.
+</dd><dt><b>
 
-      Connect / ConnectFailed
-     :   When a connection is made \(Connect\) or when a connection attempt fails \(ConnectFailed\), you may want to use these events for security purposes. As an alternative to a connect event handler, you may want to consider using a login procedure.
+ADD | MODIFY | DELETE SCHEDULE
 
-      DatabaseStart
-     :   Take action when a database is started.
+</b></dt>
+<dd>
 
-      Disconnect
-     :   Take action when a user or application disconnects.
+ Changes the definition of a schedule. Only one schedule can be altered in any one ALTER EVENT statement.
 
-      Diskspace
-     :   Tracks the available space on the device holding the database file \(DBDiskSpace\), the transaction log file \(LogDiskSpace\), or temporary file \(TempDiskSpace\).
 
-        If the database contains an event handler for one of the DiskSpace types, the database server checks the available space on each device associated with the relevant file every 30 seconds.
 
-        In the event the database has more than one dbspace, on separate drives, DBDiskSpace checks each drive and acts depending on the lowest available space.
+</dd><dt><b>
 
-        LogDiskSpace checks the location of the transaction log and any mirrored transaction log, and reports based on the least available space.
+WHERE *<trigger-condition\>*
 
-      File size
-     :   Take action when the file reaches a specified size. This can be used for the database file \(GrowDB\), the transaction log \(GrowLog\), or the temporary file \(GrowTemp\).
+</b></dt>
+<dd>
 
-        You may want to use file size events to track unusual actions on the database, or monitor bulk operations.
+The trigger condition determines the condition under which an event is fired. For example, to take an action when the storage space containing the transaction log becomes more than 80 percent full, use this triggering condition:
 
-      GlobalAutoincrement
-     :   When the number of remaining values for a column defined with GLOBAL AUTOINCREMENT is within one percent of its range, the GlobalAutoincrement event fires. A typical action for the handler could be to request a new value for the GLOBAL\_DATABASE\_ID clause.
+```
+...
+              WHERE event_condition( 'LogDiskSpacePercentFree' ) < 20
+              ...
+```
 
-        You can use the `EVENT_CONDITION` function with RemainingValues as an argument for this event type. RemainingValues returns the number of remaining values that can be generated for the column, while TableName returns the table containing the GLOBAL AUTOINCREMENT column that is near the end of its range.
+The argument to the EVENT\_CONDITION function must be valid for the event type. You can use multiple AND conditions to make up the WHERE clause, but you cannot use OR conditions or other conditions.
 
-      RAISERROR
-     :   When a RAISERROR statement is executed, you can use the RAISERROR event type to take actions. The error number used in the RAISERROR statement can be determined within the event handler using the EVENT\_CONDITION function \(for example, `EVENT_CONDITION( 'ErrorNumber' )`\).
+You can specify a variable name for the event\_condition value.
 
-      ServerIdle
-     :   If the database contains an event handler for the ServerIdle type, the server checks for server activity every 30 seconds.
 
-  
+
+</dd><dt><b>
+
+TYPE *<event-type\>*
+
+</b></dt>
+<dd>
+
+One of a set of system-defined event types. The event types are case-insensitive. To specify the conditions under which this *<event-type\>* triggers the event, use the WHERE clause.
+
+
+<dl>
+<dt><b>
+
+BackupEnd
+
+</b></dt>
+<dd>
+
+Take action at the end of a backup.
+
+
+
+</dd><dt><b>
+
+Connect / ConnectFailed
+
+</b></dt>
+<dd>
+
+When a connection is made \(Connect\) or when a connection attempt fails \(ConnectFailed\), you may want to use these events for security purposes. As an alternative to a connect event handler, you may want to consider using a login procedure.
+
+
+
+</dd><dt><b>
+
+DatabaseStart
+
+</b></dt>
+<dd>
+
+Take action when a database is started.
+
+
+
+</dd><dt><b>
+
+Disconnect
+
+</b></dt>
+<dd>
+
+Take action when a user or application disconnects.
+
+
+
+</dd><dt><b>
+
+Diskspace
+
+</b></dt>
+<dd>
+
+Tracks the available space on the device holding the database file \(DBDiskSpace\), the transaction log file \(LogDiskSpace\), or temporary file \(TempDiskSpace\).
+
+If the database contains an event handler for one of the DiskSpace types, the database server checks the available space on each device associated with the relevant file every 30 seconds.
+
+In the event the database has more than one dbspace, on separate drives, DBDiskSpace checks each drive and acts depending on the lowest available space.
+
+LogDiskSpace checks the location of the transaction log and any mirrored transaction log, and reports based on the least available space.
+
+
+
+</dd><dt><b>
+
+File size
+
+</b></dt>
+<dd>
+
+Take action when the file reaches a specified size. This can be used for the database file \(GrowDB\), the transaction log \(GrowLog\), or the temporary file \(GrowTemp\).
+
+You may want to use file size events to track unusual actions on the database, or monitor bulk operations.
+
+
+
+</dd><dt><b>
+
+GlobalAutoincrement
+
+</b></dt>
+<dd>
+
+When the number of remaining values for a column defined with GLOBAL AUTOINCREMENT is within one percent of its range, the GlobalAutoincrement event fires. A typical action for the handler could be to request a new value for the GLOBAL\_DATABASE\_ID clause.
+
+You can use the `EVENT_CONDITION` function with RemainingValues as an argument for this event type. RemainingValues returns the number of remaining values that can be generated for the column, while TableName returns the table containing the GLOBAL AUTOINCREMENT column that is near the end of its range.
+
+
+
+</dd><dt><b>
+
+RAISERROR
+
+</b></dt>
+<dd>
+
+When a RAISERROR statement is executed, you can use the RAISERROR event type to take actions. The error number used in the RAISERROR statement can be determined within the event handler using the EVENT\_CONDITION function \(for example, `EVENT_CONDITION( 'ErrorNumber' )`\).
+
+
+
+</dd><dt><b>
+
+ServerIdle
+
+</b></dt>
+<dd>
+
+If the database contains an event handler for the ServerIdle type, the server checks for server activity every 30 seconds.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61251b484f21015bebaad7232f40857__alter_event_remarks1"/>
 

@@ -23,13 +23,34 @@ sp_iqcursorinfo [ <cursor-name> ] [, <conn-handle> ]
 
 ## Parameters
 
- *<cursor-name\>*
- :   The name of the cursor. If only this parameter is specified, sp\_iqcursorinfo returns information about all cursors that have the specified name in all connections.
 
-  *<conn-handle\>*
- :   An integer representing the connection ID. If only this parameter is specified, sp\_iqcursorinfo returns information about all cursors in the specified connection.
+<dl>
+<dt><b>
 
- 
+*<cursor-name\>*
+
+</b></dt>
+<dd>
+
+The name of the cursor. If only this parameter is specified, sp\_iqcursorinfo returns information about all cursors that have the specified name in all connections.
+
+
+
+</dd><dt><b>
+
+*<conn-handle\>*
+
+</b></dt>
+<dd>
+
+An integer representing the connection ID. If only this parameter is specified, sp\_iqcursorinfo returns information about all cursors in the specified connection.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5a1c74e84f21015bdc9be59b4d91a1f__section_hdj_hsz_mbb"/>
 
@@ -315,59 +336,10 @@ If you specify one or more parameters, the result is filtered by the specified p
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
+Requires all of:
 
-You also need:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-MONITOR
-
-
-
-</td>
-<td valign="top">
-
-System privilege
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+-   EXECUTE object-level privilege on the procedure
+-   MONITOR system privilege
 
 
 

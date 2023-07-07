@@ -135,5 +135,5 @@ Reserved.
 **Related Information**  
 
 
-[SYSUSERMESSAGE System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/96ce66486fbf4da3a705c8daa1dbc85f.html "Each row in the SYS.SYSUSERMESSAGE system view holds a user-defined message for an error condition.") :arrow_upper_right:
+[SYSUSERMESSAGE System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/96ce66486fbf4da3a705c8daa1dbc85f.html "Each row in the SYS.SYSUSERMESSAGE system view holds a user-defined message for an error condition.") :arrow_upper_right:
 

@@ -6,11 +6,6 @@ Maps one or more external identities from a JWT provider to a user in the data l
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,32 +19,66 @@ GRANT JWT LOGIN TO <external_identity> FOR PROVIDER <jwt_provider_name> AS USER 
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loio582d22d53e994855a9c7fa7b9a3fda25__IQ_Parameters"/>
 
 ## Parameters
 
- *<external\_identity\>*
- :   Specifies the external identity to map to the data lake Relational Engine user.
 
-    ```
-    <external_identity> ::= <simple_identifier>
-    ```
+<dl>
+<dt><b>
 
-  *<jwt\_provider\_name\>*
- :   Specifies the JWT provider.
+*<external\_identity\>*
 
-    ```
-    <jwt_provider_name> ::= <simple_identifier>
-    ```
+</b></dt>
+<dd>
 
-  *<userid\>*
- :   Specifies the data lake Relational Engine user to which the external identities are mapped.
+Specifies the external identity to map to the data lake Relational Engine user.
 
-    ```
-    <userid> ::= <simple_identifier>
-    ```
+```
+<external_identity> ::= <simple_identifier>
+```
 
- 
+
+
+</dd><dt><b>
+
+*<jwt\_provider\_name\>*
+
+</b></dt>
+<dd>
+
+Specifies the JWT provider.
+
+```
+<jwt_provider_name> ::= <simple_identifier>
+```
+
+
+
+</dd><dt><b>
+
+*<userid\>*
+
+</b></dt>
+<dd>
+
+Specifies the data lake Relational Engine user to which the external identities are mapped.
+
+```
+<userid> ::= <simple_identifier>
+```
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio582d22d53e994855a9c7fa7b9a3fda25__IQ_Permissions"/>
 

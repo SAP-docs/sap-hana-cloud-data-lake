@@ -27,19 +27,43 @@ DROP TABLE <remote-schema-name>.<remote-table-name> IN FILES_SERVICE
 
 ## Parameters
 
- *<remote-schema-name\>*
- :   The schema of the table. *<remote-schema-name\>* must be provided.
 
-  *<remote-table-name\>*
- :   The name of the table to be deleted.
+<dl>
+<dt><b>
 
- 
+*<remote-schema-name\>*
+
+</b></dt>
+<dd>
+
+The schema of the table. *<remote-schema-name\>* must be provided.
+
+
+
+</dd><dt><b>
+
+*<remote-table-name\>*
+
+</b></dt>
+<dd>
+
+The name of the table to be deleted.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioca1e55df6c6f4e0aa381832e5504a4b9__section_wjs_t4b_nqb"/>
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

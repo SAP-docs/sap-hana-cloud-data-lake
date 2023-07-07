@@ -6,11 +6,6 @@ Establishes a savepoint within the current transaction.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,14 +19,32 @@ SAVEPOINT [ <savepoint-name> ]
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa624878684f21015a431830654903eca__IQ_Parameters"/>
 
 ## Parameters
 
- *<savepoint-name\>*
- :   An identifier that can be used in a `RELEASE SAVEPOINT` or `ROLLBACK TO SAVEPOINT` statement.
 
- 
+<dl>
+<dt><b>
+
+*<savepoint-name\>*
+
+</b></dt>
+<dd>
+
+An identifier that can be used in a `RELEASE SAVEPOINT` or `ROLLBACK TO SAVEPOINT` statement.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa624878684f21015a431830654903eca__IQ_Usage"/>
 

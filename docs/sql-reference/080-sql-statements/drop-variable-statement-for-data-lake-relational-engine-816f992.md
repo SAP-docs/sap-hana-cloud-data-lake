@@ -6,11 +6,6 @@ Drops a connection-scope SQL variable.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,15 +19,41 @@ DROP VARIABLE [ IF EXISTS ] <identifier>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 ## Parameters
 
- IF EXISTS clause
- :   Specify this clause to allow the statement to complete without returning an error if a variable with the specified name \(and/or owner, if specified\) is not found.
 
-  *<identifier\>* 
- :   A valid identifier for the variable.
+<dl class="glossary">
+<dt><b>
 
- 
+IF EXISTS clause
+
+</b></dt>
+<dd>
+
+Specify this clause to allow the statement to complete without returning an error if a variable with the specified name \(and/or owner, if specified\) is not found.
+
+
+
+</dd><dt><b>
+
+*<identifier\>* 
+
+</b></dt>
+<dd>
+
+A valid identifier for the variable.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -58,10 +79,23 @@ No side effects are associated with dropping a connection-scope variable.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- **Related Information**  
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+**Related Information**  
 
 
 [CREATE VARIABLE Statement for Data Lake Relational Engine](create-variable-statement-for-data-lake-relational-engine-a619d63.md "Creates data type or a connection- or database-scope variable.")

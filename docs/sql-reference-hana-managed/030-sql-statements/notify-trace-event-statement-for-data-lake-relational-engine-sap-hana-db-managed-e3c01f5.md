@@ -6,11 +6,6 @@ Logs a user-defined trace event to a trace session.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -24,17 +19,43 @@ NOTIFY TRACE EVENT <trace-event-name> ( [ <param1> [ ,... ] ] )
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioe3c01f5594f0442daf8275954bc2bb57__section_c1f_mmw_brb"/>
 
 ## Parameters
 
-  *<trace-event-name\>* 
- :   The trace event name must be the name of a user-defined trace event. It cannot be a system-defined trace event.
 
-   *<param1\>* 
- :   The values of the trace event fields.
+<dl class="glossary">
+<dt><b>
 
- 
+ *<trace-event-name\>* 
+
+</b></dt>
+<dd>
+
+The trace event name must be the name of a user-defined trace event. It cannot be a system-defined trace event.
+
+
+
+</dd><dt><b>
+
+ *<param1\>* 
+
+</b></dt>
+<dd>
+
+The values of the trace event fields.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioe3c01f5594f0442daf8275954bc2bb57__section_c51_nmw_brb"/>
 
@@ -64,10 +85,23 @@ None
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following statements log events to the current \(fictitious\) event trace session, my\_event.
 

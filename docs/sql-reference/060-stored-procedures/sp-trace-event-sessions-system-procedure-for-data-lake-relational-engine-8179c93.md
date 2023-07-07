@@ -23,10 +23,23 @@ sp_trace_event_sessions( [ <session_name> ] )
 
 ## Parameters
 
-  *<session\_name\>* 
- :   Use this CHAR\(256\) parameter to specify the trace event session you want to get information about. If a session name is not specified, information is returned about all trace event sessions in the database.
 
- 
+<dl>
+<dt><b>
+
+ *<session\_name\>* 
+
+</b></dt>
+<dd>
+
+Use this CHAR\(256\) parameter to specify the trace event session you want to get information about. If a session name is not specified, information is returned about all trace event sessions in the database.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio8179c9326ce210149a84c8b4621ed3d9__sp_trace_event_sessions_resultset1"/>
 
@@ -161,9 +174,18 @@ Start and stop trace event sessions manually by using the STATE clause of the AL
 
 
 
+<a name="loio8179c9326ce210149a84c8b4621ed3d9__sp_trace_event_sessions_priv1"/>
+
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure, as well as the MANAGE ANY TRACE SESSION system privilege.
+
+
+### 
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure
+-   MANAGE ANY TRACE SESSION system privilege
 
 
 
@@ -184,5 +206,5 @@ SELECT * FROM dbo.sp_trace_event_sessions( );
 **Related Information**  
 
 
-[sp_trace_event_sessions System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/3a8340e1d6cd40ebbb3717c9530a2047.html "Returns a list of the trace event sessions that are defined for the database.") :arrow_upper_right:
+[sp_trace_event_sessions System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3a8340e1d6cd40ebbb3717c9530a2047.html "Returns a list of the trace event sessions that are defined for the database.") :arrow_upper_right:
 

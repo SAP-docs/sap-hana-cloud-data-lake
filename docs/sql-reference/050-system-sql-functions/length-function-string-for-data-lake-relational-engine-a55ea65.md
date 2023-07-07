@@ -16,10 +16,23 @@ LENGTH ( <string-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string.
 
- 
+<dl>
+<dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa55ea65684f21015a60794ef54777c14__LENGTH_returns1"/>
 
@@ -62,5 +75,5 @@ SELECT LENGTH( 'chocolate' ) FROM iq_dummy
 
 [String Functions in Data Lake Relational Engine](string-functions-in-data-lake-relational-engine-a52d1d9.md "String functions perform conversion, extraction, or manipulation operations on strings, or return information about strings.")
 
-[LENGTH Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/ae555cf86ee34fe887637dbcd64a33c3.html "Returns the number of characters in the specified string.") :arrow_upper_right:
+[LENGTH Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ae555cf86ee34fe887637dbcd64a33c3.html "Returns the number of characters in the specified string.") :arrow_upper_right:
 

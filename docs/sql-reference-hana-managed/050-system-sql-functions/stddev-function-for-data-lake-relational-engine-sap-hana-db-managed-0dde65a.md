@@ -16,10 +16,23 @@ STDDEV ( [ ALL ] <expression> )
 
 ## Parameters
 
- *<expression\>*
- :   Any numeric data type \(FLOAT, REAL, or DOUBLE precision\) expression.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+Any numeric data type \(FLOAT, REAL, or DOUBLE precision\) expression.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio0dde65ab55a549d3b058038134cae149__section_krv_gv5_vrb"/>
 
@@ -75,8 +88,8 @@ The formula used to calculate `STDDEV` is:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-     51432.000
+    
+         51432.000
 
 
     
@@ -84,8 +97,8 @@ The formula used to calculate `STDDEV` is:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-     57090.000
+    
+         57090.000
 
 
     
@@ -93,8 +106,8 @@ The formula used to calculate `STDDEV` is:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-     42300.000
+    
+         42300.000
 
 
     
@@ -102,8 +115,8 @@ The formula used to calculate `STDDEV` is:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-       43700.00
+    
+           43700.00
 
 
     
@@ -111,8 +124,8 @@ The formula used to calculate `STDDEV` is:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-      36500.000
+    
+          36500.000
 
 
     
@@ -120,8 +133,8 @@ The formula used to calculate `STDDEV` is:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    138948.000
+    
+        138948.000
 
 
     
@@ -129,8 +142,8 @@ The formula used to calculate `STDDEV` is:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-      31200.000
+    
+          31200.000
 
 
     
@@ -138,8 +151,8 @@ The formula used to calculate `STDDEV` is:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-        58930.00
+    
+            58930.00
 
 
     
@@ -147,8 +160,8 @@ The formula used to calculate `STDDEV` is:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-        75400.00
+    
+            75400.00
 
 
     
@@ -189,31 +202,15 @@ The formula used to calculate `STDDEV` is:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    Tee Shirt
+    
+        Tee Shirt
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-                9.00
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    Tee Shirt
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-              14.00
+                    9.00
 
 
     
@@ -221,15 +218,31 @@ The formula used to calculate `STDDEV` is:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    Tee Shirt
+    
+        Tee Shirt
 
 
     
     </td>
     <td valign="top" rowspan="1">
+    
+                  14.00
 
-              14.00
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        Tee Shirt
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+                  14.00
 
 
     

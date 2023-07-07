@@ -6,11 +6,6 @@ Sends native syntax to a remote server, enabling users to specify the server to 
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -18,27 +13,74 @@ Sends native syntax to a remote server, enabling users to specify the server to 
 
 
 
- Syntax 1 – Sends a Statement to a Remote Server
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1 – Sends a Statement to a Remote Server
+
+</b></dt>
+<dd>
+
+```
 FORWARD TO <server-name> { <sql-statement> } 
 ```
 
-  Syntax 2 – Places Data Lake Relational Engine into Passthrough Mode to Send a Series of Statements to a Remote Server
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2 – Places Data Lake Relational Engine into Passthrough Mode to Send a Series of Statements to a Remote Server
+
+</b></dt>
+<dd>
+
+```
 FORWARD TO [ <server-name> ]
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
 
 ## Parameters
 
- *<server-name\>*
- :   The name of the remote server.
 
-  *<sql-statement\>*
- :   A command in the native syntax of the remote server. The command or group of commands is enclosed in curly braces \(`{}`\) or single quotes.
+<dl>
+<dt><b>
 
- 
+*<server-name\>*
+
+</b></dt>
+<dd>
+
+The name of the remote server.
+
+
+
+</dd><dt><b>
+
+*<sql-statement\>*
+
+</b></dt>
+<dd>
+
+A command in the native syntax of the remote server. The command or group of commands is enclosed in curly braces \(`{}`\) or single quotes.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61ec00b84f210158c6dee868f166997__IQ_Usage"/>
 

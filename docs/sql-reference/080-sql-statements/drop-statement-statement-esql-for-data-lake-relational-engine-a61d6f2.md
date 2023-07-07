@@ -6,11 +6,6 @@ Frees resources used by the named prepared statement. These resources are alloca
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,14 +19,32 @@ DROP STATEMENT [ <owner>.]<statement-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa61d6f2f84f2101587fbc546b2c34e86__IQ_Parameters"/>
 
 ## Parameters
 
- *<statement-name\>*
- :   Identifier or host-variable
 
- 
+<dl>
+<dt><b>
+
+*<statement-name\>*
+
+</b></dt>
+<dd>
+
+Identifier or host-variable
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61d6f2f84f2101587fbc546b2c34e86__section_vwy_5wb_ccb"/>
 

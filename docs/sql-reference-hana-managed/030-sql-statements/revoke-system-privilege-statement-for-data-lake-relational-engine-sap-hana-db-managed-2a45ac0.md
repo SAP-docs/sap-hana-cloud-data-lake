@@ -6,11 +6,6 @@ Removes specific system privileges from specific users and the right to administ
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -29,23 +24,57 @@ REVOKE [ ADMIN OPTION FOR ] <system_privilege_name> [,...]
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loio2a45ac0bacf44b879b464c83767c2f48__section_lrd_xmk_gtb"/>
 
 ## Parameters
 
- ADMIN OPTION FOR
- :   Each *<system\_privilege\>* must currently be granted to each *<user\_id\>* specified with administrative privileges.
 
-    > ### Note:  
-    > This clause revokes only the administrative privileges of the system privilege; the system privilege itself remains granted. However, if the system privilege was originally granted with the WITH ADMIN ONLY OPTION clause, the ADMIN OPTION FOR clause completely revokes the system privilege. Under this scenario, use of the ADMIN OPTION FOR clause is not required to revoke administrative privileges.
+<dl>
+<dt><b>
 
-  *<system\_privilege\_name\>*
- :   Must be an existing system privilege.
+ADMIN OPTION FOR
 
-  *<user\_id\>*
- :   Must be the name of an existing user or role that has a login password. Separate multiple user\_IDs with commas.
+</b></dt>
+<dd>
 
- 
+Each *<system\_privilege\>* must currently be granted to each *<user\_id\>* specified with administrative privileges.
+
+> ### Note:  
+> This clause revokes only the administrative privileges of the system privilege; the system privilege itself remains granted. However, if the system privilege was originally granted with the WITH ADMIN ONLY OPTION clause, the ADMIN OPTION FOR clause completely revokes the system privilege. Under this scenario, use of the ADMIN OPTION FOR clause is not required to revoke administrative privileges.
+
+
+
+</dd><dt><b>
+
+*<system\_privilege\_name\>*
+
+</b></dt>
+<dd>
+
+Must be an existing system privilege.
+
+
+
+</dd><dt><b>
+
+*<user\_id\>*
+
+</b></dt>
+<dd>
+
+Must be the name of an existing user or role that has a login password. Separate multiple user\_IDs with commas.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio2a45ac0bacf44b879b464c83767c2f48__section_gjw_xmk_gtb"/>
 
@@ -67,13 +96,37 @@ Finally, if the system privilege was originally grant with the WITH NO ADMIN OPT
 
 The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
 
- Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
- :   You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
-  Connected directly to data lake Relational Engine as a data lake Relational Engine user:
- :   You must have been granted the specific system privilege with administrative privilege.
+<dl>
+<dt><b>
 
- 
+Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+
+
+</dd><dt><b>
+
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+You must have been granted the specific system privilege with administrative privilege.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio2a45ac0bacf44b879b464c83767c2f48__section_bbn_ymk_gtb"/>
 

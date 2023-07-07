@@ -6,33 +6,83 @@ Returns the sample covariance of a set of number pairs.
 
 
 
- Syntax 1
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1
+
+</b></dt>
+<dd>
+
+```
 COVAR_SAMP ( <dependent-expression>, <independent-expression> )
 ```
 
-  Syntax 2
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2
+
+</b></dt>
+<dd>
+
+```
 COVAR_SAMP ( <dependent-expression>, <independent-expression> )
 OVER ( <window-spec> )
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3a064918478c4d47ab0da64c2d61cc3e__section_jny_wnl_srb"/>
 
 ## Parameters
 
- *<dependent-expression\>*
- :   The variable that is affected by the independent variable.
 
-  *<independent-expression\>*
- :   The variable that influences the outcome.
+<dl>
+<dt><b>
 
-  *<window-spec\>*
- :   Specified when using this function as a window function.
+*<dependent-expression\>*
 
- 
+</b></dt>
+<dd>
+
+The variable that is affected by the independent variable.
+
+
+
+</dd><dt><b>
+
+*<independent-expression\>*
+
+</b></dt>
+<dd>
+
+The variable that influences the outcome.
+
+
+
+</dd><dt><b>
+
+*<window-spec\>*
+
+</b></dt>
+<dd>
+
+Specified when using this function as a window function.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3a064918478c4d47ab0da64c2d61cc3e__section_q44_xnl_srb"/>
 

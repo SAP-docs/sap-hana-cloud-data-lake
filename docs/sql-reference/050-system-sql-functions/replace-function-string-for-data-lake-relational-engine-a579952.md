@@ -18,16 +18,45 @@ REPLACE ( <original-string>, <search-string>, <replace-string> )
 
 If any argument is NULL, the function returns NULL.
 
- *<original-string\>*
- :   The string to be searched. This string can be any length.
 
-  *<search-string\>*
- :   The string to be searched for and replaced with *<replace-string\>*. This string is limited to 255 bytes. If *<search-string\>* is an empty string, the original string is returned unchanged.
+<dl>
+<dt><b>
 
-  *<replace-string\>*
- :   The replacement string, which replaces *<search-string\>*. This can be any length. If *<replace-string\>* is an empty string, all occurrences of *<search-string\>* are deleted.
+*<original-string\>*
 
- 
+</b></dt>
+<dd>
+
+The string to be searched. This string can be any length.
+
+
+
+</dd><dt><b>
+
+*<search-string\>*
+
+</b></dt>
+<dd>
+
+The string to be searched for and replaced with *<replace-string\>*. This string is limited to 255 bytes. If *<search-string\>* is an empty string, the original string is returned unchanged.
+
+
+
+</dd><dt><b>
+
+*<replace-string\>*
+
+</b></dt>
+<dd>
+
+The replacement string, which replaces *<search-string\>*. This can be any length. If *<replace-string\>* is an empty string, all occurrences of *<search-string\>* are deleted.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa579952184f210159e17940c17a6d8f7__REPLACE_returns1"/>
 
@@ -167,5 +196,5 @@ SELECT a, CAST(REPLACE(a,'C','ZZ') AS CHAR(5)) FROM aa;
 
 [UPPER Function \[String\] for Data Lake Relational Engine](upper-function-string-for-data-lake-relational-engine-a58cbc0.md "Converts all characters in a string to uppercase.")
 
-[REPLACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/b8f3ed4beb9645e98dee8a2c50011263.html "Replaces all occurrences of a substring with another substring.") :arrow_upper_right:
+[REPLACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/b8f3ed4beb9645e98dee8a2c50011263.html "Replaces all occurrences of a substring with another substring.") :arrow_upper_right:
 

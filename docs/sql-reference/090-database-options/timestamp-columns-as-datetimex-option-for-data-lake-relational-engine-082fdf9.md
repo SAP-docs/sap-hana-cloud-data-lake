@@ -35,7 +35,60 @@ ON, OFF
 
 ## Default
 
+The default value of the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option depends on when your data lake Relational Engine instance was createdand the mode specified.
+
+
+<table>
+<tr>
+<th valign="top">
+
+Default
+
+
+
+</th>
+<th valign="top">
+
+Configuration
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+ON
+
+
+
+</td>
+<td valign="top">
+
+-   The instance was created using version QRC 2/2023 or laterand using the mode **Configure to be most compatible with SAP HANA database.**.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 OFF
+
+
+
+</td>
+<td valign="top">
+
+-   The instances was created using version QRC 2/2023 or later and using the mode **Configure to be most compatible with SAP IQ.**.
+-   The instance was created using a version prior to version QRC 2/2023regardless of the mode specified.
+
+
+
+</td>
+</tr>
+</table>
 
 
 
@@ -43,13 +96,13 @@ OFF
 
 ## Privileges
 
-Privilege Category: PUBLIC
+Privilege Category: SYSTEM
 
 
 
 ### 
 
-Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this database option.
+Requires the SET ANY CUSTOMER SYSTEM OPTION system privilege to set this database option.
 
 
 
@@ -106,14 +159,14 @@ Yes
 </td>
 <td valign="top">
 
-Yes
+No
 
 
 
 </td>
 <td valign="top">
 
-Yes
+No
 
 
 
@@ -129,14 +182,14 @@ Allowed to set temporarily?
 </td>
 <td valign="top">
 
-Yes
+No
 
 
 
 </td>
 <td valign="top">
 
-Yes \(current connection only\)
+No
 
 
 
@@ -159,10 +212,16 @@ No
 
 When enabled, specifying a TIMESTAMP data type during execution of the CREATE and ALTER TABLE statements substitutes any columns specified in the statement with a TIMESTAMP data type with the DATETIMEX data type. This setting affects columns in IQ base and global/local temporary tables created by CREATE TABLE, ALTER TABLE, or DECLARE LOCAL TEMPORARY TABLE statements.
 
+To determine the current value for the option, execute the following statement:
+
+```
+SELECT connection_property('Timestamp_Columns_as_datetimex');
+```
+
 The default can be manually changed by executing:
 
 ```
-SET OPTION PUBLIC.TIMESTAMP_COLUMNS_AS_DATETIMEX = "{ ON | OFF }";
+SET OPTION PUBLIC.TIMESTAMP_COLUMNS_AS_DATETIMEX = { ON | OFF };
 ```
 
 **Related Information**  
@@ -174,7 +233,7 @@ SET OPTION PUBLIC.TIMESTAMP_COLUMNS_AS_DATETIMEX = "{ ON | OFF }";
 
 [GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md "Grants specific system privileges to users or roles, with or without administrative rights.")
 
-[TIMESTAMP_COLUMNS_AS_DATETIMEX Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/34e354059097469d9864ff18b541f343.html "Controls whether DATETIMEX data type columns are automatically created when TIMESTAMPS data type columns are requested.") :arrow_upper_right:
+[TIMESTAMP_COLUMNS_AS_DATETIMEX Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/34e354059097469d9864ff18b541f343.html "Controls whether DATETIMEX data type columns are automatically created when TIMESTAMPS data type columns are requested.") :arrow_upper_right:
 
 [Date and Time Data Types in Data Lake Relational Engine](../020-sql-data-types/date-and-time-data-types-in-data-lake-relational-engine-a51e8fb.md "Use date and time data types for storing dates and times.")
 

@@ -6,8 +6,7 @@ Allows users to manage passwords for other users and administer the CHANGE PASSW
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -26,32 +25,98 @@ GRANT CHANGE PASSWORD ( { <target_user_list> | ANY | ANY WITH ROLES <target_role
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa3e3fc8084f2101599d0afbadc8092b4__IQ_Parameters"/>
 
 ## Parameters
 
- *<target\_user\_list\>*
- :   Users the grantee has the potential to impersonate. The list must consist of existing users or user-extended roles with login passwords. Separate the user\_IDs in the list with commas.
 
-  ANY
- :   All database users with login passwords become potential target users to manage passwords for each grantee.
+<dl>
+<dt><b>
 
-  ANY WITH ROLES *<target\_role\_list\>*
- :   List of target roles for each grantee. Any users who are granted any of the target roles become potential target users for each grantee. The *<target\_role\_list\>* must consist of existing roles and the users who are granted said roles must consist of database users with login passwords. Use commas to separate multiple user\_IDs.
+*<target\_user\_list\>*
 
-  *<user\_id\>*
- :   Must be the name of an existing user or role that has a login password. Separate multiple user\_ids with commas.
+</b></dt>
+<dd>
 
-  WITH ADMIN OPTION
- :   \(Valid with the ANY clause only\) The user can both manage passwords and grant the CHANGE PASSWORD system privilege to another user.
+Users the grantee has the potential to impersonate. The list must consist of existing users or user-extended roles with login passwords. Separate the user\_IDs in the list with commas.
 
-  WITH ADMIN ONLY OPTION
- :   \(Valid with the ANY clause only\) The user can grant the CHANGE PASSWORD system privilege to another user, but cannot manage passwords of other users.
 
-  WITH NO ADMIN OPTION
- :   The user can manage passwords, but cannot grant the CHANGE PASSWORD system privilege to another user.
 
- 
+</dd><dt><b>
+
+ANY
+
+</b></dt>
+<dd>
+
+All database users with login passwords become potential target users to manage passwords for each grantee.
+
+
+
+</dd><dt><b>
+
+ANY WITH ROLES *<target\_role\_list\>*
+
+</b></dt>
+<dd>
+
+List of target roles for each grantee. Any users who are granted any of the target roles become potential target users for each grantee. The *<target\_role\_list\>* must consist of existing roles and the users who are granted said roles must consist of database users with login passwords. Use commas to separate multiple user\_IDs.
+
+
+
+</dd><dt><b>
+
+*<user\_id\>*
+
+</b></dt>
+<dd>
+
+Must be the name of an existing user or role that has a login password. Separate multiple user\_ids with commas.
+
+
+
+</dd><dt><b>
+
+WITH ADMIN OPTION
+
+</b></dt>
+<dd>
+
+\(Valid with the ANY clause only\) The user can both manage passwords and grant the CHANGE PASSWORD system privilege to another user.
+
+
+
+</dd><dt><b>
+
+WITH ADMIN ONLY OPTION
+
+</b></dt>
+<dd>
+
+\(Valid with the ANY clause only\) The user can grant the CHANGE PASSWORD system privilege to another user, but cannot manage passwords of other users.
+
+
+
+</dd><dt><b>
+
+WITH NO ADMIN OPTION
+
+</b></dt>
+<dd>
+
+The user can manage passwords, but cannot grant the CHANGE PASSWORD system privilege to another user.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa3e3fc8084f2101599d0afbadc8092b4__IQ_Usage"/>
 

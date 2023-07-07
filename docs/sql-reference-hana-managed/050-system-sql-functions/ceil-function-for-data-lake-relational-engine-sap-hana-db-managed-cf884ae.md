@@ -16,10 +16,23 @@ CEIL ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   A column, variable, or expression with a data type that is either exact numeric, approximate numeric, money, or any type that can be implicitly converted to one of these types. For other data types, `CEIL` generates an error. The return value has the same data type as the value supplied.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+A column, variable, or expression with a data type that is either exact numeric, approximate numeric, money, or any type that can be implicitly converted to one of these types. For other data types, `CEIL` generates an error. The return value has the same data type as the value supplied.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiocf884aecfedf41a49b65a4082fa91ffa__section_j3r_35l_srb"/>
 

@@ -59,6 +59,10 @@ The following functions are available:
 -   [CHAR\_LENGTH Function \[String\] for Data Lake Relational Engine](char-length-function-string-for-data-lake-relational-engine-a53bd3d.md)
 -   [CHAR\_LENGTH64 Function \[String\] for Data Lake Relational Engine](char-length64-function-string-for-data-lake-relational-engine-a53c545.md)
 -   [CHARINDEX Function \[String\] for Data Lake Relational Engine](charindex-function-string-for-data-lake-relational-engine-a53cde2.md)
+-   [CHARINDEX Function \[String\] for Data Lake Relational Engine](charindex-function-string-for-data-lake-relational-engine-a53cde2.md)
+
+-   [DECRYPT Function \[String\] for Data Lake Relational Engine](decrypt-function-string-for-data-lake-relational-engine-81f6b4a.md)
+
 -   [DIFFERENCE Function \[String\] for Data Lake Relational Engine](difference-function-string-for-data-lake-relational-engine-a54d8aa.md)
 -   [ENCRYPT Function \[String\] for Data Lake Relational Engine](encrypt-function-string-for-data-lake-relational-engine-81f72ce.md)
 -   [GRAPHICAL\_PLAN Function \[String\] for Data Lake Relational Engine](graphical-plan-function-string-for-data-lake-relational-engine-a553c53.md)

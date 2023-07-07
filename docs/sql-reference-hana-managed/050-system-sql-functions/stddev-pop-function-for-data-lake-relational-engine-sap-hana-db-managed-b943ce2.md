@@ -16,10 +16,23 @@ STDDEV_POP ( [ ALL ] <expression> )
 
 ## Parameters
 
- *<expression\>*
- :   The expression \(commonly a column name\) that has a population-based standard deviation that is calculated over a set of rows.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The expression \(commonly a column name\) that has a population-based standard deviation that is calculated over a set of rows.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiob943ce2c21964c07baa10bd8d387f972__section_rsg_v55_vrb"/>
 

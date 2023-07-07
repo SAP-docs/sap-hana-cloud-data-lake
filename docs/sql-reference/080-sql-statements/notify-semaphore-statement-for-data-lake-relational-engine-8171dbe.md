@@ -6,11 +6,6 @@ Increments the counter associated with a semaphore.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -26,22 +21,56 @@ NOTIFY SEMAPHORE [<owner>.]<semaphore-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 ## Parameters
 
- *<owner\>*
- :   The owner of the semaphore.
 
-  *<semaphore-name\>*
- :   The name of the semaphore.
+<dl>
+<dt><b>
 
-  INCREMENT BY clause
- :   Specify a positive integer to indicate how much to increment the counter associated with the semaphore. If this clause is not specified, then the counter is incremented by 1.
+*<owner\>*
 
-    *<number\>* can be specified using a variable \(for example, ***INCREMENT BY @inc-number***\).
+</b></dt>
+<dd>
 
-    If you set *<number\>*\] to NULL, or if it is set to a variable and the variable value is NULL, the behavior is equivalent to not specifying the clause.
+The owner of the semaphore.
 
- 
+
+
+</dd><dt><b>
+
+*<semaphore-name\>*
+
+</b></dt>
+<dd>
+
+The name of the semaphore.
+
+
+
+</dd><dt><b>
+
+INCREMENT BY clause
+
+</b></dt>
+<dd>
+
+Specify a positive integer to indicate how much to increment the counter associated with the semaphore. If this clause is not specified, then the counter is incremented by 1.
+
+*<number\>* can be specified using a variable \(for example, `INCREMENT BY @inc-number`\).
+
+If you set *<number\>*\] to NULL, or if it is set to a variable and the variable value is NULL, the behavior is equivalent to not specifying the clause.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -72,10 +101,23 @@ None.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following statement creates a semaphore and sets its initial value to zero:
 

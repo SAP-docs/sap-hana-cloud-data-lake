@@ -16,10 +16,23 @@ SOUNDEX ( <string-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string.
 
- 
+<dl>
+<dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio74cbdbe37b6244ce8ac19780a8962f9e__section_tkv_qx5_vrb"/>
 

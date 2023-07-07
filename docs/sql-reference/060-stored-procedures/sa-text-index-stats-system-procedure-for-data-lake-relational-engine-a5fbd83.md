@@ -365,7 +365,7 @@ The `pending_length`, `deleted_length`, and `last_refresh` values are NULL for I
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). You must also have one of the following system privileges:
+Requires EXECUTE object-level privilege on the procedure, along with one of the following system privileges:
 
 -   MANAGE ANY STATISTICS
 -   CREATE ANY INDEX

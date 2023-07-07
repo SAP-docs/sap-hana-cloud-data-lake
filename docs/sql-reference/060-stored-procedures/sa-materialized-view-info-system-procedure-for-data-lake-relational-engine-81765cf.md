@@ -23,13 +23,34 @@ sa_materialized_view_info( [ <view_name> [, <owner_name> ] ] )
 
 ## Parameters
 
-  *<view\_name\>* 
- :   Use this optional CHAR\(128\) parameter to specify the name of the materialized view for which to return information. The default is NULL.
 
-   *<owner\_name\>* 
- :   Use this optional CHAR\(128\) parameter to specify the owner of the materialized view. The default is NULL.
+<dl>
+<dt><b>
 
- 
+ *<view\_name\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(128\) parameter to specify the name of the materialized view for which to return information. The default is NULL.
+
+
+
+</dd><dt><b>
+
+ *<owner\_name\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(128\) parameter to specify the owner of the materialized view. The default is NULL.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio81765cf86ce21014a6c5cb4c15fd4d22__sa_matview_info_resultset1"/>
 
@@ -125,13 +146,34 @@ CHAR\(1\)
 
 Status information about the view. Possible values are:
 
- D
- :   disabled
 
-  E
- :   enabled
+<dl>
+<dt><b>
 
- 
+D
+
+</b></dt>
+<dd>
+
+disabled
+
+
+
+</dd><dt><b>
+
+E
+
+</b></dt>
+<dd>
+
+enabled
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>
@@ -154,26 +196,63 @@ CHAR\(1\)
 
 Status information about data in the view. Possible values are:
 
- E
- :   An error occurred during the last refresh attempt. The view is enabled, but uninitialized.
 
-  F
- :   The underlying tables have not changed since the last refresh, and the view is considered fresh. The view is enabled and initialized.
+<dl>
+<dt><b>
 
-  N
- :   The view is uninitialized. This occurs when one of the following is true:
+E
 
-    -   the view has not been refreshed since it was created
+</b></dt>
+<dd>
 
-    -   the data has been truncated from the view
-
-    -   the view is disabled
+An error occurred during the last refresh attempt. The view is enabled, but uninitialized.
 
 
-  S
- :   An underlying table has changed since the last refresh, and the view is considered stale. The view is enabled and initialized.
 
- 
+</dd><dt><b>
+
+F
+
+</b></dt>
+<dd>
+
+The underlying tables have not changed since the last refresh, and the view is considered fresh. The view is enabled and initialized.
+
+
+
+</dd><dt><b>
+
+N
+
+</b></dt>
+<dd>
+
+The view is uninitialized. This occurs when one of the following is true:
+
+-   the view has not been refreshed since it was created
+
+-   the data has been truncated from the view
+
+-   the view is disabled
+
+
+
+
+</dd><dt><b>
+
+S
+
+</b></dt>
+<dd>
+
+An underlying table has changed since the last refresh, and the view is considered stale. The view is enabled and initialized.
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>
@@ -244,22 +323,67 @@ CHAR\(1\)
 
 Information about the availability of the view for use by the optimizer. Possible values are:
 
- D
- :   Use by the optimizer is disabled. The owner of the view doesn't allow the view to be used by the optimizer.
 
-  I
- :   The view cannot be used by the optimizer for some internal reason, for example its definition doesn't meet the conditions required. However, the owner has not explicitly disallowed its use by the optimizer.
+<dl>
+<dt><b>
 
-  N
- :   The view contains no data because a refresh has not been done or has failed. The view can be used by the optimizer by the owner of the view, but it is not initialized.
+D
 
-  O
- :   There is an incompatible option value for current connection. The view can be used by the optimizer and its definition meets all the required conditions, but the current option settings are not compatible with the options settings used to create the view.
+</b></dt>
+<dd>
 
-  Y
- :   The view can be used by the optimizer. The owner of the view allows the view to be used by the optimizer and the view definition meets all the conditions needed to be used by the optimizer.
+Use by the optimizer is disabled. The owner of the view doesn't allow the view to be used by the optimizer.
 
- 
+
+
+</dd><dt><b>
+
+I
+
+</b></dt>
+<dd>
+
+The view cannot be used by the optimizer for some internal reason, for example its definition doesn't meet the conditions required. However, the owner has not explicitly disallowed its use by the optimizer.
+
+
+
+</dd><dt><b>
+
+N
+
+</b></dt>
+<dd>
+
+The view contains no data because a refresh has not been done or has failed. The view can be used by the optimizer by the owner of the view, but it is not initialized.
+
+
+
+</dd><dt><b>
+
+O
+
+</b></dt>
+<dd>
+
+There is an incompatible option value for current connection. The view can be used by the optimizer and its definition meets all the required conditions, but the current option settings are not compatible with the options settings used to create the view.
+
+
+
+</dd><dt><b>
+
+Y
+
+</b></dt>
+<dd>
+
+The view can be used by the optimizer. The owner of the view allows the view to be used by the optimizer and the view definition meets all the conditions needed to be used by the optimizer.
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>
@@ -282,13 +406,34 @@ CHAR\(1\)
 
 The refresh type for the view. Possible values are:
 
- M
- :   Manual views are refreshed manually, using the REFRESH MATERIALIZED VIEW statement or the sa\_refresh\_materialized\_views system procedure.
 
-  A
- :   Automatic views are refreshed automatically.
+<dl>
+<dt><b>
 
- 
+M
+
+</b></dt>
+<dd>
+
+Manual views are refreshed manually, using the REFRESH MATERIALIZED VIEW statement or the sa\_refresh\_materialized\_views system procedure.
+
+
+
+</dd><dt><b>
+
+A
+
+</b></dt>
+<dd>
+
+Automatic views are refreshed automatically.
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>
@@ -311,13 +456,34 @@ CHAR\(1\)
 
 The refresh build method for the view. Possible values are:
 
- F
- :   FULL truncates the materialized view and then populates the view by fully recomputing its content.
 
-  I
- :   INCREMENTAL attempts to refresh the materialized view using a delta computed since the last refresh. If an appropriate delta cannot be computed efficiently, then full refresh is performed.
+<dl>
+<dt><b>
 
- 
+F
+
+</b></dt>
+<dd>
+
+FULL truncates the materialized view and then populates the view by fully recomputing its content.
+
+
+
+</dd><dt><b>
+
+I
+
+</b></dt>
+<dd>
+
+INCREMENTAL attempts to refresh the materialized view using a delta computed since the last refresh. If an appropriate delta cannot be computed efficiently, then full refresh is performed.
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>
@@ -567,11 +733,15 @@ An initialized materialized view can be empty. This occurs when there is no data
 
 
 
-<a name="loio81765cf86ce21014a6c5cb4c15fd4d22__section_ofw_ddj_snb"/>
+<a name="loio81765cf86ce21014a6c5cb4c15fd4d22__sa_matview_info_priv1"/>
 
 ## Privileges
 
-You must have EXECUTE privilege on the system procedure.
+
+
+### 
+
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -928,5 +1098,5 @@ The results show that:
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine](../080-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-faab95d.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_materialized_view_info System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/7897509ad128448889f704a5f1a80aa6.html "Returns information about the specified materialized views.") :arrow_upper_right:
+[sa_materialized_view_info System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7897509ad128448889f704a5f1a80aa6.html "Returns information about the specified materialized views.") :arrow_upper_right:
 

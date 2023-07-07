@@ -6,11 +6,6 @@ Creates a text configuration object using another text configuration object as a
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -19,13 +14,14 @@ Creates a text configuration object using another text configuration object as a
 
 
 ```
-CREATE TEXT CONFIGURATION [ { [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname] }.]<new-config-name> 
-   FROM [ { [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname] }.]<existing-config-name>
+CREATE TEXT CONFIGURATION [ { <owner> | <schema-name> }.]<new-config-name> 
+   FROM [ { <owner> | <schema-name> }.]<existing-config-name>
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -33,10 +29,23 @@ CREATE TEXT CONFIGURATION [ { [/pandoc/div/div/horizontalrule/codeblock/span/va
 
 ## Parameters
 
- FROM
- :   Specifies the name of a text configuration object to use as the template for creating the new text configuration object. The names of the default text configuration objects are DEFAULT\_CHAR and DEFAULT\_NCHAR. DEFAULT\_CHAR is supported for data lake Relational Engine tables only; DEFAULT\_NCHAR is supported on SAP SQL Anywhere tables only.
 
- 
+<dl>
+<dt><b>
+
+FROM
+
+</b></dt>
+<dd>
+
+Specifies the name of a text configuration object to use as the template for creating the new text configuration object. The names of the default text configuration objects are DEFAULT\_CHAR and DEFAULT\_NCHAR. DEFAULT\_CHAR is supported for data lake Relational Engine tables only; DEFAULT\_NCHAR is supported on SAP SQL Anywhere tables only.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa602a06684f21015b7f78f0f1a3ea0d9__IQ_Usage"/>
 

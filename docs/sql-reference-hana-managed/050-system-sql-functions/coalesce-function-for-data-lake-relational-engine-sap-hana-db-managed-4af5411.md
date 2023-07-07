@@ -16,10 +16,23 @@ COALESCE ( <expression>, <expression> [ , … ] )
 
 ## Parameters
 
- *<expression\>*
- :   Any expression.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+Any expression.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio4af5411816c4466b9335a79034b00833__section_gfy_4rl_srb"/>
 

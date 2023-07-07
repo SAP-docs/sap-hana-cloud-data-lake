@@ -53,7 +53,7 @@ SET TEMPORARY OPTION escape_character='OFF';
 
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure.
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

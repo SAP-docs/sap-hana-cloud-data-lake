@@ -6,11 +6,6 @@ Creates a new procedure that is compatible with SAP Adaptive Server Enterprise.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -27,8 +22,7 @@ This subset of the Transact-SQL `CREATE PROCEDURE` statement is supported in dat
 
 
 ```
-CREATE [ OR REPLACE ] PROCEDURE [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname].]<procedure-name>
+CREATE [ OR REPLACE ] PROCEDURE <schema-name>.]<procedure-name>
    … [ [ ( ] <@parameter_name> <data-type> [ = <default> ] [ OUTPUT ] [ , … ] [ ) ] ]
    … [ WITH RECOMPILE ]
    … AS
@@ -37,17 +31,43 @@ CREATE [ OR REPLACE ] PROCEDURE [/pandoc/div/div/horizontalrule/codeblock/span/v
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loio873f31b35574493f8d3a7974681eccb3__section_hfk_fhb_5qb"/>
 
 ## Parameters
 
- CREATE
- :   Creates a new procedure.
 
-  OR REPLACE
- :   Replaces an existing procedure with the same name. This clause changes the definition of the procedure, but preserves existing permissions.
+<dl>
+<dt><b>
 
- 
+CREATE
+
+</b></dt>
+<dd>
+
+Creates a new procedure.
+
+
+
+</dd><dt><b>
+
+OR REPLACE
+
+</b></dt>
+<dd>
+
+Replaces an existing procedure with the same name. This clause changes the definition of the procedure, but preserves existing permissions.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio873f31b35574493f8d3a7974681eccb3__section_g55_hhb_5qb"/>
 
@@ -111,30 +131,54 @@ Groups of procedures are not supported.
 
 The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
 
- Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
- :   You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
-  Connected directly to data lake Relational Engine as a data lake Relational Engine user:
- :   Requires one of:
+<dl>
+<dt><b>
 
-    -   To create a self owned procedures requires the CREATE PROCEDURE system privilege.
-    -   To create a procedure owned by another user requires one of:
-        -   CREATE ANY PROCEDURE system privilege
-        -   CREATE ANY OBJECT system privilege
-        -   CREATE ANY object-level privilege on the schema containing the procedure if the schema is owned by another user.
+Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
 
-    -   To replace an existing procedure requires one of:
-        -   You own the procedure.
-        -   DROP ANY PROCEURE or DROP ANY OBJECT system privilege along with CREATE ANY PROCEDURE or CREATE ANY OBJECT system privilege
-        -   If the procedure is in a schema owned by another user, then you need one of:
-            -   DROP and CREATE ANY object-level privilege on the schema
-            -   ALTER object-level privilege on the schema.
+</b></dt>
+<dd>
+
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 
-    For information on using a procedure that is created when connected as a data lake Relational Engine user, see [User-Defined Procedures in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/44dbf05fa907437b9145f1541cdbb920.html "User-defined procedures perform one or more specific tasks in data lake Relational Engine.") :arrow_upper_right:.
+</dd><dt><b>
 
- 
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+Requires one of:
+
+-   To create a self owned procedures requires the CREATE PROCEDURE system privilege.
+-   To create a procedure owned by another user requires one of:
+    -   CREATE ANY PROCEDURE system privilege
+    -   CREATE ANY OBJECT system privilege
+    -   CREATE ANY object-level privilege on the schema containing the procedure if the schema is owned by another user.
+
+-   To replace an existing procedure requires one of:
+    -   You own the procedure.
+    -   DROP ANY PROCEURE or DROP ANY OBJECT system privilege along with CREATE ANY PROCEDURE or CREATE ANY OBJECT system privilege
+    -   If the procedure is in a schema owned by another user, then you need one of:
+        -   DROP and CREATE ANY object-level privilege on the schema
+        -   ALTER object-level privilege on the schema.
+
+
+
+For information on using a procedure that is created when connected as a data lake Relational Engine user, see [User-Defined Procedures in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/44dbf05fa907437b9145f1541cdbb920.html "User-defined procedures perform one or more specific tasks in data lake Relational Engine.") :arrow_upper_right:.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio873f31b35574493f8d3a7974681eccb3__section_e5z_mhb_5qb"/>
 

@@ -6,11 +6,6 @@ Groups SQL statements together.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -67,17 +62,43 @@ Groups SQL statements together.
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loiocfaf187bc70744e192136ee62c3b65b6__section_ucc_dpq_wwb"/>
 
 ## Parameters
 
- *<statement-label\>*
- :   If specified, it must match the beginning *<statement-label\>*. You can use the `LEAVE` statement to resume execution at the first statement after the compound statement. The compound statement that is the body of a procedure has an implicit label that is the same as the name of the procedure.
 
-  *<initial-value\>*
- :   If specified, the variable is set to that value and the data type must match the type defined by *<data-type\>*. If you do not specify an initial-value, the variable contains the NULL value until a `SET` statement assigns a different value.
+<dl>
+<dt><b>
 
- 
+*<statement-label\>*
+
+</b></dt>
+<dd>
+
+If specified, it must match the beginning *<statement-label\>*. You can use the `LEAVE` statement to resume execution at the first statement after the compound statement. The compound statement that is the body of a procedure has an implicit label that is the same as the name of the procedure.
+
+
+
+</dd><dt><b>
+
+*<initial-value\>*
+
+</b></dt>
+<dd>
+
+If specified, the variable is set to that value and the data type must match the type defined by *<data-type\>*. If you do not specify an initial-value, the variable contains the NULL value until a `SET` statement assigns a different value.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiocfaf187bc70744e192136ee62c3b65b6__section_uc1_2pq_wwb"/>
 
@@ -99,7 +120,10 @@ An atomic statement is a statement executed completely or not at all. For exampl
 
 ### 
 
- You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\). 
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

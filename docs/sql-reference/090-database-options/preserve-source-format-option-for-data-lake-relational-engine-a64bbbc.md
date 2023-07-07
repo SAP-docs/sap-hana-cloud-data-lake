@@ -53,10 +53,99 @@ Requires the SET ANY CUSTOMER SYSTEM OPTION system privilege to set this databas
 
 ## Scope
 
--   Option can be set at the database \(PUBLIC\) level only.
 
--   Takes effect immediately.
+<table>
+<tr>
+<th valign="top">
 
+ 
+
+
+
+</th>
+<th valign="top">
+
+PUBLIC Role
+
+
+
+</th>
+<th valign="top">
+
+For Current User
+
+
+
+</th>
+<th valign="top">
+
+For Other Users
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Allowed to set permanently?
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Allowed to set temporarily?
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+</tr>
+</table>
 
 
 

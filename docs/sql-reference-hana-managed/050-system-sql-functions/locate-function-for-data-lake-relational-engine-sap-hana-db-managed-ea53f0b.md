@@ -17,22 +17,51 @@ LOCATE ( <string-expression1>, <string-expression2>
 
 ## Parameters
 
- *<string-expression1\>*
- :   The string to be searched.
 
-  *<string-expression2\>*
- :   The string for which you are searching. This string is limited to 255 bytes.
+<dl>
+<dt><b>
 
-  *<numeric-expression\>*
- :   The character position in the string to begin the search. The first character is position 1. If the starting offset is negative, the locate function returns the last matching string offset rather than the first. A negative offset indicates how much of the end of the string is to be excluded from the search. The number of bytes excluded is calculated as \(-1 \* offset\) -1.
+*<string-expression1\>*
 
-    The *<numeric-expression\>* is a 32 bit signed integer for CHAR, VARCHAR, and BINARY columns.
+</b></dt>
+<dd>
 
-    If *<numeric-expression\>* is specified, the search starts at that offset into the string being searched.
+The string to be searched.
 
-    If *<numeric-expression\>* is not specified, LOCATE returns only the position of the first instance of the specified string.
 
- 
+
+</dd><dt><b>
+
+*<string-expression2\>*
+
+</b></dt>
+<dd>
+
+The string for which you are searching. This string is limited to 255 bytes.
+
+
+
+</dd><dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The character position in the string to begin the search. The first character is position 1. If the starting offset is negative, the locate function returns the last matching string offset rather than the first. A negative offset indicates how much of the end of the string is to be excluded from the search. The number of bytes excluded is calculated as \(-1 \* offset\) -1.
+
+The *<numeric-expression\>* is a 32 bit signed integer for CHAR, VARCHAR, and BINARY columns.
+
+If *<numeric-expression\>* is specified, the search starts at that offset into the string being searched.
+
+If *<numeric-expression\>* is not specified, LOCATE returns only the position of the first instance of the specified string.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioea53f0bcd5e34cc8a53d2c6ea32d5b5c__section_xjs_c1h_trb"/>
 

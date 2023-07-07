@@ -23,20 +23,49 @@ sp_iqprocedure [ <proc-name> ], [ <proc-owner> ], [ <proc-type> ]
 
 ## Parameters
 
- *<proc-name\>*
- :   \(Optional\) The name of the procedure.
 
-  *<proc-owner\>*
- :   \(Optional\) The owner of the procedure.
+<dl>
+<dt><b>
 
-  *<proc-type\>*
- :   \(Optional\) The type of procedure. Allowed values are:
+*<proc-name\>*
 
-    -   SYSTEM – displays information about system procedures \(procedures owned by user SYS or dbo\) only
-    -   ALL – displays information about user and system procedures
-    -   Any other value – displays information about user procedures
+</b></dt>
+<dd>
 
- 
+\(Optional\) The name of the procedure.
+
+
+
+</dd><dt><b>
+
+*<proc-owner\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) The owner of the procedure.
+
+
+
+</dd><dt><b>
+
+*<proc-type\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) The type of procedure. Allowed values are:
+
+-   SYSTEM – displays information about system procedures \(procedures owned by user SYS or dbo\) only
+-   ALL – displays information about user and system procedures
+-   Any other value – displays information about user procedures
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5b2408984f21015a45eae4a5eaef8e7__sp_iqprocedure_returns1"/>
 
@@ -352,11 +381,15 @@ The sp\_iqprocedure stored procedure displays information about procedures in a 
 
 
 
-<a name="loioa5b2408984f21015a45eae4a5eaef8e7__iq_refbb_1703"/>
+<a name="loioa5b2408984f21015a45eae4a5eaef8e7__sp_iqprocedure_priv1"/>
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+
+
+### 
+
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

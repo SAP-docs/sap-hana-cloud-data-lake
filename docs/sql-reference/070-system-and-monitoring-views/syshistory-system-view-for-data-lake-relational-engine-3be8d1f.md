@@ -57,26 +57,87 @@ CHAR\(128\)
 
 The type of operation performed on the database file. The operation must be one of the following values:
 
+
+<dl>
+<dt><b>
+
 INIT
-:   Information about when the database was created.
+
+</b></dt>
+<dd>
+
+Information about when the database was created.
+
+
+
+</dd><dt><b>
 
 UPGRADE
-:   Information about when the database was upgraded.
+
+</b></dt>
+<dd>
+
+Information about when the database was upgraded.
+
+
+
+</dd><dt><b>
 
 START
-:   Information about when the database was started using a specific version of the database server on a particular operating system.
+
+</b></dt>
+<dd>
+
+Information about when the database was started using a specific version of the database server on a particular operating system.
+
+
+
+</dd><dt><b>
 
 LAST\_START
-:   Information about the most recent time the database server was started. A LAST\_START operation is converted to a START operation when the database is started with a different version of the database server and/or on a different operating system than those values currently stored in the LAST\_START row.
+
+</b></dt>
+<dd>
+
+Information about the most recent time the database server was started. A LAST\_START operation is converted to a START operation when the database is started with a different version of the database server and/or on a different operating system than those values currently stored in the LAST\_START row.
+
+
+
+</dd><dt><b>
 
 DTT
-:   For internal use only.
+
+</b></dt>
+<dd>
+
+For internal use only.
+
+
+
+</dd><dt><b>
 
 LAST\_DTT
- :   For internal use only.
+
+</b></dt>
+<dd>
+
+For internal use only.
+
+
+
+</dd><dt><b>
 
 LAST\_BACKUP
-:   Information about the last backup, including date and time of the backup, the backup type, the files that were backed up, and the version of database server that performed the backup.
+
+</b></dt>
+<dd>
+
+Information about the last backup, including date and time of the backup, the backup type, the files that were backed up, and the version of database server that performed the backup.
+
+
+
+</dd>
+</dl>
 
 
 
@@ -124,11 +185,32 @@ CHAR\(128\)
 
 For any operation other than DTT and LAST\_DTT, the value in this column will be a set of empty single quotes \("\). For DTT and LAST\_DTT operations, this column contains the type of sub-operation performed on the dbspace. Values include:
 
+
+<dl>
+<dt><b>
+
 DTT\_SET
-:   The dbspace calibration has been set.
+
+</b></dt>
+<dd>
+
+The dbspace calibration has been set.
+
+
+
+</dd><dt><b>
 
 DTT\_UNSET
-:   The dbspace calibration has been restored to the default setting.
+
+</b></dt>
+<dd>
+
+The dbspace calibration has been restored to the default setting.
+
+
+
+</dd>
+</dl>
 
 
 

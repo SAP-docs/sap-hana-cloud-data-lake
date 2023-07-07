@@ -6,11 +6,6 @@ Creates data type or a connection- or database-scope variable.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -18,23 +13,44 @@ Creates data type or a connection- or database-scope variable.
 
 
 
- Syntax 1 – Creates a Connection-Scope Variable
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1 – Creates a Connection-Scope Variable
+
+</b></dt>
+<dd>
+
+```
 <identifier> <data-type> 
    [ { = | DEFAULT } CREATE [ OR REPLACE ] VARIABLE <initial-value> ]
 ```
 
-    ```
-    <initial-value> ::= <expression>
-    ```
+```
+<initial-value> ::= <expression>
+```
 
-  Syntax 2 – Creates a Data Type or Database-Scope Variable
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2 – Creates a Data Type or Database-Scope Variable
+
+</b></dt>
+<dd>
+
+```
 CREATE [ OR REPLACE ] DATABASE VARIABLE [ IF NOT EXISTS ] 
     [ <owner>.]<identifier> <data-type> [ { = | DEFAULT } <initial-value> ]
 ```
 
- ```
+
+
+</dd>
+</dl>
+
+```
 <initial-value> ::=
    { <special-value> 
    | <string> | [ - ] <number> 
@@ -58,39 +74,97 @@ CREATE [ OR REPLACE ] DATABASE VARIABLE [ IF NOT EXISTS ]
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa619d63284f21015b33fddf934b664e3__IQ_Parameters"/>
 
 ## Parameters
 
- OR REPLACE
- :   CREATE \[OR REPLACESpecifying the OR REPLACE clause drops the named variable if it already exists and re-creates it with the new definition. OR REPLACE only replaces the value of the variable if the data type of the current and new value are the same.
 
-    Do not use this clause with the IF NOT EXISTS clause.
+<dl>
+<dt><b>
 
-  *<owner\>*
- :   This parameter applies only to database-scope variables. Specify a valid user ID or role, or PUBLIC to set ownership of the variable. If set to a user, only that user can use the database variable. If set to a role, users who have that role are able to use the database variable. If set to PUBLIC, all users are able to use the variable.
+OR REPLACE
 
-    If *<owner\>* is not specified, it is set to the user executing the CREATE VARIABLE statement.
+</b></dt>
+<dd>
 
-  *<identifier\>*
- :   A valid identifier for the variable.
+CREATE \[OR REPLACESpecifying the OR REPLACE clause drops the named variable if it already exists and re-creates it with the new definition. OR REPLACE only replaces the value of the variable if the data type of the current and new value are the same.
 
-  *<data-type\>*
- :   The data type for the variable. Set the data type explicitly, or use the %TYPE or %ROWTYPE attribute to set the data type to the data type of another object in the database. Use %TYPE to set it to the data type of a variable or a column in a table or view. Use %ROWTYPE to set the data type to a composite data type derived from a row in a cursor, table, or view.
+Do not use this clause with the IF NOT EXISTS clause.
 
-    %ROWTYPE and TABLE REF is not supported as data types for database-scope variables.
 
-  IF NOT EXISTS
- :   Specify this clause to allow the statement to complete without returning an error if a database-scope variable with the same name already exists. This parameter is only for use when creating owned database-scope variables.
 
-    Do not use this clause with the OR REPLACE clause.
+</dd><dt><b>
 
-  = | DEFAULT
- :   The default value for the variable. For database-scope variables, this is also the initial value after the database is restarted.
+*<owner\>*
 
-    *<initial-value\>* must match the data type defined by *<data-type\>*. If you do not specify an *<initial-value\>*, then the variable contains the NULL value until a different value is assigned, for example by using a SET statement, a SELECT ... INTO statement, or in an UPDATE statement. If *<initial-value\>* is set by using an expression, then the expression is evaluated at creation time and the resulting constant is stored \(not the expression\).
+</b></dt>
+<dd>
 
- 
+This parameter applies only to database-scope variables. Specify a valid user ID or role, or PUBLIC to set ownership of the variable. If set to a user, only that user can use the database variable. If set to a role, users who have that role are able to use the database variable. If set to PUBLIC, all users are able to use the variable.
+
+If *<owner\>* is not specified, it is set to the user executing the CREATE VARIABLE statement.
+
+
+
+</dd><dt><b>
+
+*<identifier\>*
+
+</b></dt>
+<dd>
+
+A valid identifier for the variable.
+
+
+
+</dd><dt><b>
+
+*<data-type\>*
+
+</b></dt>
+<dd>
+
+The data type for the variable. Set the data type explicitly, or use the %TYPE or %ROWTYPE attribute to set the data type to the data type of another object in the database. Use %TYPE to set it to the data type of a variable or a column in a table or view. Use %ROWTYPE to set the data type to a composite data type derived from a row in a cursor, table, or view.
+
+%ROWTYPE and TABLE REF is not supported as data types for database-scope variables.
+
+
+
+</dd><dt><b>
+
+IF NOT EXISTS
+
+</b></dt>
+<dd>
+
+Specify this clause to allow the statement to complete without returning an error if a database-scope variable with the same name already exists. This parameter is only for use when creating owned database-scope variables.
+
+Do not use this clause with the OR REPLACE clause.
+
+
+
+</dd><dt><b>
+
+= | DEFAULT
+
+</b></dt>
+<dd>
+
+The default value for the variable. For database-scope variables, this is also the initial value after the database is restarted.
+
+*<initial-value\>* must match the data type defined by *<data-type\>*. If you do not specify an *<initial-value\>*, then the variable contains the NULL value until a different value is assigned, for example by using a SET statement, a SELECT ... INTO statement, or in an UPDATE statement. If *<initial-value\>* is set by using an expression, then the expression is evaluated at creation time and the resulting constant is stored \(not the expression\).
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa619d63284f21015b33fddf934b664e3__IQ_Usage"/>
 

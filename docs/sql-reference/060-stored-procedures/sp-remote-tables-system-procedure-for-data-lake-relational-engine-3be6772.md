@@ -32,31 +32,76 @@ sp_remote_tables (
 
 ## Parameters
 
-  *<remote-server-name\>* 
- :   Use this CHAR\(128\) parameter to specify the remote server name. *<remote-server-name\>* must be specified.
 
-   *<remote-table-name\>* 
- :   Use this optional CHAR\(128\) parameter to specify the name of the remote table. The default is '%'. *<remote-table-name\>* can be specified as null to match any remote table.
+<dl>
+<dt><b>
 
-    > ### Note:  
-    > If *<remote-table-name\>* is specified, *<remote-table-owner\>* must also be specified.
+ *<remote-server-name\>* 
 
-   *<remote-table-owner\>* 
- :   Use this optional CHAR\(128\) parameter to specify the remote schema name that owns this remote table. The default is '%'.
+</b></dt>
+<dd>
 
-    > ### Note:  
-    > If *<remote-table-owner\>* is null, *<remote-table-name\>* must also be null, and all remote schemas are returned.
+Use this CHAR\(128\) parameter to specify the remote server name. *<remote-server-name\>* must be specified.
 
-   *<remote-database-name\>* 
- :   Use this optional CHAR\(128\) parameter to specify the database in which *<table-name\>* is located.
 
-    > ### Note:  
-    > *<remote-database-name\>* must be unspecified or null for SQL on Files remote tables.
 
-   *<with-table-type\>* 
- :   Use this optional BIT parameter to specify the inclusion of remote table types. The default is 0. Specify 1 if you want the result set to include a column that lists table types or specify 0 if you do not.
+</dd><dt><b>
 
- 
+ *<remote-table-name\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(128\) parameter to specify the name of the remote table. The default is '%'. *<remote-table-name\>* can be specified as null to match any remote table.
+
+> ### Note:  
+> If *<remote-table-name\>* is specified, *<remote-table-owner\>* must also be specified.
+
+
+
+</dd><dt><b>
+
+ *<remote-table-owner\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(128\) parameter to specify the remote schema name that owns this remote table. The default is '%'.
+
+> ### Note:  
+> If *<remote-table-owner\>* is null, *<remote-table-name\>* must also be null, and all remote schemas are returned.
+
+
+
+</dd><dt><b>
+
+ *<remote-database-name\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(128\) parameter to specify the database in which *<table-name\>* is located.
+
+> ### Note:  
+> *<remote-database-name\>* must be unspecified or null for SQL on Files remote tables.
+
+
+
+</dd><dt><b>
+
+ *<with-table-type\>* 
+
+</b></dt>
+<dd>
+
+Use this optional BIT parameter to specify the inclusion of remote table types. The default is 0. Specify 1 if you want the result set to include a column that lists table types or specify 0 if you do not.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Result Set
 
@@ -198,7 +243,7 @@ The procedure accepts five parameters. If a table or schema name is given, the l
 
 ## Privileges
 
-You must have EXECUTE privilege on the system procedure.
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

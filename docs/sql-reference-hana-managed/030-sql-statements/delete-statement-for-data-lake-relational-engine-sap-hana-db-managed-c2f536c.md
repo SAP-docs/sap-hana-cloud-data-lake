@@ -6,11 +6,6 @@ Deletes all the rows from the named table that satisfy the search condition. If 
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -22,15 +17,9 @@ Deletes all the rows from the named table that satisfy the search condition. If 
 
 ```
 DELETE 
-   [ FROM ] [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <table-name> (varname] [ [ AS [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <correlation-name> (varname] ]
-   ...[ FROM [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <table-expression> (varname] ] 
-   [ WHERE [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <search-condition> (varname] ] ]
+   [ FROM ] [ <schema-name>.]<table-name> [ [ AS <correlation-name> ]
+   ...[ FROM <table-expression> ] 
+   [ WHERE <search-condition> ] ]
 ```
 
 ```
@@ -42,17 +31,43 @@ DELETE
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioc2f536c346c44911be3623014bc53910__section_jwf_vwg_1rb"/>
 
 ## Parameters
 
- FROM clause
- :   Indicates the table from which rows will be deleted. The optional second FROM clause in the DELETE statement determines the rows to be deleted from the specified table based on joins with other tables. If the second FROM clause is present, the WHERE clause qualifies the rows of this second FROM clause. Rows are deleted from the table name given in the first FROM clause.
 
-  WHERE clause
- :   If specified, only rows satisfying the search condition are deleted. If no WHERE clause is specified, every row is deleted.
+<dl>
+<dt><b>
 
- 
+FROM clause
+
+</b></dt>
+<dd>
+
+Indicates the table from which rows will be deleted. The optional second FROM clause in the DELETE statement determines the rows to be deleted from the specified table based on joins with other tables. If the second FROM clause is present, the WHERE clause qualifies the rows of this second FROM clause. Rows are deleted from the table name given in the first FROM clause.
+
+
+
+</dd><dt><b>
+
+WHERE clause
+
+</b></dt>
+<dd>
+
+If specified, only rows satisfying the search condition are deleted. If no WHERE clause is specified, every row is deleted.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioc2f536c346c44911be3623014bc53910__section_nmc_wwg_1rb"/>
 
@@ -104,7 +119,10 @@ There are two instances of table\_1 in the second FROM clause. Since there is no
 
 ### 
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

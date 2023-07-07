@@ -28,22 +28,72 @@ ALTER TABLE <remote-schema-name>.<remote-table-name>
 
 ## Parameters
 
- *<remote-schema-name\>*
- :   IN FILES\_SERVICE The name of the schema. If a schema name is not provided, the current schema is used.
 
-  *<remote-table-name\>*
- :   The name of the table.
+<dl>
+<dt><b>
 
-  REFRESH
- :   The refresh mode of the table.
+*<remote-schema-name\>*
 
-     `MANUAL`
-     :   Sets the refresh mode to manual, and must be refreshed using the [REFRESH \(Remote\) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](refresh-remote-table-statement-for-data-lake-relational-engine-sql-on-files-e275657.md).
+</b></dt>
+<dd>
 
-      `AUTO`
-     :   Sets the refresh to automatically occur with every SELECT query on the table.
+IN FILES\_SERVICE The name of the schema. If a schema name is not provided, the current schema is used.
 
-  
+
+
+</dd><dt><b>
+
+*<remote-table-name\>*
+
+</b></dt>
+<dd>
+
+The name of the table.
+
+
+
+</dd><dt><b>
+
+REFRESH
+
+</b></dt>
+<dd>
+
+The refresh mode of the table.
+
+
+<dl>
+<dt><b>
+
+`MANUAL`
+
+</b></dt>
+<dd>
+
+Sets the refresh mode to manual, and must be refreshed using the [REFRESH \(Remote\) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](refresh-remote-table-statement-for-data-lake-relational-engine-sql-on-files-e275657.md).
+
+
+
+</dd><dt><b>
+
+`AUTO`
+
+</b></dt>
+<dd>
+
+Sets the refresh to automatically occur with every SELECT query on the table.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioae5645003caf4d14bcd05ca4d8f3219e__ATR_remarks"/>
 
@@ -93,5 +143,5 @@ ALTER TABLE ExternalSchema1.ExternalTable1 IN FILES_SERVICE
 
 [DROP \(Remote\) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](drop-remote-table-statement-for-data-lake-relational-engine-sql-on-files-f81d073.md "Drop a remote table from a SQL on Files external catalog.")
 
-[ALTER (Remote) TABLE Statement with REFRESH for Data Lake Relational Engine (SAP HANA DB-Managed) [SQL on Files]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/ff7b384154d0499594c61f49329dce04.html "Alter the refresh mode of a table.") :arrow_upper_right:
+[ALTER (Remote) TABLE Statement with REFRESH for Data Lake Relational Engine (SAP HANA DB-Managed) [SQL on Files]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ff7b384154d0499594c61f49329dce04.html "Alter the refresh mode of a table.") :arrow_upper_right:
 

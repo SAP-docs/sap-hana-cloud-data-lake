@@ -6,11 +6,6 @@ Resumes execution of a procedure that returns result sets.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -18,26 +13,65 @@ Resumes execution of a procedure that returns result sets.
 
 
 
- Syntax 1 – Supported in `dbisqlc`
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1 – Supported in `dbisqlc`
+
+</b></dt>
+<dd>
+
+```
 RESUME <cursor-name>
 ```
 
-  Syntax 2 – Supported in `dbisql`
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2 – Supported in `dbisql`
+
+</b></dt>
+<dd>
+
+```
 RESUME [ ALL ]
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
 
 <a name="loioa6239b4d84f2101594fce0499fe8dd88__IQ_Parameters"/>
 
 ## Parameters
 
- *<cursor-name\>*
- :   Identifier or host-variable
 
- 
+<dl>
+<dt><b>
+
+*<cursor-name\>*
+
+</b></dt>
+<dd>
+
+Identifier or host-variable
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa6239b4d84f2101594fce0499fe8dd88__IQ_Usage"/>
 

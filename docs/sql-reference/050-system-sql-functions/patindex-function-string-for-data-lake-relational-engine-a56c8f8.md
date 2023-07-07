@@ -16,15 +16,36 @@ PATINDEX ( '%<pattern>%', <string-expression> )
 
 ## Parameters
 
- *<pattern\>*
- :   The pattern for which you are searching. This string is limited to 126 bytes for patterns with wildcards. If the leading percent wildcard is omitted, `PATINDEX` returns one \(1\) if the pattern occurs at the beginning of the string, and zero if not. If *<pattern\>* starts with a percent wildcard, then the two leading percent wildcards are treated as one.
 
-    Patterns without wildcards \(percent % or underscore \_\) can be up to 255 bytes in length.
+<dl>
+<dt><b>
 
-  *<string-expression\>*
- :   The string to be searched for the pattern.
+*<pattern\>*
 
- 
+</b></dt>
+<dd>
+
+The pattern for which you are searching. This string is limited to 126 bytes for patterns with wildcards. If the leading percent wildcard is omitted, `PATINDEX` returns one \(1\) if the pattern occurs at the beginning of the string, and zero if not. If *<pattern\>* starts with a percent wildcard, then the two leading percent wildcards are treated as one.
+
+Patterns without wildcards \(percent % or underscore \_\) can be up to 255 bytes in length.
+
+
+
+</dd><dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string to be searched for the pattern.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa56c8f8684f210158653d0c858b0e559__PATINDEX_returns1"/>
 
@@ -173,5 +194,5 @@ All the positions or offsets, returned or specified, in the `PATINDEX` function 
 
 [LOCATE Function \[String\] for Data Lake Relational Engine](locate-function-string-for-data-lake-relational-engine-a55fae8.md "Returns the position of one string within another.")
 
-[PATINDEX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/073fd346f10a409b98efefed3192ff77.html "Returns the starting position of the first occurrence of a specified pattern.") :arrow_upper_right:
+[PATINDEX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/073fd346f10a409b98efefed3192ff77.html "Returns the starting position of the first occurrence of a specified pattern.") :arrow_upper_right:
 

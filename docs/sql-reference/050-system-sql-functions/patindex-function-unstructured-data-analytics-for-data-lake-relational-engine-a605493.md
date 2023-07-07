@@ -16,15 +16,36 @@ PATINDEX( '<%pattern%>', <long-varchar-column> )
 
 ## Parameters
 
- *<%pattern%\>*
- :   The pattern for which you are searching. This string is limited to 126 bytes for patterns with wildcards. If you omit the leading percent wildcard, `PATINDEX` returns one \(1\) if the pattern occurs at the beginning of the column value, and zero \(0\) if the pattern does not occur at the beginning of the column value. Similarly, if you omit the trailing percent wildcard, the pattern should occur at the end of the column value. The pattern uses the same wildcards as the `LIKE` comparison.
 
-    Patterns without wildcards — percent \(%\) and underscore \(\_\) — can be up to 255 bytes in length.
+<dl>
+<dt><b>
 
-  *<long-varchar-column\>*
- :   The name of the `LONG VARCHAR` column or variable.
+*<%pattern%\>*
 
- 
+</b></dt>
+<dd>
+
+The pattern for which you are searching. This string is limited to 126 bytes for patterns with wildcards. If you omit the leading percent wildcard, `PATINDEX` returns one \(1\) if the pattern occurs at the beginning of the column value, and zero \(0\) if the pattern does not occur at the beginning of the column value. Similarly, if you omit the trailing percent wildcard, the pattern should occur at the end of the column value. The pattern uses the same wildcards as the `LIKE` comparison.
+
+Patterns without wildcards — percent \(%\) and underscore \(\_\) — can be up to 255 bytes in length.
+
+
+
+</dd><dt><b>
+
+*<long-varchar-column\>*
+
+</b></dt>
+<dd>
+
+The name of the `LONG VARCHAR` column or variable.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa605493584f21015acbba296e763a2eb__iq_iquda_185"/>
 
@@ -41,5 +62,5 @@ PATINDEX( '<%pattern%>', <long-varchar-column> )
 **Related Information**  
 
 
-[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_1_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
+[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
 

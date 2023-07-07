@@ -26,31 +26,110 @@ sa_validate(
 
 ## Parameters
 
-  *<tbl\_name\>* 
- :   Use this optional CHAR\(128\) parameter to specify the name of a table or materialized view to validate. The default is NULL, in which case the entire database is validated.
 
-   *<owner\_name\>* 
- :   Use this optional CHAR\(128\) parameter to specify an owner. When specified by itself, all tables and materialized views owned by the owner are validated. The default is NULL.
+<dl>
+<dt><b>
 
-   *<check\_type\>* 
- :   Use this optional CHAR\(10\) parameter to specify the type of validation to perform. The possible values are:
+ *<tbl\_name\>* 
 
-     EXPRESS
-     :   If this parameter is EXPRESS, each table is checked using a VALIDATE TABLE statement with the WITH EXPRESS CHECK clause.
+</b></dt>
+<dd>
 
-      NULL
-     :   If this parameter is NULL \(the default\), each table is checked using a VALIDATE TABLE statement.
+Use this optional CHAR\(128\) parameter to specify the name of a table or materialized view to validate. The default is NULL, in which case the entire database is validated.
 
-    *<isolation\_type\>* 
- :   Use this optional parameter when validating tables that have active transactions to prevent receiving false errors about corrupt tables. The possible values are:
 
-     DATA LOCK
-     :   Prevents transactions from modifying the table schema or data by applying exclusive data locks on the specified tables. Concurrent transactions can read, but not modify the table data or schema.
 
-      SNAPSHOT
-     :   Ensures that only committed data is checked by applying snapshot isolation. Transactions can read and modify the data. This clause requires that the database have snapshot isolation enabled \(with the allow\_snapshot\_isolation database option\). Because this clause uses snapshot isolation, performance is often affected.
+</dd><dt><b>
 
-  
+ *<owner\_name\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(128\) parameter to specify an owner. When specified by itself, all tables and materialized views owned by the owner are validated. The default is NULL.
+
+
+
+</dd><dt><b>
+
+ *<check\_type\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(10\) parameter to specify the type of validation to perform. The possible values are:
+
+
+<dl>
+<dt><b>
+
+EXPRESS
+
+</b></dt>
+<dd>
+
+If this parameter is EXPRESS, each table is checked using a VALIDATE TABLE statement with the WITH EXPRESS CHECK clause.
+
+
+
+</dd><dt><b>
+
+NULL
+
+</b></dt>
+<dd>
+
+If this parameter is NULL \(the default\), each table is checked using a VALIDATE TABLE statement.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+ *<isolation\_type\>* 
+
+</b></dt>
+<dd>
+
+Use this optional parameter when validating tables that have active transactions to prevent receiving false errors about corrupt tables. The possible values are:
+
+
+<dl>
+<dt><b>
+
+DATA LOCK
+
+</b></dt>
+<dd>
+
+Prevents transactions from modifying the table schema or data by applying exclusive data locks on the specified tables. Concurrent transactions can read, but not modify the table data or schema.
+
+
+
+</dd><dt><b>
+
+SNAPSHOT
+
+</b></dt>
+<dd>
+
+Ensures that only committed data is checked by applying snapshot isolation. Transactions can read and modify the data. This clause requires that the database have snapshot isolation enabled \(with the allow\_snapshot\_isolation database option\). Because this clause uses snapshot isolation, performance is often affected.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+
 
 ## Result Set
 
@@ -286,7 +365,10 @@ For databases with checksums enabled, a checksum is calculated for each database
 
 ## Privileges
 
-You must have EXECUTE privilege on the system procedure, as well as the VALIDATE ANY OBJECT system privilege.
+Requires all of:
+
+-   EXECUTE object-level privilege on the procedure
+-   VALIDATE ANY OBJECT system privilege
 
 
 

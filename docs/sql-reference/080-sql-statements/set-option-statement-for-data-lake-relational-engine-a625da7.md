@@ -6,11 +6,6 @@ Changes options that affect the behavior of the database and its compatibility w
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -20,11 +15,13 @@ Changes options that affect the behavior of the database and its compatibility w
 
 ```
 SET [ EXISTING ] [ TEMPORARY ] OPTION
-   … [ { [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <user_id> (varname] | PUBLIC }.][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <option-name> (varname] = [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <option-value> (varname] ]
+   … [ { <user_id> | PUBLIC }.]<option-name> = [ <option-value> ]
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -32,27 +29,56 @@ SET [ EXISTING ] [ TEMPORARY ] OPTION
 
 ## Parameters
 
- *<option-value\>*
- :   A host-variable \(indicator allowed\), string, identifier, or number. The maximum length of *<option-value\>* when set to a string is 127 bytes.
 
-    If *<option-value\>* is omitted, the specified option setting is deleted from the database. If it was a personal option setting, the value used reverts to the PUBLIC setting.
+<dl>
+<dt><b>
 
-    > ### Note:  
-    > For all database options that accept integer values, data lake Relational Engine truncates any decimal *<option-value\>* setting to an integer value. For example, the value 3.8 is truncated to 3.
+*<option-value\>*
 
-  EXISTING
- :   Option values cannot be set for an individual user ID unless there is already a PUBLIC user ID setting for that option.
+</b></dt>
+<dd>
 
-  TEMPORARY
- :   Changes the duration that the change takes effect. Without the TEMPORARY clause, an option change is permanent: it does not change until it is explicitly changed using SET OPTION statement.
+A host-variable \(indicator allowed\), string, identifier, or number. The maximum length of *<option-value\>* when set to a string is 127 bytes.
 
-    When the TEMPORARY clause is applied using an individual user ID, the new option value is in effect as long as that user is logged in to the database.
+If *<option-value\>* is omitted, the specified option setting is deleted from the database. If it was a personal option setting, the value used reverts to the PUBLIC setting.
 
-    When the TEMPORARY clause is used with the PUBLIC user ID, the change is in place for as long as the database is running. When the database is shut down, TEMPORARY options for the PUBLIC user ID revert to their permanent value.
+> ### Note:  
+> For all database options that accept integer values, data lake Relational Engine truncates any decimal *<option-value\>* setting to an integer value. For example, the value 3.8 is truncated to 3.
 
-    If a TEMPORARY option is deleted, the option setting reverts to the permanent setting.
 
- 
+
+</dd><dt><b>
+
+EXISTING
+
+</b></dt>
+<dd>
+
+Option values cannot be set for an individual user ID unless there is already a PUBLIC user ID setting for that option.
+
+
+
+</dd><dt><b>
+
+TEMPORARY
+
+</b></dt>
+<dd>
+
+Changes the duration that the change takes effect. Without the TEMPORARY clause, an option change is permanent: it does not change until it is explicitly changed using SET OPTION statement.
+
+When the TEMPORARY clause is applied using an individual user ID, the new option value is in effect as long as that user is logged in to the database.
+
+When the TEMPORARY clause is used with the PUBLIC user ID, the change is in place for as long as the database is running. When the database is shut down, TEMPORARY options for the PUBLIC user ID revert to their permanent value.
+
+If a TEMPORARY option is deleted, the option setting reverts to the permanent setting.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa625da7584f21015a300a0dd2457eb57__set_option_remarks1"/>
 
@@ -135,7 +161,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[SET OPTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/84a37a4b73ff4ba1ae53aad6b4c94803.html "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.") :arrow_upper_right:
+[SET OPTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/84a37a4b73ff4ba1ae53aad6b4c94803.html "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

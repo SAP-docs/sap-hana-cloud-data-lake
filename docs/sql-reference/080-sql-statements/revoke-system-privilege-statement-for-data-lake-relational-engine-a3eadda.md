@@ -6,11 +6,6 @@ Removes specific system privileges from specific users and the right to administ
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -25,23 +20,57 @@ REVOKE [ ADMIN OPTION FOR ] <system_privilege_name> [,...]
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa3eadda384f21015afd5a736a04daab7__revoke_system_priv_parm1"/>
 
 ## Parameters
 
- ADMIN OPTION FOR
- :   Each *<system\_privilege\>* must currently be granted to each *<user\_id\>* specified with administrative privileges.
 
-    > ### Note:  
-    > This clause revokes only the administrative privileges of the system privilege; the system privilege itself remains granted. However, if the system privilege was originally granted with the WITH ADMIN ONLY OPTION clause, the ADMIN OPTION FOR clause completely revokes the system privilege. Under this scenario, use of the ADMIN OPTION FOR clause is not required to revoke administrative privileges.
+<dl>
+<dt><b>
 
-  *<system\_privilege\_name\>*
- :   Must be an existing system privilege.
+ADMIN OPTION FOR
 
-  *<user\_id\>*
- :   Must be the name of an existing user or role that has a login password. Separate multiple user\_IDs with commas.
+</b></dt>
+<dd>
 
- 
+Each *<system\_privilege\>* must currently be granted to each *<user\_id\>* specified with administrative privileges.
+
+> ### Note:  
+> This clause revokes only the administrative privileges of the system privilege; the system privilege itself remains granted. However, if the system privilege was originally granted with the WITH ADMIN ONLY OPTION clause, the ADMIN OPTION FOR clause completely revokes the system privilege. Under this scenario, use of the ADMIN OPTION FOR clause is not required to revoke administrative privileges.
+
+
+
+</dd><dt><b>
+
+*<system\_privilege\_name\>*
+
+</b></dt>
+<dd>
+
+Must be an existing system privilege.
+
+
+
+</dd><dt><b>
+
+*<user\_id\>*
+
+</b></dt>
+<dd>
+
+Must be the name of an existing user or role that has a login password. Separate multiple user\_IDs with commas.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa3eadda384f21015afd5a736a04daab7__revoke_system_priv_remarks1"/>
 
@@ -77,7 +106,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[REVOKE Object-Level Privilege Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/f14139fa124d4e5da23c1da6a5009417.html "Removes object-level privileges that were given using the GRANT statement.") :arrow_upper_right:
+[REVOKE Object-Level Privilege Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/f14139fa124d4e5da23c1da6a5009417.html "Removes object-level privileges that were given using the GRANT statement.") :arrow_upper_right:
 
-[REVOKE System Privilege Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/2a45ac0bacf44b879b464c83767c2f48.html "Removes specific system privileges from specific users and the right to administer the privilege.") :arrow_upper_right:
+[REVOKE System Privilege Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/2a45ac0bacf44b879b464c83767c2f48.html "Removes specific system privileges from specific users and the right to administer the privilege.") :arrow_upper_right:
 

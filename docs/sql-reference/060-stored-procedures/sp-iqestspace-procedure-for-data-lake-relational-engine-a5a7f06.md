@@ -23,16 +23,45 @@ sp_iqestspace ( <table_name>, <#_of_rows>, <iq_page_size> )
 
 ## Parameters
 
- *<table\_name\>*
- :   A CHAR\(256\) parameter that specifies the name of the table
 
-  *<\#\_of\_rows\>*
- :   An INT parameter that specifies the number of rows in the table
+<dl>
+<dt><b>
 
-  *<iq\_page\_size\>*
- :   A SMALLINT parameter that specifies the page size defined for the data lake Relational Engine segment of the database \(must be a power of 2 between 65536 and 524288; the default is 131072\)
+*<table\_name\>*
 
- 
+</b></dt>
+<dd>
+
+A CHAR\(256\) parameter that specifies the name of the table
+
+
+
+</dd><dt><b>
+
+*<\#\_of\_rows\>*
+
+</b></dt>
+<dd>
+
+An INT parameter that specifies the number of rows in the table
+
+
+
+</dd><dt><b>
+
+*<iq\_page\_size\>*
+
+</b></dt>
+<dd>
+
+A SMALLINT parameter that specifies the page size defined for the data lake Relational Engine segment of the database \(must be a power of 2 between 65536 and 524288; the default is 131072\)
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5a7f06d84f210158e22bbecee776c23__iq_refbb_1561"/>
 
@@ -46,62 +75,14 @@ Displays the amount of space that a database requires based on the number of row
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). If you own the object referenced by the procedure, no additional privilege is required.
+Requires EXECUTE object-level privilege on the procedure. If you own the object referenced by the procedure, no additional privilege is required.
 
 For objects owned by others, you need one of the following privileges:
 
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
--   CREATE ANY INDEX
--   ALTER ANY INDEX
--   CREATE ANY OBJECT
--   ALTER ANY OBJECT
-
-
-
-</td>
-<td valign="top">
-
-System privileges
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+-   CREATE ANY INDEX system privilege
+-   ALTER ANY INDEX system privilege
+-   CREATE ANY OBJECT system privilege
+-   ALTER ANY OBJECT system privilege
 
 
 

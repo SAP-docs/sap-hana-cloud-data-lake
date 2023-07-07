@@ -16,10 +16,23 @@ ABS ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The number that has the absolute value to be returned.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The number that has the absolute value to be returned.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio45f984dcb7e440c4b082a7ef7662f923__section_cdh_v1l_srb"/>
 

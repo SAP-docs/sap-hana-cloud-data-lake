@@ -6,11 +6,6 @@ Releases the specified connection-scope mutex, if it is locked by the current co
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -25,15 +20,41 @@ RELEASE MUTEX [ <owner>.]<mutex-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 ## Parameters
 
- *<owner\>*
- :   The owner of the mutex.
 
-  *<mutex-name\>*
- :   The name of the mutex.
+<dl>
+<dt><b>
 
- 
+*<owner\>*
+
+</b></dt>
+<dd>
+
+The owner of the mutex.
+
+
+
+</dd><dt><b>
+
+*<mutex-name\>*
+
+</b></dt>
+<dd>
+
+The name of the mutex.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -66,10 +87,23 @@ None.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following statement releases the protect\_my\_cr\_section mutex:
 

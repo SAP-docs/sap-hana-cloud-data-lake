@@ -30,28 +30,65 @@ sp_remote_columns (
 
 ## Parameters
 
-  *<remote-server-name\>* 
- :   *<remote-server-name\>* must be specified. Use this CHAR\(128\) parameter to specify the remote server name.
 
-   *<remote-table-name\>* 
- :   Use this optional CHAR\(128\) parameter to specify the name of the remote table. The default is '%'. *<remote-table-name\>* can be specified as null to match any remote table.
+<dl>
+<dt><b>
 
-    > ### Note:  
-    > If *<remote-table-name\>* is specified, *<remote-table-owner\>* must also be specified.
+ *<remote-server-name\>* 
 
-   *<remote-table-owner\>* 
- :   Use this optional CHAR\(128\) parameter to specify the remote schema name that owns this remote table. The default is '%'.
+</b></dt>
+<dd>
 
-    > ### Note:  
-    > If *<remote-table-owner\>* is null, Use this optional CHAR\(128\) parameter to specify the database in which *<remote-table-name\>* must also be null, and all remote schemas are returned.
+*<remote-server-name\>* must be specified. Use this CHAR\(128\) parameter to specify the remote server name.
 
-   *<table-qualifier\>* 
- :   *<table-name\>* is located.
 
-    > ### Note:  
-    > *<table-qualifier\>* must be unspecified or null for SQL on Files remote tables.
 
- 
+</dd><dt><b>
+
+ *<remote-table-name\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(128\) parameter to specify the name of the remote table. The default is '%'. *<remote-table-name\>* can be specified as null to match any remote table.
+
+> ### Note:  
+> If *<remote-table-name\>* is specified, *<remote-table-owner\>* must also be specified.
+
+
+
+</dd><dt><b>
+
+ *<remote-table-owner\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(128\) parameter to specify the remote schema name that owns this remote table. The default is '%'.
+
+> ### Note:  
+> If *<remote-table-owner\>* is null, Use this optional CHAR\(128\) parameter to specify the database in which *<remote-table-name\>* must also be null, and all remote schemas are returned.
+
+
+
+</dd><dt><b>
+
+ *<table-qualifier\>* 
+
+</b></dt>
+<dd>
+
+*<table-name\>* is located.
+
+> ### Note:  
+> *<table-qualifier\>* must be unspecified or null for SQL on Files remote tables.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Result Set
 
@@ -308,15 +345,9 @@ If the table does not exist on the remote server, the procedure returns an empty
 
 ## Privileges
 
-The privileges required depend on your connection method:
+Requires the HDL\_FILES\_SERVICE\_ADMIN role.
 
- Data Lake Relational Engine - Connected directly to data lake Relational Engine as a data lake Relational Engine user
- :   You have been granted the HDL\_FILES\_SERVICE\_ADMIN role.
 
-  Data Lake Relational Engine \(SAP HANA DB-Managed\) - Connected to SAP HANA database, and using the REMOTE\_EXECUTE procedure
- :   You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
-
- 
 
 The following example returns information about the columns in the ULProduct table on the remote SQL on Files server named `RemoteSOF` owned by the remote schema RemoteSchema.
 

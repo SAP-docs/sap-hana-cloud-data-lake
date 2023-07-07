@@ -16,16 +16,45 @@ BYTE_SUBSTR( <source_string> , <start_position> [ , <length> ] )
 
 ## Parameters
 
-  *<source\_string\>* 
- :   The data from which the binary substring is taken.
 
-   *<start\_position\>* 
- :   An integer expression indicating the start of the substring. A positive integer starts from the beginning of the data, with the first byte being position 1. A negative integer specifies a substring starting from the end of the data, the final byte being at position -1.
+<dl>
+<dt><b>
 
-   *<length\>* 
- :   An integer expression indicating the length of the substring. A positive *<length\>* specifies the number of bytes to be taken *starting* at the start position. A negative *<length\>* returns at most *<length\>* bytes up to, and including, the starting position, from the left of the starting position.
+ *<source\_string\>* 
 
- 
+</b></dt>
+<dd>
+
+The data from which the binary substring is taken.
+
+
+
+</dd><dt><b>
+
+ *<start\_position\>* 
+
+</b></dt>
+<dd>
+
+An integer expression indicating the start of the substring. A positive integer starts from the beginning of the data, with the first byte being position 1. A negative integer specifies a substring starting from the end of the data, the final byte being at position -1.
+
+
+
+</dd><dt><b>
+
+ *<length\>* 
+
+</b></dt>
+<dd>
+
+An integer expression indicating the length of the substring. A positive *<length\>* specifies the number of bytes to be taken *starting* at the start position. A negative *<length\>* returns at most *<length\>* bytes up to, and including, the starting position, from the left of the starting position.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioe7559cd08946434ba594a85bc232958e__section_fph_lcl_srb"/>
 

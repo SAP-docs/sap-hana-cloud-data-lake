@@ -6,11 +6,6 @@ Retrieves information about variables within a descriptor area, or retrieves act
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -35,6 +30,11 @@ GET DESCRIPTOR <descriptor-name>
    | NULLABLE 
    | RETURNED_LENGTH }
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 

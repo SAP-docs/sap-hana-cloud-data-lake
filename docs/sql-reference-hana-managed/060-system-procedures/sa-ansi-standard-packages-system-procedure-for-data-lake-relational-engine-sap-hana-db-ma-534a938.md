@@ -28,13 +28,34 @@ sa_ansi_standard_packages(
 
 ## Parameters
 
-  *<standard\>* 
- :   Use this LONG VARCHAR parameter to specify the standard to use for the core extensions. One of SQL:1999 or SQL:2003.
 
-   *<statement\>* 
- :   Use this LONG VARCHAR parameter to specify the SQL statement to evaluate.
+<dl>
+<dt><b>
 
- 
+ *<standard\>* 
+
+</b></dt>
+<dd>
+
+Use this LONG VARCHAR parameter to specify the standard to use for the core extensions. One of SQL:1999 or SQL:2003.
+
+
+
+</dd><dt><b>
+
+ *<statement\>* 
+
+</b></dt>
+<dd>
+
+Use this LONG VARCHAR parameter to specify the SQL statement to evaluate.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio534a9382c24b4f368bf19a9e82500a72__section_ntb_1s4_rrb"/>
 
@@ -127,7 +148,10 @@ If there are no non-core extensions used for the statement, the result set is em
 
 ## Permissions
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

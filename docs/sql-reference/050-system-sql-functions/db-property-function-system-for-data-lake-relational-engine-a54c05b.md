@@ -17,19 +17,56 @@ DB_PROPERTY ( { <property-id> | <property-name> }
 
 ## Parameters
 
- *<property-id\>*
- :   The database property ID.
 
-  *<property-name\>*
- :   The database property name.
+<dl>
+<dt><b>
 
-  *<database-id\>*
- :   The database ID number, as returned by DB\_ID. Typically, the database name is used.
+*<property-id\>*
 
-  *<database-name\>*
- :   The name of the database, as returned by DB\_NAME.
+</b></dt>
+<dd>
 
- 
+The database property ID.
+
+
+
+</dd><dt><b>
+
+*<property-name\>*
+
+</b></dt>
+<dd>
+
+The database property name.
+
+
+
+</dd><dt><b>
+
+*<database-id\>*
+
+</b></dt>
+<dd>
+
+The database ID number, as returned by DB\_ID. Typically, the database name is used.
+
+
+
+</dd><dt><b>
+
+*<database-name\>*
+
+</b></dt>
+<dd>
+
+The name of the database, as returned by DB\_NAME.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Returns
 

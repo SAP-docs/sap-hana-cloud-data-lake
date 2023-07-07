@@ -16,10 +16,23 @@ HTML_DECODE( <string> )
 
 ## Parameters
 
-  *<string\>* 
- :   Arbitrary literal string used in an HTML document.
 
- 
+<dl>
+<dt><b>
+
+ *<string\>* 
+
+</b></dt>
+<dd>
+
+Arbitrary literal string used in an HTML document.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio76ddacf92fe949c3a5deee67aae74a46__section_qsq_5ng_trb"/>
 
@@ -180,10 +193,23 @@ When a Unicode codepoint is specified, if the value can be converted to a charac
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following statement returns the string `<p>The piano was made by 'Steinway & Sons'.</p>`:
 

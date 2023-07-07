@@ -6,11 +6,6 @@ Removes a users membership in a role or his or her ability to administer the rol
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -25,20 +20,54 @@ FROM { <system-role> | <user_id> } [, ...]
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa3e9de3284f21015bfd7b663b9989fe3__revoke_role_param1"/>
 
 ## Parameters
 
- *<user-defined-role\>*
- :   Must already exist in the database. Separate multiple role names with commas.
 
-  *<user\_id\>*
- :   Must be the name of an existing user or role that has a login password. Separate multiple user\_IDs with commas.
+<dl>
+<dt><b>
 
-  \{ EXERCISE | ADMIN \} OPTION FOR
- :   Specify the ADMIN OPTION FOR clause to revoke administration rights for the role, but leave exercise rights. Specify the EXERCISE OPTION FOR clause to revoke exercise rights for the role, but leave administration rights. If the clause is not specified, both rights are revoked.
+*<user-defined-role\>*
 
- 
+</b></dt>
+<dd>
+
+Must already exist in the database. Separate multiple role names with commas.
+
+
+
+</dd><dt><b>
+
+*<user\_id\>*
+
+</b></dt>
+<dd>
+
+Must be the name of an existing user or role that has a login password. Separate multiple user\_IDs with commas.
+
+
+
+</dd><dt><b>
+
+\{ EXERCISE | ADMIN \} OPTION FOR
+
+</b></dt>
+<dd>
+
+Specify the ADMIN OPTION FOR clause to revoke administration rights for the role, but leave exercise rights. Specify the EXERCISE OPTION FOR clause to revoke exercise rights for the role, but leave administration rights. If the clause is not specified, both rights are revoked.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa3e9de3284f21015bfd7b663b9989fe3__revoke_role_remarks1"/>
 
@@ -91,5 +120,5 @@ REVOKE ROLE role1 FROM user1;
 
 [GRANT ROLE Statement for Data Lake Relational Engine](grant-role-statement-for-data-lake-relational-engine-a3e379c.md "Grants roles to users or other roles, with or without administrative rights.")
 
-[REVOKE ROLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/189a04b4a6cb4098bebcc34f16a78afb.html "Removes a users membership in a role or his or her ability to administer the role.") :arrow_upper_right:
+[REVOKE ROLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/189a04b4a6cb4098bebcc34f16a78afb.html "Removes a users membership in a role or his or her ability to administer the role.") :arrow_upper_right:
 

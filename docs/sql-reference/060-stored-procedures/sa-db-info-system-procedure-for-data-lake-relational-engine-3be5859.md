@@ -21,8 +21,21 @@ sa_db_info( [ <dbidparm> ] )
 
 ## Parameters
 
+
+<dl>
+<dt><b>
+
  *<dbidparm\>* 
-:   Use this optional INTEGER parameter to specify the database ID number. The default is NULL.
+
+</b></dt>
+<dd>
+
+Use this optional INTEGER parameter to specify the database ID number. The default is NULL.
+
+
+
+</dd>
+</dl>
 
 
 
@@ -205,9 +218,12 @@ If *<dbidparm\>* is greater than zero, then properties for the supplied database
 
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure.
+Requires EXECUTE object-level privilege on the procedure.
 
-To execute this system procedure for other databases, you'll also need either the SERVER OPERATOR or MONITOR system privilege.
+To execute this procedure for other databases, requires one of:
+
+-   SERVER OPERATOR system privilege
+-   MONITOR system privilege
 
 
 

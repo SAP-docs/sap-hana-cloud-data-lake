@@ -23,16 +23,45 @@ sp_iqcheckfpconsistency ( <table_name>, <column_name>, <table_owner> )
 
 ## Parameters
 
- *<table\_name\>*
- :   The name of the table that you want to check.
 
-  *<column\_name\>*
- :   The name of the column to check.
+<dl>
+<dt><b>
 
-  *<table\_owner\>*
- :   The name of the owner of tables to check.
+*<table\_name\>*
 
- 
+</b></dt>
+<dd>
+
+The name of the table that you want to check.
+
+
+
+</dd><dt><b>
+
+*<column\_name\>*
+
+</b></dt>
+<dd>
+
+The name of the column to check.
+
+
+
+</dd><dt><b>
+
+*<table\_owner\>*
+
+</b></dt>
+<dd>
+
+The name of the owner of tables to check.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa948509b70dc4210a83bb773eb91dde5__iq_refbb_1561"/>
 
@@ -78,7 +107,7 @@ Currently there is no consistency verification for columns with BIT data types. 
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -130,59 +159,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    HDLADMIN
+    
+        HDLADMIN
 
 
     
     </td>
     <td valign="top">
-
-    customer
+    
+        customer
 
 
     
     </td>
     <td valign="top">
-
-    c\_acctbal
+    
+        c\_acctbal
 
 
     
     </td>
     <td valign="top">
-
-    Errors Detected
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    HDLADMIN
-
-
-    
-    </td>
-    <td valign="top">
-
-    customer
-
-
-    
-    </td>
-    <td valign="top">
-
-    c\_address
-
-
-    
-    </td>
-    <td valign="top">
-
-    Errors Detected
+        Errors Detected
 
 
     
@@ -190,59 +189,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    HDLADMIN
+    
+        HDLADMIN
 
 
     
     </td>
     <td valign="top">
-
-    customer
+    
+        customer
 
 
     
     </td>
     <td valign="top">
-
-    c\_comment
+    
+        c\_address
 
 
     
     </td>
     <td valign="top">
-
-    No Errors Detected
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    HDLADMIN
-
-
-    
-    </td>
-    <td valign="top">
-
-    customer
-
-
-    
-    </td>
-    <td valign="top">
-
-    c\_custkey
-
-
-    
-    </td>
-    <td valign="top">
-
-    Errors Detected
+        Errors Detected
 
 
     
@@ -250,59 +219,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    HDLADMIN
+    
+        HDLADMIN
 
 
     
     </td>
     <td valign="top">
-
-    customer
+    
+        customer
 
 
     
     </td>
     <td valign="top">
-
-    c\_name
+    
+        c\_comment
 
 
     
     </td>
     <td valign="top">
-
-    Errors Detected
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    HDLADMIN
-
-
-    
-    </td>
-    <td valign="top">
-
-    customer
-
-
-    
-    </td>
-    <td valign="top">
-
-    c\_phone
-
-
-    
-    </td>
-    <td valign="top">
-
-    Errors Detected
+        No Errors Detected
 
 
     
@@ -310,29 +249,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    ...
+    
+        HDLADMIN
 
 
     
     </td>
     <td valign="top">
-
-    ...
+    
+        customer
 
 
     
     </td>
     <td valign="top">
-
-    ...
+    
+        c\_custkey
 
 
     
     </td>
     <td valign="top">
-
-    ...
+    
+        Errors Detected
 
 
     
@@ -340,23 +279,113 @@ None
     </tr>
     <tr>
     <td valign="top">
+    
+        HDLADMIN
 
 
     
     </td>
     <td valign="top">
+    
+        customer
 
 
     
     </td>
     <td valign="top">
+    
+        c\_name
 
 
     
     </td>
     <td valign="top">
+    
+        Errors Detected
 
-    See the data lake Relational Engine message file for detail error messages
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        HDLADMIN
+
+
+    
+    </td>
+    <td valign="top">
+    
+        customer
+
+
+    
+    </td>
+    <td valign="top">
+    
+        c\_phone
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Errors Detected
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        ...
+
+
+    
+    </td>
+    <td valign="top">
+    
+        ...
+
+
+    
+    </td>
+    <td valign="top">
+    
+        ...
+
+
+    
+    </td>
+    <td valign="top">
+    
+        ...
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    
+    
+    </td>
+    <td valign="top">
+    
+    
+    
+    </td>
+    <td valign="top">
+    
+    
+    
+    </td>
+    <td valign="top">
+    
+        See the data lake Relational Engine message file for detail error messages
 
 
     
@@ -404,29 +433,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    HDLADMIN
+    
+        HDLADMIN
 
 
     
     </td>
     <td valign="top">
-
-    customer
+    
+        customer
 
 
     
     </td>
     <td valign="top">
-
-    c\_address
+    
+        c\_address
 
 
     
     </td>
     <td valign="top">
-
-    Errors Detected
+    
+        Errors Detected
 
     See the data lake Relational Engine message file for detail error messages.
 

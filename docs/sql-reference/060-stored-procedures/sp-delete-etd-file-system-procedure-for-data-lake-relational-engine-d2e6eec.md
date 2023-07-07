@@ -21,12 +21,25 @@ sp\_delete\_etd\_file\( *<file\_name\_pattern\>*\)
 
 ## Parameters
 
- *<file\_name\_pattern\>*
- :   Enter a file name pattern for ETD file name matching. Accepts the wildcard characters ***\**** and ***?*** .
 
-    If null, then deletes all ETD files.
+<dl>
+<dt><b>
 
- 
+*<file\_name\_pattern\>*
+
+</b></dt>
+<dd>
+
+Enter a file name pattern for ETD file name matching. Accepts the wildcard characters `*` and `?` .
+
+If null, then deletes all ETD files.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiod2e6eeca3f2448159215eead4f812adf__sp_delete_etd_file_remarks1"/>
 
@@ -36,11 +49,18 @@ The *<filename\_pattern\>* accepts file names only, and doesn’t accept path na
 
 
 
-<a name="loiod2e6eeca3f2448159215eead4f812adf__section_x1g_44c_zmb"/>
+<a name="loiod2e6eeca3f2448159215eead4f812adf__sp_delete_etd_file_priv1"/>
 
 ## Privileges
 
-You have the MANAGE\_AUDITING privilege.
+
+
+### 
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure
+-   MANAGE\_AUDITING system privilege
 
 
 
@@ -75,5 +95,5 @@ CALL dbo.sp_delete_etd_file'my_session_20201126_*'
 
 [sp\_list\_etd\_files System Procedure for Data Lake Relational Engine](sp-list-etd-files-system-procedure-for-data-lake-relational-engine-5f0eb4a.md "Lists the event trace data (ETD) files logged to the file container by database auditing.")
 
-[sp_delete_etd_file System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/ee5019e64a0247cbaf7c8cde5905b3a2.html "Deletes specified files from the audit directory in the file container.") :arrow_upper_right:
+[sp_delete_etd_file System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ee5019e64a0247cbaf7c8cde5905b3a2.html "Deletes specified files from the audit directory in the file container.") :arrow_upper_right:
 

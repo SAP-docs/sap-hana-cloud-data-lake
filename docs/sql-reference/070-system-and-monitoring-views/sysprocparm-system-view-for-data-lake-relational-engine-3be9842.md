@@ -103,22 +103,67 @@ SMALLINT
 
 The type of parameter is one of the following:
 
- 0
- :   Normal parameter \(variable\)
 
-  1
- :   Result column - used with a procedure that returns result sets
+<dl>
+<dt><b>
 
-  2
- :   SQLSTATE error value
+0
 
-  3
- :   SQLCODE error value
+</b></dt>
+<dd>
 
-  4
- :   Return value from function
+Normal parameter \(variable\)
 
- 
+
+
+</dd><dt><b>
+
+1
+
+</b></dt>
+<dd>
+
+Result column - used with a procedure that returns result sets
+
+
+
+</dd><dt><b>
+
+2
+
+</b></dt>
+<dd>
+
+SQLSTATE error value
+
+
+
+</dd><dt><b>
+
+3
+
+</b></dt>
+<dd>
+
+SQLCODE error value
+
+
+
+</dd><dt><b>
+
+4
+
+</b></dt>
+<dd>
+
+Return value from function
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>
@@ -370,5 +415,5 @@ Additionally, SYSPROCPARM is updated whenever a checkpoint is run if the out-of-
 **Related Information**  
 
 
-[SYSPROCPARM System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/80ec5b7639274fb58a0d680ef35009b6.html "Each row in the SYSPROCPARM system view describes one parameter, result set column, or return value of a procedure or function in the database. The underlying system table for this view is ISYSPROCPARM.") :arrow_upper_right:
+[SYSPROCPARM System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/80ec5b7639274fb58a0d680ef35009b6.html "Each row in the SYSPROCPARM system view describes one parameter, result set column, or return value of a procedure or function in the database. The underlying system table for this view is ISYSPROCPARM.") :arrow_upper_right:
 

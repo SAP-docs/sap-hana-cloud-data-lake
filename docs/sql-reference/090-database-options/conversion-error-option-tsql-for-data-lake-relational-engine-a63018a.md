@@ -188,7 +188,7 @@ If conversion errors are reported as warnings only, the NULL value is used in pl
 
 [GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md "Grants specific system privileges to users or roles, with or without administrative rights.")
 
-[CONVERSION_ERROR Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/b24b81f09e9a442d842dc39630105c9b.html "Controls reporting of data type conversion failures on fetching information from the database.") :arrow_upper_right:
+[CONVERSION_ERROR Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/b24b81f09e9a442d842dc39630105c9b.html "Controls reporting of data type conversion failures on fetching information from the database.") :arrow_upper_right:
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 

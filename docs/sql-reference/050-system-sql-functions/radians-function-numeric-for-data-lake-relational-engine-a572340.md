@@ -16,10 +16,23 @@ RADIANS ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   A number, in degrees. This angle is converted to radians
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+A number, in degrees. This angle is converted to radians
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa572340384f21015b1d3dab0d7a76062__RADIANS_returns1"/>
 
@@ -50,5 +63,5 @@ SELECT RADIANS( 30 ) FROM iq_dummy
 **Related Information**  
 
 
-[RADIANS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/dbeab0046dff49e89f016a8496e978f8.html "Converts a number from degrees to radians.") :arrow_upper_right:
+[RADIANS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/dbeab0046dff49e89f016a8496e978f8.html "Converts a number from degrees to radians.") :arrow_upper_right:
 

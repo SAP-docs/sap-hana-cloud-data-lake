@@ -57,10 +57,99 @@ Requires the SET ANY CUSTOMER SYSTEM OPTION system privilege to set this databas
 
 ## Scope
 
--   Option can be set at the database \(PUBLIC\) level only.
 
--   Takes effect immediately.
+<table>
+<tr>
+<th valign="top">
 
+ 
+
+
+
+</th>
+<th valign="top">
+
+PUBLIC Role
+
+
+
+</th>
+<th valign="top">
+
+For Current User
+
+
+
+</th>
+<th valign="top">
+
+For Other Users
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Allowed to set permanently?
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Allowed to set temporarily?
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+</tr>
+</table>
 
 
 
@@ -105,5 +194,5 @@ SET OPTION RESERVED_KEYWORDS = ;
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[RESERVED_KEYWORDS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/991b4fb75bed4696885132f2c32419be.html "Turns on individual keywords that are disabled by default.") :arrow_upper_right:
+[RESERVED_KEYWORDS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/991b4fb75bed4696885132f2c32419be.html "Turns on individual keywords that are disabled by default.") :arrow_upper_right:
 

@@ -16,10 +16,23 @@ ISNUMERIC ( <string> )
 
 ## Parameters
 
- *<string\>*
- :   The string to be analyzed to determine whether the string represents a valid numeric value.
 
- 
+<dl>
+<dt><b>
+
+*<string\>*
+
+</b></dt>
+<dd>
+
+The string to be analyzed to determine whether the string represents a valid numeric value.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiof82be4309ee34e0dab5a3148c3d56fc6__section_i3p_fkh_trb"/>
 

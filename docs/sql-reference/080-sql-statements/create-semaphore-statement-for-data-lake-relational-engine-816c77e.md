@@ -6,11 +6,6 @@ Creates or replaces a semaphore and establishes the initial value for its counte
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -26,39 +21,97 @@ CREATE [ OR REPLACE | TEMPORARY ] SEMAPHORE [ IF NOT EXISTS ] [ <owner>.]<semaph
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 ## Parameters
 
- *<owner\>*
- :   The owner of the semaphore.
 
-  *<semaphore-name\>*
- :   The name of the semaphore. Specify a valid identifier in the CHAR database collation.
+<dl>
+<dt><b>
 
-  OR REPLACE clause
- :   Use this clause to overwrite \(update\) the definition of a permanent semaphore of the same name, if one exists.
+*<owner\>*
 
-    If the OR REPLACE clause is specified, and a semaphore with this name is in use at the time, then the statement returns an error.
+</b></dt>
+<dd>
 
-    You cannot use this clause with the TEMPORARY or IF NOT EXISTS clauses.
+The owner of the semaphore.
 
-  TEMPORARY clause
- :   Use this clause to create a temporary semaphore.
 
-    Do not use this clause with the OR REPLACE clause.
 
-  IF NOT EXISTS clause
- :   Use this clause to create a semaphore only if it doesn't already exist. If a semaphore exists with the same name and same lifespan \(permanent or temporary\), then nothing happens and no error is returned.
+</dd><dt><b>
 
-    You cannot use this clause with the OR REPLACE clause.
+*<semaphore-name\>*
 
-  START WITH clause
- :   Use this clause to specify the initial value for the semaphore counter. If this clause is not specified, then *<initial-count\>* is set to 0.
+</b></dt>
+<dd>
 
-    *<initial-count\>* can be specified using a variable \(for example, ***START WITH @initial-count***\).
+The name of the semaphore. Specify a valid identifier in the CHAR database collation.
 
-    If you set *<initial-count\>* to NULL, or if it is set to a variable and the variable value is NULL, the behavior is equivalent to not specifying the clause.
 
- 
+
+</dd><dt><b>
+
+OR REPLACE clause
+
+</b></dt>
+<dd>
+
+Use this clause to overwrite \(update\) the definition of a permanent semaphore of the same name, if one exists.
+
+If the OR REPLACE clause is specified, and a semaphore with this name is in use at the time, then the statement returns an error.
+
+You cannot use this clause with the TEMPORARY or IF NOT EXISTS clauses.
+
+
+
+</dd><dt><b>
+
+TEMPORARY clause
+
+</b></dt>
+<dd>
+
+Use this clause to create a temporary semaphore.
+
+Do not use this clause with the OR REPLACE clause.
+
+
+
+</dd><dt><b>
+
+IF NOT EXISTS clause
+
+</b></dt>
+<dd>
+
+Use this clause to create a semaphore only if it doesn't already exist. If a semaphore exists with the same name and same lifespan \(permanent or temporary\), then nothing happens and no error is returned.
+
+You cannot use this clause with the OR REPLACE clause.
+
+
+
+</dd><dt><b>
+
+START WITH clause
+
+</b></dt>
+<dd>
+
+Use this clause to specify the initial value for the semaphore counter. If this clause is not specified, then *<initial-count\>* is set to 0.
+
+*<initial-count\>* can be specified using a variable \(for example, `START WITH @initial-count`\).
+
+If you set *<initial-count\>* to NULL, or if it is set to a variable and the variable value is NULL, the behavior is equivalent to not specifying the clause.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -92,10 +145,23 @@ Automatic commit, but only for permanent semaphores.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following statement creates a semaphore called license\_counter and sets its counter to 3:
 

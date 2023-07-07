@@ -402,16 +402,45 @@ Indicates whether RESTORE TABLE privileges have been granted. Possible values ar
 
 There are several types of privileges that can be granted. Each privilege can have one of the following three values.
 
- N
- :   No, the grantee hasn’t been granted this privilege by the grantor.
 
-  Y
- :   Yes, the grantee has been given this privilege by the grantor.
+<dl>
+<dt><b>
 
-  G
- :   The grantee has been given this privilege and can grant the same privilege to another user.
+N
 
- 
+</b></dt>
+<dd>
+
+No, the grantee hasn’t been granted this privilege by the grantor.
+
+
+
+</dd><dt><b>
+
+Y
+
+</b></dt>
+<dd>
+
+Yes, the grantee has been given this privilege by the grantor.
+
+
+
+</dd><dt><b>
+
+G
+
+</b></dt>
+<dd>
+
+The grantee has been given this privilege and can grant the same privilege to another user.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3beab25c6c5f1014b1f7d85f1fe9e90a__SYSTABLEPERM_constraints1"/>
 
@@ -436,5 +465,5 @@ FOREIGN KEY (grantee) REFERENCES SYS.ISYSUSER (user_id)
 **Related Information**  
 
 
-[SYSTABLEPERM System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/7808ea6465984320b56b55cebdb45ae1.html "Privileges on tables and views are stored in the SYS.SYSTABLEPERM system view. Each row in this view corresponds to one table, one user ID granting the privilege (grantor) and one user ID granted the privilege (grantee).") :arrow_upper_right:
+[SYSTABLEPERM System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7808ea6465984320b56b55cebdb45ae1.html "Privileges on tables and views are stored in the SYS.SYSTABLEPERM system view. Each row in this view corresponds to one table, one user ID granting the privilege (grantor) and one user ID granted the privilege (grantee).") :arrow_upper_right:
 

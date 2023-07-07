@@ -6,11 +6,6 @@ Create a new user, and can also be used to change a password. However, it is rec
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -26,14 +21,32 @@ GRANT CONNECT
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa3e04cc984f2101598aba78be9f2b17d__IQ_Parameters"/>
 
 ## Parameters
 
- *<userID\>*
- :   Must be the name of an existing user or role that has a login password. Separate multiple user\_IDs with commas.
 
- 
+<dl>
+<dt><b>
+
+*<userID\>*
+
+</b></dt>
+<dd>
+
+Must be the name of an existing user or role that has a login password. Separate multiple user\_IDs with commas.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa3e04cc984f2101598aba78be9f2b17d__IQ_Usage"/>
 

@@ -6,11 +6,6 @@ Removes a users membership in a role or his or her ability to administer the rol
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -29,20 +24,54 @@ FROM { <system-role> | <user_id> } [, ...]
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loio189a04b4a6cb4098bebcc34f16a78afb__section_lvp_wcj_twb"/>
 
 ## Parameters
 
- *<user-defined-role\>*
- :   Must already exist in the database. Separate multiple role names with commas.
 
-  *<user\_id\>*
- :   Must be the name of an existing user or role that has a login password. Separate multiple user\_IDs with commas.
+<dl>
+<dt><b>
 
-  \{ EXERCISE | ADMIN \} OPTION FOR
- :   Specify the ADMIN OPTION FOR clause to revoke administration rights for the role, but leave exercise rights. Specify the EXERCISE OPTION FOR clause to revoke exercise rights for the role, but leave administration rights. If the clause is not specified, both rights are revoked.
+*<user-defined-role\>*
 
- 
+</b></dt>
+<dd>
+
+Must already exist in the database. Separate multiple role names with commas.
+
+
+
+</dd><dt><b>
+
+*<user\_id\>*
+
+</b></dt>
+<dd>
+
+Must be the name of an existing user or role that has a login password. Separate multiple user\_IDs with commas.
+
+
+
+</dd><dt><b>
+
+\{ EXERCISE | ADMIN \} OPTION FOR
+
+</b></dt>
+<dd>
+
+Specify the ADMIN OPTION FOR clause to revoke administration rights for the role, but leave exercise rights. Specify the EXERCISE OPTION FOR clause to revoke exercise rights for the role, but leave administration rights. If the clause is not specified, both rights are revoked.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio189a04b4a6cb4098bebcc34f16a78afb__section_igk_xcj_twb"/>
 
@@ -66,13 +95,37 @@ When revoking a role from the MANAGE ROLES system privilege, you must use the sp
 
 The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
 
- Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
- :   You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
-  Connected directly to data lake Relational Engine as a data lake Relational Engine user:
- :   Requires the MANAGE ROLES system privilege.
+<dl>
+<dt><b>
 
- 
+Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+
+
+</dd><dt><b>
+
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+Requires the MANAGE ROLES system privilege.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio189a04b4a6cb4098bebcc34f16a78afb__section_npx_ycj_twb"/>
 

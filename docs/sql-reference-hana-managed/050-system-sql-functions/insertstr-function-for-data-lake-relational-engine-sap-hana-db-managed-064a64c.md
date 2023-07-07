@@ -16,16 +16,45 @@ INSERTSTR ( <numeric-expression>, <string-expression1>, <string-expression2> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The position after which *<string-expression2\>* is to be inserted. Use zero to insert a string at the beginning.
 
-  *<string-expression1\>*
- :   The string into which *<string-expression2\>* is to be inserted.
+<dl>
+<dt><b>
 
-  *<string-expression2\>*
- :   The string to be inserted.
+*<numeric-expression\>*
 
- 
+</b></dt>
+<dd>
+
+The position after which *<string-expression2\>* is to be inserted. Use zero to insert a string at the beginning.
+
+
+
+</dd><dt><b>
+
+*<string-expression1\>*
+
+</b></dt>
+<dd>
+
+The string into which *<string-expression2\>* is to be inserted.
+
+
+
+</dd><dt><b>
+
+*<string-expression2\>*
+
+</b></dt>
+<dd>
+
+The string to be inserted.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio064a64ca374142608c2c968248d9bbe7__section_ez1_1ph_trb"/>
 

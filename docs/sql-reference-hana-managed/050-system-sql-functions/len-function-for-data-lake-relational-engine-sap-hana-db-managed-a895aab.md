@@ -16,10 +16,23 @@ LEN ( <string_expr> )
 
 ## Parameters
 
- *<string\_expr\>*
- :   The string expression to be evaluated.
 
- 
+<dl>
+<dt><b>
+
+*<string\_expr\>*
+
+</b></dt>
+<dd>
+
+The string expression to be evaluated.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa895aabb25c84638b38c77cd78d7ad00__section_ckc_4ch_trb"/>
 

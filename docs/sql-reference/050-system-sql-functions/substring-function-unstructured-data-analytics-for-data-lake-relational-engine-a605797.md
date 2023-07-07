@@ -16,16 +16,45 @@ The `SUBSTRING` function returns a variable-length character string of the `LONG
 
 ## Parameters
 
- *<long-varchar-column\>*
- :   The name of a `LONG VARCHAR` column or variable.
 
-  *<start\>*
- :   An integer expression indicating the start of the substring. A positive integer starts from the beginning of the string, with the first character at position 1. A negative integer specifies a substring starting from the end of the string, with the final character at position -1.
+<dl>
+<dt><b>
 
-  *<length\>*
- :   An integer expression indicating the character length of the substring. A positive length specifies the number of characters to return, starting at the *<start\>* position. A negative length specifies the number of characters to return, ending at the *<start\>* position.
+*<long-varchar-column\>*
 
- 
+</b></dt>
+<dd>
+
+The name of a `LONG VARCHAR` column or variable.
+
+
+
+</dd><dt><b>
+
+*<start\>*
+
+</b></dt>
+<dd>
+
+An integer expression indicating the start of the substring. A positive integer starts from the beginning of the string, with the first character at position 1. A negative integer specifies a substring starting from the end of the string, with the final character at position -1.
+
+
+
+</dd><dt><b>
+
+*<length\>*
+
+</b></dt>
+<dd>
+
+An integer expression indicating the character length of the substring. A positive length specifies the number of characters to return, starting at the *<start\>* position. A negative length specifies the number of characters to return, ending at the *<start\>* position.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa605797284f210158739abd33dbbc317__iq_iquda_188"/>
 
@@ -38,5 +67,5 @@ When the `ansi_substring` database option is set to ON \(default\), negative val
 **Related Information**  
 
 
-[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_1_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
+[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
 

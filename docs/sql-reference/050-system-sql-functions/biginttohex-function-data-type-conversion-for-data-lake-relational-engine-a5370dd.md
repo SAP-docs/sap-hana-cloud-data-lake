@@ -16,10 +16,23 @@ BIGINTTOHEX ( <integer-expression> )
 
 ## Parameters
 
- *<integer-expression\>*
- :   The integer to be converted to hexadecimal.
 
- 
+<dl>
+<dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The integer to be converted to hexadecimal.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5370dd584f21015a902e1868e059b79__iq_refbb_259"/>
 

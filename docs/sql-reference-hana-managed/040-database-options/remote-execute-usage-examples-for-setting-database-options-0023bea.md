@@ -11,8 +11,7 @@ When syntax within the REMOTE\_EXECUTE procedure contains single quotes, they mu
 This statement temporarily sets the DATE\_FORMAT option to YYY-DD-MMM.
 
 ```
-CALL [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.REMOTE_EXECUTE (' 
+CALL SYSHDL_CONTAINER1.REMOTE_EXECUTE (' 
    SET TEMPORARY OPTION DATE_FORMAT = "YYYY-DD-MMM" 
 ');
 ```
@@ -20,8 +19,7 @@ CALL [/pandoc/div/div/horizontalrule/codeblock/span/span
 This statement turns on the CONVERSION\_ERROR option.
 
 ```
-CALL [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.REMOTE_EXECUTE (' 
+CALL SYSHDL_CONTAINER1.REMOTE_EXECUTE (' 
    SET OPTION SYSRDL#CG.CONVERSION_ERROR = "ON" 
 ');
 ```

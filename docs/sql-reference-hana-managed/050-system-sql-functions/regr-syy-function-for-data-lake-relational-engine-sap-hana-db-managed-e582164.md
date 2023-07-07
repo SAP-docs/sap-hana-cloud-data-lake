@@ -6,33 +6,83 @@ Returns values that can evaluate the statistical validity of a regression model.
 
 
 
- Syntax 1
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1
+
+</b></dt>
+<dd>
+
+```
 REGR_SYY(<dependent-expression>, <independent-expression>)
 ```
 
-  Syntax 2
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2
+
+</b></dt>
+<dd>
+
+```
 REGR_SYY(<dependent-expression>, <independent-expression>)
 OVER (<window-spec>)
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioe582164fac45433190299553edc9fb6c__section_klr_3f5_vrb"/>
 
 ## Parameters
 
- *<dependent-expression\>*
- :   The variable that is affected by the independent variable.
 
-  *<independent-expression\>*
- :   The variable that influences the outcome.
+<dl>
+<dt><b>
 
-  *<window-spec\>*
- :   Specified when using this function as a window function.
+*<dependent-expression\>*
 
- 
+</b></dt>
+<dd>
+
+The variable that is affected by the independent variable.
+
+
+
+</dd><dt><b>
+
+*<independent-expression\>*
+
+</b></dt>
+<dd>
+
+The variable that influences the outcome.
+
+
+
+</dd><dt><b>
+
+*<window-spec\>*
+
+</b></dt>
+<dd>
+
+Specified when using this function as a window function.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioe582164fac45433190299553edc9fb6c__section_htz_3f5_vrb"/>
 

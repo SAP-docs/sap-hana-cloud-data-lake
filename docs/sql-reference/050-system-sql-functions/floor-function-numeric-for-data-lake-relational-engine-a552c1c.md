@@ -16,10 +16,23 @@ FLOOR ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The number, usually a float.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The number, usually a float.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa552c1cc84f21015bfc3d6309d6785d6__FLOOR_returns1"/>
 
@@ -67,5 +80,5 @@ DOUBLE
 
 [CEILING Function \[Numeric\] for Data Lake Relational Engine](ceiling-function-numeric-for-data-lake-relational-engine-a53acd1.md "Returns the ceiling (smallest integer not less than) of a number.")
 
-[FLOOR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/0beceabbce184f14a1a3fd1482727a2d.html "Returns the floor of (largest integer not greater than) a number.") :arrow_upper_right:
+[FLOOR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/0beceabbce184f14a1a3fd1482727a2d.html "Returns the floor of (largest integer not greater than) a number.") :arrow_upper_right:
 

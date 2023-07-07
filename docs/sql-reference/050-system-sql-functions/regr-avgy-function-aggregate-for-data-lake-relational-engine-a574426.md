@@ -6,33 +6,83 @@ Computes the average of the dependent variable of the regression line.
 
 
 
- Syntax 1
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1
+
+</b></dt>
+<dd>
+
+```
 REGR_AVGY( <dependent-expression>, <independent-expression> )
 ```
 
-  Syntax 2
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2
+
+</b></dt>
+<dd>
+
+```
 REGR_AVGY( <dependent-expression>, <independent-expression> )
 OVER ( <window-spec> )
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa574426e84f210159d5d8adecd1f70f2__REGR_AVGY_parm1"/>
 
 ## Parameters
 
- *<dependent-expression\>*
- :   The variable that is affected by the independent variable.
 
-  *<independent-expression\>*
- :   The variable that influences the outcome.
+<dl>
+<dt><b>
 
-  *<window-spec\>*
- :   Specified when using this function as a window function.
+*<dependent-expression\>*
 
- 
+</b></dt>
+<dd>
+
+The variable that is affected by the independent variable.
+
+
+
+</dd><dt><b>
+
+*<independent-expression\>*
+
+</b></dt>
+<dd>
+
+The variable that influences the outcome.
+
+
+
+</dd><dt><b>
+
+*<window-spec\>*
+
+</b></dt>
+<dd>
+
+Specified when using this function as a window function.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa574426e84f210159d5d8adecd1f70f2__REGR_AVGY_returns1"/>
 
@@ -85,5 +135,5 @@ This function returns the value 49988.6232.
 **Related Information**  
 
 
-[REGR_AVGY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/a54d2f0bde2f44d6bb973767b6fc47f4.html "Computes the average of the dependent variable of the regression line.") :arrow_upper_right:
+[REGR_AVGY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/a54d2f0bde2f44d6bb973767b6fc47f4.html "Computes the average of the dependent variable of the regression line.") :arrow_upper_right:
 

@@ -18,13 +18,34 @@ MONTHS ( <date-expression>
 
 ## Parameters
 
- *<date-expression\>*
- :   A date and time.
 
-  *<integer-expression\>*
- :   The number of months to be added to the *<date-expression\>*. If *<integer-expression\>* is negative, the appropriate number of months are subtracted from the date/time value. If you supply an integer expression, the *<date-expression\>* must be explicitly cast as a `datetime` data type.
+<dl>
+<dt><b>
 
- 
+*<date-expression\>*
+
+</b></dt>
+<dd>
+
+A date and time.
+
+
+
+</dd><dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number of months to be added to the *<date-expression\>*. If *<integer-expression\>* is negative, the appropriate number of months are subtracted from the date/time value. If you supply an integer expression, the *<date-expression\>* must be explicitly cast as a `datetime` data type.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa566ced484f21015ad419bb64c76680c__months_returns1"/>
 
@@ -107,5 +128,5 @@ The third syntax adds *<integer-expression\>* months to the given date. If the n
 
 [YEARS Function \[Date and Time\] for Data Lake Relational Engine](years-function-date-and-time-for-data-lake-relational-engine-a5926bf.md "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.")
 
-[MONTHS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/8c326df1855d47f2ad7c9a6a658b0db9.html "Returns the number of months since an arbitrary starting date/time or the number of months between two specified date/times, or adds the specified integer-expression number of months to a date/time.") :arrow_upper_right:
+[MONTHS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/8c326df1855d47f2ad7c9a6a658b0db9.html "Returns the number of months since an arbitrary starting date/time or the number of months between two specified date/times, or adds the specified integer-expression number of months to a date/time.") :arrow_upper_right:
 

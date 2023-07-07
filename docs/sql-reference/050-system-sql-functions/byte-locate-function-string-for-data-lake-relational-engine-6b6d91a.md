@@ -16,18 +16,47 @@ BYTE_LOCATE( <source_string> , <search_string> [ , <start_position> ] )
 
 ## Parameters
 
-  *<source\_string\>* 
- :   The string to be searched.
 
-   *<search\_string\>* 
- :   The string to be searched for within *<source\_string\>*.
+<dl>
+<dt><b>
 
-   *<start\_position\>* 
- :   The byte position in the string to begin the search. The first byte is position 1. If the starting offset is negative, then the BYTE\_LOCATE function returns the last matching string offset rather than the first, as counted from the end of the string. A negative offset indicates how much of the end of the string is to be excluded from the search. The number of bytes excluded is calculated as `(-1 * offset) -1`.
+ *<source\_string\>* 
 
-    Although *<start\_position\>* acts as an offset for where the search is started, the return value still reflects the actual starting position of the matching string, regardless of where the search was started.
+</b></dt>
+<dd>
 
- 
+The string to be searched.
+
+
+
+</dd><dt><b>
+
+ *<search\_string\>* 
+
+</b></dt>
+<dd>
+
+The string to be searched for within *<source\_string\>*.
+
+
+
+</dd><dt><b>
+
+ *<start\_position\>* 
+
+</b></dt>
+<dd>
+
+The byte position in the string to begin the search. The first byte is position 1. If the starting offset is negative, then the BYTE\_LOCATE function returns the last matching string offset rather than the first, as counted from the end of the string. A negative offset indicates how much of the end of the string is to be excluded from the search. The number of bytes excluded is calculated as `(-1 * offset) -1`.
+
+Although *<start\_position\>* acts as an offset for where the search is started, the return value still reflects the actual starting position of the matching string, regardless of where the search was started.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio6b6d91ad148841f781fb65d0a68a8b82__BYTE_LOCATE_returns1"/>
 
@@ -58,5 +87,5 @@ SELECT BYTE_LOCATE(
 **Related Information**  
 
 
-[BYTE_LOCATE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/65d438896f2948c4afb37190924dbf7e.html "Returns the position of one BYTE string within another.") :arrow_upper_right:
+[BYTE_LOCATE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/65d438896f2948c4afb37190924dbf7e.html "Returns the position of one BYTE string within another.") :arrow_upper_right:
 

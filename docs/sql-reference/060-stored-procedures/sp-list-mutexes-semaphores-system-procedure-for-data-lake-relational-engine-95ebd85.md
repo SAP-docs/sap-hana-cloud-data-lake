@@ -14,10 +14,23 @@ sp_list_mutexes_semaphores( [<oid>] )
 
 ## Parameters
 
- oid
- :   \(For internal use only\) The unsigned bigint object ID parameter. Use the default parameter value NULL.
 
- 
+<dl>
+<dt><b>
+
+oid
+
+</b></dt>
+<dd>
+
+\(For internal use only\) The unsigned bigint object ID parameter. Use the default parameter value NULL.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Result Set
 
@@ -288,16 +301,29 @@ None
 
 ## Privileges
 
-You need to have EXECUTE privilege on the system procedure, and the MONITOR and UPDATE ANY MUTEX SEMAPHORE system privileges.
+Requires EXECUTE object-level privilege on the procedure, along with the MONITOR and UPDATE ANY MUTEX SEMAPHORE system privileges.
 
 
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following statement returns information about all of the mutexes and semaphores in the database:
 

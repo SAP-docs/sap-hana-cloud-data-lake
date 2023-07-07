@@ -182,5 +182,5 @@ The SAP SQL Anywhere option FIRST\_DAY\_OF\_WEEK performs the same function, but
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[DATE_FIRST_DAY_OF_WEEK Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/7b332a76259342ac974c9701abf41265.html "Determines the first day of the week.") :arrow_upper_right:
+[DATE_FIRST_DAY_OF_WEEK Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7b332a76259342ac974c9701abf41265.html "Determines the first day of the week.") :arrow_upper_right:
 

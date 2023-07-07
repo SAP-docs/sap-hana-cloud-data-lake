@@ -16,10 +16,23 @@ CEILING ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The number that has the ceiling to be calculated.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The number that has the ceiling to be calculated.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio2201fadee98e4d80a4952cdf3e105c65__section_krc_xtl_srb"/>
 

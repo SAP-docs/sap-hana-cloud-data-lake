@@ -6,11 +6,6 @@ Inserts a single row or a selection of rows, from elsewhere in the current datab
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -20,60 +15,71 @@ Inserts a single row or a selection of rows, from elsewhere in the current datab
 
 
 
- Syntax 1
- :   ```
-INSERT [ INTO ] [ [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/span
-     {""}) [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <table-name> (varname] 
-   [ ( [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <column-name> (varname] [, …] ) ] VALUES [ ( { [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <expression> (varname] | DEFAULT }[, ...] ) ]
+
+<dl>
+<dt><b>
+
+Syntax 1
+
+</b></dt>
+<dd>
+
+```
+INSERT [ INTO ] [ <schema-name>.]<table-name> 
+   [ ( <column-name> [, …] ) ] VALUES [ ( { <expression> | DEFAULT }[, ...] ) ]
 ```
 
-  Syntax 1a
- :   ```
-INSERT [ INTO ] [ [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/span
-     {""}) [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <table-name> (varname] 
+
+
+</dd><dt><b>
+
+Syntax 1a
+
+</b></dt>
+<dd>
+
+```
+INSERT [ INTO ] [ <schema-name>.]<table-name> 
    DEFAULT VALUES
 ```
 
-  Syntax 2
- :   ```
-INSERT [ INTO ] [ [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/span
-     {""}) [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <table-name> (varname] [ ( [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <column-name> (varname] [, …] ) ]
-   ... [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <insert-load-options> (varname] [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <insert-select-load-options> (varname]
-   ... [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <select-statement> (varname]
+
+
+</dd><dt><b>
+
+Syntax 2
+
+</b></dt>
+<dd>
+
+```
+INSERT [ INTO ] [ <schema-name>.]<table-name> [ ( <column-name> [, …] ) ]
+   ... <insert-load-options> <insert-select-load-options>
+   ... <select-statement>
 ```
 
-  Syntax 3
- :   ```
-INSERT [ INTO ] [ [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/span
-     {""}) [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <table-name> (varname][ ( [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <column-name> (varname] [, …] ) ]
-    ... [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <insert-select-load-options> (varname] [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <insert-select-load-options> (varname][/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/span
-     {""}) 
-    ... LOCATION '[/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/span/varname
-     {"varname"}) <servername.dbname> (varname]' [ [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/span/varname
-     {"varname"}) <location-options> (varname] ] (span]
-   ... { [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <select-statement> (varname] | '[/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-     {"varname"}) <select statement> (varname]' }
+
+
+</dd><dt><b>
+
+Syntax 3
+
+</b></dt>
+<dd>
+
+```
+INSERT [ INTO ] [ <schema-name>.]<table-name>[ ( <column-name> [, …] ) ]
+    ... <insert-select-load-options> <insert-select-load-options>
+    ... LOCATION '<servername.dbname>' [ <location-options> ]
+   ... { <select-statement> | '<select statement>' }
 ```
 
- ```
+
+
+</dd>
+</dl>
+
+```
 <insert-load-options> ::=
    [ LIMIT <number-of-rows> ] 
    [ NOTIFY <number-of-rows> ] 
@@ -118,76 +124,176 @@ INSERT [ INTO ] [ [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/c
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loiocbe6857cc94b4923a6ee5917651f5084__section_lcz_mjr_brb"/>
 
 ## Parameters
 
- *<insert-load-options\>*
- :   Options that constrain the load:
 
-    -   LIMIT – specifies the maximum number of rows to insert into the table from a query. The default is 0 for no limit. The maximum is 2 GB -1.
-    -   NOTIFY – specifies that you be notified with a message each time the number of rows are successfully inserted into the table. The default is every 100,000 rows.
-    -   SKIP – defines the number of rows to skip at the beginning of the input tables for this insert. The default is 0.
+<dl>
+<dt><b>
 
-  *<insert-select-load-options\>*
- :    WORD SKIP
- :   Allows the load to continue when it encounters data longer than the limit specified when the word index was created. The *<number\>* parameter specifies the number of times to ignore the error. Setting this option to 0 means there is no limit.
+*<insert-load-options\>*
 
-    If a row is not loaded because a word exceeds the maximum permitted size, a warning is written to the `.iqmsg` file. WORD size violations can be optionally logged to the MESSAGE LOG file. If the option is not specified, the operation rolls back on the first occurrence of a word that is longer than the specified limit.
+</b></dt>
+<dd>
 
-  IGNORE CONSTRAINT
- :   Determines whether the load engine ignores CHECK, UNIQUE, NULL, DATA VALUE, and FOREIGN KEY integrity constraint violations that occur during a load and the maximum number of violations to ignore before initiating a rollback.
+Options that constrain the load:
 
-    If *<limit\>* is zero, the number of CHECK constraint violations to ignore is infinite. If CHECK is not specified, the first occurrence of any CHECK constraint violation causes the load to roll back. If *<limit\>* is nonzero, then the *<limit\>* +1 occurrence of a CHECK constraint violation causes the load to roll back
-
-  MESSAGE LOG
- :   Specifies the file names where the load engine logs integrity constraint violations. Timestamps indicating the start and completion of the load are logged in both the MESSAGE LOG and the ROW LOG files. Both MESSAGE LOG and ROW LOG must be specified, or no information about integrity violations is logged.
-
-    Information is logged on all integrity constraint-type violations specified in the ONLY LOG clause or for all word index-length violations if the keyword WORD is specified. If the ONLY LOG clause is not specified, no information on integrity constraint violations is logged. Only the timestamps indicating the start and completion of the load are logged.
-
-  LOG DELIMITED BY
- :   Specifies the separator between data values in the ROW LOG file. The default separator is a comma.
-
-   *<location-options\>*
- :    PACKETSIZE
- :   Specifies the TDS packet-size in bytes. The default TDS packet-size on most platforms is 512 bytes. If the packet size is not specified or is specified as zero, then the default packet size value for the platform is used.
-
-    The packet-size value must be a multiple of 512, either equal to the default network packet size or between the default network packet size and the maximum network packet size. The maximum network packet size and the default network packet size are multiples of 512 in the range 512 – 524288 bytes. The maximum network packet size is always greater than or equal to the default network packet size.
-
-  QUOTED\_IDENTIFIER
- :   Sets the QUOTED\_IDENTIFIER option on the remote server. The default setting is OFF. You set QUOTED\_IDENTIFIER to ON only if any of the identifiers in the SELECT statement are enclosed in double quotes, as in this example using "c1":
-
-    ```
-    INSERT INTO foo
-    LOCATION 'ase.database'
-    QUOTED_IDENTIFIER ON {select "c1" from xxx}; 
-    ```
-
-  ISOLATION LEVEL
- :   Specifies an isolation level for the connection to a remote server. The levels and their characteristics are:
-
-    -   READ UNCOMMITTED
-
-        -   Isolation level 0
-        -   Read permitted on row with or without write lock
-        -   No read locks are applied
-        -   No guarantee that concurrent transaction will not modify row or roll back changes to row
-
-    -   READ COMMITTED
-
-        -   Isolation level 1
-        -   Read only permitted on row with no write lock
-        -   Read lock acquired and held for read on current row only, but released when cursor moves off the row
-        -   No guarantee that data will not change during transaction
-
-    -   SERIALIZABLE
-
-        -   Isolation level 3
-        -   Read only permitted on rows in result without write lock
-        -   Read locks acquired when cursor is opened and held until transaction ends
+-   LIMIT – specifies the maximum number of rows to insert into the table from a query. The default is 0 for no limit. The maximum is 2 GB -1.
+-   NOTIFY – specifies that you be notified with a message each time the number of rows are successfully inserted into the table. The default is every 100,000 rows.
+-   SKIP – defines the number of rows to skip at the beginning of the input tables for this insert. The default is 0.
 
 
-  
+
+</dd><dt><b>
+
+*<insert-select-load-options\>*
+
+</b></dt>
+<dd>
+
+
+<dl>
+<dt><b>
+
+WORD SKIP
+
+</b></dt>
+<dd>
+
+Allows the load to continue when it encounters data longer than the limit specified when the word index was created. The *<number\>* parameter specifies the number of times to ignore the error. Setting this option to 0 means there is no limit.
+
+If a row is not loaded because a word exceeds the maximum permitted size, a warning is written to the `.iqmsg` file. WORD size violations can be optionally logged to the MESSAGE LOG file. If the option is not specified, the operation rolls back on the first occurrence of a word that is longer than the specified limit.
+
+
+
+</dd><dt><b>
+
+IGNORE CONSTRAINT
+
+</b></dt>
+<dd>
+
+Determines whether the load engine ignores CHECK, UNIQUE, NULL, DATA VALUE, and FOREIGN KEY integrity constraint violations that occur during a load and the maximum number of violations to ignore before initiating a rollback.
+
+If *<limit\>* is zero, the number of CHECK constraint violations to ignore is infinite. If CHECK is not specified, the first occurrence of any CHECK constraint violation causes the load to roll back. If *<limit\>* is nonzero, then the *<limit\>* +1 occurrence of a CHECK constraint violation causes the load to roll back
+
+
+
+</dd><dt><b>
+
+MESSAGE LOG
+
+</b></dt>
+<dd>
+
+Specifies the file names where the load engine logs integrity constraint violations. Timestamps indicating the start and completion of the load are logged in both the MESSAGE LOG and the ROW LOG files. Both MESSAGE LOG and ROW LOG must be specified, or no information about integrity violations is logged.
+
+Information is logged on all integrity constraint-type violations specified in the ONLY LOG clause or for all word index-length violations if the keyword WORD is specified. If the ONLY LOG clause is not specified, no information on integrity constraint violations is logged. Only the timestamps indicating the start and completion of the load are logged.
+
+
+
+</dd><dt><b>
+
+LOG DELIMITED BY
+
+</b></dt>
+<dd>
+
+Specifies the separator between data values in the ROW LOG file. The default separator is a comma.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+*<location-options\>*
+
+</b></dt>
+<dd>
+
+
+<dl>
+<dt><b>
+
+PACKETSIZE
+
+</b></dt>
+<dd>
+
+Specifies the TDS packet-size in bytes. The default TDS packet-size on most platforms is 512 bytes. If the packet size is not specified or is specified as zero, then the default packet size value for the platform is used.
+
+The packet-size value must be a multiple of 512, either equal to the default network packet size or between the default network packet size and the maximum network packet size. The maximum network packet size and the default network packet size are multiples of 512 in the range 512 – 524288 bytes. The maximum network packet size is always greater than or equal to the default network packet size.
+
+
+
+</dd><dt><b>
+
+QUOTED\_IDENTIFIER
+
+</b></dt>
+<dd>
+
+Sets the QUOTED\_IDENTIFIER option on the remote server. The default setting is OFF. You set QUOTED\_IDENTIFIER to ON only if any of the identifiers in the SELECT statement are enclosed in double quotes, as in this example using "c1":
+
+```
+INSERT INTO foo
+LOCATION 'ase.database'
+QUOTED_IDENTIFIER ON {select "c1" from xxx}; 
+```
+
+
+
+</dd><dt><b>
+
+ISOLATION LEVEL
+
+</b></dt>
+<dd>
+
+Specifies an isolation level for the connection to a remote server. The levels and their characteristics are:
+
+-   READ UNCOMMITTED
+
+    -   Isolation level 0
+    -   Read permitted on row with or without write lock
+    -   No read locks are applied
+    -   No guarantee that concurrent transaction will not modify row or roll back changes to row
+
+-   READ COMMITTED
+
+    -   Isolation level 1
+    -   Read only permitted on row with no write lock
+    -   Read lock acquired and held for read on current row only, but released when cursor moves off the row
+    -   No guarantee that data will not change during transaction
+
+-   SERIALIZABLE
+
+    -   Isolation level 3
+    -   Read only permitted on rows in result without write lock
+    -   Read locks acquired when cursor is opened and held until transaction ends
+
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiocbe6857cc94b4923a6ee5917651f5084__section_efv_njr_brb"/>
 
@@ -252,7 +358,10 @@ The result of a SELECT…FROM may be slightly different from the result of an IN
 
 ### 
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

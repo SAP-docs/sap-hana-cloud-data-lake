@@ -16,10 +16,23 @@ DATETIME ( <expression> )
 
 ## Parameters
 
- *<expression\>*
- :   The expression to be converted. The expression is usually a string. Conversion errors may be reported.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The expression to be converted. The expression is usually a string. Conversion errors may be reported.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio87c2ebfc15364ff0b9b4e7dc0fa66207__section_hp5_3cm_srb"/>
 

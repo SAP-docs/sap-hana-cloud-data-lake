@@ -6,34 +6,84 @@ Returns a 4-digit number corresponding to the year of a given date/time, returns
 
 
 
- Syntax 1: Return the number of years between year 0000 and a TIMESTAMP value
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1: Return the number of years between year 0000 and a TIMESTAMP value
+
+</b></dt>
+<dd>
+
+```
 YEARS( <timestamp-expression> )
 ```
 
-  Syntax 2: Return the number of years between two TIMESTAMP values
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2: Return the number of years between two TIMESTAMP values
+
+</b></dt>
+<dd>
+
+```
 YEARS( <timestamp-expression>, <timestamp-expression> )
 ```
 
-  Syntax 3: Add years to a TIMESTAMP value
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 3: Add years to a TIMESTAMP value
+
+</b></dt>
+<dd>
+
+```
 YEARS( <timestamp-expression>, <integer-expression> )
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5926bf484f210159b3980226202882f__YEARS_parm1"/>
 
 ## Parameters
 
-  *<timestamp-expression\>* 
- :   A date and time value of type TIMESTAMP.
 
-  *<integer-expression\>*
- :   The number of years \(as a SMALLINT value\) to be added to *<timestamp-expression\>*. If *<integer-expression\>* is negative, the appropriate number of years are subtracted from *<timestamp-expression\>*. If you supply an *<integer-expression\>*, the *<timestamp-expression\>* must be explicitly cast as a DATE, TIME, or TIMESTAMP value. If *<timestamp-expression\>* is a TIME, the current year is assumed.
+<dl>
+<dt><b>
 
- 
+ *<timestamp-expression\>* 
+
+</b></dt>
+<dd>
+
+A date and time value of type TIMESTAMP.
+
+
+
+</dd><dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number of years \(as a SMALLINT value\) to be added to *<timestamp-expression\>*. If *<integer-expression\>* is negative, the appropriate number of years are subtracted from *<timestamp-expression\>*. If you supply an *<integer-expression\>*, the *<timestamp-expression\>* must be explicitly cast as a DATE, TIME, or TIMESTAMP value. If *<timestamp-expression\>* is a TIME, the current year is assumed.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5926bf484f210159b3980226202882f__YEARS_returs1"/>
 
@@ -114,5 +164,5 @@ Syntax 3 adds an *<integer-expression\>* number of years to the given date. If t
 
 [YEAR Function \[Date and Time\] for Data Lake Relational Engine](year-function-date-and-time-for-data-lake-relational-engine-a591eb9.md "Returns a 4-digit number corresponding to the year of the given date/time.")
 
-[YEARS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/1d6751f84bf14c8ca120407566bb798f.html "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.") :arrow_upper_right:
+[YEARS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/1d6751f84bf14c8ca120407566bb798f.html "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.") :arrow_upper_right:
 

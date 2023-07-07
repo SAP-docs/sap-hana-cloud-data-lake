@@ -16,12 +16,25 @@ VARIANCE ( [ ALL ] <expression> )
 
 ## Parameters
 
- *<expression\>*
- :   Any numeric data type \(`FLOAT`, `REAL`, or `DOUBLE`\) expression.
 
-    The expression \(commonly a column name\) whose sample-based variance is calculated over a set of rows.
+<dl>
+<dt><b>
 
- 
+*<expression\>*
+
+</b></dt>
+<dd>
+
+Any numeric data type \(`FLOAT`, `REAL`, or `DOUBLE`\) expression.
+
+The expression \(commonly a column name\) whose sample-based variance is calculated over a set of rows.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio974f709b109d4fb1bfe049dc4b05d7de__section_rxb_52v_vrb"/>
 
@@ -77,8 +90,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-     51432.000
+    
+         51432.000
 
 
     
@@ -86,8 +99,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-     57090.000
+    
+         57090.000
 
 
     
@@ -95,8 +108,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-     42300.000
+    
+         42300.000
 
 
     
@@ -104,8 +117,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-       43700.00
+    
+           43700.00
 
 
     
@@ -113,8 +126,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-      36500.000
+    
+          36500.000
 
 
     
@@ -122,8 +135,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    138948.000
+    
+        138948.000
 
 
     
@@ -131,8 +144,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-      31200.000
+    
+          31200.000
 
 
     
@@ -140,8 +153,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-        58930.00
+    
+            58930.00
 
 
     
@@ -149,8 +162,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-        75400.00
+    
+            75400.00
 
 
     
@@ -184,8 +197,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-                9.00
+    
+                    9.00
 
 
     
@@ -193,8 +206,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-              14.00
+    
+                  14.00
 
 
     
@@ -202,8 +215,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-              14.00
+    
+                  14.00
 
 
     

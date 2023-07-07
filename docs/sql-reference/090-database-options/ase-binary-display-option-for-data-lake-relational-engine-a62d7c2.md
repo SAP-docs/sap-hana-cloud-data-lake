@@ -164,7 +164,7 @@ Set ASE\_BINARY\_DISPLAY OFF to support bulk copy operations on binary data type
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[LOAD TABLE Statement for Data Lake Relational Engine](../080-sql-statements/load-table-statement-for-data-lake-relational-engine-7ca3f60.md "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, S3-compliant bucket, or a Google Cloud Storage) or from data lake Files containers (the managed object store).")
+[LOAD TABLE Statement for Data Lake Relational Engine \(Non-Parquet Formats\)](../080-sql-statements/load-table-statement-for-data-lake-relational-engine-non-parquet-formats-7ca3f60.md "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or Google Cloud Storage) or from data lake Files containers (the managed object store).")
 
 [Set a Database Option](set-a-database-option-0dcb893.md "You set options with the SET OPTION statement.")
 

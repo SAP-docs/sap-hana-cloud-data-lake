@@ -6,11 +6,6 @@ Creates a schema in the current instance.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,17 +19,43 @@ CREATE SCHEMA [ <owner>.]<schema_name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loio5e20f75f3b664f02b1d92f4a22999105__create_schema_parm1"/>
 
 ## Parameters
 
- *<owner\>*
- :   Specifies who owns the schema. If none specified, the current user becomes the owner. An owner must be a user. It cannot be a role or another schema.
 
-  *<schema\_name\>*
- :   Specifies the name of the schema. The name must be unique for the database. Multiple users cannot have the same schema name and the schema name cannot be the same as any user or role.
+<dl>
+<dt><b>
 
- 
+*<owner\>*
+
+</b></dt>
+<dd>
+
+Specifies who owns the schema. If none specified, the current user becomes the owner. An owner must be a user. It cannot be a role or another schema.
+
+
+
+</dd><dt><b>
+
+*<schema\_name\>*
+
+</b></dt>
+<dd>
+
+Specifies the name of the schema. The name must be unique for the database. Multiple users cannot have the same schema name and the schema name cannot be the same as any user or role.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio5e20f75f3b664f02b1d92f4a22999105__create_schema_remarks1"/>
 

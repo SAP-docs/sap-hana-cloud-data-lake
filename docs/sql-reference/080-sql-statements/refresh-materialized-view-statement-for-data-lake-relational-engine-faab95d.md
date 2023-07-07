@@ -6,11 +6,6 @@ Initializes or refreshes the data in a materialized view by executing its query 
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -19,13 +14,14 @@ Initializes or refreshes the data in a materialized view by executing its query 
 
 
 ```
-REFRESH MATERIALIZED VIEW [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) { [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname]} (span].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <mat_view_name> (varname]
+REFRESH MATERIALIZED VIEW [ { <owner> | <schema-name>}.]<mat_view_name>
    [ FORCE BUILD ]
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -33,10 +29,23 @@ REFRESH MATERIALIZED VIEW [ [/pandoc/div/div/horizontalrule/codeblock/span/span
 
 ## Parameters
 
- FORCE BUILD
- :   By default, when you execute a REFRESH MATERIALIZED VIEW statement, the database server checks whether the materialized view is stale \(that is, underlying tables have changed since the materialized view was last refreshed\). If it is not stale, the refresh does not take place. Specify the FORCE BUILD clause to force a refresh of the materialized view regardless of whether the materialized view is stale.
 
- 
+<dl class="glossary">
+<dt><b>
+
+FORCE BUILD
+
+</b></dt>
+<dd>
+
+By default, when you execute a REFRESH MATERIALIZED VIEW statement, the database server checks whether the materialized view is stale \(that is, underlying tables have changed since the materialized view was last refreshed\). If it is not stale, the refresh does not take place. Specify the FORCE BUILD clause to force a refresh of the materialized view regardless of whether the materialized view is stale.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiofaab95d872784a4c8d2a7bd3e74faa04__refresh_matview_remarks1"/>
 
@@ -93,10 +102,23 @@ While executing, an exclusive schema lock is placed on the materialized view bei
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 Suppose you create a materialized view, EmployeeConfid99, and then populate it with data using the following statements:
 
@@ -126,7 +148,7 @@ REFRESH MATERIALIZED VIEW EmployeeConfid99 FORCE BUILD;
 
 [DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
 
-[REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/817277ba6ce21014a14fa76ab2f0e6e1.html "Initializes or refreshes the data in a materialized view by executing its query definition.") :arrow_upper_right:
+[REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/817277ba6ce21014a14fa76ab2f0e6e1.html "Initializes or refreshes the data in a materialized view by executing its query definition.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

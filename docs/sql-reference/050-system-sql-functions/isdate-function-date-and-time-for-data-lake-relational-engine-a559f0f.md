@@ -16,10 +16,23 @@ ISDATE ( <string> )
 
 ## Parameters
 
- *<string\>*
- :   The string to be analyzed to determine whether the string represents a valid date.
 
- 
+<dl>
+<dt><b>
+
+*<string\>*
+
+</b></dt>
+<dd>
+
+The string to be analyzed to determine whether the string represents a valid date.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa559f0f684f21015b95ee838e6da62dc__ISDATE_returns1"/>
 
@@ -74,5 +87,5 @@ select
 **Related Information**  
 
 
-[ISDATE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/f28668e5060b4c6db2bc8832b9a5f4cd.html "Tests whether a string argument can be converted to a date.") :arrow_upper_right:
+[ISDATE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/f28668e5060b4c6db2bc8832b9a5f4cd.html "Tests whether a string argument can be converted to a date.") :arrow_upper_right:
 

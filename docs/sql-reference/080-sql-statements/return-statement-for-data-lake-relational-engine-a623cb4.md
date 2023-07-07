@@ -6,11 +6,6 @@ Exits a function or procedure unconditionally, optionally providing a return val
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,16 +19,34 @@ RETURN [ ( <expression> ) ]
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa623cb4484f21015bfd3efd8ac01df2f__IQ_Parameters"/>
 
 ## Parameters
 
- *<expression\>*
- :   If supplied, the value of *<expression\>* is returned as the value of the function or procedure.
 
-    Within a function, the expression should be of the same data type as the RETURN data type of the function.
+<dl>
+<dt><b>
 
- 
+*<expression\>*
+
+</b></dt>
+<dd>
+
+If supplied, the value of *<expression\>* is returned as the value of the function or procedure.
+
+Within a function, the expression should be of the same data type as the RETURN data type of the function.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa623cb4484f21015bfd3efd8ac01df2f__IQ_Usage"/>
 

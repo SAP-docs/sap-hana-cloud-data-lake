@@ -171,7 +171,7 @@ If run on a multiplex database, the default parameter is main, which returns the
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

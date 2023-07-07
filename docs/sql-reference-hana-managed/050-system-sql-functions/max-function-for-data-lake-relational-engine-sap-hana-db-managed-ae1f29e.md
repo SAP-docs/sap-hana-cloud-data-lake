@@ -17,13 +17,34 @@ MAX ( <expression>
 
 ## Parameters
 
- *<expression\>*
- :   The expression for which the maximum value is to be calculated. This is commonly a column name.
 
-  DISTINCT *<column-name\>*
- :   Returns the same as <code>MAX ( <i class="varname">&lt;expression&gt;</i> )</code>, and is included for completeness.
+<dl>
+<dt><b>
 
- 
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The expression for which the maximum value is to be calculated. This is commonly a column name.
+
+
+
+</dd><dt><b>
+
+DISTINCT *<column-name\>*
+
+</b></dt>
+<dd>
+
+Returns the same as <code>MAX ( <i class="varname">&lt;expression&gt;</i> )</code>, and is included for completeness.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioae1f29e228714cf085d6eb1d0ee075f8__section_h3c_p3n_vrb"/>
 

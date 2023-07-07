@@ -6,34 +6,84 @@ Returns the number of weeks since an arbitrary starting date/time, returns the n
 
 
 
- Syntax 1: Return the number of weeks between year 0000 and a TIMESTAMP value
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1: Return the number of weeks between year 0000 and a TIMESTAMP value
+
+</b></dt>
+<dd>
+
+```
 WEEKS( <timestamp-expression> )
 ```
 
-  Syntax 2: Return the number of weeks between two TIMESTAMP values
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2: Return the number of weeks between two TIMESTAMP values
+
+</b></dt>
+<dd>
+
+```
 WEEKS( <timestamp-expression>, <timestamp-expression> )
 ```
 
-  Syntax 3: Add years to a TIMESTAMP value
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 3: Add years to a TIMESTAMP value
+
+</b></dt>
+<dd>
+
+```
 WEEKS( <timestamp-expression>, <integer-expression> )
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio1bad0c474fc14fa299ff73a738157073__section_ijx_f2v_vrb"/>
 
 ## Parameters
 
-  *<timestamp-expression\>* 
- :   A date and time value of type TIMESTAMP.
 
-  *<integer-expression\>*
- :   The number of weeks \(as a SMALLINT value\) to be added to the *<timestamp-expression\>*. If *<integer-expression\>* is negative, the appropriate number of weeks are subtracted from the date/time*<timestamp-expression\>*. Hours, minutes, and seconds are ignored. If you supply an integer expression, the *<timestamp-expression\>* must be explicitly cast as a `DATETIME` data type.
+<dl>
+<dt><b>
 
- 
+ *<timestamp-expression\>* 
+
+</b></dt>
+<dd>
+
+A date and time value of type TIMESTAMP.
+
+
+
+</dd><dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number of weeks \(as a SMALLINT value\) to be added to the *<timestamp-expression\>*. If *<integer-expression\>* is negative, the appropriate number of weeks are subtracted from the date/time*<timestamp-expression\>*. Hours, minutes, and seconds are ignored. If you supply an integer expression, the *<timestamp-expression\>* must be explicitly cast as a `DATETIME` data type.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio1bad0c474fc14fa299ff73a738157073__section_pzy_h2v_vrb"/>
 

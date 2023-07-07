@@ -6,11 +6,6 @@ Drops a semaphore.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -25,18 +20,52 @@ DROP SEMAPHORE [ IF EXISTS ] [ <owner>.]<semaphore-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 ## Parameters
 
- *<owner\>*
- :   The owner of the semaphore.
 
-  *<semaphore-name\>*
- :   The name of the semaphore.
+<dl>
+<dt><b>
 
-  IF EXISTS clause
- :   Use this clause to drop a semaphore only if it exists. If a semaphore does not exist and this clause is specified, then nothing happens and no error is returned.
+*<owner\>*
 
- 
+</b></dt>
+<dd>
+
+The owner of the semaphore.
+
+
+
+</dd><dt><b>
+
+*<semaphore-name\>*
+
+</b></dt>
+<dd>
+
+The name of the semaphore.
+
+
+
+</dd><dt><b>
+
+IF EXISTS clause
+
+</b></dt>
+<dd>
+
+Use this clause to drop a semaphore only if it exists. If a semaphore does not exist and this clause is specified, then nothing happens and no error is returned.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -67,10 +96,23 @@ Automatic commit, but only for permanent semaphores.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following statement drops a semaphore called license\_counter:
 

@@ -6,33 +6,83 @@ Computes the average of the independent variable of the regression line.
 
 
 
- Syntax 1
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1
+
+</b></dt>
+<dd>
+
+```
 REGR_AVGX ( <dependent-expression>, <independent-expression> )
 ```
 
-  Syntax 2
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2
+
+</b></dt>
+<dd>
+
+```
 REGR_AVGX ( <dependent-expression>, <independent-expression> )
 OVER ( <window-spec> )
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa573b70d84f21015a55f85bddd70d598__REGR_AVGX_parm1"/>
 
 ## Parameters
 
- *<dependent-expression\>*
- :   The variable that is affected by the independent variable.
 
-  *<independent-expression\>*
- :   The variable that influences the outcome.
+<dl>
+<dt><b>
 
-  *<window-spec\>*
- :   Specified when using this function as a window function.
+*<dependent-expression\>*
 
- 
+</b></dt>
+<dd>
+
+The variable that is affected by the independent variable.
+
+
+
+</dd><dt><b>
+
+*<independent-expression\>*
+
+</b></dt>
+<dd>
+
+The variable that influences the outcome.
+
+
+
+</dd><dt><b>
+
+*<window-spec\>*
+
+</b></dt>
+<dd>
+
+Specified when using this function as a window function.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa573b70d84f21015a55f85bddd70d598__REGR_AVGX_returns1"/>
 
@@ -85,5 +135,5 @@ SELECT REGR_AVGX( Salary, ( YEAR( NOW() ) - YEAR( BirthDate ) ) )FROM Employees;
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[REGR_AVGX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/af6ea1317edd434a93f5bcece6597333.html "Computes the average of the independent variable of the regression line.") :arrow_upper_right:
+[REGR_AVGX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/af6ea1317edd434a93f5bcece6597333.html "Computes the average of the independent variable of the regression line.") :arrow_upper_right:
 

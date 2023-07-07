@@ -16,19 +16,56 @@ WIDTH_BUCKET ( <expression>, <min_value>, <max_value>, <num_buckets> )
 
 ## Parameters
 
- *<expression\>*
- :   The expression for which the histogram is being created. This expression must evaluate to a numeric or datetime value or to a value that can be implicitly converted to a numeric or datetime value. If *<expr\>* evaluates to null, then the expression returns null.
 
-  *<min\_value\>*
- :   An expression that resolves to the end points of the acceptable range for *<expr\>*. Must also evaluate to numeric or datetime values and cannot evaluate to null.
+<dl>
+<dt><b>
 
-  *<max\_value\>*
- :   An expression that resolves to the end points of the acceptable range for *<expr\>*. Must also evaluate to numeric or datetime values and cannot evaluate to null.
+*<expression\>*
 
-  *<num\_buckets\>*
- :   Is an expression that resolves to a constant indicating the number of buckets. This expression must evaluate to a positive integer.
+</b></dt>
+<dd>
 
- 
+The expression for which the histogram is being created. This expression must evaluate to a numeric or datetime value or to a value that can be implicitly converted to a numeric or datetime value. If *<expr\>* evaluates to null, then the expression returns null.
+
+
+
+</dd><dt><b>
+
+*<min\_value\>*
+
+</b></dt>
+<dd>
+
+An expression that resolves to the end points of the acceptable range for *<expr\>*. Must also evaluate to numeric or datetime values and cannot evaluate to null.
+
+
+
+</dd><dt><b>
+
+*<max\_value\>*
+
+</b></dt>
+<dd>
+
+An expression that resolves to the end points of the acceptable range for *<expr\>*. Must also evaluate to numeric or datetime values and cannot evaluate to null.
+
+
+
+</dd><dt><b>
+
+*<num\_buckets\>*
+
+</b></dt>
+<dd>
+
+Is an expression that resolves to a constant indicating the number of buckets. This expression must evaluate to a positive integer.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio69892e4fa52c4ad885c269d8009f06c3__section_d1c_kdv_vrb"/>
 

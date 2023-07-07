@@ -16,10 +16,23 @@ EVENT_CONDITION ( <condition-name> )
 
 ## Parameters
 
- *<condition-name\>*
- :   The condition triggering the event. The possible values are preset in the database, and are case-insensitive. Each condition is valid only for certain event types.
 
- 
+<dl>
+<dt><b>
+
+*<condition-name\>*
+
+</b></dt>
+<dd>
+
+The condition triggering the event. The possible values are preset in the database, and are case-insensitive. Each condition is valid only for certain event types.
+
+
+
+</dd>
+</dl>
+
+
 <table>
 <tr>
 <th valign="top">

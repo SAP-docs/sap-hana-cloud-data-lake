@@ -6,11 +6,6 @@ Inserts a row into the specified cursor.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -27,26 +22,68 @@ PUT <cursor-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa6224c9a84f210159740e7ada0c238be__IQ_Parameters"/>
 
 ## Parameters
 
- *<cursor-name\>*
- :   Identifier or hostvar
 
-  *<sqlda-name\>*
- :   Identifier
+<dl>
+<dt><b>
 
-  *<into-sqlda-name\>*
- :   May contain indicator variables
+*<cursor-name\>*
 
-  ARRAY
- :   Can be used to carry out wide puts, which insert more than one row at a time and which might improve performance. The value *<nnn\>* is the number of rows to be inserted. The SQLDA must contain *<nnn\>* \* \(columns per row\) variables. The first row is placed in SQLDA variables 0 to \(columns per row\) - 1, and so on.
+</b></dt>
+<dd>
 
-    > ### Note:  
-    > For scroll \(values-sensitive\) cursors, the inserted row appears if the new row matches the WHERE clause and the keyset cursor has not finished populating. For dynamic cursors, if the inserted row matches the WHERE clause, the row might appear. Insensitive cursors cannot be updated.
+Identifier or hostvar
 
- 
+
+
+</dd><dt><b>
+
+*<sqlda-name\>*
+
+</b></dt>
+<dd>
+
+Identifier
+
+
+
+</dd><dt><b>
+
+*<into-sqlda-name\>*
+
+</b></dt>
+<dd>
+
+May contain indicator variables
+
+
+
+</dd><dt><b>
+
+ARRAY
+
+</b></dt>
+<dd>
+
+Can be used to carry out wide puts, which insert more than one row at a time and which might improve performance. The value *<nnn\>* is the number of rows to be inserted. The SQLDA must contain *<nnn\>* \* \(columns per row\) variables. The first row is placed in SQLDA variables 0 to \(columns per row\) - 1, and so on.
+
+> ### Note:  
+> For scroll \(values-sensitive\) cursors, the inserted row appears if the new row matches the WHERE clause and the keyset cursor has not finished populating. For dynamic cursors, if the inserted row matches the WHERE clause, the row might appear. Insensitive cursors cannot be updated.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa6224c9a84f210159740e7ada0c238be__IQ_Usage"/>
 

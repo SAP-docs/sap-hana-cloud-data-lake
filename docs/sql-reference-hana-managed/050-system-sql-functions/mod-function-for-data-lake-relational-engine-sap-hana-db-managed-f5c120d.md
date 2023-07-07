@@ -16,13 +16,34 @@ MOD ( <dividend>, <divisor> )
 
 ## Parameters
 
- *<dividend\>*
- :   The dividend, or numerator, of the division.
 
-  *<divisor\>*
- :   The divisor, or denominator, of the division.
+<dl>
+<dt><b>
 
- 
+*<dividend\>*
+
+</b></dt>
+<dd>
+
+The dividend, or numerator, of the division.
+
+
+
+</dd><dt><b>
+
+*<divisor\>*
+
+</b></dt>
+<dd>
+
+The divisor, or denominator, of the division.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiof5c120d23a114a08951fed08d45fecc1__section_hd5_vfn_vrb"/>
 

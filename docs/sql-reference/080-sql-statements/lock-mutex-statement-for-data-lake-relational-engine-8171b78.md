@@ -6,11 +6,6 @@ Locks a resource such as a file or system procedure using a predefined mutex.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -27,23 +22,65 @@ LOCK MUTEX [ <owner>.]<mutex-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 ## Parameters
 
- *<owner\>*
- :   The owner of the mutex.
 
-  *<mutex-name\>*
- :   The name of the mutex.
+<dl>
+<dt><b>
 
-  IN \{ *SHARE* | *EXCLUSIVE* \} MODE clause
- :   Use this clause to specify whether the lock provides exclusive access to the resource \(EXCLUSIVE\), or whether other connections can use the resource as well \(SHARE\). If the IN...MODE clause is not specified, then EXCLUSIVE is the default behavior.
+*<owner\>*
 
-  TIMEOUT clause
- :   The amount of time, in milliseconds \(greater than 0\), to wait to acquire the lock. If the TIMEOUT clause is not specified, then the connection waits indefinitely until the lock can be acquired.
+</b></dt>
+<dd>
 
-    *<in-milliseconds\>* can be specified using a variable \(for example, ***TIMEOUT @timeout-value***\). If *<in-milliseconds\>* is set to a variable and the variable is NULL, the behavior is equivalent to not specifying the clause.
+The owner of the mutex.
 
- 
+
+
+</dd><dt><b>
+
+*<mutex-name\>*
+
+</b></dt>
+<dd>
+
+The name of the mutex.
+
+
+
+</dd><dt><b>
+
+IN \{ *SHARE* | *EXCLUSIVE* \} MODE clause
+
+</b></dt>
+<dd>
+
+Use this clause to specify whether the lock provides exclusive access to the resource \(EXCLUSIVE\), or whether other connections can use the resource as well \(SHARE\). If the IN...MODE clause is not specified, then EXCLUSIVE is the default behavior.
+
+
+
+</dd><dt><b>
+
+TIMEOUT clause
+
+</b></dt>
+<dd>
+
+The amount of time, in milliseconds \(greater than 0\), to wait to acquire the lock. If the TIMEOUT clause is not specified, then the connection waits indefinitely until the lock can be acquired.
+
+*<in-milliseconds\>* can be specified using a variable \(for example, `TIMEOUT @timeout-value`\). If *<in-milliseconds\>* is set to a variable and the variable is NULL, the behavior is equivalent to not specifying the clause.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -78,10 +115,23 @@ None.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following statement locks the protect\_my\_cr\_section mutex in exclusive mode:
 

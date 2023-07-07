@@ -28,63 +28,121 @@ sp_iqcheckdb '<mode> <target> [ … ] [ resources <resource-percent> ]'
 
 
 
-Go to:
-
--   [Remarks](sp-iqcheckdb-procedure-for-data-lake-relational-engine-a59d2e0.md#loioa59d2e0484f21015922aa8b764f89495__IQ_Remarks)
--   [Privileges](sp-iqcheckdb-procedure-for-data-lake-relational-engine-a59d2e0.md#loioa59d2e0484f21015922aa8b764f89495__IQ_Privileges)
--   [Side Effects](sp-iqcheckdb-procedure-for-data-lake-relational-engine-a59d2e0.md#loioa59d2e0484f21015922aa8b764f89495__IQ_Side_Effects)
--   [Examples](sp-iqcheckdb-procedure-for-data-lake-relational-engine-a59d2e0.md#loioa59d2e0484f21015922aa8b764f89495__IQ_Examples)
-
-
-
 <a name="loioa59d2e0484f21015922aa8b764f89495__IQ_Parameters"/>
 
 ## Parameters
 
-[\(back to top\)](sp-iqcheckdb-procedure-for-data-lake-relational-engine-a59d2e0.md#loioa59d2e0484f21015922aa8b764f89495__IQ_top)
 
- database
- :   If the target is a database, all dbspaces must be online.
+<dl>
+<dt><b>
 
-  *<index-type\>*
- :   One of the following index types: FP, CMP, HG, WD, DATE, TIME, DTTM, TEXT.
+database
 
-    If the specified *<index-type\>* does not exist in the target, an error message is returned. If multiple index types are specified and the target contains only some of these index types, the existing index types are processed by sp\_iqcheckdb.
+</b></dt>
+<dd>
 
-  *<index-name\>*
- :   May contain owner and table qualifiers: \[\[*<owner\>*.\]*<table-name\>*.\]*<index-name\>*.
+If the target is a database, all dbspaces must be online.
 
-    If *<owner\>* is not specified, current user and database owner \(`dbo`\) are substituted in that order. If *<table\>* is not specified, *<index-name\>* must be unique.
 
-  *<table-name\>*
- :   May contain an owner qualifier: <code>[<i class="varname">&lt;owner&gt;</i>.]<i class="varname">&lt;table-name&gt;</i>.</code>
 
-    If *<owner\>* is not specified, current user and database owner \(dbo\) are substituted in that order. *<table-name\>* cannot be a temporary or pre-join table.
+</dd><dt><b>
 
-    > ### Note:  
-    > If either the table name or the index name contains spaces, enclose the *<table-name\>* or *<index-name\>* parameter in double quotation marks:
-    > 
-    > ```
-    > sp_iqcheckdb 'check index "dbo.sstab.i2" resources 75'
-    > ```
+*<index-type\>*
 
-  *<partition-name\>*
- :   The *<partition-name\>* parameter contains no qualifiers. If it contains spaces, enclose it in double quotation marks.
+</b></dt>
+<dd>
 
-    The partition filter causes `sp_iqcheckdb` to examine a subset of the corresponding table’s rows that belong to that partition. A partition filter on a table and table target without the partition filter are semantically equivalent when the table has only one partition.
+One of the following index types: FP, CMP, HG, WD, DATE, TIME, DTTM, TEXT.
 
-  *<dbspace-name\>*
- :   The *<dbspace-name\>* parameter contains no qualifiers. If it contains spaces, enclose it in double quotation marks.
+If the specified *<index-type\>* does not exist in the target, an error message is returned. If multiple index types are specified and the target contains only some of these index types, the existing index types are processed by sp\_iqcheckdb.
 
-    The dbspace target examines a subset of the database's pages that belong to that dbspace. The dbspace must be online. The dbspace and database target are semantically equivalent when the table has only one dbspace.
 
-  *<resource-percent\>*
- :   The input parameter *<resource-percent\>* must be an integer greater than zero. The resources percentage allows you to limit the CPU utilization of the database consistency checker by controlling the number of threads with respect to the number of CPUs. If *<resource-percent\>* is 100 \(the default value\), then one thread is created per CPU. If *<resource-percent\>* is greater than 100, then there are more threads than CPUs, which might increase performance for some machine configurations. The minimum number of threads is 1.
 
-  *<main-cache-name\>*
- :   The cache target compares pages in the main cache against the original pages in the data lake Relational Engine main store.
+</dd><dt><b>
 
- > ### Note:  
+*<index-name\>*
+
+</b></dt>
+<dd>
+
+May contain owner and table qualifiers: \[\[*<owner\>*.\]*<table-name\>*.\]*<index-name\>*.
+
+If *<owner\>* is not specified, current user and database owner \(`dbo`\) are substituted in that order. If *<table\>* is not specified, *<index-name\>* must be unique.
+
+
+
+</dd><dt><b>
+
+*<table-name\>*
+
+</b></dt>
+<dd>
+
+May contain an owner qualifier: <code>[<i class="varname">&lt;owner&gt;</i>.]<i class="varname">&lt;table-name&gt;</i>.</code>
+
+If *<owner\>* is not specified, current user and database owner \(dbo\) are substituted in that order. *<table-name\>* cannot be a temporary or pre-join table.
+
+> ### Note:  
+> If either the table name or the index name contains spaces, enclose the *<table-name\>* or *<index-name\>* parameter in double quotation marks:
+> 
+> ```
+> sp_iqcheckdb 'check index "dbo.sstab.i2" resources 75'
+> ```
+
+
+
+</dd><dt><b>
+
+*<partition-name\>*
+
+</b></dt>
+<dd>
+
+The *<partition-name\>* parameter contains no qualifiers. If it contains spaces, enclose it in double quotation marks.
+
+The partition filter causes `sp_iqcheckdb` to examine a subset of the corresponding table’s rows that belong to that partition. A partition filter on a table and table target without the partition filter are semantically equivalent when the table has only one partition.
+
+
+
+</dd><dt><b>
+
+*<dbspace-name\>*
+
+</b></dt>
+<dd>
+
+The *<dbspace-name\>* parameter contains no qualifiers. If it contains spaces, enclose it in double quotation marks.
+
+The dbspace target examines a subset of the database's pages that belong to that dbspace. The dbspace must be online. The dbspace and database target are semantically equivalent when the table has only one dbspace.
+
+
+
+</dd><dt><b>
+
+*<resource-percent\>*
+
+</b></dt>
+<dd>
+
+The input parameter *<resource-percent\>* must be an integer greater than zero. The resources percentage allows you to limit the CPU utilization of the database consistency checker by controlling the number of threads with respect to the number of CPUs. If *<resource-percent\>* is 100 \(the default value\), then one thread is created per CPU. If *<resource-percent\>* is greater than 100, then there are more threads than CPUs, which might increase performance for some machine configurations. The minimum number of threads is 1.
+
+
+
+</dd><dt><b>
+
+*<main-cache-name\>*
+
+</b></dt>
+<dd>
+
+The cache target compares pages in the main cache against the original pages in the data lake Relational Engine main store.
+
+
+
+</dd>
+</dl>
+
+> ### Note:  
 > The sp\_iqcheckdb parameter string must be enclosed in single quotes and cannot be greater than 255 bytes in length.
 
 
@@ -92,8 +150,6 @@ Go to:
 <a name="loioa59d2e0484f21015922aa8b764f89495__IQ_Remarks"/>
 
 ## Remarks
-
-[\(back to top\)](sp-iqcheckdb-procedure-for-data-lake-relational-engine-a59d2e0.md#loioa59d2e0484f21015922aa8b764f89495__IQ_top)
 
 sp\_iqcheckdb reads all storage in the database. On successful completion, the database free list \(an internal allocation map\) is updated to reflect the true storage allocation for the database. sp\_iqcheckdb then generates a report listing the actions it has performed.
 
@@ -386,17 +442,13 @@ The output of sp\_iqcheckdb is also copied to the data lake Relational Engine me
 
 ## Privileges
 
-[\(back to top\)](sp-iqcheckdb-procedure-for-data-lake-relational-engine-a59d2e0.md#loioa59d2e0484f21015922aa8b764f89495__IQ_top)
-
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
 <a name="loioa59d2e0484f21015922aa8b764f89495__IQ_Side_Effects"/>
 
 ## Side Effects
-
-[\(back to top\)](sp-iqcheckdb-procedure-for-data-lake-relational-engine-a59d2e0.md#loioa59d2e0484f21015922aa8b764f89495__IQ_top)
 
 None
 
@@ -405,8 +457,6 @@ None
 <a name="loioa59d2e0484f21015922aa8b764f89495__IQ_Examples"/>
 
 ## Examples
-
-[\(back to top\)](sp-iqcheckdb-procedure-for-data-lake-relational-engine-a59d2e0.md#loioa59d2e0484f21015922aa8b764f89495__IQ_top)
 
 -   Checks the allocation for the entire database:
 

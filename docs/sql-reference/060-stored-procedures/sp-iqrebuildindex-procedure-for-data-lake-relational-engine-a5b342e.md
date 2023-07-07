@@ -23,30 +23,51 @@ sp_iqrebuildindex <table_name>, <index_clause>
 
 ## Parameter
 
- *<table\_name\>*
- :   Partial or fully qualified table name on which the index rebuild process takes place. If the user both owns the table and executes the procedure, a partially qualified name may be used; otherwise, the table name must be fully qualified.
 
-  *<index\_clause\>*
- :   One or more of the following strings, separated by spaces:
+<dl>
+<dt><b>
 
-    ```
-    column <column_name>[<count>]
-    ```
+*<table\_name\>*
 
-    ```
-    index <index_name>
-    ```
+</b></dt>
+<dd>
 
-    You need to specify the keywords column and index. These keywords are not case-sensitive.
+Partial or fully qualified table name on which the index rebuild process takes place. If the user both owns the table and executes the procedure, a partially qualified name may be used; otherwise, the table name must be fully qualified.
 
-    > ### Caution:  
-    > A third-party reference document describes an unsupported sp\_iqrebuildindex syntax. Specifying the table name in the index clause, such as in the following example, results in an error:
-    > 
-    > ```
-    > sp_iqrebuildindex tb1, 'column tb1.c1'
-    > ```
 
- 
+
+</dd><dt><b>
+
+*<index\_clause\>*
+
+</b></dt>
+<dd>
+
+One or more of the following strings, separated by spaces:
+
+```
+column <column_name>[<count>]
+```
+
+```
+index <index_name>
+```
+
+You need to specify the keywords column and index. These keywords are not case-sensitive.
+
+> ### Caution:  
+> A third-party reference document describes an unsupported sp\_iqrebuildindex syntax. Specifying the table name in the index clause, such as in the following example, results in an error:
+> 
+> ```
+> sp_iqrebuildindex tb1, 'column tb1.c1'
+> ```
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5b342e484f21015b652c2f5c7685bca__iq_refbb_1722"/>
 
@@ -107,82 +128,10 @@ The sp\_iqrebuildindex default interface allows a user to re-create an entire HG
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). If you own the object referenced by the procedure, no additional privilege is required. 
+Requires EXECUTE object-level privilege on the procedure along with one of the following:
 
-For objects owned by others, you need one of the following privileges:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
--   INSERT ANY TABLE
-
-
-
-</td>
-<td valign="top">
-
-System privilege
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
--   INSERT privilege on the table
-
-
-
-</td>
-<td valign="top">
-
-Object-level privilege
-
-
-
-</td>
-<td valign="top">
-
-[GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md)
-
-
-
-</td>
-</tr>
-</table>
+-   INSERT ANY TABLE system privilege
+-   INSERT privilege on the table system privilege
 
 
 

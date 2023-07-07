@@ -16,10 +16,23 @@ RAND ( [ <integer-expression> ] )
 
 ## Parameters
 
- *<integer-expression\>*
- :   The optional seed used to create a random number. This argument allows you to create repeatable random number sequences.
 
- 
+<dl>
+<dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The optional seed used to create a random number. This argument allows you to create repeatable random number sequences.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio821fcf0e2d12450185efac750f617450__section_ws3_4m5_vrb"/>
 

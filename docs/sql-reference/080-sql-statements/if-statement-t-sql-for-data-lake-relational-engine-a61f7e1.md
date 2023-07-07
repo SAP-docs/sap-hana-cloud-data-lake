@@ -6,11 +6,6 @@ Provides conditional execution of a Transact-SQL statement, as an alternative to
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -23,6 +18,11 @@ Provides conditional execution of a Transact-SQL statement, as an alternative to
    ... <statement>
    ... [ ELSE [ IF <expression> <statement> ]... ] 
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 

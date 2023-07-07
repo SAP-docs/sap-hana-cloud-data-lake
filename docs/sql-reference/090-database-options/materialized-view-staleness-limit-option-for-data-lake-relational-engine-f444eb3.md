@@ -180,5 +180,5 @@ SET TEMPORARY OPTION materialized_view_staleness_limit='30 Minutes';
 **Related Information**  
 
 
-[MATERIALIZED_VIEW_STALENESS_LIMIT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/7ac82c4f1cfb46bbb18966f957d91b3d.html "Controls the maximum stale time limit, in the specified units of time.") :arrow_upper_right:
+[MATERIALIZED_VIEW_STALENESS_LIMIT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7ac82c4f1cfb46bbb18966f957d91b3d.html "Controls the maximum stale time limit, in the specified units of time.") :arrow_upper_right:
 

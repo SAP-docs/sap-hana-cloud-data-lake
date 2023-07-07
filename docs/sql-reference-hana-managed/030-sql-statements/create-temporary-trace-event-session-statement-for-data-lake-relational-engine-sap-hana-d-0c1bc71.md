@@ -6,11 +6,6 @@ Creates a user trace event session.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -44,111 +39,161 @@ ADD TARGET FILE
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loio0c1bc711bafd418da40a48480179d22e__section_rz4_s5g_1rb"/>
 
 ## Parameters
 
- OR REPLACE clause
- :   Specifying CREATE OR REPLACE creates a trace event session or replaces an existing trace event session with the same name.
 
-  WHERE clause
- :   The WHERE clause allows an event to be traced conditionally based on its properties, and can contain expressions that refer to constants and event fields. If there are built-in functions used in *<search-condition\>*, then they are evaluated on the connection generating the event. For example, using `connection_property('number') = 101` logs only events for connections with the number 101.
+<dl class="glossary">
+<dt><b>
 
-    *<search-condition\>* is applied before events are sent to *<target-definition\>*. If *<search-condition\>* returns FALSE \(or UNKNOWN\), then the event is not sent to the target.
+OR REPLACE clause
 
-    *<search-condition\>* returns an error if it contains any of the following:
+</b></dt>
+<dd>
 
-    -   Sub-queries
-
-    -   User-defined functions
-
-    -   Sequences
-
-    -   Host variables
-
-    -   Column references \(may refer to fields of the event but not WHERE clause of the event\)
-
-    -   Connection or database variables
+Specifying CREATE OR REPLACE creates a trace event session or replaces an existing trace event session with the same name.
 
 
-   *<session-name\>* 
- :   The name of the trace event session.
 
-   *<trace-event-name\>* 
- :   The name of the trace event in the session. System- and user-defined trace events are supported. Call the sp\_trace\_events system procedure to obtain a list of system-defined trace events.
+</dd><dt><b>
 
-   *<target-parameter-name\>* 
- :   The following target parameters are supported:
+WHERE clause
 
+</b></dt>
+<dd>
 
-    <table>
-    <tr>
-    <th valign="top">
+The WHERE clause allows an event to be traced conditionally based on its properties, and can contain expressions that refer to constants and event fields. If there are built-in functions used in *<search-condition\>*, then they are evaluated on the connection generating the event. For example, using `connection_property('number') = 101` logs only events for connections with the number 101.
 
-     *<target-parameter-name\>* 
+*<search-condition\>* is applied before events are sent to *<target-definition\>*. If *<search-condition\>* returns FALSE \(or UNKNOWN\), then the event is not sent to the target.
 
+*<search-condition\>* returns an error if it contains any of the following:
 
-    
-    </th>
-    <th valign="top">
+-   Sub-queries
 
-     *<target-parameter-value\>* 
+-   User-defined functions
 
+-   Sequences
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
+-   Host variables
 
-    filename\_prefix
+-   Column references \(may refer to fields of the event but not WHERE clause of the event\)
+
+-   Connection or database variables
 
 
-    
-    </td>
-    <td valign="top">
-
-    \(Required\) An ETD file name prefix with or without a path. ETD files have the extension `.etd`.
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+</dd><dt><b>
 
-    flush\_on\_write
+ *<session-name\>* 
 
+</b></dt>
+<dd>
 
-    
-    </td>
-    <td valign="top">
-
-    A boolean \(true or false\) value that controls whether disk buffers are flushed for each event that is logged. The default is false. When flushing is enabled, the performance of the database server may be reduced if many trace events are being logged.
+The name of the trace event session.
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    \[compressed\]
+</dd><dt><b>
 
+ *<trace-event-name\>* 
 
-    
-    </td>
-    <td valign="top">
+</b></dt>
+<dd>
 
-    A boolean \(true or false\) value that controls compression of the ETD file to conserve disk space. The default is false. Use brackets with this parameter name because it is a keyword in other contexts.
+The name of the trace event in the session. System- and user-defined trace events are supported. Call the sp\_trace\_events system procedure to obtain a list of system-defined trace events.
 
 
-    
-    </td>
-    </tr>
-    </table>
-    
- 
+
+</dd><dt><b>
+
+ *<target-parameter-name\>* 
+
+</b></dt>
+<dd>
+
+The following target parameters are supported:
+
+
+<table>
+<tr>
+<th valign="top">
+
+ *<target-parameter-name\>* 
+
+
+
+</th>
+<th valign="top">
+
+ *<target-parameter-value\>* 
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+filename\_prefix
+
+
+
+</td>
+<td valign="top">
+
+\(Required\) An ETD file name prefix with or without a path. ETD files have the extension `.etd`.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+flush\_on\_write
+
+
+
+</td>
+<td valign="top">
+
+A boolean \(true or false\) value that controls whether disk buffers are flushed for each event that is logged. The default is false. When flushing is enabled, the performance of the database server may be reduced if many trace events are being logged.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+\[compressed\]
+
+
+
+</td>
+<td valign="top">
+
+A boolean \(true or false\) value that controls compression of the ETD file to conserve disk space. The default is false. Use brackets with this parameter name because it is a keyword in other contexts.
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio0c1bc711bafd418da40a48480179d22e__section_j3q_t5g_1rb"/>
 
@@ -194,10 +239,23 @@ None
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following statement creates an event tracing session that records information about the user-defined event my\_event and the system-defined event SYS\_ConsoleLog\_Information to a file named `my_trace_file`:
 

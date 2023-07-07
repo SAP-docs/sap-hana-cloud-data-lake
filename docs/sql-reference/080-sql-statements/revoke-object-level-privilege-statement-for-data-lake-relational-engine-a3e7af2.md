@@ -6,11 +6,6 @@ Removes object-level privileges that were given using the `GRANT` statement.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -20,12 +15,14 @@ Removes object-level privileges that were given using the `GRANT` statement.
 
 ```
 REVOKE { <object-level-privilege> [,...]
-   ON { [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <owner> (varname].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <object-name> (varname] | SCHEMA [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname] } 
+   ON { [ <owner>.]<object-name> | SCHEMA <schema-name> } 
    FROM <user_role_shema> [,...]
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -33,49 +30,78 @@ REVOKE { <object-level-privilege> [,...]
 
 ## Parameters
 
- *<user\_role\_schema\>*
- :   Must be the name of existing users, immutable roles, or schemas. Separate the list with commas.
 
-  *<object-level-privilege\>*
- :   Specifies the object or schema privilege being revoked.
+<dl>
+<dt><b>
 
-    ```
-    <object-level-privilege> ::=
-       ALL [ PRIVILEGES ] 
-       | ALTER 
-       | BACKUP TABLE
-       | CREATE ANY**
-       | DELETE 
-       | DROP**
-       | EXECUTE
-       | EXECUTE PROCEDURE**
-       | INSERT
-       | LOAD
-       | REFERENCES [ ( <column-name> [, …] ) ] 
-       | RESTORE TABLE
-       | SELECT [ ( <column-name> [, …] ) ] 
-       | TRUNCATE
-       | UPDATE [ ( <column-name>, …) ]
-       | USAGE*
-    
-    **CREATE ANY, DROP, and EXECUTE PROCEDURE are only supported by SCHEMA <schema-name>
-    *USAGE is only supported by [ <owner>.]<object-name>
-    ```
+*<user\_role\_schema\>*
 
-    For an explanation of each object-level privilege, see [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+</b></dt>
+<dd>
 
-  *<object-name\>*
- :   Specifies the type of object the privilege applies to.
+Must be the name of existing users, immutable roles, or schemas. Separate the list with commas.
 
-    ```
-    <object-name> ::=
-       <table_name>
-       | <view_name>
-       | {<procedure-name> | <user-defined-function-name>}
-       | <sequence_name>
-    ```
 
- 
+
+</dd><dt><b>
+
+*<object-level-privilege\>*
+
+</b></dt>
+<dd>
+
+Specifies the object or schema privilege being revoked.
+
+```
+<object-level-privilege> ::=
+   ALL [ PRIVILEGES ] 
+   | ALTER 
+   | BACKUP TABLE
+   | CREATE ANY**
+   | DELETE 
+   | DROP**
+   | EXECUTE
+   | EXECUTE PROCEDURE**
+   | INSERT
+   | LOAD
+   | REFERENCES [ ( <column-name> [, …] ) ] 
+   | RESTORE TABLE
+   | SELECT [ ( <column-name> [, …] ) ] 
+   | TRUNCATE
+   | UPDATE [ ( <column-name>, …) ]
+   | USAGE*
+
+**CREATE ANY, DROP, and EXECUTE PROCEDURE are only supported by SCHEMA <schema-name>
+*USAGE is only supported by [ <owner>.]<object-name>
+```
+
+For an explanation of each object-level privilege, see [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+
+
+
+</dd><dt><b>
+
+*<object-name\>*
+
+</b></dt>
+<dd>
+
+Specifies the type of object the privilege applies to.
+
+```
+<object-name> ::=
+   <table_name>
+   | <view_name>
+   | {<procedure-name> | <user-defined-function-name>}
+   | <sequence_name>
+```
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa3e7af2384f21015a1f8b6d3c8794f47__revoke_privileges1"/>
 

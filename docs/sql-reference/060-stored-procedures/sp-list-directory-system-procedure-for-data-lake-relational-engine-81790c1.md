@@ -6,6 +6,15 @@ Returns information about the files and subdirectories in a specified directory.
 
 
 
+> ### Restriction:  
+> This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
+> 
+> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
+> 
+>     -   See [REMOTE_EXECUTE/REMOTE_EXECUTE_DDL Usage Examples for Running Procedures](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3e7f86d36c3c4335822e2908ee320623.html "The process to run a procedure depends on if the procedure returns a results set.") :arrow_upper_right: for more information.
+
+
+
 ```
 sp_list_directory(
 <root_path>
@@ -15,33 +24,45 @@ sp_list_directory(
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE_EXECUTE Usage Examples for Running Procedures](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/3e7f86d36c3c4335822e2908ee320623.html "The process to run a procedure depends on if the procedure returns a results set.") :arrow_upper_right: for more information.
-
-
-
 <a name="loio81790c1c6ce21014b303ec9036456fdb__sp_list_directory_parameters"/>
 
 ## Parameters
 
-  *<root\_path\>* 
- :   Use this LONG NVARCHAR parameter to specify the directory path.
 
-    For diagnostic files, *<root\_path\>* requires the common prefix:
+<dl>
+<dt><b>
 
-    -   `/diag/logs/` for diagnostic logs
+ *<root\_path\>* 
 
-    -   `/diag/audit/` for auditing \(ETD\) files
+</b></dt>
+<dd>
+
+Use this LONG NVARCHAR parameter to specify the directory path.
+
+For diagnostic files, *<root\_path\>* requires the common prefix:
+
+-   `/diag/logs/` for diagnostic logs
+
+-   `/diag/audit/` for auditing \(ETD\) files
 
 
-   *<max\_depth\>* 
- :   Use this optional INTEGER parameter to specify the maximum number of directories to traverse. A max\_depth of NULL, 0, or a negative value results in all subdirectories of *<root\_path\>* being traversed. The default is NULL.
 
- 
+
+</dd><dt><b>
+
+ *<max\_depth\>* 
+
+</b></dt>
+<dd>
+
+Use this optional INTEGER parameter to specify the maximum number of directories to traverse. A max\_depth of NULL, 0, or a negative value results in all subdirectories of *<root\_path\>* being traversed. The default is NULL.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio81790c1c6ce21014b303ec9036456fdb__sp_list_directory_result_set"/>
 
@@ -209,11 +230,18 @@ These columns are useful for diagnostics:
 
 
 
-<a name="loio81790c1c6ce21014b303ec9036456fdb__sp_list_directory_privileges"/>
+<a name="loio81790c1c6ce21014b303ec9036456fdb__sp_list_directory_priv1"/>
 
 ## Privileges
 
-You need to have EXECUTE privilege on the system procedure, as well as the READ FILE system privilege.
+
+
+### 
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure
+-   READ FILE system privilege
 
 
 
@@ -221,10 +249,23 @@ You need to have EXECUTE privilege on the system procedure, as well as the READ 
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 Example result:
 
@@ -581,7 +622,7 @@ saptu
 **Related Information**  
 
 
-[sp_list_directory System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/3bdb623038354a3b9f12503766abe7c1.html "Returns information about the files and subdirectories in a specified directory.") :arrow_upper_right:
+[sp_list_directory System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3bdb623038354a3b9f12503766abe7c1.html "Returns information about the files and subdirectories in a specified directory.") :arrow_upper_right:
 
-[sp_list_etd_files System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/0f76c8361cd84a2b8b35f74382b9265f.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
+[sp_list_etd_files System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/0f76c8361cd84a2b8b35f74382b9265f.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
 

@@ -16,16 +16,45 @@ REPLACE ( <string_expr1>, <string_expr2>, <string_expr3> )
 
 ## Parameters
 
- *<string\_expr1\>*
- :   The source string, or the string expression to be searched, expressed as VARCHAR, UNICHAR, UNIVARCHAR,VARBINARY, or BINARY data type.
 
-  *<string\_expr2\>*
- :   The pattern string, or the string expression to find within the first expression \(*<string\_expr1\>*\) and is expressed as VARCHAR, UNICHAR, UNIVARCHAR,VARBINARY, or BINARY data type.
+<dl>
+<dt><b>
 
-  *<string\_expr3\>*
- :   The replacement string expression, expressed as VARCHAR, UNICHAR, UNIVARCHAR,VARBINARY, or BINARY data type.
+*<string\_expr1\>*
 
- 
+</b></dt>
+<dd>
+
+The source string, or the string expression to be searched, expressed as VARCHAR, UNICHAR, UNIVARCHAR,VARBINARY, or BINARY data type.
+
+
+
+</dd><dt><b>
+
+*<string\_expr2\>*
+
+</b></dt>
+<dd>
+
+The pattern string, or the string expression to find within the first expression \(*<string\_expr1\>*\) and is expressed as VARCHAR, UNICHAR, UNIVARCHAR,VARBINARY, or BINARY data type.
+
+
+
+</dd><dt><b>
+
+*<string\_expr3\>*
+
+</b></dt>
+<dd>
+
+The replacement string expression, expressed as VARCHAR, UNICHAR, UNIVARCHAR,VARBINARY, or BINARY data type.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiod0e04740ba8f44cfb34a48fe3c6e06ae__section_opj_4t5_vrb"/>
 

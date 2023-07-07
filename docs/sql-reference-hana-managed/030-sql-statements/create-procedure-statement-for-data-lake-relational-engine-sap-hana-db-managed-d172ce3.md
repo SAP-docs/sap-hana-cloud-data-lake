@@ -6,11 +6,6 @@ Creates a new user-defined SQL procedure in the database.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -23,18 +18,11 @@ Creates a new user-defined SQL procedure in the database.
 
 
 ```
-CREATE [ OR REPLACE ] [ TEMPORARY ] PROCEDURE [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <procedure-name> (varname] ( [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <parameter> (varname], …] ) 
+CREATE [ OR REPLACE ] [ TEMPORARY ] PROCEDURE [ <schema-name>.]<procedure-name> ( [ <parameter>, …] ) 
    [ SQL SECURITY { INVOKER | DEFINER } ]
-   [ RESULT ( [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <result-column> (varname], …) | NO RESULT SET ]  
+   [ RESULT ( <result-column>, …) | NO RESULT SET ]  
    [ ON EXCEPTION RESUME ]
-   { [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <compound statement> (varname] | AT [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <location-string> (varname] }
+   { <compound statement> | AT <location-string> }
 ```
 
 ```
@@ -50,132 +38,214 @@ CREATE [ OR REPLACE ] [ TEMPORARY ] PROCEDURE [ [/pandoc/div/div/horizonta
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loiod172ce3def5648e299ecb61779eab7da__section_klk_xjl_sqb"/>
 
 ## Parameters
 
- *<parameter-name\>*
- :   Parameter names must conform to the rules for other database identifiers, such as column names, and must be a valid SQL data type. The keywords have the following meanings:
 
-    Parameters can be prefixed by one of the keywords IN, OUT or INOUT. If no keyword is specified, then parameters are INOUT by default. The keywords have the following meanings:
+<dl>
+<dt><b>
 
-    -   IN – an expression that provides a value to the procedure.
-    -   OUT – a variable that could be given a value by the procedure.
-    -   INOUT – a variable that provides a value to the procedure, and could be given a new value by the procedure.
+*<parameter-name\>*
 
-    Set the data type explicitly, or specify the %TYPE or %ROWTYPE attribute to set the data type to the data type of another object in the database. Use %TYPE to set it to the data type of a column in a table or view. Use %ROWTYPE to set the data type to a composite data type derived from a row in a table or view. However, defining the data type using a %ROWTYPE that is set to a table reference variable \(TABLE REF \(*<table-reference-variable\>*\) %ROWTYPE is not allowed.
+</b></dt>
+<dd>
 
-  SQLSTATE and SQLCODE
- :   Special parameters that output the SQLSTATE or SQLCODE value when the procedure ends \(they are OUT parameters\). Whether or not a SQLSTATE and SQLCODE parameter is specified, the SQLSTATE and SQLCODE special values can always be checked immediately after a procedure call to test the return status of the procedure.
+Parameter names must conform to the rules for other database identifiers, such as column names, and must be a valid SQL data type. The keywords have the following meanings:
 
-    The SQLSTATE and SQLCODE special values are modified by the next SQL statement. Providing SQLSTATE or SQLCODE as procedure arguments allows the return code to be stored in a variable.
+Parameters can be prefixed by one of the keywords IN, OUT or INOUT. If no keyword is specified, then parameters are INOUT by default. The keywords have the following meanings:
 
-  OR REPLACE
- :   Replaces an existing procedure with the same name. This clause changes the definition of the procedure, but preserves existing permissions.
+-   IN – an expression that provides a value to the procedure.
+-   OUT – a variable that could be given a value by the procedure.
+-   INOUT – a variable that provides a value to the procedure, and could be given a new value by the procedure.
 
-    You cannot use the OR REPLACE clause with temporary procedures. Also, an error is returned if the procedure being replaced is already in use.
+Set the data type explicitly, or specify the %TYPE or %ROWTYPE attribute to set the data type to the data type of another object in the database. Use %TYPE to set it to the data type of a column in a table or view. Use %ROWTYPE to set the data type to a composite data type derived from a row in a table or view. However, defining the data type using a %ROWTYPE that is set to a table reference variable \(TABLE REF \(*<table-reference-variable\>*\) %ROWTYPE is not allowed.
 
-  TEMPORARY
- :   The stored procedure is visible only by the connection that created it, and that it is automatically dropped when the connection is dropped. You can also explicitly drop temporary stored procedures. You cannot perform ALTER, GRANT, or REVOKE on them, and, unlike other stored procedures, temporary stored procedures are not recorded in the catalog or transaction log.
 
-    Temporary procedures execute with the permissions of their creator \(current user\), or specified owner. You can specify an owner for a temporary procedure when:
 
-    -   The temporary procedure is created within a permanent stored procedure
-    -   The temporary and permanent procedure both have the same owner
+</dd><dt><b>
 
-    To drop the owner of a temporary procedure, drop the temporary procedure first.
+SQLSTATE and SQLCODE
 
-    You can create and drop temporary stored procedures when you are connected to a read-only database; they cannot be external procedures.
+</b></dt>
+<dd>
 
-    For example, the following temporary procedure drops the table called CustRank, if it exists. For this example, the procedure assumes that the table name is unique and can be referenced by the procedure creator without specifying the table owner:
+Special parameters that output the SQLSTATE or SQLCODE value when the procedure ends \(they are OUT parameters\). Whether or not a SQLSTATE and SQLCODE parameter is specified, the SQLSTATE and SQLCODE special values can always be checked immediately after a procedure call to test the return status of the procedure.
 
-    ```
-    CREATE TEMPORARY PROCEDURE drop_table( IN @TableName char(128) )
-    BEGIN
-    	IF EXISTS  ( SELECT 1 FROM SYS.SYSTAB WHERE
-    	table_name = @TableName ) 
-    	THEN EXECUTE IMMEDIATE 
-    	'DROP TABLE "' || @TableName || '"';
-    	MESSAGE 'Table "' || @TableName || 
-    	'" dropped' to client;
-    	END IF;
-    END;
-    CALL drop_table( 'CustRank' )
-    ```
+The SQLSTATE and SQLCODE special values are modified by the next SQL statement. Providing SQLSTATE or SQLCODE as procedure arguments allows the return code to be stored in a variable.
 
-  RESULT
- :   Declares the number and type of columns in the result set. The parenthesized list following the RESULT keyword defines the result column names and types. This information is returned by the Embedded SQL DESCRIBE or by ODBC SQLDescribeCol when a CALL statement is being described.
 
-    Some procedures can produce more than one result set, depending on how they are executed. For example, this procedure returns two columns under some circumstances, and one in others:
 
-    ```
-    CREATE PROCEDURE names( IN formal char(1))
-    BEGIN
-      IF formal = 'n' THEN
-        SELECT GivenName 
-        FROM Employees
-      ELSE
-        SELECT Surname,GivenName 
-        FROM Employees
-      END IF
-    END
-    ```
+</dd><dt><b>
 
-    Procedures with variable result sets must be written without a RESULT clause, or in Transact-SQL. Their use is subject to these limitations:
+OR REPLACE
 
-    -   Embedded SQL – you must DESCRIBE the procedure call after the cursor for the result set is opened, but before any rows are returned, in order to get the proper shape of result set. The CURSOR *<cursor-name\>* clause on the DESCRIBE statement is required.
-    -   ODBC, OLE DB, ADO.NET – variable result-set procedures can be used by ODBC applications. The proper description of the result sets is carried out by the driver or provider.
-    -   Open Client applications – variable result-set procedures can be used by Open Client applications.
+</b></dt>
+<dd>
 
-    If your procedure returns only one result set, use a RESULT clause. The presence of this clause prevents ODBC and Open Client applications from describing the result set again after a cursor is open.
+Replaces an existing procedure with the same name. This clause changes the definition of the procedure, but preserves existing permissions.
 
-    To handle multiple result sets, ODBC must describe the currently executing cursor, not the procedure’s defined result set. Therefore, ODBC does not always describe column names as defined in the RESULT clause of the procedure definition. To avoid this problem, use column aliases in the SELECT statement that generates the result set.
+You cannot use the OR REPLACE clause with temporary procedures. Also, an error is returned if the procedure being replaced is already in use.
 
-  NO RESULT SET
- :   Declares that this procedure returns no result set. This is useful when an external environment needs to know that a procedure does not return a result set.
 
-  SQL SECURITY
- :   Defines whether the procedure is executed as the INVOKER \(the user who is calling the procedure\), or as the DEFINER \(the user who owns the procedure\). The default is DEFINER.
 
-    Extra memory is used when you specify SQL SECURITY INVOKER, because annotation must be done for each user that calls the procedure. Also, name resolution is performed as the invoker as well. Therefore, qualify all object names \(tables, procedures, and so on\) with their appropriate owner. For example, suppose user1 creates this procedure:
+</dd><dt><b>
 
-    ```
-    CREATE PROCEDURE user1.myProcedure()
-       RESULT( columnA INT )
-       SQL SECURITY INVOKER
-       BEGIN
-          SELECT columnA FROM table1;
-       END;
-    ```
+TEMPORARY
 
-    If user2 attempts to run this procedure and a table user2.table1 does not exist, a table lookup error results. Additionally, if a user2.table1 does exist, that table is used instead of the intended user1.table1. To prevent this situation, qualify the table reference in the statement \(user1.table1, instead of just table1\).
+</b></dt>
+<dd>
 
-  ON EXCEPTION RESUME
- :   The procedure takes an action that depends on the setting of the ON\_TSQL\_ERROR option. If ON\_TSQL\_ERROR option is set to CONDITIONAL \(which is the default\) the execution continues if the next statement handles the error; otherwise, it exits.
+The stored procedure is visible only by the connection that created it, and that it is automatically dropped when the connection is dropped. You can also explicitly drop temporary stored procedures. You cannot perform ALTER, GRANT, or REVOKE on them, and, unlike other stored procedures, temporary stored procedures are not recorded in the catalog or transaction log.
 
-    Error-handling statements include:
+Temporary procedures execute with the permissions of their creator \(current user\), or specified owner. You can specify an owner for a temporary procedure when:
 
-    -   IF
-    -   SELECT @variable
-    -   CASE
-    -   LOOP
-    -   LEAVE
-    -   CONTINUE
-    -   CALL
-    -   EXECUTE
-    -   SIGNAL
-    -   RESIGNAL
-    -   DECLARE
-    -   SET VARIABLE
+-   The temporary procedure is created within a permanent stored procedure
+-   The temporary and permanent procedure both have the same owner
 
-    Do not use explicit error-handling code with an ON EXCEPTION RESUME clause.
+To drop the owner of a temporary procedure, drop the temporary procedure first.
 
-    See *ON\_TSQL\_ERROR Option \[TSQL\]*.
+You can create and drop temporary stored procedures when you are connected to a read-only database; they cannot be external procedures.
 
-  AT *<location-string\>*
- :   Creates a proxy stored procedure on the current database for a remote procedure specified by *<location-string\>*. The AT clause supports the semicolon \(;\) as a field delimiter in *<location-string\>*. If no semicolon is present, a period is the field delimiter. This allows file names and extensions to be used in the database and owner fields.
+For example, the following temporary procedure drops the table called CustRank, if it exists. For this example, the procedure assumes that the table name is unique and can be referenced by the procedure creator without specifying the table owner:
 
- 
+```
+CREATE TEMPORARY PROCEDURE drop_table( IN @TableName char(128) )
+BEGIN
+	IF EXISTS  ( SELECT 1 FROM SYS.SYSTAB WHERE
+	table_name = @TableName ) 
+	THEN EXECUTE IMMEDIATE 
+	'DROP TABLE "' || @TableName || '"';
+	MESSAGE 'Table "' || @TableName || 
+	'" dropped' to client;
+	END IF;
+END;
+CALL drop_table( 'CustRank' )
+```
+
+
+
+</dd><dt><b>
+
+RESULT
+
+</b></dt>
+<dd>
+
+Declares the number and type of columns in the result set. The parenthesized list following the RESULT keyword defines the result column names and types. This information is returned by the Embedded SQL DESCRIBE or by ODBC SQLDescribeCol when a CALL statement is being described.
+
+Some procedures can produce more than one result set, depending on how they are executed. For example, this procedure returns two columns under some circumstances, and one in others:
+
+```
+CREATE PROCEDURE names( IN formal char(1))
+BEGIN
+  IF formal = 'n' THEN
+    SELECT GivenName 
+    FROM Employees
+  ELSE
+    SELECT Surname,GivenName 
+    FROM Employees
+  END IF
+END
+```
+
+Procedures with variable result sets must be written without a RESULT clause, or in Transact-SQL. Their use is subject to these limitations:
+
+-   Embedded SQL – you must DESCRIBE the procedure call after the cursor for the result set is opened, but before any rows are returned, in order to get the proper shape of result set. The CURSOR *<cursor-name\>* clause on the DESCRIBE statement is required.
+-   ODBC, OLE DB, ADO.NET – variable result-set procedures can be used by ODBC applications. The proper description of the result sets is carried out by the driver or provider.
+-   Open Client applications – variable result-set procedures can be used by Open Client applications.
+
+If your procedure returns only one result set, use a RESULT clause. The presence of this clause prevents ODBC and Open Client applications from describing the result set again after a cursor is open.
+
+To handle multiple result sets, ODBC must describe the currently executing cursor, not the procedure’s defined result set. Therefore, ODBC does not always describe column names as defined in the RESULT clause of the procedure definition. To avoid this problem, use column aliases in the SELECT statement that generates the result set.
+
+
+
+</dd><dt><b>
+
+NO RESULT SET
+
+</b></dt>
+<dd>
+
+Declares that this procedure returns no result set. This is useful when an external environment needs to know that a procedure does not return a result set.
+
+
+
+</dd><dt><b>
+
+SQL SECURITY
+
+</b></dt>
+<dd>
+
+Defines whether the procedure is executed as the INVOKER \(the user who is calling the procedure\), or as the DEFINER \(the user who owns the procedure\). The default is DEFINER.
+
+Extra memory is used when you specify SQL SECURITY INVOKER, because annotation must be done for each user that calls the procedure. Also, name resolution is performed as the invoker as well. Therefore, qualify all object names \(tables, procedures, and so on\) with their appropriate owner. For example, suppose user1 creates this procedure:
+
+```
+CREATE PROCEDURE user1.myProcedure()
+   RESULT( columnA INT )
+   SQL SECURITY INVOKER
+   BEGIN
+      SELECT columnA FROM table1;
+   END;
+```
+
+If user2 attempts to run this procedure and a table user2.table1 does not exist, a table lookup error results. Additionally, if a user2.table1 does exist, that table is used instead of the intended user1.table1. To prevent this situation, qualify the table reference in the statement \(user1.table1, instead of just table1\).
+
+
+
+</dd><dt><b>
+
+ON EXCEPTION RESUME
+
+</b></dt>
+<dd>
+
+The procedure takes an action that depends on the setting of the ON\_TSQL\_ERROR option. If ON\_TSQL\_ERROR option is set to CONDITIONAL \(which is the default\) the execution continues if the next statement handles the error; otherwise, it exits.
+
+Error-handling statements include:
+
+-   IF
+-   SELECT @variable
+-   CASE
+-   LOOP
+-   LEAVE
+-   CONTINUE
+-   CALL
+-   EXECUTE
+-   SIGNAL
+-   RESIGNAL
+-   DECLARE
+-   SET VARIABLE
+
+Do not use explicit error-handling code with an ON EXCEPTION RESUME clause.
+
+See *ON\_TSQL\_ERROR Option \[TSQL\]*.
+
+
+
+</dd><dt><b>
+
+AT *<location-string\>*
+
+</b></dt>
+<dd>
+
+Creates a proxy stored procedure on the current database for a remote procedure specified by *<location-string\>*. The AT clause supports the semicolon \(;\) as a field delimiter in *<location-string\>*. If no semicolon is present, a period is the field delimiter. This allows file names and extensions to be used in the database and owner fields.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiod172ce3def5648e299ecb61779eab7da__section_vt2_zjl_sqb"/>
 
@@ -206,30 +276,54 @@ For information on remote servers, see *CREATE SERVER Statement*.
 
 The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
 
- Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
- :   You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
-  Connected directly to data lake Relational Engine as a data lake Relational Engine user:
- :   Requires one of:
+<dl>
+<dt><b>
 
-    -   To create a self owned procedures requires the CREATE PROCEDURE system privilege.
-    -   To create a procedure owned by another user requires one of:
-        -   CREATE ANY PROCEDURE system privilege
-        -   CREATE ANY OBJECT system privilege
-        -   CREATE ANY object-level privilege on the schema containing the procedure if the schema is owned by another user.
+Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
 
-    -   To replace an existing procedure requires one of:
-        -   You own the procedure.
-        -   DROP ANY PROCEURE or DROP ANY OBJECT system privilege along with CREATE ANY PROCEDURE or CREATE ANY OBJECT system privilege
-        -   If the procedure is in a schema owned by another user, then you need one of:
-            -   DROP and CREATE ANY object-level privilege on the schema
-            -   ALTER object-level privilege on the schema.
+</b></dt>
+<dd>
+
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 
-    For information on using a procedure created when connected as a data lake Relational Engine user, see [User-Defined Procedures in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/44dbf05fa907437b9145f1541cdbb920.html "User-defined procedures perform one or more specific tasks in data lake Relational Engine.") :arrow_upper_right:.
+</dd><dt><b>
 
- 
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+Requires one of:
+
+-   To create a self owned procedures requires the CREATE PROCEDURE system privilege.
+-   To create a procedure owned by another user requires one of:
+    -   CREATE ANY PROCEDURE system privilege
+    -   CREATE ANY OBJECT system privilege
+    -   CREATE ANY object-level privilege on the schema containing the procedure if the schema is owned by another user.
+
+-   To replace an existing procedure requires one of:
+    -   You own the procedure.
+    -   DROP ANY PROCEURE or DROP ANY OBJECT system privilege along with CREATE ANY PROCEDURE or CREATE ANY OBJECT system privilege
+    -   If the procedure is in a schema owned by another user, then you need one of:
+        -   DROP and CREATE ANY object-level privilege on the schema
+        -   ALTER object-level privilege on the schema.
+
+
+
+For information on using a procedure created when connected as a data lake Relational Engine user, see [User-Defined Procedures in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/44dbf05fa907437b9145f1541cdbb920.html "User-defined procedures perform one or more specific tasks in data lake Relational Engine.") :arrow_upper_right:.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiod172ce3def5648e299ecb61779eab7da__section_arr_ckl_sqb"/>
 

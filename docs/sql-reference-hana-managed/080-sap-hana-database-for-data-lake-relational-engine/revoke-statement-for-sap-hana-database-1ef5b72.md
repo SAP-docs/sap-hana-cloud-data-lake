@@ -12,18 +12,11 @@ Revoke privileges from users and roles to remove the ability to manage and query
 
 ```
 REVOKE <system_privilege> [,...] FROM <grantee>
- | REVOKE <schema_privilege> [,...] ON SCHEMA [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <hana_relational_container_schema_name> (varname] FROM <grantee>
- | REVOKE <object_privilege> [,...] ON [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <hana_relational_container_schema_name> (varname].<hana_object_name> FROM <grantee>
+ | REVOKE <schema_privilege> [,...] ON SCHEMA <hana_relational_container_schema_name> FROM <grantee>
+ | REVOKE <object_privilege> [,...] ON <hana_relational_container_schema_name>.<hana_object_name> FROM <grantee>
  | REVOKE <role_name> [,...] FROM <grantee>
- | REVOKE EXECUTE ON [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <relational_container_name> (varname].REMOTE_EXECUTE FROM [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <relational_container_name> (varname]
- | REVOKE { CREATE VIRTUAL TABLE | REMOTE TABLE ADMIN } ON REMOTE SOURCE [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_[/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <relational_container_name> (varname] (span]_SOURCE FROM <grantee>
+ | REVOKE EXECUTE ON <relational_container_name>.REMOTE_EXECUTE FROM <relational_container_name>
+ | REVOKE { CREATE VIRTUAL TABLE | REMOTE TABLE ADMIN } ON REMOTE SOURCE SYSHDL_<relational_container_name>_SOURCE FROM <grantee>
 ```
 
 

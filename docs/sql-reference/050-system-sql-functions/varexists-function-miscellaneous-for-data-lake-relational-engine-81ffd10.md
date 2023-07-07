@@ -16,13 +16,34 @@ VAREXISTS( <variable-name-string> [, <owner> ] )
 
 ## Parameters
 
- *<variable-name-string\>* 
- :   The name of the variable to be tested, as a string \(for example, 'myVariable'\).
 
-  *<owner\>*
- :   The user ID of the owner of the variable, as a string. *<owner\>* is only for use with owned database-scope variables.
+<dl>
+<dt><b>
 
- 
+*<variable-name-string\>* 
+
+</b></dt>
+<dd>
+
+The name of the variable to be tested, as a string \(for example, 'myVariable'\).
+
+
+
+</dd><dt><b>
+
+*<owner\>*
+
+</b></dt>
+<dd>
+
+The user ID of the owner of the variable, as a string. *<owner\>* is only for use with owned database-scope variables.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio81ffd1036ce210149ae9c943fab6d1c1__VAREXISTS_returns1"/>
 
@@ -36,10 +57,23 @@ INT
 
 ## Standards and Compatibility
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following IF statement checks to see if a variable called start\_time exists. If it doesn't, then the database server creates a connection-scope variable with that name, and sets its value to the current time.
 
@@ -61,5 +95,5 @@ END IF;
 **Related Information**  
 
 
-[VAREXISTS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/bf6a50154e834de2b212bb738f57143a.html "Returns 1 if a user-defined variable exists with the specified name. Returns 0 if no such variable exists.") :arrow_upper_right:
+[VAREXISTS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/bf6a50154e834de2b212bb738f57143a.html "Returns 1 if a user-defined variable exists with the specified name. Returns 0 if no such variable exists.") :arrow_upper_right:
 

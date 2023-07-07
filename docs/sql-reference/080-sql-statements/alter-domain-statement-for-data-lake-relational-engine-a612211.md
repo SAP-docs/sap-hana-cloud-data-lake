@@ -6,11 +6,6 @@ Renames a user-defined domain or data type.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -25,15 +20,41 @@ ALTER { DOMAIN | DATATYPE } <user-type>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 ## Parameters
 
- *<user-type\>*
- :   Specifies the user-defined data type of the domain being renamed.
 
-  RENAME *<new-name\>*
- :   Specifies an identifier representing the new domain name.
+<dl>
+<dt><b>
 
- 
+*<user-type\>*
+
+</b></dt>
+<dd>
+
+Specifies the user-defined data type of the domain being renamed.
+
+
+
+</dd><dt><b>
+
+RENAME *<new-name\>*
+
+</b></dt>
+<dd>
+
+Specifies an identifier representing the new domain name.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 

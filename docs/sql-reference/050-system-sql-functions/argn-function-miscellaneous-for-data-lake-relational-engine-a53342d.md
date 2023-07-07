@@ -16,13 +16,34 @@ ARGN ( <integer-expression>, <expression> [ , …] )
 
 ## Parameters
 
- *<integer-expression\>*
- :   The position of an argument within a list of expressions.
 
-  *<expression\>*
- :   An expression of any data type passed into the function. All supplied expressions must be of the same data type.
+<dl>
+<dt><b>
 
- 
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The position of an argument within a list of expressions.
+
+
+
+</dd><dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+An expression of any data type passed into the function. All supplied expressions must be of the same data type.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa53342da84f21015892d9495d775376f__ARGN_returns1"/>
 
@@ -61,5 +82,5 @@ SELECT ARGN( 6, 1,2,3,4,5,6 ) FROM iq_dummy
 **Related Information**  
 
 
-[ARGN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/fa3998bd27284db3b8f25033b4130aba.html "Returns a selected argument from a list of arguments.") :arrow_upper_right:
+[ARGN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/fa3998bd27284db3b8f25033b4130aba.html "Returns a selected argument from a list of arguments.") :arrow_upper_right:
 

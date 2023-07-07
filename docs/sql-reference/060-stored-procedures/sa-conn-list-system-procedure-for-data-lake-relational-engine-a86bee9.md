@@ -21,13 +21,34 @@ sa_conn_list ( [ <connidparm> ] [ ,<dbidparm> ] )
 
 ## Parameters
 
- *<connidparm\>*
- :   \(Optional\) An INTEGER parameter that specifies the connection ID number.
 
-  *<dbidparm\>*
- :   \(Optional\) An INTEGER parameter that specifies the database ID number.
+<dl>
+<dt><b>
 
- 
+*<connidparm\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) An INTEGER parameter that specifies the connection ID number.
+
+
+
+</dd><dt><b>
+
+*<dbidparm\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) An INTEGER parameter that specifies the database ID number.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa86bee9684f2101580badd42aee0402d__section_rl2_22y_mbb"/>
 
@@ -97,7 +118,10 @@ If *<connidparm\>* is NULL and *<dbidparm\>* is greater than or equal to zero, t
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). You also need the MONITOR system privilege.
+Requires all of:
+
+-   EXECUTE object-level privilege on the procedure
+-   MONITOR system privilege
 
 
 

@@ -28,13 +28,34 @@ sa_get_bits(
 
 ## Parameters
 
-  *<bit\_string\>* 
- :   Use this LONG VARBIT parameter to specify the bit string from which to get the bits. If the *<bit\_string\>* parameter is NULL, then no rows are returned.
 
-   *<only\_on\_bits\>* 
- :   Use this optional BIT parameter to specify whether to return only rows with on bits \(bits with the value of 1\). Specify 1 \(the default\) to return only rows with on bits; specify 0 to return rows for all bits in the bit string.
+<dl>
+<dt><b>
 
- 
+ *<bit\_string\>* 
+
+</b></dt>
+<dd>
+
+Use this LONG VARBIT parameter to specify the bit string from which to get the bits. If the *<bit\_string\>* parameter is NULL, then no rows are returned.
+
+
+
+</dd><dt><b>
+
+ *<only\_on\_bits\>* 
+
+</b></dt>
+<dd>
+
+Use this optional BIT parameter to specify whether to return only rows with on bits \(bits with the value of 1\). Specify 1 \(the default\) to return only rows with on bits; specify 0 to return rows for all bits in the bit string.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiodc051ed9b19649ec91efd03e157132cb__section_ej1_23d_srb"/>
 
@@ -183,7 +204,10 @@ The sa\_get\_bits system procedure can be used to convert a bit string into a re
 
 ## Permissions
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

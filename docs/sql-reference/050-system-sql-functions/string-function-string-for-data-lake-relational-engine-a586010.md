@@ -16,10 +16,23 @@ STRING ( <string-expression> [ , … ] )
 
 ## Parameters
 
- *<string-expression\>*
- :   A string. If only one argument is supplied, it is converted into a single expression. If more than one argument is supplied, they are concatenated into a single string. A NULL is treated as an empty string \(''\).
 
- 
+<dl>
+<dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+A string. If only one argument is supplied, it is converted into a single expression. If more than one argument is supplied, they are concatenated into a single string. A NULL is treated as an empty string \(''\).
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa586010d84f210158657b25cdb264bf0__STRING_returns1"/>
 
@@ -67,5 +80,5 @@ FROM iq_dummy
 **Related Information**  
 
 
-[STRING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/4b6311065965472286c536537d380f53.html "Concatenates one or more strings into one large string.") :arrow_upper_right:
+[STRING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/4b6311065965472286c536537d380f53.html "Concatenates one or more strings into one large string.") :arrow_upper_right:
 

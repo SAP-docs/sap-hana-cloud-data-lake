@@ -53,10 +53,99 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
 ## Scope
 
--   Option can be set at the database \(PUBLIC\) or user level. At the database level, the value becomes the default for any new user, but has no impact on existing users. At the user level, overrides the PUBLIC value for that user only. No system privilege is required to set option for self. System privilege is required to set at database level or at user level for any user other than self.
 
--   Can be set temporary for an individual connection or for the PUBLIC role. Takes effect immediately.
+<table>
+<tr>
+<th valign="top">
 
+ 
+
+
+
+</th>
+<th valign="top">
+
+PUBLIC Role
+
+
+
+</th>
+<th valign="top">
+
+For Current User
+
+
+
+</th>
+<th valign="top">
+
+For Other Users
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Allowed to set permanently?
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Allowed to set temporarily?
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+Yes \(current connection only\)
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+</tr>
+</table>
 
 
 
@@ -124,5 +213,5 @@ wilson.MAX_TEMP_SPACE_PER_CONNECTION = 5000
 
 [QUERY\_TEMP\_SPACE\_LIMIT Option for Data Lake Relational Engine](query-temp-space-limit-option-for-data-lake-relational-engine-a650c63.md "Specifies the maximum estimated amount of temp space before a query is rejected.")
 
-[MAX_TEMP_SPACE_PER_CONNECTION Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/713e6c2a4c594b22ae18a449e8ecd9dc.html "Limits temporary store space used per connection.") :arrow_upper_right:
+[MAX_TEMP_SPACE_PER_CONNECTION Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/713e6c2a4c594b22ae18a449e8ecd9dc.html "Limits temporary store space used per connection.") :arrow_upper_right:
 

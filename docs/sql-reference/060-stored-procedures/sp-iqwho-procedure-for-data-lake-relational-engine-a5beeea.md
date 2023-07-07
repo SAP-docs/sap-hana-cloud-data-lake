@@ -21,18 +21,47 @@ sp_iqwho [ { <connhandle> | <user-name> } [, <arg-type> ] ]
 
 ## Parameters
 
- *<connhandle\>*
- :   An integer representing the connection ID. If this parameter is specified, sp\_iqwho returns information only about the specified connection. If the specified connection is not open, no rows are displayed in the output.
 
-  *<user-name\>*
- :   A char\(255\) parameter representing a user login name. If this parameter is specified, sp\_iqwho returns information only about the specified user. If the specified user has not opened any connections, no rows are displayed in the output. If the specified user name does not exist in the database, sp\_iqwho returns the error message "***User *<user-name\>* does not exist.***"
+<dl>
+<dt><b>
 
-  *<arg-type\>*
- :   \(Optional\) Can be specified only when the first parameter has been specified. The only value for *<arg-type\>* is "user". If the *<arg-type\>* value is specified as "user", sp\_iqwho interprets the first parameter as a user name, even if the first parameter is numeric. If any value other than "user" is specified for *<arg-type\>*, sp\_iqwho returns the error "***Invalid parameter.***"
+*<connhandle\>*
 
-    Enclose the *<arg-type\>* value in double quotes.
+</b></dt>
+<dd>
 
- 
+An integer representing the connection ID. If this parameter is specified, sp\_iqwho returns information only about the specified connection. If the specified connection is not open, no rows are displayed in the output.
+
+
+
+</dd><dt><b>
+
+*<user-name\>*
+
+</b></dt>
+<dd>
+
+A char\(255\) parameter representing a user login name. If this parameter is specified, sp\_iqwho returns information only about the specified user. If the specified user has not opened any connections, no rows are displayed in the output. If the specified user name does not exist in the database, sp\_iqwho returns the error message "***User *<user-name\>* does not exist.***"
+
+
+
+</dd><dt><b>
+
+*<arg-type\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) Can be specified only when the first parameter has been specified. The only value for *<arg-type\>* is "user". If the *<arg-type\>* value is specified as "user", sp\_iqwho interprets the first parameter as a user name, even if the first parameter is numeric. If any value other than "user" is specified for *<arg-type\>*, sp\_iqwho returns the error "***Invalid parameter.***"
+
+Enclose the *<arg-type\>* value in double quotes.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5beeead84f210158043f99faa62fce2__section_cmh_kgg_nbb"/>
 
@@ -590,59 +619,7 @@ Returns the error "***Invalid parameter: xyz.***"
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
-
-You also need one of the following:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
--   MONITOR
-
-
-
-</td>
-<td valign="top">
-
-System privileges
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+Requires EXECUTE object-level privilege on the procedure, along with the MONITOR system privilege.
 
 
 

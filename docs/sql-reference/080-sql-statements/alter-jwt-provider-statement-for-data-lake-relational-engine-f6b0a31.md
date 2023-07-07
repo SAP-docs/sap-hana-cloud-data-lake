@@ -6,11 +6,6 @@ Alters a JWT provider in the data lake Relational Engine database.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -26,81 +21,173 @@ ALTER JWT PROVIDER <jwt_provider_name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 ## Parameters
 
- *<jwt\_provider\_name\>*
- :   Specifies the identifier of a JWT provider to be modified.
 
-    ```
-    <jwt_provider_name> ::= <simple_identifier>
-    ```
+<dl>
+<dt><b>
 
-  *<issuer\_clause\>*
- :   Specifies the issuer name. Tokens with an "iss" claim matching this name are mapped to this JWT provider.
+*<jwt\_provider\_name\>*
 
-    ```
-    <issuer_clause> ::= WITH ISSUER <sting_literal>
-    ```
+</b></dt>
+<dd>
 
-  *<claims\_clause\>*
- :   ```
+Specifies the identifier of a JWT provider to be modified.
+
+```
+<jwt_provider_name> ::= <simple_identifier>
+```
+
+
+
+</dd><dt><b>
+
+*<issuer\_clause\>*
+
+</b></dt>
+<dd>
+
+Specifies the issuer name. Tokens with an "iss" claim matching this name are mapped to this JWT provider.
+
+```
+<issuer_clause> ::= WITH ISSUER <sting_literal>
+```
+
+
+
+</dd><dt><b>
+
+*<claims\_clause\>*
+
+</b></dt>
+<dd>
+
+```
 <claims_clause> ::= 
    { <external_id_clause> | <claim_compare_clause> } [ <claims_clause> ]
 ```
 
-     *<external\_id\_clause\>*
-     :   Adds a claim that must be verified in JWT token which represents external identity. It can be modified using ALTER JWT PROVIDER but cannot be deleted.
 
-        ```
-        <external_id_clause> ::= CLAIM <string_literal> AS EXTERNAL IDENTITY
-        ```
+<dl>
+<dt><b>
 
-      *<claim\_compare\_clause\>*
-     :   A claim can only be used for one compare operation, either = or HAS MEMBER. Claim and value comparisons are case-sensitive.
+*<external\_id\_clause\>*
 
-        ```
-        <claim_compare_clause> ::= { <claim_equals_clause> | <claim_has_member_clause> }
-        ```
+</b></dt>
+<dd>
 
-         *<claim\_equals\_clause\>*
-         :   *<claim\_equals\_clause\>* expects the JWT claim value to be a string or array of strings and the value must exactly match the configured value \(for example, 'origin' claim or 'zone\_uuid' claim\).
+Adds a claim that must be verified in JWT token which represents external identity. It can be modified using ALTER JWT PROVIDER but cannot be deleted.
 
-            ```
-            <claim_equals_clause> ::= CLAIM <claim_name> = <claim_value>
-            
-            <claim_name> ::= <string_literal>
-            <claim_value> ::= <string_literal>
-            ```
+```
+<external_id_clause> ::= CLAIM <string_literal> AS EXTERNAL IDENTITY
+```
 
-          *<claim\_has\_member\_clause\>*
-         :   *<claim\_equals\_clause\>* expects the JWT claim to be an array of strings. If the JWT contains a simple string instead of an array of strings, then the simple string is treated like an array with one entry.
 
-            ```
-            <claim_has_member_clause> ::= CLAIM <claim_name> HAS MEMBER <claim_value>
-            
-            <claim_name> ::= <string_literal>
-            <claim_value> ::= <string_literal>
-            ```
 
-    *<priority\_clause\>*
- :   Sets priority for a provider entry to allow existence of multiple providers with the same issuer. The default value is 100.
+</dd><dt><b>
 
-    ```
-    <priority_clause> ::= PRIORITY <number>
-    ```
+*<claim\_compare\_clause\>*
 
-    *<number\>* is a value between 1-250.
+</b></dt>
+<dd>
 
-    Providers with the same issuer must have different priorities. During authentication, the provider with the highest priority is checked first. If the claims match with the provided JWT token, that provider is used for the authentication; otherwise, the provider with the next lower priority is tested until a match is found.
+A claim can only be used for one compare operation, either = or HAS MEMBER. Claim and value comparisons are case-sensitive.
 
-  *<unset\_claims\_clause\>*
- :   Unsets one or more claims. You cannot unset the *<external\_id\_clause\>*. If an external id claim is set using *<claim\_compare\_clause\>*, that claim can be unset successfully.
+```
+<claim_compare_clause> ::= { <claim_equals_clause> | <claim_has_member_clause> }
+```
 
-    ```
-    CLAIM <claim_name> [<unset_claims_clause>]
-    ```
 
- 
+<dl>
+<dt><b>
+
+*<claim\_equals\_clause\>*
+
+</b></dt>
+<dd>
+
+*<claim\_equals\_clause\>* expects the JWT claim value to be a string or array of strings and the value must exactly match the configured value \(for example, 'origin' claim or 'zone\_uuid' claim\).
+
+```
+<claim_equals_clause> ::= CLAIM <claim_name> = <claim_value>
+
+<claim_name> ::= <string_literal>
+<claim_value> ::= <string_literal>
+```
+
+
+
+</dd><dt><b>
+
+*<claim\_has\_member\_clause\>*
+
+</b></dt>
+<dd>
+
+*<claim\_equals\_clause\>* expects the JWT claim to be an array of strings. If the JWT contains a simple string instead of an array of strings, then the simple string is treated like an array with one entry.
+
+```
+<claim_has_member_clause> ::= CLAIM <claim_name> HAS MEMBER <claim_value>
+
+<claim_name> ::= <string_literal>
+<claim_value> ::= <string_literal>
+```
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+*<priority\_clause\>*
+
+</b></dt>
+<dd>
+
+Sets priority for a provider entry to allow existence of multiple providers with the same issuer. The default value is 100.
+
+```
+<priority_clause> ::= PRIORITY <number>
+```
+
+*<number\>* is a value between 1-250.
+
+Providers with the same issuer must have different priorities. During authentication, the provider with the highest priority is checked first. If the claims match with the provided JWT token, that provider is used for the authentication; otherwise, the provider with the next lower priority is tested until a match is found.
+
+
+
+</dd><dt><b>
+
+*<unset\_claims\_clause\>*
+
+</b></dt>
+<dd>
+
+Unsets one or more claims. You cannot unset the *<external\_id\_clause\>*. If an external id claim is set using *<claim\_compare\_clause\>*, that claim can be unset successfully.
+
+```
+CLAIM <claim_name> [<unset_claims_clause>]
+```
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiof6b0a31d00884412a259cea30ee39b8f__IQ_Permissions"/>
 

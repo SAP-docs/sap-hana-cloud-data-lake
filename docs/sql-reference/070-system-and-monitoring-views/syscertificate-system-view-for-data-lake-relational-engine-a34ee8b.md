@@ -156,7 +156,7 @@ The UTC date and time of the last create or replace.
 <tr>
 <td valign="top">
 
-PURPOSE
+purpose
 
 
 
@@ -173,9 +173,8 @@ TINYINT
 The purpose of the certificate. Valid values are:
 
 -   1 - for JWT
+-   2 - for X.509
 -   NULL
-
-.
 
 
 
@@ -199,6 +198,121 @@ UNSIGNED BIGINT
 <td valign="top">
 
 The JWT provider associated with the certificate, or NULL if the purpose is not JWT.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+x509\_provider\_id
+
+
+
+</td>
+<td valign="top">
+
+UNSIGNED BIGINT
+
+
+
+</td>
+<td valign="top">
+
+The X.509 provider associated with the certificate, or NULL if the purpose is not X.509.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+subject\_distinguished\_name
+
+
+
+</td>
+<td valign="top">
+
+VARCHAR\(2048\)
+
+
+
+</td>
+<td valign="top">
+
+Displays the distinguished name of the X.509 certificate subject.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+issuer\_distinguished\_name
+
+
+
+</td>
+<td valign="top">
+
+VARCHAR\(2048\)
+
+
+
+</td>
+<td valign="top">
+
+Displays the distinguished name of the X.509 certificate issuer.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+valid\_from
+
+
+
+</td>
+<td valign="top">
+
+TIMESTAMP
+
+
+
+</td>
+<td valign="top">
+
+Displays the start time of certificate's validity
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+valid\_until
+
+
+
+</td>
+<td valign="top">
+
+TIMESTAMP
+
+
+
+</td>
+<td valign="top">
+
+Displays the end time of certificate's validity
 
 
 

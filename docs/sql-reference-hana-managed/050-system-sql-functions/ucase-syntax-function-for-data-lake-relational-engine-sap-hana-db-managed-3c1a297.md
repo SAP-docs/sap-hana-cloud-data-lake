@@ -16,10 +16,23 @@ UCASE ( <string-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string to be converted to uppercase.
 
- 
+<dl>
+<dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string to be converted to uppercase.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3c1a297f45ba489283c80d39e97a4218__section_olx_13v_vrb"/>
 

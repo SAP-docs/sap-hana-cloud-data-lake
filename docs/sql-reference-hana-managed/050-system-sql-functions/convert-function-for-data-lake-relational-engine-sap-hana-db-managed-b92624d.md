@@ -16,18 +16,47 @@ CONVERT ( <data-type>, <expression> [ , <format-style> ] )
 
 ## Parameters
 
- *<data-type\>*
- :   The data type to convert the expression into. Set the data type explicitly, or specify the %TYPE attribute to set the data type to the data type of a column in a table or view, or to the data type of a variable.
 
-  *<expression\>*
- :   The expression to be converted.
+<dl>
+<dt><b>
 
-  *<format-style\>*
- :   For converting strings to date or time data types and vice versa, format-style is a style code number that describes the date format string to be used.
+*<data-type\>*
 
-    If no *<format-style\>* argument is provided, the database option settings are used.
+</b></dt>
+<dd>
 
- 
+The data type to convert the expression into. Set the data type explicitly, or specify the %TYPE attribute to set the data type to the data type of a column in a table or view, or to the data type of a variable.
+
+
+
+</dd><dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The expression to be converted.
+
+
+
+</dd><dt><b>
+
+*<format-style\>*
+
+</b></dt>
+<dd>
+
+For converting strings to date or time data types and vice versa, format-style is a style code number that describes the date format string to be used.
+
+If no *<format-style\>* argument is provided, the database option settings are used.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiob92624d74b14466cb6f758da6ed87324__section_cxh_2rl_srb"/>
 

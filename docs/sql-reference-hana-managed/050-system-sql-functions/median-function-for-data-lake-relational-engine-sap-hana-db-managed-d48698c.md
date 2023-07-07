@@ -6,30 +6,72 @@ Returns the median of an expression.
 
 
 
- Syntax 1
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1
+
+</b></dt>
+<dd>
+
+```
 MEDIAN ( [ ALL | DISTINCT ] <expression> )
 ```
 
-  Syntax 2
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2
+
+</b></dt>
+<dd>
+
+```
 MEDIAN ( [ ALL | DISTINCT ] <expression> )
 OVER ( <window-spec> )
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiod48698c99cd5450980130ce6dcd32356__section_pzv_shn_vrb"/>
 
 ## Parameters
 
- *<expression\>*
- :   A numeric expression for which a median value is to be computed.
 
-  *<window-spec\>*
- :   Specified when using this function as a window function.
+<dl>
+<dt><b>
 
- 
+*<expression\>*
+
+</b></dt>
+<dd>
+
+A numeric expression for which a median value is to be computed.
+
+
+
+</dd><dt><b>
+
+*<window-spec\>*
+
+</b></dt>
+<dd>
+
+Specified when using this function as a window function.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiod48698c99cd5450980130ce6dcd32356__section_crr_thn_vrb"/>
 

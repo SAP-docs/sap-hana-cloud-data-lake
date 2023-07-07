@@ -6,11 +6,6 @@ Creates a new proxy table that represents an existing table on a remote server.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -19,12 +14,15 @@ Creates a new proxy table that represents an existing table on a remote server.
 
 
 ```
-CREATE EXISTING [ LOCAL TEMPORARY ] TABLE [ { [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname] }.]<table_name> 
+CREATE EXISTING [ LOCAL TEMPORARY ] TABLE [ { <owner> | <schema-name> }.]<table_name> 
    [ ( <column-definition>, … ) ] 
    AT '<location-string>'
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -32,47 +30,68 @@ CREATE EXISTING [ LOCAL TEMPORARY ] TABLE [ { [/pandoc/div/div/horizontalrule/co
 
 ## Parameters
 
- *<column-definition\>*
- :   Column definitions are required when LOCAL TEMPORARY is specified. Otherwise, column definitions are optional.
 
-    ```
-    <column-definition> ::= 
-       <column-name> <data-type> [ NOT NULL ]
-    ```
+<dl>
+<dt><b>
 
-    If you do not specify column definitions, data lake Relational Engine derives the column list from the metadata it obtains from the remote table. If you do specify column definitions, data lake Relational Engine verifies them. When data lake Relational Engine checks column names, data types, lengths, and null properties:
+*<column-definition\>*
 
-    -   Column names must match identically \(although case is ignored\).
-    -   For information on supported data types, see [Available Data Types For CREATE EXISTING TABLE in Data Lake Relational Engine](available-data-types-for-create-existing-table-in-data-lake-relational-engine-28c73ef.md). Data types in CREATE EXISTING TABLE must match or be convertible to the data types of the column on the remote location. For example, a local column data type is defined as NUMERIC, whereas the remote column data type is MONEY. You may encounter some errors, if you select from a table in which the data types do not match or other inconsistencies exist.
-    -   Each column’s NULL property is checked. If the local column’s NULL property is not identical to the remote column’s NULL property, a warning message is issued, but the statement is not aborted.
-    -   Each column’s length is checked. If the lengths of CHAR, VARCHAR, BINARY, DECIMAL, and NUMERIC columns do not match, a warning message is issued, but the command is not aborted. You might choose to include only a subset of the actual remote column list in your CREATE EXISTING statement.
+</b></dt>
+<dd>
 
-  AT '*<location-string\>*'
- :   Specifies the location of the remote object.
+Column definitions are required when LOCAL TEMPORARY is specified. Otherwise, column definitions are optional.
 
-    ```
-    <location-string> ::=
-       <remote-server-name>.[<db-name>].[<owner>].<object-name>
-       | <remote-server-name>;[<db-name>];[<owner>];<object-name>
-    ```
+```
+<column-definition> ::= 
+   <column-name> <data-type> [ NOT NULL ]
+```
 
-    The AT clause supports the semicolon \(;\) as a delimiter. If a semicolon is present anywhere in the *<column-definition\>*, the semicolon is the field delimiter. If no semicolon is present, a period is the field delimiter. This behavior allows file names and extensions to be used in the database and owner fields. An ESCAPE CHARACTER clause allows applications to escape these delimiters within a location string.
+If you do not specify column definitions, data lake Relational Engine derives the column list from the metadata it obtains from the remote table. If you do specify column definitions, data lake Relational Engine verifies them. When data lake Relational Engine checks column names, data types, lengths, and null properties:
 
-    When you create a proxy table by using either the CREATE TABLE or the CREATE EXISTING statement, the AT clause includes a location string that consists of the following parts:
+-   Column names must match identically \(although case is ignored\).
+-   For information on supported data types, see [Available Data Types For CREATE EXISTING TABLE in Data Lake Relational Engine](available-data-types-for-create-existing-table-in-data-lake-relational-engine-28c73ef.md). Data types in CREATE EXISTING TABLE must match or be convertible to the data types of the column on the remote location. For example, a local column data type is defined as NUMERIC, whereas the remote column data type is MONEY. You may encounter some errors, if you select from a table in which the data types do not match or other inconsistencies exist.
+-   Each column’s NULL property is checked. If the local column’s NULL property is not identical to the remote column’s NULL property, a warning message is issued, but the statement is not aborted.
+-   Each column’s length is checked. If the lengths of CHAR, VARCHAR, BINARY, DECIMAL, and NUMERIC columns do not match, a warning message is issued, but the command is not aborted. You might choose to include only a subset of the actual remote column list in your CREATE EXISTING statement.
 
-    -   The name of the remote server
-    -   The remote catalog
-    -   The remote owner or schema
-    -   The remote table name
 
-    Use a period or semicolon to delimit the location strings. The location string can also contain variable names that are expanded when the database server evaluates the location string. Variable names within the location string are encapsulated within braces. It is very rare to have a period, semicolon, and a brace, or just a brace, be part of a remote server name, catalog name, owner name, schema name, or table name. However, there may be some situations where one or all of these delimiter characters must be interpreted literally within a location string.
 
-    > ### Note:  
-    > The ESCAPE clause is only necessary if there is a need to escape delimiters within the location clause. In general, the ESCAPE clause can be omitted when creating proxy tables. The escape character can be any single byte character.
+</dd><dt><b>
 
-    The string in the AT clause can contain local or global variable names enclosed in braces \(for example, \{variable-name\}\). The SQL variable name must be of type CHAR, VARCHAR, or LONG VARCHAR. For example, an AT clause that contains 'access;\{@myfile\};;a1' indicates that @myfile is a SQL variable and that the current contents of the @myfile variable should be substituted when the proxy table is created.
+AT '*<location-string\>*'
 
- 
+</b></dt>
+<dd>
+
+Specifies the location of the remote object.
+
+```
+<location-string> ::=
+   <remote-server-name>.[<db-name>].[<owner>].<object-name>
+   | <remote-server-name>;[<db-name>];[<owner>];<object-name>
+```
+
+The AT clause supports the semicolon \(;\) as a delimiter. If a semicolon is present anywhere in the *<column-definition\>*, the semicolon is the field delimiter. If no semicolon is present, a period is the field delimiter. This behavior allows file names and extensions to be used in the database and owner fields. An ESCAPE CHARACTER clause allows applications to escape these delimiters within a location string.
+
+When you create a proxy table by using either the CREATE TABLE or the CREATE EXISTING statement, the AT clause includes a location string that consists of the following parts:
+
+-   The name of the remote server
+-   The remote catalog
+-   The remote owner or schema
+-   The remote table name
+
+Use a period or semicolon to delimit the location strings. The location string can also contain variable names that are expanded when the database server evaluates the location string. Variable names within the location string are encapsulated within braces. It is very rare to have a period, semicolon, and a brace, or just a brace, be part of a remote server name, catalog name, owner name, schema name, or table name. However, there may be some situations where one or all of these delimiter characters must be interpreted literally within a location string.
+
+> ### Note:  
+> The ESCAPE clause is only necessary if there is a need to escape delimiters within the location clause. In general, the ESCAPE clause can be omitted when creating proxy tables. The escape character can be any single byte character.
+
+The string in the AT clause can contain local or global variable names enclosed in braces \(for example, \{variable-name\}\). The SQL variable name must be of type CHAR, VARCHAR, or LONG VARCHAR. For example, an AT clause that contains 'access;\{@myfile\};;a1' indicates that @myfile is a SQL variable and that the current contents of the @myfile variable should be substituted when the proxy table is created.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa617378084f21015ab5f9b1b9cfa3620__create_existing_table_remarks"/>
 
@@ -198,5 +217,5 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[CREATE EXISTING TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/ee4c9163f3a647b3938c7b0c08a9dd44.html "Creates a new proxy table that represents an existing table on a remote server.") :arrow_upper_right:
+[CREATE EXISTING TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ee4c9163f3a647b3938c7b0c08a9dd44.html "Creates a new proxy table that represents an existing table on a remote server.") :arrow_upper_right:
 

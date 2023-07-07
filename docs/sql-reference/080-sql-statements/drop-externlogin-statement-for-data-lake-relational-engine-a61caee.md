@@ -6,11 +6,6 @@ Drops an external login from the data lake Relational Engine system tables.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -25,17 +20,43 @@ DROP EXTERNLOGIN <login-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa61caee684f21015b95df0220f3f0a38__IQ_Parameters"/>
 
 ## Parameters
 
- *<login-name\>*
- :   Specifies the local user login name.
 
-  TO *<remote-server\>*
- :   Specifies the name of the remote server. The alternate login name of the local user and password for that server is the external login that is deleted.
+<dl>
+<dt><b>
 
- 
+*<login-name\>*
+
+</b></dt>
+<dd>
+
+Specifies the local user login name.
+
+
+
+</dd><dt><b>
+
+TO *<remote-server\>*
+
+</b></dt>
+<dd>
+
+Specifies the name of the remote server. The alternate login name of the local user and password for that server is the external login that is deleted.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61caee684f21015b95df0220f3f0a38__IQ_Usage"/>
 

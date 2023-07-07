@@ -6,33 +6,83 @@ Returns an integer that represents the number of non-NULL number pairs used to f
 
 
 
- Syntax 1
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1
+
+</b></dt>
+<dd>
+
+```
 REGR_COUNT( <dependent-expression>, <independent-expression> )
 ```
 
-  Syntax 2
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2
+
+</b></dt>
+<dd>
+
+```
 REGR_COUNT( <dependent-expression>, <independent-expression> )
 OVER ( <window-spec> )
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio6ae6fc4e7e5e41489f2f3481cc6f8a3d__section_mgw_q35_vrb"/>
 
 ## Parameters
 
- *<dependent-expression\>*
- :   The variable that is affected by the independent variable.
 
-  *<independent-expression\>*
- :   The variable that influences the outcome.
+<dl>
+<dt><b>
 
-  *<window-spec\>*
- :   Specified when using this function as a window function.
+*<dependent-expression\>*
 
- 
+</b></dt>
+<dd>
+
+The variable that is affected by the independent variable.
+
+
+
+</dd><dt><b>
+
+*<independent-expression\>*
+
+</b></dt>
+<dd>
+
+The variable that influences the outcome.
+
+
+
+</dd><dt><b>
+
+*<window-spec\>*
+
+</b></dt>
+<dd>
+
+Specified when using this function as a window function.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio6ae6fc4e7e5e41489f2f3481cc6f8a3d__section_hjl_r35_vrb"/>
 

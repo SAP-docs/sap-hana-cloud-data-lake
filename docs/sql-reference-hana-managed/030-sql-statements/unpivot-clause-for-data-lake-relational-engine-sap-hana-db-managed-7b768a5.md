@@ -33,19 +33,56 @@ IN ( <unpivot-old-column> [[ AS ] <unpivot-old-column-alias> ] [,...] )
 
 ## Parameters
 
- \{ INCLUDE | EXCLUDE \} NULLS
- :   Specify whether to include or exclude NULL values in the results for *<value-column\>*. The default behavior is EXCLUDE NULLS.
 
-  *<unpivot-value-clause\>*
- :   Specify name\(s\) for the new columns in the unpivoted derived table that will hold unpivoted values.
+<dl class="glossary">
+<dt><b>
 
-  *<unpivot-for-clause\>*
- :   Specify a column to unpivot the data for.
+\{ INCLUDE | EXCLUDE \} NULLS
 
-  *<unpivot-in-clause\>*
- :   Specify the values of *<unpivot-for-clause\>* to unpivot data for.
+</b></dt>
+<dd>
 
- 
+Specify whether to include or exclude NULL values in the results for *<value-column\>*. The default behavior is EXCLUDE NULLS.
+
+
+
+</dd><dt><b>
+
+*<unpivot-value-clause\>*
+
+</b></dt>
+<dd>
+
+Specify name\(s\) for the new columns in the unpivoted derived table that will hold unpivoted values.
+
+
+
+</dd><dt><b>
+
+*<unpivot-for-clause\>*
+
+</b></dt>
+<dd>
+
+Specify a column to unpivot the data for.
+
+
+
+</dd><dt><b>
+
+*<unpivot-in-clause\>*
+
+</b></dt>
+<dd>
+
+Specify the values of *<unpivot-for-clause\>* to unpivot data for.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio7b768a5d681f4b35a2b1bbcd78ae04aa__section_p31_sjp_njb"/>
 
@@ -71,10 +108,23 @@ None.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 Suppose that you have a table called MyCustomers, containing the names of your contacts and the various phone numbers they have. The following statements create such a table, populate it with fictitious data, and then query the table:
 

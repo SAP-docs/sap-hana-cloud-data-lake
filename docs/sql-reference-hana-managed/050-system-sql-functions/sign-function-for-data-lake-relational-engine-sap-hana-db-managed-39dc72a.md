@@ -16,10 +16,23 @@ SIGN ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The number for which the sign is to be returned.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The number for which the sign is to be returned.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio39dc72ab4eeb4d198cc7f4c051fa4b0d__section_hdb_l43_wrb"/>
 

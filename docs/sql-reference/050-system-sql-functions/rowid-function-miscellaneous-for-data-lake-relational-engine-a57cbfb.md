@@ -16,10 +16,23 @@ ROWID ( <table-name> ) … FROM <table-name>
 
 ## Parameters
 
- *<table-name\>*
- :   The name of the table. Specify the name of the table within the parentheses with either no quotes or with double quotes.
 
- 
+<dl>
+<dt><b>
+
+*<table-name\>*
+
+</b></dt>
+<dd>
+
+The name of the table. Specify the name of the table within the parentheses with either no quotes or with double quotes.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa57cbfb484f21015b1a6f34fe17463d2__ROWID_returns1"/>
 
@@ -71,8 +84,8 @@ You must specify the `FROM` *<table-name\>* clause.
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    1
+    
+        1
 
 
     
@@ -80,8 +93,8 @@ You must specify the `FROM` *<table-name\>* clause.
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    2
+    
+        2
 
 
     
@@ -89,8 +102,8 @@ You must specify the `FROM` *<table-name\>* clause.
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    3
+    
+        3
 
 
     
@@ -98,8 +111,8 @@ You must specify the `FROM` *<table-name\>* clause.
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    .
+    
+        .
 
 
     
@@ -107,8 +120,8 @@ You must specify the `FROM` *<table-name\>* clause.
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    .
+    
+        .
 
 
     
@@ -116,8 +129,8 @@ You must specify the `FROM` *<table-name\>* clause.
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    .
+    
+        .
 
 
     
@@ -125,8 +138,8 @@ You must specify the `FROM` *<table-name\>* clause.
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    10
+    
+        10
 
 
     
@@ -162,31 +175,15 @@ You must specify the `FROM` *<table-name\>* clause.
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    300
+    
+        300
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    1
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    301
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    2
+        1
 
 
     
@@ -194,15 +191,31 @@ You must specify the `FROM` *<table-name\>* clause.
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    302
+    
+        301
 
 
     
     </td>
     <td valign="top" rowspan="1">
+    
+        2
 
-     3
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        302
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+         3
 
 
     
@@ -221,5 +234,5 @@ You must specify the `FROM` *<table-name\>* clause.
 **Related Information**  
 
 
-[ROWID Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/77bc1bdbb46f48368bb3398b4cabaea0.html "Returns the internal row ID value for each row of the table.") :arrow_upper_right:
+[ROWID Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/77bc1bdbb46f48368bb3398b4cabaea0.html "Returns the internal row ID value for each row of the table.") :arrow_upper_right:
 

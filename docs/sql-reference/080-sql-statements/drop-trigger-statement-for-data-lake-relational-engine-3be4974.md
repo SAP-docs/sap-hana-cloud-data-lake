@@ -6,11 +6,6 @@ Removes a trigger from the database.This statement applies to data lake Relation
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -21,6 +16,11 @@ Removes a trigger from the database.This statement applies to data lake Relation
 ```
 DROP TRIGGER [ IF EXISTS ] [ <owner>.][<table-name>.]<trigger-name>
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -62,10 +62,23 @@ Automatic commit.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   DROP TRIGGER comprises part of optional ANSI/ISO SQL Language Feature T211, "Basic trigger capability". The IF EXISTS clause is not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+DROP TRIGGER comprises part of optional ANSI/ISO SQL Language Feature T211, "Basic trigger capability". The IF EXISTS clause is not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 This example creates, and then drops, a trigger called emp\_upper\_postal\_code that ensures postal codes are in upper case before updating the Employees table. If the trigger does not exist, an error is returned.
 

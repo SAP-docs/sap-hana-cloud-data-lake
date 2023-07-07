@@ -16,10 +16,23 @@ HOUR ( <datetime-expression> )
 
 ## Parameters
 
- *<datetime-expression\>*
- :   The date/time.
 
- 
+<dl>
+<dt><b>
+
+*<datetime-expression\>*
+
+</b></dt>
+<dd>
+
+The date/time.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa55651ad84f210158eceac6470043938__HOUR_returns1"/>
 
@@ -50,5 +63,5 @@ SELECT HOUR( '1998-07-09 21:12:13' ) FROM iq_dummy
 **Related Information**  
 
 
-[HOUR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/13ca8f80a24a45b3ae7e434753dd97c8.html "Returns a number from 0 to 23 corresponding to the hour component of the specified date/time.") :arrow_upper_right:
+[HOUR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/13ca8f80a24a45b3ae7e434753dd97c8.html "Returns a number from 0 to 23 corresponding to the hour component of the specified date/time.") :arrow_upper_right:
 

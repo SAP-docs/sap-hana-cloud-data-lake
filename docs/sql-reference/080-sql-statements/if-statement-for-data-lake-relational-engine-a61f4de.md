@@ -6,11 +6,6 @@ Lets you conditionally execute the first list of SQL statements whose *<search-c
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,6 +19,11 @@ IF <search-condition> THEN <statement-list>
 ... [ ELSE <statement-list> ]
 ... END IF
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 

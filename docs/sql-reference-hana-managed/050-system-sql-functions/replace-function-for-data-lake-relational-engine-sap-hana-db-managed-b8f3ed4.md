@@ -18,16 +18,45 @@ REPLACE ( <original-string>, <search-string>, <replace-string> )
 
 If any argument is NULL, the function returns NULL.
 
- *<original-string\>*
- :   The string to be searched. This string can be any length.
 
-  *<search-string\>*
- :   The string to be searched for and replaced with *<replace-string\>*. This string is limited to 255 bytes. If *<search-string\>* is an empty string, the original string is returned unchanged.
+<dl>
+<dt><b>
 
-  *<replace-string\>*
- :   The replacement string, which replaces *<search-string\>*. This can be any length. If *<replace-string\>* is an empty string, all occurrences of *<search-string\>* are deleted.
+*<original-string\>*
 
- 
+</b></dt>
+<dd>
+
+The string to be searched. This string can be any length.
+
+
+
+</dd><dt><b>
+
+*<search-string\>*
+
+</b></dt>
+<dd>
+
+The string to be searched for and replaced with *<replace-string\>*. This string is limited to 255 bytes. If *<search-string\>* is an empty string, the original string is returned unchanged.
+
+
+
+</dd><dt><b>
+
+*<replace-string\>*
+
+</b></dt>
+<dd>
+
+The replacement string, which replaces *<search-string\>*. This can be any length. If *<replace-string\>* is an empty string, all occurrences of *<search-string\>* are deleted.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiob8f3ed4beb9645e98dee8a2c50011263__section_uqr_jd5_vrb"/>
 

@@ -26,22 +26,59 @@ sp_iqlocks ( [ <connection>,] [ [ <owner>.]<table_name>,]
 
 All parameters are optional to restrict results:
 
- *<connection\>*
- :   \(Optional\) An INTEGER parameter that specifies the connection ID. With this option, the procedure returns information about locks for the specified connection only. Default is zero, which returns information about all connections.
 
-  *<owner\>*.*<table\_name\>*
- :   \(Optional\) A CHAR\(128\) parameter that specifies the table name. With this option, the procedure returns information about locks for the specified table only. Default is NULL, which returns information about all tables in the database. If you do not specify owner, it is assumed that the caller of the procedure owns the table.
+<dl>
+<dt><b>
 
-  *<max\_locks\>*
- :   \(Optional\) An INTEGER parameter that specifies the maximum number of locks for which to return information. Default is 0, which returns all lock information.
+*<connection\>*
 
-  *<sort\_order\>*
- :   \(Optional\) A CHAR\(1\) parameter that specifies the order in which to return information:
+</b></dt>
+<dd>
 
-    -   C sorts by connection \(default\)
-    -   T sorts by table\_name
+\(Optional\) An INTEGER parameter that specifies the connection ID. With this option, the procedure returns information about locks for the specified connection only. Default is zero, which returns information about all connections.
 
- 
+
+
+</dd><dt><b>
+
+*<owner\>*.*<table\_name\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) A CHAR\(128\) parameter that specifies the table name. With this option, the procedure returns information about locks for the specified table only. Default is NULL, which returns information about all tables in the database. If you do not specify owner, it is assumed that the caller of the procedure owns the table.
+
+
+
+</dd><dt><b>
+
+*<max\_locks\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) An INTEGER parameter that specifies the maximum number of locks for which to return information. Default is 0, which returns all lock information.
+
+
+
+</dd><dt><b>
+
+*<sort\_order\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) A CHAR\(1\) parameter that specifies the order in which to return information:
+
+-   C sorts by connection \(default\)
+-   T sorts by table\_name
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5af357c84f21015bd5cb5d281321779__section_rsk_nch_nbb"/>
 
@@ -505,59 +542,7 @@ Usually a position lock is also held on a specific row, and that row's 64-bit ro
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
-
-You also need:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-MONITOR
-
-
-
-</td>
-<td valign="top">
-
-System privilege
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+Requires EXECUTE object-level privilege on the procedure, along with the MONITOR system privilege.
 
 
 

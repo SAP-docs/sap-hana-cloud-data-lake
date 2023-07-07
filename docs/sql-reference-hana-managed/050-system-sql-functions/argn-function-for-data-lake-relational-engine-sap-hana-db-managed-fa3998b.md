@@ -16,13 +16,34 @@ ARGN ( <integer-expression>, <expression> [ , …] )
 
 ## Parameters
 
- *<integer-expression\>*
- :   The position of an argument within a list of expressions.
 
-  *<expression\>*
- :   An expression of any data type passed into the function. All supplied expressions must be of the same data type.
+<dl>
+<dt><b>
 
- 
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The position of an argument within a list of expressions.
+
+
+
+</dd><dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+An expression of any data type passed into the function. All supplied expressions must be of the same data type.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiofa3998bd27284db3b8f25033b4130aba__section_ivr_flk_srb"/>
 

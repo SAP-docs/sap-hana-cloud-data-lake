@@ -6,11 +6,6 @@ Initializes or refreshes the data in a materialized view by executing its query 
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -21,12 +16,14 @@ Initializes or refreshes the data in a materialized view by executing its query 
 
 
 ```
-REFRESH MATERIALIZED VIEW [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <mat_view_name> (varname]
+REFRESH MATERIALIZED VIEW [ <schema-name>.]<mat_view_name>
    [ FORCE BUILD ]
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -34,10 +31,23 @@ REFRESH MATERIALIZED VIEW [ [/pandoc/div/div/horizontalrule/codeblock/span/span
 
 ## Parameters
 
- FORCE BUILD
- :   By default, when you execute a REFRESH MATERIALIZED VIEW statement, the database server checks whether the materialized view is stale \(that is, underlying tables have changed since the materialized view was last refreshed\). If it is not stale, the refresh does not take place. Specify the FORCE BUILD clause to force a refresh of the materialized view regardless of whether the materialized view is stale.
 
- 
+<dl class="glossary">
+<dt><b>
+
+FORCE BUILD
+
+</b></dt>
+<dd>
+
+By default, when you execute a REFRESH MATERIALIZED VIEW statement, the database server checks whether the materialized view is stale \(that is, underlying tables have changed since the materialized view was last refreshed\). If it is not stale, the refresh does not take place. Specify the FORCE BUILD clause to force a refresh of the materialized view regardless of whether the materialized view is stale.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio817277ba6ce21014a14fa76ab2f0e6e1__section_lrx_mqw_brb"/>
 
@@ -59,7 +69,10 @@ This statement cannot be executed when the connection has cursors opened with th
 
 ### 
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 
@@ -81,10 +94,23 @@ While executing, an exclusive schema lock is placed on the materialized view bei
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 Suppose you create a materialized view, EmployeeConfid99, and then populate it with data using the following statements:
 

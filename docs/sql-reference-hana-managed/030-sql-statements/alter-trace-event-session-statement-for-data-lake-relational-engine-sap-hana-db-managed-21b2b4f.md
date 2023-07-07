@@ -6,11 +6,6 @@ Adds or removes trace events or targets from a session, or starts or stops a tra
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -38,100 +33,166 @@ ALTER TRACE EVENT SESSION <session-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loio21b2b4f214224d81920ed9bcaf88d7ee__section_hky_zlg_1rb"/>
 
 ## Parameters
 
- ON SERVER clause
- :   Alters a trace event session that is recording trace events from all databases on the database server. If this clause is not specified, then only the trace event session on the current database is altered.
 
-   *<trace-event-name\>* 
- :   The name of the trace event in the session. System- and user-defined trace events are supported. Call the sp\_trace\_events system procedure to obtain a list of system-defined trace events.
+<dl class="glossary">
+<dt><b>
 
-  ADD TRACE EVENT
- :   The name of the trace event being added to the session.
+ON SERVER clause
 
-  DROP TRACE EVENT
- :   The name of the trace event being removed from the session.
+</b></dt>
+<dd>
 
-  ADD TARGET FILE
- :   The name of the target being added to the session. Information about the trace events that are part of the session is logged to this target \(file\).
-
-  DROP TARGET FILE
- :   The name of the target being removed from the session.
-
-   *<target-parameter-name\>* 
- :   The following target parameters are supported:
+Alters a trace event session that is recording trace events from all databases on the database server. If this clause is not specified, then only the trace event session on the current database is altered.
 
 
-    <table>
-    <tr>
-    <th valign="top">
 
-     *<target-parameter-name\>* 
+</dd><dt><b>
 
+ *<trace-event-name\>* 
 
-    
-    </th>
-    <th valign="top">
+</b></dt>
+<dd>
 
-     *<target-parameter-value\>* 
+The name of the trace event in the session. System- and user-defined trace events are supported. Call the sp\_trace\_events system procedure to obtain a list of system-defined trace events.
 
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    filename\_prefix
+</dd><dt><b>
 
+ADD TRACE EVENT
 
-    
-    </td>
-    <td valign="top">
+</b></dt>
+<dd>
 
-    \(Required\) An ETD file name prefix with or without a path. ETD files have the extension `.etd`.
+The name of the trace event being added to the session.
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    flush\_on\_write
+</dd><dt><b>
 
+DROP TRACE EVENT
 
-    
-    </td>
-    <td valign="top">
+</b></dt>
+<dd>
 
-    A boolean \(true or false\) value that controls whether disk buffers are flushed for each event that is logged. The default is false. When flushing is enabled, the performance of the database server may be reduced if many trace events are being logged.
+The name of the trace event being removed from the session.
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    \[compressed\]
+</dd><dt><b>
 
+ADD TARGET FILE
 
-    
-    </td>
-    <td valign="top">
+</b></dt>
+<dd>
 
-    A boolean \(true or false\) value that controls compression of the ETD file to conserve disk space. The default is false. Use brackets with this parameter name because it is a keyword in other contexts.
+The name of the target being added to the session. Information about the trace events that are part of the session is logged to this target \(file\).
 
 
-    
-    </td>
-    </tr>
-    </table>
-    
- 
+
+</dd><dt><b>
+
+DROP TARGET FILE
+
+</b></dt>
+<dd>
+
+The name of the target being removed from the session.
+
+
+
+</dd><dt><b>
+
+ *<target-parameter-name\>* 
+
+</b></dt>
+<dd>
+
+The following target parameters are supported:
+
+
+<table>
+<tr>
+<th valign="top">
+
+ *<target-parameter-name\>* 
+
+
+
+</th>
+<th valign="top">
+
+ *<target-parameter-value\>* 
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+filename\_prefix
+
+
+
+</td>
+<td valign="top">
+
+\(Required\) An ETD file name prefix with or without a path. ETD files have the extension `.etd`.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+flush\_on\_write
+
+
+
+</td>
+<td valign="top">
+
+A boolean \(true or false\) value that controls whether disk buffers are flushed for each event that is logged. The default is false. When flushing is enabled, the performance of the database server may be reduced if many trace events are being logged.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+\[compressed\]
+
+
+
+</td>
+<td valign="top">
+
+A boolean \(true or false\) value that controls compression of the ETD file to conserve disk space. The default is false. Use brackets with this parameter name because it is a keyword in other contexts.
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio21b2b4f214224d81920ed9bcaf88d7ee__section_djb_bmg_1rb"/>
 
@@ -161,10 +222,23 @@ None
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following example creates a trace event called my\_event, a trace event session called my\_session, and starts the session:
 

@@ -16,10 +16,23 @@ VAR_SAMP ( [ ALL ] <expression> )
 
 ## Parameters
 
- *<expression\>*
- :   The expression \(commonly a column name\) that has a sample-based variance that is calculated over a set of rows.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The expression \(commonly a column name\) that has a sample-based variance that is calculated over a set of rows.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa58f41a384f2101582a6bccb68243889__VAR_SAMP_returns1"/>
 
@@ -198,5 +211,5 @@ Variance
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[VAR_SAMP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/4e77eae4118f432c95bd09f867eb3f06.html "Computes the statistical variance of a sample consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
+[VAR_SAMP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/4e77eae4118f432c95bd09f867eb3f06.html "Computes the statistical variance of a sample consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
 

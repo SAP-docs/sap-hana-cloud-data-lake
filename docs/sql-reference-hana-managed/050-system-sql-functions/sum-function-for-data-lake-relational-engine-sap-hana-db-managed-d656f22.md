@@ -16,13 +16,34 @@ SUM ( <expression> | DISTINCT <column-name> )
 
 ## Parameters
 
- *<expression\>*
- :   The object to be summed. This is commonly a column name.
 
-  DISTINCT *<column-name\>*
- :   Computes the sum of the unique values in *<column-name\>* for each group of rows. This is of limited usefulness, but is included for completeness.
+<dl>
+<dt><b>
 
- 
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The object to be summed. This is commonly a column name.
+
+
+
+</dd><dt><b>
+
+DISTINCT *<column-name\>*
+
+</b></dt>
+<dd>
+
+Computes the sum of the unique values in *<column-name\>* for each group of rows. This is of limited usefulness, but is included for completeness.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiod656f224db9a4567a7ba604993702e94__section_kkv_lq5_vrb"/>
 

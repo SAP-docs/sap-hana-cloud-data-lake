@@ -2,7 +2,7 @@
 
 # SYSLOGINPOLICY System View for Data Lake Relational Engine
 
-The underlying system table for this view is ISYSLOGINPOLICY.
+Display login policies of the instance.
 
 
 

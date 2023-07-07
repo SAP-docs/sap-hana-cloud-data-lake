@@ -18,13 +18,34 @@ MINUTES ( <datetime-expression>
 
 ## Parameters
 
- *<datetime-expression\>*
- :   A date and time.
 
-  *<integer-expression\>*
- :   The number of minutes to be added to the *<datetime-expression\>*. If *<integer-expression\>* is negative, the appropriate number of minutes are subtracted from the date/time. If you supply an integer expression, the *<datetime-expression\>* must be explicitly cast as a `datetime` data type
+<dl>
+<dt><b>
 
- 
+*<datetime-expression\>*
+
+</b></dt>
+<dd>
+
+A date and time.
+
+
+
+</dd><dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number of minutes to be added to the *<datetime-expression\>*. If *<integer-expression\>* is negative, the appropriate number of minutes are subtracted from the date/time. If you supply an integer expression, the *<datetime-expression\>* must be explicitly cast as a `datetime` data type
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio488cdf45547747868ff78e55426175d9__section_nr2_3gn_vrb"/>
 

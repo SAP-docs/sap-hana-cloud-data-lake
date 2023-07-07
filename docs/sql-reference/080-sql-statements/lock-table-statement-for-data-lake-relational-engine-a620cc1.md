@@ -6,11 +6,6 @@ Prevents other concurrent transactions from accessing or modifying a table withi
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -18,7 +13,14 @@ Prevents other concurrent transactions from accessing or modifying a table withi
 
 
 
-**Syntax exclusively for multiplex coordinator nodes:**
+
+<dl>
+<dt><b>
+
+Syntax 1 - Exclusively for multiplex coordinator nodes:
+
+</b></dt>
+<dd>
 
 ```
 LOCK TABLE <table-list> [ WITH HOLD ] 
@@ -27,7 +29,12 @@ LOCK TABLE <table-list> [ WITH HOLD ]
 
 
 
-**Syntax exclusively for multiplex writer nodes:**
+</dd><dt><b>
+
+**Syntax 2 - Exclusively for multiplex writer nodes:**
+
+</b></dt>
+<dd>
 
 ```
 LOCK TABLE <table-name>
@@ -36,52 +43,123 @@ LOCK TABLE <table-name>
 
 
 
+</dd>
+</dl>
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa620cc1c84f21015bb14de905cb82ea7__IQ_Parameters"/>
 
 ## Parameters
 
- *<table-name\>*
- :   Must be a base table, not a view.
 
-    ```
-    <table-list> ::=
-       [ <owner>.]<table-name> [,...]
-    ```
+<dl>
+<dt><b>
 
-  WRITE
- :   WRITE mode is only valid for data lake Relational Engine base tables. LOCK TABLE either locks all tables in the *<table list\>* or none. If obtaining a lock for an SAP SQL Anywhere table, a multiplex write server, or when obtaining SHARE or EXCLUSIVE locks, you may only specify a single table. Standard data lake Relational Engine object qualification rules are used to parse *<table-name\>*.
+*<table-name\>*
 
-  WITH HOLD
- :   The lock is held until the end of the connection. If the clause is not specified, the lock is released when the current transaction is committed or rolled back. Using the WITH HOLD clause in the same statement with WRITE MODE is unsupported and returns the error Must be a base table, not a view. WRITE mode is only valid for data lake Relational Engine base tables. ***SQLCODE=-131, ODBC 3 State="42000"***.
+</b></dt>
+<dd>
 
-  SHARE
- :   Prevents other transactions from modifying the table, but allows them read access. In this mode, you can change data in the table as long as no other transaction has locked the row being modified, either indirectly, or explicitly by using `LOCK TABLE`.
+Must be a base table, not a view.
 
-    > ### Note:  
-    > SHARE mode is supported only on multiplex coordinator nodes.
+```
+<table-list> ::=
+   [ <owner>.]<table-name> [,...]
+```
 
-  WRITE
- :   Prevents other transactions from modifying a list of tables. Unconditionally commits the connections outermost transaction. The transaction’s snapshot version is established not by the `LOCK TABLE IN WRITE MODE` statement, but by the execution of the next command processed by data lake Relational Engine.
 
-    WRITE mode locks are released when the transaction commits or rolls back, or when the connection disconnects.
 
-    > ### Note:  
-    > -   WRITE mode is supported on multiplex Coordinator as well as Writer nodes.
-    > -   When the lock mode is set to WRITE – specifying the <code>[ WAIT <i class="varname">&lt;time&gt;</i> ]</code> clause is mandatory.
+</dd><dt><b>
 
-  EXCLUSIVE
- :   Prevents other transactions from accessing the table. Locks all views referencing the table. In this mode, no other transaction can execute queries, updates of any kind, or any other action against the table.
+WRITE
 
-    > ### Note:  
-    > EXCLUSIVE mode is supported only for multiplex coordinator nodes.
+</b></dt>
+<dd>
 
-  WAIT *<time\>*
- :   Specifies maximum blocking time for all lock types. This clause is mandatory when lock mode is WRITE. When a time argument is given, the server locks the specified tables only if available within the specified time. The time argument can be specified in the format hh:nn:ss:sss. If a date part is specified, the server ignores it and converts the argument into a timestamp. When no time argument is given, the server waits indefinitely until a WRITE lock is available or an interrupt occurs.
+WRITE mode is only valid for data lake Relational Engine base tables. LOCK TABLE either locks all tables in the *<table list\>* or none. If obtaining a lock for a multiplex write server, or when obtaining SHARE or EXCLUSIVE locks, you may only specify a single table. Standard data lake Relational Engine object qualification rules are used to parse *<table-name\>*.
 
-    > ### Note:  
-    > It is mandatory to specify the '<code>[ WAIT <i class="varname">&lt;time&gt;</i> ]</code>' clause when the lock mode is set to WRITE.
 
- 
+
+</dd><dt><b>
+
+WITH HOLD
+
+</b></dt>
+<dd>
+
+The lock is held until the end of the connection. If the clause is not specified, the lock is released when the current transaction is committed or rolled back. Using the WITH HOLD clause in the same statement with WRITE MODE is unsupported and returns the error Must be a base table, not a view. WRITE mode is only valid for data lake Relational Engine base tables. ***SQLCODE=-131, ODBC 3 State="42000"***.
+
+
+
+</dd><dt><b>
+
+SHARE
+
+</b></dt>
+<dd>
+
+Prevents other transactions from modifying the table, but allows them read access. In this mode, you can change data in the table as long as no other transaction has locked the row being modified, either indirectly, or explicitly by using `LOCK TABLE`.
+
+> ### Note:  
+> SHARE mode is supported only on multiplex coordinator nodes.
+
+
+
+</dd><dt><b>
+
+WRITE
+
+</b></dt>
+<dd>
+
+Prevents other transactions from modifying a list of tables. Unconditionally commits the connections outermost transaction. The transaction’s snapshot version is established not by the `LOCK TABLE IN WRITE MODE` statement, but by the execution of the next command processed by data lake Relational Engine.
+
+WRITE mode locks are released when the transaction commits or rolls back, or when the connection disconnects.
+
+> ### Note:  
+> -   WRITE mode is supported on multiplex Coordinator as well as Writer nodes.
+> -   When the lock mode is set to WRITE – specifying the <code>[ WAIT <i class="varname">&lt;time&gt;</i> ]</code> clause is mandatory.
+
+
+
+</dd><dt><b>
+
+EXCLUSIVE
+
+</b></dt>
+<dd>
+
+Prevents other transactions from accessing the table. Locks all views referencing the table. In this mode, no other transaction can execute queries, updates of any kind, or any other action against the table.
+
+> ### Note:  
+> EXCLUSIVE mode is supported only for multiplex coordinator nodes.
+
+
+
+</dd><dt><b>
+
+WAIT *<time\>*
+
+</b></dt>
+<dd>
+
+Specifies maximum blocking time for all lock types. This clause is mandatory when lock mode is WRITE. When a time argument is given, the server locks the specified tables only if available within the specified time. The time argument can be specified in the format hh:nn:ss:sss. If a date part is specified, the server ignores it and converts the argument into a timestamp. When no time argument is given, the server waits indefinitely until a WRITE lock is available or an interrupt occurs.
+
+> ### Note:  
+> It is mandatory to specify the '<code>[ WAIT <i class="varname">&lt;time&gt;</i> ]</code>' clause when the lock mode is set to WRITE.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa620cc1c84f21015bb14de905cb82ea7__IQ_Usage"/>
 
@@ -216,7 +294,6 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 ## Standards
 
 -   SQL – vendor extension to ISO/ANSI SQL grammar
--   SAP database products – supported by SAP Adaptive Server Enterprise. The WITH HOLD clause is not supported in SAP ASE. SAP ASE provides a WAIT clause that is not supported in SAP SQL Anywhere.
 
 
 

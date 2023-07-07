@@ -6,11 +6,6 @@ Changes user settings.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -25,8 +20,7 @@ Changes user settings.
 ```
 ALTER USER <user-name> 
    { [ IDENTIFIED BY <password> ]
-   | [ LOGIN POLICY [/pandoc/div/div/horizontalrule/horizontalrule/codeblock/span/varname
-     {"varname"}) <policy-name> (varname] ]  
+   | [ LOGIN POLICY <policy-name> ]  
    | [ FORCE PASSWORD CHANGE { ON | OFF } ] }
 ```
 
@@ -58,59 +52,125 @@ ALTER USER IDENTIFIED [ FIRST | LAST ] BY <password_part>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa6139f4584f21015bdc3a625b5b218b5__IQ_Parameters"/>
 
 ## Parameters
 
- *<user-name\>*
- :   A data lake Relational Engine user ID cannot:
 
-    -   begin with white space, single quotes, or double quotes
-    -   end with white space
-    -   contain semicolons
+<dl>
+<dt><b>
 
-  IDENTIFIED BY *<password\>*
- :   Password of the user. You do not have to specify a password for the user. A user without a password cannot connect to the database. This is useful if you are creating a role and do not want anyone to connect to the database using the role user ID.
+*<user-name\>*
 
-    A data lake Relational Engine password must be minimum of 6 characters in length. For single-byte character sets, this value is the same as the number of characters. It must contain:
+</b></dt>
+<dd>
 
-    -   at least one number character \(0-9\)
-    -   at least one upper case Latin letter character \(A-Z\)
-    -   at least one lower case Latin letter character \(a-z\)
+A data lake Relational Engine user ID cannot:
 
-    Passwords are case-sensitive and they cannot:
+-   begin with white space, single quotes, or double quotes
+-   end with white space
+-   contain semicolons
 
-    -   begin with white space, single quotes, or double quotes
-    -   end with white space
-    -   contain semicolons
-    -   be longer than 255 bytes in length
-    -   be less than 6 characters in length
-    -   contain the user’s ID \(user name\)
-    -   be the re-use of an old password for that user
 
-    The encryption algorithm used for hashing the user passwords is FIPS-certified encryption support:
 
-    -   The DLL is called dbfips17.dll.
-    -   The HASH function accepts the algorithms: SHA1\_FIPS SHA256\_FIPS.
-    -   If the -fips server option is specified and an algorithm that is not FIPS-certified is given to the HASH function, then the database server uses SHA1\_FIPS instead of SHA1, SHA256\_FIPS instead of SHA256, and returns an error if MD5 is used \(MD5 is not a FIPS-certified algorithm\).
-    -   If the -fips option is specified, then the database server uses SHA256\_FIPS for password hashing.
+</dd><dt><b>
 
-  LOGIN POLICY *<policy-name\>*
- :   Name of the login policy to assign the user. No change is made if you do not specify a login policy.
+IDENTIFIED BY *<password\>*
 
-  FORCE PASSWORD CHANGE
- :   Controls whether the user must specify a new password upon logging in. This setting overrides the PASSWORD\_EXPIRY\_ON\_NEXT\_LOGIN option setting in the user's login policy.
+</b></dt>
+<dd>
 
-  REFRESH DN
- :   Clause is not supportedClears the saved DN and timestamp for a user, which is used during LDAP authentication.
+Password of the user. You do not have to specify a password for the user. A user without a password cannot connect to the database. This is useful if you are creating a role and do not want anyone to connect to the database using the role user ID.
 
-  RESET LOGIN POLICY
- :   Reverts the settings of the user's login to the original values in the login policy. This usually clears all locks that are implicitly set due to the user exceeding the failed logins or exceeding the maximum number of days since the last login. When you reset a login policy, a user can access an account that has been locked for exceeding a login policy option limit such as MAX\_FAILED\_LOGIN\_ATTEMPTS or MAX\_DAYS\_SINCE\_LOGIN.
+A data lake Relational Engine password must be minimum of 6 characters in length. For single-byte character sets, this value is the same as the number of characters. It must contain:
 
-  IDENTIFIED \[ FIRST | LAST \] BY
- :   Required when CHANGE\_PASSWORD\_DUAL\_CONTROL option is enabled in a target user's login policy. The FIRST and LAST keywords specify the part of the dual password part ing defined.
+-   at least one number character \(0-9\)
+-   at least one upper case Latin letter character \(A-Z\)
+-   at least one lower case Latin letter character \(a-z\)
 
- 
+Passwords are case-sensitive and they cannot:
+
+-   begin with white space, single quotes, or double quotes
+-   end with white space
+-   contain semicolons
+-   be longer than 255 bytes in length
+-   be less than 6 characters in length
+-   contain the user’s ID \(user name\)
+-   be the re-use of an old password for that user
+
+The encryption algorithm used for hashing the user passwords is FIPS-certified encryption support:
+
+-   The DLL is called dbfips17.dll.
+-   The HASH function accepts the algorithms: SHA1\_FIPS SHA256\_FIPS.
+-   If the -fips server option is specified and an algorithm that is not FIPS-certified is given to the HASH function, then the database server uses SHA1\_FIPS instead of SHA1, SHA256\_FIPS instead of SHA256, and returns an error if MD5 is used \(MD5 is not a FIPS-certified algorithm\).
+-   If the -fips option is specified, then the database server uses SHA256\_FIPS for password hashing.
+
+
+
+</dd><dt><b>
+
+LOGIN POLICY *<policy-name\>*
+
+</b></dt>
+<dd>
+
+Name of the login policy to assign the user. No change is made if you do not specify a login policy.
+
+
+
+</dd><dt><b>
+
+FORCE PASSWORD CHANGE
+
+</b></dt>
+<dd>
+
+Controls whether the user must specify a new password upon logging in. This setting overrides the PASSWORD\_EXPIRY\_ON\_NEXT\_LOGIN option setting in the user's login policy.
+
+
+
+</dd><dt><b>
+
+REFRESH DN
+
+</b></dt>
+<dd>
+
+Clause is not supportedClears the saved DN and timestamp for a user, which is used during LDAP authentication.
+
+
+
+</dd><dt><b>
+
+RESET LOGIN POLICY
+
+</b></dt>
+<dd>
+
+Reverts the settings of the user's login to the original values in the login policy. This usually clears all locks that are implicitly set due to the user exceeding the failed logins or exceeding the maximum number of days since the last login. When you reset a login policy, a user can access an account that has been locked for exceeding a login policy option limit such as MAX\_FAILED\_LOGIN\_ATTEMPTS or MAX\_DAYS\_SINCE\_LOGIN.
+
+
+
+</dd><dt><b>
+
+IDENTIFIED \[ FIRST | LAST \] BY
+
+</b></dt>
+<dd>
+
+Required when CHANGE\_PASSWORD\_DUAL\_CONTROL option is enabled in a target user's login policy. The FIRST and LAST keywords specify the part of the dual password part ing defined.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa6139f4584f21015bdc3a625b5b218b5__IQ_Usage"/>
 
@@ -212,7 +272,7 @@ The following example sets the password for user3 to PassPart1PassPart2. This as
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[Login Policy Options](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_1_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
+[Login Policy Options](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_2_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
 
-[ALTER USER Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/a9da89453d43402981a6e01fa8c7742d.html "Changes user settings.") :arrow_upper_right:
+[ALTER USER Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/a9da89453d43402981a6e01fa8c7742d.html "Changes user settings.") :arrow_upper_right:
 

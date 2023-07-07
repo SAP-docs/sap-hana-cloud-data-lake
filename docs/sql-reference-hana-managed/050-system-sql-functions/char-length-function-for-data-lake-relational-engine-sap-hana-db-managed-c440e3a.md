@@ -16,10 +16,23 @@ CHAR_LENGTH ( <string-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string that has the length to be calculated.
 
- 
+<dl>
+<dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string that has the length to be calculated.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioc440e3a7627544838259dcfab11a5bd1__section_e1f_1tl_srb"/>
 

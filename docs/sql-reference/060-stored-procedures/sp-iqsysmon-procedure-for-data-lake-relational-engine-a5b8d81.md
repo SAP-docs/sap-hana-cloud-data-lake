@@ -13,46 +13,112 @@ Monitors multiple components of data lake Relational Engine, including the manag
 
 
 
- Batch Mode Syntax 1
- :   ```
+
+<dl>
+<dt><b>
+
+Batch Mode Syntax 1
+
+</b></dt>
+<dd>
+
+```
 sp_iqsysmon start_monitor
 ```
 
-  Batch Mode Syntax 2
- :   ```
+
+
+</dd><dt><b>
+
+Batch Mode Syntax 2
+
+</b></dt>
+<dd>
+
+```
 sp_iqsysmon stop_monitor [, 'section(s)' ]
 ```
 
-  Syntax 3
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 3
+
+</b></dt>
+<dd>
+
+```
 sp_iqsysmon '<time-period>' [, 'section(s)' ]
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5b8d81e84f21015b1338b8e36993f14__iq_refbb_1784"/>
 
 ## Batch Mode Parameters
 
- start\_monitor
- :   Starts monitoring.
 
-  stop\_monitor
- :   Stops monitoring and displays the report.
+<dl>
+<dt><b>
 
-  *<time-period\>*
- :   The time period for monitoring, in the form HH:MM:SS.
+start\_monitor
 
-  section\(s\)
- :   \(Optional\) The abbreviation for one or more sections to be shown by sp\_iqsysmon.
+</b></dt>
+<dd>
 
-    See the [Remarks](sp-iqsysmon-procedure-for-data-lake-relational-engine-a5b8d81.md#loioa5b8d81e84f21015b1338b8e36993f14__IQ_Remarks) section for a complete list of abbreviations.
+Starts monitoring.
 
-    If you specify more than one section, separate the section abbreviations using spaces, and enclose the list in single or double quotes. The default is to display all sections.
 
-    For sections related to the data lake Relational Engine main store, you can specify main or temporary store by prefixing the section abbreviation with 'm' or 't', respectively. Without the prefix, both stores are monitored. For example, if you specify 'mbufman', only the data lake Relational Engine main store buffer manager is monitored. If you specify 'mbufman tbufman' or 'bufman', both the main and temporary store buffer managers are monitored.
 
- 
+</dd><dt><b>
+
+stop\_monitor
+
+</b></dt>
+<dd>
+
+Stops monitoring and displays the report.
+
+
+
+</dd><dt><b>
+
+*<time-period\>*
+
+</b></dt>
+<dd>
+
+The time period for monitoring, in the form HH:MM:SS.
+
+
+
+</dd><dt><b>
+
+section\(s\)
+
+</b></dt>
+<dd>
+
+\(Optional\) The abbreviation for one or more sections to be shown by sp\_iqsysmon.
+
+See the [Remarks](sp-iqsysmon-procedure-for-data-lake-relational-engine-a5b8d81.md#loioa5b8d81e84f21015b1338b8e36993f14__IQ_Remarks) section for a complete list of abbreviations.
+
+If you specify more than one section, separate the section abbreviations using spaces, and enclose the list in single or double quotes. The default is to display all sections.
+
+For sections related to the data lake Relational Engine main store, you can specify main or temporary store by prefixing the section abbreviation with 'm' or 't', respectively. Without the prefix, both stores are monitored. For example, if you specify 'mbufman', only the data lake Relational Engine main store buffer manager is monitored. If you specify 'mbufman tbufman' or 'bufman', both the main and temporary store buffer managers are monitored.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5b8d81e84f21015b1338b8e36993f14__iq_refbb_1790"/>
 
@@ -463,59 +529,7 @@ Large Memory Num Connections
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
-
-You also need:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-MONITOR
-
-
-
-</td>
-<td valign="top">
-
-System privilege
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+Requires EXECUTE object-level privilege on the procedure along with the MONITOR system privilege.
 
 
 

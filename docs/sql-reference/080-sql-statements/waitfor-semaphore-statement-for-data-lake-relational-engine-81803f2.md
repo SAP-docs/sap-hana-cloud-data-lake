@@ -6,11 +6,6 @@ Decrements the counter associated with a semaphore.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -26,20 +21,54 @@ WAITFOR SEMAPHORE [<owner>.]<semaphore-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 ## Parameters
 
- *<owner\>*
- :   The owner of the semaphore.
 
-  *<semaphore-name\>*
- :   The name of the semaphore.
+<dl>
+<dt><b>
 
-  TIMEOUT clause
- :   Specify the duration of time, in milliseconds, to wait to decrement the counter associated with the semaphore. If this clause is not specified, then the connection waits indefinitely until the count can be decremented, or until an error is returned.
+*<owner\>*
 
-    *<in-milliseconds\>* can be specified using a variable \(for example, ***TIMEOUT @timeout-value***\). If *<in-milliseconds\>* is set to a variable and the variable is NULL, the behavior is equivalent to not specifying the clause.
+</b></dt>
+<dd>
 
- 
+The owner of the semaphore.
+
+
+
+</dd><dt><b>
+
+*<semaphore-name\>*
+
+</b></dt>
+<dd>
+
+The name of the semaphore.
+
+
+
+</dd><dt><b>
+
+TIMEOUT clause
+
+</b></dt>
+<dd>
+
+Specify the duration of time, in milliseconds, to wait to decrement the counter associated with the semaphore. If this clause is not specified, then the connection waits indefinitely until the count can be decremented, or until an error is returned.
+
+*<in-milliseconds\>* can be specified using a variable \(for example, `TIMEOUT @timeout-value`\). If *<in-milliseconds\>* is set to a variable and the variable is NULL, the behavior is equivalent to not specifying the clause.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -76,10 +105,23 @@ None.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following statement creates a semaphore and sets its initial value to zero:
 

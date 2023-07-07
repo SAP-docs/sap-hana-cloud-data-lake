@@ -66,9 +66,9 @@ The following functions are available:
 **Related Information**  
 
 
-[OLAP in Data Lake Relational Engine](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_1_QRC/en-US/a4b2a23a84f21015a73fb3bac4a216d2.html "OLAP (online analytical processing) is an efficient method of data analysis of information stored in a relational database.") :arrow_upper_right:
+[OLAP in Data Lake Relational Engine](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a4b2a23a84f21015a73fb3bac4a216d2.html "OLAP (online analytical processing) is an efficient method of data analysis of information stored in a relational database.") :arrow_upper_right:
 
-[BLOB and CLOB Administration in Data Lake Relational Engine](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_1_QRC/en-US/bf9a5161f14949818c8f6599c5e906cd.html "Binary Large Object (BLOB) and Character Large Object (CLOB) storage and retrieval.") :arrow_upper_right:
+[BLOB and CLOB Administration in Data Lake Relational Engine](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/bf9a5161f14949818c8f6599c5e906cd.html "Binary Large Object (BLOB) and Character Large Object (CLOB) storage and retrieval.") :arrow_upper_right:
 
 [Analytical Functions in Data Lake Relational Engine](analytical-functions-in-data-lake-relational-engine-a52773a.md "Analytical functions include simple aggregates, window functions, and numeric functions.")
 

@@ -11,9 +11,7 @@ Changes the values of the records of a table.
 ## Syntax
 
 ```
-UPDATE [ <top_clause> ] [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <hana_relational_container_schema_name> (varname].[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <virtual_table_name> (varname]
+UPDATE [ <top_clause> ] <hana_relational_container_schema_name>.<virtual_table_name>
    <set_clause>
    [ WHERE <condition> ]
    [ <hint_clause> ]
@@ -25,51 +23,104 @@ UPDATE [ <top_clause> ] [/pandoc/div/div/horizontalrule/codeblock/span/varname
 
 ## Syntax Elements
 
- *<top\_clause\>*
- :   Limits the number of updated records \(for example, for chunkwise updates\).
 
-    ```
-    <top_clause> ::= TOP <unsigned_integer>
-    ```
+<dl>
+<dt><b>
 
-    *<unsigned\_integer\>* defines the number of records updated in one chunk. This parameter is not supported for variants of UPDATE statements like UPDATE MERGE DELTA, UPDATE PRELOAD, UPDATE UNLOAD, and UPDATE MOVE.
+*<top\_clause\>*
 
-  *<hana\_relational\_container\_schema\_name\>*
- :   Specifies the SAP HANA database schema of the virtual table.
+</b></dt>
+<dd>
 
-  *<virtual\_table\_name\>*
- :   Specifies the virtual table where the UPDATE is performed.
+Limits the number of updated records \(for example, for chunkwise updates\).
 
-  *<set\_clause\>*
- :   Specifies the column names and associated values to be set by the update statement.
+```
+<top_clause> ::= TOP <unsigned_integer>
+```
 
-    ```
-    <set_clause> ::= 
-     SET {<column_name> = <expression> 
-     | ( <with_clause> <subquery> ) },...
-    ```
+*<unsigned\_integer\>* defines the number of records updated in one chunk. This parameter is not supported for variants of UPDATE statements like UPDATE MERGE DELTA, UPDATE PRELOAD, UPDATE UNLOAD, and UPDATE MOVE.
 
-    For the definitions of the *<with\_clause\>* and *<subquery\>*, see the SELECT statement. The *<with\_clause\>* can be used with column names, not with column lists.
 
-  WHERE *<condition\>*
- :   Specifies the conditions when the command should be performed.
 
-    ```
-    <condition> ::= 
-     <condition> OR <condition>
-     | <condition> AND <condition>
-     | NOT <condition>
-     | ( <condition> )
-     | <predicate>
-     | CURRENT OF <cursor>
-    ```
+</dd><dt><b>
 
-    WHERE CURRENT OF *<cursor\>* specifies to perform the update at the current position in the cursor.
+*<hana\_relational\_container\_schema\_name\>*
 
-  *<hint\_clause\>*
- :   For information on hints, see the HINT clause in the SELECT statement.
+</b></dt>
+<dd>
 
- 
+Specifies the SAP HANA database schema of the virtual table.
+
+
+
+</dd><dt><b>
+
+*<virtual\_table\_name\>*
+
+</b></dt>
+<dd>
+
+Specifies the virtual table where the UPDATE is performed.
+
+
+
+</dd><dt><b>
+
+*<set\_clause\>*
+
+</b></dt>
+<dd>
+
+Specifies the column names and associated values to be set by the update statement.
+
+```
+<set_clause> ::= 
+ SET {<column_name> = <expression> 
+ | ( <with_clause> <subquery> ) },...
+```
+
+For the definitions of the *<with\_clause\>* and *<subquery\>*, see the SELECT statement. The *<with\_clause\>* can be used with column names, not with column lists.
+
+
+
+</dd><dt><b>
+
+WHERE *<condition\>*
+
+</b></dt>
+<dd>
+
+Specifies the conditions when the command should be performed.
+
+```
+<condition> ::= 
+ <condition> OR <condition>
+ | <condition> AND <condition>
+ | NOT <condition>
+ | ( <condition> )
+ | <predicate>
+ | CURRENT OF <cursor>
+```
+
+WHERE CURRENT OF *<cursor\>* specifies to perform the update at the current position in the cursor.
+
+
+
+</dd><dt><b>
+
+*<hint\_clause\>*
+
+</b></dt>
+<dd>
+
+For information on hints, see the HINT clause in the SELECT statement.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiod445372322a34e01b1cb96a5a467e8aa__sql_update_1sql_update_description"/>
 
@@ -86,23 +137,16 @@ If the WHERE condition is used and is true for a specific row, then an update is
 Create virtual table T1 in schema SYSHDL\_CONTAINER1, and insert two rows into it.
 
 ```
-CREATE VIRTUAL TABLE [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.V_T1 AT "[/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1_SOURCE"."<NULL>"."[/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1"."T1";
- INSERT INTO [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.V_T1 VALUES (1, 1);
- INSERT INTO [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.V_T1 VALUES (2, 2);
+CREATE VIRTUAL TABLE SYSHDL_CONTAINER1.V_T1 AT "SYSHDL_CONTAINER1_SOURCE"."<NULL>"."SYSHDL_CONTAINER1"."T1";
+ INSERT INTO SYSHDL_CONTAINER1.V_T1 VALUES (1, 1);
+ INSERT INTO SYSHDL_CONTAINER1.V_T1 VALUES (2, 2);
 ```
 
 Update the rows of table T if the condition in the WHERE clause is true.
 
 ```
-UPDATE [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.V_T1 SET VAL = VAL + 1 WHERE KEY = 1;
-SELECT * FROM [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.V_T1;
+UPDATE SYSHDL_CONTAINER1.V_T1 SET VAL = VAL + 1 WHERE KEY = 1;
+SELECT * FROM SYSHDL_CONTAINER1.V_T1;
 ```
 
 
@@ -160,10 +204,8 @@ VAL
 This example shows how to update all rows of the table by omitting the WHERE clause.
 
 ```
-UPDATE [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.V_T1 SET VAL = KEY + 10;
-SELECT * FROM [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.V_T1;
+UPDATE SYSHDL_CONTAINER1.V_T1 SET VAL = KEY + 10;
+SELECT * FROM SYSHDL_CONTAINER1.V_T1;
 ```
 
 

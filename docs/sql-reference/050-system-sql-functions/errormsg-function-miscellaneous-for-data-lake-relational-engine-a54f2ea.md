@@ -16,13 +16,34 @@ ERRORMSG ( [ <sqlstate> | <sqlcode> ] )
 
 ## Parameters
 
- *<sqlstate\>*
- :   String representing the SQLSTATE for which the error message is to be returned.
 
-  *<sqlcode\>*
- :   Integer representing the SQLCODE for which the error message is to be returned.
+<dl>
+<dt><b>
 
- 
+*<sqlstate\>*
+
+</b></dt>
+<dd>
+
+String representing the SQLSTATE for which the error message is to be returned.
+
+
+
+</dd><dt><b>
+
+*<sqlcode\>*
+
+</b></dt>
+<dd>
+
+Integer representing the SQLCODE for which the error message is to be returned.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa54f2ead84f210158668ce108de25460__ERRORMSG_returns1"/>
 
@@ -68,5 +89,5 @@ select errormsg( -813 )
 **Related Information**  
 
 
-[ERRORMSG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/fd7c8d326bf546a7a367bfca738c4357.html "Provides the error message for the current error, or for a specified SQLSTATE or SQLCODE value.") :arrow_upper_right:
+[ERRORMSG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/fd7c8d326bf546a7a367bfca738c4357.html "Provides the error message for the current error, or for a specified SQLSTATE or SQLCODE value.") :arrow_upper_right:
 

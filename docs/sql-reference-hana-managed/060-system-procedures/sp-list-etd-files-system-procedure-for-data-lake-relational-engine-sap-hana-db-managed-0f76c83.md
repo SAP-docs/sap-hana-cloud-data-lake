@@ -25,12 +25,25 @@ sp_list_etd_files([ <file_name_pattern > ])
 
 ## Parameters
 
-  *<file\_name\_pattern\>* 
- :   Enter a file name pattern for ETD file name matching. Accepts the wildcard characters ***\**** and ***?*** .
 
-    If null, then lists all ETD files.
+<dl>
+<dt><b>
 
- 
+ *<file\_name\_pattern\>* 
+
+</b></dt>
+<dd>
+
+Enter a file name pattern for ETD file name matching. Accepts the wildcard characters ***\**** and ***?*** .
+
+If null, then lists all ETD files.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio0f76c8361cd84a2b8b35f74382b9265f__section_qcm_hm2_srb"/>
 
@@ -146,7 +159,10 @@ The result set displays one ETD file per row.
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

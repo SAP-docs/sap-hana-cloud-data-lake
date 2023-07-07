@@ -16,10 +16,23 @@ STDDEV_SAMP ( [ ALL ] <expression> )
 
 ## Parameters
 
- *<expression\>*
- :   The expression \(commonly a column name\) whose sample-based standard deviation is calculated over a set of rows.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The expression \(commonly a column name\) whose sample-based standard deviation is calculated over a set of rows.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa584728f84f210158226d1181b68d335__STDDEV_SAMP_returns1"/>
 
@@ -198,5 +211,5 @@ Variance
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[STDDEV_SAMP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/ae8f4df1cf8d477e881f9e3360210ae0.html "Computes the standard deviation of a sample consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
+[STDDEV_SAMP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ae8f4df1cf8d477e881f9e3360210ae0.html "Computes the standard deviation of a sample consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
 

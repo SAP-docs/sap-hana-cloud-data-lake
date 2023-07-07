@@ -21,10 +21,23 @@ sa_conn_info( [ <connidparm> ] )
 
 ## Parameters
 
-  *<connidparm\>* 
- :   This optional INTEGER parameter specifies the connection ID number. The default is NULL.
 
- 
+<dl>
+<dt><b>
+
+ *<connidparm\>* 
+
+</b></dt>
+<dd>
+
+This optional INTEGER parameter specifies the connection ID number. The default is NULL.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Result Set
 
@@ -95,7 +108,7 @@ VARCHAR\(255\)
 
 Returns an identifier \(string\) for the current connection.
 
-Temporary connection names have ***INT:*** prepended to the connection name.
+Temporary connection names have `INT:` prepended to the connection name.
 
 
 
@@ -501,7 +514,7 @@ Every lock has an associated table, so the value of LockTable can be used to una
 
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure.
+Requires EXECUTE object-level privilege on the procedure.
 
 To obtain a list of all connection IDs, you'll also need the MONITOR system privilege.
 

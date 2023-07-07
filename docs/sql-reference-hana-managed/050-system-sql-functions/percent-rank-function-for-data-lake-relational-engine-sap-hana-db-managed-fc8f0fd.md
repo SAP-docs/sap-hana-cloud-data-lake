@@ -16,16 +16,45 @@ PERCENT_RANK () OVER ( ORDER BY <expression> [ ASC | DESC ] )
 
 ## Parameters
 
- OVER \(ORDER BY\)
- :   The `ORDER BY` clause specifies the parameter on which ranking is performed and the order in which the rows are sorted in each group.
 
-  *<expression\>*
- :   A sort specification that can be any valid expression involving a column reference, aggregates, or expressions invoking these items.
+<dl>
+<dt><b>
 
-  ASC | DESC
- :   The ASC or DESC parameter specifies the ordering sequence ascending or descending. Ascending order is the default.
+OVER \(ORDER BY\)
 
- 
+</b></dt>
+<dd>
+
+The `ORDER BY` clause specifies the parameter on which ranking is performed and the order in which the rows are sorted in each group.
+
+
+
+</dd><dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+A sort specification that can be any valid expression involving a column reference, aggregates, or expressions invoking these items.
+
+
+
+</dd><dt><b>
+
+ASC | DESC
+
+</b></dt>
+<dd>
+
+The ASC or DESC parameter specifies the ordering sequence ascending or descending. Ascending order is the default.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiofc8f0fd4618e4a47b712f7cc235fe437__section_z2t_kln_vrb"/>
 

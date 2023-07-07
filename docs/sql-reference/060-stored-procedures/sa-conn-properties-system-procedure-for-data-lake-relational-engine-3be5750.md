@@ -21,10 +21,23 @@ sa_conn_properties( [ <connidparm> ] )
 
 ## Parameters
 
-  *<connidparm\>* 
- :   Use this optional INTEGER parameter to specify the connection ID number. The default is NULL.
 
- 
+<dl>
+<dt><b>
+
+ *<connidparm\>* 
+
+</b></dt>
+<dd>
+
+Use this optional INTEGER parameter to specify the connection ID number. The default is NULL.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Result Set
 
@@ -182,7 +195,7 @@ If *<connidparm\>* is less than zero, then property values for the current conne
 
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure.
+Require EXECUTE object-level privilege on the procedure.
 
 To obtain a list of all connection IDs, you also need the MONITOR system privilege.
 

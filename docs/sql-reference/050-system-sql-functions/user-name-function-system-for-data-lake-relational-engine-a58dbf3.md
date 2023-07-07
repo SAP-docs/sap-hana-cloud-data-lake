@@ -16,10 +16,23 @@ USER_NAME ( [ <user-id> ] )
 
 ## Parameters
 
- *<user-id\>*
- :   The user identification number.
 
- 
+<dl>
+<dt><b>
+
+*<user-id\>*
+
+</b></dt>
+<dd>
+
+The user identification number.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Returns
 

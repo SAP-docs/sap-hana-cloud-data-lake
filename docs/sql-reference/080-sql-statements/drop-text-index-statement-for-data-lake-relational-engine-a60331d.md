@@ -6,11 +6,6 @@ Removes a TEXT index from the database.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -20,10 +15,13 @@ Removes a TEXT index from the database.
 
 ```
 DROP TEXT INDEX <text-index-name>
-   ON [ { [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname] }.]<table-name>
+   ON [ { <owner> | <schema-name> }.]<table-name>
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -31,10 +29,23 @@ DROP TEXT INDEX <text-index-name>
 
 ## Parameters
 
- ON
- :   Specifies the table on which the TEXT index is built.
 
- 
+<dl>
+<dt><b>
+
+ON
+
+</b></dt>
+<dd>
+
+Specifies the table on which the TEXT index is built.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa60331d484f21015b12ac440f67fd4d1__IQ_Usage"/>
 

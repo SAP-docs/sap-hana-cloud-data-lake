@@ -23,14 +23,27 @@ sp_iqmpxversionchaininfo <detailLevel>
 
 ## Parameters
 
- *<detailLevel\>*
- :   Enables you to set the level of detail for log messages that are logged to data lake Relational Engine log messages file \(<code><i class="varname">&lt;server_name&gt;</i>.iqmsg</code>\). Allowed values are:
 
-    -   0 – All the information is printed on the console and no information is logged to the log file.
-    -   1 – The list of versions that are being used by each worker node is logged.
-    -   2 – Information of all transaction control blocks for each worker node are logged, along with the list of versions that are being used by each worker node.
+<dl>
+<dt><b>
 
- 
+*<detailLevel\>*
+
+</b></dt>
+<dd>
+
+Enables you to set the level of detail for log messages that are logged to data lake Relational Engine log messages file \(<code><i class="varname">&lt;server_name&gt;</i>.iqmsg</code>\). Allowed values are:
+
+-   0 – All the information is printed on the console and no information is logged to the log file.
+-   1 – The list of versions that are being used by each worker node is logged.
+-   2 – Information of all transaction control blocks for each worker node are logged, along with the list of versions that are being used by each worker node.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio75c8ed076eed41ae914648167432ca1a__section_fqg_g4g_nbb"/>
 
@@ -152,7 +165,7 @@ sp\_iqmpxversionchaininfo helps investigate version buildup issues in the system
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

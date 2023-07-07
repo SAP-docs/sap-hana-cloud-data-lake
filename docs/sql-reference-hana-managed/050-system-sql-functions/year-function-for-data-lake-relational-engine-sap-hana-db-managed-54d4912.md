@@ -16,10 +16,23 @@ YEAR ( <timestamp-expression> )
 
 ## Parameters
 
- *<timestamp-expression\>*
- :   A date and time.
 
- 
+<dl>
+<dt><b>
+
+*<timestamp-expression\>*
+
+</b></dt>
+<dd>
+
+A date and time.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio54d4912c1eb74fccac5ded7c6fc9fa8d__section_ajb_1dv_vrb"/>
 

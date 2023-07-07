@@ -23,10 +23,23 @@ sp_iqbackupsummary [ <timestamp> | <backup_id> ]
 
 ## Parameters
 
- *<timestamp\>* or *<backup\_id\>*
- :   \(Optional\) The interval for which to report backup operations. If you specify *<timestamp\>* or *<backup\_id\>*, only those records with `backup_time` greater than or equal to the time you enter are returned. If you specify no timestamp, the procedure returns all the backup records in ISYSIQBACKUPHISTORY.
 
- 
+<dl>
+<dt><b>
+
+*<timestamp\>* or *<backup\_id\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) The interval for which to report backup operations. If you specify *<timestamp\>* or *<backup\_id\>*, only those records with `backup_time` greater than or equal to the time you enter are returned. If you specify no timestamp, the procedure returns all the backup records in ISYSIQBACKUPHISTORY.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa59c232b84f210158782a51ce66730eb__section_a2z_n11_nbb"/>
 
@@ -231,7 +244,7 @@ The backup statement issued \(minus the comment\)
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

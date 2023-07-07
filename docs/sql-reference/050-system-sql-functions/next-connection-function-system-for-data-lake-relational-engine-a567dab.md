@@ -16,13 +16,34 @@ NEXT_CONNECTION ( { <connection-id> }, { <database-id> } )
 
 ## Parameters
 
- *<connection-id\>*
- :   An integer, usually returned from a previous call to NEXT\_CONNECTION. If *<connection-id\>* is NULL, NEXT\_CONNECTION returns the most recent connection ID.
 
-  *<database-id\>*
- :   An integer representing one of the databases on the current server. If you supply no *<database-id\>*, the current database is used. If you supply NULL, then NEXT\_CONNECTION returns the next connection regardless of database.
+<dl>
+<dt><b>
 
- 
+*<connection-id\>*
+
+</b></dt>
+<dd>
+
+An integer, usually returned from a previous call to NEXT\_CONNECTION. If *<connection-id\>* is NULL, NEXT\_CONNECTION returns the most recent connection ID.
+
+
+
+</dd><dt><b>
+
+*<database-id\>*
+
+</b></dt>
+<dd>
+
+An integer representing one of the databases on the current server. If you supply no *<database-id\>*, the current database is used. If you supply NULL, then NEXT\_CONNECTION returns the next connection regardless of database.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Returns
 

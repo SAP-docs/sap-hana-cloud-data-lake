@@ -16,13 +16,34 @@ ROW_NUMBER() OVER ( [ PARTITION BY <window partition> ] ORDER BY <window orderin
 
 ## Parameters
 
- *<window partition\>*
- :   \(Optional\) One or more value expressions separated by commas indicating how you want to divide the set of result rows.
 
-  *<window ordering\>*
- :   Defines the expressions for sorting rows within window partitions, if specified, or within the result set if you did not specify a window partition.
+<dl>
+<dt><b>
 
- 
+*<window partition\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) One or more value expressions separated by commas indicating how you want to divide the set of result rows.
+
+
+
+</dd><dt><b>
+
+*<window ordering\>*
+
+</b></dt>
+<dd>
+
+Defines the expressions for sorting rows within window partitions, if specified, or within the result set if you did not specify a window partition.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa57c3ea884f21015b4f8c850a5a5357f__ROW_NUMBER_remarks1"/>
 
@@ -74,5 +95,5 @@ dID        StartDate    Salary      Row_number()
 **Related Information**  
 
 
-[ROW_NUMBER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/2ebca29e7b31469497df90d36ea7422e.html "A ranking function that returns a unique row number for each row in a window partition, restarting the row numbering at the start of every window partition.") :arrow_upper_right:
+[ROW_NUMBER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/2ebca29e7b31469497df90d36ea7422e.html "A ranking function that returns a unique row number for each row in a window partition, restarting the row numbering at the start of every window partition.") :arrow_upper_right:
 

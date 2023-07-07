@@ -16,10 +16,23 @@ VAR_SAMP ( [ ALL ] <expression> )
 
 ## Parameters
 
- *<expression\>*
- :   The expression \(commonly a column name\) that has a sample-based variance that is calculated over a set of rows.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The expression \(commonly a column name\) that has a sample-based variance that is calculated over a set of rows.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio4e77eae4118f432c95bd09f867eb3f06__section_tvr_4fv_vrb"/>
 

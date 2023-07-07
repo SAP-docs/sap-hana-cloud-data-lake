@@ -195,14 +195,43 @@ UNSIGNED INT
 
 The type of synchronization for the publication. Values include:
 
+
+<dl>
+<dt><b>
+
 0 \(logscan\)
-:   This is a regular publication that uses the transaction log to upload all relevant data that has changed since the last upload.
+
+</b></dt>
+<dd>
+
+This is a regular publication that uses the transaction log to upload all relevant data that has changed since the last upload.
+
+
+
+</dd><dt><b>
 
 1 \(scripted upload\)
-:   For this publication, the transaction log is ignored and the upload is defined by the user using stored procedures. Information about the stored procedures is stored in the ISYSSYNCSCRIPT system table.
+
+</b></dt>
+<dd>
+
+For this publication, the transaction log is ignored and the upload is defined by the user using stored procedures. Information about the stored procedures is stored in the ISYSSYNCSCRIPT system table.
+
+
+
+</dd><dt><b>
 
 2 \(download only\)
-:   This is a download-only publication; no data is uploaded.
+
+</b></dt>
+<dd>
+
+This is a download-only publication; no data is uploaded.
+
+
+
+</dd>
+</dl>
 
 
 

@@ -13,37 +13,87 @@ Displays information about views in a database.
 
 
 
- Syntax 1
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1
+
+</b></dt>
+<dd>
+
+```
 sp_iqview ( [ <view_name> ] , [ <view_owner> ] , [ view_type ] )
 ```
 
-  Syntax 2
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2
+
+</b></dt>
+<dd>
+
+```
 sp_iqview [ view_name='<viewname>' ],
 [ view_owner='<viewowner>' ] , [ view_type='<viewtype>' ]
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5bdee7a84f21015a8e0f09a5accc45a__iq_refbb_1844"/>
 
 ## Parameters
 
- *<view\_name\>*
- :   \(Optional\) The name of the view.
 
-  *<view\_owner\>*
- :   \(Optional\) The owner of the view.
+<dl>
+<dt><b>
 
-  `view_type`
- :   \(Optional\) The view type. Valid values are:
+*<view\_name\>*
 
-    -   SYSTEM – system views
-    -   ALL – user and system views
-    -   Any other value – user views
+</b></dt>
+<dd>
 
- 
+\(Optional\) The name of the view.
+
+
+
+</dd><dt><b>
+
+*<view\_owner\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) The owner of the view.
+
+
+
+</dd><dt><b>
+
+`view_type`
+
+</b></dt>
+<dd>
+
+\(Optional\) The view type. Valid values are:
+
+-   SYSTEM – system views
+-   ALL – user and system views
+-   Any other value – user views
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5bdee7a84f21015a8e0f09a5accc45a__section_lgk_jmm_nbb"/>
 
@@ -166,7 +216,7 @@ For Syntax 2, the parameters can be specified in any order, enclosed in single q
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -234,29 +284,29 @@ None
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    ViewSalesOrders
+    
+        ViewSalesOrders
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    Create views GROUPO , ViewSalesOrders\( ID, LineID, ProductID, Quantity, OrderDate, ShipDate, Region, SalesRepresentativeName
+    
+        Create views GROUPO , ViewSalesOrders\( ID, LineID, ProductID, Quantity, OrderDate, ShipDate, Region, SalesRepresentativeName
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    \(NULL\)
+    
+        \(NULL\)
 
 
     

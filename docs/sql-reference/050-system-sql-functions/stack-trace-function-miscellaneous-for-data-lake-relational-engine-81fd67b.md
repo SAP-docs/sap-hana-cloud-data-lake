@@ -20,31 +20,110 @@ STACK_TRACE(
 
 ## Parameters
 
- *<stack-frames\>*
- :   Controls whether to include procedures, outer-statements, or both.
 
-     'procedure'
-     :   Return procedures but not the outer-most statement. This is the default behavior.
+<dl class="glossary">
+<dt><b>
 
-      'caller'
-     :   Return only the outer-most statement \(the statement that arrived from the client\).
+*<stack-frames\>*
 
-      'procedure+caller', 'caller+procedure'
-     :   Return all statements.
+</b></dt>
+<dd>
 
-   *<detail-level\>*
- :   Controls the level of detail to include in the returned data.
+Controls whether to include procedures, outer-statements, or both.
 
-     'stack'
-     :   Include procedure names and line numbers. This is the default behavior.
 
-      'stack+sql', 'sql+stack'
-     :   Include the procedure names and line numbers, as well as the SQL text of the statement being executed at each level.
+<dl>
+<dt><b>
 
-   *<connection-id\>*
- :   Use the connection\_id option to filter the results returned to the specified connection ID.
+'procedure'
 
- 
+</b></dt>
+<dd>
+
+Return procedures but not the outer-most statement. This is the default behavior.
+
+
+
+</dd><dt><b>
+
+'caller'
+
+</b></dt>
+<dd>
+
+Return only the outer-most statement \(the statement that arrived from the client\).
+
+
+
+</dd><dt><b>
+
+'procedure+caller', 'caller+procedure'
+
+</b></dt>
+<dd>
+
+Return all statements.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+*<detail-level\>*
+
+</b></dt>
+<dd>
+
+Controls the level of detail to include in the returned data.
+
+
+<dl>
+<dt><b>
+
+'stack'
+
+</b></dt>
+<dd>
+
+Include procedure names and line numbers. This is the default behavior.
+
+
+
+</dd><dt><b>
+
+'stack+sql', 'sql+stack'
+
+</b></dt>
+<dd>
+
+Include the procedure names and line numbers, as well as the SQL text of the statement being executed at each level.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+*<connection-id\>*
+
+</b></dt>
+<dd>
+
+Use the connection\_id option to filter the results returned to the specified connection ID.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio81fd67bc6ce2101497f0d65edc4451bd__STACK_TRACE_returns1"/>
 
@@ -70,10 +149,23 @@ This function returns the same information as the sa\_stack\_trace system proced
 
 ## Standards and Compatibility
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following example illustrates a procedure call stack trace:
 
@@ -113,5 +205,5 @@ line_num row_value
 **Related Information**  
 
 
-[STACK_TRACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/387c96c17c9141249abeff9a59d22ec4.html "Returns information about the stack trace for the current statement.") :arrow_upper_right:
+[STACK_TRACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/387c96c17c9141249abeff9a59d22ec4.html "Returns information about the stack trace for the current statement.") :arrow_upper_right:
 

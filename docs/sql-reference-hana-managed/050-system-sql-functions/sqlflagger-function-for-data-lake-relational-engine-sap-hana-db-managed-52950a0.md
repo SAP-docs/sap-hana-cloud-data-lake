@@ -16,21 +16,42 @@ SQLFLAGGER ( <sql-standard-string>, <sql-statement-string> )
 
 ## Parameters
 
- *<sql-standard-string\>*
- :   The standard level against which to test compliance. Possible values are the same as for the `SQL_FLAGGER_ERROR_LEVEL` database option:
 
-    -   `SQL:2003/Core` – test for conformance to core SQL/2003 syntax.
-    -   `SQL:2003/Package` – test for conformance to full SQL/2003 syntax.
-    -   `SQL:1999/Core` – test for conformance to core SQL/1999 syntax.
-    -   `SQL:1999/Package` – test for conformance to full SQL/1999 syntax.
-    -   `SQL:1992/Entry` – test for conformance to entry-level SQL/1992 syntax.
-    -   `SQL:1992/Intermediate` – test for conformance to intermediate-level SQL/1992 syntax.
-    -   `SQL:1992/Full` – test for conformance to full-SQL/1992 syntax.
+<dl>
+<dt><b>
 
-  *<sql-statement-string\>*
- :   The SQL statement to check for conformance.
+*<sql-standard-string\>*
 
- 
+</b></dt>
+<dd>
+
+The standard level against which to test compliance. Possible values are the same as for the `SQL_FLAGGER_ERROR_LEVEL` database option:
+
+-   `SQL:2003/Core` – test for conformance to core SQL/2003 syntax.
+-   `SQL:2003/Package` – test for conformance to full SQL/2003 syntax.
+-   `SQL:1999/Core` – test for conformance to core SQL/1999 syntax.
+-   `SQL:1999/Package` – test for conformance to full SQL/1999 syntax.
+-   `SQL:1992/Entry` – test for conformance to entry-level SQL/1992 syntax.
+-   `SQL:1992/Intermediate` – test for conformance to intermediate-level SQL/1992 syntax.
+-   `SQL:1992/Full` – test for conformance to full-SQL/1992 syntax.
+
+
+
+</dd><dt><b>
+
+*<sql-statement-string\>*
+
+</b></dt>
+<dd>
+
+The SQL statement to check for conformance.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio52950a0cb81b4e09a835e1c464f11a64__section_v5j_xw5_vrb"/>
 

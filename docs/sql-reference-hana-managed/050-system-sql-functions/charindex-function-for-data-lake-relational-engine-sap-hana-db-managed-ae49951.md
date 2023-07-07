@@ -16,13 +16,34 @@ CHARINDEX ( <string-expression1>, <string-expression2> )
 
 ## Parameters
 
- *<string-expression1\>*
- :   The string for which you are searching. This string is limited to 255 bytes.
 
-  *<string-expression2\>*
- :   The string to be searched. The position of the first character in the string being searched is 1.
+<dl>
+<dt><b>
 
- 
+*<string-expression1\>*
+
+</b></dt>
+<dd>
+
+The string for which you are searching. This string is limited to 255 bytes.
+
+
+
+</dd><dt><b>
+
+*<string-expression2\>*
+
+</b></dt>
+<dd>
+
+The string to be searched. The position of the first character in the string being searched is 1.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioae499513aa0346978ca7d3c6f34656da__section_cdy_fsl_srb"/>
 

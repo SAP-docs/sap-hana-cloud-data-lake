@@ -40,29 +40,58 @@ CREATE EXISTING TABLE [ <owner> .]<virtual-table-name>
 
 ## Parameters
 
- *<virtual-table-name\>*
- :   The name of the IQ virtual table. The defintion of the virtual table is stored in the IQ catalog.
 
-    > ### Note:  
-    > Tables used as virtual tables cannot have names longer than 30 characters.
+<dl>
+<dt><b>
 
-  *<column-definition-list\>*
- :   If you do not specify column definitions, data lake Relational Engine derives the column list from the metadata it obtains from the remote table. If you do specify column definitions, data lake Relational Engine verifies them. When data lake Relational Engine checks column names, data types, and lengths:
+*<virtual-table-name\>*
 
-    -   Column names must match identically \(although case is ignored\).
-    -   Data types in `CREATE EXISTING TABLE` must match or be convertible to the data types of the column of the remote table. You may encounter some errors if you select from a table in which the data types do not match or other inconsistencies exist.
-    -   Each column’s length is checked. If the lengths of `CHAR`, `VARCHAR`, `BINARY`, `DECIMAL`, and `NUMERIC` columns do not match, a warning message is issued, but the command is not aborted. You might choose to include only a subset of the actual remote column list in your `CREATE EXISTING` statement.
+</b></dt>
+<dd>
 
-  AT '*<location-string\>*'
- :   Specifies the location of the remote object. Use a period to delimit the location strings.
+The name of the IQ virtual table. The defintion of the virtual table is stored in the IQ catalog.
 
-    The `AT` clause includes a location string that consists of the following parts:
+> ### Note:  
+> Tables used as virtual tables cannot have names longer than 30 characters.
 
-    -   The name of the remote server
-    -   The remote schema
-    -   The remote table name
 
- 
+
+</dd><dt><b>
+
+*<column-definition-list\>*
+
+</b></dt>
+<dd>
+
+If you do not specify column definitions, data lake Relational Engine derives the column list from the metadata it obtains from the remote table. If you do specify column definitions, data lake Relational Engine verifies them. When data lake Relational Engine checks column names, data types, and lengths:
+
+-   Column names must match identically \(although case is ignored\).
+-   Data types in `CREATE EXISTING TABLE` must match or be convertible to the data types of the column of the remote table. You may encounter some errors if you select from a table in which the data types do not match or other inconsistencies exist.
+-   Each column’s length is checked. If the lengths of `CHAR`, `VARCHAR`, `BINARY`, `DECIMAL`, and `NUMERIC` columns do not match, a warning message is issued, but the command is not aborted. You might choose to include only a subset of the actual remote column list in your `CREATE EXISTING` statement.
+
+
+
+</dd><dt><b>
+
+AT '*<location-string\>*'
+
+</b></dt>
+<dd>
+
+Specifies the location of the remote object. Use a period to delimit the location strings.
+
+The `AT` clause includes a location string that consists of the following parts:
+
+-   The name of the remote server
+-   The remote schema
+-   The remote table name
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -78,7 +107,10 @@ If the remote table does not exist, the statement is rejected with an error mess
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

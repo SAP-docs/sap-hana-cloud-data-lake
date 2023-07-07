@@ -16,19 +16,56 @@ WIDTH_BUCKET ( <expression>, <min_value>, <max_value>, <num_buckets> )
 
 ## Parameters
 
- *<expression\>*
- :   The expression for which the histogram is being created. This expression must evaluate to a numeric or datetime value or to a value that can be implicitly converted to a numeric or datetime value. If *<expr\>* evaluates to null, then the expression returns null.
 
-  *<min\_value\>*
- :   An expression that resolves to the end points of the acceptable range for *<expr\>*. Must also evaluate to numeric or datetime values and cannot evaluate to null.
+<dl>
+<dt><b>
 
-  *<max\_value\>*
- :   An expression that resolves to the end points of the acceptable range for *<expr\>*. Must also evaluate to numeric or datetime values and cannot evaluate to null.
+*<expression\>*
 
-  *<num\_buckets\>*
- :   Is an expression that resolves to a constant indicating the number of buckets. This expression must evaluate to a positive integer.
+</b></dt>
+<dd>
 
- 
+The expression for which the histogram is being created. This expression must evaluate to a numeric or datetime value or to a value that can be implicitly converted to a numeric or datetime value. If *<expr\>* evaluates to null, then the expression returns null.
+
+
+
+</dd><dt><b>
+
+*<min\_value\>*
+
+</b></dt>
+<dd>
+
+An expression that resolves to the end points of the acceptable range for *<expr\>*. Must also evaluate to numeric or datetime values and cannot evaluate to null.
+
+
+
+</dd><dt><b>
+
+*<max\_value\>*
+
+</b></dt>
+<dd>
+
+An expression that resolves to the end points of the acceptable range for *<expr\>*. Must also evaluate to numeric or datetime values and cannot evaluate to null.
+
+
+
+</dd><dt><b>
+
+*<num\_buckets\>*
+
+</b></dt>
+<dd>
+
+Is an expression that resolves to a constant indicating the number of buckets. This expression must evaluate to a positive integer.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa591658384f21015a3a2e821679c9000__WIDTH_BUCKET_remarks1"/>
 
@@ -80,5 +117,5 @@ When the bounds are reversed, the buckets are open-closed intervals. For example
 **Related Information**  
 
 
-[WIDTH_BUCKET Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/69892e4fa52c4ad885c269d8009f06c3.html "For a given expression, the WIDTH_BUCKET function returns the bucket number that the result of this expression will be assigned after it is evaluated.") :arrow_upper_right:
+[WIDTH_BUCKET Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/69892e4fa52c4ad885c269d8009f06c3.html "For a given expression, the WIDTH_BUCKET function returns the bucket number that the result of this expression will be assigned after it is evaluated.") :arrow_upper_right:
 

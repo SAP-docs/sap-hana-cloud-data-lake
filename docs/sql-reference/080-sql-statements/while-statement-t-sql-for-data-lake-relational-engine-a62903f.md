@@ -6,11 +6,6 @@ Provides repeated execution of a statement or compound statement.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -22,6 +17,11 @@ Provides repeated execution of a statement or compound statement.
 WHILE <expression>
    ... <statement>
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 

@@ -16,13 +16,34 @@ TRUNCNUM ( <numeric-expression>, <integer-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The number to be truncated.
 
-  *<integer-expression\>*
- :   A positive integer specifies the number of significant digits to the right of the decimal point at which to round. A negative expression specifies the number of significant digits to the left of the decimal point at which to round.
+<dl>
+<dt><b>
 
- 
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The number to be truncated.
+
+
+
+</dd><dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+A positive integer specifies the number of significant digits to the right of the decimal point at which to round. A negative expression specifies the number of significant digits to the left of the decimal point at which to round.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio38464172958846abbb04ad86a7c02f65__section_ww2_k3v_vrb"/>
 

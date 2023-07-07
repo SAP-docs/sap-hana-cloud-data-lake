@@ -16,10 +16,23 @@ DB_ID ( [ <database-name> ] )
 
 ## Parameters
 
- *<database-name\>*
- :   A string expression containing the database name. If database-name is a string constant, it must be enclosed in quotes. If no database-name is supplied, the ID number of the current database is returned.
 
- 
+<dl>
+<dt><b>
+
+*<database-name\>*
+
+</b></dt>
+<dd>
+
+A string expression containing the database name. If database-name is a string constant, it must be enclosed in quotes. If no database-name is supplied, the ID number of the current database is returned.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Returns
 

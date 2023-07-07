@@ -6,11 +6,6 @@ Undoes any changes made since the last `COMMIT` or `ROLLBACK`.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -21,6 +16,11 @@ Undoes any changes made since the last `COMMIT` or `ROLLBACK`.
 ```
 ROLLBACK [ WORK ]
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 

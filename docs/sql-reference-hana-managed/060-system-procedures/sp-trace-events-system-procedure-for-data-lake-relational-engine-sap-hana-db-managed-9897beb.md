@@ -26,13 +26,34 @@ sp_trace_events(
 
 ## Parameters
 
-  *<event\_name\>* 
- :   Use this optional CHAR\(256\) parameter to specify the trace event name. The default is NULL.
 
-   *<include\_audit\_events\>* 
- :   Use this optional BIT parameter to specify whether or not audit events are returned. This parameter can be 0 \(do not return audit events\) or 1 \(return audit events\). By default, audit events are not returned \(0 is the default\).
+<dl>
+<dt><b>
 
- 
+ *<event\_name\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(256\) parameter to specify the trace event name. The default is NULL.
+
+
+
+</dd><dt><b>
+
+ *<include\_audit\_events\>* 
+
+</b></dt>
+<dd>
+
+Use this optional BIT parameter to specify whether or not audit events are returned. This parameter can be 0 \(do not return audit events\) or 1 \(return audit events\). By default, audit events are not returned \(0 is the default\).
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio9897bebbf9314d72a926d9adae52ead8__section_d4h_qk2_srb"/>
 
@@ -308,7 +329,10 @@ DEBUG
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

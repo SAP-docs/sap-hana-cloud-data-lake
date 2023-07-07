@@ -27,23 +27,52 @@ sa_materialized_view_can_have_refresh_build_type(
 
 ## Parameters
 
- *<refresh\_type\>* 
- :   Specifies the refresh type of the materialized view. Valid values are:
 
-    -   I = IMMEDIATE
-    -   A = AUTO
-    -   M = MANUAL
+<dl>
+<dt><b>
 
-  *<build\_type\>* 
- :   Specifies the build type of the materialized view. Valid values are:
+*<refresh\_type\>* 
 
-    -   I = INCREMENTAL
-    -   F = FULL
+</b></dt>
+<dd>
 
-  *<owner\_name\>* | *<schema\_name\>*
- :   Specifies the owner of the materialized
+Specifies the refresh type of the materialized view. Valid values are:
 
- 
+-   I = IMMEDIATE
+-   A = AUTO
+-   M = MANUAL
+
+
+
+</dd><dt><b>
+
+*<build\_type\>* 
+
+</b></dt>
+<dd>
+
+Specifies the build type of the materialized view. Valid values are:
+
+-   I = INCREMENTAL
+-   F = FULL
+
+
+
+</dd><dt><b>
+
+*<owner\_name\>* | *<schema\_name\>*
+
+</b></dt>
+<dd>
+
+Specifies the owner of the materialized
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio46d97724fd354bb68d1c4081bd2576b0__section_m1k_4hd_bwb"/>
 
@@ -144,7 +173,10 @@ If the definition does not support the refresh and build type, the procedure ret
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 **Related Information**  
 

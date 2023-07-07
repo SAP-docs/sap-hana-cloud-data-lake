@@ -11,5 +11,5 @@ The `SUBSTRING64` function returns a variable-length character string of the lar
 **Related Information**  
 
 
-[SUBSTRING64 Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/4ff0a1384ebb4d6985f3329004046d16.html "The SUBSTRING64 function returns a variable-length character string of the large object column or variable parameter.") :arrow_upper_right:
+[SUBSTRING64 Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/4ff0a1384ebb4d6985f3329004046d16.html "The SUBSTRING64 function returns a variable-length character string of the large object column or variable parameter.") :arrow_upper_right:
 

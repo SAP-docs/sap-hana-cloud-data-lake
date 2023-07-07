@@ -16,13 +16,34 @@ SIMILAR ( <string-expression1>, <string-expression2> )
 
 ## Parameters
 
- *<string-expression1\>*
- :   The first string to be compared.
 
-  *<string-expression2\>*
- :   The second string to be compared.
+<dl>
+<dt><b>
 
- 
+*<string-expression1\>*
+
+</b></dt>
+<dd>
+
+The first string to be compared.
+
+
+
+</dd><dt><b>
+
+*<string-expression2\>*
+
+</b></dt>
+<dd>
+
+The second string to be compared.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio328e90f2bcb14535a8a34b74369bbbfc__section_c4t_5y5_vrb"/>
 

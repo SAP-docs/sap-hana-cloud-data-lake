@@ -6,11 +6,6 @@ Pivots a table expression in the FROM clause of a SELECT statement \(FROM *<pivo
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -55,34 +50,76 @@ FROM <pivot-source-table>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 ## Parameters
 
- *<aggregate-function\>* \( \[ *<aggregate-expression\>* \] \) \[ \[ AS \] *<aggregate-alias\>* \]
- :   Specify any aggregate function that returns a single value for a set of rows.
 
-    -   *<aggregate-function\>* – specify any aggregate function that returns a single value for a set of rows \(also known as a scalar function\).
+<dl class="glossary">
+<dt><b>
 
-    -   *<aggregate-expression\>* – specify the parameters of the aggregate function. The aggregate expression must reference only columns found in *<pivot-source-table\>*.
+*<aggregate-function\>* \( \[ *<aggregate-expression\>* \] \) \[ \[ AS \] *<aggregate-alias\>* \]
 
-    -   *<aggregate-alias\>* – specify an alias for the aggregate function. The list of aggregate functions can have at most one aggregate function without an alias. Aggregate aliases, together with the IN clause aliases, are used to generate the names of the new columns of the pivoted derived table. As a best practice, always specify an alias for your aggregate.
+</b></dt>
+<dd>
+
+Specify any aggregate function that returns a single value for a set of rows.
+
+-   *<aggregate-function\>* – specify any aggregate function that returns a single value for a set of rows \(also known as a scalar function\).
+
+-   *<aggregate-expression\>* – specify the parameters of the aggregate function. The aggregate expression must reference only columns found in *<pivot-source-table\>*.
+
+-   *<aggregate-alias\>* – specify an alias for the aggregate function. The list of aggregate functions can have at most one aggregate function without an alias. Aggregate aliases, together with the IN clause aliases, are used to generate the names of the new columns of the pivoted derived table. As a best practice, always specify an alias for your aggregate.
 
 
-  FOR clause
- :   Specify one or more columns on which to pivot the data. *<pivot-column\>* must be a column in *<pivot-source-table\>*. If you specify more than one *<pivot-column\>*, then you must enclose them in parentheses.
 
-  IN \( *<constant-expression\>* \[\[ AS \] *<constant-expression-alias\>* \] \[,...\] \)
- :   Specify a set of constant expressions on which to pivot the data. Use this syntax when the FOR clause lists only one column, namely, FOR *<pivot-column\>*.
 
-    If an alias is not specified, then the implicit alias is the string representing the constant expression. For example, the implicit alias for the constant 10 is "10." Always specify an alias for *<constant-expression\>*. Use implicit and explicit aliases for constant expressions in the IN clause, together with aggregate aliases, to generate the names of the new columns of the pivoted derived table.
+</dd><dt><b>
 
-    Each new column in the pivoted derived table corresponds to a pairing of an aggregate function and an IN item, and has a name that reflects the pairing. The first part of the name is the alias of the IN item, and the second part of the name \(after the underscore\) is the alias of the aggregate function. If a generated column name is an invalid identifier, then an error is generated and the statement fails.
+FOR clause
 
-  IN \( \( *<constant-expression\>* \[,...\] \) \[ \[ AS \] *<constant-expression-alias\>* \] \[,...\] \)
- :   Specify a set of lists containing constant expressions on which to pivot the data. Use this form of the IN clause when you specify multiple columns in the FOR clause. The number of columns specified in the FOR clause must be equal to the number of items in any constant list of the IN clause.
+</b></dt>
+<dd>
 
-    If an alias is not specified, then the implicit alias is the string representing the list of constant expressions. For example, the implicit alias for the constant list \(10, 20\) is "\(10, 20\)". Implicit and explicit aliases for constant expressions in the IN clause, together with the aggregate aliases, are used to generate the names of the new columns of the pivoted derived table.
+Specify one or more columns on which to pivot the data. *<pivot-column\>* must be a column in *<pivot-source-table\>*. If you specify more than one *<pivot-column\>*, then you must enclose them in parentheses.
 
- 
+
+
+</dd><dt><b>
+
+IN \( *<constant-expression\>* \[\[ AS \] *<constant-expression-alias\>* \] \[,...\] \)
+
+</b></dt>
+<dd>
+
+Specify a set of constant expressions on which to pivot the data. Use this syntax when the FOR clause lists only one column, namely, FOR *<pivot-column\>*.
+
+If an alias is not specified, then the implicit alias is the string representing the constant expression. For example, the implicit alias for the constant 10 is "10." Always specify an alias for *<constant-expression\>*. Use implicit and explicit aliases for constant expressions in the IN clause, together with aggregate aliases, to generate the names of the new columns of the pivoted derived table.
+
+Each new column in the pivoted derived table corresponds to a pairing of an aggregate function and an IN item, and has a name that reflects the pairing. The first part of the name is the alias of the IN item, and the second part of the name \(after the underscore\) is the alias of the aggregate function. If a generated column name is an invalid identifier, then an error is generated and the statement fails.
+
+
+
+</dd><dt><b>
+
+IN \( \( *<constant-expression\>* \[,...\] \) \[ \[ AS \] *<constant-expression-alias\>* \] \[,...\] \)
+
+</b></dt>
+<dd>
+
+Specify a set of lists containing constant expressions on which to pivot the data. Use this form of the IN clause when you specify multiple columns in the FOR clause. The number of columns specified in the FOR clause must be equal to the number of items in any constant list of the IN clause.
+
+If an alias is not specified, then the implicit alias is the string representing the list of constant expressions. For example, the implicit alias for the constant list \(10, 20\) is "\(10, 20\)". Implicit and explicit aliases for constant expressions in the IN clause, together with the aggregate aliases, are used to generate the names of the new columns of the pivoted derived table.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -104,10 +141,23 @@ None.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following example selects data from the Employees table and pivots it on the DepartmentID column, where the Department ID is 100, 200, 300, 400, or 500.
 

@@ -6,11 +6,6 @@ Extends the range of statements that can be executed from within procedures. It 
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -18,8 +13,16 @@ Extends the range of statements that can be executed from within procedures. It 
 
 
 
- Syntax 1
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1
+
+</b></dt>
+<dd>
+
+```
 EXECUTE IMMEDIATE 
    [ { WITH QUOTES { ON | OFF }
      | WITH ESCAPES { ON | OFF } 
@@ -27,51 +30,106 @@ EXECUTE IMMEDIATE
    ] <string-expression>
 ```
 
-  Syntax 2
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2
+
+</b></dt>
+<dd>
+
+```
 EXECUTE ( <string-expression> )
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
 
 <a name="loioa61dfe2b84f210159a53c67a84c3c01b__IQ_Parameters"/>
 
 ## Parameters
 
- WITH QUOTES \[ON\]
- :   Any double quotes in the string expression are assumed to delimit an identifier. When not specified, the treatment of double quotes in the string expression depends on the current setting of the `QUOTED_IDENTIFIER` database option.
 
-    `WITH QUOTES` is useful when an object name that is passed into the stored procedure is used to construct the statement that is to be executed, but the name might require double quotes and the procedure might be called when `QUOTED_IDENTIFIER` is set to OFF.
+<dl>
+<dt><b>
 
-    See *QUOTED\_IDENTIFIER Option \[TSQL\]*.
+WITH QUOTES \[ON\]
 
-  WITH ESCAPES
- :   Causes any escape sequences \(such as \\n, \\x, or \\\\\) in the string expression to be ignored. For example, two consecutive backslashes remain as two backslashes, rather than being converted to a single backslash. The default setting is ON.
+</b></dt>
+<dd>
 
-    You can use `WITH ESCAPES OFF` for easier execution of dynamically constructed statements referencing file names that contain backslashes.
+Any double quotes in the string expression are assumed to delimit an identifier. When not specified, the treatment of double quotes in the string expression depends on the current setting of the `QUOTED_IDENTIFIER` database option.
 
-  *<string-expression\>*
- :   In some contexts, escape sequences in the *<string-expression\>* are transformed before `EXECUTE IMMEDIATE` is executed. For example, compound statements are parsed before being executed, and escape sequences are transformed during this parsing, regardless of the WITH ESCAPES setting. In these contexts, `WITH ESCAPES OFF` prevents further translations from occurring. For example:
+`WITH QUOTES` is useful when an object name that is passed into the stored procedure is used to construct the statement that is to be executed, but the name might require double quotes and the procedure might be called when `QUOTED_IDENTIFIER` is set to OFF.
 
-    ```
-    BEGIN
-    DECLARE String1 LONG VARCHAR;
-    DECLARE String2 LONG VARCHAR;
-    EXECUTE IMMEDIATE 
-     'SET String1 = ''One backslash: \\\\ '''; 
-     EXECUTE IMMEDIATE WITH ESCAPES OFF 
-     'SET String2 = ''Two backslashes: \\\\ ''';  
-     SELECT String1, String2 
-    END
-    ```
+See *QUOTED\_IDENTIFIER Option \[TSQL\]*.
 
-  WITH RESULT SET
- :   When specified with ON, the `EXECUTE IMMEDIATE` statement returns a result set. With this clause, the containing procedure is marked as returning a result set. If you do not include this clause, an error is reported when the procedure is called if the statement does not produce a result set.
 
-    > ### Note:  
-    > The default option is OFF, meaning that no result set is produced when the statement is executed.
 
- 
+</dd><dt><b>
+
+WITH ESCAPES
+
+</b></dt>
+<dd>
+
+Causes any escape sequences \(such as \\n, \\x, or \\\\\) in the string expression to be ignored. For example, two consecutive backslashes remain as two backslashes, rather than being converted to a single backslash. The default setting is ON.
+
+You can use `WITH ESCAPES OFF` for easier execution of dynamically constructed statements referencing file names that contain backslashes.
+
+
+
+</dd><dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+In some contexts, escape sequences in the *<string-expression\>* are transformed before `EXECUTE IMMEDIATE` is executed. For example, compound statements are parsed before being executed, and escape sequences are transformed during this parsing, regardless of the WITH ESCAPES setting. In these contexts, `WITH ESCAPES OFF` prevents further translations from occurring. For example:
+
+```
+BEGIN
+DECLARE String1 LONG VARCHAR;
+DECLARE String2 LONG VARCHAR;
+EXECUTE IMMEDIATE 
+ 'SET String1 = ''One backslash: \\\\ '''; 
+ EXECUTE IMMEDIATE WITH ESCAPES OFF 
+ 'SET String2 = ''Two backslashes: \\\\ ''';  
+ SELECT String1, String2 
+END
+```
+
+
+
+</dd><dt><b>
+
+WITH RESULT SET
+
+</b></dt>
+<dd>
+
+When specified with ON, the `EXECUTE IMMEDIATE` statement returns a result set. With this clause, the containing procedure is marked as returning a result set. If you do not include this clause, an error is reported when the procedure is called if the statement does not produce a result set.
+
+> ### Note:  
+> The default option is OFF, meaning that no result set is produced when the statement is executed.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61dfe2b84f210159a53c67a84c3c01b__IQ_Usage"/>
 

@@ -18,13 +18,34 @@ MONTHS ( <date-expression>
 
 ## Parameters
 
- *<date-expression\>*
- :   A date and time.
 
-  *<integer-expression\>*
- :   The number of months to be added to the *<date-expression\>*. If *<integer-expression\>* is negative, the appropriate number of months are subtracted from the date/time value. If you supply an integer expression, the *<date-expression\>* must be explicitly cast as a `datetime` data type.
+<dl>
+<dt><b>
 
- 
+*<date-expression\>*
+
+</b></dt>
+<dd>
+
+A date and time.
+
+
+
+</dd><dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number of months to be added to the *<date-expression\>*. If *<integer-expression\>* is negative, the appropriate number of months are subtracted from the date/time value. If you supply an integer expression, the *<date-expression\>* must be explicitly cast as a `datetime` data type.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio8c326df1855d47f2ad7c9a6a658b0db9__section_k4h_32n_vrb"/>
 

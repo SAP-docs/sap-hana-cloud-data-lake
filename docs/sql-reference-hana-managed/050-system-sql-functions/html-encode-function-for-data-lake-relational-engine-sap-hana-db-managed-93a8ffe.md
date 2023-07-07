@@ -16,10 +16,23 @@ HTML_ENCODE( <string> )
 
 ## Parameters
 
-  *<string\>* 
- :   Arbitrary string to be used in an HTML document.
 
- 
+<dl>
+<dt><b>
+
+ *<string\>* 
+
+</b></dt>
+<dd>
+
+Arbitrary string to be used in an HTML document.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio93a8ffefb9d74ce5a0354d391cafc925__section_lrh_qmg_trb"/>
 
@@ -162,10 +175,23 @@ This function supports NCHAR inputs and/or outputs.
 
 ## Standards and Compatibility
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following example returns the string `'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;&gt; '`.
 

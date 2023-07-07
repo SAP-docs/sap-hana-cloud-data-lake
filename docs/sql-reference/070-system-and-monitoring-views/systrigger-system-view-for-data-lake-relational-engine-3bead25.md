@@ -126,29 +126,98 @@ CHAR\(1\)
 
 The operation that causes the trigger to fire.
 
+
+<dl>
+<dt><b>
+
 A
-:   INSERT, DELETE
+
+</b></dt>
+<dd>
+
+INSERT, DELETE
+
+
+
+</dd><dt><b>
 
 B
-:   INSERT, UPDATE
+
+</b></dt>
+<dd>
+
+INSERT, UPDATE
+
+
+
+</dd><dt><b>
 
 C
-:   UPDATE COLUMNS
+
+</b></dt>
+<dd>
+
+UPDATE COLUMNS
+
+
+
+</dd><dt><b>
 
 D
-:   DELETE
+
+</b></dt>
+<dd>
+
+DELETE
+
+
+
+</dd><dt><b>
 
 E
-:   DELETE, UPDATE
+
+</b></dt>
+<dd>
+
+DELETE, UPDATE
+
+
+
+</dd><dt><b>
 
 I
-:   INSERT
+
+</b></dt>
+<dd>
+
+INSERT
+
+
+
+</dd><dt><b>
 
 M
-:   INSERT, DELETE, UPDATE
+
+</b></dt>
+<dd>
+
+INSERT, DELETE, UPDATE
+
+
+
+</dd><dt><b>
 
 U
-:   UPDATE
+
+</b></dt>
+<dd>
+
+UPDATE
+
+
+
+</dd>
+</dl>
 
 
 
@@ -173,23 +242,76 @@ CHAR\(1\)
 
 The time when the trigger fires relative to the event.
 
+
+<dl>
+<dt><b>
+
 A
-:   AFTER \(row-level trigger\)
+
+</b></dt>
+<dd>
+
+AFTER \(row-level trigger\)
+
+
+
+</dd><dt><b>
 
 B
-:   BEFORE \(row-level trigger\)
+
+</b></dt>
+<dd>
+
+BEFORE \(row-level trigger\)
+
+
+
+</dd><dt><b>
 
 I
-:   INSTEAD OF \(row-level trigger\)
+
+</b></dt>
+<dd>
+
+INSTEAD OF \(row-level trigger\)
+
+
+
+</dd><dt><b>
 
 K
-:   INSTEAD OF \(statement-level trigger\)
+
+</b></dt>
+<dd>
+
+INSTEAD OF \(statement-level trigger\)
+
+
+
+</dd><dt><b>
 
 R
-:   RESOLVE
+
+</b></dt>
+<dd>
+
+RESOLVE
+
+
+
+</dd><dt><b>
 
 S
-:   AFTER \(statement-level trigger\)
+
+</b></dt>
+<dd>
+
+AFTER \(statement-level trigger\)
+
+
+
+</dd>
+</dl>
 
 
 
@@ -283,17 +405,54 @@ CHAR\(1\)
 
 The action defined by a foreign key. This single-character value corresponds to the action that was specified when the foreign key was created.
 
+
+<dl>
+<dt><b>
+
 C
-:   CASCADE
+
+</b></dt>
+<dd>
+
+CASCADE
+
+
+
+</dd><dt><b>
 
 D
-:   SET DEFAULT
+
+</b></dt>
+<dd>
+
+SET DEFAULT
+
+
+
+</dd><dt><b>
 
 N
-:   SET NULL
+
+</b></dt>
+<dd>
+
+SET NULL
+
+
+
+</dd><dt><b>
 
 R
-:   RESTRICT
+
+</b></dt>
+<dd>
+
+RESTRICT
+
+
+
+</dd>
+</dl>
 
 
 

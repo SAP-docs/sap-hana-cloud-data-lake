@@ -16,10 +16,23 @@ ACOS ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The cosine of the angle.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The cosine of the angle.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio0fc7b1b85c8d4b6280000fc7e92152ee__section_dcr_k1l_srb"/>
 

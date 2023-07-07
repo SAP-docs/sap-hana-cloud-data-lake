@@ -16,13 +16,34 @@ ERRORMSG ( [ <sqlstate> | <sqlcode> ] )
 
 ## Parameters
 
- *<sqlstate\>*
- :   String representing the SQLSTATE for which the error message is to be returned.
 
-  *<sqlcode\>*
- :   Integer representing the SQLCODE for which the error message is to be returned.
+<dl>
+<dt><b>
 
- 
+*<sqlstate\>*
+
+</b></dt>
+<dd>
+
+String representing the SQLSTATE for which the error message is to be returned.
+
+
+
+</dd><dt><b>
+
+*<sqlcode\>*
+
+</b></dt>
+<dd>
+
+Integer representing the SQLCODE for which the error message is to be returned.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiofd7c8d326bf546a7a367bfca738c4357__section_k12_qsg_trb"/>
 

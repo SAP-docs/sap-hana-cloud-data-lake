@@ -16,10 +16,23 @@ ASIN ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The sine of the angle.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The sine of the angle.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa56e5e54ba234675b4a5c30b13e933e9__section_ovt_hjk_srb"/>
 

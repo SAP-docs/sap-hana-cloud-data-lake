@@ -6,11 +6,6 @@ Declares a SQL variable within a compound statement `(BEGIN... END)`.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -50,17 +45,43 @@ DECLARE
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa61a929684f210159132aa8321341448__IQ_Parameters"/>
 
 ## Parameters
 
- *<initial-value\>*
- :   *<data-type\>*. If you do not specify an `initial-value`, the variable contains the NULL value until a `SET` statement assigns a different value.
 
-  *<data-type\>*
- :   Set the data type explicitly, or you can set it by using the %TYPE or %ROWTYPE attribute. Use %TYPE to set it to the data type of a variable or a column in a table or view. Use %ROWTYPE to set the data type to a composite data type derived from a row in a cursor, table, or view.
+<dl>
+<dt><b>
 
- 
+*<initial-value\>*
+
+</b></dt>
+<dd>
+
+*<data-type\>*. If you do not specify an `initial-value`, the variable contains the NULL value until a `SET` statement assigns a different value.
+
+
+
+</dd><dt><b>
+
+*<data-type\>*
+
+</b></dt>
+<dd>
+
+Set the data type explicitly, or you can set it by using the %TYPE or %ROWTYPE attribute. Use %TYPE to set it to the data type of a variable or a column in a table or view. Use %ROWTYPE to set the data type to a composite data type derived from a row in a cursor, table, or view.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61a929684f210159132aa8321341448__IQ_Usage"/>
 

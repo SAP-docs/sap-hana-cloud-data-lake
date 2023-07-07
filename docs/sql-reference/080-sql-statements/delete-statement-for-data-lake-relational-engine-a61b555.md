@@ -6,11 +6,6 @@ Deletes all the rows from the named table that satisfy the search condition. If 
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -20,16 +15,9 @@ Deletes all the rows from the named table that satisfy the search condition. If 
 
 ```
 DELETE 
-   [ FROM ] [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) { [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] } (span].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <table-name> (varname] [ [ AS [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <correlation-name> (varname] ]
-   ...[ FROM [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <table-expression> (varname] ] 
-   [ WHERE [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <search-condition> (varname] ] ]
+   [ FROM ] [ { <owner> | <schema-name> }.]<table-name> [ [ AS <correlation-name> ]
+   ...[ FROM <table-expression> ] 
+   [ WHERE <search-condition> ] ]
 ```
 
 ```
@@ -41,17 +29,43 @@ DELETE
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa61b555884f21015bfb8d2d61d09b74c__delete_parameters"/>
 
 ## Parameters
 
- FROM clause
- :   Indicates the table from which rows will be deleted. The optional second FROM clause in the DELETE statement determines the rows to be deleted from the specified table based on joins with other tables. If the second FROM clause is present, the WHERE clause qualifies the rows of this second FROM clause. Rows are deleted from the table name given in the first FROM clause.
 
-  WHERE clause
- :   If specified, only rows satisfying the search condition are deleted. If no WHERE clause is specified, every row is deleted.
+<dl>
+<dt><b>
 
- 
+FROM clause
+
+</b></dt>
+<dd>
+
+Indicates the table from which rows will be deleted. The optional second FROM clause in the DELETE statement determines the rows to be deleted from the specified table based on joins with other tables. If the second FROM clause is present, the WHERE clause qualifies the rows of this second FROM clause. Rows are deleted from the table name given in the first FROM clause.
+
+
+
+</dd><dt><b>
+
+WHERE clause
+
+</b></dt>
+<dd>
+
+If specified, only rows satisfying the search condition are deleted. If no WHERE clause is specified, every row is deleted.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61b555884f21015bfb8d2d61d09b74c__delete_remarks1"/>
 
@@ -163,7 +177,7 @@ See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](gra
 
 [TRUNCATE Statement for Data Lake Relational Engine](truncate-statement-for-data-lake-relational-engine-a627e60.md "Deletes all rows from a table or materialized view without deleting the table definition.")
 
-[DELETE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/c2f536c346c44911be3623014bc53910.html "Deletes all the rows from the named table that satisfy the search condition. If no WHERE clause is specified, all rows from the named table are deleted.") :arrow_upper_right:
+[DELETE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/c2f536c346c44911be3623014bc53910.html "Deletes all the rows from the named table that satisfy the search condition. If no WHERE clause is specified, all rows from the named table are deleted.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

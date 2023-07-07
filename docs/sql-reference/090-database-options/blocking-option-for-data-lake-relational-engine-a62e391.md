@@ -179,5 +179,5 @@ When BLOCKING is on, any transaction attempting to obtain a lock that conflicts 
 
 [GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md "Grants specific system privileges to users or roles, with or without administrative rights.")
 
-[BLOCKING Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/c5646d5b730a431dacb60c07624d25db.html "Controls the behavior in response to locking conflicts. BLOCKING isn&apos;t supported on worker nodes.") :arrow_upper_right:
+[BLOCKING Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/c5646d5b730a431dacb60c07624d25db.html "Controls the behavior in response to locking conflicts. BLOCKING isn&apos;t supported on worker nodes.") :arrow_upper_right:
 

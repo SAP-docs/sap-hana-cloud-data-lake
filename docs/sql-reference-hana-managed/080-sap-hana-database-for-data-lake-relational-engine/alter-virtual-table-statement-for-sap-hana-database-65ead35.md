@@ -9,19 +9,30 @@ Refresh the metadata of an SAP HANA database virtual table that points to a data
 ## Syntax
 
 ```
-ALTER VIRTUAL TABLE [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <hana_relational_container_schema_name> (varname].[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <virtual_table_name> (varname] REFRESH DEFINITION
+ALTER VIRTUAL TABLE <hana_relational_container_schema_name>.<virtual_table_name> REFRESH DEFINITION
 ```
 
 
 
 ## Syntax Elements
 
- REFRESH DEFINITION
- :   Updates a virtual table to reflect metadata changes in the corresponding remote table.
 
- 
+<dl>
+<dt><b>
+
+REFRESH DEFINITION
+
+</b></dt>
+<dd>
+
+Updates a virtual table to reflect metadata changes in the corresponding remote table.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Description
 
@@ -44,8 +55,7 @@ You’ve the CREATE VIRTUAL TABLE object privilege on the SAP HANA database remo
 This statement refreshes the SAP HANA database virtual table SYSHDL\_CONTAINER1.V\_T1.
 
 ```
-ALTER VIRTUAL TABLE [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.V_T1 REFRESH DEFINITION;
+ALTER VIRTUAL TABLE SYSHDL_CONTAINER1.V_T1 REFRESH DEFINITION;
 ```
 
 **Related Information**  

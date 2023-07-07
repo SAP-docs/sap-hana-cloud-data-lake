@@ -155,22 +155,67 @@ TINYINT
 
 The matching type for the constraint. Matching types include:
 
- 0
- :   Use the default matching
 
-  1
- :   SIMPLE
+<dl>
+<dt><b>
 
-  2
- :   FULL
+0
 
-  129
- :   SIMPLE UNIQUE
+</b></dt>
+<dd>
 
-  130
- :   FULL UNIQUE
+Use the default matching
 
- For more information about match types, see the MATCH clause of the CREATE TABLE statement.
+
+
+</dd><dt><b>
+
+1
+
+</b></dt>
+<dd>
+
+SIMPLE
+
+
+
+</dd><dt><b>
+
+2
+
+</b></dt>
+<dd>
+
+FULL
+
+
+
+</dd><dt><b>
+
+129
+
+</b></dt>
+<dd>
+
+SIMPLE UNIQUE
+
+
+
+</dd><dt><b>
+
+130
+
+</b></dt>
+<dd>
+
+FULL UNIQUE
+
+
+
+</dd>
+</dl>
+
+For more information about match types, see the MATCH clause of the CREATE TABLE statement.
 
 
 

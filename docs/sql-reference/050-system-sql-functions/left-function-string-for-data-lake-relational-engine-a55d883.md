@@ -16,13 +16,34 @@ LEFT ( <string-expression>, <numeric-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string.
 
-  *<numeric-expression\>*
- :   The number of characters to return.
+<dl>
+<dt><b>
 
- 
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string.
+
+
+
+</dd><dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The number of characters to return.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa55d883284f210158c5ec15e3e69239f__LEFT_returns1"/>
 
@@ -81,5 +102,5 @@ SELECT LEFT( 'chocolate', 5 ) FROM iq_dummy
 
 [UPPER Function \[String\] for Data Lake Relational Engine](upper-function-string-for-data-lake-relational-engine-a58cbc0.md "Converts all characters in a string to uppercase.")
 
-[LEFT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/7d6ec6d7cc0f4bebb844b85a3965a81a.html "Returns a specified number of characters from the beginning of a string.") :arrow_upper_right:
+[LEFT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7d6ec6d7cc0f4bebb844b85a3965a81a.html "Returns a specified number of characters from the beginning of a string.") :arrow_upper_right:
 

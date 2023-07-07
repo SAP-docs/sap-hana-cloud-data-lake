@@ -16,19 +16,48 @@ Returns a substring of a string.
 
 ## Parameters
 
- *<string-expression\>*
- :   The string from which a substring is to be returned.
 
-  *<start\>*
- :   The start position of the substring to return, in characters. A negative starting position specifies a number of characters from the end of the string instead of the beginning. The first character in the string is at position 1.
+<dl>
+<dt><b>
 
-  *<length\>*
- :   The length of the substring to return, in characters:
+*<string-expression\>*
 
-    -   A positive *<length\>* specifies that the substring ends *<length\>* characters to the right of the starting position.
-    -   A negative *<length\>* specifies that the substring ends *<length\>* characters to the left of the starting position.
+</b></dt>
+<dd>
 
- 
+The string from which a substring is to be returned.
+
+
+
+</dd><dt><b>
+
+*<start\>*
+
+</b></dt>
+<dd>
+
+The start position of the substring to return, in characters. A negative starting position specifies a number of characters from the end of the string instead of the beginning. The first character in the string is at position 1.
+
+
+
+</dd><dt><b>
+
+*<length\>*
+
+</b></dt>
+<dd>
+
+The length of the substring to return, in characters:
+
+-   A positive *<length\>* specifies that the substring ends *<length\>* characters to the right of the starting position.
+-   A negative *<length\>* specifies that the substring ends *<length\>* characters to the left of the starting position.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiof114d3543b9c48f69b269b951d549034__section_gty_lr5_vrb"/>
 

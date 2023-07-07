@@ -137,6 +137,7 @@ Accepts an individual value, or a comma-separated list, composed of:
     -   Standard – password-based authentication
     -   JWT – all logins to the database must be made using JWT authentication.
     -   LDAPUA – all logins to the database must be made using LDAP logins.
+    -   X509 – all logins to the database must be made using X.509 authentication.
 
 -   Default – NULL
 
@@ -263,6 +264,31 @@ The maximum number of days before a password must be changed.
 
 -   Values – 0 - 180
 -   Default – 180
+-   Applies to all users
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+X509\_LIFE\_TIME
+
+
+
+</td>
+<td valign="top">
+
+The maximum number of minutes that an X.509 certificate will remain valid for authentication.
+
+
+
+</td>
+<td valign="top">
+
+-   Values – 0 - 259200 minutes
+-   Default – 259200 minutes \(180 days\)
 -   Applies to all users
 
 

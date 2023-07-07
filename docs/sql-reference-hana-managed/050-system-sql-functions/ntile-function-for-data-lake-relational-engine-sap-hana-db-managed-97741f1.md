@@ -17,16 +17,45 @@ OVER ( ORDER BY <expression2> [ ASC | DESC ] )
 
 ## Parameters
 
- *<expression1\>*
- :   A constant integer from 1 to 32767, which specifies the number of buckets.
 
-  *<expression2\>*
- :   A sort specification that can be any valid expression involving a column reference, aggregates, or expressions invoking these items.
+<dl>
+<dt><b>
 
-  ASC | DESC
- :   The ASC or DESC parameter specifies the ordering sequence ascending or descending. Ascending order is the default.
+*<expression1\>*
 
- 
+</b></dt>
+<dd>
+
+A constant integer from 1 to 32767, which specifies the number of buckets.
+
+
+
+</dd><dt><b>
+
+*<expression2\>*
+
+</b></dt>
+<dd>
+
+A sort specification that can be any valid expression involving a column reference, aggregates, or expressions invoking these items.
+
+
+
+</dd><dt><b>
+
+ASC | DESC
+
+</b></dt>
+<dd>
+
+The ASC or DESC parameter specifies the ordering sequence ascending or descending. Ascending order is the default.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio97741f155cc24e2ea035db70a29da3b0__section_c1p_4nn_vrb"/>
 

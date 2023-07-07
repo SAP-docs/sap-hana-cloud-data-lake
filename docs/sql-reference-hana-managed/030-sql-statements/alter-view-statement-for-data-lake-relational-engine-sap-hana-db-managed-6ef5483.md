@@ -6,11 +6,6 @@ Replaces a view definition with a modified version.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -26,13 +21,8 @@ Replaces a view definition with a modified version.
 
 ```
 ALTER VIEW
-   ...[ [/pandoc/div/div/horizontalrule/horizontalrule/codeblock/span/span
-     {""}) [/pandoc/div/div/horizontalrule/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/horizontalrule/codeblock/span/varname
-     {"varname"}) <view-name> (varname] [ ( [/pandoc/div/div/horizontalrule/horizontalrule/codeblock/span/varname
-     {"varname"}) <column-name> (varname] [ , … ] ) ]
-   ...AS [/pandoc/div/div/horizontalrule/horizontalrule/codeblock/span/varname
-     {"varname"}) <select-statement> (varname]
+   ...[ <schema-name>.]<view-name> [ ( <column-name> [ , … ] ) ]
+   ...AS <select-statement>
    ...[ WITH CHECK OPTION ]
 ```
 
@@ -42,12 +32,14 @@ ALTER VIEW
 
 ```
 ALTER VIEW
-   ...[ [/pandoc/div/div/horizontalrule/horizontalrule/codeblock/span/span
-     {""}) [/pandoc/div/div/horizontalrule/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/horizontalrule/codeblock/span/varname
-     {"varname"}) <view-name> (varname] 
+   ...[ <schema-name>.]<view-name> 
    ...{ SET HIDDEN | RECOMPILE | DISABLE | ENABLE }
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -55,32 +47,85 @@ ALTER VIEW
 
 ## Parameters
 
- AS *<select-statement\>*
- :   The SELECT statement on which the view is based must not contain an ORDER BY clause, a subquery in the SELECT list, or a TOP or FIRST qualification. It may have a GROUP BY clause and may be a UNION.
 
-  WITH CHECK OPTION
- :   Rejects any updates and inserts to the view that do not meet the criteria of the views as defined by its SELECT statement. However, data lake Relational Engine currently ignores this option \(it supports the syntax for compatibility reasons\).
+<dl>
+<dt><b>
 
-  SET HIDDEN
- :   Obfuscates the definition of the view and cause the view to become hidden from view. Explicit references to the view still work.
+AS *<select-statement\>*
 
-    > ### Caution:  
-    > The SET HIDDEN operation is irreversible.
+</b></dt>
+<dd>
 
-    When you use SET HIDDEN, you can unload and reload the view into other databases. Debugging using the debugger does not show the view definition, nor is it available through procedure profiling. If you need to change the definition of a hidden view, you must drop the view and create it again using the `CREATE VIEW` statement.
+The SELECT statement on which the view is based must not contain an ORDER BY clause, a subquery in the SELECT list, or a TOP or FIRST qualification. It may have a GROUP BY clause and may be a UNION.
 
-  RECOMPILE
- :   Re-creates the column definitions for the view. Identical in functionality to the ENABLE clause, except you can use it on a view that is not disabled.
 
-  DISABLE
- :   Disables the view from use by the database server.
 
-    When you use the DISABLE clause, the view is no longer available for use by the database server to answer queries. Disabling a view is similar to dropping one, except that the view definition remains in the database. Disabling a view also disables any dependent views. Therefore, the DISABLE clause requires exclusive access, not only to the view being disabled, but to any dependent views, which are also disabled.
+</dd><dt><b>
 
-  ENABLE
- :   Enables a disabled view, which causes the database server to re-create the column definitions for the view. Before you enable a view, you must enable any views on which it depends.
+WITH CHECK OPTION
 
- 
+</b></dt>
+<dd>
+
+Rejects any updates and inserts to the view that do not meet the criteria of the views as defined by its SELECT statement. However, data lake Relational Engine currently ignores this option \(it supports the syntax for compatibility reasons\).
+
+
+
+</dd><dt><b>
+
+SET HIDDEN
+
+</b></dt>
+<dd>
+
+Obfuscates the definition of the view and cause the view to become hidden from view. Explicit references to the view still work.
+
+> ### Caution:  
+> The SET HIDDEN operation is irreversible.
+
+When you use SET HIDDEN, you can unload and reload the view into other databases. Debugging using the debugger does not show the view definition, nor is it available through procedure profiling. If you need to change the definition of a hidden view, you must drop the view and create it again using the `CREATE VIEW` statement.
+
+
+
+</dd><dt><b>
+
+RECOMPILE
+
+</b></dt>
+<dd>
+
+Re-creates the column definitions for the view. Identical in functionality to the ENABLE clause, except you can use it on a view that is not disabled.
+
+
+
+</dd><dt><b>
+
+DISABLE
+
+</b></dt>
+<dd>
+
+Disables the view from use by the database server.
+
+When you use the DISABLE clause, the view is no longer available for use by the database server to answer queries. Disabling a view is similar to dropping one, except that the view definition remains in the database. Disabling a view also disables any dependent views. Therefore, the DISABLE clause requires exclusive access, not only to the view being disabled, but to any dependent views, which are also disabled.
+
+
+
+</dd><dt><b>
+
+ENABLE
+
+</b></dt>
+<dd>
+
+Enables a disabled view, which causes the database server to re-create the column definitions for the view. Before you enable a view, you must enable any views on which it depends.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio6ef54831fa96405b83c2a82cf9a88b9a__section_mjp_l1l_sqb"/>
 
@@ -105,7 +150,10 @@ Altering the structure of a view requires that you replace the entire view defin
 
 ### 
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 
@@ -134,15 +182,13 @@ You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA
 Assuming you have a virtual table SYSHDL\_CONTAINER1.V\_VIEWS\_T1 that returns COL\_A only. This statement changes the SELECT statement of the data lake Relational Engine view named VIEW\_T1 tp return COL\_A AND COL\_B.
 
 ```
-CALL [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.REMOTE_EXECUTE ('ALTER VIEW VIEW_T1 AS SELECT COL_A, COL_B FROM T1');
+CALL SYSHDL_CONTAINER1.REMOTE_EXECUTE ('ALTER VIEW VIEW_T1 AS SELECT COL_A, COL_B FROM T1');
 ```
 
 This statement refreshes the SAP HANA database virtual table SYSHDL\_CONTAINER1.V\_VIEW\_T1 that points to the data lake Relational Engine view named VIEW\_T1.
 
 ```
-ALTER VIRTUAL TABLE [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.V_VIEW_T1 REFRESH DEFINITION;
+ALTER VIRTUAL TABLE SYSHDL_CONTAINER1.V_VIEW_T1 REFRESH DEFINITION;
 ```
 
 **Related Information**  

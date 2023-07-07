@@ -25,10 +25,23 @@ dbo.sa_audit_string( <string> )
 
 ## Parameters
 
-  *<string\>* 
- :   The VARCHAR\(128\) string of characters to add.
 
- 
+<dl>
+<dt><b>
+
+ *<string\>* 
+
+</b></dt>
+<dd>
+
+The VARCHAR\(128\) string of characters to add.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio94b152d9c67043c2828e4f3de384856b__section_a44_dt4_rrb"/>
 
@@ -42,7 +55,10 @@ If auditing is turned on, then this system procedure adds a comment to the audit
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

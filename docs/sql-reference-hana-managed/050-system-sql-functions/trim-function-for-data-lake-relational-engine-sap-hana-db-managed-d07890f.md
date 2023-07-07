@@ -16,13 +16,34 @@ TRIM ( <string-expression>, [ <trim_character_set> ] )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string to be trimmed.
 
-  *<trim\_character\_set\>*
- :   The set of characters to use for trim.
+<dl>
+<dt><b>
 
- 
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string to be trimmed.
+
+
+
+</dd><dt><b>
+
+*<trim\_character\_set\>*
+
+</b></dt>
+<dd>
+
+The set of characters to use for trim.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiod07890fd143c474c99313bda01aae897__section_t4q_v3v_vrb"/>
 
@@ -44,7 +65,7 @@ Trimmed string.
 
 ## Example
 
-The following statement removes all leading and trailing `a` and `b` characters from the given string and returns the value `Aabend`.
+The following statement removes all leading and trailing `a` and `b` characters from the given string and returns the value `END`.
 
 ```
 SELECT TRIM ('babababENDbababa','ab') "trim" FROM iq_dummy

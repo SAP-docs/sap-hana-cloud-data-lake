@@ -16,10 +16,23 @@ DB_NAME ( [ <database-id> ] )
 
 ## Parameters
 
- *<database-id\>*
- :   The ID of the database, in the form of a numeric expression.
 
- 
+<dl>
+<dt><b>
+
+*<database-id\>*
+
+</b></dt>
+<dd>
+
+The ID of the database, in the form of a numeric expression.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Returns
 

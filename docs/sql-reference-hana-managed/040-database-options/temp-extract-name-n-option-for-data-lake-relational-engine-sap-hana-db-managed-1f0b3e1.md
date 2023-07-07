@@ -2,6 +2,8 @@
 
 # TEMP\_EXTRACT\_NAME<N\> Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)
 
+Specifies the data lake Filescontainer object file name, or theAzure block blob name, or the Amazon S3 bucket object name you’re extracting to. You must specify the name when extracting data from data lake Relational Engine to cloud storage.
+
 
 
 > ### Restriction:  
@@ -10,6 +12,16 @@
 > -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
 > 
 >     -   See [REMOTE\_EXECUTE Usage Examples for Setting Database Options](remote-execute-usage-examples-for-setting-database-options-0023bea.md).
+
+
+
+<a name="loio1f0b3e1f87c948fd881490465f5eea24__section_phl_kzl_2xb"/>
+
+## Syntax
+
+```
+TEMP_EXTRACT_NAME<N> = <string_expression>
+```
 
 
 
@@ -48,13 +60,140 @@ A specially formed name specifying either:
 
 
 
+<a name="loio1f0b3e1f87c948fd881490465f5eea24__section_tjr_lzl_2xb"/>
+
+## Default
+
+Null. If you don’t specify a file name, no file is extracted.
+
+
+
 <a name="loio1f0b3e1f87c948fd881490465f5eea24__section_k3c_gxb_3qb"/>
 
 ## Privileges
 
 Privilege Category: PUBLIC
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+
+
+<a name="loio1f0b3e1f87c948fd881490465f5eea24__section_mvv_mzl_2xb"/>
+
+## Scope
+
+
+<table>
+<tr>
+<th valign="top">
+
+ 
+
+
+
+</th>
+<th valign="top">
+
+PUBLIC Role
+
+
+
+</th>
+<th valign="top">
+
+For Current User
+
+
+
+</th>
+<th valign="top">
+
+For Other Users
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Allowed to set permanently?
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Allowed to set temporarily?
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+Yes \(current connection only\)
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+<a name="loio1f0b3e1f87c948fd881490465f5eea24__section_qdz_nzl_2xb"/>
+
+## Remarks
+
+Used for data extraction from data lake Relational Engine to either a data lake Files container, or to Azure Blob storage, or to an Amazon S3 bucket.
+
+Azure block blobs have a size limit of 4.75 TB. Amazon S3 objects have a size limit of 5 TB. If your extraction exceeds these limits, then you require multiple output files. Use TEMP\_EXTRACT\_NAME*<N\>* if the size limit in TEMP\_EXTRACT\_NAME1 is too small for the amount of data you're extracting.
+
+Files must be smaller than the Azure and Amazon S3 limits. For example, if you're extracting 16 TB to Azure Blob storage, you define four files: TEMP\_EXTRACT\_NAME1, TEMP\_EXTRACT\_NAME2, and TEMP\_EXTRACT\_NAME3 of 4.75 TB each, and TEMP\_EXTRACT\_NAME4 with 1.75 TB.
+
+At the end of your data extraction SELECT statement, set TEMP\_EXTRACT\_NAME*<N\>* to an empty string. If you don't disable, then the next SELECT statement overwrites the object in cloud storage.
+
+For example syntax, see *Extract Data Lake Relational Engine Table Data to Azure Blob Storage* and *Extract Data Lake Relational Engine Table Data to an Amazon S3 Bucket*.
 
 **Related Information**  
 

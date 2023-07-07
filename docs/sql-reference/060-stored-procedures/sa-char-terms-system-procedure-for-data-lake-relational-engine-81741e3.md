@@ -25,16 +25,45 @@ sa_char_terms(
 
 ## Parameters
 
+
+<dl>
+<dt><b>
+
  *<text\>* 
-:   The LONG VARCHAR string you are parsing.
 
-  *<config\_name\>* 
- :   Use this optional CHAR\(128\) parameter to specify the text configuration object to apply when processing the string. The default value is 'default\_char'.
+</b></dt>
+<dd>
 
-   *<owner\>* 
- :   Use this optional CHAR\(128\) parameter to specify the owner of the text configuration object. The default value is NULL. The current user is assumed if the owner is not specified or if NULL is specified.
+The LONG VARCHAR string you are parsing.
 
- 
+
+
+</dd><dt><b>
+
+ *<config\_name\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(128\) parameter to specify the text configuration object to apply when processing the string. The default value is 'default\_char'.
+
+
+
+</dd><dt><b>
+
+ *<owner\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(128\) parameter to specify the owner of the text configuration object. The default value is NULL. The current user is assumed if the owner is not specified or if NULL is specified.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -44,9 +73,9 @@ Use this system procedure to find out how a string is interpreted when the setti
 
 <a name="loio81741e316ce21014a988e4845b1f1a41__section_u51_bkf_3jb"/>
 
-## Permissions
+## Privilege
 
-You need to have the EXECUTE privilege on the system procedure.
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

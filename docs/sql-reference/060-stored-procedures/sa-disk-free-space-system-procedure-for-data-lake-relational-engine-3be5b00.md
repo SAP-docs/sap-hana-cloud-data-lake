@@ -21,12 +21,25 @@ sa_disk_free_space( [ <p_dbspace_name> ] )
 
 ## Parameters
 
-  *<p\_dbspace\_name\>* 
- :   Use this VARCHAR\(128\) parameter to specify the name of a transaction log file, transaction log mirror file, or temporary file. The default is NULL.
 
-    Specify SYSTEM to get information about the main database file, TEMPORARY or TEMP to get information about the temporary file, TRANSLOG to get information about the transaction log, or TRANSLOGMIRROR to get information about the transaction log mirror.
+<dl>
+<dt><b>
 
- 
+ *<p\_dbspace\_name\>* 
+
+</b></dt>
+<dd>
+
+Use this VARCHAR\(128\) parameter to specify the name of a transaction log file, transaction log mirror file, or temporary file. The default is NULL.
+
+Specify SYSTEM to get information about the main database file, TEMPORARY or TEMP to get information about the temporary file, TRANSLOG to get information about the transaction log, or TRANSLOGMIRROR to get information about the transaction log mirror.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Result Set
 
@@ -136,7 +149,10 @@ If the *<p\_dbspace\_name\>* parameter is not specified or is NULL, then the res
 
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure, as well as the MANAGE ANY DBSPACE system privilege.
+Requires all of:
+
+-   EXECUTE object-level privilege on the procedure
+-   MANAGE ANY DBSPACE system privilege.
 
 
 

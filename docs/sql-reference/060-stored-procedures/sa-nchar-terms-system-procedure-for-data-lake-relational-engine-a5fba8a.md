@@ -24,16 +24,45 @@ sa_nchar_terms
 
 ## Parameters
 
- *<char-string\>*
- :   The `NCHAR` string you are parsing.
 
-  *<text-config-name\>*
- :   \(Optional\) The text configuration object to apply when processing the string. The default value is '`default_nchar`'.
+<dl>
+<dt><b>
 
-  *<owner\>*
- :   \(Optional\) The owner of the specified text configuration object. The default value is DBA.
+*<char-string\>*
 
- 
+</b></dt>
+<dd>
+
+The `NCHAR` string you are parsing.
+
+
+
+</dd><dt><b>
+
+*<text-config-name\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) The text configuration object to apply when processing the string. The default value is '`default_nchar`'.
+
+
+
+</dd><dt><b>
+
+*<owner\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) The owner of the specified text configuration object. The default value is DBA.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5fba8a784f21015abe39fe3a6d391ea__iq_iquda_92"/>
 
@@ -52,7 +81,7 @@ The syntax for `sa_nchar_terms` is similar to the syntax for the `sa_char_terms`
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

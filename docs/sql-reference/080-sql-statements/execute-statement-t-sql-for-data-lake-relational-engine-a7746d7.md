@@ -6,11 +6,6 @@ Invokes a procedure, as an SAP Adaptive Server Enterprise-compatible alternative
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -23,6 +18,11 @@ EXECUTE [ <@return_status> = ] [<owner>.]<procedure_name>
    ... { [ <@parameter-name> = ] <expression>
        | [ <@parameter-name> = ] <@variable> [ <output> ] } ,...
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 

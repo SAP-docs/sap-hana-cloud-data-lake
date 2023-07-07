@@ -23,16 +23,45 @@ sp_iqconstraint [ '<table-name>', '<column-name>', '<table-owner>' ]
 
 ## Parameters
 
- *<table-name\>*
- :   A parameter that specifies the name of the table.
 
-  *<column-name\>*
- :   A parameter that specifies the name of the column.
+<dl>
+<dt><b>
 
-  *<table-owner\>*
- :   A parameter that specifies the table owner.
+*<table-name\>*
 
- 
+</b></dt>
+<dd>
+
+A parameter that specifies the name of the table.
+
+
+
+</dd><dt><b>
+
+*<column-name\>*
+
+</b></dt>
+<dd>
+
+A parameter that specifies the name of the column.
+
+
+
+</dd><dt><b>
+
+*<table-owner\>*
+
+</b></dt>
+<dd>
+
+A parameter that specifies the table owner.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5a0395484f210158c8090a617a7aab6__iq_refbb_1468"/>
 
@@ -46,7 +75,7 @@ If table name and column name are omitted, reports all referential integrity con
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

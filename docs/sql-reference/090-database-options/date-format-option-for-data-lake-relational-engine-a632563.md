@@ -51,7 +51,10 @@ Privilege Category: PUBLIC
 
 Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this database option.
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of the following:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 
@@ -470,7 +473,7 @@ mm-yyyy
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[DATE_FORMAT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/3e2ecb4848cc4a6ba20cd155322dee96.html "Sets the format used for dates retrieved from the database.") :arrow_upper_right:
+[DATE_FORMAT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3e2ecb4848cc4a6ba20cd155322dee96.html "Sets the format used for dates retrieved from the database.") :arrow_upper_right:
 
 [RETURN\_DATE\_TIME\_AS\_STRING Option for Data Lake Relational Engine](return-date-time-as-string-option-for-data-lake-relational-engine-a652ffd.md "Controls how a date, time, or timestamp value is passed to the client application when queried.")
 

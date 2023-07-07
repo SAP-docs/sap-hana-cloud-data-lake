@@ -19,125 +19,257 @@ CREATE VIRTUAL TABLE <virtual_table_name> <table_contents_source>
 
 ## Syntax Elements
 
- *<table\_contents\_source\>*
- :   Specifies the source from which the table definition is derived.
 
-    ```
-    <table_contents_source> ::= ( <table_element> [, <table_element> [, ... ] ] )
-    ```
+<dl>
+<dt><b>
 
-     *<table\_element\>*
-     :   Defines the table columns with associated column or table constraints.
+*<table\_contents\_source\>*
 
-        ```
-        <table_element> ::=
-         <column_definition> [ <column_constraint> ]
-        ```
+</b></dt>
+<dd>
 
-      *<column\_definition\>*
-     :   Defines a table column.
+Specifies the source from which the table definition is derived.
 
-        ```
-        <column_definition> ::= <column_name> <data_type> [ <default_value_clause> ]
-        ```
+```
+<table_contents_source> ::= ( <table_element> [, <table_element> [, ... ] ] )
+```
 
-         *<column\_name\>*
-         :   Specifies the column name.
 
-            ```
-            <column_name> ::= <identifier>
-            ```
+<dl>
+<dt><b>
 
-          *<data\_type\>*
-         :   Specifies the column data types.
+*<table\_element\>*
 
-            ```
-            <data_type> ::=
-             DATE 
-             | TIME 
-             | SECONDDATE 
-             | TIMESTAMP 
-             | TINYINT 
-             | SMALLINT 
-             | INTEGER 
-             | BIGINT 
-             | SMALLDECIMAL 
-             | REAL 
-             | DOUBLE  
-             | VARCHAR [ (<unsigned_integer>) ]
-             | NVARCHAR [ (<unsigned_integer>) ] 
-             | VARBINARY [ (<unsigned_integer>) ] 
-             | DECIMAL [ (<unsigned_integer> [, <unsigned_integer> ]) ] 
-             | FLOAT [ (<unsigned_integer>) ] 
-             | BOOLEAN
-            ```
+</b></dt>
+<dd>
 
-          *<default\_value\_clause\>*
-         :   Specifies a value to be assigned to the column if an INSERT statement does not provide a value for the column.
+Defines the table columns with associated column or table constraints.
 
-            ```
-            <default_value_clause> ::= DEFAULT <default_value_exp>
-            
-            <default_value_exp> ::= 
-             NULL 
-             | <string_literal>
-             | <signed_numeric_literal> <unsigned_numeric_literal> 
-             | <datetime_value_function>
-            
-            <datetime_value_function> ::= 
-             CURRENT_DATE 
-             | CURRENT_TIME 
-             | CURRENT_TIMESTAMP 
-             | CURRENT_UTCDATE 
-             | CURRENT_UTCTIME 
-             | CURRENT_UTCTIMESTAMP
-            ```
+```
+<table_element> ::=
+ <column_definition> [ <column_constraint> ]
+```
 
-       *<column\_constraint\>*
-     :   Specifies the column constraint rules.
 
-        ```
-        <column_constraint> ::= NULL | NOT NULL | <unique_specification>
-        ```
 
-         NULL
-         :   Allows NULL values in the column. If NULL is specified it is not considered a constraint, it represents that a column that may contain a null value. The default is NULL.
+</dd><dt><b>
 
-          NOT NULL
-         :   Prohibits NULL values in the column.
+*<column\_definition\>*
 
-          *<unique\_specification\>*
-         :   Specifies unique constraints.
+</b></dt>
+<dd>
 
-            ```
-            <unique_specification> ::= UNIQUE | PRIMARY KEY
-            ```
+Defines a table column.
 
-             UNIQUE
-             :   Specifies a column as a unique key. A composite unique key enables the specification of multiple columns as a unique key. With a unique constraint, multiple rows cannot have the same value in the same column.
+```
+<column_definition> ::= <column_name> <data_type> [ <default_value_clause> ]
+```
 
-                A UNIQUE column can contain multiple NULL values.
 
-              PRIMARY KEY
-             :   Specifies a primary key constraint, which is a combination of a NOT NULL constraint and a UNIQUE constraint.
+<dl>
+<dt><b>
 
-     *<remote\_location\_clause\>*
- :   Identifies a table in the data lake Relational Engine. When the WITH REMOTE clause is not specified, this table must already exist. When used with WITH REMOTE, the specified table name becomes the name of the new table.
+*<column\_name\>*
 
-    ```
-    <remote_location_clause> ::= 
-       AT "[/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/span
-         {""}) SYSHDL (span]_[/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/span
-         {""}) [/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/span/varname
-         {"varname"}) <relational_container_name> (varname] (span]_SOURCE"."NULL"."[/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-         {"varname"}) <relational_container_schema_name> (varname]"."[/pandoc/div/div/horizontalrule/definitionlist/dlentry/dd/codeblock/span/varname
-         {"varname"}) <data_lake_table_name> (varname]"
-    ```
+</b></dt>
+<dd>
 
-  WITH REMOTE
- :   Creates a table on the remote source using the *<table\_contents\_source\>* definition and a corresponding virtual table on the local source.
+Specifies the column name.
 
- 
+```
+<column_name> ::= <identifier>
+```
+
+
+
+</dd><dt><b>
+
+*<data\_type\>*
+
+</b></dt>
+<dd>
+
+Specifies the column data types.
+
+```
+<data_type> ::=
+ DATE 
+ | TIME 
+ | SECONDDATE 
+ | TIMESTAMP 
+ | TINYINT 
+ | SMALLINT 
+ | INTEGER 
+ | BIGINT 
+ | SMALLDECIMAL 
+ | REAL 
+ | DOUBLE  
+ | VARCHAR [ (<unsigned_integer>) ]
+ | NVARCHAR [ (<unsigned_integer>) ] 
+ | VARBINARY [ (<unsigned_integer>) ] 
+ | DECIMAL [ (<unsigned_integer> [, <unsigned_integer> ]) ] 
+ | FLOAT [ (<unsigned_integer>) ] 
+ | BOOLEAN
+```
+
+
+
+</dd><dt><b>
+
+*<default\_value\_clause\>*
+
+</b></dt>
+<dd>
+
+Specifies a value to be assigned to the column if an INSERT statement does not provide a value for the column.
+
+```
+<default_value_clause> ::= DEFAULT <default_value_exp>
+
+<default_value_exp> ::= 
+ NULL 
+ | <string_literal>
+ | <signed_numeric_literal> <unsigned_numeric_literal> 
+ | <datetime_value_function>
+
+<datetime_value_function> ::= 
+ CURRENT_DATE 
+ | CURRENT_TIME 
+ | CURRENT_TIMESTAMP 
+ | CURRENT_UTCDATE 
+ | CURRENT_UTCTIME 
+ | CURRENT_UTCTIMESTAMP
+```
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+*<column\_constraint\>*
+
+</b></dt>
+<dd>
+
+Specifies the column constraint rules.
+
+```
+<column_constraint> ::= NULL | NOT NULL | <unique_specification>
+```
+
+
+<dl>
+<dt><b>
+
+NULL
+
+</b></dt>
+<dd>
+
+Allows NULL values in the column. If NULL is specified it is not considered a constraint, it represents that a column that may contain a null value. The default is NULL.
+
+
+
+</dd><dt><b>
+
+NOT NULL
+
+</b></dt>
+<dd>
+
+Prohibits NULL values in the column.
+
+
+
+</dd><dt><b>
+
+*<unique\_specification\>*
+
+</b></dt>
+<dd>
+
+Specifies unique constraints.
+
+```
+<unique_specification> ::= UNIQUE | PRIMARY KEY
+```
+
+
+<dl>
+<dt><b>
+
+UNIQUE
+
+</b></dt>
+<dd>
+
+Specifies a column as a unique key. A composite unique key enables the specification of multiple columns as a unique key. With a unique constraint, multiple rows cannot have the same value in the same column.
+
+A UNIQUE column can contain multiple NULL values.
+
+
+
+</dd><dt><b>
+
+PRIMARY KEY
+
+</b></dt>
+<dd>
+
+Specifies a primary key constraint, which is a combination of a NOT NULL constraint and a UNIQUE constraint.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+*<remote\_location\_clause\>*
+
+</b></dt>
+<dd>
+
+Identifies a table in the data lake Relational Engine. When the WITH REMOTE clause is not specified, this table must already exist. When used with WITH REMOTE, the specified table name becomes the name of the new table.
+
+```
+<remote_location_clause> ::= 
+   AT "SYSHDL_<relational_container_name>_SOURCE"."NULL"."<relational_container_schema_name>"."<data_lake_table_name>"
+```
+
+
+
+</dd><dt><b>
+
+WITH REMOTE
+
+</b></dt>
+<dd>
+
+Creates a table on the remote source using the *<table\_contents\_source\>* definition and a corresponding virtual table on the local source.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Description
 
@@ -160,18 +292,14 @@ You’ve the CREATE VIRTUAL TABLE object privilege on the SAP HANA database remo
 This example creates virtual table MY\_HANA\_SCHEMA.V\_T1 that points to the data lake Relational Engine table T1 on the remote source SYSHDL\_CONTAINER1\_SOURCE. Table T1 is in the data lake Relational Engine relational container schema SYSHDL\_CONTAINER1.
 
 ```
-CREATE VIRTUAL TABLE MY_HANA_SCHEMA.V_T1 AT "[/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1_SOURCE"."<NULL>"."[/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1"."T1";
+CREATE VIRTUAL TABLE MY_HANA_SCHEMA.V_T1 AT "SYSHDL_CONTAINER1_SOURCE"."<NULL>"."SYSHDL_CONTAINER1"."T1";
 ```
 
 This example creates virtual table MY\_HANA\_SCHEMA.V\_T2 and data lake Relational Engine table T2 at the same time. Table T2 has two integer columns \(A, B\) on remote source SYSHDL\_CONTAINER1\_SOURCE in the data lake Relational Engine relational container schema SYSHDL\_CONTAINER1.
 
 ```
 CREATE VIRTUAL TABLE MY_HANA_SCHEMA.V_T1 (A INT, B INT) AT 
-  "[/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1_SOURCE"."<NULL>"."[/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1"."T2" WITH REMOTE;
+  "SYSHDL_CONTAINER1_SOURCE"."<NULL>"."SYSHDL_CONTAINER1"."T2" WITH REMOTE;
 ```
 
 **Related Information**  

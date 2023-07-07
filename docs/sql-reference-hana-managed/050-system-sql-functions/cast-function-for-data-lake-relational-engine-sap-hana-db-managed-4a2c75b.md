@@ -16,13 +16,34 @@ CAST ( <expression> AS <data type> )
 
 ## Parameters
 
- *<expression\>*
- :   The expression to be converted.
 
-  *<data type\>*
- :   The data type to cast the expression into. Set the data type explicitly, or specify the %TYPE attribute to set the data type to the data type of a column in a table or view, or to the data type of a variable.
+<dl>
+<dt><b>
 
- 
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The expression to be converted.
+
+
+
+</dd><dt><b>
+
+*<data type\>*
+
+</b></dt>
+<dd>
+
+The data type to cast the expression into. Set the data type explicitly, or specify the %TYPE attribute to set the data type to the data type of a column in a table or view, or to the data type of a variable.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio4a2c75bbed1d4b399e51f704ee7d35dc__section_bgr_v5l_srb"/>
 

@@ -35,27 +35,80 @@ CALL sp_remote_datasources_files(
 
 ## Parameters
 
-  *<remote-server-name\>* 
- :   Use this required CHAR\(128\) parameter to specify the remote server name.
 
-  *<remote-schema-name\>*
- :   Use this required CHAR\(128\) parameter to specify the name of the schema.
+<dl>
+<dt><b>
 
-   *<remote-table-name\>* 
- :   Use this required CHAR\(128\) parameter to specify the name of the remote table.
+ *<remote-server-name\>* 
 
-  *<remote-datasource-name\>*
- :   Use this optional CHAR\(128\) parameter to specify the datasource name. The defaul is `null`.
+</b></dt>
+<dd>
 
-  *<probe\>*
- :   Use this optional boolean flag to specify which datasource files to list.
+Use this required CHAR\(128\) parameter to specify the remote server name.
 
-    When *<probe\>* is set to `0`, it returns a current list of datasource files. When *<probe\>* is set to `1`, it returns a list of the latest runtime files. The default is `0`.
 
-  *<with-status\>*
- :   Use this optional boolean flag to report more information on the file status. The default is `0`.
 
- 
+</dd><dt><b>
+
+*<remote-schema-name\>*
+
+</b></dt>
+<dd>
+
+Use this required CHAR\(128\) parameter to specify the name of the schema.
+
+
+
+</dd><dt><b>
+
+ *<remote-table-name\>* 
+
+</b></dt>
+<dd>
+
+Use this required CHAR\(128\) parameter to specify the name of the remote table.
+
+
+
+</dd><dt><b>
+
+*<remote-datasource-name\>*
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(128\) parameter to specify the datasource name. The defaul is `null`.
+
+
+
+</dd><dt><b>
+
+*<probe\>*
+
+</b></dt>
+<dd>
+
+Use this optional boolean flag to specify which datasource files to list.
+
+When *<probe\>* is set to `0`, it returns a current list of datasource files. When *<probe\>* is set to `1`, it returns a list of the latest runtime files. The default is `0`.
+
+
+
+</dd><dt><b>
+
+*<with-status\>*
+
+</b></dt>
+<dd>
+
+Use this optional boolean flag to report more information on the file status. The default is `0`.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioc0979e49b27f4d0d96e3a45b2fe0fe88__SPRD_results"/>
 
@@ -293,22 +346,67 @@ VARCHAR\(256\)
 
 `FILE_STATUS` is set according to the following scenarios:
 
- NULL
- :   The datasource is invalid.
 
-  UNCHANGED
- :   The file belongs to both the tracked files list and runtime files list and their ETAGS are the same.
+<dl>
+<dt><b>
 
-  CHANGED
- :   The file belongs to both the tracked files list and runtime files list and their ETAGS are different.
+NULL
 
-  NEW
- :   The file is present only in the runtime files list.
+</b></dt>
+<dd>
 
-  DELETED
- :   The file is present only in the tracked files list.
+The datasource is invalid.
 
- 
+
+
+</dd><dt><b>
+
+UNCHANGED
+
+</b></dt>
+<dd>
+
+The file belongs to both the tracked files list and runtime files list and their ETAGS are the same.
+
+
+
+</dd><dt><b>
+
+CHANGED
+
+</b></dt>
+<dd>
+
+The file belongs to both the tracked files list and runtime files list and their ETAGS are different.
+
+
+
+</dd><dt><b>
+
+NEW
+
+</b></dt>
+<dd>
+
+The file is present only in the runtime files list.
+
+
+
+</dd><dt><b>
+
+DELETED
+
+</b></dt>
+<dd>
+
+The file is present only in the tracked files list.
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>

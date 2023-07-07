@@ -6,11 +6,6 @@ Makes changes to the database permanent, or terminates a user-defined transactio
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -18,17 +13,43 @@ Makes changes to the database permanent, or terminates a user-defined transactio
 
 
 
- Syntax 1 – Ends a Transaction and Makes All Changes Permanent
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1 – Ends a Transaction and Makes All Changes Permanent
+
+</b></dt>
+<dd>
+
+```
 COMMIT [ WORK ]
 ```
 
-  Syntax 2 – Constructs Nested Transactions
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2 – Constructs Nested Transactions
+
+</b></dt>
+<dd>
+
+```
 COMMIT TRAN[SACTION ] [ <transaction-name> ]
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
 
 <a name="loioa615db7b84f21015b755e11e289ef47c__IQ_Usage"/>
 

@@ -16,10 +16,23 @@ ABS ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The number that has the absolute value to be returned.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The number that has the absolute value to be returned.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa532439384f21015be5cb176f7ecbae4__ABS_returns1"/>
 
@@ -134,5 +147,5 @@ SELECT ABS( -66 ) FROM iq_dummy
 **Related Information**  
 
 
-[ABS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/45f984dcb7e440c4b082a7ef7662f923.html "Returns the absolute value of a numeric expression.") :arrow_upper_right:
+[ABS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/45f984dcb7e440c4b082a7ef7662f923.html "Returns the absolute value of a numeric expression.") :arrow_upper_right:
 

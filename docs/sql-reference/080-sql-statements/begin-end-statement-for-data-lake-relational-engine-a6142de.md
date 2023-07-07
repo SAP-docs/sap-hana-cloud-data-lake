@@ -6,11 +6,6 @@ Groups SQL statements together.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -65,17 +60,43 @@ Groups SQL statements together.
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa6142def84f2101591f2a40a1dd6cb20__begin_end_param1"/>
 
 ## Parameters
 
- *<statement-label\>*
- :   If specified, it must match the beginning *<statement-label\>*. You can use the `LEAVE` statement to resume execution at the first statement after the compound statement. The compound statement that is the body of a procedure has an implicit label that is the same as the name of the procedure.
 
-  *<initial-value\>*
- :   If specified, the variable is set to that value and the data type must match the type defined by *<data-type\>*. If you do not specify an initial-value, the variable contains the NULL value until a `SET` statement assigns a different value.
+<dl>
+<dt><b>
 
- 
+*<statement-label\>*
+
+</b></dt>
+<dd>
+
+If specified, it must match the beginning *<statement-label\>*. You can use the `LEAVE` statement to resume execution at the first statement after the compound statement. The compound statement that is the body of a procedure has an implicit label that is the same as the name of the procedure.
+
+
+
+</dd><dt><b>
+
+*<initial-value\>*
+
+</b></dt>
+<dd>
+
+If specified, the variable is set to that value and the data type must match the type defined by *<data-type\>*. If you do not specify an initial-value, the variable contains the NULL value until a `SET` statement assigns a different value.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa6142def84f2101591f2a40a1dd6cb20__begin_end_remarks1"/>
 
@@ -174,5 +195,5 @@ CREATE PROCEDURE TopCustomer (OUT TopCompany CHAR(35), OUT TopValue INT)
 
 [SIGNAL Statement for Data Lake Relational Engine](signal-statement-for-data-lake-relational-engine-a6266b2.md "Lets you raise an exception condition.")
 
-[BEGIN … END Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/cfaf187bc70744e192136ee62c3b65b6.html "Groups SQL statements together.") :arrow_upper_right:
+[BEGIN … END Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/cfaf187bc70744e192136ee62c3b65b6.html "Groups SQL statements together.") :arrow_upper_right:
 

@@ -23,12 +23,25 @@ sp_list_etd_files([ <file_name_pattern > ])
 
 ## Parameters
 
-  *<file\_name\_pattern\>* 
- :   Enter a file name pattern for ETD file name matching. Accepts the wildcard characters ***\**** and ***?*** .
 
-    If null, then lists all ETD files.
+<dl>
+<dt><b>
 
- 
+ *<file\_name\_pattern\>* 
+
+</b></dt>
+<dd>
+
+Enter a file name pattern for ETD file name matching. Accepts the wildcard characters `*` and `?` .
+
+If null, then lists all ETD files.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio5f0eb4a9f1734b6d9ef6661867578898__sp_list_etd_files_Output1"/>
 
@@ -140,11 +153,18 @@ The result set displays one ETD file per row.
 
 
 
-<a name="loio5f0eb4a9f1734b6d9ef6661867578898__section_ylc_twb_zmb"/>
+<a name="loio5f0eb4a9f1734b6d9ef6661867578898__sp_list_etd_files_priv1"/>
 
 ## Privileges
 
-You have the MANAGE\_AUDITING privilege.
+
+
+### 
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure
+-   MANAGE AUDITING system privilege
 
 
 
@@ -180,5 +200,5 @@ my_session_20201126_185000.000_auditdb_eng.etd  260 2020-11-26 18:50:52.000+00:0
 **Related Information**  
 
 
-[sp_list_etd_files System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/0f76c8361cd84a2b8b35f74382b9265f.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
+[sp_list_etd_files System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/0f76c8361cd84a2b8b35f74382b9265f.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
 

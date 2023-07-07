@@ -23,20 +23,49 @@ sp_iqevent [ <event-name> ], [ <event-owner> ], [ <event-type> ]
 
 ## Parameter
 
- *<event-name\>*
- :   The name of the event.
 
-  *<event-owner\>*
- :   The owner of the event.
+<dl>
+<dt><b>
 
-  *<event-type\>*
- :   The type of event. Allowed values are:
+*<event-name\>*
 
-    -   SYSTEM – displays information about system events \(events owned by user SYS or dbo\) only
-    -   ALL – displays information about user and system events
-    -   Any other value – displays information about user events
+</b></dt>
+<dd>
 
- 
+The name of the event.
+
+
+
+</dd><dt><b>
+
+*<event-owner\>*
+
+</b></dt>
+<dd>
+
+The owner of the event.
+
+
+
+</dd><dt><b>
+
+*<event-type\>*
+
+</b></dt>
+<dd>
+
+The type of event. Allowed values are:
+
+-   SYSTEM – displays information about system events \(events owned by user SYS or dbo\) only
+-   ALL – displays information about user and system events
+-   Any other value – displays information about user events
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5a872a584f21015ba4c951765fe55ca__section_ztj_rlz_mbb"/>
 
@@ -212,7 +241,7 @@ The sp\_iqevent stored event displays information about events in a database. If
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

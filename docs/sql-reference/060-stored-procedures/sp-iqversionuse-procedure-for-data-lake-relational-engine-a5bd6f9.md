@@ -163,59 +163,7 @@ Run sp\_iqversionuse on worker nodes to determine individual connections to work
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
-
-You also need:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-MONITOR
-
-
-
-</td>
-<td valign="top">
-
-System privilege
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+Requires EXECUTE object-level privilege on the procedure, along with the MONITOR system privilege.
 
 
 
@@ -300,87 +248,43 @@ WasReported is 0 for versions 42715 and 42728 on the coordinator because these a
     </tr>
     <tr>
     <td valign="top">
-
-    42648
+    
+        42648
 
 
     
     </td>
     <td valign="top">
-
-    'mpxw'
+    
+        'mpxw'
 
 
     
     </td>
     <td valign="top">
-
-    108
+    
+        108
 
 
     
     </td>
     <td valign="top">
-
-    1
+    
+        1
 
 
     
     </td>
     <td valign="top">
-
-    7920
+    
+        7920
 
 
     
     </td>
     <td valign="top">
-
-    7920
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    42686
-
-
-    
-    </td>
-    <td valign="top">
-
-    'mpxq'
-
-
-    
-    </td>
-    <td valign="top">
-
-    0
-
-
-    
-    </td>
-    <td valign="top">
-
-    1
-
-
-    
-    </td>
-    <td valign="top">
-
-    7920
-
-
-    
-    </td>
-    <td valign="top">
-
-    304
+        7920
 
 
     
@@ -388,87 +292,43 @@ WasReported is 0 for versions 42715 and 42728 on the coordinator because these a
     </tr>
     <tr>
     <td valign="top">
-
-    42702
+    
+        42686
 
 
     
     </td>
     <td valign="top">
-
-    'mpxq'
+    
+        'mpxq'
 
 
     
     </td>
     <td valign="top">
-
-    0
+    
+        0
 
 
     
     </td>
     <td valign="top">
-
-    1
+    
+        1
 
 
     
     </td>
     <td valign="top">
-
-    0
+    
+        7920
 
 
     
     </td>
     <td valign="top">
-
-    688
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    42715
-
-
-    
-    </td>
-    <td valign="top">
-
-    ‘mpxq'
-
-
-    
-    </td>
-    <td valign="top">
-
-    0
-
-
-    
-    </td>
-    <td valign="top">
-
-    0
-
-
-    
-    </td>
-    <td valign="top">
-
-    0
-
-
-    
-    </td>
-    <td valign="top">
-
-    688
+        304
 
 
     
@@ -476,43 +336,131 @@ WasReported is 0 for versions 42715 and 42728 on the coordinator because these a
     </tr>
     <tr>
     <td valign="top">
-
-    42728
+    
+        42702
 
 
     
     </td>
     <td valign="top">
-
-    'mpxq'
+    
+        'mpxq'
 
 
     
     </td>
     <td valign="top">
-
-    0
+    
+        0
 
 
     
     </td>
     <td valign="top">
-
-    0
+    
+        1
 
 
     
     </td>
     <td valign="top">
-
-    0
+    
+        0
 
 
     
     </td>
     <td valign="top">
+    
+        688
 
-    688
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        42715
+
+
+    
+    </td>
+    <td valign="top">
+    
+        ‘mpxq'
+
+
+    
+    </td>
+    <td valign="top">
+    
+        0
+
+
+    
+    </td>
+    <td valign="top">
+    
+        0
+
+
+    
+    </td>
+    <td valign="top">
+    
+        0
+
+
+    
+    </td>
+    <td valign="top">
+    
+        688
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        42728
+
+
+    
+    </td>
+    <td valign="top">
+    
+        'mpxq'
+
+
+    
+    </td>
+    <td valign="top">
+    
+        0
+
+
+    
+    </td>
+    <td valign="top">
+    
+        0
+
+
+    
+    </td>
+    <td valign="top">
+    
+        0
+
+
+    
+    </td>
+    <td valign="top">
+    
+        688
 
 
     
@@ -574,43 +522,43 @@ WasReported is 0 for versions 42715 and 42728 on the coordinator because these a
     </tr>
     <tr>
     <td valign="top">
-
-    42686
+    
+        42686
 
 
     
     </td>
     <td valign="top">
-
-    'mpxq'
+    
+        'mpxq'
 
 
     
     </td>
     <td valign="top">
-
-    31
+    
+        31
 
 
     
     </td>
     <td valign="top">
-
-    1
+    
+        1
 
 
     
     </td>
     <td valign="top">
-
-    0
+    
+        0
 
 
     
     </td>
     <td valign="top">
-
-    0
+    
+        0
 
 
     
@@ -618,43 +566,43 @@ WasReported is 0 for versions 42715 and 42728 on the coordinator because these a
     </tr>
     <tr>
     <td valign="top">
-
-    42715
+    
+        42715
 
 
     
     </td>
     <td valign="top">
-
-    'mpxq'
+    
+        'mpxq'
 
 
     
     </td>
     <td valign="top">
-
-    00
+    
+        00
 
 
     
     </td>
     <td valign="top">
-
-    1
+    
+        1
 
 
     
     </td>
     <td valign="top">
-
-    0
+    
+        0
 
 
     
     </td>
     <td valign="top">
-
-    0
+    
+        0
 
 
     

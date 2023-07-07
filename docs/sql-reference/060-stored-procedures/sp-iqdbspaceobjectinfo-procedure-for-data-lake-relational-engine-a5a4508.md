@@ -24,19 +24,56 @@ sp_iqdbspaceobjectinfo [ <dbspace-name> ]
 
 ## Parameters
 
- *<dbspace-name\>*
- :   \(Optional\) If specified, sp\_iqdbspaceobjectinfo displays output only for the specified dbspace. Otherwise, it shows information for all dbspaces in the database.
 
-  *<owner\_name\>*
- :   \(Optional\) Owner of the object. If specified, sp\_iqdbspaceobjectinfo displays output only for tables with the specified owner. If not specified, sp\_iqdbspaceobjectinfo displays information for tables for all users in the database.
+<dl>
+<dt><b>
 
-  *<object\_name\>*
- :   \(Optional\) Name of the table. If not specified, sp\_iqdbspaceobjectinfo displays information for all tables in the database.
+*<dbspace-name\>*
 
-  *<object-type\>*
- :   \(Optional\) Valid object types for table objects.
+</b></dt>
+<dd>
 
- 
+\(Optional\) If specified, sp\_iqdbspaceobjectinfo displays output only for the specified dbspace. Otherwise, it shows information for all dbspaces in the database.
+
+
+
+</dd><dt><b>
+
+*<owner\_name\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) Owner of the object. If specified, sp\_iqdbspaceobjectinfo displays output only for tables with the specified owner. If not specified, sp\_iqdbspaceobjectinfo displays information for tables for all users in the database.
+
+
+
+</dd><dt><b>
+
+*<object\_name\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) Name of the table. If not specified, sp\_iqdbspaceobjectinfo displays information for all tables in the database.
+
+
+
+</dd><dt><b>
+
+*<object-type\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) Valid object types for table objects.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5a4508c84f21015bbd8e6350bea7591__section_un4_ppz_mbb"/>
 
@@ -304,7 +341,7 @@ For tables, sp\_iqdbspaceobjectinfo displays summary information for all associa
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

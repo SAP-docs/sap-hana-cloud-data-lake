@@ -16,10 +16,23 @@ STDDEV_SAMP ( [ ALL ] <expression> )
 
 ## Parameters
 
- *<expression\>*
- :   The expression \(commonly a column name\) whose sample-based standard deviation is calculated over a set of rows.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The expression \(commonly a column name\) whose sample-based standard deviation is calculated over a set of rows.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioae8f4df1cf8d477e881f9e3360210ae0__section_uvp_j55_vrb"/>
 

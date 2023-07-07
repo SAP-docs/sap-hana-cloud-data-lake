@@ -16,18 +16,47 @@ DATECEILING ( <date-part>, <datetime-expression> [, <multiple-expression>] )
 
 ## Parameters
 
- *<date-part\>*
- :   The date part to be added to the date.
 
-  *<datetime-expression\>*
- :   The date, time, or date-time expression containing the value you are evaluating.
+<dl>
+<dt><b>
 
-  *<multiple-expression\>*
- :   \(Optional\) A nonzero positive integer value expression specifying how many multiples of the units specified by the date-part parameter to use within the calculation. For example, you can use multiple-expression to specify that you want to regularize your data to 200-microsecond intervals or 10-minute intervals.
+*<date-part\>*
 
-    If multiple-expression evaluates to zero, evaluates to a negative number, is an explicit NULL constant, or is not a valid value for the specified date-part, data lake Relational Engine generates an error. If multiple-expression evaluates to a NULL, then the function result is NULL.
+</b></dt>
+<dd>
 
- 
+The date part to be added to the date.
+
+
+
+</dd><dt><b>
+
+*<datetime-expression\>*
+
+</b></dt>
+<dd>
+
+The date, time, or date-time expression containing the value you are evaluating.
+
+
+
+</dd><dt><b>
+
+*<multiple-expression\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) A nonzero positive integer value expression specifying how many multiples of the units specified by the date-part parameter to use within the calculation. For example, you can use multiple-expression to specify that you want to regularize your data to 200-microsecond intervals or 10-minute intervals.
+
+If multiple-expression evaluates to zero, evaluates to a negative number, is an explicit NULL constant, or is not a valid value for the specified date-part, data lake Relational Engine generates an error. If multiple-expression evaluates to a NULL, then the function result is NULL.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiofaa4713372c84096b66b27ab6204aa4f__section_qkg_qfm_srb"/>
 
@@ -66,8 +95,8 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     <table>
     <tr>
     <td valign="top">
-
-    -   1
+    
+        -   1
     -   2
     -   4
     -   5
@@ -82,8 +111,8 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     
     </td>
     <td valign="top">
-
-    -   40
+    
+        -   40
     -   50
     -   64
     -   80
@@ -98,8 +127,8 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     
     </td>
     <td valign="top">
-
-    -   400
+    
+        -   400
     -   500
     -   625
     -   800
@@ -114,8 +143,8 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     
     </td>
     <td valign="top">
-
-    -   4000
+    
+        -   4000
     -   5000
     -   6250
     -   8000
@@ -130,8 +159,8 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     
     </td>
     <td valign="top">
-
-    -   40000
+    
+        -   40000
     -   50000
     -   62500
     -   100000

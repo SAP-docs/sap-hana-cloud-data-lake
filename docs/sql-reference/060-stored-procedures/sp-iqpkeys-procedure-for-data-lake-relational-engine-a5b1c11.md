@@ -23,16 +23,45 @@ sp_iqpkeys { [ <table-name> ], [ <column-name> ], [ <table-owner> ] }
 
 ## Parameter
 
- *<table-name\>*
- :   \(Optional\) The name of a base or global temporary table. If specified, the procedure returns information about primary keys defined on the specified table only.
 
-  *<column-name\>*
- :   \(Optional\) The name of a column. If specified, the procedure returns information about primary keys on the specified column only.
+<dl>
+<dt><b>
 
-  *<table-owner\>*
- :   \(Optional\) The owner of a table or table. If specified, the procedure returns information about primary keys on tables owned by the specified owner only.
+*<table-name\>*
 
- 
+</b></dt>
+<dd>
+
+\(Optional\) The name of a base or global temporary table. If specified, the procedure returns information about primary keys defined on the specified table only.
+
+
+
+</dd><dt><b>
+
+*<column-name\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) The name of a column. If specified, the procedure returns information about primary keys on the specified column only.
+
+
+
+</dd><dt><b>
+
+*<table-owner\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) The owner of a table or table. If specified, the procedure returns information about primary keys on tables owned by the specified owner only.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5b1c11384f210159aebaa53583740fc__section_gkl_3t4_nbb"/>
 
@@ -254,7 +283,7 @@ Displays information about primary keys defined on all tables owned by DBA.
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

@@ -8,14 +8,14 @@ Decimal precision for TIMESTAMP data type columns is controlled by the TIMESTAMP
 
 This option controls whether TIMESTAMP data type columns in data lake Relational Engine support 6 or 7 decimal precision.
 
-When set to ON, **new** TIMESTAMP data type columns use 7 decimal precision. When set to OFF, **new** TIMESTAMP data type columns use 6 decimal precision. This option has **no impact** on the precision of **existing** TIMESTAMP columns; they **retain** their original precision of 6 decimals regardless of the options current setting. Only new TIMESTAMP columns created after the database option is enabled use the new default of 7 decimal precision.
+When set to ON, **new** TIMESTAMP data type columns use 7 decimal precision. When set to OFF, **new** TIMESTAMP data type columns use 6 decimal precision. This option has **no impact** on the precision of **existing** TIMESTAMP columns; they **retain** their original precision of 6 or 7 decimals regardless of the options current setting. Only new TIMESTAMP columns created after the database option is enabled use the new default of 7 decimal precision.
 
 Precision conflicts between TIMESTAMP data types result in data loss. For example, the TIMESTAMP data type in SAP HANA database uses 7 decimal precision. If you import this data into a data lake Relational Engine column configured to use 6 decimal precision, the last digit of the source data is truncated.
 
 > ### Caution:  
 > Once data is truncated during import, the truncated data cannot be recovered. Enabling the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option does **not** recover the truncated data.
 
-If you plan to import 7 decimal precision data into existing 6 decimal precision data lake Relational Engine columns, then to avoid data loss, you should first ensure that the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option is enabled and then migrate the relevant existing data lake Relational Engine TIMESTAMP data type columns using 6 decimal precision to 7 decimal precision **before** importing any the data.
+If you import 7 decimal precision data into 6 decimal precision columns in the data lake Relational Engine, then the values will be truncated to 6 decimal places and precision will be lost. To avoid losing precision, the data lake Relational Engine columns need to created as 7 decimal precision columns prior to importing the 7 decimal precision data.
 
 > ### Caution:  
 > Migrating the columns will not recover the truncated data, but it **will** prevent future truncations during data imports.
@@ -52,7 +52,7 @@ To migrate existing TIMESTAMP data type columns to use 7 decimal precision:
 4.  Drop the original column.
 5.  Rename the new column to that of the original column.
 
-If enabling the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option is not feasible in your instance, but data loss due to truncation during import is an issue, migrate TIMESTAMP data type columns to use DATETIMEX data type. The DATETIMEX data type uses 7 decimal precision regardless of the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX setting. No data loss due to truncation occurs during an import.
+If enabling the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option is not feasible in your instance, but data loss due to truncation during import is an issue, migrate TIMESTAMP data type columns to use the DATETIMEX data type. The DATETIMEX data type uses 7 decimal precision regardless of the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX setting. No data loss due to truncation occurs during an import.
 
 **Related Information**  
 

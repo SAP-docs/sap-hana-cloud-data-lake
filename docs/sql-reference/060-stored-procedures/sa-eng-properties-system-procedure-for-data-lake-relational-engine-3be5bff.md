@@ -150,7 +150,7 @@ Returns the PropNum, PropName, PropDescription, and Value for each available ser
 
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure.
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

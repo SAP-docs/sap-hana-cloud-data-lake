@@ -23,16 +23,45 @@ sp_iqobjectinfo [ <owner_name> ]  [ , <object_name> ] [ , <object-type
 
 ## Parameter
 
- *<owner\_name\>*
- :   \(Optional\) Owner of the object. If specified, sp\_iqobjectinfo displays output only for tables with the specified owner. If not specified, sp\_iqobjectinfo displays information on tables for all users in the database.
 
-  *<object\_name\>*
- :   \(Optional\) Name of the table. If not specified, sp\_iqobjectinfo displays information on all tables in the database.
+<dl>
+<dt><b>
 
-  *<object-type\>*
- :   \(Optional\) Valid `table` object types. If *<object-type\>* is a table, enclose it in quotation marks.
+*<owner\_name\>*
 
- 
+</b></dt>
+<dd>
+
+\(Optional\) Owner of the object. If specified, sp\_iqobjectinfo displays output only for tables with the specified owner. If not specified, sp\_iqobjectinfo displays information on tables for all users in the database.
+
+
+
+</dd><dt><b>
+
+*<object\_name\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) Name of the table. If not specified, sp\_iqobjectinfo displays information on all tables in the database.
+
+
+
+</dd><dt><b>
+
+*<object-type\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) Valid `table` object types. If *<object-type\>* is a table, enclose it in quotation marks.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5b0b72884f210158266fa85e5483c9c__section_iwy_zlg_nbb"/>
 
@@ -227,7 +256,7 @@ The sp\_iqobjectinfo stored procedure supports wildcard characters for interpret
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -308,59 +337,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    HDLADMIN
+    
+        HDLADMIN
 
 
     
     </td>
     <td valign="top">
-
-    sale
+    
+        sale
 
 
     
     </td>
     <td valign="top">
-
-    \(NULL\)
+    
+        \(NULL\)
 
 
     
     </td>
     <td valign="top">
-
-    table
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    HDLADMIN
-
-
-    
-    </td>
-    <td valign="top">
-
-    sale
-
-
-    
-    </td>
-    <td valign="top">
-
-    prod\_id
-
-
-    
-    </td>
-    <td valign="top">
-
-    column
+        table
 
 
     
@@ -368,59 +367,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    HDLADMIN
+    
+        HDLADMIN
 
 
     
     </td>
     <td valign="top">
-
-    sale
+    
+        sale
 
 
     
     </td>
     <td valign="top">
-
-    month\_num
+    
+        prod\_id
 
 
     
     </td>
     <td valign="top">
-
-    column
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    HDLADMIN
-
-
-    
-    </td>
-    <td valign="top">
-
-    sale
-
-
-    
-    </td>
-    <td valign="top">
-
-    rep\_id
-
-
-    
-    </td>
-    <td valign="top">
-
-    column
+        column
 
 
     
@@ -428,29 +397,89 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    HDLADMIN
+    
+        HDLADMIN
 
 
     
     </td>
     <td valign="top">
-
-    sale
+    
+        sale
 
 
     
     </td>
     <td valign="top">
-
-    sales
+    
+        month\_num
 
 
     
     </td>
     <td valign="top">
+    
+        column
 
-    column
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        HDLADMIN
+
+
+    
+    </td>
+    <td valign="top">
+    
+        sale
+
+
+    
+    </td>
+    <td valign="top">
+    
+        rep\_id
+
+
+    
+    </td>
+    <td valign="top">
+    
+        column
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        HDLADMIN
+
+
+    
+    </td>
+    <td valign="top">
+    
+        sale
+
+
+    
+    </td>
+    <td valign="top">
+    
+        sales
+
+
+    
+    </td>
+    <td valign="top">
+    
+        column
 
 
     
@@ -492,59 +521,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    3698
+    
+        3698
 
 
     
     </td>
     <td valign="top">
-
-    742
+    
+        742
 
 
     
     </td>
     <td valign="top">
-
-    iq\_main
+    
+        iq\_main
 
 
     
     </td>
     <td valign="top">
-
-    \(NULL\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    3699
-
-
-    
-    </td>
-    <td valign="top">
-
-    742
-
-
-    
-    </td>
-    <td valign="top">
-
-    iq\_main
-
-
-    
-    </td>
-    <td valign="top">
-
-    \(NULL\)
+        \(NULL\)
 
 
     
@@ -552,59 +551,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    3700
+    
+        3699
 
 
     
     </td>
     <td valign="top">
-
-    742
+    
+        742
 
 
     
     </td>
     <td valign="top">
-
-    iq\_main
+    
+        iq\_main
 
 
     
     </td>
     <td valign="top">
-
-    \(NULL\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    3701
-
-
-    
-    </td>
-    <td valign="top">
-
-    742
-
-
-    
-    </td>
-    <td valign="top">
-
-    iq\_main
-
-
-    
-    </td>
-    <td valign="top">
-
-    \(NULL\)
+        \(NULL\)
 
 
     
@@ -612,29 +581,89 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    3702
+    
+        3700
 
 
     
     </td>
     <td valign="top">
-
-    742
+    
+        742
 
 
     
     </td>
     <td valign="top">
-
-    iq\_main
+    
+        iq\_main
 
 
     
     </td>
     <td valign="top">
+    
+        \(NULL\)
 
-    \(NULL\)
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        3701
+
+
+    
+    </td>
+    <td valign="top">
+    
+        742
+
+
+    
+    </td>
+    <td valign="top">
+    
+        iq\_main
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \(NULL\)
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        3702
+
+
+    
+    </td>
+    <td valign="top">
+    
+        742
+
+
+    
+    </td>
+    <td valign="top">
+    
+        iq\_main
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \(NULL\)
 
 
     

@@ -23,37 +23,127 @@ sa_enable_auditing_type( <types> )
 
 ## Parameters
 
-  *<types\>* 
- :   Use this VARCHAR\(128\) parameter to specify a comma-delimited string containing one or more of the following values:
 
-     all
-     :   enables all types of auditing.
+<dl>
+<dt><b>
 
-      connect
-     :   enables auditing of both successful and failed connection attempts.
+ *<types\>* 
 
-      connectFailed
-     :   enables auditing of failed connection attempts.
+</b></dt>
+<dd>
 
-      DDL
-     :   enables auditing of DDL statements.
+Use this VARCHAR\(128\) parameter to specify a comma-delimited string containing one or more of the following values:
 
-      options
-     :   enables auditing of public options.
 
-      permission
-     :   enables auditing of permission checks and user checks.
+<dl>
+<dt><b>
 
-      permissionDenied
-     :   enables auditing of failed permission and user checks.
+all
 
-      triggers
-     :   enables auditing of a trigger event.
+</b></dt>
+<dd>
 
-      xp\_cmdshell
-     :   enables auditing of xp\_cmdshell invocations.
+enables all types of auditing.
 
-  
+
+
+</dd><dt><b>
+
+connect
+
+</b></dt>
+<dd>
+
+enables auditing of both successful and failed connection attempts.
+
+
+
+</dd><dt><b>
+
+connectFailed
+
+</b></dt>
+<dd>
+
+enables auditing of failed connection attempts.
+
+
+
+</dd><dt><b>
+
+DDL
+
+</b></dt>
+<dd>
+
+enables auditing of DDL statements.
+
+
+
+</dd><dt><b>
+
+options
+
+</b></dt>
+<dd>
+
+enables auditing of public options.
+
+
+
+</dd><dt><b>
+
+permission
+
+</b></dt>
+<dd>
+
+enables auditing of permission checks and user checks.
+
+
+
+</dd><dt><b>
+
+permissionDenied
+
+</b></dt>
+<dd>
+
+enables auditing of failed permission and user checks.
+
+
+
+</dd><dt><b>
+
+triggers
+
+</b></dt>
+<dd>
+
+enables auditing of a trigger event.
+
+
+
+</dd><dt><b>
+
+xp\_cmdshell
+
+</b></dt>
+<dd>
+
+enables auditing of xp\_cmdshell invocations.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3be5b83e6c5f1014876dd3101b181f8a__sa_enable_auditing_type_remarks1"/>
 
@@ -73,9 +163,18 @@ Specify the location where events are logged with the audit\_log database option
 
 
 
+<a name="loio3be5b83e6c5f1014876dd3101b181f8a__sa_enable_auditing_type_priv1"/>
+
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure, as well as the SET ANY CUSTOMER SECURITY OPTION system privilege.
+
+
+### 
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure
+-   SET ANY CUSTOMER SECURITY OPTION system privilege
 
 
 
@@ -113,5 +212,5 @@ CALL sa_enable_auditing_type( 'DDL' );
 
 [sa\_disable\_auditing\_type System Procedure for Data Lake Relational Engine](sa-disable-auditing-type-system-procedure-for-data-lake-relational-engine-3be5a6b.md "Disables auditing of specific events.")
 
-[sa_enable_auditing_type System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/7bde72cc9e33425088c9b0d6a361d380.html "Specifies which events to include in auditing.") :arrow_upper_right:
+[sa_enable_auditing_type System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7bde72cc9e33425088c9b0d6a361d380.html "Specifies which events to include in auditing.") :arrow_upper_right:
 

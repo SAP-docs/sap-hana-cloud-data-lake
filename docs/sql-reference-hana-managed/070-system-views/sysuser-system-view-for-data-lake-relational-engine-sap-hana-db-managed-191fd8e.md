@@ -270,25 +270,78 @@ TINYINT
 
 A value that indicates whether the user is a regular user, or a role, or a user extended as a role. And whether the user, role, or extended role can be altered \(mutable\) or removed. Possible values:
 
- 1
- :   Immutable system role.
 
-  5
- :   Mutable system role
+<dl>
+<dt><b>
 
-  9
- :   Immutable and removable system role.
+1
 
-  12
- :   Mutable and removable user.
+</b></dt>
+<dd>
 
-  13
- :   Mutable and removable role.
+Immutable system role.
 
-  14
- :   Mutable and removable user extended as role.
 
- 
+
+</dd><dt><b>
+
+5
+
+</b></dt>
+<dd>
+
+Mutable system role
+
+
+
+</dd><dt><b>
+
+9
+
+</b></dt>
+<dd>
+
+Immutable and removable system role.
+
+
+
+</dd><dt><b>
+
+12
+
+</b></dt>
+<dd>
+
+Mutable and removable user.
+
+
+
+</dd><dt><b>
+
+13
+
+</b></dt>
+<dd>
+
+Mutable and removable role.
+
+
+
+</dd><dt><b>
+
+14
+
+</b></dt>
+<dd>
+
+Mutable and removable user extended as role.
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>

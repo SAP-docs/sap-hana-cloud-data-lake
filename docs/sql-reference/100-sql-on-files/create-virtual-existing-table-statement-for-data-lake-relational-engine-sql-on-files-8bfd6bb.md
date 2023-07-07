@@ -40,29 +40,58 @@ CREATE EXISTING TABLE [ <owner> .]<virtual-table-name>
 
 ## Parameters
 
- *<virtual-table-name\>*
- :   The name of the IQ virtual table. The defintion of the virtual table is stored in the IQ catalog.
 
-    > ### Note:  
-    > Tables used as virtual tables cannot have names longer than 30 characters.
+<dl>
+<dt><b>
 
-  *<column-definition-list\>*
- :   If you do not specify column definitions, data lake Relational Engine derives the column list from the metadata it obtains from the remote table. If you do specify column definitions, data lake Relational Engine verifies them. When data lake Relational Engine checks column names, data types, and lengths:
+*<virtual-table-name\>*
 
-    -   Column names must match identically \(although case is ignored\).
-    -   Data types in `CREATE EXISTING TABLE` must match or be convertible to the data types of the column of the remote table. You may encounter some errors if you select from a table in which the data types do not match or other inconsistencies exist.
-    -   Each column’s length is checked. If the lengths of `CHAR`, `VARCHAR`, `BINARY`, `DECIMAL`, and `NUMERIC` columns do not match, a warning message is issued, but the command is not aborted. You might choose to include only a subset of the actual remote column list in your `CREATE EXISTING` statement.
+</b></dt>
+<dd>
 
-  AT '*<location-string\>*'
- :   Specifies the location of the remote object. Use a period to delimit the location strings.
+The name of the IQ virtual table. The defintion of the virtual table is stored in the IQ catalog.
 
-    The `AT` clause includes a location string that consists of the following parts:
+> ### Note:  
+> Tables used as virtual tables cannot have names longer than 30 characters.
 
-    -   The name of the remote server
-    -   The remote schema
-    -   The remote table name
 
- 
+
+</dd><dt><b>
+
+*<column-definition-list\>*
+
+</b></dt>
+<dd>
+
+If you do not specify column definitions, data lake Relational Engine derives the column list from the metadata it obtains from the remote table. If you do specify column definitions, data lake Relational Engine verifies them. When data lake Relational Engine checks column names, data types, and lengths:
+
+-   Column names must match identically \(although case is ignored\).
+-   Data types in `CREATE EXISTING TABLE` must match or be convertible to the data types of the column of the remote table. You may encounter some errors if you select from a table in which the data types do not match or other inconsistencies exist.
+-   Each column’s length is checked. If the lengths of `CHAR`, `VARCHAR`, `BINARY`, `DECIMAL`, and `NUMERIC` columns do not match, a warning message is issued, but the command is not aborted. You might choose to include only a subset of the actual remote column list in your `CREATE EXISTING` statement.
+
+
+
+</dd><dt><b>
+
+AT '*<location-string\>*'
+
+</b></dt>
+<dd>
+
+Specifies the location of the remote object. Use a period to delimit the location strings.
+
+The `AT` clause includes a location string that consists of the following parts:
+
+-   The name of the remote server
+-   The remote schema
+-   The remote table name
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio8bfd6bbf659b4c9ea03236eb2767ec80__CET_remarks"/>
 
@@ -107,5 +136,5 @@ CREATE EXISTING TABLE sof_employee
 **Related Information**  
 
 
-[CREATE (Virtual) EXISTING TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) [SQL on Files]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/569aa95237b54d28883feeceef487e21.html "Create a new virtual table that represents an existing table on a SQL on Files external catalog.") :arrow_upper_right:
+[CREATE (Virtual) EXISTING TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) [SQL on Files]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/569aa95237b54d28883feeceef487e21.html "Create a new virtual table that represents an existing table on a SQL on Files external catalog.") :arrow_upper_right:
 

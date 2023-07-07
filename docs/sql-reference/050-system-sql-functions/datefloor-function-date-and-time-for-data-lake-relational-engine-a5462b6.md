@@ -16,18 +16,47 @@ DATEFLOOR ( <date-part>, <datetime-expression> [, <multiple-expression> ] )
 
 ## Parameters
 
- *<date-part\>*
- :   The date part to be added to the date.
 
-  *<datetime-expression\>*
- :   The date, time, or date-time expression containing the value you are evaluating.
+<dl>
+<dt><b>
 
-  *<multiple-expression\>*
- :   \(Optional\) A nonzero positive integer value expression specifying how many multiples of the units specified by date-part to use within the calculation. For example, you can use multiple-expression to specify that you want to regularize your data to 200-microsecond intervals or 10-minute intervals
+*<date-part\>*
 
-    If multiple-expression evaluates to zero, evaluates to a negative number, is an explicit NULL constant, or is not a valid value for the specified date-part, data lake Relational Engine generates an error. If multiple-expression evaluates to a NULL, then the function result is NULL.
+</b></dt>
+<dd>
 
- 
+The date part to be added to the date.
+
+
+
+</dd><dt><b>
+
+*<datetime-expression\>*
+
+</b></dt>
+<dd>
+
+The date, time, or date-time expression containing the value you are evaluating.
+
+
+
+</dd><dt><b>
+
+*<multiple-expression\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) A nonzero positive integer value expression specifying how many multiples of the units specified by date-part to use within the calculation. For example, you can use multiple-expression to specify that you want to regularize your data to 200-microsecond intervals or 10-minute intervals
+
+If multiple-expression evaluates to zero, evaluates to a negative number, is an explicit NULL constant, or is not a valid value for the specified date-part, data lake Relational Engine generates an error. If multiple-expression evaluates to a NULL, then the function result is NULL.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5462b6184f21015a0c4efd06d244945__DATEFLOOR_remarks1"/>
 
@@ -66,8 +95,8 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     <table>
     <tr>
     <td valign="top">
-
-    -   1
+    
+        -   1
     -   2
     -   4
     -   5
@@ -82,8 +111,8 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     
     </td>
     <td valign="top">
-
-    -   40
+    
+        -   40
     -   50
     -   64
     -   80
@@ -98,8 +127,8 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     
     </td>
     <td valign="top">
-
-    -   400
+    
+        -   400
     -   500
     -   625
     -   800
@@ -114,8 +143,8 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     
     </td>
     <td valign="top">
-
-    -   4000
+    
+        -   4000
     -   5000
     -   6250
     -   8000
@@ -130,8 +159,8 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     
     </td>
     <td valign="top">
-
-    -   40000
+    
+        -   40000
     -   50000
     -   62500
     -   100000
@@ -214,5 +243,5 @@ If data lake Relational Engine rounds to a multiple of the week date part, the d
 
 [Date Parts in Data Lake Relational Engine](date-parts-in-data-lake-relational-engine-a52b8dd.md "Many of the date functions use dates built from date parts.")
 
-[DATEFLOOR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/907ca83d48c04c4c82f7e6ca7b1b049d.html "Calculates a new date, time, or datetime value by reducing the provided value down to the nearest lower value of the specified multiple with the specified granularity.") :arrow_upper_right:
+[DATEFLOOR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/907ca83d48c04c4c82f7e6ca7b1b049d.html "Calculates a new date, time, or datetime value by reducing the provided value down to the nearest lower value of the specified multiple with the specified granularity.") :arrow_upper_right:
 

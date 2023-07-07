@@ -182,5 +182,5 @@ If you set the option to a different value before each query in a script, it is 
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[QUERY_NAME Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/46c2fe6f4e30441c982519451fa6a6bf.html "Gives a name to an executed query in its query plan.") :arrow_upper_right:
+[QUERY_NAME Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/46c2fe6f4e30441c982519451fa6a6bf.html "Gives a name to an executed query in its query plan.") :arrow_upper_right:
 

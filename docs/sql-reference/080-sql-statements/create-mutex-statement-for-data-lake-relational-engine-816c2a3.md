@@ -6,11 +6,6 @@ Creates or replaces a mutex \(lock\) that can be used to lock a resource such as
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -26,35 +21,93 @@ CREATE [ OR REPLACE | TEMPORARY ] MUTEX [ IF NOT EXISTS ] [ <owner>.]<mutex-name
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 ## Parameters
 
- *<owner\>*
- :   The owner of the mutex.
 
-  *<mutex-name\>*
- :   The name of the mutex. Specify a valid identifier in the CHAR database collation.
+<dl>
+<dt><b>
 
-  OR REPLACE clause
- :   Use this clause to overwrite \(update\) the definition of a permanent mutex of the same name, if one exists.
+*<owner\>*
 
-    If the OR REPLACE clause is specified, and a mutex with this name is in use at the time, then the statement returns an error.
+</b></dt>
+<dd>
 
-    You cannot use this clause with the TEMPORARY or IF NOT EXISTS clauses.
+The owner of the mutex.
 
-  TEMPORARY clause
- :   Use this clause to create a temporary mutex.
 
-    Do not use this clause with the OR REPLACE clause.
 
-  IF NOT EXISTS clause
- :   Use this clause to create a mutex only if it doesn't already exist. If a mutex exists with the same name, then nothing happens and no error is returned.
+</dd><dt><b>
 
-    You cannot use this clause with the OR REPLACE clause.
+*<mutex-name\>*
 
-  SCOPE clause
- :   Use this clause to specify whether the mutex applies to a transaction \(TRANSACTION\), or the connection \(CONNECTION\). If the SCOPE clause is not specified, then the default behavior is CONNECTION.
+</b></dt>
+<dd>
 
- 
+The name of the mutex. Specify a valid identifier in the CHAR database collation.
+
+
+
+</dd><dt><b>
+
+OR REPLACE clause
+
+</b></dt>
+<dd>
+
+Use this clause to overwrite \(update\) the definition of a permanent mutex of the same name, if one exists.
+
+If the OR REPLACE clause is specified, and a mutex with this name is in use at the time, then the statement returns an error.
+
+You cannot use this clause with the TEMPORARY or IF NOT EXISTS clauses.
+
+
+
+</dd><dt><b>
+
+TEMPORARY clause
+
+</b></dt>
+<dd>
+
+Use this clause to create a temporary mutex.
+
+Do not use this clause with the OR REPLACE clause.
+
+
+
+</dd><dt><b>
+
+IF NOT EXISTS clause
+
+</b></dt>
+<dd>
+
+Use this clause to create a mutex only if it doesn't already exist. If a mutex exists with the same name, then nothing happens and no error is returned.
+
+You cannot use this clause with the OR REPLACE clause.
+
+
+
+</dd><dt><b>
+
+SCOPE clause
+
+</b></dt>
+<dd>
+
+Use this clause to specify whether the mutex applies to a transaction \(TRANSACTION\), or the connection \(CONNECTION\). If the SCOPE clause is not specified, then the default behavior is CONNECTION.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -86,10 +139,23 @@ Automatic commit, but only for permanent mutexes.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following statement creates a connection scope mutex called protect\_my\_cr\_section to protect a critical section of a stored procedure.
 

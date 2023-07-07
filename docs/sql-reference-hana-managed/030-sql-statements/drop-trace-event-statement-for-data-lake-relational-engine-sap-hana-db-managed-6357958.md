@@ -6,11 +6,6 @@ Drops a user-defined trace event.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -24,11 +19,8 @@ DROP TRACE EVENT [ IF EXISTS ] <trace-event-name>
 
 
 
-<a name="loio63579584baca4c78a6b2f830a2dfcc36__section_p1c_fcr_brb"/>
-
-## Remarks
-
-This statement only drops user-defined trace events. If you don’t want an error returned when the DROP TRACE EVENT statement attempts to remove a trace event that doesn’t exist, use the IF EXISTS clause. If one ore more event tracing sessions reference the trace event, then the trace event can’t be dropped until all the referencing trace sessions are dropped.
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -37,6 +29,14 @@ This statement only drops user-defined trace events. If you don’t want an erro
 ## Privileges
 
 You have the MANAGE ANY TRACE SESSION system privilege.
+
+
+
+<a name="loio63579584baca4c78a6b2f830a2dfcc36__section_p1c_fcr_brb"/>
+
+## Remarks
+
+This statement only drops user-defined trace events. If you don’t want an error returned when the DROP TRACE EVENT statement attempts to remove a trace event that doesn’t exist, use the IF EXISTS clause. If one ore more event tracing sessions reference the trace event, then the trace event can’t be dropped until all the referencing trace sessions are dropped.
 
 
 
@@ -52,10 +52,23 @@ None.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 Drop the trace event named my\_event:
 

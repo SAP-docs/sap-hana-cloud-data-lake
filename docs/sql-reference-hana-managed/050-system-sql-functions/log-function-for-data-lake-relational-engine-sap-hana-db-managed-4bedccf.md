@@ -16,10 +16,23 @@ LOG ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The number.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The number.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio4bedccf5149e42c2bdb12854c1587418__section_zvf_byg_trb"/>
 

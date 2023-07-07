@@ -23,16 +23,50 @@ sp_iq_reset_identity ( <table_name>, <table_owner>, <value> )
 
 ## Parameters
 
- *<table\_name\>*
- :   The name of the table.
 
-  *<table owner\>*
- :   The name of the table owner.
+<dl>
+<dt><b>
 
-  *<value\>*
- :   The seed value you specify to replace the default seed value.
+*<table\_name\>*
 
- 
+</b></dt>
+<dd>
+
+The name of the table.
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+*<table owner\>*
+
+</b></dt>
+<dd>
+
+The name of the table owner.
+
+
+
+</dd><dt><b>
+
+*<value\>*
+
+</b></dt>
+<dd>
+
+The seed value you specify to replace the default seed value.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5b4402f84f21015970e99c2e7a4deaf__iq_refbb_1736"/>
 

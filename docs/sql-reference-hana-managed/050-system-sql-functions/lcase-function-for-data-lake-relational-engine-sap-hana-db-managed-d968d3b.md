@@ -16,10 +16,23 @@ LCASE ( <string-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string to be converted to lowercase.
 
- 
+<dl>
+<dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string to be converted to lowercase.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiod968d3bd4e5c4662962a776072f95601__section_ivg_wdh_trb"/>
 

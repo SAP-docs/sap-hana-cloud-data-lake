@@ -16,10 +16,23 @@ BYTE_LENGTH ( <string-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string that has the length to be calculated.
 
- 
+<dl>
+<dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string that has the length to be calculated.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioda0bd303497b4828b0c89f22e692a6c5__section_k3t_tfl_srb"/>
 

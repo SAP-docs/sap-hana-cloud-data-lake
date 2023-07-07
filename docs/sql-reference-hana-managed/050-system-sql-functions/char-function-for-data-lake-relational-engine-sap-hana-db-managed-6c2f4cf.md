@@ -16,10 +16,23 @@ CHAR ( <integer-expression> )
 
 ## Parameters
 
- *<integer-expression\>*
- :   The number to be converted to an ASCII character. The number must be in the range 0 to 255, inclusive.
 
- 
+<dl>
+<dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number to be converted to an ASCII character. The number must be in the range 0 to 255, inclusive.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio6c2f4cf7004b4f2cace1afa4889a44d0__section_etk_ltl_srb"/>
 

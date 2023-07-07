@@ -23,10 +23,23 @@ sp_iqindexadvice ( [ <resetflag> ] )
 
 ## Parameters
 
- *<resetflag\>*
- :   Lets the caller clear the index advice storage. If *<resetflag\>* is nonzero, all advice is removed after the last row has been retrieved.
 
- 
+<dl>
+<dt><b>
+
+*<resetflag\>*
+
+</b></dt>
+<dd>
+
+Lets the caller clear the index advice storage. If *<resetflag\>* is nonzero, all advice is removed after the last row has been retrieved.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5ab8bc984f2101593388431a4a60c82__iq_refbb_1599"/>
 
@@ -51,60 +64,10 @@ Allows users to query aggregated index advisor messages using SQL. The informati
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
+Requires EXECUTE object-level privilege on the procedure, along with one of the following:
 
-You also need one of the following:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
--   ALTER ANY INDEX
--   ALTER ANY OBJECT
-
-
-
-</td>
-<td valign="top">
-
-System privilege
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+-   ALTER ANY INDEX system privilege
+-   ALTER ANY OBJECT system privilege
 
 
 

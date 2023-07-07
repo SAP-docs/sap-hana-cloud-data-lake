@@ -16,10 +16,23 @@ UPPER ( <string-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string to be converted to uppercase.
 
- 
+<dl>
+<dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string to be converted to uppercase.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio10843333345b407694db50383c73a083__section_k2p_tgv_vrb"/>
 

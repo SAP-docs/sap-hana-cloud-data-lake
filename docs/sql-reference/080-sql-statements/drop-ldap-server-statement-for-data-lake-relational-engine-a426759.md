@@ -6,11 +6,6 @@ Removes the named LDAP server configuration object from the `SYSLDAPSERVER` syst
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -25,17 +20,43 @@ DROP LDAP SERVER <ldapua-server-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa426759484f2101583e1ad63a3dfc2e0__IQ_Parameters"/>
 
 ## Parameters
 
- WITH DROP ALL REFERENCES
- :   Allows the removal of an LDAP server configuration object from service that has a reference in a login policy.
 
-  WITH SUSPEND
- :   Allows an LDAP server configuration object to be dropped even if in a READY or ACTIVE state.
+<dl>
+<dt><b>
 
- 
+WITH DROP ALL REFERENCES
+
+</b></dt>
+<dd>
+
+Allows the removal of an LDAP server configuration object from service that has a reference in a login policy.
+
+
+
+</dd><dt><b>
+
+WITH SUSPEND
+
+</b></dt>
+<dd>
+
+Allows an LDAP server configuration object to be dropped even if in a READY or ACTIVE state.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa426759484f2101583e1ad63a3dfc2e0__IQ_Usage"/>
 

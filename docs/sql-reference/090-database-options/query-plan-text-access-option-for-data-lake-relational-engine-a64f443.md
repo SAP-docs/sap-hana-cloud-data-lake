@@ -57,10 +57,99 @@ Requires the SET ANY CUSTOMER SYSTEM OPTION system privilege to set this databas
 
 ## Scope
 
--   Option can be set at the database \(PUBLIC\) or user level. At the database level, the value becomes the default for any new user, but has no impact on existing users. At the user level, overrides the PUBLIC value for that user only. No system privilege is required to set option for self. System privilege is required to set at database level or at user level for any user other than self.
 
--   Can be set temporary for an individual connection or for the PUBLIC role. Takes effect immediately.
+<table>
+<tr>
+<th valign="top">
 
+ 
+
+
+
+</th>
+<th valign="top">
+
+PUBLIC Role
+
+
+
+</th>
+<th valign="top">
+
+For Current User
+
+
+
+</th>
+<th valign="top">
+
+For Other Users
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Allowed to set permanently?
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Allowed to set temporarily?
+
+
+
+</td>
+<td valign="top">
+
+Yes
+
+
+
+</td>
+<td valign="top">
+
+Yes \(current connection only\)
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+</tr>
+</table>
 
 
 
@@ -85,7 +174,7 @@ No plan available. The database option QUERY_PLAN_TEXT_ACCESS is OFF.
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[QUERY_PLAN_TEXT_ACCESS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/176630977a7d4a46b04fe1f7b30fd9c2.html "Enables or prevents users from accessing query plans from the Interactive SQL client or from using SQL functions to get plans.") :arrow_upper_right:
+[QUERY_PLAN_TEXT_ACCESS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/176630977a7d4a46b04fe1f7b30fd9c2.html "Enables or prevents users from accessing query plans from the Interactive SQL client or from using SQL functions to get plans.") :arrow_upper_right:
 
 [QUERY\_DETAIL Option for Data Lake Relational Engine](query-detail-option-for-data-lake-relational-engine-a64c3ef.md "Specifies whether or not to include additional query information in the Query Detail section of the query plan.")
 

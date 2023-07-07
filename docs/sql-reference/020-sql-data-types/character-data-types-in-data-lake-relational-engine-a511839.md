@@ -94,12 +94,25 @@ Stores arbitrary length character data.
 VARCHAR [ ( <max-length> [ BYTE | CHAR | CHARACTER ] ) ]
 ```
 
- *<max-length\>*
- :   If CHAR or CHARACTER \(byte-length semantics\) is not specified as part of the length, then the length is in bytes and must be in the range of 1 to 32767\(32 KB – 1\). If BYTE is specified,*<max-length\>* must be specified. If only VARCHAR is specified, then *<max-length\>* is 1 with byte-length semantic.
 
-    If CHAR or CHARACTER \(character-length semantics\) is specified as part of the length, then the length is in characters, and *<max-length\>* must be specified, to a maximum of 5000.
+<dl>
+<dt><b>
 
- VARCHARhas no blank padding added to the storage of these strings.
+*<max-length\>*
+
+</b></dt>
+<dd>
+
+If CHAR or CHARACTER \(byte-length semantics\) is not specified as part of the length, then the length is in bytes and must be in the range of 1 to 32767\(32 KB – 1\). If BYTE is specified,*<max-length\>* must be specified. If only VARCHAR is specified, then *<max-length\>* is 1 with byte-length semantic.
+
+If CHAR or CHARACTER \(character-length semantics\) is specified as part of the length, then the length is in characters, and *<max-length\>* must be specified, to a maximum of 5000.
+
+
+
+</dd>
+</dl>
+
+VARCHARhas no blank padding added to the storage of these strings.
 
 All index types, except DATE, TIME, and DATETIME/TIMESTAMP are supported for VARCHAR data to a maximum of to 255 bytes in length. For VARCHAR using character-length semantic, the maximum byte length depends on the number of bytes used per character. The limit becomes 255 divided by the number of bytes per character.
 

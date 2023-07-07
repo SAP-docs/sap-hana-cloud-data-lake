@@ -6,11 +6,6 @@ Renames, moves or alters the definition of a TEXT index.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -19,14 +14,15 @@ Renames, moves or alters the definition of a TEXT index.
 
 
 ```
-ALTER TEXT INDEX [ { [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname] }.]<text-index-name>
-   ON [ { [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname] }.]<table-name>  
+ALTER TEXT INDEX [ { <owner> | <schema-name> }.]<text-index-name>
+   ON [ { <owner> | <schema-name> }.]<table-name>  
    RENAME { AS | TO } <new-name>
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -34,10 +30,23 @@ ALTER TEXT INDEX [ { [/pandoc/div/div/horizontalrule/codeblock/span/varname
 
 ## Parameters
 
- RENAME
- :   Renames the TEXT index.
 
- 
+<dl>
+<dt><b>
+
+RENAME
+
+</b></dt>
+<dd>
+
+Renames the TEXT index.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa602711784f21015955aed036a843754__IQ_Permissions"/>
 

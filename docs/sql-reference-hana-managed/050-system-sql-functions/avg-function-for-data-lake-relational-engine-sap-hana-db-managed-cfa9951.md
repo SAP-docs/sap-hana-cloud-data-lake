@@ -16,13 +16,34 @@ AVG ( <numeric-expression> | DISTINCT <column-name>)
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The value that is the average calculated over a set of rows.
 
-  DISTINCT *<column-name\>*
- :   Computes the average of the unique values in *<column-name\>*. This is of limited usefulness, but provides for completeness
+<dl>
+<dt><b>
 
- 
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The value that is the average calculated over a set of rows.
+
+
+
+</dd><dt><b>
+
+DISTINCT *<column-name\>*
+
+</b></dt>
+<dd>
+
+Computes the average of the unique values in *<column-name\>*. This is of limited usefulness, but provides for completeness
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiocfa9951f7f2849798b476c280c824ffb__section_ltc_hhk_srb"/>
 

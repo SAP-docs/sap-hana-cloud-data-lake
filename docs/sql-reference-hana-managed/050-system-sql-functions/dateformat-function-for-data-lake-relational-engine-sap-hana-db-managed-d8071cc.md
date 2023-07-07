@@ -16,13 +16,34 @@ DATEFORMAT ( <datetime-expression>, <string-expression> )
 
 ## Parameters
 
- *<datetime-expression\>*
- :   The date and time to be converted, in the form of a date, time, timestamp, or character string.
 
-  *<string-expression\>*
- :   The format of the converted date.
+<dl>
+<dt><b>
 
- 
+*<datetime-expression\>*
+
+</b></dt>
+<dd>
+
+The date and time to be converted, in the form of a date, time, timestamp, or character string.
+
+
+
+</dd><dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The format of the converted date.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiod8071cc3053447a9bd6d90807082d61a__section_vx4_g2m_srb"/>
 

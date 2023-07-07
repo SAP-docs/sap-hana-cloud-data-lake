@@ -19,37 +19,66 @@ LIST(
 
 ## Parameters
 
- string-expression
- :   A string expression, usually a column name. When ALL is specified \(the default\), for each row in the group, the value of string-expression is added to the result string, with values separated by delimiter-string. When DISTINCT is specified, only unique string-expression values are added.
 
-  delimiter-string
- :   A delimiter string for the list items. The default setting is a comma. There is no delimiter if a value of NULL or an empty string is supplied. The delimiter-string must be a constant.
+<dl>
+<dt><b>
 
-  order-by-expression
- :   Order the items returned by the function. There is no comma preceding this argument, which makes it easy to use in the case where no delimiter-string is supplied.
+string-expression
 
-    *<order-by-expression\>* cannot be an integer literal. However, it can be a variable that contains an integer literal.
+</b></dt>
+<dd>
 
-    When an ORDER BY clause contains constants, they are interpreted by the optimizer and then replaced by an equivalent ORDER BY clause. For example, the optimizer interprets ORDER BY 'a' as ORDER BY expression.
+A string expression, usually a column name. When ALL is specified \(the default\), for each row in the group, the value of string-expression is added to the result string, with values separated by delimiter-string. When DISTINCT is specified, only unique string-expression values are added.
 
-    A query block containing more than one aggregate function with valid ORDER BY clauses can be executed if the ORDER BY clauses can be logically combined into a single ORDER BY clause. For example, the following clauses:
 
-    ```
-     ORDER BY expression1, 'a', expression2 
-    ```
 
-    ```
-    
-     ORDER BY expression1, 'b', expression2, 'c', expression3 
-    ```
+</dd><dt><b>
 
-    are subsumed by the clause:
+delimiter-string
 
-    ```
-     ORDER BY expression1, expression2, expression3 
-    ```
+</b></dt>
+<dd>
 
- 
+A delimiter string for the list items. The default setting is a comma. There is no delimiter if a value of NULL or an empty string is supplied. The delimiter-string must be a constant.
+
+
+
+</dd><dt><b>
+
+order-by-expression
+
+</b></dt>
+<dd>
+
+Order the items returned by the function. There is no comma preceding this argument, which makes it easy to use in the case where no delimiter-string is supplied.
+
+*<order-by-expression\>* cannot be an integer literal. However, it can be a variable that contains an integer literal.
+
+When an ORDER BY clause contains constants, they are interpreted by the optimizer and then replaced by an equivalent ORDER BY clause. For example, the optimizer interprets ORDER BY 'a' as ORDER BY expression.
+
+A query block containing more than one aggregate function with valid ORDER BY clauses can be executed if the ORDER BY clauses can be logically combined into a single ORDER BY clause. For example, the following clauses:
+
+```
+ ORDER BY expression1, 'a', expression2 
+```
+
+```
+
+ ORDER BY expression1, 'b', expression2, 'c', expression3 
+```
+
+are subsumed by the clause:
+
+```
+ ORDER BY expression1, expression2, expression3 
+```
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio7b4801a3a3a64799b52b9ace7257dfd9__section_kzq_4xg_trb"/>
 
@@ -80,14 +109,27 @@ This function supports NCHAR inputs and/or outputs.
 
 ## Standards and Compatibility
 
- SQL/2008
- :   Vendor extension.
 
-    Data lake Relational Engine supports SQL/2008 language feature F441, "Extended set function support", which permits operands of aggregate functions to be arbitrary expressions that are not column references.
+<dl>
+<dt><b>
 
-    Data lake Relational Engine does not support optional SQL/2008 feature F442, "Mixed column references in set functions". Data lake Relational Engine does not permit the arguments of an aggregate function to include both a column reference from the query block containing the LIST function, combined with an outer reference.
+SQL/2008
 
- 
+</b></dt>
+<dd>
+
+Vendor extension.
+
+Data lake Relational Engine supports SQL/2008 language feature F441, "Extended set function support", which permits operands of aggregate functions to be arbitrary expressions that are not column references.
+
+Data lake Relational Engine does not support optional SQL/2008 feature F442, "Mixed column references in set functions". Data lake Relational Engine does not permit the arguments of an aggregate function to include both a column reference from the query block containing the LIST function, combined with an outer reference.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio7b4801a3a3a64799b52b9ace7257dfd9__section_w3j_qxg_trb"/>
 

@@ -16,10 +16,23 @@ INTTOHEX ( <integer-expression> )
 
 ## Parameters
 
- *<integer-expression\>*
- :   The integer to be converted to hexadecimal.
 
- 
+<dl>
+<dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The integer to be converted to hexadecimal.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiocbe59f6c760e49a9ba1022e7d40f8642__section_jcb_j4h_trb"/>
 

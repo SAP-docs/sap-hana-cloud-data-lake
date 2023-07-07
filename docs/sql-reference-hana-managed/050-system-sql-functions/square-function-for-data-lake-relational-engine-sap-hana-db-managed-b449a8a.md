@@ -16,10 +16,23 @@ SQUARE ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   Is a column, variable, or expression with a data type that is either exact numeric, approximate numeric, money, or any type that can be implicitly converted to one of these types. For other data types, the SQUARE function generates an error. The return value is of DOUBLE data type.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+Is a column, variable, or expression with a data type that is either exact numeric, approximate numeric, money, or any type that can be implicitly converted to one of these types. For other data types, the SQUARE function generates an error. The return value is of DOUBLE data type.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiob449a8a0b1e949ef81aceed2ee770dd3__section_nwv_2w5_vrb"/>
 

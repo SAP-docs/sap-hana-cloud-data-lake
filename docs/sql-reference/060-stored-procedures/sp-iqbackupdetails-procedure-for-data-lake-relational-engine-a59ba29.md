@@ -23,10 +23,23 @@ sp_iqbackupdetails <backup_id> 
 
 ## Parameters
 
- *<backup\_id\>*
- :   The backup operation transaction identifier.
 
- 
+<dl>
+<dt><b>
+
+*<backup\_id\>*
+
+</b></dt>
+<dd>
+
+The backup operation transaction identifier.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa59ba29984f210158062fc278ebdfdba__section_arw_w11_nbb"/>
 
@@ -382,7 +395,7 @@ select * from sysiqbackuphistory
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

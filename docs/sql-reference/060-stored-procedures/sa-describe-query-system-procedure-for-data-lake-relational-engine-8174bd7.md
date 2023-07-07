@@ -6,6 +6,13 @@ Describes the result set for a query with one row describing each output column 
 
 
 
+> ### Restriction:  
+> This data lake Relational Engine procedure can be used when connected as follows:
+> 
+> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+
+
+
 ```
 sa_describe_query( 
 <query> 
@@ -19,13 +26,34 @@ sa_describe_query(
 
 ## Parameters
 
-  *<query\>* 
- :   Use this LONG VARCHAR parameter to specify the text of the SQL statement being described.
 
-   *<add\_keys\>* 
- :   Use this optional BIT parameter to specify whether to determine a set of columns that uniquely identify rows in the result set for the query being described. The default is 0; the database server does not attempt to identify the columns. See the Remarks section below for a full explanation of this parameter.
+<dl>
+<dt><b>
 
- 
+ *<query\>* 
+
+</b></dt>
+<dd>
+
+Use this LONG VARCHAR parameter to specify the text of the SQL statement being described.
+
+
+
+</dd><dt><b>
+
+ *<add\_keys\>* 
+
+</b></dt>
+<dd>
+
+Use this optional BIT parameter to specify whether to determine a set of columns that uniquely identify rows in the result set for the query being described. The default is 0; the database server does not attempt to identify the columns. See the Remarks section below for a full explanation of this parameter.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio8174bd7b6ce21014b1c9f89d8beb41cb__sa_describe_query_results"/>
 
@@ -778,9 +806,15 @@ depends on the length of the timestamp\_with\_time\_zone\_format option string
 
 
 
+<a name="loio8174bd7b6ce21014b1c9f89d8beb41cb__sa_describe_query_priv1"/>
+
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure.
+
+
+### 
+
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -825,5 +859,5 @@ The results shows a 1 in rows 3 and 4 of the result set, indicating that the col
 **Related Information**  
 
 
-[sa_describe_query System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/268f1ef2cade4d43be01e422595d548a.html "Describes the result set for a query with one row describing each output column of the query.") :arrow_upper_right:
+[sa_describe_query System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/268f1ef2cade4d43be01e422595d548a.html "Describes the result set for a query with one row describing each output column of the query.") :arrow_upper_right:
 

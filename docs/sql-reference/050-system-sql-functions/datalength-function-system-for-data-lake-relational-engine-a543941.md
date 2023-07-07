@@ -16,10 +16,23 @@ DATALENGTH ( <expression> )
 
 ## Parameters
 
- *<expression\>*
- :   The expression is usually a column name. If the expression is a string constant, it must be enclosed in quotes.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The expression is usually a column name. If the expression is a string constant, it must be enclosed in quotes.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Returns
 

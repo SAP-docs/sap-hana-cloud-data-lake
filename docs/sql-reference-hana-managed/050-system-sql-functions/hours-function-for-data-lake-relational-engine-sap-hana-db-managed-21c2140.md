@@ -18,13 +18,34 @@ HOURS ( <datetime-expression>
 
 ## Parameters
 
- *<datetime-expression\>*
- :   A date and time.
 
-  *<integer-expression\>*
- :   The number of hours to be added to the *<datetime-expression\>*. If *<integer-expression\>* is negative, the appropriate number of hours are subtracted from the date/time. If you supply an integer expression, the *<datetime-expression\>* must be explicitly cast as a datetime data type.
+<dl>
+<dt><b>
 
- 
+*<datetime-expression\>*
+
+</b></dt>
+<dd>
+
+A date and time.
+
+
+
+</dd><dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number of hours to be added to the *<datetime-expression\>*. If *<integer-expression\>* is negative, the appropriate number of hours are subtracted from the date/time. If you supply an integer expression, the *<datetime-expression\>* must be explicitly cast as a datetime data type.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio21c21405d89646019adb537e2ed90796__section_byp_h4g_trb"/>
 

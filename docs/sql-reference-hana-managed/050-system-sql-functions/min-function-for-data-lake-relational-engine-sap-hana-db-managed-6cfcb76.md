@@ -17,13 +17,34 @@ MIN ( <expression>
 
 ## Parameters
 
- *<expression\>*
- :   The expression for which the minimum value is to be calculated. This is commonly a column name.
 
-  DISTINCT *<column-name\>*
- :   Returns the same as <code>MIN ( <i class="varname">&lt;expression&gt;</i> )</code>, and is included for completeness.
+<dl>
+<dt><b>
 
- 
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The expression for which the minimum value is to be calculated. This is commonly a column name.
+
+
+
+</dd><dt><b>
+
+DISTINCT *<column-name\>*
+
+</b></dt>
+<dd>
+
+Returns the same as <code>MIN ( <i class="varname">&lt;expression&gt;</i> )</code>, and is included for completeness.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio6cfcb760c23641ab9c5aaa17d056f4c0__section_b1k_fhn_vrb"/>
 

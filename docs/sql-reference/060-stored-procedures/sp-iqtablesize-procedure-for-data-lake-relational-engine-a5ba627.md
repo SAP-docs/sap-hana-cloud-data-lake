@@ -23,13 +23,34 @@ sp_iqtablesize ( <table_owner>.<table_name> )
 
 ## Parameters
 
- *<table\_owner\>*
- :   The owner of the table.
 
-  *<table\_name\>*
- :   The name of the table.
+<dl>
+<dt><b>
 
- 
+*<table\_owner\>*
+
+</b></dt>
+<dd>
+
+The owner of the table.
+
+
+
+</dd><dt><b>
+
+*<table\_name\>*
+
+</b></dt>
+<dd>
+
+The name of the table.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5ba627c84f2101591d9cedf0830a4e0__sp_iqtablesize_returns1"/>
 
@@ -180,65 +201,19 @@ Returns the total size of the table in KBytes and NBlocks \(data lake Relational
 
 
 
-<a name="loioa5ba627c84f2101591d9cedf0830a4e0__iq_refbb_1807"/>
+<a name="loioa5ba627c84f2101591d9cedf0830a4e0__sp_iqtablesize_priv1"/>
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
-
-You also need one of the following:
 
 
-<table>
-<tr>
-<th valign="top">
+### 
 
-Privilege Name
+Requires EXECUTE object-level privilege on the procedure along with one of the following:
 
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
--   MANAGE ANY DBSPACE
--   ALTER ANY TABLE
 -   You own the table
-
-
-
-</td>
-<td valign="top">
-
-System privileges
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+-   MANAGE ANY DBSPACE system privilege
+-   ALTER ANY TABLE system privilege
 
 
 

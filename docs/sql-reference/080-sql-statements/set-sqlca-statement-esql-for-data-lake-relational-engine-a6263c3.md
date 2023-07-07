@@ -6,11 +6,6 @@ Tells the SQL preprocessor to use a SQLCA other than the default global *<sqlca\
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,14 +19,32 @@ SET SQLCA <sqlca>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa6263c3584f21015b49c8e4956f4ca03__IQ_Parameters"/>
 
 ## Parameters
 
- *<sqlca\>*
- :   Identifier or string
 
- 
+<dl>
+<dt><b>
+
+*<sqlca\>*
+
+</b></dt>
+<dd>
+
+Identifier or string
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa6263c3584f21015b49c8e4956f4ca03__IQ_Usage"/>
 

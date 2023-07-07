@@ -16,10 +16,23 @@ STRTOUUID ( <string-expression> )
 
 ## Parameters
 
-  *<string-expression\>* 
- :   A string in the format *<xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\>*
 
- 
+<dl>
+<dt><b>
+
+ *<string-expression\>* 
+
+</b></dt>
+<dd>
+
+A string in the format *<xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\>*
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio5572345aa04d4c2fbd9b9589ed18e296__section_oc2_js5_vrb"/>
 

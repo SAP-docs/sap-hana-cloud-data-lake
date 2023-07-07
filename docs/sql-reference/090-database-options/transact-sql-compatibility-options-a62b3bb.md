@@ -37,7 +37,7 @@ The available options are:
 
 [Interactive SQL Options](interactive-sql-options-a62b99d.md "Interactive SQL options change how Interactive SQL interacts with the database.")
 
-[Alphabetical List of Settable Options in Data Lake Relational Engine](alphabetical-list-of-settable-options-in-data-lake-relational-engine-a62bc88.md "Descriptions of settable database options.")
+[Alphabetical List of Settable Options in Data Lake Relational Engine](alphabetical-list-of-settable-options-in-data-lake-relational-engine-a62bc88.md "Settable database options let you configure database behavior.")
 
 [ON\_ERROR Option \[Interactive SQL\] for Data Lake Relational Engine](on-error-option-interactive-sql-for-data-lake-relational-engine-a6462f5.md "Controls the action taken if an error is encountered while executing statements in Interactive SQL.")
 

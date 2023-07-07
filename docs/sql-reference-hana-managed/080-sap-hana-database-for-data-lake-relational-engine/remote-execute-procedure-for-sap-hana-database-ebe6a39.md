@@ -7,8 +7,7 @@ Execute SQL commands on the remote data lake Relational Engine source.
 
 
 ```
-CALL [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <relational_container_name> (varname].REMOTE_EXECUTE(
+CALL <relational_container_name>.REMOTE_EXECUTE(
    '<statement_string>' ); 
 ```
 
@@ -18,10 +17,23 @@ CALL [/pandoc/div/div/horizontalrule/codeblock/span/varname
 
 ## Parameters
 
- *<statement\_string\>*
- :   Specifies the SQL statement to be executed on *<relational\_container\_name\>*.
 
- 
+<dl>
+<dt><b>
+
+*<statement\_string\>*
+
+</b></dt>
+<dd>
+
+Specifies the SQL statement to be executed on *<relational\_container\_name\>*.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioebe6a39a82a3421b8bb3a2100eda6a79__section_zhc_rnx_cjb"/>
 
@@ -37,7 +49,10 @@ Escape all strings **inside** the data lake Relational Engine DML or DDL *<state
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 
@@ -48,7 +63,6 @@ You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA
 The following example creates table T1 in data lake Relational Engine.
 
 ```
-CALL [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.REMOTE_EXECUTE( 'CREATE TABLE T1 (a INT, b INT)' );
+CALL SYSHDL_CONTAINER1.REMOTE_EXECUTE( 'CREATE TABLE T1 (a INT, b INT)' );
 ```
 

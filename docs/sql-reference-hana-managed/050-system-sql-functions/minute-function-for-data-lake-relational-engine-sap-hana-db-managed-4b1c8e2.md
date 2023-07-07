@@ -16,10 +16,23 @@ MINUTE ( <datetime-expression> )
 
 ## Parameters
 
- *<datetime-expression\>*
- :   The date/time value.
 
- 
+<dl>
+<dt><b>
+
+*<datetime-expression\>*
+
+</b></dt>
+<dd>
+
+The date/time value.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio4b1c8e2d8caa4878ac564dcdc0ffacea__section_zkb_5gn_vrb"/>
 

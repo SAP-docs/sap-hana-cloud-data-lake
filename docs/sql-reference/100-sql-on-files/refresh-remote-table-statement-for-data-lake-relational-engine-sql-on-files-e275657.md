@@ -32,15 +32,36 @@ REFRESH TABLE [ <owner> .]<virtual-table-name>[,... ] IN FILES_SERVICE
 
 ## Parameters
 
- *<owner\>*
- :   The owner of the table.
 
-  *<virtual-table-name\>*
- :   The virtual table defined on SQL on Files remote tables.
+<dl>
+<dt><b>
 
-    The `REFRESH TABLE` statement can specify SQL on Files remote tables, or virtual tables defined on SQL on Files remote tables. When specifying a list of virtual tables, the statement is equivalent to a list of remote tables defining the virtual tables.
+*<owner\>*
 
- 
+</b></dt>
+<dd>
+
+The owner of the table.
+
+
+
+</dd><dt><b>
+
+*<virtual-table-name\>*
+
+</b></dt>
+<dd>
+
+The virtual table defined on SQL on Files remote tables.
+
+The `REFRESH TABLE` statement can specify SQL on Files remote tables, or virtual tables defined on SQL on Files remote tables. When specifying a list of virtual tables, the statement is equivalent to a list of remote tables defining the virtual tables.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioe2756579d6354112a5e5e0f9fe0c2ccb__RT_remarks"/>
 
@@ -96,5 +117,5 @@ REFRESH TABLE ExternalSchema1.ExternalTable1 IN FILES_SERVICE;
 
 [CREATE \(Remote\) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](create-remote-table-statement-for-data-lake-relational-engine-sql-on-files-beffc07.md "Create a remote table managed by SQL on Files.")
 
-[REFRESH (Remote) TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) [SQL on Files]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/054b15028fcc43dba2b047f8dbe6b42b.html "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.") :arrow_upper_right:
+[REFRESH (Remote) TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) [SQL on Files]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/054b15028fcc43dba2b047f8dbe6b42b.html "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.") :arrow_upper_right:
 

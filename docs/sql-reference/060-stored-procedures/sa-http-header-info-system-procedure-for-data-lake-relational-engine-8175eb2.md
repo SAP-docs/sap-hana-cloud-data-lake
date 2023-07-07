@@ -21,8 +21,21 @@ sa_http_header_info( [<header_parm>] )
 
 ## Parameters
 
+
+<dl>
+<dt><b>
+
  *<header\_parm\>* 
-:   Use this optional VARCHAR\(255\) parameter to specify an HTTP header name. The default is NULL.
+
+</b></dt>
+<dd>
+
+Use this optional VARCHAR\(255\) parameter to specify an HTTP header name. The default is NULL.
+
+
+
+</dd>
+</dl>
 
 
 
@@ -116,7 +129,7 @@ This procedure returns a non-empty result set if it is called while processing a
 
 ## Privileges
 
-You must have EXECUTE privilege on the system procedure.
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

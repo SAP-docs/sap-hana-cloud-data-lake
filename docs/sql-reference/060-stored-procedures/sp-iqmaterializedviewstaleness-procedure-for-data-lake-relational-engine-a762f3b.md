@@ -23,13 +23,34 @@ sp_iqmaterializedviewstaleness( ' <view-name>[, <owner-name> ] ' )
 
 ## Parameter
 
- *<view-name\>*
- :   The name of the materialized view.
 
-  *<owner-name\>*
- :   The owner of the materialized view.
+<dl>
+<dt><b>
 
- 
+*<view-name\>*
+
+</b></dt>
+<dd>
+
+The name of the materialized view.
+
+
+
+</dd><dt><b>
+
+*<owner-name\>*
+
+</b></dt>
+<dd>
+
+The owner of the materialized view.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa762f3bcb4b14014821890ed5e6a25b8__sp_iqmaterializedviewstaleness_returns1"/>
 
@@ -207,11 +228,15 @@ The start time of the active transaction.
 
 
 
-<a name="loioa762f3bcb4b14014821890ed5e6a25b8__iq_refbb_1657"/>
+<a name="loioa762f3bcb4b14014821890ed5e6a25b8__sp_iqmaterializedviewstaleness_priv1"/>
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
+
+
+### 
+
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -246,5 +271,5 @@ SELECT * FROM sp_iqmaterializedviewstaleness('M_T10');
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine](../080-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-faab95d.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sp_iqmaterializedviewstaleness System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/0342f57672ee4657adbbfe5f124a9d48.html "Displays staleness information about the visible version of a materialized view.") :arrow_upper_right:
+[sp_iqmaterializedviewstaleness System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/0342f57672ee4657adbbfe5f124a9d48.html "Displays staleness information about the visible version of a materialized view.") :arrow_upper_right:
 

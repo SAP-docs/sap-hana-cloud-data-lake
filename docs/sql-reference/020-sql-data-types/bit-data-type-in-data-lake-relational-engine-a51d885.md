@@ -74,7 +74,19 @@ The underlying data type is BIT and the default nullability is NULL.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Vendor extension.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Vendor extension.
+
+
+
+</dd>
+</dl>
+

@@ -17,22 +17,67 @@ LEAD ( <value_expr>[, <offset>[, <default> ] ] )
 
 ## Parameters
 
- *<value\_expr\>*
- :   Table column or expression defining the offset data to return from the table.
 
-  *<offset\>*
- :   The number of rows below the current row, expressed as a non-negative exact numeric literal, or as a SQL variable with exact numeric data. The permitted range is 0 to 231.
+<dl>
+<dt><b>
 
-  *<default\>*
- :   The value to return if the *<offset\>* value goes beyond the scope of the table or partition.
+*<value\_expr\>*
 
-  *<window partition\>*
- :   \(Optional\) One or more value expressions separated by commas indicating how you want to divide the set of result rows.
+</b></dt>
+<dd>
 
-  *<window ordering\>*
- :   Defines the expressions for sorting rows within window partitions, if specified, or within the result set if you did not specify a window partition.
+Table column or expression defining the offset data to return from the table.
 
- 
+
+
+</dd><dt><b>
+
+*<offset\>*
+
+</b></dt>
+<dd>
+
+The number of rows below the current row, expressed as a non-negative exact numeric literal, or as a SQL variable with exact numeric data. The permitted range is 0 to 231.
+
+
+
+</dd><dt><b>
+
+*<default\>*
+
+</b></dt>
+<dd>
+
+The value to return if the *<offset\>* value goes beyond the scope of the table or partition.
+
+
+
+</dd><dt><b>
+
+*<window partition\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) One or more value expressions separated by commas indicating how you want to divide the set of result rows.
+
+
+
+</dd><dt><b>
+
+*<window ordering\>*
+
+</b></dt>
+<dd>
+
+Defines the expressions for sorting rows within window partitions, if specified, or within the result set if you did not specify a window partition.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa55d051484f21015b82fe3d1795a7a94__LEAD_remarks1"/>
 
@@ -42,7 +87,7 @@ The LEAD function requires an OVER \(ORDER\_BY\) window specification. The windo
 
 You cannot define an analytic expression in *<value\_expr\>*. That is, you cannot nest analytic functions, but you can use other built-in function expressions for *<value\_expr\>*.
 
-You must enter a non-negative numeric data type for *<offset\>*. Entering ***0*** returns the current row. Entering a negative number generates an error.
+You must enter a non-negative numeric data type for *<offset\>*. Entering `0` returns the current row. Entering a negative number generates an error.
 
 The default value of *<default\>* is NULL. The data type of *<default\>* must be implicitly convertible to the data type of the *<value\_expr\>* value or else data lake Relational Engine generates a conversion error.
 
@@ -92,5 +137,5 @@ dID        StartDate    Salary      Lead(Salary)
 
 [LAG Function \[Analytical\] for Data Lake Relational Engine](lag-function-analytical-for-data-lake-relational-engine-a55b772.md "An interrow function that returns the value of an attribute in a previous row in the table or table partition.")
 
-[LEAD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/b6a23b08149640eab401cd98acf6b638.html "An interrow function that returns the value of an attribute in a subsequent row in the table or table partition.") :arrow_upper_right:
+[LEAD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/b6a23b08149640eab401cd98acf6b638.html "An interrow function that returns the value of an attribute in a subsequent row in the table or table partition.") :arrow_upper_right:
 

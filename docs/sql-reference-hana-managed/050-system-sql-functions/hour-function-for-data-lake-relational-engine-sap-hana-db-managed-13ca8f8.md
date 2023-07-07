@@ -16,10 +16,23 @@ HOUR ( <datetime-expression> )
 
 ## Parameters
 
- *<datetime-expression\>*
- :   The date/time.
 
- 
+<dl>
+<dt><b>
+
+*<datetime-expression\>*
+
+</b></dt>
+<dd>
+
+The date/time.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio13ca8f80a24a45b3ae7e434753dd97c8__section_wwp_t4g_trb"/>
 

@@ -16,10 +16,23 @@ CUME_DIST () OVER (<window-spec>)
 
 ## Parameters
 
- *<window-spec\>*
- :   Specified when using this function as a window function.
 
- 
+<dl>
+<dt><b>
+
+*<window-spec\>*
+
+</b></dt>
+<dd>
+
+Specified when using this function as a window function.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa54314be84f210159603ce84a892876c__CUME_DIST_returns1"/>
 
@@ -194,5 +207,5 @@ Overbey
 **Related Information**  
 
 
-[CUME_DIST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/65729084257448758370d2196d0f1021.html "The CUME_DIST function is a rank analytical function that calculates the relative position of one value among a group of rows. It returns a decimal value between 0 and 1.") :arrow_upper_right:
+[CUME_DIST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/65729084257448758370d2196d0f1021.html "The CUME_DIST function is a rank analytical function that calculates the relative position of one value among a group of rows. It returns a decimal value between 0 and 1.") :arrow_upper_right:
 

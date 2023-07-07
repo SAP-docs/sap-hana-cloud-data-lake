@@ -6,11 +6,6 @@ Releases a savepoint within the current transaction.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,14 +19,32 @@ RELEASE SAVEPOINT [ <savepoint-name> ]
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa622de8d84f21015be4fc3e6a28ea41e__IQ_Parameters"/>
 
 ## Parameters
 
- *<savepoint-name\>*
- :   An identifier specified on a `SAVEPOINT` statement within the current transaction. If *<savepoint-name\>* is omitted, the most recent savepoint is released.
 
- 
+<dl>
+<dt><b>
+
+*<savepoint-name\>*
+
+</b></dt>
+<dd>
+
+An identifier specified on a `SAVEPOINT` statement within the current transaction. If *<savepoint-name\>* is omitted, the most recent savepoint is released.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa622de8d84f21015be4fc3e6a28ea41e__IQ_Usage"/>
 

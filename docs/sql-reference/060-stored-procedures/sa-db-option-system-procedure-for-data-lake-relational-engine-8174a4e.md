@@ -24,13 +24,34 @@ sa_db_option(
 
 ## Parameters
 
-  *<opt\>* 
- :   Use this CHAR\(128\) parameter to specify a database option name.
 
-   *<val\>* 
- :   Use this LONG VARCHAR parameter to specify the new value for the database option.
+<dl>
+<dt><b>
 
- 
+ *<opt\>* 
+
+</b></dt>
+<dd>
+
+Use this CHAR\(128\) parameter to specify a database option name.
+
+
+
+</dd><dt><b>
+
+ *<val\>* 
+
+</b></dt>
+<dd>
+
+Use this LONG VARCHAR parameter to specify the new value for the database option.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -172,7 +193,10 @@ When CollectStmtPerfStats is set to ON, it collects statement performance summar
 
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure, as well as the SERVER OPERATOR system privilege.
+Requires all of:
+
+-   EXECUTE object-level privilege on the procedure
+-   SERVER OPERATOR system privilege
 
 
 

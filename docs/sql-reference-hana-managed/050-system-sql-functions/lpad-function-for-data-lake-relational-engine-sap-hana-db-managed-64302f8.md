@@ -16,16 +16,45 @@ LPAD ( <str>, <n> [, <pattern> ] )
 
 ## Parameters
 
- *<str\>*
- :   The string to be padded.
 
-  *<n\>*
- :   The length to which to pad *<str\>*. *<n\>* must be an integer.
+<dl>
+<dt><b>
 
-  *<pattern\>*
- :   A string of characters to use for padding instead of spaces.
+*<str\>*
 
- 
+</b></dt>
+<dd>
+
+The string to be padded.
+
+
+
+</dd><dt><b>
+
+*<n\>*
+
+</b></dt>
+<dd>
+
+The length to which to pad *<str\>*. *<n\>* must be an integer.
+
+
+
+</dd><dt><b>
+
+*<pattern\>*
+
+</b></dt>
+<dd>
+
+A string of characters to use for padding instead of spaces.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio64302f89b4d04a0fae9e59e8530f27fe__section_m3n_nvg_trb"/>
 

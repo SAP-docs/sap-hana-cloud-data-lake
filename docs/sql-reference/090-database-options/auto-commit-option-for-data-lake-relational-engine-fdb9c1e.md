@@ -2,7 +2,7 @@
 
 # AUTO\_COMMIT Option for Data Lake Relational Engine
 
-Causes an automatic commit after every request.
+Causes an automatic commit after every DML request.
 
 
 
@@ -13,7 +13,7 @@ Causes an automatic commit after every request.
 
 
 
-<a name="loiofdb9c1e166c841f2b0a20ade151a9051__section_u1n_l5b_qkb"/>
+<a name="loiofdb9c1e166c841f2b0a20ade151a9051__auto_commit_syntax1"/>
 
 ## Syntax
 
@@ -23,29 +23,37 @@ AUTO_COMMIT = { ON | OFF }
 
 
 
+<a name="loiofdb9c1e166c841f2b0a20ade151a9051__auto_commit_values1"/>
+
 ## Allowed Values
 
-On, Off
+ON, OFF
 
 
+
+<a name="loiofdb9c1e166c841f2b0a20ade151a9051__auto_commit_default1"/>
 
 ## Default
 
-Off
+OFF
 
 
 
-<a name="loiofdb9c1e166c841f2b0a20ade151a9051__section_k3c_gxb_3qb"/>
+<a name="loiofdb9c1e166c841f2b0a20ade151a9051__auto_commit_priv1"/>
 
 ## Privileges
 
 Privilege Category: PUBLIC
 
+
+
+### 
+
 Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this database option.
 
 
 
-<a name="loiofdb9c1e166c841f2b0a20ade151a9051__auto-commit-option-scope"/>
+<a name="loiofdb9c1e166c841f2b0a20ade151a9051__auto_commit_scope1"/>
 
 ## Scope
 
@@ -145,15 +153,21 @@ No
 
 
 
+<a name="loiofdb9c1e166c841f2b0a20ade151a9051__auto_commit_remarks1"/>
+
 ## Remarks
 
-If this option is set to On, then the database server automatically commits after every request. This option can only be set temporarily for a connection.
+If this option is set to On, then the database server automatically commits after every DML request. This option can only be set temporarily for a connection.
+
+The AUTO\_COMMIT option cannot be set to ON if the AUTOCOMMIT\_DDL is currently set to OFF as these two options are contradictory.
 
 > ### Note:  
 > The AUTO\_COMMIT option is different from the chained option. Setting AUTO\_COMMIT to On forces the database server to commit after every request. Setting the CHAINED option to Off forces the database server to commit after each statement. This distinction is most important when executing a stored procedure. Setting the CHAINED option to Off results in a commit request after the execution of each individual statement within the procedure. Setting the AUTO\_COMMIT option to On results in a single commit request once the entire procedure finishes executing. In cases where automatic commit is necessary, it is much better to use the AUTO\_COMMIT option rather than the CHAINED option.
 
 **Related Information**  
 
+
+[AUTOCOMMIT\_DDL Option for Data Lake Relational Engine](autocommit-ddl-option-for-data-lake-relational-engine-a6a6389.md "Controls whether or not an automatic commit occurs after every DDL transaction.")
 
 [Set a Database Option](set-a-database-option-0dcb893.md "You set options with the SET OPTION statement.")
 

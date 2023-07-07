@@ -6,11 +6,6 @@ Drops a JWT provider from the data lake Relational Engine database.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,21 +19,47 @@ DROP JWT PROVIDER <jwt_provider_name> [ CASCADE ]
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioc20d71c4c669410780a5cab922e71c5d__IQ_Parameters"/>
 
 ## Parameters
 
- *<jwt\_provider\_name\>*
- :   Specifies the identifier of a JWT provider to drop.
 
-    ```
-    <jwt_provider_name> ::= <simple_identifier>
-    ```
+<dl>
+<dt><b>
 
-  CASCADE
- :   Removes all mappings that reference the provider.
+*<jwt\_provider\_name\>*
 
- 
+</b></dt>
+<dd>
+
+Specifies the identifier of a JWT provider to drop.
+
+```
+<jwt_provider_name> ::= <simple_identifier>
+```
+
+
+
+</dd><dt><b>
+
+CASCADE
+
+</b></dt>
+<dd>
+
+Removes all mappings that reference the provider.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioc20d71c4c669410780a5cab922e71c5d__IQ_Permissions"/>
 

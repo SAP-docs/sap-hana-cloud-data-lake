@@ -16,10 +16,23 @@ DEGREES ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   An angle in radians.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+An angle in radians.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio0e25a5ef993c45a582df334ea2178db7__section_wzr_p1m_srb"/>
 

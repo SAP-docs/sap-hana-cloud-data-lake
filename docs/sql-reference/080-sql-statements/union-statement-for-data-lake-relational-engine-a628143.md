@@ -6,11 +6,6 @@ Combines the results of two or more select statements.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -27,22 +22,48 @@ Combines the results of two or more select statements.
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa628143c84f21015866a8b40c421ead0__IQ_Parameters"/>
 
 ## Parameters
 
- ALL
- :   The results of UNION ALL are the combined results of the component `SELECT` statements. The results of UNION are the same as UNION ALL, except that duplicate rows are eliminated. Eliminating duplicates requires extra processing, so UNION ALL should be used instead of UNION where possible.
 
-  *<order-by-clause\>*
- :   Only integers are allowed in the order by list. These integers specify the position of the columns to be sorted.
+<dl>
+<dt><b>
 
-    ```
-    <order-by-clause> ::=
-       ORDER BY <integer> [ { ASC | DESC } ]
-    ```
+ALL
 
- 
+</b></dt>
+<dd>
+
+The results of UNION ALL are the combined results of the component `SELECT` statements. The results of UNION are the same as UNION ALL, except that duplicate rows are eliminated. Eliminating duplicates requires extra processing, so UNION ALL should be used instead of UNION where possible.
+
+
+
+</dd><dt><b>
+
+*<order-by-clause\>*
+
+</b></dt>
+<dd>
+
+Only integers are allowed in the order by list. These integers specify the position of the columns to be sorted.
+
+```
+<order-by-clause> ::=
+   ORDER BY <integer> [ { ASC | DESC } ]
+```
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa628143c84f21015866a8b40c421ead0__IQ_Usage"/>
 

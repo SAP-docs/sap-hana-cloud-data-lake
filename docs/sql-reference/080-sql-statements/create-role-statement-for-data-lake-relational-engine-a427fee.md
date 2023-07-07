@@ -6,11 +6,6 @@ Creates a new role, extends an existing user to act as a role, or manages role a
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -25,37 +20,108 @@ CREATE [ OR REPLACE ] ROLE { <role_name> | FOR USER <user_id> }
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa427feea84f21015941fe83a5ba6eb0b__IQ_Parameters"/>
 
 ## Parameters
 
- *<role\_name\>*
- :   Unless you are using the OR REPLACE clause, *<role\_name\>* cannot already exist in the database.
 
-  OR REPLACE
- :   *<role\_name\>* must already exist in the database. If *<role\_name\>* does not already exist, a new user-defined role is created. All current administrators are replaced by those specified in the *<admin\_name\>* clause as follows:
+<dl>
+<dt><b>
 
-    -   All existing role administrators granted the WITH ADMIN OPTION not included on the new role administrators list become members of the role with no administrative rights on the role.
-    -   All existing role administrators granted the WITH ADMIN ONLY OPTION not included on the new role administrators list are removed as members of the role.
+*<role\_name\>*
 
-    When using the OR REPLACE clause, if an existing role administrator is included on the new role administrators list he or she retains his or her original administrative rights if they are higher than the replacement rights. For example, User A is an existing role administrator originally granted WITH ADMIN rights on the role. New role administrators are granted WITH ADMIN ONLY rights. If User A is included on this list, User A retains the higher WITH ADMIN rights.
+</b></dt>
+<dd>
 
-  FOR USER *<user\_id\>*
- :   When using the FOR USER clause without the OR REPLACE, *<user\_id\>* must be the name of an existing user that currently does not have the ability to act as a role.
+Unless you are using the OR REPLACE clause, *<role\_name\>* cannot already exist in the database.
 
-  *<admin\_name\>*
- :   List of users to be designated administrators of the role.
 
-  WITH ADMIN
- :   Each *<admin\_name\>* specified is granted administrative privileges over the role. They also inherit all underlying system privileges of the role. WITH ADMIN clause is not valid when SYS\_MANAGE\_ROLES\_ROLE is included on the list.
 
-  WITH ADMIN ONLY
- :   Each *<admin\_name\>* specified is granted administrative privileges only over the role. They do not inherit the underlying system privileges of the role.
+</dd><dt><b>
 
-  SYS\_MANAGE\_ROLES\_ROLE
- :   Allows global role administrators to administer the role. Can be specified in conjunction with the WITH ADMIN ONLY clause.
+OR REPLACE
 
- 
+</b></dt>
+<dd>
+
+*<role\_name\>* must already exist in the database. If *<role\_name\>* does not already exist, a new user-defined role is created. All current administrators are replaced by those specified in the *<admin\_name\>* clause as follows:
+
+-   All existing role administrators granted the WITH ADMIN OPTION not included on the new role administrators list become members of the role with no administrative rights on the role.
+-   All existing role administrators granted the WITH ADMIN ONLY OPTION not included on the new role administrators list are removed as members of the role.
+
+When using the OR REPLACE clause, if an existing role administrator is included on the new role administrators list he or she retains his or her original administrative rights if they are higher than the replacement rights. For example, User A is an existing role administrator originally granted WITH ADMIN rights on the role. New role administrators are granted WITH ADMIN ONLY rights. If User A is included on this list, User A retains the higher WITH ADMIN rights.
+
+
+
+</dd><dt><b>
+
+FOR USER *<user\_id\>*
+
+</b></dt>
+<dd>
+
+When using the FOR USER clause without the OR REPLACE, *<user\_id\>* must be the name of an existing user that currently does not have the ability to act as a role.
+
+
+
+</dd><dt><b>
+
+*<admin\_name\>*
+
+</b></dt>
+<dd>
+
+List of users to be designated administrators of the role.
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+WITH ADMIN
+
+</b></dt>
+<dd>
+
+Each *<admin\_name\>* specified is granted administrative privileges over the role. They also inherit all underlying system privileges of the role. WITH ADMIN clause is not valid when SYS\_MANAGE\_ROLES\_ROLE is included on the list.
+
+
+
+</dd><dt><b>
+
+WITH ADMIN ONLY
+
+</b></dt>
+<dd>
+
+Each *<admin\_name\>* specified is granted administrative privileges only over the role. They do not inherit the underlying system privileges of the role.
+
+
+
+</dd><dt><b>
+
+SYS\_MANAGE\_ROLES\_ROLE
+
+</b></dt>
+<dd>
+
+Allows global role administrators to administer the role. Can be specified in conjunction with the WITH ADMIN ONLY clause.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa427feea84f21015941fe83a5ba6eb0b__IQ_Usage"/>
 

@@ -11,9 +11,7 @@ Removes an SAP HANA database virtual table that points to a data lake Relational
 ## Syntax
 
 ```
-DROP TABLE [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <hana_relational_container_schema_name> (varname].[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <virtual_table_name> (varname] [ <drop_option> ] [ WITH REMOTE ]
+DROP TABLE <hana_relational_container_schema_name>.<virtual_table_name> [ <drop_option> ] [ WITH REMOTE ]
 ```
 
 
@@ -22,23 +20,44 @@ DROP TABLE [/pandoc/div/div/horizontalrule/codeblock/span/varname
 
 ## Syntax Elements
 
- *<drop\_option\>*
- :   Specifies the drop option to use.
 
-    ```
-    <drop_option> ::= { CASCADE | RESTRICT }
-    ```
+<dl>
+<dt><b>
 
-    CASCADE drops the table and dependent objects. RESTRICT drops the table only when dependent objects do not exist. If this drop option is used and a dependent object exists, then an error is thrown.
+*<drop\_option\>*
 
-    If *<drop\_option\>* is not specified, then a non-cascaded drop is performed, which only drops the specified table. Dependent objects of the table are invalidated, but not dropped.
+</b></dt>
+<dd>
 
-    The invalidated objects can be re-validated when an object that has the same schema and object name is created.
+Specifies the drop option to use.
 
-  WITH REMOTE
- :   Drops the virtual table from the local source and the corresponding table on the remote source. This option is only supported for virtual tables.
+```
+<drop_option> ::= { CASCADE | RESTRICT }
+```
 
- 
+CASCADE drops the table and dependent objects. RESTRICT drops the table only when dependent objects do not exist. If this drop option is used and a dependent object exists, then an error is thrown.
+
+If *<drop\_option\>* is not specified, then a non-cascaded drop is performed, which only drops the specified table. Dependent objects of the table are invalidated, but not dropped.
+
+The invalidated objects can be re-validated when an object that has the same schema and object name is created.
+
+
+
+</dd><dt><b>
+
+WITH REMOTE
+
+</b></dt>
+<dd>
+
+Drops the virtual table from the local source and the corresponding table on the remote source. This option is only supported for virtual tables.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio6a7fe7ed9c6a4e12b494e08ec3f45880__sql_drop_table_1sql_drop_table_description"/>
 

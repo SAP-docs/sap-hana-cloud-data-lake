@@ -23,12 +23,25 @@ sp_iqshowpsexe [ <connection-id> ]
 
 ## Parameters
 
+
+<dl>
+<dt><b>
+
 *<connection-id\>*
-:   \(Optional\) An integer representing the connection ID.
 
-    If *<connection-id\>* is specified, sp\_iqshowpsexe returns information only about the specified connection. If *<connection-id\>* is not specified, sp\_iqshowpsexe returns information about all connections.
+</b></dt>
+<dd>
 
-    If the specified connection-id does not exist, sp\_iqshowpsexe returns no rows.
+\(Optional\) An integer representing the connection ID.
+
+If *<connection-id\>* is specified, sp\_iqshowpsexe returns information only about the specified connection. If *<connection-id\>* is not specified, sp\_iqshowpsexe returns information about all connections.
+
+If the specified connection-id does not exist, sp\_iqshowpsexe returns no rows.
+
+
+
+</dd>
+</dl>
 
 
 
@@ -220,59 +233,7 @@ The sp\_iqshowpsexe stored procedure displays information about the settings of 
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
-
-You also need one of the following:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
--   MONITOR
-
-
-
-</td>
-<td valign="top">
-
-System privileges
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+Requires EXECUTE object-level privilege on the procedure along with the MONITOR system privilege.
 
 
 

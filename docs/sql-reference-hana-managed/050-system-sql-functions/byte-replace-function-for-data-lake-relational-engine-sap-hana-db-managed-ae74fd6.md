@@ -16,16 +16,45 @@ BYTE_REPLACE( <source_string> , <search_string> , <replace_string> )
 
 ## Parameters
 
-  *<source\_string\>* 
- :   The string to be searched.
 
-   *<search\_string\>* 
- :   The string to be searched for within *<source\_string\>* and replaced by *<replace\_string\>*. *<search\_string\>* is limited to 255 bytes. If *<search\_string\>* is an empty string, then *<source\_string\>* is returned unchanged.
+<dl>
+<dt><b>
 
-   *<replace\_string\>* 
- :   The string that replaces all instances of *<search\_string\>*. If *<replacement\_string\>* is an empty string, then all occurrences of *<search\_string\>* are deleted.
+ *<source\_string\>* 
 
- 
+</b></dt>
+<dd>
+
+The string to be searched.
+
+
+
+</dd><dt><b>
+
+ *<search\_string\>* 
+
+</b></dt>
+<dd>
+
+The string to be searched for within *<source\_string\>* and replaced by *<replace\_string\>*. *<search\_string\>* is limited to 255 bytes. If *<search\_string\>* is an empty string, then *<source\_string\>* is returned unchanged.
+
+
+
+</dd><dt><b>
+
+ *<replace\_string\>* 
+
+</b></dt>
+<dd>
+
+The string that replaces all instances of *<search\_string\>*. If *<replacement\_string\>* is an empty string, then all occurrences of *<search\_string\>* are deleted.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioae74fd6f62dc4cd5b24408ce29a73fa3__section_bnl_m2l_srb"/>
 

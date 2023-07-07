@@ -8,343 +8,419 @@ When a variable is created, the initial value is set to NULL unless a default is
 
 Variables are not affected by COMMIT or ROLLBACK statements.
 
- Connection-scope variables
- :   Connection-scope variables are set and used in the context of a connection. They are not available to other connections. There are two types of connection-scope variables: **connection-level** and **local** \(also referred to as **declared**\). You can also create connection-scope variables of type TABLE REF to hold references to tables; these are called table reference variables.
 
-     Connection-level variables
-     :   Connection-level variables are created by using the CREATE VARIABLE statement and are typically used to make values available to any procedure executed by the connection.
+<dl>
+<dt><b>
 
-        Connection-level variables persist only for the duration of the connection or until the variable is explicitly dropped by using the DROP VARIABLE statement.
+Connection-scope variables
 
-      Local \(declared\) variables
-     :   Local variables are created by using the DECLARE statement inside of a BEGIN...END block, and are typically used to store and modify values within the same compound statement that the local variable is declared in. Local variable values are not available for use outside of the context of the BEGIN...END block.
+</b></dt>
+<dd>
 
-        Local variables persist only for the duration of the BEGIN...END block in which they are declared, and they can also be dropped.
+Connection-scope variables are set and used in the context of a connection. They are not available to other connections. There are two types of connection-scope variables: **connection-level** and **local** \(also referred to as **declared**\). You can also create connection-scope variables of type TABLE REF to hold references to tables; these are called table reference variables.
 
-   Database-scope variables
- :   Database-scope variables are used in the context of the database \(instead of connection\), and are a great way to share values across connections. Their intended use is to store small, infrequently changing, shared values. Storing large or frequently changing values may affect the performance of your application, and is not recommended. The initial values of database-scope variables persist after the database restarts \(that is, changes to their initial value do not persist between database restarts\). Database-scope variables can be used in the same manner as connection-scope and global variables, but they cannot be defined with the data type ROW, ARRAY, or TABLE REF.
 
-     Database-scope variables owned by users
-     :   When a database-scope variable is owned by a user, only that user can select from, and update, that variable, and can do so regardless of the connection.
+<dl>
+<dt><b>
 
-        Database-scope variables can also be owned by a role. However, the only access to a database-scope variable owned by a role is through the stored procedures, user-defined functions, and events owned by that role.
+Connection-level variables
 
-      Database-scope variables owned by PUBLIC
-     :   Database variables owned by PUBLIC are available to all users and connections provided the users have the right system privileges.
+</b></dt>
+<dd>
 
-     Access to, and administration of, database-scope variables requires system privileges that vary depending on who owns the variable \(self, another user, or PUBLIC\). The following table summarizes the privileges required to access and administer database-scope variables:
+Connection-level variables are created by using the CREATE VARIABLE statement and are typically used to make values available to any procedure executed by the connection.
 
-    **Privileges required for administering database-scope variables**
+Connection-level variables persist only for the duration of the connection or until the variable is explicitly dropped by using the DROP VARIABLE statement.
 
 
-    <table>
-    <tr>
-    <th valign="top">
 
-    Action
+</dd>
+</dl>
 
 
-    
-    </th>
-    <th valign="top">
+<dl>
+<dt><b>
 
-    Owned by
+Local \(declared\) variables
 
+</b></dt>
+<dd>
 
-    
-    </th>
-    <th valign="top">
+Local variables are created by using the DECLARE statement inside of a BEGIN...END block, and are typically used to store and modify values within the same compound statement that the local variable is declared in. Local variable values are not available for use outside of the context of the BEGIN...END block.
 
-    Privilege Required
+Local variables persist only for the duration of the BEGIN...END block in which they are declared, and they can also be dropped.
 
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    Create a database-scope variable
+</dd>
+</dl>
 
 
-    
-    </td>
-    <td valign="top">
 
-    self
+</dd><dt><b>
 
+Database-scope variables
 
-    
-    </td>
-    <td valign="top">
+</b></dt>
+<dd>
 
-    MANAGE ANY DATABASE VARIABLE
+Database-scope variables are used in the context of the database \(instead of connection\), and are a great way to share values across connections. Their intended use is to store small, infrequently changing, shared values. Storing large or frequently changing values may affect the performance of your application, and is not recommended. The initial values of database-scope variables persist after the database restarts \(that is, changes to their initial value do not persist between database restarts\). Database-scope variables can be used in the same manner as connection-scope and global variables, but they cannot be defined with the data type ROW, ARRAY, or TABLE REF.
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+<dl>
+<dt><b>
 
-    Create a database-scope variable
+Database-scope variables owned by users
 
+</b></dt>
+<dd>
 
-    
-    </td>
-    <td valign="top">
+When a database-scope variable is owned by a user, only that user can select from, and update, that variable, and can do so regardless of the connection.
 
-    another user
+Database-scope variables can also be owned by a role. However, the only access to a database-scope variable owned by a role is through the stored procedures, user-defined functions, and events owned by that role.
 
 
-    
-    </td>
-    <td valign="top">
 
-    MANAGE ANY DATABASE VARIABLE
+</dd><dt><b>
 
+Database-scope variables owned by PUBLIC
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+</b></dt>
+<dd>
 
-    Create a database-scope variable
+Database variables owned by PUBLIC are available to all users and connections provided the users have the right system privileges.
 
 
-    
-    </td>
-    <td valign="top">
 
-    PUBLIC
+</dd>
+</dl>
 
+Access to, and administration of, database-scope variables requires system privileges that vary depending on who owns the variable \(self, another user, or PUBLIC\). The following table summarizes the privileges required to access and administer database-scope variables:
 
-    
-    </td>
-    <td valign="top">
+**Privileges required for administering database-scope variables**
 
-    MANAGE ANY DATABASE VARIABLE
 
+<table>
+<tr>
+<th valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+Action
 
-    Update a database-scope variable
 
 
-    
-    </td>
-    <td valign="top">
+</th>
+<th valign="top">
 
-    self
+Owned by
 
 
-    
-    </td>
-    <td valign="top">
 
-    none required
+</th>
+<th valign="top">
 
+Privilege Required
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    Update a database-scope variable
 
+</th>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
+Create a database-scope variable
 
-    another user
 
 
-    
-    </td>
-    <td valign="top">
+</td>
+<td valign="top">
 
-    not allowed
+self
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    Update a database-scope variable
+</td>
+<td valign="top">
 
+MANAGE ANY DATABASE VARIABLE
 
-    
-    </td>
-    <td valign="top">
 
-    PUBLIC
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
+Create a database-scope variable
 
-    UPDATE PUBLIC DATABASE VARIABLE
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+</td>
+<td valign="top">
 
-    Select from a database-scope variable
+another user
 
 
-    
-    </td>
-    <td valign="top">
 
-    self
+</td>
+<td valign="top">
 
+MANAGE ANY DATABASE VARIABLE
 
-    
-    </td>
-    <td valign="top">
 
-    none
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+Create a database-scope variable
 
-    Select from a database-scope variable
 
 
-    
-    </td>
-    <td valign="top">
+</td>
+<td valign="top">
 
-    another user
+PUBLIC
 
 
-    
-    </td>
-    <td valign="top">
 
-    not allowed
+</td>
+<td valign="top">
 
+MANAGE ANY DATABASE VARIABLE
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    Select from a database-scope variable
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
+Update a database-scope variable
 
-    PUBLIC
 
 
-    
-    </td>
-    <td valign="top">
+</td>
+<td valign="top">
 
-    SELECT PUBLIC DATABASE VARIABLE
+self
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    Drop a database-scope variable
+</td>
+<td valign="top">
 
+none required
 
-    
-    </td>
-    <td valign="top">
 
-    self
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
+Update a database-scope variable
 
-    none required
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+</td>
+<td valign="top">
 
-    Drop a database-scope variable
+another user
 
 
-    
-    </td>
-    <td valign="top">
 
-    another user
+</td>
+<td valign="top">
 
+not allowed
 
-    
-    </td>
-    <td valign="top">
 
-    MANAGE ANY DATABASE VARIABLE
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+Update a database-scope variable
 
-    Drop a database-scope variable
 
 
-    
-    </td>
-    <td valign="top">
+</td>
+<td valign="top">
 
-    PUBLIC
+PUBLIC
 
 
-    
-    </td>
-    <td valign="top">
 
-    MANAGE ANY DATABASE VARIABLE
+</td>
+<td valign="top">
 
+UPDATE PUBLIC DATABASE VARIABLE
 
-    
-    </td>
-    </tr>
-    </table>
-    
-  Global Variables
- :   Global variables are used in the context of the database, but can only be set by the database server. Although you cannot directly set a global variable, some global variable values are indirectly set in response to user activity. For example, some global variables, such as @@identity, hold connection-specific information, while other variables, such as @@connections, have values that are common to all connections.
 
-    Global variables are visually distinguished from other variables by having two @ signs preceding their names. For example, @@error and @@rowcount are global variables.
 
- 
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Select from a database-scope variable
+
+
+
+</td>
+<td valign="top">
+
+self
+
+
+
+</td>
+<td valign="top">
+
+none
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Select from a database-scope variable
+
+
+
+</td>
+<td valign="top">
+
+another user
+
+
+
+</td>
+<td valign="top">
+
+not allowed
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Select from a database-scope variable
+
+
+
+</td>
+<td valign="top">
+
+PUBLIC
+
+
+
+</td>
+<td valign="top">
+
+SELECT PUBLIC DATABASE VARIABLE
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Drop a database-scope variable
+
+
+
+</td>
+<td valign="top">
+
+self
+
+
+
+</td>
+<td valign="top">
+
+none required
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Drop a database-scope variable
+
+
+
+</td>
+<td valign="top">
+
+another user
+
+
+
+</td>
+<td valign="top">
+
+MANAGE ANY DATABASE VARIABLE
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Drop a database-scope variable
+
+
+
+</td>
+<td valign="top">
+
+PUBLIC
+
+
+
+</td>
+<td valign="top">
+
+MANAGE ANY DATABASE VARIABLE
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+</dd><dt><b>
+
+Global Variables
+
+</b></dt>
+<dd>
+
+Global variables are used in the context of the database, but can only be set by the database server. Although you cannot directly set a global variable, some global variable values are indirectly set in response to user activity. For example, some global variables, such as @@identity, hold connection-specific information, while other variables, such as @@connections, have values that are common to all connections.
+
+Global variables are visually distinguished from other variables by having two @ signs preceding their names. For example, @@error and @@rowcount are global variables.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Variables and Aliases with Identical Names
 
@@ -361,7 +437,19 @@ It is possible to have a statement that has aliases and variables with identical
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Variables declared within SQL stored procedures or functions by using the DECLARE statement is supported in the ANSI/ISO SQL Standard as SQL Language Feature P002, "Computational completeness". CREATE VARIABLE, DROP VARIABLE, and global variables are not in the ANSI/ISO SQL Standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Variables declared within SQL stored procedures or functions by using the DECLARE statement is supported in the ANSI/ISO SQL Standard as SQL Language Feature P002, "Computational completeness". CREATE VARIABLE, DROP VARIABLE, and global variables are not in the ANSI/ISO SQL Standard.
+
+
+
+</dd>
+</dl>
+

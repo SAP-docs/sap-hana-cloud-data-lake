@@ -2,7 +2,7 @@
 
 # SYSLOGINPOLICYOPTION System View for Data Lake Relational Engine
 
-The underlying system table for this view is ISYSLOGINPOLICYOPTION.
+Specifies the non-default option values defined in login policies.
 
 
 

@@ -28,13 +28,34 @@ dbo.sp_iqindexfragmentation ( '<target>' )
 
 ## Parameter
 
- *<table-name\>*
- :   Target <code>table <i class="varname">&lt;table-name&gt;</i></code> reports on all nondefault indexes in the named table.
 
-  *<index-name\>*
- :   Target <code>index <i class="varname">&lt;index-name&gt;</i></code> reports on the named index. Each *<index-name\>* is a qualified index name. You can specify multiple indexes within the table, but you must repeat the `index` keyword with each index specified.
+<dl>
+<dt><b>
 
- 
+*<table-name\>*
+
+</b></dt>
+<dd>
+
+Target <code>table <i class="varname">&lt;table-name&gt;</i></code> reports on all nondefault indexes in the named table.
+
+
+
+</dd><dt><b>
+
+*<index-name\>*
+
+</b></dt>
+<dd>
+
+Target <code>index <i class="varname">&lt;index-name&gt;</i></code> reports on the named index. Each *<index-name\>* is a qualified index name. You can specify multiple indexes within the table, but you must repeat the `index` keyword with each index specified.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5ac10a084f210158b30b3fa5c350b40__section_evb_vcz_mbb"/>
 
@@ -48,59 +69,7 @@ For garrays, the fill percentage calculation does not take into account the rese
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
-
-You also need:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-MANAGE ANY DBASPACE
-
-
-
-</td>
-<td valign="top">
-
-System privilege
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+Requires EXECUTE object-level privilege on the procedure, along with the MANAGE ANY DBSPACE system privilege.
 
 
 

@@ -470,7 +470,6 @@ Reference for SQL statements, language elements, data types, functions, system p
         -   [DELETE\_SCHEMA Procedure for SAP HANA Database](080-sap-hana-database-for-data-lake-relational-engine/delete-schema-procedure-for-sap-hana-database-fc71153.md)
         -   [RECONCILE Procedure for SAP HANA Database](080-sap-hana-database-for-data-lake-relational-engine/reconcile-procedure-for-sap-hana-database-3ee2d49.md)
         -   [REMOTE\_EXECUTE Procedure for SAP HANA Database](080-sap-hana-database-for-data-lake-relational-engine/remote-execute-procedure-for-sap-hana-database-ebe6a39.md)
-        -   [REMOTE\_EXECUTE\_QUERY Procedure](080-sap-hana-database-for-data-lake-relational-engine/remote-execute-query-procedure-550b14e.md)
 -   [SQL on Files for Data Lake Relational Engine \(SAP HANA DB-Managed\)](090-sql-on-files/sql-on-files-for-data-lake-relational-engine-sap-hana-db-managed-05ae705.md)
     -   [SQL on Files SQL Statements for Data Lake Relational Engine \(SAP HANA DB-Managed\)](090-sql-on-files/sql-on-files-sql-statements-for-data-lake-relational-engine-sap-hana-db-managed-2db5291.md)
         -   [ALTER \(Remote\) TABLE ADD DATASOURCE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\) \[SQL on Files\]](090-sql-on-files/alter-remote-table-add-datasource-statement-for-data-lake-relational-engine-sap-hana-db-m-e6e7243.md)

@@ -16,12 +16,25 @@ VARIANCE ( [ ALL ] <expression> )
 
 ## Parameters
 
- *<expression\>*
- :   Any numeric data type \(`FLOAT`, `REAL`, or `DOUBLE`\) expression.
 
-    The expression \(commonly a column name\) whose sample-based variance is calculated over a set of rows.
+<dl>
+<dt><b>
 
- 
+*<expression\>*
+
+</b></dt>
+<dd>
+
+Any numeric data type \(`FLOAT`, `REAL`, or `DOUBLE`\) expression.
+
+The expression \(commonly a column name\) whose sample-based variance is calculated over a set of rows.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa58fdc8684f210158b82f182e03b637a__VARIANCE_returns1"/>
 
@@ -77,8 +90,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-     51432.000
+    
+         51432.000
 
 
     
@@ -86,8 +99,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-     57090.000
+    
+         57090.000
 
 
     
@@ -95,8 +108,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-     42300.000
+    
+         42300.000
 
 
     
@@ -104,8 +117,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-       43700.00
+    
+           43700.00
 
 
     
@@ -113,8 +126,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-      36500.000
+    
+          36500.000
 
 
     
@@ -122,8 +135,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    138948.000
+    
+        138948.000
 
 
     
@@ -131,8 +144,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-      31200.000
+    
+          31200.000
 
 
     
@@ -140,8 +153,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-        58930.00
+    
+            58930.00
 
 
     
@@ -149,8 +162,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-        75400.00
+    
+            75400.00
 
 
     
@@ -184,8 +197,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-                9.00
+    
+                    9.00
 
 
     
@@ -193,8 +206,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-              14.00
+    
+                  14.00
 
 
     
@@ -202,8 +215,8 @@ The formula used to calculate `VARIANCE` is
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-              14.00
+    
+                  14.00
 
 
     
@@ -224,5 +237,5 @@ The formula used to calculate `VARIANCE` is
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[VARIANCE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/974f709b109d4fb1bfe049dc4b05d7de.html "Returns the variance of a set of numbers.") :arrow_upper_right:
+[VARIANCE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/974f709b109d4fb1bfe049dc4b05d7de.html "Returns the variance of a set of numbers.") :arrow_upper_right:
 

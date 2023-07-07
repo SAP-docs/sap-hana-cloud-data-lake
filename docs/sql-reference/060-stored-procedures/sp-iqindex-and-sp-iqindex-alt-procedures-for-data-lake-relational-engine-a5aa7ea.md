@@ -240,7 +240,7 @@ Produces slightly different output when a multicolumn index is present. Allows t
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -300,59 +300,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    Departments
+    
+        Departments
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top">
-
-    DepartmentID
+    
+        DepartmentID
 
 
     
     </td>
     <td valign="top">
-
-    `FP`
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    Departments
-
-
-    
-    </td>
-    <td valign="top">
-
-    GROUPO
-
-
-    
-    </td>
-    <td valign="top">
-
-    DepartmentID
-
-
-    
-    </td>
-    <td valign="top">
-
-    `HG`
+        `FP`
 
 
     
@@ -360,29 +330,59 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    Employees
+    
+        Departments
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top">
-
-    DepartmentID
+    
+        DepartmentID
 
 
     
     </td>
     <td valign="top">
+    
+        `HG`
 
-    `FP`
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        Employees
+
+
+    
+    </td>
+    <td valign="top">
+    
+        GROUPO
+
+
+    
+    </td>
+    <td valign="top">
+    
+        DepartmentID
+
+
+    
+    </td>
+    <td valign="top">
+    
+        `FP`
 
 
     
@@ -433,73 +433,36 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    ASIQ\_IDX\_T201\_C1\_FP
+    
+        ASIQ\_IDX\_T201\_C1\_FP
 
 
     
     </td>
     <td valign="top">
-
-    N
+    
+        N
 
 
     
     </td>
     <td valign="top">
-
-    Main
+    
+        Main
 
 
     
     </td>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
     </td>
     <td valign="top">
-
-    \(NULL\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    ASIQ\_IDX\_T201\_C1\_HG
-
-
-    
-    </td>
-    <td valign="top">
-
-    U
-
-
-    
-    </td>
-    <td valign="top">
-
-    Main
-
-
-    
-    </td>
-    <td valign="top">
-
-    16387
-
-
-    
-    </td>
-    <td valign="top">
-
-    \(NULL\)
+        \(NULL\)
 
 
     
@@ -507,36 +470,73 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    ASIQ\_IDX\_T202\_C5\_FP
+    
+        ASIQ\_IDX\_T201\_C1\_HG
 
 
     
     </td>
     <td valign="top">
-
-    N
+    
+        U
 
 
     
     </td>
     <td valign="top">
-
-    Main
+    
+        Main
 
 
     
     </td>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
     </td>
     <td valign="top">
+    
+        \(NULL\)
 
-    \(NULL\)
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        ASIQ\_IDX\_T202\_C5\_FP
+
+
+    
+    </td>
+    <td valign="top">
+    
+        N
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Main
+
+
+    
+    </td>
+    <td valign="top">
+    
+        16387
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \(NULL\)
 
 
     
@@ -588,59 +588,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    Departments
+    
+        Departments
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top">
-
-    DepartmentHeadID
+    
+        DepartmentHeadID
 
 
     
     </td>
     <td valign="top">
-
-    `FP`
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    Departments
-
-
-    
-    </td>
-    <td valign="top">
-
-    GROUPO
-
-
-    
-    </td>
-    <td valign="top">
-
-    DepartmentID
-
-
-    
-    </td>
-    <td valign="top">
-
-    `FP`
+        `FP`
 
 
     
@@ -648,29 +618,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    Departments
+    
+        Departments
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top">
-
-    DepartmentID
+    
+        DepartmentID
 
 
     
     </td>
     <td valign="top">
-
-    `HG`
+    
+        `FP`
 
 
     
@@ -678,29 +648,59 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    Departments
+    
+        Departments
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top">
-
-    DepartmentName
+    
+        DepartmentID
 
 
     
     </td>
     <td valign="top">
+    
+        `HG`
 
-    `FP`
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        Departments
+
+
+    
+    </td>
+    <td valign="top">
+    
+        GROUPO
+
+
+    
+    </td>
+    <td valign="top">
+    
+        DepartmentName
+
+
+    
+    </td>
+    <td valign="top">
+    
+        `FP`
 
 
     
@@ -751,73 +751,36 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    ASIQ\_IDX\_T201\_C3\_FP
+    
+        ASIQ\_IDX\_T201\_C3\_FP
 
 
     
     </td>
     <td valign="top">
-
-    N
+    
+        N
 
 
     
     </td>
     <td valign="top">
-
-    Main
+    
+        Main
 
 
     
     </td>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
     </td>
     <td valign="top">
-
-    \(NULL\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    ASIQ\_IDX\_T201\_C1\_FP
-
-
-    
-    </td>
-    <td valign="top">
-
-    N
-
-
-    
-    </td>
-    <td valign="top">
-
-    Main
-
-
-    
-    </td>
-    <td valign="top">
-
-    16387
-
-
-    
-    </td>
-    <td valign="top">
-
-    \(NULL\)
+        \(NULL\)
 
 
     
@@ -825,36 +788,36 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    ASIQ\_IDX\_T201\_C1\_HG
+    
+        ASIQ\_IDX\_T201\_C1\_FP
 
 
     
     </td>
     <td valign="top">
-
-    U
+    
+        N
 
 
     
     </td>
     <td valign="top">
-
-    Main
+    
+        Main
 
 
     
     </td>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
     </td>
     <td valign="top">
-
-    \(NULL\)
+    
+        \(NULL\)
 
 
     
@@ -862,36 +825,73 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    ASIQ\_IDX\_T201\_C2\_FP
+    
+        ASIQ\_IDX\_T201\_C1\_HG
 
 
     
     </td>
     <td valign="top">
-
-    N
+    
+        U
 
 
     
     </td>
     <td valign="top">
-
-    Main
+    
+        Main
 
 
     
     </td>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
     </td>
     <td valign="top">
+    
+        \(NULL\)
 
-    \(NULL\)
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        ASIQ\_IDX\_T201\_C2\_FP
+
+
+    
+    </td>
+    <td valign="top">
+    
+        N
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Main
+
+
+    
+    </td>
+    <td valign="top">
+    
+        16387
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \(NULL\)
 
 
     
@@ -944,59 +944,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    Employees
+    
+        Employees
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top">
-
-    City
+    
+        City
 
 
     
     </td>
     <td valign="top">
-
-    `FP`
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    Employees
-
-
-    
-    </td>
-    <td valign="top">
-
-    GROUPO
-
-
-    
-    </td>
-    <td valign="top">
-
-    City
-
-
-    
-    </td>
-    <td valign="top">
-
-    `HG`
+        `FP`
 
 
     
@@ -1004,29 +974,59 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    Employees
+    
+        Employees
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top">
-
-    State
+    
+        City
 
 
     
     </td>
     <td valign="top">
+    
+        `HG`
 
-    `HG`
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        Employees
+
+
+    
+    </td>
+    <td valign="top">
+    
+        GROUPO
+
+
+    
+    </td>
+    <td valign="top">
+    
+        State
+
+
+    
+    </td>
+    <td valign="top">
+    
+        `HG`
 
 
     
@@ -1070,59 +1070,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    ASIQ\_IDX\_T452\_C7\_FP
+    
+        ASIQ\_IDX\_T452\_C7\_FP
 
 
     
     </td>
     <td valign="top">
-
-    N
+    
+        N
 
 
     
     </td>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
     </td>
     <td valign="top">
-
-    \(NULL\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    emp\_loc
-
-
-    
-    </td>
-    <td valign="top">
-
-    N
-
-
-    
-    </td>
-    <td valign="top">
-
-    16387
-
-
-    
-    </td>
-    <td valign="top">
-
-    \(NULL\)
+        \(NULL\)
 
 
     
@@ -1130,29 +1100,59 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    emp\_loc
+    
+        emp\_loc
 
 
     
     </td>
     <td valign="top">
-
-    N
+    
+        N
 
 
     
     </td>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
     </td>
     <td valign="top">
+    
+        \(NULL\)
 
-    \(NULL\)
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        emp\_loc
+
+
+    
+    </td>
+    <td valign="top">
+    
+        N
+
+
+    
+    </td>
+    <td valign="top">
+    
+        16387
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \(NULL\)
 
 
     
@@ -1204,29 +1204,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    Employees
+    
+        Employees
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top">
-
-    City
+    
+        City
 
 
     
     </td>
     <td valign="top">
-
-    `FP`
+    
+        `FP`
 
 
     
@@ -1234,29 +1234,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    Employees
+    
+        Employees
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top">
-
-    City,State
+    
+        City,State
 
 
     
     </td>
     <td valign="top">
-
-    `HG`
+    
+        `HG`
 
 
     
@@ -1307,36 +1307,36 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    ASIQ\_IDX\_T452\_C7\_FP
+    
+        ASIQ\_IDX\_T452\_C7\_FP
 
 
     
     </td>
     <td valign="top">
-
-    N
+    
+        N
 
 
     
     </td>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
     </td>
     <td valign="top">
-
-    Main
+    
+        Main
 
 
     
     </td>
     <td valign="top">
-
-    \(NULL\)
+    
+        \(NULL\)
 
 
     
@@ -1344,36 +1344,36 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    emp\_loc
+    
+        emp\_loc
 
 
     
     </td>
     <td valign="top">
-
-    N
+    
+        N
 
 
     
     </td>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
     </td>
     <td valign="top">
-
-    Main
+    
+        Main
 
 
     
     </td>
     <td valign="top">
-
-    \(NULL\)
+    
+        \(NULL\)
 
 
     

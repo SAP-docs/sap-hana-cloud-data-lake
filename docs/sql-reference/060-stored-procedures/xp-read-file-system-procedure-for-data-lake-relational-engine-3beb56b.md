@@ -26,13 +26,34 @@ xp_read_file(
 
 ## Parameters
 
-  *<filename\>* 
- :   Use this LONG VARCHAR parameter to specify the name of the file for which to return the contents.
 
-   *<lazy\>* 
- :   When you specify this optional INTEGER parameter and its value is not 0, the contents of the file are not read until they are requested. Reads only occur when the LONG BINARY value is accessed and only on the portion of the file that is requested. The default is 0, or non-lazy.
+<dl>
+<dt><b>
 
- 
+ *<filename\>* 
+
+</b></dt>
+<dd>
+
+Use this LONG VARCHAR parameter to specify the name of the file for which to return the contents.
+
+
+
+</dd><dt><b>
+
+ *<lazy\>* 
+
+</b></dt>
+<dd>
+
+When you specify this optional INTEGER parameter and its value is not 0, the contents of the file are not read until they are requested. Reads only occur when the LONG BINARY value is accessed and only on the portion of the file that is requested. The default is 0, or non-lazy.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3beb56b86c5f101495dbf54443bd191d__xp_read_file_returns1"/>
 
@@ -58,14 +79,18 @@ The function returns NULL if the specified file does not exist.
 
 
 
-<a name="loio3beb56b86c5f101495dbf54443bd191d__xp_read_file_privileges"/>
+<a name="loio3beb56b86c5f101495dbf54443bd191d__xp_read_file_priv1"/>
 
 ## Privileges
 
-You need all of the following:
 
--   EXECUTE object-level privilege on the system procedure
--   EXECUTE privilege on the xp\_read\_real\_file system procedure
+
+### 
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on the xp\_read\_real\_file procedure
 -   READ FILE system privilege
 
 
@@ -77,7 +102,7 @@ SELECT xp_read_file('/diag/logs/mpx-writer-0-0/mpx-writer-0-0/iqaas_20211217_110
 **Related Information**  
 
 
-[xp_read_file System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/3802bd2d3a464336b1abe16107b12e47.html "Reads a file and returns the contents of the file as a LONG BINARY variable.") :arrow_upper_right:
+[xp_read_file System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3802bd2d3a464336b1abe16107b12e47.html "Reads a file and returns the contents of the file as a LONG BINARY variable.") :arrow_upper_right:
 
-[xp_sprintf System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/bcaf180e679e43d78733830fb7e4c2fa.html "Builds a result string from a set of input strings.") :arrow_upper_right:
+[xp_sprintf System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/bcaf180e679e43d78733830fb7e4c2fa.html "Builds a result string from a set of input strings.") :arrow_upper_right:
 

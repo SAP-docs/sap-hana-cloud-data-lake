@@ -17,22 +17,67 @@ LAG ( <value_expr> [, <offset> [, <default> ] ] )
 
 ## Parameters
 
- *<value\_expr\>*
- :   Table column or expression defining the offset data to return from the table.
 
-  *<offset\>*
- :   The number of rows above the current row, expressed as a non-negative exact numeric literal, or as a SQL variable with exact numeric data. The permitted range is 0 to 231.
+<dl>
+<dt><b>
 
-  *<default\>*
- :   The value to return if the *<offset\>* value goes beyond the scope of the cardinality of the table or partition.
+*<value\_expr\>*
 
-  *<window partition\>*
- :   \(Optional\) One or more value expressions separated by commas indicating how you want to divide the set of result rows.
+</b></dt>
+<dd>
 
-  *<window ordering\>*
- :   Defines the expressions for sorting rows within window partitions, if specified, or within the result set if you did not specify a window partition.
+Table column or expression defining the offset data to return from the table.
 
- 
+
+
+</dd><dt><b>
+
+*<offset\>*
+
+</b></dt>
+<dd>
+
+The number of rows above the current row, expressed as a non-negative exact numeric literal, or as a SQL variable with exact numeric data. The permitted range is 0 to 231.
+
+
+
+</dd><dt><b>
+
+*<default\>*
+
+</b></dt>
+<dd>
+
+The value to return if the *<offset\>* value goes beyond the scope of the cardinality of the table or partition.
+
+
+
+</dd><dt><b>
+
+*<window partition\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) One or more value expressions separated by commas indicating how you want to divide the set of result rows.
+
+
+
+</dd><dt><b>
+
+*<window ordering\>*
+
+</b></dt>
+<dd>
+
+Defines the expressions for sorting rows within window partitions, if specified, or within the result set if you did not specify a window partition.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa55b772a84f2101583fef0038bcd8bb0__LAG_remarks1"/>
 
@@ -92,5 +137,5 @@ dID        StartDate    Salary      Lag(Salary)
 
 [LEAD Function \[Analytical\] for Data Lake Relational Engine](lead-function-analytical-for-data-lake-relational-engine-a55d051.md "An interrow function that returns the value of an attribute in a subsequent row in the table or table partition.")
 
-[LAG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/0561e5415d37410b837052f20b4239b9.html "An interrow function that returns the value of an attribute in a previous row in the table or table partition.") :arrow_upper_right:
+[LAG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/0561e5415d37410b837052f20b4239b9.html "An interrow function that returns the value of an attribute in a previous row in the table or table partition.") :arrow_upper_right:
 

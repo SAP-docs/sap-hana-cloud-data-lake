@@ -16,10 +16,23 @@ VAR_POP ( [ ALL ] <expression> )
 
 ## Parameters
 
- *<expression\>*
- :   The expression \(commonly a column name\) that has a population-based variance that is calculated over a set of rows.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The expression \(commonly a column name\) that has a population-based variance that is calculated over a set of rows.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioeb8e5a4d6b304dedab621a6bd58a471d__section_r23_yfv_vrb"/>
 

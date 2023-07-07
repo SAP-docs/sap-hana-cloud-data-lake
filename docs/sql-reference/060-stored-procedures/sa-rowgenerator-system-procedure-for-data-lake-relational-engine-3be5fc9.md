@@ -27,16 +27,45 @@ sa_rowgenerator(
 
 ## Parameters
 
-  *<rstart\>* 
- :   Use this optional INTEGER parameter to specify the starting value. The default value is 0.
 
-   *<rend\>* 
- :   Use this optional INTEGER parameter to specify the ending value that is greater than or equal to *<rstart\>*. The default value is 100.
+<dl>
+<dt><b>
 
-   *<rstep\>* 
- :   Use this optional INTEGER parameter to specify the increment by which the sequence values are increased. The default value is 1.
+ *<rstart\>* 
 
- 
+</b></dt>
+<dd>
+
+Use this optional INTEGER parameter to specify the starting value. The default value is 0.
+
+
+
+</dd><dt><b>
+
+ *<rend\>* 
+
+</b></dt>
+<dd>
+
+Use this optional INTEGER parameter to specify the ending value that is greater than or equal to *<rstart\>*. The default value is 100.
+
+
+
+</dd><dt><b>
+
+ *<rstep\>* 
+
+</b></dt>
+<dd>
+
+Use this optional INTEGER parameter to specify the increment by which the sequence values are increased. The default value is 1.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3be5fc9b6c5f1014b006cf0d1a0c90ef__sa_rowgenerator_resultset1"/>
 
@@ -117,11 +146,15 @@ SELECT row_num FROM sa_rowgenerator( 1, 255 );
 
 
 
-<a name="loio3be5fc9b6c5f1014b006cf0d1a0c90ef__section_rlx_32j_snb"/>
+<a name="loio3be5fc9b6c5f1014b006cf0d1a0c90ef__sa_rowgenerator_priv1"/>
 
 ## Privileges
 
-You must have EXECUTE privilege on the system procedure.
+
+
+### 
+
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -192,5 +225,5 @@ SELECT DATEADD ( day, row_num, '1900-01-01' ) AS d, DATEPART ( week, d ) w
 **Related Information**  
 
 
-[sa_rowgenerator System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/7b99d032cfbe4f80bde904bee1902662.html "Returns a result set with rows between a specified start and end value.") :arrow_upper_right:
+[sa_rowgenerator System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7b99d032cfbe4f80bde904bee1902662.html "Returns a result set with rows between a specified start and end value.") :arrow_upper_right:
 

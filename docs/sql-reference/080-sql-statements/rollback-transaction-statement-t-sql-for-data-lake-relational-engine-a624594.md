@@ -6,11 +6,6 @@ Cancels any changes made since a savepoint was established using `SAVE TRANSACTI
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,14 +19,32 @@ ROLLBACK TRANSACTION [ <savepoint-name> ]
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa624594684f210159608f69e6d6d2ed8__IQ_Parameters"/>
 
 ## Parameters
 
- *<savepoint-name\>*
- :   An identifier that was specified on a `SAVE TRANSACTION` statement within the current transaction. If *<savepoint-name\>* is omitted, all outstanding changes are rolled back. Any savepoints since the named savepoint are automatically released.
 
- 
+<dl>
+<dt><b>
+
+*<savepoint-name\>*
+
+</b></dt>
+<dd>
+
+An identifier that was specified on a `SAVE TRANSACTION` statement within the current transaction. If *<savepoint-name\>* is omitted, all outstanding changes are rolled back. Any savepoints since the named savepoint are automatically released.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa624594684f210159608f69e6d6d2ed8__section_sfc_52x_ccb"/>
 

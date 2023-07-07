@@ -25,37 +25,127 @@ sa_enable_auditing_type( <types> )
 
 ## Parameters
 
-  *<types\>* 
- :   Use this VARCHAR\(128\) parameter to specify a comma-delimited string containing one or more of the following values:
 
-     all
-     :   enables all types of auditing.
+<dl>
+<dt><b>
 
-      connect
-     :   enables auditing of both successful and failed connection attempts.
+ *<types\>* 
 
-      connectFailed
-     :   enables auditing of failed connection attempts.
+</b></dt>
+<dd>
 
-      DDL
-     :   enables auditing of DDL statements.
+Use this VARCHAR\(128\) parameter to specify a comma-delimited string containing one or more of the following values:
 
-      options
-     :   enables auditing of public options.
 
-      permission
-     :   enables auditing of permission checks and user checks.
+<dl>
+<dt><b>
 
-      permissionDenied
-     :   enables auditing of failed permission and user checks.
+all
 
-      triggers
-     :   enables auditing of a trigger event.
+</b></dt>
+<dd>
 
-      xp\_cmdshell
-     :   enables auditing of xp\_cmdshell invocations.
+enables all types of auditing.
 
-  
+
+
+</dd><dt><b>
+
+connect
+
+</b></dt>
+<dd>
+
+enables auditing of both successful and failed connection attempts.
+
+
+
+</dd><dt><b>
+
+connectFailed
+
+</b></dt>
+<dd>
+
+enables auditing of failed connection attempts.
+
+
+
+</dd><dt><b>
+
+DDL
+
+</b></dt>
+<dd>
+
+enables auditing of DDL statements.
+
+
+
+</dd><dt><b>
+
+options
+
+</b></dt>
+<dd>
+
+enables auditing of public options.
+
+
+
+</dd><dt><b>
+
+permission
+
+</b></dt>
+<dd>
+
+enables auditing of permission checks and user checks.
+
+
+
+</dd><dt><b>
+
+permissionDenied
+
+</b></dt>
+<dd>
+
+enables auditing of failed permission and user checks.
+
+
+
+</dd><dt><b>
+
+triggers
+
+</b></dt>
+<dd>
+
+enables auditing of a trigger event.
+
+
+
+</dd><dt><b>
+
+xp\_cmdshell
+
+</b></dt>
+<dd>
+
+enables auditing of xp\_cmdshell invocations.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio7bde72cc9e33425088c9b0d6a361d380__section_ycw_mw4_rrb"/>
 
@@ -77,7 +167,10 @@ Specify the location where events are logged with the audit\_log database option
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

@@ -16,16 +16,45 @@ BYTE_INSERTSTR( <insert_position> , <source_string> , <insert_string> )
 
 ## Parameters
 
-  *<insert\_position\>* 
- :   The byte position after which *<insert\_string\>* is to be inserted. The first byte in the string is position 1. Use 0 to insert before the first byte in the string.
 
-   *<source\_string\>* 
- :   The string into which *<insert\_string\>* is to be inserted. *<source\_string\>* can be any length.
+<dl>
+<dt><b>
 
-   *<insert\_string\>* 
- :   The string to be inserted.
+ *<insert\_position\>* 
 
- 
+</b></dt>
+<dd>
+
+The byte position after which *<insert\_string\>* is to be inserted. The first byte in the string is position 1. Use 0 to insert before the first byte in the string.
+
+
+
+</dd><dt><b>
+
+ *<source\_string\>* 
+
+</b></dt>
+<dd>
+
+The string into which *<insert\_string\>* is to be inserted. *<source\_string\>* can be any length.
+
+
+
+</dd><dt><b>
+
+ *<insert\_string\>* 
+
+</b></dt>
+<dd>
+
+The string to be inserted.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa8656a236f5a4afdb003988d8f040939__section_mm2_jgl_srb"/>
 

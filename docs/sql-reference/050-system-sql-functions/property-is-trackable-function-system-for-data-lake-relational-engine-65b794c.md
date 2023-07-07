@@ -14,10 +14,23 @@ PROPERTY_IS_TRACKABLE( <property-ID> )
 
 ## Parameters
 
-  *<property-ID\>* 
- :   The PropNum of the database server property. You can find the PropNum of the database server property by running the sa\_eng\_properties system procedure or by calling the PROPERTY\_NUMBER function.
 
- 
+<dl>
+<dt><b>
+
+ *<property-ID\>* 
+
+</b></dt>
+<dd>
+
+The PropNum of the database server property. You can find the PropNum of the database server property by running the sa\_eng\_properties system procedure or by calling the PROPERTY\_NUMBER function.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Returns
 

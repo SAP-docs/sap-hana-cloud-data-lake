@@ -6,11 +6,6 @@ Alters a materialized view.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -19,11 +14,7 @@ Alters a materialized view.
 
 
 ```
-ALTER MATERIALIZED VIEW [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) { [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] } (span].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <mat-view-name> (varname] 
+ALTER MATERIALIZED VIEW [ { <owner> | <schema-name> }.]<mat-view-name> 
    { { ENABLE | DISABLE }
    | SET HIDDEN
    | RENAME { PARTITION | SUBPARTITION } <range-partition-name> TO <new-range-partition-name>
@@ -40,214 +31,390 @@ ALTER MATERIALIZED VIEW [ [/pandoc/div/div/horizontalrule/codeblock/span/span
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loiod958953e260d44209300f5454e01029f__alter_matview_parameters1"/>
 
 ## Parameters
 
- SET HIDDEN
- :   Use the SET HIDDEN clause to obfuscate the definition of a materialized view. *This setting is irreversible*.
 
-  \{ ENABLE | DISABLE \}
- :   Use the ENABLE clause to enable a disabled materialized view, making it available for the database server to use. This clause has no effect on a view that is already enabled. After using this clause, you must refresh the view to initialize it, and recreate any text indexes that were dropped when the view was disabled.
+<dl class="glossary">
+<dt><b>
 
-    Use the DISABLE clause to disable use of the view by the database server. When you disable a materialized view, the database server drops the data and indexes for the view.
+SET HIDDEN
 
-  AUTO | MANUAL
- :   Specifies the refresh type of the materialized view. AUTO automatically refreshes the materialized view in a background transaction after it becomes stale due to modifications to the base tables it depends on. MANUAL requires execution of the REFRESH MATERIALIZE VIEW statement to refresh the contents of the materialized view.
+</b></dt>
+<dd>
 
-  FULL | INCREMENTAL
- :   Specifies the refresh build method. FULL \(default\) truncates the materialized view and then populates the view by fully recomputing its content. INCREMENTAL attempts to refresh the materialized view using a delta computed since the last refresh. If an appropriate delta cannot be computed efficiently, then full refresh is performed. To perform an INCREMENTAL refresh on a materialized view, the view must:
-
-    1.  Satisfy the following criteria:
-        -   The view must be uninitialized.
-        -   If the view does not contain outer joins, then the view must have a unique index on non nullable columns. If the view contains outer joins, then the view must have a unique index on non nullable columns, or a unique index declared as WITH NULLS NOT DISTINCT on nullable columns.
-        -   If the view definition is a grouped query, then the unique index columns must correspond to SELECT list items that are not aggregate functions. The view definition cannot contain:
-            -   GROUPING SETS clauses
-            -   CUBE clauses
-            -   ROLLUP clauses
-            -   DISTINCT clauses
-            -   row limit clauses
-            -   non-deterministic expressions
-            -   self and recursive joins
-            -   LATERAL, CROSS APPLY, or APPLY clauses
-
-        -   The view definition must be a single select-project-join or grouped-select-project-join query block, and the grouped-select-project-join query block cannot contain a HAVING clause.
-        -   The grouped-select-project-join query block must contain COUNT \( \* \) in the SELECT list, and is allowed only with the SUM and COUNT aggregate functions.
-        -   An aggregate function in the SELECT list cannot be referenced in a complex expression. For example, SUM\( expression \) + 1 is not allowed in the SELECT list.
-        -   If the SELECT list contains the SUM\(*<expression\>*\) aggregate function and *<expression\>* is a nullable expression, then the SELECT list must include a COUNT\(*<expression\>*\) aggregate function.
-        -   If the view definition contains outer joins \(LEFT OUTER JOIN, RIGHT OUTER JOIN, FULL OUTER JOIN\), then the view definition must satisfy the following extra conditions:
-            1.  If a table, T, is referenced in an ON condition of an OUTER JOIN as a preserved side, then T must have a primary key and the primary key columns must be present in the SELECT list of the view. For example, the incremental materialized view V defined as SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON T1.Y = R.Y has the preserved table, T1, referenced in the ON clause and its primary key column, T1.pk, is in the SELECT list of the incremental materialized view, V.
-            2.  For each NULL-supplying side of an outer join, there must be at least one base table such that one of its non-nullable columns is present in the SELECT list of the incremental materialized view. For example, for the incremental materialized view, V, defined as SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON T1.Y = R1.Y, the NULL-supplying side of the left outer join is the table expression \( R1 KEY JOIN R2 \). The column R1.X is in the SELECT list of the V and R1.X is a non nullable column of the table R1.
-            3.  If the view is a grouped view and the previous condition does not hold, then for each NULL-supplying side of an outer join, there must be at least one base table, T, such that one of its non-nullable columns, T.C, is used in the aggregate function COUNT\( T.C \) in the SELECT list of the incremental materialized view. For example, for the incremental materialized view, V, defined as SELECT T1.pk, COUNT\( R1.X \) FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON T1.Y = R1.Y GROUP BY T1.pk, the NULL-supplying side of the left outer join is the table expression \( R1 KEY JOIN R2 \). The aggregate function COUNT\( R1.X \) is in the SELECT list of the V and R1.X is a non-nullable column of the table R1.
-            4.  The following conditions must be satisfied by the predicates of the views with outer joins:
-                -   The ON clause predicates for LEFT, RIGHT, and FULL OUTER JOINs must refer to both preserved and NULL-supplying table expression. For example, T LEFT OUTER JOIN R ON R.X = 1 does not satisfy this condition as the predicate R.X=1 references only the NULL-supplying side R.
-                -   Any predicate must reject NULL-supplied rows produced by a nested outer join. In other words, if a predicate refers to a table expression which is NULL-supplied by a nested outer join, then it must reject all rows which have nulls generated by that outer join.
-
-                    For example, the view V1 SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON \( T1.Y = R1.Y \) WHERE R1.Z = 10 has the predicate R1.Z=10 referencing the table R1 which can be NULL-supplied by the T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \), hence it must reject any NULL-supplied rows. This is true because the predicate evaluates to UNKNOWN when the column R1.Z is NULL.
-
-                    However, the view V2 SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON \( T1.Y = R1.Y \) WHERE R1.Z IS NULL does not have this property. The predicate R1.Z IS NULL references the NULL-supplying side R1 but it evaluates to TRUE when the table R1 is NULL-supplied \(that is, the R1.Z column is null\). The method of rejecting NULL-supplied rows is not as restrictive as a NULL-intolerant property. For example, the predicate R.X IS NOT DISTINCT FROM T.X and rowid\( T \) IS NOT NULL is not NULL-intolerant on the table T as it evaluates to TRUE when T.X is NULL. However, the predicate rejects all the rows which are NULL-supplied on the base table T.
+Use the SET HIDDEN clause to obfuscate the definition of a materialized view. *This setting is irreversible*.
 
 
-            5.  A unique HG index defined for the materialized view must exist. If the materialized view contains outer joins, then the materialized view must have a unique HG index on non nullable columns or a unique HG index with at least one column non-nullable. If the materialized view does not contain outer joins, then the materialized view must have a unique index on non nullable columns.
-            6.  Any expression in the GROUP BY list must be present in the SELECT list.
+
+</dd><dt><b>
+
+\{ ENABLE | DISABLE \}
+
+</b></dt>
+<dd>
+
+Use the ENABLE clause to enable a disabled materialized view, making it available for the database server to use. This clause has no effect on a view that is already enabled. After using this clause, you must refresh the view to initialize it, and recreate any text indexes that were dropped when the view was disabled.
+
+Use the DISABLE clause to disable use of the view by the database server. When you disable a materialized view, the database server drops the data and indexes for the view.
 
 
-    2.  Have a unique HG index defined for the materialized view.
-        -   If the materialized view does not contain outer joins, then the materialized view must have a unique index on non nullable columns.
-        -   If the materialized view does contain outer joins, then the materialized view must have a unique HG index on non nullable columns or a unique HG index with at least one column non-nullable.
+
+</dd><dt><b>
+
+AUTO | MANUAL
+
+</b></dt>
+<dd>
+
+Specifies the refresh type of the materialized view. AUTO automatically refreshes the materialized view in a background transaction after it becomes stale due to modifications to the base tables it depends on. MANUAL requires execution of the REFRESH MATERIALIZE VIEW statement to refresh the contents of the materialized view.
 
 
-  SPLIT \{ PARTITION | SUBPARTITION \} *<split-object\>*
- :   Splits an existing range partition or subpartition.
 
-    ```
-    <split-object> ::= <range-partition-decl> 
-            INTO ( <range-partition-decl>, <range-partition-decl> )
-    ```
+</dd><dt><b>
 
-    When splitting a partition or subpartition, the names of the new partitions must be unique and cannot include the name of the original partition. All data from the original partition must fit into only one of the resulting partitions. Data cannot move between partitions.
+FULL | INCREMENTAL
 
-    When splitting a partition or subpartition, the upper boundary of the new partitions must be equal to the upper boundary of the original partition. For example, if P1 has a boundary of 100 and you split P1 into P1A and P1B, the boundary of P1B must be 100.
+</b></dt>
+<dd>
 
-  MERGE \{ PARTITION | SUBPARTITION \}
- :   Merges *<partition-name-1\>* into *<partition-name-2\>*. Two partitions can be merged if they are adjacent partitions. You can only merge a partition with a lower partition value into the adjacent partition with a higher partition value. Note that the server does not check CREATE privilege into which the partition is merged. For an example of how to create adjacent partitions, see CREATE TABLE Statement examples.
+Specifies the refresh build method. FULL \(default\) truncates the materialized view and then populates the view by fully recomputing its content. INCREMENTAL attempts to refresh the materialized view using a delta computed since the last refresh. If an appropriate delta cannot be computed efficiently, then full refresh is performed. To perform an INCREMENTAL refresh on a materialized view, the view must:
 
-  PARTITION BY
- :   Divides large tables into smaller, more manageable storage objects. Partitions share the same logical attributes of the parent table, but can be placed in separate dbspaces and managed individually. Data lake Relational Engine supports several table partitioning schemes:
+1.  Satisfy the following criteria:
+    -   The view must be uninitialized.
+    -   If the view does not contain outer joins, then the view must have a unique index on non nullable columns. If the view contains outer joins, then the view must have a unique index on non nullable columns, or a unique index declared as WITH NULLS NOT DISTINCT on nullable columns.
+    -   If the view definition is a grouped query, then the unique index columns must correspond to SELECT list items that are not aggregate functions. The view definition cannot contain:
+        -   GROUPING SETS clauses
+        -   CUBE clauses
+        -   ROLLUP clauses
+        -   DISTINCT clauses
+        -   row limit clauses
+        -   non-deterministic expressions
+        -   self and recursive joins
+        -   LATERAL, CROSS APPLY, or APPLY clauses
 
-    -   Hash-partitions
-    -   Range-partitions
-    -   Hash range-partitions
+    -   The view definition must be a single select-project-join or grouped-select-project-join query block, and the grouped-select-project-join query block cannot contain a HAVING clause.
+    -   The grouped-select-project-join query block must contain COUNT \( \* \) in the SELECT list, and is allowed only with the SUM and COUNT aggregate functions.
+    -   An aggregate function in the SELECT list cannot be referenced in a complex expression. For example, SUM\( expression \) + 1 is not allowed in the SELECT list.
+    -   If the SELECT list contains the SUM\(*<expression\>*\) aggregate function and *<expression\>* is a nullable expression, then the SELECT list must include a COUNT\(*<expression\>*\) aggregate function.
+    -   If the view definition contains outer joins \(LEFT OUTER JOIN, RIGHT OUTER JOIN, FULL OUTER JOIN\), then the view definition must satisfy the following extra conditions:
+        -   If a table, T, is referenced in an ON condition of an OUTER JOIN as a preserved side, then T must have a primary key and the primary key columns must be present in the SELECT list of the view. For example, the incremental materialized view V defined as SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON T1.Y = R.Y has the preserved table, T1, referenced in the ON clause and its primary key column, T1.pk, is in the SELECT list of the incremental materialized view, V.
+        -   For each NULL-supplying side of an outer join, there must be at least one base table such that one of its non-nullable columns is present in the SELECT list of the incremental materialized view. For example, for the incremental materialized view, V, defined as SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON T1.Y = R1.Y, the NULL-supplying side of the left outer join is the table expression \( R1 KEY JOIN R2 \). The column R1.X is in the SELECT list of the V and R1.X is a non nullable column of the table R1.
+        -   If the view is a grouped view and the previous condition does not hold, then for each NULL-supplying side of an outer join, there must be at least one base table, T, such that one of its non-nullable columns, T.C, is used in the aggregate function COUNT\( T.C \) in the SELECT list of the incremental materialized view. For example, for the incremental materialized view, V, defined as SELECT T1.pk, COUNT\( R1.X \) FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON T1.Y = R1.Y GROUP BY T1.pk, the NULL-supplying side of the left outer join is the table expression \( R1 KEY JOIN R2 \). The aggregate function COUNT\( R1.X \) is in the SELECT list of the V and R1.X is a non-nullable column of the table R1.
+        -   The following conditions must be satisfied by the predicates of the views with outer joins:
+            -   The ON clause predicates for LEFT, RIGHT, and FULL OUTER JOINs must refer to both preserved and NULL-supplying table expression. For example, T LEFT OUTER JOIN R ON R.X = 1 does not satisfy this condition as the predicate R.X=1 references only the NULL-supplying side R.
+            -   Any predicate must reject NULL-supplied rows produced by a nested outer join. In other words, if a predicate refers to a table expression which is NULL-supplied by a nested outer join, then it must reject all rows which have nulls generated by that outer join.
 
-    A partition-key is the column or columns that contain the table partitioning keys. Partition keys can contain NULL and DEFAULT values, but cannot contain:
+                For example, the view V1 SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON \( T1.Y = R1.Y \) WHERE R1.Z = 10 has the predicate R1.Z=10 referencing the table R1 which can be NULL-supplied by the T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \), hence it must reject any NULL-supplied rows. This is true because the predicate evaluates to UNKNOWN when the column R1.Z is NULL.
 
-    -   LOB \(BLOB or CLOB\) columns
-    -   BINARY, or VARBINARY columns
-    -   CHAR or VARCHAR columns whose length is over 255 bytes
-    -   BIT columns
-    -   FLOAT/DOUBLE/REAL columns
+                However, the view V2 SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON \( T1.Y = R1.Y \) WHERE R1.Z IS NULL does not have this property. The predicate R1.Z IS NULL references the NULL-supplying side R1 but it evaluates to TRUE when the table R1 is NULL-supplied \(that is, the R1.Z column is null\). The method of rejecting NULL-supplied rows is not as restrictive as a NULL-intolerant property. For example, the predicate R.X IS NOT DISTINCT FROM T.X and rowid\( T \) IS NOT NULL is not NULL-intolerant on the table T as it evaluates to TRUE when T.X is NULL. However, the predicate rejects all the rows which are NULL-supplied on the base table T.
 
- :   Restrictions when partitioning an existing materialized view:
 
-    -   For range partitioning, any existing data in the table must exist within the upper bound of the first partition of the materialized view or the materialized view must be uninitialized.
-    -   For hash partitioning and range subpartitioning of a hash table, the table must be empty or the materialized view must be uninitialized.
+        -   A unique HG index defined for the materialized view must exist. If the materialized view contains outer joins, then the materialized view must have a unique HG index on non nullable columns or a unique HG index with at least one column non-nullable. If the materialized view does not contain outer joins, then the materialized view must have a unique index on non nullable columns.
+        -   Any expression in the GROUP BY list must be present in the SELECT list.
 
-    Use the TRUNCATE MATERIALIZED VIEW to uninitialize an initialized materialized view.
 
- :    *<range-partitioning-scheme\>*
- :   Partitions rows by a range of values in the partitioning column. Range partitioning is restricted to a single partition key column and a maximum of 1024 partitions. In a range-partitioning-scheme, the partition-key is the column that contains the table partitioning keys:
+2.  Have a unique HG index defined for the materialized view.
+    -   If the materialized view does not contain outer joins, then the materialized view must have a unique index on non nullable columns.
+    -   If the materialized view does contain outer joins, then the materialized view must have a unique HG index on non nullable columns or a unique HG index with at least one column non-nullable.
 
-    ```
-    <range-partitioning-scheme> ::=
-       RANGE ( <column-name> ) ( <range-partition-decl> [,...] )
-    ```
 
-     *<range-partition-decl\>*
-     :   ```
+
+
+</dd><dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Splits an existing range partition or subpartition.
+
+```
+<split-object> ::= <range-partition-decl> 
+        INTO ( <range-partition-decl>, <range-partition-decl> )
+```
+
+When splitting a partition or subpartition, the names of the new partitions must be unique and cannot include the name of the original partition. All data from the original partition must fit into only one of the resulting partitions. Data cannot move between partitions.
+
+When splitting a partition or subpartition, the upper boundary of the new partitions must be equal to the upper boundary of the original partition. For example, if P1 has a boundary of 100 and you split P1 into P1A and P1B, the boundary of P1B must be 100.
+
+
+
+</dd><dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Merges *<partition-name-1\>* into *<partition-name-2\>*. Two partitions can be merged if they are adjacent partitions. You can only merge a partition with a lower partition value into the adjacent partition with a higher partition value. Note that the server does not check CREATE privilege into which the partition is merged. For an example of how to create adjacent partitions, see CREATE TABLE Statement examples.
+
+
+
+</dd><dt><b>
+
+PARTITION BY
+
+</b></dt>
+<dd>
+
+Divides large tables into smaller, more manageable storage objects. Partitions share the same logical attributes of the parent table, but can be placed in separate dbspaces and managed individually. Data lake Relational Engine supports several table partitioning schemes:
+
+-   Hash-partitions
+-   Range-partitions
+-   Hash range-partitions
+
+A partition-key is the column or columns that contain the table partitioning keys. Partition keys can contain NULL and DEFAULT values, but cannot contain:
+
+-   LOB \(BLOB or CLOB\) columns
+-   BINARY, or VARBINARY columns
+-   CHAR or VARCHAR columns whose length is over 255 bytes
+-   BIT columns
+-   FLOAT/DOUBLE/REAL columns
+
+
+
+</dd>
+<dd>
+
+Restrictions when partitioning an existing materialized view:
+
+-   For range partitioning, any existing data in the table must exist within the upper bound of the first partition of the materialized view or the materialized view must be uninitialized.
+-   For hash partitioning and range subpartitioning of a hash table, the table must be empty or the materialized view must be uninitialized.
+
+Use the TRUNCATE MATERIALIZED VIEW to uninitialize an initialized materialized view.
+
+
+
+</dd>
+<dd>
+
+
+<dl>
+<dt><b>
+
+*<range-partitioning-scheme\>*
+
+</b></dt>
+<dd>
+
+Partitions rows by a range of values in the partitioning column. Range partitioning is restricted to a single partition key column and a maximum of 1024 partitions. In a range-partitioning-scheme, the partition-key is the column that contains the table partitioning keys:
+
+```
+<range-partitioning-scheme> ::=
+   RANGE ( <column-name> ) ( <range-partition-decl> [,...] )
+```
+
+
+<dl>
+<dt><b>
+
+*<range-partition-decl\>*
+
+</b></dt>
+<dd>
+
+```
 <range-partition-decl> ::=
    <partition-name> VALUES <= ( { <constant-expression> | MAX } [,...] )
 ```
 
-         *<partition-name\>*
-         :   Specifies the name of a new partition on which table rows are stored. Partition names must be unique within the set of partitions on a table.
 
-          *<VALUES\>*
-         :   Specifies the inclusive upper bound for each partition \(in ascending order\). The user must specify the partitioning criteria for each range partition to guarantee that each row is distributed to only one partition. NULLs are allowed for the partition column and rows with NULL as partition key value belong to the first table partition. However, NULL cannot be the bound value.
+<dl>
+<dt><b>
 
-            There is no lower bound \(MIN value\) for the first partition. Rows of NULL cells in the first column of the partition key will go to the first partition. For the last partition, you can either specify an inclusive upper bound or MAX. If the upper bound value for the last partition is not MAX, loading or inserting any row with partition key value larger than the upper bound value of the last partition generates an error.
+*<partition-name\>*
 
-          MAX
-         :   Denotes the infinite upper bound and can only be specified for the last partition.
+</b></dt>
+<dd>
 
-      Restrictions:
-
-    -   Partition bounds must be constants, not constant expressions.
-
-    -   Partition bounds must be in ascending order according to the order in which the partitions were created. That is, the upper bound for the second partition must be higher than for the first partition, and so on. In addition, partition bound values must be compatible with the corresponding partition-key column data type.
-
-    -   If a bound value has a different data type than that of its corresponding partition key column, data lake Relational Engine converts the bound value to the data type of the partition key column, with these exceptions:
-
-        -   Explicit conversions are not allowed. This example attempts an explicit conversion from INT to VARCHAR and generates an error:
-
-            ```
-            CREATE TABLE EMPLOYEES(EMP_NAME VARCHAR(20)) PARTITION BY RANGE(EMP_NAME)
-               (P1 VALUES <= (CAST (1 AS VARCHAR(20))), P2 VALUES <= (CAST (10 AS VARCHAR(20)));
-            ```
-
-        -   Implicit conversions that result in data loss are not allowed. In this example, the partition bounds are not compatible with the partition key type. Rounding assumptions may lead to data loss and an error is generated:
-
-            ```
-            CREATE TABLE EMP_ID (ID INT) PARTITION BY RANGE(ID) (P1 VALUES <= (10.5), P2 VALUES <= (100.5));
-            ```
-
-            In this example, the partition bounds and the partition key data type are compatible. The bound values are directly converted to float values. No rounding is required, and conversion is supported:
-
-            ```
-            CREATE TABLE ID_EMP (ID FLOAT) PARTITION BY RANGE(ID) (P1 VALUES <= (10), P2 VALUES <= (100));
-            ```
+Specifies the name of a new partition on which table rows are stored. Partition names must be unique within the set of partitions on a table.
 
 
-    -   Conversions from non-binary data types to binary data types are not allowed. For example, this conversion is not allowed and returns an error:
+
+</dd><dt><b>
+
+*<VALUES\>*
+
+</b></dt>
+<dd>
+
+Specifies the inclusive upper bound for each partition \(in ascending order\). The user must specify the partitioning criteria for each range partition to guarantee that each row is distributed to only one partition. NULLs are allowed for the partition column and rows with NULL as partition key value belong to the first table partition. However, NULL cannot be the bound value.
+
+There is no lower bound \(MIN value\) for the first partition. Rows of NULL cells in the first column of the partition key will go to the first partition. For the last partition, you can either specify an inclusive upper bound or MAX. If the upper bound value for the last partition is not MAX, loading or inserting any row with partition key value larger than the upper bound value of the last partition generates an error.
+
+
+
+</dd><dt><b>
+
+MAX
+
+</b></dt>
+<dd>
+
+Denotes the infinite upper bound and can only be specified for the last partition.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+Restrictions:
+
+-   Partition bounds must be constants, not constant expressions.
+
+-   Partition bounds must be in ascending order according to the order in which the partitions were created. That is, the upper bound for the second partition must be higher than for the first partition, and so on. In addition, partition bound values must be compatible with the corresponding partition-key column data type.
+
+-   If a bound value has a different data type than that of its corresponding partition key column, data lake Relational Engine converts the bound value to the data type of the partition key column, with these exceptions:
+
+    -   Explicit conversions are not allowed. This example attempts an explicit conversion from INT to VARCHAR and generates an error:
 
         ```
-        CREATE TABLE NEWEMP (NAME BINARY) PARTITION BY RANGE(name) 
-           (P1 VALUES <= ('Maarten'), P2 VALUES <= ('Zymmerman');
+        CREATE TABLE EMPLOYEES(EMP_NAME VARCHAR(20)) PARTITION BY RANGE(EMP_NAME)
+           (P1 VALUES <= (CAST (1 AS VARCHAR(20))), P2 VALUES <= (CAST (10 AS VARCHAR(20)));
         ```
 
-    -   NULL cannot be used as a boundary in a range-partitioned table.
-    -   The row will be in the first partition if the cell value of the 1st column of the partition key evaluated to be NULL. Data lake Relational Engine supports only single column partition keys, so any NULL in the partition key distributes the row to the first partition.
+    -   Implicit conversions that result in data loss are not allowed. In this example, the partition bounds are not compatible with the partition key type. Rounding assumptions may lead to data loss and an error is generated:
 
-  *<hash-partitioning-scheme\>*
- :   Maps data to partitions based on partition-key values processed by an internal hashing function. Hash partition keys are restricted to a maximum of eight columns with a combined declared column width of 5300 bytes or less. For hash partitions, the table creator determines only the partition key columns; the number and location of the partitions are determined internally.
+        ```
+        CREATE TABLE EMP_ID (ID INT) PARTITION BY RANGE(ID) (P1 VALUES <= (10.5), P2 VALUES <= (100.5));
+        ```
 
-    ```
-    <hash-partitioning-scheme> ::=
-       HASH ( <column-name> [,... ] )
-    ```
+        In this example, the partition bounds and the partition key data type are compatible. The bound values are directly converted to float values. No rounding is required, and conversion is supported:
 
-    Restrictions:
+        ```
+        CREATE TABLE ID_EMP (ID FLOAT) PARTITION BY RANGE(ID) (P1 VALUES <= (10), P2 VALUES <= (100));
+        ```
 
-    -   You cannot add, drop, merge, or split a hash partition.
-    -   You cannot add or drop a column from a hash partition key.
 
-  *<hash-range-partitioning-scheme\>*
- :   Maps data to partitions based on partition-key values processed by an internal hashing function and subpartitions the hash-partitioned table by range.
+-   Conversions from non-binary data types to binary data types are not allowed. For example, this conversion is not allowed and returns an error:
 
     ```
-    <hash-range-partitioning-scheme> ::=
-       PARTITION BY HASH  ( <column-name> [,... ] )
-        SUBPARTITION BY <range-partition-scheme>
+    CREATE TABLE NEWEMP (NAME BINARY) PARTITION BY RANGE(name) 
+       (P1 VALUES <= ('Maarten'), P2 VALUES <= ('Zymmerman');
     ```
 
-    The hash partition specifies how the data is logically distributed and colocated; the range subpartition specifies how the data is physically placed. The new range subpartition is logically partitioned by hash with the same hash partition keys as the existing hash-range partitioned table. The range subpartition key is restricted to one column.
+-   NULL cannot be used as a boundary in a range-partitioned table.
+-   The row will be in the first partition if the cell value of the 1st column of the partition key evaluated to be NULL. Data lake Relational Engine supports only single column partition keys, so any NULL in the partition key distributes the row to the first partition.
 
-    Restrictions:
 
-    -   You cannot add, drop, merge, or split a hash partition.
-    -   You cannot add or drop a column from a hash partition key.
 
-   SUBPARTITION BY RANGE
- :   Subpartitions an existing hash-partition table.
+</dd><dt><b>
 
- :   ```
+*<hash-partitioning-scheme\>*
+
+</b></dt>
+<dd>
+
+Maps data to partitions based on partition-key values processed by an internal hashing function. Hash partition keys are restricted to a maximum of eight columns with a combined declared column width of 5300 bytes or less. For hash partitions, the table creator determines only the partition key columns; the number and location of the partitions are determined internally.
+
+```
+<hash-partitioning-scheme> ::=
+   HASH ( <column-name> [,... ] )
+```
+
+Restrictions:
+
+-   You cannot add, drop, merge, or split a hash partition.
+-   You cannot add or drop a column from a hash partition key.
+
+
+
+</dd><dt><b>
+
+*<hash-range-partitioning-scheme\>*
+
+</b></dt>
+<dd>
+
+Maps data to partitions based on partition-key values processed by an internal hashing function and subpartitions the hash-partitioned table by range.
+
+```
+<hash-range-partitioning-scheme> ::=
+   PARTITION BY HASH  ( <column-name> [,... ] )
+    SUBPARTITION BY <range-partition-scheme>
+```
+
+The hash partition specifies how the data is logically distributed and colocated; the range subpartition specifies how the data is physically placed. The new range subpartition is logically partitioned by hash with the same hash partition keys as the existing hash-range partitioned table. The range subpartition key is restricted to one column.
+
+Restrictions:
+
+-   You cannot add, drop, merge, or split a hash partition.
+-   You cannot add or drop a column from a hash partition key.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Subpartitions an existing hash-partition table.
+
+
+
+</dd>
+<dd>
+
+```
 SUBPARTITION BY <range-partition-decl>
 ```
 
-    Subpartitions on a range-partitioned table are not supported.
+Subpartitions on a range-partitioned table are not supported.
 
-  ADD \{PARTITION|SUBPARTITION\} BY RANGE
- :   Adds a new partition to an existing range-partition table or a new subpartition to an existing hash range-partition table.
 
-    ```
-    ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>
-    ```
 
-    The value of the *<range-partition-decl\>* must exceed the existing partition boundary. Only one partition or subpartition can be added per ADD clause. Use SPLIT PARTITION to add a range within the existing boundary.
+</dd><dt><b>
 
-  UNPARTITION
- :   Removes all partitions and subpartitions from a partitioned table. You cannot unpartition a subpatition only. ALTER TABLE UNPARTITION blocks all database activities.
 
- 
+
+</b></dt>
+<dd>
+
+Adds a new partition to an existing range-partition table or a new subpartition to an existing hash range-partition table.
+
+```
+ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>
+```
+
+The value of the *<range-partition-decl\>* must exceed the existing partition boundary. Only one partition or subpartition can be added per ADD clause. Use SPLIT PARTITION to add a range within the existing boundary.
+
+
+
+</dd><dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Removes all partitions and subpartitions from a partitioned table. You cannot unpartition a subpatition only. ALTER TABLE UNPARTITION blocks all database activities.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiod958953e260d44209300f5454e01029f__alter_matview_remarks1"/>
 
@@ -303,10 +470,23 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiod958953e260d44209300f5454e01029f__alter_matview_examples1"/>
 
@@ -476,9 +656,9 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
 
-[ALTER MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/816945966ce210149a80b8603addbc83.html "Alters a materialized view.") :arrow_upper_right:
+[ALTER MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/816945966ce210149a80b8603addbc83.html "Alters a materialized view.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[Refresh and Build Types for Materialized Views in Data Lake Relational Engine](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_1_QRC/en-US/967c517f00ef459e9023edf6ca98c336.html "You can control when (refresh type): MANUAL or AUTO and how (build type): FULL or INCREMENTAL a materialized view is refreshed.") :arrow_upper_right:
+[Refresh and Build Types for Materialized Views in Data Lake Relational Engine](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/967c517f00ef459e9023edf6ca98c336.html "You can control when (refresh type): MANUAL or AUTO and how (build type): FULL or INCREMENTAL a materialized view is refreshed.") :arrow_upper_right:
 

@@ -27,13 +27,34 @@ DROP SCHEMA <remote-schema-name> [ CASCADE ] IN FILES_SERVICE
 
 ## Parameters
 
- *<remote-schema-name\>*
- :   The name of the schema to be deleted.
 
-  CASCADE
- :   The remote tables in the remote schema are dropped before the schema itself is dropped.
+<dl>
+<dt><b>
 
- 
+*<remote-schema-name\>*
+
+</b></dt>
+<dd>
+
+The name of the schema to be deleted.
+
+
+
+</dd><dt><b>
+
+CASCADE
+
+</b></dt>
+<dd>
+
+The remote tables in the remote schema are dropped before the schema itself is dropped.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio9b97bf4f782643a7b197762f36623071__DS_remarks"/>
 
@@ -68,5 +89,5 @@ DROP SCHEMA Factory CASCADE IN FILES_SERVICE;
 **Related Information**  
 
 
-[DROP SCHEMA Statement for Data Lake Relational Engine (SAP HANA DB-Managed) [SQL on Files]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/d71105d49064495ca6a2be5cf34348d7.html "Drop a remote schema, which is a collection of remote tables, in a SQL on Files external catalog.") :arrow_upper_right:
+[DROP SCHEMA Statement for Data Lake Relational Engine (SAP HANA DB-Managed) [SQL on Files]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/d71105d49064495ca6a2be5cf34348d7.html "Drop a remote schema, which is a collection of remote tables, in a SQL on Files external catalog.") :arrow_upper_right:
 

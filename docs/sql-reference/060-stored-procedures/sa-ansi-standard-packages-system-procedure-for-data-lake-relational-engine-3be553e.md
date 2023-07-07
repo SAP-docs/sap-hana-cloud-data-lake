@@ -26,13 +26,34 @@ sa_ansi_standard_packages(
 
 ## Parameters
 
-  *<standard\>* 
- :   Use this LONG VARCHAR parameter to specify the standard to use for the core extensions. One of SQL:1999 or SQL:2003.
 
-   *<statement\>* 
- :   Use this LONG VARCHAR parameter to specify the SQL statement to evaluate.
+<dl>
+<dt><b>
 
- 
+ *<standard\>* 
+
+</b></dt>
+<dd>
+
+Use this LONG VARCHAR parameter to specify the standard to use for the core extensions. One of SQL:1999 or SQL:2003.
+
+
+
+</dd><dt><b>
+
+ *<statement\>* 
+
+</b></dt>
+<dd>
+
+Use this LONG VARCHAR parameter to specify the SQL statement to evaluate.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3be553e66c5f1014ae7590829b8dfdbf__sa_ansi_standard_packages_resultset1"/>
 
@@ -121,11 +142,15 @@ If there are no non-core extensions used for the statement, the result set is em
 
 
 
-<a name="loio3be553e66c5f1014ae7590829b8dfdbf__section_o5p_mbj_snb"/>
+<a name="loio3be553e66c5f1014ae7590829b8dfdbf__sa_ansi_standard_packages_priv1"/>
 
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure.
+
+
+### 
+
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -138,5 +163,5 @@ None
 **Related Information**  
 
 
-[sa_ansi_standard_packages System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/534a9382c24b4f368bf19a9e82500a72.html "Returns information about the non-core SQL extensions used in a SQL statement.") :arrow_upper_right:
+[sa_ansi_standard_packages System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/534a9382c24b4f368bf19a9e82500a72.html "Returns information about the non-core SQL extensions used in a SQL statement.") :arrow_upper_right:
 

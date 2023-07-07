@@ -29,16 +29,45 @@ sa_split_list(
 
 ## Parameters
 
-  *<str\>* 
- :   Use this LONG VARCHAR parameter to specify the string containing the values to be split, separated by *<delim\>*.
 
-   *<delim\>* 
- :   Use this optional CHAR\(10\) parameter to specify the delimiter used in *<str\>* to separate values. The delimiter can be a string of any characters, up to 10 bytes. If *<delim\>* is not specified, a comma is used by default.
+<dl>
+<dt><b>
 
-   *<maxlen\>* 
- :   Use this optional INTEGER parameter to specify the maximum length of the returned values. For example, if *<maxlen\>* is set to 3, the values in the result set are truncated to a length of 3 characters. If you specify 0 \(the default\), values can be any length.
+ *<str\>* 
 
- 
+</b></dt>
+<dd>
+
+Use this LONG VARCHAR parameter to specify the string containing the values to be split, separated by *<delim\>*.
+
+
+
+</dd><dt><b>
+
+ *<delim\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(10\) parameter to specify the delimiter used in *<str\>* to separate values. The delimiter can be a string of any characters, up to 10 bytes. If *<delim\>* is not specified, a comma is used by default.
+
+
+
+</dd><dt><b>
+
+ *<maxlen\>* 
+
+</b></dt>
+<dd>
+
+Use this optional INTEGER parameter to specify the maximum length of the returned values. For example, if *<maxlen\>* is set to 3, the values in the result set are truncated to a length of 3 characters. If you specify 0 \(the default\), values can be any length.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio204a6c1cac354d788d94946c8e9dbe21__section_gwt_wc2_srb"/>
 
@@ -137,7 +166,10 @@ White space within the input string is significant. If the delimiter is a space 
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

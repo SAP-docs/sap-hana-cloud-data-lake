@@ -6,11 +6,6 @@ Modifies existing rows of a single table, or a view that contains only one table
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -19,37 +14,22 @@ Modifies existing rows of a single table, or a view that contains only one table
 
 
 ```
-UPDATE [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) { [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] } (span].]{ [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <table-name> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <view-name> (varname] } [ [ AS ] [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <correlation-name> (varname] ]
-   ...SET [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <update-clause> (varname] [,...] ]
+UPDATE [ { <owner> | <schema-name> }.]{ <table-name> | <view-name> } [ [ AS ] <correlation-name> ]
+   ...SET [ <update-clause> [,...] ]
 ```
 
 ```
-[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <update-clause> (varname] ::=
-   ...[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <column-expression> (varname]
-   ...[ FROM [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <table-expression> (varname] ] 
-   ...[ WHERE [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <search-condition> (varname] ]
-   ...[ ORDER BY [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <expression> (varname] [ { ASC | DESC } ]
+<update-clause> ::=
+   ...<column-expression>
+   ...[ FROM <table-expression> ] 
+   ...[ WHERE <search-condition> ]
+   ...[ ORDER BY <expression> [ { ASC | DESC } ]
 
 ```
 
 ```
-[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <column-expression> (varname]
-   [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <column-name> (varname] = [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <expression> (varname] [,...]
+<column-expression>
+   <column-name> = <expression> [,...]
 ```
 
 ```
@@ -61,75 +41,117 @@ UPDATE [ [/pandoc/div/div/horizontalrule/codeblock/span/span
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa628441e84f21015a952a4b8bd52ee72__update_parameters1"/>
 
 ## Parameters
 
- SET
- :   Use the SET clause to set column names or variables to the specified expression.
 
-    Use the SET clause to set the column to a computed column value by using this format:
+<dl>
+<dt><b>
 
-    ```
-    SET <column-name> = <expression>, ...
-    ```
+SET
 
-    Each specified column is set to the value of the expression. There are no restrictions on *<expression\>*. If *<expression\>* is a *<column-name\>*, then the previous value from that column is used.
+</b></dt>
+<dd>
 
-    If a column has a default defined, then use the SET clause to set a column to its default value.
+Use the SET clause to set column names or variables to the specified expression.
 
-    You can also use the SET clause to assign a variable by using the following format:
+Use the SET clause to set the column to a computed column value by using this format:
 
-    ```
-    SET @<variable-name> = <expression>, ...
-    ```
+```
+SET <column-name> = <expression>, ...
+```
 
-    The *<owner\>* specification is only for use with database-scope variables.
+Each specified column is set to the value of the expression. There are no restrictions on *<expression\>*. If *<expression\>* is a *<column-name\>*, then the previous value from that column is used.
 
-    When assigning a value to a variable, the variable must already be declared, and its name must begin with the at sign \(@\). If the variable name matches the name of a column in the table to be updated, then the UPDATE statement updates the column value and leaves the variable unchanged. Variable and column assignments can be combined in any order.
+If a column has a default defined, then use the SET clause to set a column to its default value.
 
-  FROM
- :   Allows tables to be updated based on joins. If the FROM clause is present, *<table-name\>* must specify the sole table to be updated, and it must qualify the name in the same way as it appears in the FROM clause. If correlation names are used in the FROM clause, the identical correlation name must be specified as *<table-name\>*.
+You can also use the SET clause to assign a variable by using the following format:
 
-    This statement illustrates a potential ambiguity in table names in UPDATE statements using a FROM clause that contain table expressions, which use correlation names:
+```
+SET @<variable-name> = <expression>, ...
+```
 
-    ```
-    UPDATE table_1
-    SET column_1 = ...
-    FROM table_1 AS alias_1, table_2 AS alias_2
-    WHERE ...
-    ```
+The *<owner\>* specification is only for use with database-scope variables.
 
-    Each instance of table\_1 in the FROM clause has a correlation name, denoting a self-join of table\_1 to itself. However, the UPDATE statement fails to specify which of the rows that make up the self-join are to be updated. This can be corrected by specifying the correlation name in the UPDATE statement as follows:
+When assigning a value to a variable, the variable must already be declared, and its name must begin with the at sign \(@\). If the variable name matches the name of a column in the table to be updated, then the UPDATE statement updates the column value and leaves the variable unchanged. Variable and column assignments can be combined in any order.
 
-    ```
-    UPDATE table_1
-    SET column_1 = ...
-    FROM table_1 AS alias_1, table_1 AS alias_2
-    WHERE ...
-    ```
 
-    If the same table name in which you are updating rows is used in the FROM clause, they are considered to reference the same table if one of the following is true:
 
-    -   Both table references are not qualified by specifying a user ID
-    -   Both table references are qualified by specifying a user ID
-    -   Both table references are specified with a correlation name
+</dd><dt><b>
 
-    In cases where the server cannot determine if the table references are identical, a SQL error appears. This prevents the user from unintended semantics by updating unintended rows.
+FROM
 
-  WHERE clause
- :   If specified, only rows satisfying the search condition are updated. If no WHERE clause is specified, every row is updated.
+</b></dt>
+<dd>
 
-  ORDER BY clause
- :   Normally, the order in which rows are updated does not matter. However, with the FIRST or TOP clause, the order can be significant.
+Allows tables to be updated based on joins. If the FROM clause is present, *<table-name\>* must specify the sole table to be updated, and it must qualify the name in the same way as it appears in the FROM clause. If correlation names are used in the FROM clause, the identical correlation name must be specified as *<table-name\>*.
 
-    You cannot use ordinal column numbers in the ORDER BY clause.
+This statement illustrates a potential ambiguity in table names in UPDATE statements using a FROM clause that contain table expressions, which use correlation names:
 
-    To use the ORDER BY clause, you cannot set the ansi\_update\_constraints option to Strict.
+```
+UPDATE table_1
+SET column_1 = ...
+FROM table_1 AS alias_1, table_2 AS alias_2
+WHERE ...
+```
 
-    To update columns that appear in the ORDER BY clause, set the ansi\_update\_constraints option to Off.
+Each instance of table\_1 in the FROM clause has a correlation name, denoting a self-join of table\_1 to itself. However, the UPDATE statement fails to specify which of the rows that make up the self-join are to be updated. This can be corrected by specifying the correlation name in the UPDATE statement as follows:
 
- 
+```
+UPDATE table_1
+SET column_1 = ...
+FROM table_1 AS alias_1, table_1 AS alias_2
+WHERE ...
+```
+
+If the same table name in which you are updating rows is used in the FROM clause, they are considered to reference the same table if one of the following is true:
+
+-   Both table references are not qualified by specifying a user ID
+-   Both table references are qualified by specifying a user ID
+-   Both table references are specified with a correlation name
+
+In cases where the server cannot determine if the table references are identical, a SQL error appears. This prevents the user from unintended semantics by updating unintended rows.
+
+
+
+</dd><dt><b>
+
+WHERE clause
+
+</b></dt>
+<dd>
+
+If specified, only rows satisfying the search condition are updated. If no WHERE clause is specified, every row is updated.
+
+
+
+</dd><dt><b>
+
+ORDER BY clause
+
+</b></dt>
+<dd>
+
+Normally, the order in which rows are updated does not matter. However, with the FIRST or TOP clause, the order can be significant.
+
+You cannot use ordinal column numbers in the ORDER BY clause.
+
+To use the ORDER BY clause, you cannot set the ansi\_update\_constraints option to Strict.
+
+To update columns that appear in the ORDER BY clause, set the ansi\_update\_constraints option to Off.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa628441e84f21015a952a4b8bd52ee72__update_remarks1"/>
 
@@ -295,7 +317,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[UPDATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/2de4f7ac0a4244d597b33cb572ca1d8f.html "Modifies existing rows of a single table, or a view that contains only one table.") :arrow_upper_right:
+[UPDATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/2de4f7ac0a4244d597b33cb572ca1d8f.html "Modifies existing rows of a single table, or a view that contains only one table.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

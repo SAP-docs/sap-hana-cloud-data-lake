@@ -29,16 +29,45 @@ sa_rowgenerator(
 
 ## Parameters
 
-  *<rstart\>* 
- :   Use this optional INTEGER parameter to specify the starting value. The default value is 0.
 
-   *<rend\>* 
- :   Use this optional INTEGER parameter to specify the ending value that is greater than or equal to *<rstart\>*. The default value is 100.
+<dl>
+<dt><b>
 
-   *<rstep\>* 
- :   Use this optional INTEGER parameter to specify the increment by which the sequence values are increased. The default value is 1.
+ *<rstart\>* 
 
- 
+</b></dt>
+<dd>
+
+Use this optional INTEGER parameter to specify the starting value. The default value is 0.
+
+
+
+</dd><dt><b>
+
+ *<rend\>* 
+
+</b></dt>
+<dd>
+
+Use this optional INTEGER parameter to specify the ending value that is greater than or equal to *<rstart\>*. The default value is 100.
+
+
+
+</dd><dt><b>
+
+ *<rstep\>* 
+
+</b></dt>
+<dd>
+
+Use this optional INTEGER parameter to specify the increment by which the sequence values are increased. The default value is 1.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio7b99d032cfbe4f80bde904bee1902662__section_aqg_cb2_srb"/>
 
@@ -123,7 +152,10 @@ SELECT row_num FROM sa_rowgenerator( 1, 255 );
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

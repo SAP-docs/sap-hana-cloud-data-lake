@@ -172,19 +172,56 @@ TINYINT
 
 The type of index. Values include:
 
- 1
- :   Primary key
 
-  2
- :   Foreign key
+<dl>
+<dt><b>
 
-  3
- :   Secondary index \(includes unique constraints\)
+1
 
-  4
- :   Text indexes
+</b></dt>
+<dd>
 
- 
+Primary key
+
+
+
+</dd><dt><b>
+
+2
+
+</b></dt>
+<dd>
+
+Foreign key
+
+
+
+</dd><dt><b>
+
+3
+
+</b></dt>
+<dd>
+
+Secondary index \(includes unique constraints\)
+
+
+
+</dd><dt><b>
+
+4
+
+</b></dt>
+<dd>
+
+Text indexes
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>
@@ -285,5 +322,5 @@ DEPRECATED. This column is present in SYSVIEW, but not in the underlying system 
 **Related Information**  
 
 
-[SYSIDX System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/d4837fc57359426082842b1ba1a855f2.html "Each row in the SYSIDX system view defines a logical index in the database. The underlying system table for this view is ISYSIDX.") :arrow_upper_right:
+[SYSIDX System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/d4837fc57359426082842b1ba1a855f2.html "Each row in the SYSIDX system view defines a logical index in the database. The underlying system table for this view is ISYSIDX.") :arrow_upper_right:
 

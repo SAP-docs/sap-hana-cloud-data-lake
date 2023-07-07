@@ -16,18 +16,47 @@ CONVERT ( <data-type>, <expression> [ , <format-style> ] )
 
 ## Parameters
 
- *<data-type\>*
- :   The data type to convert the expression into. Set the data type explicitly, or specify the %TYPE attribute to set the data type to the data type of a column in a table or view, or to the data type of a variable.
 
-  *<expression\>*
- :   The expression to be converted.
+<dl>
+<dt><b>
 
-  *<format-style\>*
- :   For converting strings to date or time data types and vice versa, format-style is a style code number that describes the date format string to be used.
+*<data-type\>*
 
-    If no *<format-style\>* argument is provided, the database option settings are used.
+</b></dt>
+<dd>
 
- 
+The data type to convert the expression into. Set the data type explicitly, or specify the %TYPE attribute to set the data type to the data type of a column in a table or view, or to the data type of a variable.
+
+
+
+</dd><dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The expression to be converted.
+
+
+
+</dd><dt><b>
+
+*<format-style\>*
+
+</b></dt>
+<dd>
+
+For converting strings to date or time data types and vice versa, format-style is a style code number that describes the date format string to be used.
+
+If no *<format-style\>* argument is provided, the database option settings are used.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa53f6efb84f21015af0e8594ce5cd68e__CONVERT_returns1"/>
 
@@ -1132,5 +1161,5 @@ SELECT CONVERT( integer, 5.2 ) FROM iq_dummy
 
 [YEARS Function \[Date and Time\] for Data Lake Relational Engine](years-function-date-and-time-for-data-lake-relational-engine-a5926bf.md "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.")
 
-[CONVERT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/b92624d74b14466cb6f758da6ed87324.html "Returns an expression converted to a supplied data type.") :arrow_upper_right:
+[CONVERT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/b92624d74b14466cb6f758da6ed87324.html "Returns an expression converted to a supplied data type.") :arrow_upper_right:
 

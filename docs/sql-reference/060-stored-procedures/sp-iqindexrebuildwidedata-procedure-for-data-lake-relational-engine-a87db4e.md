@@ -23,10 +23,23 @@ sp_iqindexrebuildwidedata [<table.name>]
 
 ## Parameters
 
- *<table.name\>*
- :   Include the optional *<table.name\>* parameter to generate a list of wide columns for that table. Omit the *<table.name\>* parameter to generate a list of wide columns for all tables in the database.
 
- 
+<dl>
+<dt><b>
+
+*<table.name\>*
+
+</b></dt>
+<dd>
+
+Include the optional *<table.name\>* parameter to generate a list of wide columns for that table. Omit the *<table.name\>* parameter to generate a list of wide columns for all tables in the database.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa87db4e784f2101596f1b7355fcd2137__section_xj5_z1z_mbb"/>
 
@@ -38,82 +51,12 @@ CHAR, VARCHAR, BINARY, and VARBINARY columns wider than 255 characters, as well 
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). If you own the object referenced by the procedure, no additional privilege is required.
+Requires EXECUTE object-level privilege on the procedure. If you own the object referenced by the procedure, no additional privilege is required.
 
 For objects owned by others, you need one of the following privileges:
 
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-INSERT ANY TABLE
-
-
-
-</td>
-<td valign="top">
-
-System privilege
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-INSERT privilege on the table
-
-
-
-</td>
-<td valign="top">
-
-Object-level privilege
-
-
-
-</td>
-<td valign="top">
-
-[GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md)
-
-
-
-</td>
-</tr>
-</table>
+-   INSERT ANY TABLE system privilege
+-   INSERT object-level privilege on the table
 
 
 

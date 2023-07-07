@@ -6,11 +6,6 @@ Deletes all rows from a materialized view without deleting the table definition.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -21,11 +16,28 @@ Deletes all rows from a materialized view without deleting the table definition.
 
 
 ```
-MATERIALIZED VIEW [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <materialized-view-name> (varname]
+MATERIALIZED VIEW [ <schema-name>.]<materialized-view-name>
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
+<a name="loio817f97c16ce21014ba1dcdaaf046de69__section_ssv_xzy_wwb"/>
+
+## Privileges
+
+
+
+### 
+
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 
@@ -38,18 +50,6 @@ MATERIALIZED VIEW [ [/pandoc/div/div/horizontalrule/codeblock/span/span
 ### 
 
 The TRUNCATE statement deletes all rows from the materialized view.
-
-
-
-<a name="loio817f97c16ce21014ba1dcdaaf046de69__section_ssv_xzy_wwb"/>
-
-## Privileges
-
-
-
-### 
-
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

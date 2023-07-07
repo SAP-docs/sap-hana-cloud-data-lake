@@ -17,16 +17,45 @@ OVER ( ORDER BY <expression2> [ ASC | DESC ] )
 
 ## Parameters
 
- *<expression1\>*
- :   A constant integer from 1 to 32767, which specifies the number of buckets.
 
-  *<expression2\>*
- :   A sort specification that can be any valid expression involving a column reference, aggregates, or expressions invoking these items.
+<dl>
+<dt><b>
 
-  ASC | DESC
- :   The ASC or DESC parameter specifies the ordering sequence ascending or descending. Ascending order is the default.
+*<expression1\>*
 
- 
+</b></dt>
+<dd>
+
+A constant integer from 1 to 32767, which specifies the number of buckets.
+
+
+
+</dd><dt><b>
+
+*<expression2\>*
+
+</b></dt>
+<dd>
+
+A sort specification that can be any valid expression involving a column reference, aggregates, or expressions invoking these items.
+
+
+
+</dd><dt><b>
+
+ASC | DESC
+
+</b></dt>
+<dd>
+
+The ASC or DESC parameter specifies the ordering sequence ascending or descending. Ascending order is the default.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5695f3f84f21015a23ae9730b31eef2__NTILE_remarks1"/>
 
@@ -88,5 +117,5 @@ To find the top 10% of car dealers by sales, you specify `NTILE(10)` in the exam
 
 [YEAR Function \[Date and Time\] for Data Lake Relational Engine](year-function-date-and-time-for-data-lake-relational-engine-a591eb9.md "Returns a 4-digit number corresponding to the year of the given date/time.")
 
-[NTILE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/97741f155cc24e2ea035db70a29da3b0.html "Distributes query results into a specified number of buckets and assigns the bucket number to each row in the bucket.") :arrow_upper_right:
+[NTILE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/97741f155cc24e2ea035db70a29da3b0.html "Distributes query results into a specified number of buckets and assigns the bucket number to each row in the bucket.") :arrow_upper_right:
 

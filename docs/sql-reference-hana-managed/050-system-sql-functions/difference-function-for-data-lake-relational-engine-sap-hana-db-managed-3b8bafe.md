@@ -16,13 +16,34 @@ DIFFERENCE ( <string-expression1>, <string-expression2> )
 
 ## Parameters
 
- *<string-expression1\>*
- :   The first string to compare.
 
-  *<string-expression2\>*
- :   The second string to compare.
+<dl>
+<dt><b>
 
- 
+*<string-expression1\>*
+
+</b></dt>
+<dd>
+
+The first string to compare.
+
+
+
+</dd><dt><b>
+
+*<string-expression2\>*
+
+</b></dt>
+<dd>
+
+The second string to compare.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3b8bafe468ce4160b52b7b25a5de50a0__section_rzk_bm3_wrb"/>
 

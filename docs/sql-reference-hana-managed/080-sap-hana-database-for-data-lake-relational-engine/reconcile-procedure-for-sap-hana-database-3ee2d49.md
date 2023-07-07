@@ -7,8 +7,7 @@ Manually synchronize the objects in a data lake Relational Engine relational con
 
 
 ```
-CALL SYSHDL_[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <relational_container_schema_name> (varname].RECONCILE()
+CALL SYSHDL_<relational_container_schema_name>.RECONCILE()
 ```
 
 
@@ -17,7 +16,7 @@ CALL SYSHDL_[/pandoc/div/div/horizontalrule/codeblock/span/varname
 
 ## Privileges
 
-You are a member of the container group administrator role, SYSHDL\_*<relational\_container\_schema\_name\>*\_ROLE.
+You are a member of the container group administrator role, SYSHDL\_<relational\_container\_name\>\_ROLE, for the relational container.
 
 
 
@@ -28,6 +27,6 @@ You are a member of the container group administrator role, SYSHDL\_*<relational
 The following example synchronizes all objects in data lake Relational Engine relational container CONTAINER1 with objects in the corresponding SAP HANA database relational container schema. If objects are found in the data lake Relational Engine relational container but not in SAP HANA database relational container, then data lake Relational Engine automatically attempts to create the missing SAP HANA database virtual table. If the virtual table cannot be created, an error message appears.
 
 ```
-CALL SYSHDL.CONTAINER1.RECONCILE();
+CALL SYSHDL_CONTAINER1.RECONCILE();
 ```
 

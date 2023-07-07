@@ -17,13 +17,34 @@ sa_describe_query(
 
 ## Parameters
 
-  *<query\>* 
- :   Use this LONG VARCHAR parameter to specify the text of the SQL statement being described.
 
-   *<add\_keys\>* 
- :   Use this optional BIT parameter to specify whether to determine a set of columns that uniquely identify rows in the result set for the query being described. The default is 0; the database server does not attempt to identify the columns. See the Remarks section below for a full explanation of this parameter.
+<dl>
+<dt><b>
 
- 
+ *<query\>* 
+
+</b></dt>
+<dd>
+
+Use this LONG VARCHAR parameter to specify the text of the SQL statement being described.
+
+
+
+</dd><dt><b>
+
+ *<add\_keys\>* 
+
+</b></dt>
+<dd>
+
+Use this optional BIT parameter to specify whether to determine a set of columns that uniquely identify rows in the result set for the query being described. The default is 0; the database server does not attempt to identify the columns. See the Remarks section below for a full explanation of this parameter.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio268f1ef2cade4d43be01e422595d548a__section_z3q_d2x_tvb"/>
 
@@ -780,7 +801,10 @@ depends on the length of the timestamp\_with\_time\_zone\_format option string
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

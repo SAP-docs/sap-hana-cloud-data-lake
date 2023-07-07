@@ -16,10 +16,23 @@ EVENT_CONDITION_NAME ( <integer> )
 
 ## Parameters
 
- *<integer\>*
- :   An integer that is greater than or equal to zero.
 
- 
+<dl>
+<dt><b>
+
+*<integer\>*
+
+</b></dt>
+<dd>
+
+An integer that is greater than or equal to zero.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa550344c84f21015b24ccfeb1382c210__event_condition_name_returns1"/>
 

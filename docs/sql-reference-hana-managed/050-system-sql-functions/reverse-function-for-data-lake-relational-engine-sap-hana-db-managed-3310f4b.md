@@ -16,10 +16,23 @@ REVERSE ( <expression> | <uchar_expr> )
 
 ## Parameters
 
- *<expression\>*
- :   A character or binary-type column name, variable, or constant expression of `CHAR`, `VARCHAR`, `NCHAR`, `NVARCHAR`, `BINARY`, or `VARBINARY` type.
 
- 
+<dl>
+<dt><b>
+
+*<expression\>*
+
+</b></dt>
+<dd>
+
+A character or binary-type column name, variable, or constant expression of `CHAR`, `VARCHAR`, `NCHAR`, `NVARCHAR`, `BINARY`, or `VARBINARY` type.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3310f4b18b7c478f8003d97e82fdbc6a__section_stt_xn3_wrb"/>
 

@@ -6,11 +6,6 @@ Delays processing for the current connection for a specified amount of time or u
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -26,26 +21,76 @@ WAITFOR { DELAY <time_value> | TIME <time_value> }
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa628a27784f210159b71d2c8007a65f9__IQ_Parameters"/>
 
 ## Parameters
 
- DELAY
- :   Processing is suspended for the given *<time\_value\>* interval.
 
-  TIME
- :   Processing is suspended until the server time reaches the *<time\_value\>* specified.
+<dl>
+<dt><b>
 
-  *<time\_value\>*
- :   String.
+DELAY
 
-  CHECK EVERY *<integer\>*
- :   Controls how often the `WAITFOR` statement wakes up. By default, `WAITFOR` wakes up every 5 seconds. The value is in milliseconds, and the minimum value is 250milliseconds.
+</b></dt>
+<dd>
 
-  AFTER MESSAGE BREAK
- :   The `WAITFOR` statement can be used to wait for a message from another connection. In most cases, when a message is received it is forwarded to the application that executed the `WAITFOR` statement and the `WAITFOR` statement continues to wait. If the AFTER MESSAGE BREAK clause is specified, when a message is received from another connection, the `WAITFOR` statement completes. The message text is not forwarded to the application, but it can be accessed by obtaining the value of the MessageReceived connection property.
+Processing is suspended for the given *<time\_value\>* interval.
 
- 
+
+
+</dd><dt><b>
+
+TIME
+
+</b></dt>
+<dd>
+
+Processing is suspended until the server time reaches the *<time\_value\>* specified.
+
+
+
+</dd><dt><b>
+
+*<time\_value\>*
+
+</b></dt>
+<dd>
+
+String.
+
+
+
+</dd><dt><b>
+
+CHECK EVERY *<integer\>*
+
+</b></dt>
+<dd>
+
+Controls how often the `WAITFOR` statement wakes up. By default, `WAITFOR` wakes up every 5 seconds. The value is in milliseconds, and the minimum value is 250milliseconds.
+
+
+
+</dd><dt><b>
+
+AFTER MESSAGE BREAK
+
+</b></dt>
+<dd>
+
+The `WAITFOR` statement can be used to wait for a message from another connection. In most cases, when a message is received it is forwarded to the application that executed the `WAITFOR` statement and the `WAITFOR` statement continues to wait. If the AFTER MESSAGE BREAK clause is specified, when a message is received from another connection, the `WAITFOR` statement completes. The message text is not forwarded to the application, but it can be accessed by obtaining the value of the MessageReceived connection property.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa628a27784f210159b71d2c8007a65f9__IQ_Usage"/>
 

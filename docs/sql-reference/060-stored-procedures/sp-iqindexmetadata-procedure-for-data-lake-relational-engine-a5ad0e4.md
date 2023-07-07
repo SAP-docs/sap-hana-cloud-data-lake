@@ -24,10 +24,23 @@ dbo.sp_iqindexmetadata '<index-name>'
 
 ## Parameter
 
- *<index-name\>*
- :   For all indexes except FP, use the text name defined for the index. For FP indexes, use the name of the index as defined in the iname column of the sysindex table. Run <code>SELECT * FROM SYS.SYSINDEXES WHERE TNAME=<i class="varname">&lt;table_name&gt;</i></code> to display the value.
 
- 
+<dl>
+<dt><b>
+
+*<index-name\>*
+
+</b></dt>
+<dd>
+
+For all indexes except FP, use the text name defined for the index. For FP indexes, use the name of the index as defined in the iname column of the sysindex table. Run <code>SELECT * FROM SYS.SYSINDEXES WHERE TNAME=<i class="varname">&lt;table_name&gt;</i></code> to display the value.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5ad0e4b84f21015866c8fef1c8fee50__iq_refbb_1614"/>
 
@@ -163,83 +176,13 @@ Type, Version, KeySize, Delimiters, DelimiterCount, MaxKeyWordLength, PermitEmpt
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). If you own the object referenced by the procedure, no additional privilege is required.
+Requires EXECUTE object-level privilege on the procedure. If you own the object referenced by the procedure, no additional privilege is required.
 
 For objects owned by others, you need one of the following privileges:
 
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
--   ALTER ANY INDEX
--   ALTER ANY OBJECT
-
-
-
-</td>
-<td valign="top">
-
-System privileges
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-REFERENCES privilege on the table
-
-
-
-</td>
-<td valign="top">
-
-Object-level privilege
-
-
-
-</td>
-<td valign="top">
-
-[GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md)
-
-
-
-</td>
-</tr>
-</table>
+-   ALTER ANY INDEX system privilege
+-   ALTER ANY OBJECT system privilege
+-   REFERENCES object-level privilege on the table
 
 
 
@@ -489,10 +432,9 @@ table1
 
 Then, display the metadata for the FP index on the table.
 
-> ### Sample Code:  
-> ```
-> sp_iqindexmetadata 'ASIQ_IDX_T1707_C1_FP','table1','dbo'
-> ```
+```
+sp_iqindexmetadata 'ASIQ_IDX_T1707_C1_FP','table1','dbo'
+```
 
 
 <table>
@@ -1029,10 +971,9 @@ IQ Unique
 
 This example displays the metadata for the non high group index nonhg on column C1 on table table1.
 
-> ### Sample Code:  
-> ```
-> sp_iqindexmetadata 'nonhg','table1','dbo'
-> ```
+```
+sp_iqindexmetadata 'nonhg','table1','dbo'
+```
 
 
 <table>

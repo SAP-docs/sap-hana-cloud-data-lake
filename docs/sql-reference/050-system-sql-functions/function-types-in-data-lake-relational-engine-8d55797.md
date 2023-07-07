@@ -21,7 +21,7 @@ Functions are divided into aggregate functions, analytical functions, data type 
 
 [String Functions in Data Lake Relational Engine](string-functions-in-data-lake-relational-engine-a52d1d9.md "String functions perform conversion, extraction, or manipulation operations on strings, or return information about strings.")
 
-[System Information in Data Lake Relational Engine](../040-system-information/system-information-in-data-lake-relational-engine-a52da06.md "System functions return system information.")
+[System Functions in Data Lake Relational Engine](040-system-information/system-functions-in-data-lake-relational-engine-a52da06.md "System functions return system information.")
 
 [Miscellaneous Functions in Data Lake Relational Engine](miscellaneous-functions-in-data-lake-relational-engine-a5313f0.md "Miscellaneous functions perform operations on arithmetic, string, or date/time expressions, including the return values of other functions.")
 

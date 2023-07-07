@@ -21,8 +21,21 @@ sa_verify_password( <curr_pswd> )
 
 ## Parameters
 
+
+<dl>
+<dt><b>
+
  *<curr\_pswd\>* 
-:   Use this CHAR\(128\) parameter to specify the password of the current database user.
+
+</b></dt>
+<dd>
+
+Use this CHAR\(128\) parameter to specify the password of the current database user.
+
+
+
+</dd>
+</dl>
 
 
 
@@ -40,7 +53,7 @@ If the password matches, 0 is returned and no error occurs. If the password does
 
 ## Privileges
 
-You must have EXECUTE privilege on the system procedure.
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

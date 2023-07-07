@@ -6,11 +6,6 @@ Removes a user from the database.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -25,14 +20,32 @@ REVOKE CONNECT
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa3e6a6f984f2101598d781f74cd67db4__IQ_Parameters"/>
 
 ## Parameters
 
- *<user\_id\>*
- :   Must be the name of an existing user or role that has a login password. Separate multiple user\_IDs with commas.
 
- 
+<dl>
+<dt><b>
+
+*<user\_id\>*
+
+</b></dt>
+<dd>
+
+Must be the name of an existing user or role that has a login password. Separate multiple user\_IDs with commas.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa3e6a6f984f2101598d781f74cd67db4__IQ_Usage"/>
 

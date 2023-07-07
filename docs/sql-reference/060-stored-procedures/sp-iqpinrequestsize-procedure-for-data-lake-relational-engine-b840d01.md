@@ -85,3 +85,15 @@ Displays the maximum size, in kilobytes, to be released if the pin request is de
 
 sp\_iqpinrequestsize can only be run on the coordinator node. The coordinator endpoint can be found on the *Action* menu for the instance in SAP HANA Cloud Central.
 
+
+
+<a name="loiob840d01e1af14cd490c991e2b6ce6a0d__pin_request_size_priv1"/>
+
+## Privileges
+
+
+
+### 
+
+Requires EXECUTE object-level privilege on the procedure.
+

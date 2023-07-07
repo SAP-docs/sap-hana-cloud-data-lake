@@ -23,10 +23,23 @@ sp_iqdbspace [ <dbspace-name> ]
 
 ## Parameters
 
- *<dbspace-name\>*
- :   \(Optional\) A parameter that specifies the name of the dbspace.
 
- 
+<dl>
+<dt><b>
+
+*<dbspace-name\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) A parameter that specifies the name of the dbspace.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5a34b5f84f21015909de16d66c96e8b__section_sdb_1rz_mbb"/>
 
@@ -126,6 +139,8 @@ Usage
 
 The percent of dbspace currently in use by all files in the dbspace.
 
+Instances that use cloud dbspaces have no size restriction and show "NA" for this value.
+
 
 
 </td>
@@ -148,6 +163,8 @@ The total size of all files in the dbspace in the units:
 -   G \(gigabytes\)
 -   T \(terabytes\)
 -   P \(petabytes\)
+
+Instances that use cloud dbspaces have no size restriction and show "NA" for this value.
 
 
 
@@ -301,59 +318,10 @@ Values of the BlkTypes block type identifiers:
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
+Requires all of:
 
-You also need:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-MANAGE ANY DBSPACE
-
-
-
-</td>
-<td valign="top">
-
-System privilege
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+-   EXECUTE object-level privilege on the procedure
+-   MANAGE ANY DBSPACE system privilege
 
 
 
@@ -1018,4 +986,6 @@ T
 [sp\_iqdbspaceinfo Procedure for Data Lake Relational Engine](sp-iqdbspaceinfo-procedure-for-data-lake-relational-engine-a5a3ca6.md "Displays the size of each object and subobject used in the specified table.")
 
 [sp\_iqspaceinfo Procedure for Data Lake Relational Engine](sp-iqspaceinfo-procedure-for-data-lake-relational-engine-a5b6d30.md "Displays the number of blocks (objects) used by each object in the current database and the name of the dbspace in which the object is located.")
+
+[Cloud Dbspaces](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/a896c6a184f21015b5bcf4c7a967df07/493eb818429e4996b3da4153192a9efa.html)
 

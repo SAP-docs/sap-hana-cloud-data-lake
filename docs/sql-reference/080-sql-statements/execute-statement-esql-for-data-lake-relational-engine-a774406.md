@@ -6,11 +6,6 @@ Executes a SQL statement.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -18,47 +13,134 @@ Executes a SQL statement.
 
 
 
- Syntax 1 – Executes a Previously Prepared Named Dynamic Statement
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1 – Executes a Previously Prepared Named Dynamic Statement
+
+</b></dt>
+<dd>
+
+```
 EXECUTE <statement-name>
    ... [ { USING DESCRIPTOR <sqlda-name> | USING <host-variable-list> } ]
    ... [ { INTO DESCRIPTOR <into-sqlda-name> | INTO <into-host-variable-list> } ]
    ... [ ARRAY :<nnn> ]
 ```
 
-  Syntax 2 – Short Form to PREPARE and EXECUTE a Statement Not Containing Bind Variables or Output
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2 – Short Form to PREPARE and EXECUTE a Statement Not Containing Bind Variables or Output
+
+</b></dt>
+<dd>
+
+```
 EXECUTE IMMEDIATE <statement>
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
 
 <a name="loioa774406384f21015b6b5b37c393396c9__IQ_Parameters"/>
 
 ## Parameters
 
- *<statement-name\>*
- :   Identifier or host-variable.
 
-  *<sqlda-name\>*
- :   Identifier.
+<dl>
+<dt><b>
 
-  *<into-sqlda-name\>*
- :   Identifier.
+*<statement-name\>*
 
-  *<statement\>*
- :   String or host-variable.
+</b></dt>
+<dd>
 
-  USING
- :   OUTPUT from a `SELECT` statement or a `CALL` statement is put either into the variables in the variable list or into the program data areas described by the named SQLDA. The correspondence is one to one from the OUTPUT \(selection list or parameters\) to either the host variable list or the SQLDA descriptor array.
+Identifier or host-variable.
 
-  INTO
- :   If used with an `INSERT` statement, the inserted row is returned in the second descriptor. For example, when using autoincrement primary keys that generate primary-key values, `EXECUTE` provides a mechanism to refetch the row immediately and determine the primary-key value assigned to the row.
 
-  ARRAH
- :   Used with prepared `INSERT` statements to allow wide inserts, which insert more than one row at a time and which might improve performance. The value nnn is the number of rows to be inserted. The SQLDA must contain nnn \* \(columns per row\) variables. The first row is placed in SQLDA variables 0 to \(columns per row\)-1, and so on. Similarly, the ARRAY clause can be used for wide updates, deletes, and merges using prepared UPDATE, DELETE, and MERGE statements.
 
- 
+</dd><dt><b>
+
+*<sqlda-name\>*
+
+</b></dt>
+<dd>
+
+Identifier.
+
+
+
+</dd><dt><b>
+
+*<into-sqlda-name\>*
+
+</b></dt>
+<dd>
+
+Identifier.
+
+
+
+</dd><dt><b>
+
+*<statement\>*
+
+</b></dt>
+<dd>
+
+String or host-variable.
+
+
+
+</dd><dt><b>
+
+USING
+
+</b></dt>
+<dd>
+
+OUTPUT from a `SELECT` statement or a `CALL` statement is put either into the variables in the variable list or into the program data areas described by the named SQLDA. The correspondence is one to one from the OUTPUT \(selection list or parameters\) to either the host variable list or the SQLDA descriptor array.
+
+
+
+</dd><dt><b>
+
+INTO
+
+</b></dt>
+<dd>
+
+If used with an `INSERT` statement, the inserted row is returned in the second descriptor. For example, when using autoincrement primary keys that generate primary-key values, `EXECUTE` provides a mechanism to refetch the row immediately and determine the primary-key value assigned to the row.
+
+
+
+</dd><dt><b>
+
+ARRAH
+
+</b></dt>
+<dd>
+
+Used with prepared `INSERT` statements to allow wide inserts, which insert more than one row at a time and which might improve performance. The value nnn is the number of rows to be inserted. The SQLDA must contain nnn \* \(columns per row\) variables. The first row is placed in SQLDA variables 0 to \(columns per row\)-1, and so on. Similarly, the ARRAY clause can be used for wide updates, deletes, and merges using prepared UPDATE, DELETE, and MERGE statements.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa774406384f21015b6b5b37c393396c9__IQ_Usage"/>
 

@@ -27,10 +27,23 @@ CREATE SCHEMA <remote-schema-name> IN FILES_SERVICE
 
 ## Parameters
 
- *<remote-schema-name\>*
- :   The name of the new schema. If the schema already exists in SQL on Files, an error is returned.
 
- 
+<dl>
+<dt><b>
+
+*<remote-schema-name\>*
+
+</b></dt>
+<dd>
+
+The name of the new schema. If the schema already exists in SQL on Files, an error is returned.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -42,7 +55,10 @@ The SQL on Files external catalog stores the remote schema definition. This remo
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

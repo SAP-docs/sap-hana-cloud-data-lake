@@ -14,31 +14,60 @@ READ_SERVER_FILE( <filename> [ , <start> [ , <length> ] ] )
 
 ## Parameters
 
-  *<filename\>* 
- :   LONG VARCHAR value indicating the path and name of the file
 
-    For diagnostic files, *<filename\>* requires the common prefix:
+<dl>
+<dt><b>
 
-    -   <code>/diag/logs/<i class="varname">&lt;subdirectory/&gt;</i><i class="varname">&lt;filename&gt;</i></code> for diagnostic logs
+ *<filename\>* 
 
-    -   <code>/diag/audit/<i class="varname">&lt;filename&gt;</i></code> for auditing \(ETD\) files
+</b></dt>
+<dd>
+
+LONG VARCHAR value indicating the path and name of the file
+
+For diagnostic files, *<filename\>* requires the common prefix:
+
+-   <code>/diag/logs/<i class="varname">&lt;subdirectory/&gt;</i><i class="varname">&lt;filename&gt;</i></code> for diagnostic logs
+
+-   <code>/diag/audit/<i class="varname">&lt;filename&gt;</i></code> for auditing \(ETD\) files
 
 
-   *<start\>* 
- :   The start position of the file to read, in bytes. The first byte in the file is at position 1. A negative starting position specifies the number of bytes from the end of the file rather than from the beginning.
 
-    -   If *<start\>* is not specified, a value of 1 is used.
-    -   If *<start\>* is zero and *<length\>* is non-negative, a value of 1 is used.
-    -   If *<start\>* is zero and *<length\>* is negative, a value of -1 is used.
 
-   *<length\>* 
- :   The length of the file to read, in bytes.
+</dd><dt><b>
 
-    -   If *<length\>* is not specified, the function reads from the starting position to the end of the file.
-    -   If *<length\>* is positive, the function reads at most *<length\>* bytes beginning at the starting position.
-    -   If *<length\>* is negative, the function returns at most *<length\>* ending at the starting position.
+ *<start\>* 
 
- 
+</b></dt>
+<dd>
+
+The start position of the file to read, in bytes. The first byte in the file is at position 1. A negative starting position specifies the number of bytes from the end of the file rather than from the beginning.
+
+-   If *<start\>* is not specified, a value of 1 is used.
+-   If *<start\>* is zero and *<length\>* is non-negative, a value of 1 is used.
+-   If *<start\>* is zero and *<length\>* is negative, a value of -1 is used.
+
+
+
+</dd><dt><b>
+
+ *<length\>* 
+
+</b></dt>
+<dd>
+
+The length of the file to read, in bytes.
+
+-   If *<length\>* is not specified, the function reads from the starting position to the end of the file.
+-   If *<length\>* is positive, the function reads at most *<length\>* bytes beginning at the starting position.
+-   If *<length\>* is negative, the function returns at most *<length\>* ending at the starting position.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Returns
 
@@ -60,10 +89,23 @@ If disk sandboxing is enabled, the file referenced in *<filename\>* must be in a
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 ```
 SELECT read_server_file('/diag/logs/mpx-writer-0-0/iqaas_20211217_110352.331_mpx-coord-0.iqmsg')

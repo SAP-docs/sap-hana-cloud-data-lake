@@ -16,10 +16,23 @@ LOG10 ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The number.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The number.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa560b1f984f210158a13cb8a24202e26__LOG10_returns1"/>
 
@@ -54,5 +67,5 @@ SELECT LOG10( 50 ) FROM iq_dummy
 
 [LOG Function \[Numeric\] for Data Lake Relational Engine](log-function-numeric-for-data-lake-relational-engine-a560332.md "Returns the natural logarithm of a number.")
 
-[LOG10 Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/56b6d539c61b44a3a392d9b8f5ba937c.html "Returns the base 10 logarithm of a number.") :arrow_upper_right:
+[LOG10 Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/56b6d539c61b44a3a392d9b8f5ba937c.html "Returns the base 10 logarithm of a number.") :arrow_upper_right:
 

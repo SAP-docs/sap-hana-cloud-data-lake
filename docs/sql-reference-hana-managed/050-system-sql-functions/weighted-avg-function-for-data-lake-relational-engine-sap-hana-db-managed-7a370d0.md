@@ -16,13 +16,34 @@ WEIGHTED_AVG (<expression>) OVER (<window-spec>)
 
 ## Parameters
 
- *<expression\>*
- :   A numeric expression for which a weighted value is being computed.
 
-  *<window-spec\>*
- :   Specified when using this function as a window function.
+<dl>
+<dt><b>
 
- 
+*<expression\>*
+
+</b></dt>
+<dd>
+
+A numeric expression for which a weighted value is being computed.
+
+
+
+</dd><dt><b>
+
+*<window-spec\>*
+
+</b></dt>
+<dd>
+
+Specified when using this function as a window function.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio7a370d0d94cb4061a4de45b28ddbac36__section_al5_tdv_vrb"/>
 

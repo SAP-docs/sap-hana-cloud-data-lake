@@ -6,11 +6,6 @@ Changes Interactive SQL \(`dbisql`\) options.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -18,23 +13,57 @@ Changes Interactive SQL \(`dbisql`\) options.
 
 
 
- Syntax 1
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1
+
+</b></dt>
+<dd>
+
+```
 SET [ TEMPORARY ] OPTION
    … [ { <userid> | PUBLIC }.]<option-name> = [ <option-value> ]
 ```
 
-  Syntax 2
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2
+
+</b></dt>
+<dd>
+
+```
 SET PERMANENT
 ```
 
-  Syntax 3
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 3
+
+</b></dt>
+<dd>
+
+```
 SET
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
 
 <a name="loioa6260b0f84f21015a64f8842c769c30f__IQ_Usage"/>
 

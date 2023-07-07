@@ -52,5 +52,5 @@ The result data type of an `AES_ENCRYPT` function may be a `LONG BINARY`. If you
 
 [AES\_DECRYPT Function \[String\] for Data Lake Relational Engine](aes-decrypt-function-string-for-data-lake-relational-engine-a4c35f4.md "Decrypts the string using the supplied key, and returns, by default, a VARBINARY or LONG BINARY, or the original plaintext type.")
 
-[AES_ENCRYPT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/4689e70ab3dc428d894f92685dfa337a.html "Encrypts the specified values using the supplied encryption key, and returns a VARBINARY or LONG VARBINARY.") :arrow_upper_right:
+[AES_ENCRYPT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/4689e70ab3dc428d894f92685dfa337a.html "Encrypts the specified values using the supplied encryption key, and returns a VARBINARY or LONG VARBINARY.") :arrow_upper_right:
 

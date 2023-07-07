@@ -16,13 +16,34 @@ DATEMNAME ( <date-part>, <date-expression> )
 
 ## Parameters
 
- *<date-part\>*
- :   The date part to be named.
 
-  *<date-expression\>*
- :   The date for which the date part name is to be returned. The date must contain the requested date-part.
+<dl>
+<dt><b>
 
- 
+*<date-part\>*
+
+</b></dt>
+<dd>
+
+The date part to be named.
+
+
+
+</dd><dt><b>
+
+*<date-expression\>*
+
+</b></dt>
+<dd>
+
+The date for which the date part name is to be returned. The date must contain the requested date-part.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiob6977f358a8549aab30b4f2c48dd3c83__section_uvf_tdm_srb"/>
 

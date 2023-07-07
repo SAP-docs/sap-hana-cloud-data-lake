@@ -27,13 +27,34 @@ DROP SCHEMA <remote-schema-name> [ CASCADE ] IN FILES_SERVICE
 
 ## Parameters
 
- *<remote-schema-name\>*
- :   The name of the schema to be deleted.
 
-  CASCADE
- :   The remote tables in the remote schema are dropped before the schema itself is dropped.
+<dl>
+<dt><b>
 
- 
+*<remote-schema-name\>*
+
+</b></dt>
+<dd>
+
+The name of the schema to be deleted.
+
+
+
+</dd><dt><b>
+
+CASCADE
+
+</b></dt>
+<dd>
+
+The remote tables in the remote schema are dropped before the schema itself is dropped.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -45,7 +66,10 @@ The `DROP SCHEMA` SQL on Files statement drops the schema with the given name. I
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

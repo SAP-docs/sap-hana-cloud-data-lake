@@ -19,26 +19,63 @@ GRAPHICAL_PLAN ( <string-expression> 
 
 ## Parameters
 
- *<string-expression\>*
- :   SQL statement for which the plan is to be generated. string-expression is generally a SELECT statement, but it can also be an UPDATE or DELETE, INSERT SELECT, or SELECT INTO statement.
 
-  *<statistics-level\>*
- :   An integer. Statistics-level can be:
+<dl>
+<dt><b>
 
-    -   0 – Optimizer estimates only \(default\).
-    -   2 – Detailed statistics including node statistics.
-    -   3 – Detailed statistics.
+*<string-expression\>*
 
-  *<cursor-type\>*
- :   A cursor type, expressed as a string. Possible values are: asensitive, insensitive, sensitive, or keyset-driven. If cursor-type is not specified, asensitive is used by default.
+</b></dt>
+<dd>
 
-  *<update-status\>*
- :   A string parameter accepting one of the following values indicating how the optimizer should treat the given cursor:
+SQL statement for which the plan is to be generated. string-expression is generally a SELECT statement, but it can also be an UPDATE or DELETE, INSERT SELECT, or SELECT INTO statement.
 
-    -   READ-ONLY – The cursor is read-only.
-    -   READ-WRITE \(default\) – The cursor can be read or written to.
 
- 
+
+</dd><dt><b>
+
+*<statistics-level\>*
+
+</b></dt>
+<dd>
+
+An integer. Statistics-level can be:
+
+-   0 – Optimizer estimates only \(default\).
+-   2 – Detailed statistics including node statistics.
+-   3 – Detailed statistics.
+
+
+
+</dd><dt><b>
+
+*<cursor-type\>*
+
+</b></dt>
+<dd>
+
+A cursor type, expressed as a string. Possible values are: asensitive, insensitive, sensitive, or keyset-driven. If cursor-type is not specified, asensitive is used by default.
+
+
+
+</dd><dt><b>
+
+*<update-status\>*
+
+</b></dt>
+<dd>
+
+A string parameter accepting one of the following values indicating how the optimizer should treat the given cursor:
+
+-   READ-ONLY – The cursor is read-only.
+-   READ-WRITE \(default\) – The cursor can be read or written to.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Returns
 

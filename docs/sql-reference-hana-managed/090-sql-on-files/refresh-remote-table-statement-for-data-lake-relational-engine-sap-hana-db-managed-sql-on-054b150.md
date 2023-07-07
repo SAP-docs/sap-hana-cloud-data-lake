@@ -27,15 +27,36 @@ REFRESH TABLE [ <owner> .]<virtual-table-name>[,... ] IN FILES_SERVICE
 
 ## Parameters
 
- *<owner\>*
- :   The owner of the table.
 
-  *<virtual-table-name\>*
- :   The virtual table defined on SQL on Files remote tables.
+<dl>
+<dt><b>
 
-    The `REFRESH TABLE` statement can specify SQL on Files remote tables, or virtual tables defined on SQL on Files remote tables. When specifying a list of virtual tables, the statement is equivalent to a list of remote tables defining the virtual tables.
+*<owner\>*
 
- 
+</b></dt>
+<dd>
+
+The owner of the table.
+
+
+
+</dd><dt><b>
+
+*<virtual-table-name\>*
+
+</b></dt>
+<dd>
+
+The virtual table defined on SQL on Files remote tables.
+
+The `REFRESH TABLE` statement can specify SQL on Files remote tables, or virtual tables defined on SQL on Files remote tables. When specifying a list of virtual tables, the statement is equivalent to a list of remote tables defining the virtual tables.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -61,7 +82,10 @@ does not match current runtime files version: '<internal_version2>'
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

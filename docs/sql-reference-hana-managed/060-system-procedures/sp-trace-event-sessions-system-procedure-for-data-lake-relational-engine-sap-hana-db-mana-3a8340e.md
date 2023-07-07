@@ -23,10 +23,23 @@ sp_trace_event_sessions( [ <session_name> ] )
 
 ## Parameters
 
-  *<session\_name\>* 
- :   Use this CHAR\(256\) parameter to specify the trace event session you want to get information about. If a session name is not specified, information is returned about all trace event sessions in the database.
 
- 
+<dl>
+<dt><b>
+
+ *<session\_name\>* 
+
+</b></dt>
+<dd>
+
+Use this CHAR\(256\) parameter to specify the trace event session you want to get information about. If a session name is not specified, information is returned about all trace event sessions in the database.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3a8340e1d6cd40ebbb3717c9530a2047__section_ptt_2l2_srb"/>
 
@@ -163,7 +176,10 @@ Start and stop trace event sessions manually by using the STATE clause of the AL
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

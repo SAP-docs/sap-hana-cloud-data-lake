@@ -6,23 +6,52 @@ Interactive SQL options change how Interactive SQL interacts with the database.
 
 
 
- Syntax 1
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1
+
+</b></dt>
+<dd>
+
+```
 SET [ TEMPORARY ] OPTION
 ... [ <userid>. | PUBLIC. ] <option-name> = [ <option-value> ]
 ```
 
-  Syntax 2
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2
+
+</b></dt>
+<dd>
+
+```
 SET PERMANENT
 ```
 
-  Syntax 3
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 3
+
+</b></dt>
+<dd>
+
+```
 SET
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa62b99df84f21015bd98a592902abc4b__iq_refso_321"/>
 
@@ -68,5 +97,5 @@ The available options are:
 
 [Transact-SQL Compatibility Options](transact-sql-compatibility-options-a62b3bb.md "Transact-SQL compatibility options allow data lake Relational Engine behavior to be compatible with SAP Adaptive Server Enterprise, or to both support old behavior and allow ISO SQL92 behavior.")
 
-[Alphabetical List of Settable Options in Data Lake Relational Engine](alphabetical-list-of-settable-options-in-data-lake-relational-engine-a62bc88.md "Descriptions of settable database options.")
+[Alphabetical List of Settable Options in Data Lake Relational Engine](alphabetical-list-of-settable-options-in-data-lake-relational-engine-a62bc88.md "Settable database options let you configure database behavior.")
 

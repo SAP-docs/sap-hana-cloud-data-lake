@@ -17,16 +17,45 @@ EXP_WEIGHTED_AVG (<expression>, <period-expression>)
 
 ## Parameters
 
- *<expression\>*
- :   A numeric expression for which a weighted value is being computed.
 
-  *<period-expression\>*
- :   A numeric expression specifying the period for which the average is to be computed.
+<dl>
+<dt><b>
 
-  *<window-spec\>*
- :   Specified when using this function as a window function.
+*<expression\>*
 
- 
+</b></dt>
+<dd>
+
+A numeric expression for which a weighted value is being computed.
+
+
+
+</dd><dt><b>
+
+*<period-expression\>*
+
+</b></dt>
+<dd>
+
+A numeric expression specifying the period for which the average is to be computed.
+
+
+
+</dd><dt><b>
+
+*<window-spec\>*
+
+</b></dt>
+<dd>
+
+Specified when using this function as a window function.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa551b4fb84f210158a07f463ff01b5e2__EXP_WEIGHTED_AVG_remarks1"/>
 
@@ -354,5 +383,5 @@ Francis
 
 [WEIGHTED\_AVG Function \[Aggregate\] for Data Lake Relational Engine](weighted-avg-function-aggregate-for-data-lake-relational-engine-a590e30.md "Calculates an arithmetically (or linearly) weighted average.")
 
-[EXP_WEIGHTED_AVG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/ac831a074ab343628271364a30d557bf.html "Calculates an exponential weighted moving average. Weightings determine the relative importance of each quantity that makes up the average.") :arrow_upper_right:
+[EXP_WEIGHTED_AVG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ac831a074ab343628271364a30d557bf.html "Calculates an exponential weighted moving average. Weightings determine the relative importance of each quantity that makes up the average.") :arrow_upper_right:
 

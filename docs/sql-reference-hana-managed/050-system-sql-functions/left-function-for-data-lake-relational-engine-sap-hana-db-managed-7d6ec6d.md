@@ -16,13 +16,34 @@ LEFT ( <string-expression>, <numeric-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string.
 
-  *<numeric-expression\>*
- :   The number of characters to return.
+<dl>
+<dt><b>
 
- 
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string.
+
+
+
+</dd><dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The number of characters to return.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio7d6ec6d7cc0f4bebb844b85a3965a81a__section_cd1_bdh_trb"/>
 

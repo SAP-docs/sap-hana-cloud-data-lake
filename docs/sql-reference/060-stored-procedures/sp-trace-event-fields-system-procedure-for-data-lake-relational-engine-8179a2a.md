@@ -26,13 +26,34 @@ sp_trace_event_fields(
 
 ## Parameters
 
-  *<event\_name\>* 
- :   Use this optional CHAR\(256\) parameter to specify the trace event name. The default is NULL.
 
-   *<include\_audit\_events\>* 
- :   Use this optional BIT parameter to specify whether or not audit events are returned. This parameter can be 0 \(do not return audit events\) or 1 \(return audit events\). By default, audit events are not returned \(0 is the default\).
+<dl>
+<dt><b>
 
- 
+ *<event\_name\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(256\) parameter to specify the trace event name. The default is NULL.
+
+
+
+</dd><dt><b>
+
+ *<include\_audit\_events\>* 
+
+</b></dt>
+<dd>
+
+Use this optional BIT parameter to specify whether or not audit events are returned. This parameter can be 0 \(do not return audit events\) or 1 \(return audit events\). By default, audit events are not returned \(0 is the default\).
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio8179a2a56ce210148a18fd12322fa8f2__sp_trace_event_fields_resultset1"/>
 
@@ -190,9 +211,19 @@ If *<event\_name\>* is NULL, this procedure returns the fields for all trace eve
 
 
 
+<a name="loio8179a2a56ce210148a18fd12322fa8f2__sp_trace_event_fields_priv1"/>
+
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure, as well as the MANAGE ANY TRACE SESSION system privilege. You'll also need the MANAGE AUDITING system privilege if *<include\_audit\_events\>* isn’t set.
+
+
+### 
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure
+-   MANAGE ANY TRACE SESSION system privilege
+-   MANAGE AUDITING system privilege
 
 
 
@@ -213,5 +244,5 @@ SELECT * FROM dbo.sp_trace_event_fields( );
 **Related Information**  
 
 
-[sp_trace_event_fields System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/301a2c803cd847d8a5eec27d96cff484.html "Returns information about the fields of the specified trace event.") :arrow_upper_right:
+[sp_trace_event_fields System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/301a2c803cd847d8a5eec27d96cff484.html "Returns information about the fields of the specified trace event.") :arrow_upper_right:
 

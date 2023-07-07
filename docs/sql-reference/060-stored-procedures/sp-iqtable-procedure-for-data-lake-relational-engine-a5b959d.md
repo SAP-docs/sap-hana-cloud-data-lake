@@ -49,21 +49,50 @@ sp_iqtable [ table_name='<tablename>' ],
 
 ## Parameters
 
- *<table\_name\>* or *<tablename\>*
- :   \(Optional\) The name of the table.
 
-  *<table\_owner\>* or *<tableowner\>*
- :   \(Optional\) The table owner.
+<dl>
+<dt><b>
 
-  *<table\_type\>* or *<tabletype\>*
- :   \(Optional\)
+*<table\_name\>* or *<tablename\>*
 
-    -   TEMP – Global temporary tables
-    -   VIEW – Views
-    -   ALL – data lake Relational Engine tables, global temporary tables, and views
-    -   any\_other\_value – data lake Relational Engine tables
+</b></dt>
+<dd>
 
- 
+\(Optional\) The name of the table.
+
+
+
+</dd><dt><b>
+
+*<table\_owner\>* or *<tableowner\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) The table owner.
+
+
+
+</dd><dt><b>
+
+*<table\_type\>* or *<tabletype\>*
+
+</b></dt>
+<dd>
+
+\(Optional\)
+
+-   TEMP – Global temporary tables
+-   VIEW – Views
+-   ALL – data lake Relational Engine tables, global temporary tables, and views
+-   any\_other\_value – data lake Relational Engine tables
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5b959dd84f21015a98fd3e05fb1aee9__IQ_Returns"/>
 
@@ -293,7 +322,7 @@ For Syntax 2, the parameters can be specified in any order. Enclose them in sing
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -346,22 +375,22 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    Departments
+    
+        Departments
 
 
     
     </td>
     <td valign="top">
-
-    BASE
+    
+        BASE
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
@@ -396,22 +425,22 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    IQ
+    
+        IQ
 
 
     
     </td>
     <td valign="top">
-
-    Main
+    
+        Main
 
 
     
     </td>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
@@ -446,22 +475,22 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    N
+    
+        N
 
 
     
     </td>
     <td valign="top">
-
-    contains the names and heads of the various departments in the sporting goods company
+    
+        contains the names and heads of the various departments in the sporting goods company
 
 
     
     </td>
     <td valign="top">
-
-    \(NULL\)
+    
+        \(NULL\)
 
 
     
@@ -482,8 +511,8 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    None
+    
+        None
 
 
     
@@ -539,73 +568,36 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    Contacts
+    
+        Contacts
 
 
     
     </td>
     <td valign="top">
-
-    BASE
+    
+        BASE
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top">
-
-    IQ
+    
+        IQ
 
 
     
     </td>
     <td valign="top">
-
-    Main
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    Customers
-
-
-    
-    </td>
-    <td valign="top">
-
-    BASE
-
-
-    
-    </td>
-    <td valign="top">
-
-    GROUPO
-
-
-    
-    </td>
-    <td valign="top">
-
-    IQ
-
-
-    
-    </td>
-    <td valign="top">
-
-    Main
+        Main
 
 
     
@@ -613,73 +605,36 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    Departments
+    
+        Customers
 
 
     
     </td>
     <td valign="top">
-
-    BASE
+    
+        BASE
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top">
-
-    IQ
+    
+        IQ
 
 
     
     </td>
     <td valign="top">
-
-    Main
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    Employees
-
-
-    
-    </td>
-    <td valign="top">
-
-    BASE
-
-
-    
-    </td>
-    <td valign="top">
-
-    GROUPO
-
-
-    
-    </td>
-    <td valign="top">
-
-    IQ
-
-
-    
-    </td>
-    <td valign="top">
-
-    Main
+        Main
 
 
     
@@ -687,73 +642,36 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    FinancialCodes
+    
+        Departments
 
 
     
     </td>
     <td valign="top">
-
-    BASE
+    
+        BASE
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top">
-
-    IQ
+    
+        IQ
 
 
     
     </td>
     <td valign="top">
-
-    Main
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    FinancialData
-
-
-    
-    </td>
-    <td valign="top">
-
-    BASE
-
-
-    
-    </td>
-    <td valign="top">
-
-    GROUPO
-
-
-    
-    </td>
-    <td valign="top">
-
-    IQ
-
-
-    
-    </td>
-    <td valign="top">
-
-    Main
+        Main
 
 
     
@@ -761,73 +679,36 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    Products
+    
+        Employees
 
 
     
     </td>
     <td valign="top">
-
-    BASE
+    
+        BASE
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top">
-
-    IQ
+    
+        IQ
 
 
     
     </td>
     <td valign="top">
-
-    Main
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    SalesOrders
-
-
-    
-    </td>
-    <td valign="top">
-
-    BASE
-
-
-    
-    </td>
-    <td valign="top">
-
-    GROUPO
-
-
-    
-    </td>
-    <td valign="top">
-
-    IQ
-
-
-    
-    </td>
-    <td valign="top">
-
-    Main
+        Main
 
 
     
@@ -835,36 +716,184 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    SalesOrderItems
+    
+        FinancialCodes
 
 
     
     </td>
     <td valign="top">
-
-    BASE
+    
+        BASE
 
 
     
     </td>
     <td valign="top">
-
-    GROUPO
+    
+        GROUPO
 
 
     
     </td>
     <td valign="top">
-
-    IQ
+    
+        IQ
 
 
     
     </td>
     <td valign="top">
+    
+        Main
 
-    Main
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        FinancialData
+
+
+    
+    </td>
+    <td valign="top">
+    
+        BASE
+
+
+    
+    </td>
+    <td valign="top">
+    
+        GROUPO
+
+
+    
+    </td>
+    <td valign="top">
+    
+        IQ
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Main
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        Products
+
+
+    
+    </td>
+    <td valign="top">
+    
+        BASE
+
+
+    
+    </td>
+    <td valign="top">
+    
+        GROUPO
+
+
+    
+    </td>
+    <td valign="top">
+    
+        IQ
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Main
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        SalesOrders
+
+
+    
+    </td>
+    <td valign="top">
+    
+        BASE
+
+
+    
+    </td>
+    <td valign="top">
+    
+        GROUPO
+
+
+    
+    </td>
+    <td valign="top">
+    
+        IQ
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Main
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        SalesOrderItems
+
+
+    
+    </td>
+    <td valign="top">
+    
+        BASE
+
+
+    
+    </td>
+    <td valign="top">
+    
+        GROUPO
+
+
+    
+    </td>
+    <td valign="top">
+    
+        IQ
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Main
 
 
     
@@ -906,59 +935,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
     </td>
     <td valign="top">
-
-    N
+    
+        N
 
 
     
     </td>
     <td valign="top">
-
-    names, addresses, and telephone numbers of all people with whom the company wishes to retain contact information
+    
+        names, addresses, and telephone numbers of all people with whom the company wishes to retain contact information
 
 
     
     </td>
     <td valign="top">
-
-    \(NULL\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    16387
-
-
-    
-    </td>
-    <td valign="top">
-
-    N
-
-
-    
-    </td>
-    <td valign="top">
-
-    customers of the sporting goods company
-
-
-    
-    </td>
-    <td valign="top">
-
-    \(NULL\)
+        \(NULL\)
 
 
     
@@ -966,59 +965,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
     </td>
     <td valign="top">
-
-    N
+    
+        N
 
 
     
     </td>
     <td valign="top">
-
-    contains the names and heads of the various departments in the sporting goods company
+    
+        customers of the sporting goods company
 
 
     
     </td>
     <td valign="top">
-
-    \(NULL\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    16387
-
-
-    
-    </td>
-    <td valign="top">
-
-    N
-
-
-    
-    </td>
-    <td valign="top">
-
-    contains information such as names, salary, hire date and birthday
-
-
-    
-    </td>
-    <td valign="top">
-
-    \(NULL\)
+        \(NULL\)
 
 
     
@@ -1026,59 +995,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
     </td>
     <td valign="top">
-
-    N
+    
+        N
 
 
     
     </td>
     <td valign="top">
-
-    types of revenue and expenses that the sporting goods company has
+    
+        contains the names and heads of the various departments in the sporting goods company
 
 
     
     </td>
     <td valign="top">
-
-    \(NULL\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    16387
-
-
-    
-    </td>
-    <td valign="top">
-
-    N
-
-
-    
-    </td>
-    <td valign="top">
-
-    revenues and expenses of the sporting goods company
-
-
-    
-    </td>
-    <td valign="top">
-
-    \(NULL\)
+        \(NULL\)
 
 
     
@@ -1086,59 +1025,29 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
     </td>
     <td valign="top">
-
-    N
+    
+        N
 
 
     
     </td>
     <td valign="top">
-
-    products sold by the sporting goods company
+    
+        contains information such as names, salary, hire date and birthday
 
 
     
     </td>
     <td valign="top">
-
-    \(NULL\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    16387
-
-
-    
-    </td>
-    <td valign="top">
-
-    N
-
-
-    
-    </td>
-    <td valign="top">
-
-    individual items that make up the sales orders
-
-
-    
-    </td>
-    <td valign="top">
-
-    \(NULL\)
+        \(NULL\)
 
 
     
@@ -1146,29 +1055,149 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    16387
+    
+        16387
 
 
     
     </td>
     <td valign="top">
-
-    N
+    
+        N
 
 
     
     </td>
     <td valign="top">
-
-    sales orders that customers have submitted to the sporting goods company
+    
+        types of revenue and expenses that the sporting goods company has
 
 
     
     </td>
     <td valign="top">
+    
+        \(NULL\)
 
-    \(NULL\)
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        16387
+
+
+    
+    </td>
+    <td valign="top">
+    
+        N
+
+
+    
+    </td>
+    <td valign="top">
+    
+        revenues and expenses of the sporting goods company
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \(NULL\)
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        16387
+
+
+    
+    </td>
+    <td valign="top">
+    
+        N
+
+
+    
+    </td>
+    <td valign="top">
+    
+        products sold by the sporting goods company
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \(NULL\)
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        16387
+
+
+    
+    </td>
+    <td valign="top">
+    
+        N
+
+
+    
+    </td>
+    <td valign="top">
+    
+        individual items that make up the sales orders
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \(NULL\)
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        16387
+
+
+    
+    </td>
+    <td valign="top">
+    
+        N
+
+
+    
+    </td>
+    <td valign="top">
+    
+        sales orders that customers have submitted to the sporting goods company
+
+
+    
+    </td>
+    <td valign="top">
+    
+        \(NULL\)
 
 
     
@@ -1189,8 +1218,8 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    None
+    
+        None
 
 
     
@@ -1198,8 +1227,8 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    None
+    
+        None
 
 
     
@@ -1207,8 +1236,8 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    None
+    
+        None
 
 
     
@@ -1216,8 +1245,8 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    None
+    
+        None
 
 
     
@@ -1225,8 +1254,8 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    None
+    
+        None
 
 
     
@@ -1234,8 +1263,8 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    None
+    
+        None
 
 
     
@@ -1243,8 +1272,8 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    None
+    
+        None
 
 
     
@@ -1252,8 +1281,8 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    None
+    
+        None
 
 
     
@@ -1261,8 +1290,8 @@ None
     </tr>
     <tr>
     <td valign="top">
-
-    None
+    
+        None
 
 
     

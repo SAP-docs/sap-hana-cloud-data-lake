@@ -16,16 +16,45 @@ STR ( <numeric-expression> [ , <length>[ , <decimal> ] ] )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   Any approximate numeric \(FLOAT, REAL, or DOUBLE precision\) expression.
 
-  *<length\>*
- :   The number of characters to be returned \(including the decimal point, all digits to the right and left of the decimal point, the sign, if any, and blanks\). The default is 10 and the maximum length is 255.
+<dl>
+<dt><b>
 
-  *<decimal\>*
- :   The number of digits to the right of the decimal point to be returned. The default is 0.
+*<numeric-expression\>*
 
- 
+</b></dt>
+<dd>
+
+Any approximate numeric \(FLOAT, REAL, or DOUBLE precision\) expression.
+
+
+
+</dd><dt><b>
+
+*<length\>*
+
+</b></dt>
+<dd>
+
+The number of characters to be returned \(including the decimal point, all digits to the right and left of the decimal point, the sign, if any, and blanks\). The default is 10 and the maximum length is 255.
+
+
+
+</dd><dt><b>
+
+*<decimal\>*
+
+</b></dt>
+<dd>
+
+The number of digits to the right of the decimal point to be returned. The default is 0.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa584f54284f21015bb43e961aa835036__STR_returns1"/>
 
@@ -78,5 +107,5 @@ If the integer portion of the number cannot fit in the length specified, then th
 **Related Information**  
 
 
-[STR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/6152b1608e3e4c5e898c592f645366b7.html "Returns the string equivalent of a number.") :arrow_upper_right:
+[STR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/6152b1608e3e4c5e898c592f645366b7.html "Returns the string equivalent of a number.") :arrow_upper_right:
 

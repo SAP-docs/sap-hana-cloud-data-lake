@@ -6,11 +6,6 @@ Drops a sequence.This statement applies to data lake Relational Engine catalog s
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -21,6 +16,11 @@ Drops a sequence.This statement applies to data lake Relational Engine catalog s
 ```
 DROP SEQUENCE [ <owner>.]<sequence-name>
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -51,10 +51,23 @@ Automatic commit.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Sequences comprise optional ANSI/ISO SQL Language Feature T176.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Sequences comprise optional ANSI/ISO SQL Language Feature T176.
+
+
+
+</dd>
+</dl>
+
+
 
 The following example creates and then drops a sequence named Test:
 

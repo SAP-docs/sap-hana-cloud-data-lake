@@ -6,11 +6,6 @@ Creates a user trace event that persists until the database is stopped.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -33,142 +28,192 @@ CREATE [ OR REPLACE ] TEMPORARY TRACE EVENT <trace-event-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loio648c6bf7ab2444cd8182c4a06d3dad86__section_oxt_vtg_1rb"/>
 
 ## Parameters
 
-  *<trace-event-name\>* 
- :   Specify a user trace event name. User trace event names cannot start with the prefix SYS\_. System trace event names cannot be specified.
 
-  OR REPLACE clause
- :   Create a new trace event, or replace an existing trace event with the same name.
+<dl class="glossary">
+<dt><b>
 
-  WITH SEVERITY clause
- :   If the severity level is not specified, the default severity level \(DEBUG\) is used. User trace events are owned by the database that the user was connected to when the trace event was created. The supported severity values are:
+ *<trace-event-name\>* 
 
+</b></dt>
+<dd>
 
-    <table>
-    <tr>
-    <th valign="top">
-
-    Level
+Specify a user trace event name. User trace event names cannot start with the prefix SYS\_. System trace event names cannot be specified.
 
 
-    
-    </th>
-    <th valign="top">
 
-    Severity value range
+</dd><dt><b>
 
+OR REPLACE clause
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
+</b></dt>
+<dd>
 
-    ALWAYS
+Create a new trace event, or replace an existing trace event with the same name.
 
 
-    
-    </td>
-    <td valign="top">
 
-    0
+</dd><dt><b>
 
+WITH SEVERITY clause
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+</b></dt>
+<dd>
 
-    CRITICAL
+If the severity level is not specified, the default severity level \(DEBUG\) is used. User trace events are owned by the database that the user was connected to when the trace event was created. The supported severity values are:
 
 
-    
-    </td>
-    <td valign="top">
+<table>
+<tr>
+<th valign="top">
 
-    1-50
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    ERROR
+Level
 
 
-    
-    </td>
-    <td valign="top">
 
-    51-100
+</th>
+<th valign="top">
 
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    WARNING
+Severity value range
 
 
-    
-    </td>
-    <td valign="top">
 
-    101-150
+</th>
+</tr>
+<tr>
+<td valign="top">
 
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    INFORMATION
+ALWAYS
 
 
-    
-    </td>
-    <td valign="top">
 
-    151-200
+</td>
+<td valign="top">
 
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    DEBUG
+0
 
 
-    
-    </td>
-    <td valign="top">
 
-    201-255
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+CRITICAL
 
 
-    
-    </td>
-    </tr>
-    </table>
-    
-   *<field-name\>* 
- :   The field that gathers information of a specific type from the user trace event. The field must be a valid identifier.
 
-   *<field-type\>* 
- :   You can use any data type that is supported for a column except an array type.
+</td>
+<td valign="top">
 
- 
+1-50
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ERROR
+
+
+
+</td>
+<td valign="top">
+
+51-100
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+WARNING
+
+
+
+</td>
+<td valign="top">
+
+101-150
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+INFORMATION
+
+
+
+</td>
+<td valign="top">
+
+151-200
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+DEBUG
+
+
+
+</td>
+<td valign="top">
+
+201-255
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+</dd><dt><b>
+
+ *<field-name\>* 
+
+</b></dt>
+<dd>
+
+The field that gathers information of a specific type from the user trace event. The field must be a valid identifier.
+
+
+
+</dd><dt><b>
+
+ *<field-type\>* 
+
+</b></dt>
+<dd>
+
+You can use any data type that is supported for a column except an array type.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio648c6bf7ab2444cd8182c4a06d3dad86__section_opw_wtg_1rb"/>
 
@@ -182,11 +227,9 @@ A trace event is stored in memory and is dropped when the database server stops 
 
 ## Privileges
 
+You have the MANAGE ANY TRACE SESSION system privilege.
 
-
-### 
-
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+See [GRANT System Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a3dfcb0284f21015b74ac3cded42ee69.html "Grants specific system privileges to users or roles, with or without administrative rights.") :arrow_upper_right: for assistance with granting privileges.
 
 
 
@@ -202,10 +245,23 @@ None
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 The following statement creates a user trace event:
 

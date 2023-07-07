@@ -6,11 +6,6 @@ Renames indexes in base or global temporary tables, foreign key role names of in
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -21,16 +16,15 @@ Renames indexes in base or global temporary tables, foreign key role names of in
 
 
 ```
-ALTER { INDEX [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <index-name> (varname] | [ INDEX ] FOREIGN KEY [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <role-name> (varname] | [ INDEX ] PRIMARY KEY }
-   ON [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <table-name> (varname]
-     [ RENAME { TO | AS } [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <new-name> (varname] ]
+ALTER { INDEX <index-name> | [ INDEX ] FOREIGN KEY <role-name> | [ INDEX ] PRIMARY KEY }
+   ON [ <schema-name>.]<table-name>
+     [ RENAME { TO | AS } <new-name> ]
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -38,13 +32,34 @@ ALTER { INDEX [/pandoc/div/div/horizontalrule/codeblock/span/varname
 
 ## Parameters
 
- *<table-name\>*
- :   Specifies the name of the table that contains the index or foreign key to rename.
 
-  RENAME TO | AS *<new-name\>*
- :   Specifies the new name of the index or foreign key role.
+<dl>
+<dt><b>
 
- 
+*<table-name\>*
+
+</b></dt>
+<dd>
+
+Specifies the name of the table that contains the index or foreign key to rename.
+
+
+
+</dd><dt><b>
+
+RENAME TO | AS *<new-name\>*
+
+</b></dt>
+<dd>
+
+Specifies the new name of the index or foreign key role.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiodaf745a457cc4f3ba56275c28dc14929__section_inp_4sk_sqb"/>
 
@@ -62,7 +77,10 @@ Attempts to alter an index in a local temporary table return the error ***index 
 
 ### 
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

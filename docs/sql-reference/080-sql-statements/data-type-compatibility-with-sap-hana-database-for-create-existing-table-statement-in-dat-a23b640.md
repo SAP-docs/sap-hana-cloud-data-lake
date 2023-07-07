@@ -319,7 +319,9 @@ Yes
 
 N/A
 
-SAP HANA Database supports 7 digits of subsecond precision for the TIMESTAMP data type, while Data Lake Relational Engine only supports 6 digits. Therefore, when the SAP HANA Database TIMESTAMP data type is replaced with a Data Lake Relational Engine TIMESTAMP data type, the last digit of precision from SAP HANA Database is lost.
+Data Lake Relational Engine supports 6 or 7 digit precision, depending on the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option and the configuration of the instance. Ensure that your instance is configured for 7 digit precision to avoid potential data loss when creating Data Lake Relational Engine proxy tables containing the TIMESTAMP data type.
+
+For more information, see [Decimal Precision of the TIMESTAMP Data Type in Data Lake Relational Engine](../020-sql-data-types/decimal-precision-of-the-timestamp-data-type-in-data-lake-relational-engine-520ce6c.md).
 
 
 

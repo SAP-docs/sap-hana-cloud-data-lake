@@ -374,6 +374,29 @@ TIMESTAMP
 <tr>
 <td valign="top">
 
+DATETIMEX
+
+
+
+</td>
+<td valign="top">
+
+No
+
+
+
+</td>
+<td valign="top">
+
+TIMESTAMP
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 SMALLDATETIME
 
 

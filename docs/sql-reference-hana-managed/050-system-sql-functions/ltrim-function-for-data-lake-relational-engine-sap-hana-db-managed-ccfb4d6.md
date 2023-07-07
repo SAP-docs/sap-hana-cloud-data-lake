@@ -16,13 +16,34 @@ LTRIM ( <string-expression>, [ <trim_character_set> ] )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string to be trimmed.
 
-  *<trim\_character\_set\>*
- :   The set of characters to use for trim.
+<dl>
+<dt><b>
 
- 
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string to be trimmed.
+
+
+
+</dd><dt><b>
+
+*<trim\_character\_set\>*
+
+</b></dt>
+<dd>
+
+The set of characters to use for trim.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioccfb4d6a182f4c7badbe8d4f597b316a__section_unc_1vg_trb"/>
 

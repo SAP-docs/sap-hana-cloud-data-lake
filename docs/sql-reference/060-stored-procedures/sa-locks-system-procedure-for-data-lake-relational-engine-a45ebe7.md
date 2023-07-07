@@ -26,25 +26,70 @@ sa_locks(
 
 ## Parameters
 
- *<connection\>*
- :   \(Optional\) This INTEGER parameter specifies a connection ID number. The procedure returns lock information only about the specified connection. The default value is 0 \(or NULL\), in which case information is returned about all connections.
 
-  *<creator\>*
- :   \(Optional\) This CHAR\(128\) parameter specifies a user ID. The procedure returns information only about the tables owned by the specified user. The default value for the creator parameter is NULL. When this parameter is set to NULL, sa\_locks returns the following information:
+<dl>
+<dt><b>
 
-    -   If *<table\_name\>* is unspecified – locking information is returned for all tables in the database
-    -   If *<table\_name\>* is specified – locking information is returned for tables with the specified name that were created by the current user
+*<connection\>*
 
-  *<table\_name\>*
- :   \(Optional\) This CHAR\(128\) parameter specifies a table name. The procedure returns information only about the specified tables. The default value is NULL, in which case information is returned about all tables.
+</b></dt>
+<dd>
 
-  *<max\_locks\>*
- :   \(Optional\) This INTEGER parameter specifies the maximum number of locks for which to return information. The default value is 1000. The value -1 means return all lock information
+\(Optional\) This INTEGER parameter specifies a connection ID number. The procedure returns lock information only about the specified connection. The default value is 0 \(or NULL\), in which case information is returned about all connections.
 
-  *<object\_type\>*
- :   \(Optional\) This CHAR\(5\) parameter limits your results to the type of object associated with the lock. Specify *ALL* to return lock information for all object types. Specify *TABLE* to return lock information for tables, global temporary tables, and materialized views. Specify *MUTEX* to return mutex information. If you do not specify *<object\_type\>*, the procedure returns lock information for all object types.
 
- 
+
+</dd><dt><b>
+
+*<creator\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) This CHAR\(128\) parameter specifies a user ID. The procedure returns information only about the tables owned by the specified user. The default value for the creator parameter is NULL. When this parameter is set to NULL, sa\_locks returns the following information:
+
+-   If *<table\_name\>* is unspecified – locking information is returned for all tables in the database
+-   If *<table\_name\>* is specified – locking information is returned for tables with the specified name that were created by the current user
+
+
+
+</dd><dt><b>
+
+*<table\_name\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) This CHAR\(128\) parameter specifies a table name. The procedure returns information only about the specified tables. The default value is NULL, in which case information is returned about all tables.
+
+
+
+</dd><dt><b>
+
+*<max\_locks\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) This INTEGER parameter specifies the maximum number of locks for which to return information. The default value is 1000. The value -1 means return all lock information
+
+
+
+</dd><dt><b>
+
+*<object\_type\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) This CHAR\(5\) parameter limits your results to the type of object associated with the lock. Specify *ALL* to return lock information for all object types. Specify *TABLE* to return lock information for tables, global temporary tables, and materialized views. Specify *MUTEX* to return mutex information. If you do not specify *<object\_type\>*, the procedure returns lock information for all object types.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa45ebe7284f210158f47fd12eed9b3b5__section_yg1_khs_mbb"/>
 
@@ -476,7 +521,10 @@ A position lock can be associated with a sequential table scan, or an index scan
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). You must also have the MONITOR system privilege.
+Require all of:
+
+-   EXECUTE object-level privilege on the procedure
+-   MONITOR system privilege
 
 
 

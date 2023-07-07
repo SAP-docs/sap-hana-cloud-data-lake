@@ -16,13 +16,34 @@ NULLIF ( <expression1>, <expression2> )
 
 ## Parameters
 
- *<expression1\>*
- :   An expression to be compared.
 
-  *<expression2\>*
- :   An expression to be compared.
+<dl>
+<dt><b>
 
- 
+*<expression1\>*
+
+</b></dt>
+<dd>
+
+An expression to be compared.
+
+
+
+</dd><dt><b>
+
+*<expression2\>*
+
+</b></dt>
+<dd>
+
+An expression to be compared.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa569fd1184f210159b61c1d4823ce243__NULLIF_returns1"/>
 
@@ -84,5 +105,5 @@ ELSE <expression1> END
 
 [NULLIF Function for Abbreviated CASE Expressions in Data Lake Relational Engine](../010-sql-language-elements/nullif-function-for-abbreviated-case-expressions-in-data-lake-relational-engine-a4f7256.md "The NULLIF function provides a way to write some CASE statements in short form.")
 
-[NULLIF Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/601a225cec8f4647a3a612f92994e087.html "Provides an abbreviated CASE expression by comparing expressions.") :arrow_upper_right:
+[NULLIF Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/601a225cec8f4647a3a612f92994e087.html "Provides an abbreviated CASE expression by comparing expressions.") :arrow_upper_right:
 

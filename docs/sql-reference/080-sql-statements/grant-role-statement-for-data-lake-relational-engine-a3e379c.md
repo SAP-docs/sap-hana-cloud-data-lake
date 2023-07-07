@@ -6,11 +6,6 @@ Grants roles to users or other roles, with or without administrative rights.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -33,35 +28,93 @@ GRANT ROLE <role_name> [, …]
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa3e379cc84f21015bccfaff98164bf01__grant_role_parm1"/>
 
 ## Parameters
 
- `role_name`
- :   The role must already exist in the database. Separate multiple role names with commas. Although schema do not have passwords associated with them and cannot be used to connect to the database, a security definer procedure owned by a schema is effectively running as if the schema were the user. Therefore, system privileges and roles can be granted to a schema.
 
-  *<grantee\>*
- :   Must be the name of an existing user or role that has a login password, or a schema. If a procedure owned by a schema requires a specific role in order to be executed, then the role must be granted to the schema containing the procedure. Separate multiple user\_IDs with commas.
+<dl>
+<dt><b>
 
-  WITH NO ADMIN OPTION
- :   Each *<grantee\>* is granted the underlying system privileges of the role, but cannot grant the role to another user.
+`role_name`
 
-  WITH ADMIN ONLY OPTION
- :   Each *<userID\>* is granted administrative privileges over each *<role\_name\>*, but not the underlying system privileges of *<role\_name\>*.
+</b></dt>
+<dd>
 
-    This option is not supported with the The SYS\_DL\_CUSTOMER\_ADMIN\_ROLE role.
+The role must already exist in the database. Separate multiple role names with commas. Although schema do not have passwords associated with them and cannot be used to connect to the database, a security definer procedure owned by a schema is effectively running as if the schema were the user. Therefore, system privileges and roles can be granted to a schema.
 
-  WITH ADMIN OPTION
- :   Each userID is granted the underlying system privileges of each *<role\_name\>*, along with the ability to grant *<role\_name\>* to another user.
 
-    This option is not supported with the The SYS\_DL\_CUSTOMER\_ADMIN\_ROLE role.
 
-  WITH NO SYSTEM PRIVILEGE INHERITANCE
- :   The underlying system privileges of the granting role are not inherited by the members of the receiving role. However, if the receiving role is a user-extended role, the underlying system privileges are granted to the extended user.
+</dd><dt><b>
 
-    This option is not supported with the The SYS\_DL\_CUSTOMER\_ADMIN\_ROLE role.
+*<grantee\>*
 
- 
+</b></dt>
+<dd>
+
+Must be the name of an existing user or role that has a login password, or a schema. If a procedure owned by a schema requires a specific role in order to be executed, then the role must be granted to the schema containing the procedure. Separate multiple user\_IDs with commas.
+
+
+
+</dd><dt><b>
+
+WITH NO ADMIN OPTION
+
+</b></dt>
+<dd>
+
+Each *<grantee\>* is granted the underlying system privileges of the role, but cannot grant the role to another user.
+
+
+
+</dd><dt><b>
+
+WITH ADMIN ONLY OPTION
+
+</b></dt>
+<dd>
+
+Each *<userID\>* is granted administrative privileges over each *<role\_name\>*, but not the underlying system privileges of *<role\_name\>*.
+
+This option is not supported with the The SYS\_DL\_CUSTOMER\_ADMIN\_ROLE role.
+
+
+
+</dd><dt><b>
+
+WITH ADMIN OPTION
+
+</b></dt>
+<dd>
+
+Each userID is granted the underlying system privileges of each *<role\_name\>*, along with the ability to grant *<role\_name\>* to another user.
+
+This option is not supported with the The SYS\_DL\_CUSTOMER\_ADMIN\_ROLE role.
+
+
+
+</dd><dt><b>
+
+WITH NO SYSTEM PRIVILEGE INHERITANCE
+
+</b></dt>
+<dd>
+
+The underlying system privileges of the granting role are not inherited by the members of the receiving role. However, if the receiving role is a user-extended role, the underlying system privileges are granted to the extended user.
+
+This option is not supported with the The SYS\_DL\_CUSTOMER\_ADMIN\_ROLE role.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa3e379cc84f21015bccfaff98164bf01__grant_role_remarks1"/>
 
@@ -115,5 +168,5 @@ GRANT ROLE Sales_Role TO Sally WITH ADMIN OPTION
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[GRANT ROLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/59327e42f46b461db8a501229bc29461.html "Grants roles to users or other roles, with or without administrative rights.") :arrow_upper_right:
+[GRANT ROLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/59327e42f46b461db8a501229bc29461.html "Grants roles to users or other roles, with or without administrative rights.") :arrow_upper_right:
 

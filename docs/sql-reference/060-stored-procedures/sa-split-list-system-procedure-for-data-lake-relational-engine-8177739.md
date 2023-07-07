@@ -27,16 +27,45 @@ sa_split_list(
 
 ## Parameters
 
-  *<str\>* 
- :   Use this LONG VARCHAR parameter to specify the string containing the values to be split, separated by *<delim\>*.
 
-   *<delim\>* 
- :   Use this optional CHAR\(10\) parameter to specify the delimiter used in *<str\>* to separate values. The delimiter can be a string of any characters, up to 10 bytes. If *<delim\>* is not specified, a comma is used by default.
+<dl>
+<dt><b>
 
-   *<maxlen\>* 
- :   Use this optional INTEGER parameter to specify the maximum length of the returned values. For example, if *<maxlen\>* is set to 3, the values in the result set are truncated to a length of 3 characters. If you specify 0 \(the default\), values can be any length.
+ *<str\>* 
 
- 
+</b></dt>
+<dd>
+
+Use this LONG VARCHAR parameter to specify the string containing the values to be split, separated by *<delim\>*.
+
+
+
+</dd><dt><b>
+
+ *<delim\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(10\) parameter to specify the delimiter used in *<str\>* to separate values. The delimiter can be a string of any characters, up to 10 bytes. If *<delim\>* is not specified, a comma is used by default.
+
+
+
+</dd><dt><b>
+
+ *<maxlen\>* 
+
+</b></dt>
+<dd>
+
+Use this optional INTEGER parameter to specify the maximum length of the returned values. For example, if *<maxlen\>* is set to 3, the values in the result set are truncated to a length of 3 characters. If you specify 0 \(the default\), values can be any length.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio8177739d6ce21014b82ebbcba7441f0b__sa_split_list_resultset1"/>
 
@@ -131,11 +160,15 @@ White space within the input string is significant. If the delimiter is a space 
 
 
 
-<a name="loio8177739d6ce21014b82ebbcba7441f0b__section_yxz_n2j_snb"/>
+<a name="loio8177739d6ce21014b82ebbcba7441f0b__sa_split_list_priv1"/>
 
 ## Privileges
 
-You must have EXECUTE privilege on the system procedure.
+
+
+### 
+
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -380,5 +413,5 @@ SELECT * from ProductsWithColor( 'white,black' );
 
 [LIST Function \[Aggregate\] for Data Lake Relational Engine](../050-system-sql-functions/list-function-aggregate-for-data-lake-relational-engine-a2984e5.md "Returns a delimited list of values for every row in a group.")
 
-[sa_split_list System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/204a6c1cac354d788d94946c8e9dbe21.html "Takes a string of values, separated by a delimiter, and returns a set of rows (one row for each value).") :arrow_upper_right:
+[sa_split_list System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/204a6c1cac354d788d94946c8e9dbe21.html "Takes a string of values, separated by a delimiter, and returns a set of rows (one row for each value).") :arrow_upper_right:
 

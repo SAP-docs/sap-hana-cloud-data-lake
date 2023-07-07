@@ -16,13 +16,34 @@ DIFFERENCE ( <string-expression1>, <string-expression2> )
 
 ## Parameters
 
- *<string-expression1\>*
- :   The first string to compare.
 
-  *<string-expression2\>*
- :   The second string to compare.
+<dl>
+<dt><b>
 
- 
+*<string-expression1\>*
+
+</b></dt>
+<dd>
+
+The first string to compare.
+
+
+
+</dd><dt><b>
+
+*<string-expression2\>*
+
+</b></dt>
+<dd>
+
+The second string to compare.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa54d8aac84f210158ef283ad984de764__DIFFERENCE_returns1"/>
 
@@ -96,5 +117,5 @@ The best match is 4.
 
 [DATE\_FIRST\_DAY\_OF\_WEEK Option for Data Lake Relational Engine](../090-database-options/date-first-day-of-week-option-for-data-lake-relational-engine-a632279.md "Determines the first day of the week.")
 
-[DIFFERENCE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/3b8bafe468ce4160b52b7b25a5de50a0.html "Compares two strings, evaluates the similarity between them, and returns a value from 0 to 4.") :arrow_upper_right:
+[DIFFERENCE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3b8bafe468ce4160b52b7b25a5de50a0.html "Compares two strings, evaluates the similarity between them, and returns a value from 0 to 4.") :arrow_upper_right:
 

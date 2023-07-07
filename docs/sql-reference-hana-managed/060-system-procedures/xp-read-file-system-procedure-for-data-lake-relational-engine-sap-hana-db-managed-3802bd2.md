@@ -28,13 +28,34 @@ xp_read_file(
 
 ## Parameters
 
-  *<filename\>* 
- :   Use this LONG VARCHAR parameter to specify the name of the file for which to return the contents.
 
-   *<lazy\>* 
- :   When you specify this optional INTEGER parameter and its value is not 0, the contents of the file are not read until they are requested. Reads only occur when the LONG BINARY value is accessed and only on the portion of the file that is requested. The default is 0, or non-lazy.
+<dl>
+<dt><b>
 
- 
+ *<filename\>* 
+
+</b></dt>
+<dd>
+
+Use this LONG VARCHAR parameter to specify the name of the file for which to return the contents.
+
+
+
+</dd><dt><b>
+
+ *<lazy\>* 
+
+</b></dt>
+<dd>
+
+When you specify this optional INTEGER parameter and its value is not 0, the contents of the file are not read until they are requested. Reads only occur when the LONG BINARY value is accessed and only on the portion of the file that is requested. The default is 0, or non-lazy.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3802bd2d3a464336b1abe16107b12e47__section_ups_kp2_srb"/>
 

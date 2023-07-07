@@ -16,13 +16,34 @@ QUARTERSTR( <date-expression>,[ <quarter_start_month> ] )
 
 ## Parameters
 
- *<date-expression\>*
- :   A date.
 
-  *<quarter\_start\_month\>*
- :   Any integer 1 to 12. If not specified, default value is 1 \(January\).
+<dl>
+<dt><b>
 
- 
+*<date-expression\>*
+
+</b></dt>
+<dd>
+
+A date.
+
+
+
+</dd><dt><b>
+
+*<quarter\_start\_month\>*
+
+</b></dt>
+<dd>
+
+Any integer 1 to 12. If not specified, default value is 1 \(January\).
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiob6d0deaed8aa424a88f56de678b77b77__section_mvn_mn5_vrb"/>
 

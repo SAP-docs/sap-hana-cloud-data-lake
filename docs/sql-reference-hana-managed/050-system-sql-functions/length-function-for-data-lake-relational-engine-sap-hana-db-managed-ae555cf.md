@@ -16,10 +16,23 @@ LENGTH ( <string-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string.
 
- 
+<dl>
+<dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioae555cf86ee34fe887637dbcd64a33c3__section_k5q_w1h_trb"/>
 

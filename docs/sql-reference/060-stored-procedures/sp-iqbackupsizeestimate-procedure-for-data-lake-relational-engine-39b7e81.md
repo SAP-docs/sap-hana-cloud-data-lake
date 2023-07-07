@@ -38,7 +38,7 @@ select * from sp_iqbackupsizeEstimate()
 
 ## Privileges
 
-You need DBA privileges to execute this procedure. Users without DBA privileges must be granted EXECUTE permission to run the procedure.
+Requires DBA privileges to execute this procedure. Users without DBA privileges requires EXECUTE object-level privilege on the procedure.
 
 
 

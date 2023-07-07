@@ -6,11 +6,6 @@ Removes a user-defined role from the database or converts a user-extended role t
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -25,22 +20,56 @@ DROP ROLE [ FROM USER ] <role_name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa42903c984f210159ad390495d594b47__IQ_Parameters"/>
 
 ## Parameters
 
- *<role\_name\>*
- :   Must be the name of a role that already exists in the database.
 
-  FROM USER
- :   Required to convert a user-extended role back to act as a regular user rather than remove it from the database. The *<role\_name\>* must exist in the database.
+<dl>
+<dt><b>
 
-    The user retains any login privileges, system privileges, and roles granted to the user-extended role and becomes the owner of any objects owned by the user-extended role. Any users granted to the user-extended are immediately revoked.
+*<role\_name\>*
 
-  WITH REVOKE
- :   Required when dropping a standalone or user-extended role to which users have been granted the underlying system privileges of the role. The grant can have been made with either the WITH ADMIN OPTION or WITH NO ADMIN OPTION clause.
+</b></dt>
+<dd>
 
- 
+Must be the name of a role that already exists in the database.
+
+
+
+</dd><dt><b>
+
+FROM USER
+
+</b></dt>
+<dd>
+
+Required to convert a user-extended role back to act as a regular user rather than remove it from the database. The *<role\_name\>* must exist in the database.
+
+The user retains any login privileges, system privileges, and roles granted to the user-extended role and becomes the owner of any objects owned by the user-extended role. Any users granted to the user-extended are immediately revoked.
+
+
+
+</dd><dt><b>
+
+WITH REVOKE
+
+</b></dt>
+<dd>
+
+Required when dropping a standalone or user-extended role to which users have been granted the underlying system privileges of the role. The grant can have been made with either the WITH ADMIN OPTION or WITH NO ADMIN OPTION clause.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa42903c984f210159ad390495d594b47__IQ_Usage"/>
 

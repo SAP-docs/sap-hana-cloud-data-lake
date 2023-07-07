@@ -32,6 +32,19 @@ NOT( expression1 = expression2 OR ( expression1 IS NULL AND expression2 IS NULL 
 
 ## Standards and Compatibility
 
+
+<dl>
+<dt><b>
+
 SQL/2008
-:   The IS \[NOT\] DISTINCT FROM predicate is defined in SQL/2008 standard. The IS DISTINCT FROM predicate is Feature T151, "DISTINCT predicate", of the SQL/2008 standard. The IS NOT DISTINCT FROM predicate is Feature T152, "DISTINCT predicate with negation", of the SQL/2008 standard.
+
+</b></dt>
+<dd>
+
+The IS \[NOT\] DISTINCT FROM predicate is defined in SQL/2008 standard. The IS DISTINCT FROM predicate is Feature T151, "DISTINCT predicate", of the SQL/2008 standard. The IS NOT DISTINCT FROM predicate is Feature T152, "DISTINCT predicate with negation", of the SQL/2008 standard.
+
+
+
+</dd>
+</dl>
 

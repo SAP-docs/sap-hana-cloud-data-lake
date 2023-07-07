@@ -16,13 +16,34 @@ WEIGHTED_AVG (<expression>) OVER (<window-spec>)
 
 ## Parameters
 
- *<expression\>*
- :   A numeric expression for which a weighted value is being computed.
 
-  *<window-spec\>*
- :   Specified when using this function as a window function.
+<dl>
+<dt><b>
 
- 
+*<expression\>*
+
+</b></dt>
+<dd>
+
+A numeric expression for which a weighted value is being computed.
+
+
+
+</dd><dt><b>
+
+*<window-spec\>*
+
+</b></dt>
+<dd>
+
+Specified when using this function as a window function.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa590e30584f210158df8d2242a037242__WEIGHTED_AVG_remarks1"/>
 
@@ -356,5 +377,5 @@ Francis
 
 [EXP\_WEIGHTED\_AVG Function \[Aggregate\] for Data Lake Relational Engine](exp-weighted-avg-function-aggregate-for-data-lake-relational-engine-a551b4f.md "Calculates an exponential weighted moving average. Weightings determine the relative importance of each quantity that makes up the average.")
 
-[WEIGHTED_AVG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/7a370d0d94cb4061a4de45b28ddbac36.html "Calculates an arithmetically (or linearly) weighted average.") :arrow_upper_right:
+[WEIGHTED_AVG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7a370d0d94cb4061a4de45b28ddbac36.html "Calculates an arithmetically (or linearly) weighted average.") :arrow_upper_right:
 

@@ -13,8 +13,7 @@ When syntax within the REMOTE\_EXECUTE procedure contains single quotes, they mu
 This statement creates table T2 in relational container CONTAINER1.
 
 ```
-CALL [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.REMOTE_EXECUTE ('
+CALL SYSHDL_CONTAINER1.REMOTE_EXECUTE ('
    CREATE TABLE T2 (A INT, B INT)
 ');
 ```
@@ -24,8 +23,7 @@ CALL [/pandoc/div/div/horizontalrule/codeblock/span/span
 This statement creates the data lake Relational Engine view VIEW\_T1 in relational container CONTAINER1.
 
 ```
-CALL [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.REMOTE_EXECUTE ('
+CALL SYSHDL_CONTAINER1.REMOTE_EXECUTE ('
    CREATE VIEW VIEW_T1 AS SELECT * FROM T1
 ');
 ```
@@ -35,8 +33,7 @@ CALL [/pandoc/div/div/horizontalrule/codeblock/span/span
 This statement creates a data lake Relational Engine HG index on columns A and B on table T1 in relational container CONTAINER1.
 
 ```
-CALL [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) SYSHDL (span]_CONTAINER1.REMOTE_EXECUTE ('
+CALL SYSHDL_CONTAINER1.REMOTE_EXECUTE ('
    CREATE HG INDEX INDEX1_T1 ON T1 (A, B)
 ');
 ```

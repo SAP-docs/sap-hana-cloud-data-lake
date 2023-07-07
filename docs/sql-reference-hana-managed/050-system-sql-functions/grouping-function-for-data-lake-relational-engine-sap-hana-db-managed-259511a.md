@@ -16,10 +16,23 @@ GROUPING ( <group-by-expression> )
 
 ## Parameters
 
- *<group-by-expression\>*
- :   An expression appearing as a grouping column in the result set of a query that uses a GROUP BY clause with the ROLLUP or CUBE keyword. The function identifies subtotal rows added to the result set by a ROLLUP or CUBE operation.
 
- 
+<dl>
+<dt><b>
+
+*<group-by-expression\>*
+
+</b></dt>
+<dd>
+
+An expression appearing as a grouping column in the result set of a query that uses a GROUP BY clause with the ROLLUP or CUBE keyword. The function identifies subtotal rows added to the result set by a ROLLUP or CUBE operation.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio259511aa310241949d6e8389561dc62c__section_ayp_bqg_trb"/>
 

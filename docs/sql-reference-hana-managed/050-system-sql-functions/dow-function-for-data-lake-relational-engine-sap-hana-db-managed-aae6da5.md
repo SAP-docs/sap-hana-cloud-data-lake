@@ -16,10 +16,23 @@ DOW ( <date-expression> )
 
 ## Parameters
 
- *<date-expression\>*
- :   The date.
 
- 
+<dl>
+<dt><b>
+
+*<date-expression\>*
+
+</b></dt>
+<dd>
+
+The date.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioaae6da55cdb5426d9b6a06e2c7e5b2b4__section_frc_bzl_srb"/>
 

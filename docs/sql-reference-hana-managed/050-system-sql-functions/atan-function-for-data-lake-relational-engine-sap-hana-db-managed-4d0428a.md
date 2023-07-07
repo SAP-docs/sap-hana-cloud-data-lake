@@ -16,10 +16,23 @@ ATAN ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The tangent of the angle.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The tangent of the angle.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio4d0428abd20f49fea3612d88cf749e7d__section_bbp_x3k_srb"/>
 

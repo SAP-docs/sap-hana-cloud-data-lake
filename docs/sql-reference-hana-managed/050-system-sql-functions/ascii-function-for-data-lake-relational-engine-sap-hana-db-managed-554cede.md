@@ -16,10 +16,23 @@ ASCII ( <string-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string.
 
- 
+<dl>
+<dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio554cede3499a4ef98a05be128493031f__section_nyd_5jk_srb"/>
 

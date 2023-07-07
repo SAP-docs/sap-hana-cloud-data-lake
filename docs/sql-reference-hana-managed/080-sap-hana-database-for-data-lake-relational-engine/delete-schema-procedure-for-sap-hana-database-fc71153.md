@@ -7,8 +7,7 @@ Delete a data lake Relational Engine schema in a relational container.
 
 
 ```
-CALL SYSHDL.DELETE_SCHEMA( '[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <relational_container_schema_name> (varname]' ); 
+CALL SYSHDL_<relational_container_schema_name>.DELETE_SCHEMA( '<relational_container_schema_name>' ); 
 ```
 
 
@@ -17,10 +16,23 @@ CALL SYSHDL.DELETE_SCHEMA( '[/pandoc/div/div/horizontalrule/codeblock/span/varna
 
 ## Parameters
 
- *<relational\_container\_schema\_name\>*
- :   Specifies the name of the schema being deleted.
 
- 
+<dl>
+<dt><b>
+
+*<relational\_container\_schema\_name\>*
+
+</b></dt>
+<dd>
+
+Specifies the name of the schema being deleted.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiofc7115393bcc4dcba2bd9ffb53a4e49a__section_zhc_rnx_cjb"/>
 
@@ -34,7 +46,7 @@ You cannot drop a data lake Relational Engine schema that contains objects. When
 
 ## Privileges
 
-You are a member of the container group administrator role, SYSHDL\_<relational\_container\_name\>\_ROLE.
+You are a member of the container group administrator role, SYSHDL\_<relational\_container\_name\>\_ROLE, for the relational container.
 
 
 
@@ -45,6 +57,6 @@ You are a member of the container group administrator role, SYSHDL\_<relational\
 The following example deletes the data lake Relational Engine relational container schema MY\_SCHEMA.
 
 ```
-CALL SYSHDL.DELETE_SCHEMA('MY_SCHEMA');
+CALL SYSHDL_CONTAINER1.DELETE_SCHEMA('MY_SCHEMA');
 ```
 

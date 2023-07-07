@@ -16,13 +16,34 @@ DATEPART ( <date-part>, <date-expression> )
 
 ## Parameters
 
- *<date-part\>*
- :   The date part to be returned.
 
-  *<date-expression\>*
- :   The date for which the part is to be returned. The date must contain the date-part field.
+<dl>
+<dt><b>
 
- 
+*<date-part\>*
+
+</b></dt>
+<dd>
+
+The date part to be returned.
+
+
+
+</dd><dt><b>
+
+*<date-expression\>*
+
+</b></dt>
+<dd>
+
+The date for which the part is to be returned. The date must contain the date-part field.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa07008d5cbc347329b60d52b3e243ed6__section_nvp_2dm_srb"/>
 

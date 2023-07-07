@@ -22,10 +22,23 @@ STRING ( <string-expression> [ , … ] )
 
 ## Parameters
 
- *<string-expression\>*
- :   A string. If only one argument is supplied, it is converted into a single expression. If more than one argument is supplied, they are concatenated into a single string. A NULL is treated as an empty string \(''\).
 
- 
+<dl>
+<dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+A string. If only one argument is supplied, it is converted into a single expression. If more than one argument is supplied, they are concatenated into a single string. A NULL is treated as an empty string \(''\).
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio4b6311065965472286c536537d380f53__section_i1g_543_wrb"/>
 

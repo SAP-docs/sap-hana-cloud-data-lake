@@ -6,11 +6,6 @@ Removes user-defined procedures from the database.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 > 
@@ -23,11 +18,13 @@ Removes user-defined procedures from the database.
 
 
 ```
-DROP PROCEDURE [ IF EXISTS ] [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] (span].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <procedure-name> (varname]
+DROP PROCEDURE [ IF EXISTS ] [ <schema-name>.]<procedure-name>
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -35,10 +32,23 @@ DROP PROCEDURE [ IF EXISTS ] [ [/pandoc/div/div/horizontalrule/codeblock/spa
 
 ## Parameters
 
- IF EXISTS
- :   Prevents the return of an error if the specified procedure does not exist.
 
- 
+<dl>
+<dt><b>
+
+IF EXISTS
+
+</b></dt>
+<dd>
+
+Prevents the return of an error if the specified procedure does not exist.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio86898fa1ad8546c58b0dfa704077a491__section_yn4_lgq_lnb"/>
 
@@ -46,11 +56,30 @@ DROP PROCEDURE [ IF EXISTS ] [ [/pandoc/div/div/horizontalrule/codeblock/spa
 
 The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
 
- Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
- :   You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
-  Connected directly to data lake Relational Engine as a data lake Relational Engine user:
- :   -   Requires one of:
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+
+
+</dd><dt><b>
+
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+-   Requires one of:
     -   You own the procedure
     -   DROP ANY PROCEDURE system privilege
     -   DROP ANY OBJECT system privilege
@@ -58,7 +87,12 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
     -   DROP object-level privilege on the schema containing the procedure if the schema is owned by another user.
 
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio86898fa1ad8546c58b0dfa704077a491__section_cfp_5ds_4mb"/>
 

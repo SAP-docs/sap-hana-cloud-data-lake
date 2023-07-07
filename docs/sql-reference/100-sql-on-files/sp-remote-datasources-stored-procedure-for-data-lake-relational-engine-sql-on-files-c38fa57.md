@@ -31,16 +31,45 @@ sp_remote_datasources(
 
 ## Parameters
 
-  *<remote-server-name\>* 
- :   *<remote-server-name\>* must be specified. Use this CHAR\(128\) parameter to specify the remote server name.
 
-  *<remote-schema-name\>*
- :   The name of the schema.
+<dl>
+<dt><b>
 
-   *<remote-table-name\>* 
- :   Use this optional CHAR\(128\) parameter to specify the name of the remote table. The default is '%'. *<remote-table-name\>* can be specified as null to match any remote table.
+ *<remote-server-name\>* 
 
- 
+</b></dt>
+<dd>
+
+*<remote-server-name\>* must be specified. Use this CHAR\(128\) parameter to specify the remote server name.
+
+
+
+</dd><dt><b>
+
+*<remote-schema-name\>*
+
+</b></dt>
+<dd>
+
+The name of the schema.
+
+
+
+</dd><dt><b>
+
+ *<remote-table-name\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(128\) parameter to specify the name of the remote table. The default is '%'. *<remote-table-name\>* can be specified as null to match any remote table.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioc38fa5765a7b484c813e728b534019ee__SPRD_results"/>
 

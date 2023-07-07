@@ -16,10 +16,23 @@ LOWER ( <string-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string to be converted.
 
- 
+<dl>
+<dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string to be converted.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio3ad17721e94b4a24a12a07986c829123__section_hlk_dwg_trb"/>
 

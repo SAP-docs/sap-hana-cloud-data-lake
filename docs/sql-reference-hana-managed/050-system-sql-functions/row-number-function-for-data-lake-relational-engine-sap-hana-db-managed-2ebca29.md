@@ -16,13 +16,34 @@ ROW_NUMBER() OVER ( [ PARTITION BY <window partition> ] ORDER BY <window orderin
 
 ## Parameters
 
- *<window partition\>*
- :   \(Optional\) One or more value expressions separated by commas indicating how you want to divide the set of result rows.
 
-  *<window ordering\>*
- :   Defines the expressions for sorting rows within window partitions, if specified, or within the result set if you did not specify a window partition.
+<dl>
+<dt><b>
 
- 
+*<window partition\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) One or more value expressions separated by commas indicating how you want to divide the set of result rows.
+
+
+
+</dd><dt><b>
+
+*<window ordering\>*
+
+</b></dt>
+<dd>
+
+Defines the expressions for sorting rows within window partitions, if specified, or within the result set if you did not specify a window partition.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio2ebca29e7b31469497df90d36ea7422e__section_jxd_lst_vrb"/>
 

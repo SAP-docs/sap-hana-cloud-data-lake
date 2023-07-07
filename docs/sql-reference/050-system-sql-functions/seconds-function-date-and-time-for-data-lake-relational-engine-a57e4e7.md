@@ -18,13 +18,34 @@ SECONDS ( <datetime-expression>
 
 ## Parameters
 
- *<datetime-expression\>*
- :   A date and time.
 
-  *<integer-expression\>*
- :   The number of seconds to be added to the *<datetime-expression\>*. If *<integer-expression\>* is negative, the appropriate number of minutes are subtracted from the date/time value. If you supply an integer expression, the *<datetime-expression\>* must be explicitly cast as a datetime data type.
+<dl>
+<dt><b>
 
- 
+*<datetime-expression\>*
+
+</b></dt>
+<dd>
+
+A date and time.
+
+
+
+</dd><dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number of seconds to be added to the *<datetime-expression\>*. If *<integer-expression\>* is negative, the appropriate number of minutes are subtracted from the date/time value. If you supply an integer expression, the *<datetime-expression\>* must be explicitly cast as a datetime data type.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa57e4e7d84f21015bdabf289394cd2ce__SECONDS_returns1"/>
 
@@ -81,5 +102,5 @@ The second syntax returns the number of whole seconds from the first date/time t
 **Related Information**  
 
 
-[SECONDS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/18801f8db2164f1ea0dfdfbe99a38520.html "Returns the number of seconds since an arbitrary starting date and time, the number of seconds between two times, or adds an integer amount of seconds to a time.") :arrow_upper_right:
+[SECONDS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/18801f8db2164f1ea0dfdfbe99a38520.html "Returns the number of seconds since an arbitrary starting date and time, the number of seconds between two times, or adds an integer amount of seconds to a time.") :arrow_upper_right:
 

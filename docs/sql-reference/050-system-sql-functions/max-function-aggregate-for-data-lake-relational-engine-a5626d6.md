@@ -17,13 +17,34 @@ MAX ( <expression>
 
 ## Parameters
 
- *<expression\>*
- :   The expression for which the maximum value is to be calculated. This is commonly a column name.
 
-  DISTINCT *<column-name\>*
- :   Returns the same as <code>MAX ( <i class="varname">&lt;expression&gt;</i> )</code>, and is included for completeness.
+<dl>
+<dt><b>
 
- 
+*<expression\>*
+
+</b></dt>
+<dd>
+
+The expression for which the maximum value is to be calculated. This is commonly a column name.
+
+
+
+</dd><dt><b>
+
+DISTINCT *<column-name\>*
+
+</b></dt>
+<dd>
+
+Returns the same as <code>MAX ( <i class="varname">&lt;expression&gt;</i> )</code>, and is included for completeness.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5626d6684f210158cafad316e131142__MAX_returns1"/>
 
@@ -67,5 +88,5 @@ FROM Employees
 
 [MIN Function \[Aggregate\] for Data Lake Relational Engine](min-function-aggregate-for-data-lake-relational-engine-a5638af.md "Returns the minimum expression value found in each group of rows.")
 
-[MAX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/ae1f29e228714cf085d6eb1d0ee075f8.html "Returns the maximum expression value found in each group of rows.") :arrow_upper_right:
+[MAX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ae1f29e228714cf085d6eb1d0ee075f8.html "Returns the maximum expression value found in each group of rows.") :arrow_upper_right:
 

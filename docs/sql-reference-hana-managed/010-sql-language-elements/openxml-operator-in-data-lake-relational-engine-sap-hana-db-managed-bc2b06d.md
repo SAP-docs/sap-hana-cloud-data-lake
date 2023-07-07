@@ -6,11 +6,6 @@ A string operator that generates a result set from an XML document.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine \(SAP HANA DB-Managed\) syntax can be used when:
 > 
@@ -55,141 +50,294 @@ OPENXML(
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loiobc2b06da6caf497f9601f2d2d6e9e063__section_wtq_kkl_bwb"/>
 
 ## Parameters
 
- WITH clause
- :   Specifies the schema of the result set and how the value is found for each column in the result set. WITH clause *<xpath\>* arguments are matched relative to the matches for the *<xpath\>* in the second argument. If a WITH clause expression matches more than one node, then only the first node in the document order is used. If the node is not a text node, then the result is found by appending all the text node descendants. If a WITH clause expression does not match any nodes, then the column for that row is NULL.
 
-    The *<xpath\>* arguments in the WITH clause can be literal strings or variables. See [http://www.w3.org/TR/xpath](http://www.w3.org/TR/xpath).
+<dl>
+<dt><b>
 
-    The OPENXML WITH clause syntax is similar to the syntax for selecting from a stored procedure.
+WITH clause
 
-  USING FILE | USING VALUE
- :   Use the USING FILE clause to load data from a file.
+</b></dt>
+<dd>
 
-    Use the USING VALUE clause to load data from any expression of CHAR, NCHAR, BINARY, or LONG BINARY type, or BLOB string.
+Specifies the schema of the result set and how the value is found for each column in the result set. WITH clause *<xpath\>* arguments are matched relative to the matches for the *<xpath\>* in the second argument. If a WITH clause expression matches more than one node, then only the first node in the document order is used. If the node is not a text node, then the result is found by appending all the text node descendants. If a WITH clause expression does not match any nodes, then the column for that row is NULL.
 
-      *<xml-data\>* 
-     :   The XML on which the result set is based. This can be any string expression, such as a constant, variable, or column.
+The *<xpath\>* arguments in the WITH clause can be literal strings or variables. See [http://www.w3.org/TR/xpath](http://www.w3.org/TR/xpath).
 
-        The *<xml-data\>* is parsed directly in the NCHAR encoding if there are any NCHAR columns in the output. The xpath and namespaces arguments are also converted and parsed in the NCHAR encoding.
-
-       *<xpath\>* 
-     :   A string containing an XPath query. XPath allows you to specify patterns that describe the structure of the XML document you are querying. The XPath pattern included in this argument selects the nodes from the XML document. Each node that matches the XPath query in the second *<xpath\>* argument generates one row in the table.
-
-        Metaproperties can only be specified in WITH clause *<xpath\>* arguments. A metaproperty is accessed within an XPath query as if it was an attribute. If a *<namespaces\>* is not specified, then by default the prefix mp is bound to the Uniform Resource Identifier \(URI\) urn:sap-com:sa-xpath-metaprop. If a *<namespaces\>* is specified, then this URI must be bound to mp or some other prefix to access metaproperties in the query. Metaproperty names are case-sensitive. The OPENXML statement supports the following metaproperties:
-
-         @mp:id
-         :   returns an ID for a node that is unique within the XML document. The ID for a given node in a given document may change if the database server is restarted. The value of this metaproperty increase with document order.
-
-          @mp:localname
-         :   returns the local part of the node name, or NULL if the node does not have a name.
-
-          @mp:prefix
-         :   returns the prefix part of the node name, or NULL if the node does not have a name or if the name is not prefixed.
-
-          @mp:namespaceuri
-         :   returns the URI of the namespace that the node belongs to, or NULL if the node is not in a namespace.
-
-          @mp:xmltext
-         :   returns a subtree of the XML document in XML form. For example, when you match an internal node, you can use this metaproperty to return an XML string, rather than the concatenated values of the descendant text nodes.
-
-        *<flags\>* 
-     :   Indicates the mapping that should be used between the XML data and the result set when an XPath query is not specified in the WITH clause. If the *<flags\>* parameter is not specified, then the default behavior is to map attributes to columns in the result set. The *<flags\>* parameter can have one of the following values:
+The OPENXML WITH clause syntax is similar to the syntax for selecting from a stored procedure.
 
 
-        <table>
-        <tr>
-        <th valign="top">
 
-        Value
+</dd><dt><b>
 
+USING FILE | USING VALUE
 
-        
-        </th>
-        <th valign="top">
+</b></dt>
+<dd>
 
-        Description
+Use the USING FILE clause to load data from a file.
 
-
-        
-        </th>
-        </tr>
-        <tr>
-        <td valign="top">
-
-        1
+Use the USING VALUE clause to load data from any expression of CHAR, NCHAR, BINARY, or LONG BINARY type, or BLOB string.
 
 
-        
-        </td>
-        <td valign="top">
+<dl>
+<dt><b>
 
-        XML attributes are mapped to columns in the result set \(the default\).
+ *<xml-data\>* 
 
+</b></dt>
+<dd>
 
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
+The XML on which the result set is based. This can be any string expression, such as a constant, variable, or column.
 
-        2
+The *<xml-data\>* is parsed directly in the NCHAR encoding if there are any NCHAR columns in the output. The xpath and namespaces arguments are also converted and parsed in the NCHAR encoding.
 
 
-        
-        </td>
-        <td valign="top">
 
-        XML elements are mapped to columns in the result set.
+</dd><dt><b>
 
+ *<xpath\>* 
 
-        
-        </td>
-        </tr>
-        </table>
-        
-       *<namespace-declaration\>* 
-     :   An XML document. The in-scope namespaces for the query are taken from the root element of the document. If namespaces are specified, then you must include a *<flags\>* argument, even if all the *<xpath\>* arguments are specified.
+</b></dt>
+<dd>
 
-    *<column-name\>* 
- :   The name of the column in the result set.
+A string containing an XPath query. XPath allows you to specify patterns that describe the structure of the XML document you are querying. The XPath pattern included in this argument selects the nodes from the XML document. Each node that matches the XPath query in the second *<xpath\>* argument generates one row in the table.
 
-   *<column-type\>* 
- :   The data type of the column in the result set. The data type must be compatible with the values selected from the XML document.
-
-  OPTION clause
- :   Use the OPTION clause to specify parsing options to use for the input file, such as escape characters, delimiters, encoding, and so on.
-
-     ENCODING clause
-     :   The ENCODING clause allows you to specify the encoding that is used to read the file.
-
-        If the ENCODING clause is not specified, then encoding for values is assumed to be in the database character set \(db\_charset\) if the values are of type CHAR or BINARY, and NCHAR database character set \(nchar\_charset\) if the values are of type NCHAR.
-
-      BYTE ORDER MARK clause
-     :   Use the BYTE ORDER MARK clause to specify whether a byte order mark \(BOM\) is present in the encoding. By default, this option is ON, which enables the server to search for and interpret a byte order mark \(BOM\) at the beginning of the data. If BYTE ORDER MARK is OFF, then the server does not search for a BOM.
-
-        You must specify the BYTE ORDER MARK clause if the input data is encoded.
-
-        If the ENCODING clause is specified:
-
-        -   If the BYTE ORDER MARK option is ON and you specify a UTF-16 encoding with an endian such as UTF-16BE or UTF-16LE, then the database server searches for a BOM at the beginning of the data. If a BOM is present, then it is used to verify the endianness of the data. If you specify the wrong endian, then an error is returned.
-
-        -   If the BYTE ORDER MARK option is ON and you specify a UTF-16 encoding without an explicit endian, then the database server searches for a BOM at the beginning of the data. If a BOM is present, then it is used to determine the endianness of the data. Otherwise, the operating system endianness is assumed.
-
-        -   If the BYTE ORDER MARK option is ON and you specify a UTF-8 encoding, then the database server searches for a BOM at the beginning of the data. If a BOM is present, then it is ignored.
+Metaproperties can only be specified in WITH clause *<xpath\>* arguments. A metaproperty is accessed within an XPath query as if it was an attribute. If a *<namespaces\>* is not specified, then by default the prefix mp is bound to the Uniform Resource Identifier \(URI\) urn:sap-com:sa-xpath-metaprop. If a *<namespaces\>* is specified, then this URI must be bound to mp or some other prefix to access metaproperties in the query. Metaproperty names are case-sensitive. The OPENXML statement supports the following metaproperties:
 
 
-        If the ENCODING clause is not specified:
+<dl>
+<dt><b>
 
-        -   If you do not specify an ENCODING clause and the BYTE ORDER MARK option is ON, then the server looks for a BOM at the beginning of the input data. If a BOM is located, then the source encoding is automatically selected based on the encoding of the BOM \(UTF-16BE, UTF-16LE, or UTF-8\) and the BOM is not considered to be part of the data to be loaded.
+@mp:id
 
-        -   If you do not specify an ENCODING clause and the BYTE ORDER MARK option is OFF, or a BOM is not found at the beginning of the input data, then the database CHAR encoding is used.
+</b></dt>
+<dd>
+
+returns an ID for a node that is unique within the XML document. The ID for a given node in a given document may change if the database server is restarted. The value of this metaproperty increase with document order.
 
 
-  
+
+</dd><dt><b>
+
+@mp:localname
+
+</b></dt>
+<dd>
+
+returns the local part of the node name, or NULL if the node does not have a name.
+
+
+
+</dd><dt><b>
+
+@mp:prefix
+
+</b></dt>
+<dd>
+
+returns the prefix part of the node name, or NULL if the node does not have a name or if the name is not prefixed.
+
+
+
+</dd><dt><b>
+
+@mp:namespaceuri
+
+</b></dt>
+<dd>
+
+returns the URI of the namespace that the node belongs to, or NULL if the node is not in a namespace.
+
+
+
+</dd><dt><b>
+
+@mp:xmltext
+
+</b></dt>
+<dd>
+
+returns a subtree of the XML document in XML form. For example, when you match an internal node, you can use this metaproperty to return an XML string, rather than the concatenated values of the descendant text nodes.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+ *<flags\>* 
+
+</b></dt>
+<dd>
+
+Indicates the mapping that should be used between the XML data and the result set when an XPath query is not specified in the WITH clause. If the *<flags\>* parameter is not specified, then the default behavior is to map attributes to columns in the result set. The *<flags\>* parameter can have one of the following values:
+
+
+<table>
+<tr>
+<th valign="top">
+
+Value
+
+
+
+</th>
+<th valign="top">
+
+Description
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+1
+
+
+
+</td>
+<td valign="top">
+
+XML attributes are mapped to columns in the result set \(the default\).
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2
+
+
+
+</td>
+<td valign="top">
+
+XML elements are mapped to columns in the result set.
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+</dd><dt><b>
+
+ *<namespace-declaration\>* 
+
+</b></dt>
+<dd>
+
+An XML document. The in-scope namespaces for the query are taken from the root element of the document. If namespaces are specified, then you must include a *<flags\>* argument, even if all the *<xpath\>* arguments are specified.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+ *<column-name\>* 
+
+</b></dt>
+<dd>
+
+The name of the column in the result set.
+
+
+
+</dd><dt><b>
+
+ *<column-type\>* 
+
+</b></dt>
+<dd>
+
+The data type of the column in the result set. The data type must be compatible with the values selected from the XML document.
+
+
+
+</dd><dt><b>
+
+OPTION clause
+
+</b></dt>
+<dd>
+
+Use the OPTION clause to specify parsing options to use for the input file, such as escape characters, delimiters, encoding, and so on.
+
+
+<dl>
+<dt><b>
+
+ENCODING clause
+
+</b></dt>
+<dd>
+
+The ENCODING clause allows you to specify the encoding that is used to read the file.
+
+If the ENCODING clause is not specified, then encoding for values is assumed to be in the database character set \(db\_charset\) if the values are of type CHAR or BINARY, and NCHAR database character set \(nchar\_charset\) if the values are of type NCHAR.
+
+
+
+</dd><dt><b>
+
+BYTE ORDER MARK clause
+
+</b></dt>
+<dd>
+
+Use the BYTE ORDER MARK clause to specify whether a byte order mark \(BOM\) is present in the encoding. By default, this option is ON, which enables the server to search for and interpret a byte order mark \(BOM\) at the beginning of the data. If BYTE ORDER MARK is OFF, then the server does not search for a BOM.
+
+You must specify the BYTE ORDER MARK clause if the input data is encoded.
+
+If the ENCODING clause is specified:
+
+-   If the BYTE ORDER MARK option is ON and you specify a UTF-16 encoding with an endian such as UTF-16BE or UTF-16LE, then the database server searches for a BOM at the beginning of the data. If a BOM is present, then it is used to verify the endianness of the data. If you specify the wrong endian, then an error is returned.
+
+-   If the BYTE ORDER MARK option is ON and you specify a UTF-16 encoding without an explicit endian, then the database server searches for a BOM at the beginning of the data. If a BOM is present, then it is used to determine the endianness of the data. Otherwise, the operating system endianness is assumed.
+
+-   If the BYTE ORDER MARK option is ON and you specify a UTF-8 encoding, then the database server searches for a BOM at the beginning of the data. If a BOM is present, then it is ignored.
+
+
+If the ENCODING clause is not specified:
+
+-   If you do not specify an ENCODING clause and the BYTE ORDER MARK option is ON, then the server looks for a BOM at the beginning of the input data. If a BOM is located, then the source encoding is automatically selected based on the encoding of the BOM \(UTF-16BE, UTF-16LE, or UTF-8\) and the BOM is not considered to be part of the data to be loaded.
+
+-   If you do not specify an ENCODING clause and the BYTE ORDER MARK option is OFF, or a BOM is not found at the beginning of the input data, then the database CHAR encoding is used.
+
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loiobc2b06da6caf497f9601f2d2d6e9e063__section_bpj_lkl_bwb"/>
 
@@ -224,7 +372,10 @@ The OPENXML operator supports a subset of the XPath syntax, as follows:
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

@@ -17,32 +17,69 @@ SORTKEY ( <string-expression> [, { <collation-id>
 
 ## Parameters
 
-  *<string-expression\>* 
- :   The string expression must contain characters that are encoded in the character set of the database and must be `STRING` data type.
 
-    If string-expression is NULL, the `SORTKEY` function returns a null value. An empty string has a different sort-order value than a null string from a database column.
+<dl>
+<dt><b>
 
-    There is no limit on the length of the input string that the `SORTKEY` function can handle. The result of `SORTKEY` is always limited to 1024 bytes and is `VARBINARY` data type. If the actual results exceed 1024 bytes, the result contains only the first 1024 bytes.
+ *<string-expression\>* 
 
-  *<collation-id\>*
- :   A variable, integer constant, or string that specifies the ID number of the sort order to use. This parameter applies only to SAP ASE collations, which can be referred to by their corresponding collation ID.
+</b></dt>
+<dd>
 
-  *<collation-name\>*
- :   A string or character variable that specifies the name of the sort order to use. You can also specify the alias char\_collation, or, equivalently, db\_collation, to generate sort-keys as used by the CHAR collation in use by the database.
+The string expression must contain characters that are encoded in the character set of the database and must be `STRING` data type.
 
-    Similarly, you can specify the alias NCHAR\_COLLATION to generate sort-keys as used by the NCHAR collation in use by the database. However, data lake Relational Engine does not support NCHAR\_COLLATION for data lake Relational Engine-specific objects. NCHAR\_COLLATION is supported for SAP SQL Anywhere objects on a data lake Relational Engine server.
+If string-expression is NULL, the `SORTKEY` function returns a null value. An empty string has a different sort-order value than a null string from a database column.
 
-  *<collation-tailoring-string\>*
- :   \(Optional\) Specify collation tailoring options \(*<collation-tailoring-string\>*\) for additional control over sorting and comparison of characters. These options take the form of keyword=value pairs assembled in parentheses, following the collation name. For example:
+There is no limit on the length of the input string that the `SORTKEY` function can handle. The result of `SORTKEY` is always limited to 1024 bytes and is `VARBINARY` data type. If the actual results exceed 1024 bytes, the result contains only the first 1024 bytes.
 
-    ```
-    'UCA(locale=es;case=LowerFirst;accent=respect)'
-    ```
 
-    > ### Note:  
-    > All of the collation tailoring options are supported for SAP SQL Anywhere databases, when specifying the Unicode Collation Algorithm \(UCA\) collation. For all other collations, only case-sensitivity tailoring is supported.
 
- 
+</dd><dt><b>
+
+*<collation-id\>*
+
+</b></dt>
+<dd>
+
+A variable, integer constant, or string that specifies the ID number of the sort order to use. This parameter applies only to SAP ASE collations, which can be referred to by their corresponding collation ID.
+
+
+
+</dd><dt><b>
+
+*<collation-name\>*
+
+</b></dt>
+<dd>
+
+A string or character variable that specifies the name of the sort order to use. You can also specify the alias char\_collation, or, equivalently, db\_collation, to generate sort-keys as used by the CHAR collation in use by the database.
+
+Similarly, you can specify the alias NCHAR\_COLLATION to generate sort-keys as used by the NCHAR collation in use by the database. However, data lake Relational Engine does not support NCHAR\_COLLATION for data lake Relational Engine-specific objects. NCHAR\_COLLATION is supported for SAP SQL Anywhere objects on a data lake Relational Engine server.
+
+
+
+</dd><dt><b>
+
+*<collation-tailoring-string\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) Specify collation tailoring options \(*<collation-tailoring-string\>*\) for additional control over sorting and comparison of characters. These options take the form of keyword=value pairs assembled in parentheses, following the collation name. For example:
+
+```
+'UCA(locale=es;case=LowerFirst;accent=respect)'
+```
+
+> ### Note:  
+> All of the collation tailoring options are supported for SAP SQL Anywhere databases, when specifying the Unicode Collation Algorithm \(UCA\) collation. For all other collations, only case-sensitivity tailoring is supported.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5805ddb84f2101591ffe19db63f3521__SORTKEY_returns1"/>
 
@@ -110,45 +147,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    Default Unicode multilingual
+    
+        Default Unicode multilingual
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    default
+    
+        default
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    0
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    CP 850 Alternative: no accent
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    altnoacc
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    39
+        0
 
 
     
@@ -156,45 +170,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    CP 850 Alternative: lowercase first
+    
+        CP 850 Alternative: no accent
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    altdict
+    
+        altnoacc
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    45
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    CP 850 Western European: no case, preference
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    altnocsp
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    46
+        39
 
 
     
@@ -202,45 +193,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    CP 850 Scandinavian dictionary
+    
+        CP 850 Alternative: lowercase first
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    scandict
+    
+        altdict
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    47
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    CP 850 Scandinavian: no case, preference
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    scannocp
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    48
+        45
 
 
     
@@ -248,45 +216,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    GB Pinyin
+    
+        CP 850 Western European: no case, preference
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    gbpinyin
+    
+        altnocsp
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    n/a
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    Binary sort
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    binary
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    50
+        46
 
 
     
@@ -294,45 +239,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    Latin-1 English, French, German dictionary
+    
+        CP 850 Scandinavian dictionary
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    dict
+    
+        scandict
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    51
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    Latin-1 English, French, German no case
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    nocase
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    52
+        47
 
 
     
@@ -340,45 +262,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    Latin-1 English, French, German no case, preference
+    
+        CP 850 Scandinavian: no case, preference
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    nocasep
+    
+        scannocp
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    53
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    Latin-1 English, French, German no accent
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    noaccent
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    54
+        48
 
 
     
@@ -386,45 +285,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    Latin-1 Spanish dictionary
+    
+        GB Pinyin
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    espdict
+    
+        gbpinyin
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    55
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    Latin-1 Spanish no case
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    espnocs
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    56
+        n/a
 
 
     
@@ -432,45 +308,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    Latin-1 Spanish no accent
+    
+        Binary sort
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    espnoac
+    
+        binary
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    57
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    ISO 8859-5 Russian dictionary
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    rusdict
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    58
+        50
 
 
     
@@ -478,45 +331,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    ISO 8859-5 Russian no case
+    
+        Latin-1 English, French, German dictionary
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    rusnocs
+    
+        dict
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    59
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    ISO 8859-5 Cyrillic dictionary
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    cyrdict
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    63
+        51
 
 
     
@@ -524,45 +354,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    ISO 8859-5 Cyrillic no case
+    
+        Latin-1 English, French, German no case
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    cyrnocs
+    
+        nocase
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    64
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    ISO 8859-7 Greek dictionary
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    elldict
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    65
+        52
 
 
     
@@ -570,45 +377,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    ISO 8859-2 Hungarian dictionary
+    
+        Latin-1 English, French, German no case, preference
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    hundict
+    
+        nocasep
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    69
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    ISO 8859-2 Hungarian no accents
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    hunnoac
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    70
+        53
 
 
     
@@ -616,45 +400,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    ISO 8859-2 Hungarian no case
+    
+        Latin-1 English, French, German no accent
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    hunnocs
+    
+        noaccent
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    71
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    ISO 8859-5 Turkish dictionary
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    turdict
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    72
+        54
 
 
     
@@ -662,45 +423,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    ISO 8859-5 Turkish no accents
+    
+        Latin-1 Spanish dictionary
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    turnoac
+    
+        espdict
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    73
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    ISO 8859-5 Turkish no case
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    turnocs
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    74
+        55
 
 
     
@@ -708,45 +446,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    CP 874 \(TIS 620\) Royal Thai dictionary
+    
+        Latin-1 Spanish no case
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    thaidict
+    
+        espnocs
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    1
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    ISO 14651 ordering standard
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    14651
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    22
+        56
 
 
     
@@ -754,45 +469,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    Shift-JIS binary order
+    
+        Latin-1 Spanish no accent
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    sjisbin
+    
+        espnoac
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    179
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    Unicode UTF-8 binary sort
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    utf8bin
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    24
+        57
 
 
     
@@ -800,45 +492,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    EUC JIS binary order
+    
+        ISO 8859-5 Russian dictionary
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    eucjisbn
+    
+        rusdict
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    192
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    GB2312 binary order
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    gb2312bn
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    137
+        58
 
 
     
@@ -846,45 +515,22 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    CP932 MS binary order
+    
+        ISO 8859-5 Russian no case
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    cp932bin
+    
+        rusnocs
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    129
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-
-    Big5 binary order
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    big5bin
-
-
-    
-    </td>
-    <td valign="top" rowspan="1">
-
-    194
+        59
 
 
     
@@ -892,22 +538,413 @@ Valid collations are as follows:
     </tr>
     <tr>
     <td valign="top" rowspan="1">
-
-    EUC KSC binary order
+    
+        ISO 8859-5 Cyrillic dictionary
 
 
     
     </td>
     <td valign="top" rowspan="1">
-
-    euckscbn
+    
+        cyrdict
 
 
     
     </td>
     <td valign="top" rowspan="1">
+    
+        63
 
-    161
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        ISO 8859-5 Cyrillic no case
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        cyrnocs
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        64
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        ISO 8859-7 Greek dictionary
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        elldict
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        65
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        ISO 8859-2 Hungarian dictionary
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        hundict
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        69
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        ISO 8859-2 Hungarian no accents
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        hunnoac
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        70
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        ISO 8859-2 Hungarian no case
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        hunnocs
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        71
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        ISO 8859-5 Turkish dictionary
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        turdict
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        72
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        ISO 8859-5 Turkish no accents
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        turnoac
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        73
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        ISO 8859-5 Turkish no case
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        turnocs
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        74
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        CP 874 \(TIS 620\) Royal Thai dictionary
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        thaidict
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        1
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        ISO 14651 ordering standard
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        14651
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        22
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        Shift-JIS binary order
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        sjisbin
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        179
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        Unicode UTF-8 binary sort
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        utf8bin
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        24
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        EUC JIS binary order
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        eucjisbn
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        192
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        GB2312 binary order
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        gb2312bn
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        137
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        CP932 MS binary order
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        cp932bin
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        129
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        Big5 binary order
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        big5bin
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        194
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="1">
+    
+        EUC KSC binary order
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        euckscbn
+
+
+    
+    </td>
+    <td valign="top" rowspan="1">
+    
+        161
 
 
     
@@ -968,5 +1005,5 @@ SELECT Surname, GivenName FROM Employees ORDER BY SORTKEY( Surname, 'dict' );
 **Related Information**  
 
 
-[SORTKEY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/66b441998f6b490ca54f8314748c9331.html "Generates values that can be used to sort character strings based on alternate collation rules.") :arrow_upper_right:
+[SORTKEY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/66b441998f6b490ca54f8314748c9331.html "Generates values that can be used to sort character strings based on alternate collation rules.") :arrow_upper_right:
 

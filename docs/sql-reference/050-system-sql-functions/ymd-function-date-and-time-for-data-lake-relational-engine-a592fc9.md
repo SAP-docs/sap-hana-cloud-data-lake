@@ -16,16 +16,45 @@ YMD ( <integer-expression1>, <integer-expression2>, <integer-expression3> )
 
 ## Parameters
 
- *<integer-expression1\>*
- :   The year.
 
-  *<integer-expression2\>*
- :   The number of the month. If the month is outside the range 1–12, the year is adjusted accordingly.
+<dl>
+<dt><b>
 
-  *<integer-expression3\>*
- :   The day number. The day is allowed to be any integer, the date is adjusted accordingly.
+*<integer-expression1\>*
 
- 
+</b></dt>
+<dd>
+
+The year.
+
+
+
+</dd><dt><b>
+
+*<integer-expression2\>*
+
+</b></dt>
+<dd>
+
+The number of the month. If the month is outside the range 1–12, the year is adjusted accordingly.
+
+
+
+</dd><dt><b>
+
+*<integer-expression3\>*
+
+</b></dt>
+<dd>
+
+The day number. The day is allowed to be any integer, the date is adjusted accordingly.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa592fc9184f21015bfa68c6078363fae__YMD_returns1"/>
 
@@ -76,5 +105,5 @@ DATE
 **Related Information**  
 
 
-[YMD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/0cf8ed274a1d4591baedd1691a352a48.html "Returns a date value corresponding to the given year, month, and day of the month.") :arrow_upper_right:
+[YMD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/0cf8ed274a1d4591baedd1691a352a48.html "Returns a date value corresponding to the given year, month, and day of the month.") :arrow_upper_right:
 

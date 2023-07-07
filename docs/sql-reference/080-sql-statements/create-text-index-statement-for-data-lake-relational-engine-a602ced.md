@@ -6,11 +6,6 @@ Creates a TEXT index and specifies the text configuration object to use.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -20,12 +15,15 @@ Creates a TEXT index and specifies the text configuration object to use.
 
 ```
 CREATE TEXT INDEX <text-index-name>
-   ON [ { [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname] }]<table-name>( <column-name>,
+   ON [ { <owner> | <schema-name> }]<table-name>( <column-name>,
    [ CONFIGURATION [ <owner>]<text-configuration-name>]
    [ IMMEDIATE REFRESH ]
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -33,16 +31,45 @@ CREATE TEXT INDEX <text-index-name>
 
 ## Parameters
 
- ON
- :   Specifies the table and column on which to build the TEXT index.
 
-  CONFIGURATION
- :   Specifies the text configuration object to use when creating the TEXT index. If this clause is not specified, the default\_char text configuration object is used.
+<dl>
+<dt><b>
 
-  IMMEDIATE REFRESH
- :   \(Default\) refreshes the TEXT index each time changes in the underlying table impact data in the TEXT index. Only permitted value for tables in data lake Relational Engine main store. Once created, the IMMEDIATE REFRESH clause cannot be changed.
+ON
 
- 
+</b></dt>
+<dd>
+
+Specifies the table and column on which to build the TEXT index.
+
+
+
+</dd><dt><b>
+
+CONFIGURATION
+
+</b></dt>
+<dd>
+
+Specifies the text configuration object to use when creating the TEXT index. If this clause is not specified, the default\_char text configuration object is used.
+
+
+
+</dd><dt><b>
+
+IMMEDIATE REFRESH
+
+</b></dt>
+<dd>
+
+\(Default\) refreshes the TEXT index each time changes in the underlying table impact data in the TEXT index. Only permitted value for tables in data lake Relational Engine main store. Once created, the IMMEDIATE REFRESH clause cannot be changed.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa602ced184f210158c90b4b833754412__IQ_Usage"/>
 

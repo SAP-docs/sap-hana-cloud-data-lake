@@ -6,11 +6,6 @@ Declares a cursor. Cursors are the primary means for manipulating the results of
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -31,96 +26,167 @@ DECLARE <cursor-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa61ac0bc84f21015aa8bc3dddd3b73d4__IQ_Parameters"/>
 
 ## Parameters
 
- *<statement-name\>*
- :   Identifier or host-variable. Statements are named using the `PREPARE` statement. Cursors can be declared only for a prepared `SELECT` or `CALL`.
 
-  SCROLL
- :   A cursor declared as SCROLL supports the NEXT, PRIOR, FIRST, LAST, ABSOLUTE, and RELATIVE options of the `FETCH` statement. A SCROLL cursor lets you fetch an arbitrary row in the result set while the cursor is open.
+<dl>
+<dt><b>
 
-  NO SCROLL
- :   A cursor declared as NO SCROLL is restricted to moving forward through the result set using only the `FETCH NEXT` and `FETCH ABSOLUTE (0)` seek operations.
+*<statement-name\>*
 
-  DYNAMIC SCROLL
- :   A cursor declared as DYNAMIC SCROLL supports the NEXT, PRIOR, FIRST, LAST, ABSOLUTE, and RELATIVE clauses of the `FETCH` statement. A DYNAMIC SCROLL cursor lets you fetch an arbitrary row in the result set while the cursor is open.
+</b></dt>
+<dd>
 
-    Since rows cannot be returned to once the cursor leaves the row, there are no sensitivity restrictions on the cursor. Consequently, when a NO SCROLL cursor is requested, data lake Relational Engine supplies the most efficient kind of cursor, which is an asensitive cursor.
+Identifier or host-variable. Statements are named using the `PREPARE` statement. Cursors can be declared only for a prepared `SELECT` or `CALL`.
 
-  READ ONLY
- :   \(Default\) A cursor declared FOR READ ONLY may not be used in a positioned `UPDATE` or a positioned `DELETE` operation.
 
- :   A cursor declared FOR READ ONLY sees the version of table\(s\) on which the cursor is declared when the cursor is opened, not the version of table\(s\) at the time of the first `FETCH`.
 
-    For example, when the cursor is fetched, only one row can be fetched from the table:
+</dd><dt><b>
 
-    ```
-    CREATE TABLE t1 ( c1 INT );
-    INSERT t1 VALUES ( 1 );
-    
-    BEGIN
-    DECLARE t1_cursor CURSOR FOR SELECT * FROM t1
-    FOR READ ONLY;
-    OPEN t1_cursor;
-    INSERT t1 VALUES ( 2 );
-    FETCH T1_CURSOR;
-    END
-    ```
+SCROLL
 
-  UPDATE
- :   You can update the cursor result set of a cursor declared FOR UPDATE. Only asensitive behavior is supported for updatable cursors; any other sensitivity is ignored.
+</b></dt>
+<dd>
 
-    When the cursor is opened, exclusive table locks are taken on all tables that are opened for update. Standalone `LOAD TABLE`, `UPDATE`, `INSERT`, `DELETE`, and `TRUNCATE` statements are not allowed on tables that are opened for update in the same transaction, since data lake Relational Engine permits only one statement to modify a table at a time. You can open only one updatable cursor on a specific table at a time.
+A cursor declared as SCROLL supports the NEXT, PRIOR, FIRST, LAST, ABSOLUTE, and RELATIVE options of the `FETCH` statement. A SCROLL cursor lets you fetch an arbitrary row in the result set while the cursor is open.
 
-    Updatable cursors are allowed to scroll, except over Open Client.
 
-  USING
- :   You can declare a cursor on a variable in stored procedures and user-defined functions. The variable is a string containing a `SELECT` statement for the cursor. The variable must be available when the `DECLARE` is processed, and so must be one of the following:
 
-    ```
-    create function get_row_count(in qry varchar)
-    returns int
-    begin
-        declare crsr cursor using qry;
-        declare rowcnt int;
-    
-        set rowcnt = 0;
-        open crsr;
-        lp: loop
-            fetch crsr;
-            if SQLCODE <> 0 then leave lp end if;
-            set rowcnt = rowcnt + 1;
-        end loop;
-        return rowcnt;
-    end
-    ```
+</dd><dt><b>
 
-    A parameter to the procedure. For example:
+NO SCROLL
 
-    Nested inside another `BEGIN…END` after the variable has been assigned a value. For example:
+</b></dt>
+<dd>
 
-    ```
-    create procedure get_table_name(
-      in id_value int, out tabname char(128))
-    
-    begin
-      declare qry varchar;
-    
-      set qry = 'select table_name from SYS.ISYSTAB ' ||
-            'where table_id=' || string(id_value);
-      begin
-        declare crsr cursor using qry;
-    
-        open crsr;
-        fetch crsr into tabname;
-        close crsr;
-     end
-    end
-    ```
+A cursor declared as NO SCROLL is restricted to moving forward through the result set using only the `FETCH NEXT` and `FETCH ABSOLUTE (0)` seek operations.
 
- 
+
+
+</dd><dt><b>
+
+DYNAMIC SCROLL
+
+</b></dt>
+<dd>
+
+A cursor declared as DYNAMIC SCROLL supports the NEXT, PRIOR, FIRST, LAST, ABSOLUTE, and RELATIVE clauses of the `FETCH` statement. A DYNAMIC SCROLL cursor lets you fetch an arbitrary row in the result set while the cursor is open.
+
+Since rows cannot be returned to once the cursor leaves the row, there are no sensitivity restrictions on the cursor. Consequently, when a NO SCROLL cursor is requested, data lake Relational Engine supplies the most efficient kind of cursor, which is an asensitive cursor.
+
+
+
+</dd><dt><b>
+
+READ ONLY
+
+</b></dt>
+<dd>
+
+\(Default\) A cursor declared FOR READ ONLY may not be used in a positioned `UPDATE` or a positioned `DELETE` operation.
+
+
+
+</dd>
+<dd>
+
+A cursor declared FOR READ ONLY sees the version of table\(s\) on which the cursor is declared when the cursor is opened, not the version of table\(s\) at the time of the first `FETCH`.
+
+For example, when the cursor is fetched, only one row can be fetched from the table:
+
+```
+CREATE TABLE t1 ( c1 INT );
+INSERT t1 VALUES ( 1 );
+
+BEGIN
+DECLARE t1_cursor CURSOR FOR SELECT * FROM t1
+FOR READ ONLY;
+OPEN t1_cursor;
+INSERT t1 VALUES ( 2 );
+FETCH T1_CURSOR;
+END
+```
+
+
+
+</dd><dt><b>
+
+UPDATE
+
+</b></dt>
+<dd>
+
+You can update the cursor result set of a cursor declared FOR UPDATE. Only asensitive behavior is supported for updatable cursors; any other sensitivity is ignored.
+
+When the cursor is opened, exclusive table locks are taken on all tables that are opened for update. Standalone `LOAD TABLE`, `UPDATE`, `INSERT`, `DELETE`, and `TRUNCATE` statements are not allowed on tables that are opened for update in the same transaction, since data lake Relational Engine permits only one statement to modify a table at a time. You can open only one updatable cursor on a specific table at a time.
+
+Updatable cursors are allowed to scroll, except over Open Client.
+
+
+
+</dd><dt><b>
+
+USING
+
+</b></dt>
+<dd>
+
+You can declare a cursor on a variable in stored procedures and user-defined functions. The variable is a string containing a `SELECT` statement for the cursor. The variable must be available when the `DECLARE` is processed, and so must be one of the following:
+
+```
+create function get_row_count(in qry varchar)
+returns int
+begin
+    declare crsr cursor using qry;
+    declare rowcnt int;
+
+    set rowcnt = 0;
+    open crsr;
+    lp: loop
+        fetch crsr;
+        if SQLCODE <> 0 then leave lp end if;
+        set rowcnt = rowcnt + 1;
+    end loop;
+    return rowcnt;
+end
+```
+
+A parameter to the procedure. For example:
+
+Nested inside another `BEGIN…END` after the variable has been assigned a value. For example:
+
+```
+create procedure get_table_name(
+  in id_value int, out tabname char(128))
+
+begin
+  declare qry varchar;
+
+  set qry = 'select table_name from SYS.ISYSTAB ' ||
+        'where table_id=' || string(id_value);
+  begin
+    declare crsr cursor using qry;
+
+    open crsr;
+    fetch crsr into tabname;
+    close crsr;
+ end
+end
+```
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61ac0bc84f21015aa8bc3dddd3b73d4__IQ_Usage"/>
 

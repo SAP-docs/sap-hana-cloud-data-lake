@@ -6,11 +6,6 @@ Starts a cache monitor that collects buffer cache statistics.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -41,312 +36,370 @@ IQ UTILITIES { MAIN | PRIVATE }
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa6203ded84f21015bc44c8462220d329__IQ_Parameters"/>
 
 ## Parameters
 
- START MONITOR
- :   Starts the data lake Relational Engine buffer cache monitor.
 
-  MAIN
- :   Monitors all tables in the main buffer cache of the data lake Relational Engine store.
+<dl>
+<dt><b>
 
-  PRIVATE
- :   Monitors all tables in the temp buffer cache of the temporary store.
+START MONITOR
 
-  *<dummy\_table\_name\>*
- :   Can be any data lake Relational Engine base or temporary table. The table name is required for syntactic compatibility with other IQ UTILITIES commands. It is best to have a table that you use only for monitoring.
+</b></dt>
+<dd>
 
-  monitor\_options *<options\>*
- :   Controls buffer cache monitor output. You can specify more than one, and they must be enclosed with quotation marks. Valid *<options\>* are:
+Starts the data lake Relational Engine buffer cache monitor.
 
 
-    <table>
-    <tr>
-    <th valign="top">
 
-    Option Name
+</dd><dt><b>
 
+MAIN
 
-    
-    </th>
-    <th valign="top">
+</b></dt>
+<dd>
 
-    Description
+Monitors all tables in the main buffer cache of the data lake Relational Engine store.
 
 
-    
-    </th>
-    <th valign="top">
 
-    Usage
+</dd><dt><b>
 
+PRIVATE
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
+</b></dt>
+<dd>
 
-    `-summary`
+Monitors all tables in the temp buffer cache of the temporary store.
 
 
-    
-    </td>
-    <td valign="top">
 
-    Displays summary information for both the main and temp buffer caches. If you do not specify any monitor options, you receive a summary report.
+</dd><dt><b>
 
+*<dummy\_table\_name\>*
 
-    
-    </td>
-    <td valign="top">
+</b></dt>
+<dd>
 
-    monitor\_options -summary
+Can be any data lake Relational Engine base or temporary table. The table name is required for syntactic compatibility with other IQ UTILITIES commands. It is best to have a table that you use only for monitoring.
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    `-cache`
+</dd><dt><b>
 
+monitor\_options *<options\>*
 
-    
-    </td>
-    <td valign="top">
+</b></dt>
+<dd>
 
-    Displays main or temp buffer cache activity in detail. Critical fields are ***Finds***, ***HR%***, and ***BWaits***.
+Controls buffer cache monitor output. You can specify more than one, and they must be enclosed with quotation marks. Valid *<options\>* are:
 
 
-    
-    </td>
-    <td valign="top">
+<table>
+<tr>
+<th valign="top">
 
-    monitor\_options -cache
+Option Name
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    `-cache_by_type`
+</th>
+<th valign="top">
 
+Description
 
-    
-    </td>
-    <td valign="top">
 
-    Breaks `-cache` results down by data lake Relational Engine page type. \(An exception is the ***Bwaits*** column, which shows a total only.\) This format is most useful when you need to supply information to Technical Support.
 
+</th>
+<th valign="top">
 
-    
-    </td>
-    <td valign="top">
+Usage
 
-    monitor\_options -cache\_by\_type
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+</th>
+</tr>
+<tr>
+<td valign="top">
 
-    `-file_suffix`
+`-summary`
 
 
-    
-    </td>
-    <td valign="top">
 
-    Creates a monitor output file named <code><i class="varname">&lt;dbname&gt;</i>.<i class="varname">&lt;connid&gt;</i>-<i class="varname">&lt;main_or_temp&gt;</i>-<i class="varname">&lt;suffix&gt;</i></code>. If you do not specify an optional file extension, the file extension defaults to `.iqmon`.
+</td>
+<td valign="top">
 
+Displays summary information for both the main and temp buffer caches. If you do not specify any monitor options, you receive a summary report.
 
-    
-    </td>
-    <td valign="top">
 
-    monitor\_options -file\_suffix \{extension\}
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+monitor\_options -summary
 
-    `-io`
 
 
-    
-    </td>
-    <td valign="top">
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    Displays main or temp \(private\) buffer cache I/O rates and compression ratios during the specified interval. These counters represent all activity for the server; the information is not broken out by device.
+`-cache`
 
 
-    
-    </td>
-    <td valign="top">
 
-    monitor\_options -io
+</td>
+<td valign="top">
 
+Displays main or temp buffer cache activity in detail. Critical fields are ***Finds***, ***HR%***, and ***BWaits***.
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    `-bufalloc`
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
+monitor\_options -cache
 
-    Displays information on the main or temp buffer allocator, which reserves space in the buffer cache for objects like sorts, hashes, and bitmaps.
 
 
-    
-    </td>
-    <td valign="top">
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    monitor\_options -bufalloc
+`-cache_by_type`
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    `-contention`
+</td>
+<td valign="top">
 
+Breaks `-cache` results down by data lake Relational Engine page type. \(An exception is the ***Bwaits*** column, which shows a total only.\) This format is most useful when you need to supply information to Technical Support.
 
-    
-    </td>
-    <td valign="top">
 
-    Displays many key buffer cache and memory manager locks. These lock and mutex counters show the activity within the buffer cache and heap memory and how quickly these locks were resolved. Timeout numbers that exceed 20 percent indicate a problem.
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
+monitor\_options -cache\_by\_type
 
-    monitor\_options -contention
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    `-threads`
+`-file_suffix`
 
 
-    
-    </td>
-    <td valign="top">
 
-    Displays the processing thread manager counts. Values are server-wide \(it does not matter whether you select this option for main or private\).
+</td>
+<td valign="top">
 
+Creates a monitor output file named <code><i class="varname">&lt;dbname&gt;</i>.<i class="varname">&lt;connid&gt;</i>-<i class="varname">&lt;main_or_temp&gt;</i>-<i class="varname">&lt;suffix&gt;</i></code>. If you do not specify an optional file extension, the file extension defaults to `.iqmon`.
 
-    
-    </td>
-    <td valign="top">
 
-    monitor\_options -threads
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+monitor\_options -file\_suffix \{extension\}
 
-     `-interval` 
 
 
-    
-    </td>
-    <td valign="top">
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    Specifies the reporting interval in seconds. The default is every 60 seconds. The minimum is every 2 seconds. You can usually get useful results by running the monitor at the default interval during a query or time of day with performance problems. Short intervals may not give meaningful results. Intervals should be proportional to the job time; one minute is generally more than enough.
+`-io`
 
 
-    
-    </td>
-    <td valign="top">
 
-    monitor\_options -interval
+</td>
+<td valign="top">
 
+Displays main or temp \(private\) buffer cache I/O rates and compression ratios during the specified interval. These counters represent all activity for the server; the information is not broken out by device.
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    `-append | -truncate`
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
+monitor\_options -io
 
-    Appends or truncates output to existing output file. Truncate is the default.
 
 
-    
-    </td>
-    <td valign="top">
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    monitor\_options -append and `monitor_options -truncate`
+`-bufalloc`
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    `-debug`
+</td>
+<td valign="top">
 
+Displays information on the main or temp buffer allocator, which reserves space in the buffer cache for objects like sorts, hashes, and bitmaps.
 
-    
-    </td>
-    <td valign="top">
 
-    Displays all information available to the performance monitor, whether or not there is a standard display mode that covers the same information. -debug is used mainly to supply information to Technical Support.
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
+monitor\_options -bufalloc
 
-    monitor\_options -debug
 
 
-    
-    </td>
-    </tr>
-    </table>
-    
-  STOP MONITOR
- :   Similar to START MONITOR, except that you do not need to specify any options:
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    -   To simplify monitor use, create a stored procedure to declare the dummy table, specify its output location, and start the monitor.
-    -   The interval, with two exceptions, applies to each line of output, not to each page. The exceptions are the -cache\_by\_type and -debug clauses, where a new page begins for each display.
+`-contention`
 
- 
+
+
+</td>
+<td valign="top">
+
+Displays many key buffer cache and memory manager locks. These lock and mutex counters show the activity within the buffer cache and heap memory and how quickly these locks were resolved. Timeout numbers that exceed 20 percent indicate a problem.
+
+
+
+</td>
+<td valign="top">
+
+monitor\_options -contention
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`-threads`
+
+
+
+</td>
+<td valign="top">
+
+Displays the processing thread manager counts. Values are server-wide \(it does not matter whether you select this option for main or private\).
+
+
+
+</td>
+<td valign="top">
+
+monitor\_options -threads
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ `-interval` 
+
+
+
+</td>
+<td valign="top">
+
+Specifies the reporting interval in seconds. The default is every 60 seconds. The minimum is every 2 seconds. You can usually get useful results by running the monitor at the default interval during a query or time of day with performance problems. Short intervals may not give meaningful results. Intervals should be proportional to the job time; one minute is generally more than enough.
+
+
+
+</td>
+<td valign="top">
+
+monitor\_options -interval
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`-append | -truncate`
+
+
+
+</td>
+<td valign="top">
+
+Appends or truncates output to existing output file. Truncate is the default.
+
+
+
+</td>
+<td valign="top">
+
+monitor\_options -append and `monitor_options -truncate`
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+`-debug`
+
+
+
+</td>
+<td valign="top">
+
+Displays all information available to the performance monitor, whether or not there is a standard display mode that covers the same information. -debug is used mainly to supply information to Technical Support.
+
+
+
+</td>
+<td valign="top">
+
+monitor\_options -debug
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+</dd><dt><b>
+
+STOP MONITOR
+
+</b></dt>
+<dd>
+
+Similar to START MONITOR, except that you do not need to specify any options:
+
+-   To simplify monitor use, create a stored procedure to declare the dummy table, specify its output location, and start the monitor.
+-   The interval, with two exceptions, applies to each line of output, not to each page. The exceptions are the -cache\_by\_type and -debug clauses, where a new page begins for each display.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa6203ded84f21015bc44c8462220d329__IQ_Usage"/>
 
@@ -401,9 +454,4 @@ The following example starts the buffer cache monitor and record activity for th
 ```
 IQ UTILITIES PRIVATE INTO monitor START MONITOR '-cache -interval 20'
 ```
-
-**Related Information**  
-
-
-
 

@@ -6,11 +6,6 @@ Reads Interactive SQL \(`dbisql`\) statements from a file.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,40 +19,74 @@ READ [ ENCODING <encoding> ] <filename> [ <parameter> ] …
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa622ae5f84f21015bc6ddcb8796e03c9__IQ_Parameters"/>
 
 ## Parameters
 
- ENCODING
- :   An identifier or string that specifies encoding that is used to read the file.
 
-    The `READ` statement does not process escape characters when it reads a file. It assumes that the entire file is in the specified encoding. When running Interactive SQL, the encoding that is used to read the data is determined in the following order:
+<dl>
+<dt><b>
 
-    1.  The encoding specified by the ENCODING clause, if used.
-    2.  The encoding specified by the byte order mark \(BOM\) in the file, if used.
-    3.  The encoding specified with the default\_isql\_encoding option, if used.
-    4.  The default encoding for the platform you are running on.
+ENCODING
 
-  *<filename\>*
- :   If *<filename\>* has no file extension, Interactive SQL searches for the same file name with the extension `.sql`.
+</b></dt>
+<dd>
 
-    If *<filename\>* does not contain an absolute path, Interactive SQL searches for the file. The location of *<filename\>* is based on the location of the READ statement, as follows:
+An identifier or string that specifies encoding that is used to read the file.
 
-    -   If the READ statement is executed directly in Interactive SQL, Interactive SQL first attempts to resolve the path to *<filename\>* relative to the directory in which Interactive SQL is running. If unsuccessful, Interactive SQL looks for *<filename\>* in the directories specified in the environment variable SQLPATH, then the directories specified in the environment variable PATH.
-    -   If the READ statements reside in an external file \(for example, a `.sql` file\), Interactive SQL first attempts to resolve the path to *<filename\>* relative to the location of the external file. If unsuccessful, Interactive SQL looks for *<filename\>* in a path relative to the directory in which Interactive SQL is running. If still unsuccessful, Interactive SQL looks in the directories specified in the environment variable SQLPATH, then the directories specified in the environment variable PATH.
+The `READ` statement does not process escape characters when it reads a file. It assumes that the entire file is in the specified encoding. When running Interactive SQL, the encoding that is used to read the data is determined in the following order:
 
-  *<parameter\>*
- :   Can be listed after the name of the SQL script file, and correspond to the parameters named in the PARAMETERS statement at the beginning of the statement file.
+1.  The encoding specified by the ENCODING clause, if used.
+2.  The encoding specified by the byte order mark \(BOM\) in the file, if used.
+3.  The encoding specified with the default\_isql\_encoding option, if used.
+4.  The default encoding for the platform you are running on.
 
-    Parameter names must be enclosed in square brackets. Interactive SQL substitutes the corresponding parameter wherever the source file contains <code>{ <i class="varname">&lt;parameter-name&gt;</i> }</code>.
 
-    The parameters passed to a script file can be identifiers, numbers, quoted identifiers, or strings. Any quotes around a parameter are placed into the text during the substitution. Parameters that are not identifiers, numbers, or strings \(contain spaces or tabs\) must be enclosed in square brackets \(\[ \]\). This allows for arbitrary textual substitution in the script file.
 
-    If not enough parameters are passed to the script file, Interactive SQL prompts for values for the missing parameters.
+</dd><dt><b>
 
-    When executing a `reload.sql` file with Interactive SQL, you must specify the encryption key as a parameter. If you do not provide the key in the READ statement, Interactive SQL prompts for the key.
+*<filename\>*
 
- 
+</b></dt>
+<dd>
+
+If *<filename\>* has no file extension, Interactive SQL searches for the same file name with the extension `.sql`.
+
+If *<filename\>* does not contain an absolute path, Interactive SQL searches for the file. The location of *<filename\>* is based on the location of the READ statement, as follows:
+
+-   If the READ statement is executed directly in Interactive SQL, Interactive SQL first attempts to resolve the path to *<filename\>* relative to the directory in which Interactive SQL is running. If unsuccessful, Interactive SQL looks for *<filename\>* in the directories specified in the environment variable SQLPATH, then the directories specified in the environment variable PATH.
+-   If the READ statements reside in an external file \(for example, a `.sql` file\), Interactive SQL first attempts to resolve the path to *<filename\>* relative to the location of the external file. If unsuccessful, Interactive SQL looks for *<filename\>* in a path relative to the directory in which Interactive SQL is running. If still unsuccessful, Interactive SQL looks in the directories specified in the environment variable SQLPATH, then the directories specified in the environment variable PATH.
+
+
+
+</dd><dt><b>
+
+*<parameter\>*
+
+</b></dt>
+<dd>
+
+Can be listed after the name of the SQL script file, and correspond to the parameters named in the PARAMETERS statement at the beginning of the statement file.
+
+Parameter names must be enclosed in square brackets. Interactive SQL substitutes the corresponding parameter wherever the source file contains <code>{ <i class="varname">&lt;parameter-name&gt;</i> }</code>.
+
+The parameters passed to a script file can be identifiers, numbers, quoted identifiers, or strings. Any quotes around a parameter are placed into the text during the substitution. Parameters that are not identifiers, numbers, or strings \(contain spaces or tabs\) must be enclosed in square brackets \(\[ \]\). This allows for arbitrary textual substitution in the script file.
+
+If not enough parameters are passed to the script file, Interactive SQL prompts for values for the missing parameters.
+
+When executing a `reload.sql` file with Interactive SQL, you must specify the encryption key as a parameter. If you do not provide the key in the READ statement, Interactive SQL prompts for the key.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa622ae5f84f21015bc6ddcb8796e03c9__IQ_Permissions"/>
 

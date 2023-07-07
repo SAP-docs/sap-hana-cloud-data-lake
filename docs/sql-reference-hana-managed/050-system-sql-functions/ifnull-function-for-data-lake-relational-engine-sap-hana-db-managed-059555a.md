@@ -16,16 +16,45 @@ IFNULL ( <expression1>, <expression2> [ , <expression3> ] )
 
 ## Parameters
 
- *<expression1\>*
- :   The expression to be evaluated. Its value determines whether *<expression2\>* or *<expression3\>* is returned.
 
-  *<expression2\>*
- :   The return value if *<expression1\>* is NULL
+<dl>
+<dt><b>
 
-  *<expression3\>*
- :   \(Optional\) The return value if *<expression1\>* is not NULL.
+*<expression1\>*
 
- 
+</b></dt>
+<dd>
+
+The expression to be evaluated. Its value determines whether *<expression2\>* or *<expression3\>* is returned.
+
+
+
+</dd><dt><b>
+
+*<expression2\>*
+
+</b></dt>
+<dd>
+
+The return value if *<expression1\>* is NULL
+
+
+
+</dd><dt><b>
+
+*<expression3\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) The return value if *<expression1\>* is not NULL.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio059555a4b6fd4824851aa1d544d77a10__section_ibx_jph_trb"/>
 

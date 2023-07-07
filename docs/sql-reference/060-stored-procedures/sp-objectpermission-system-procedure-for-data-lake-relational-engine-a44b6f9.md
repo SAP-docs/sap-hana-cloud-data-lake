@@ -24,25 +24,54 @@ sp_objectpermission (
 
 ## Parameters
 
- *<object\_name\>*
- :   The name of an object,schema, user, or role. If not specified, object privileges of the current user are reported. Default value is NULL.
 
-  *<object\_owner\>*
- :   The name of the object owner for the specified object name. The object privileges of the specified object owned by the specified object owner are displayed. This parameter must be specified to obtain the object privileges of an object owned by another user or role. Default value is NULL.
+<dl>
+<dt><b>
 
-  *<object\_type\>*
- :   If no value is specified, privileges on all object types are returned. Default value is NULL. Valid values are:
+*<object\_name\>*
 
-    -   FUNCTION
-    -   MATERIALIZED VIEW
-    -   PROCEDURE
-    -   SCHEMA
-    -   SEQUENCE
-    -   TABLE – column-level object privileges also appear.
-    -   USER
-    -   VIEW
+</b></dt>
+<dd>
 
- 
+The name of an object,schema, user, or role. If not specified, object privileges of the current user are reported. Default value is NULL.
+
+
+
+</dd><dt><b>
+
+*<object\_owner\>*
+
+</b></dt>
+<dd>
+
+The name of the object owner for the specified object name. The object privileges of the specified object owned by the specified object owner are displayed. This parameter must be specified to obtain the object privileges of an object owned by another user or role. Default value is NULL.
+
+
+
+</dd><dt><b>
+
+*<object\_type\>*
+
+</b></dt>
+<dd>
+
+If no value is specified, privileges on all object types are returned. Default value is NULL. Valid values are:
+
+-   FUNCTION
+-   MATERIALIZED VIEW
+-   PROCEDURE
+-   SCHEMA
+-   SEQUENCE
+-   TABLE – column-level object privileges also appear.
+-   USER
+-   VIEW
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa44b6f9284f21015ab3cd665b7588080__section_hfb_cpr_mbb"/>
 
@@ -275,16 +304,14 @@ All arguments are optional and can generate these reports:
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). Additional privileges may be needed obtain object-level privilege information as follows:
+Requires EXECUTE object-level privilege on the procedure. No addition privilege is required to see self-owned objects.
 
--   To see object-level privileges granted to self-owned objects requires no additional privileges.
--   To see object-level privileges granted to other users or granted on objects owned by other users requires:
-    -   MANAGE ANY OBJECT PRIVILEGE system privilege
+To see object-level privileges granted to other users or on objects owned by other users, also requires the MANAGE ANY OBJECT PRIVILEGE system privilege.
 
--   To see object-level privileges that are granted on objects owned by a role or granted to a role requires one of:
-    -   MANAGE ANY OBJECT PRIVILEGE system privilege
-    -   You are a role administrator on the role
+To see object-level privileges granted on objects owned by a role or granted to a role also requires one of the following:
 
+-   You are a role administrator on the role
+-   MANAGE ANY OBJECT PRIVILEGE system privilege
 
 
 

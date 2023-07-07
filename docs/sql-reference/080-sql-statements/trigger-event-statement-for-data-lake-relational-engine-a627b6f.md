@@ -6,11 +6,6 @@ Triggers a named event. The event may be defined for event triggers or be a sche
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -21,6 +16,11 @@ Triggers a named event. The event may be defined for event triggers or be a sche
 ```
 TRIGGER EVENT <event-name> [ ( <parm> = <value>, ... ) ]
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 

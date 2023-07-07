@@ -336,9 +336,9 @@ If the user is authenticated using LDAP User Authentication, the output includes
 
 ## Privileges
 
-You must have EXECUTE privilege on the system procedure.
+Requires EXECUTE object-level privilege on the procedure.
 
-To view information about other users, you must also have the MANAGE ANY USER system privilege.
+To view information about other users, also requires the MANAGE ANY USER system privilege.
 
 
 

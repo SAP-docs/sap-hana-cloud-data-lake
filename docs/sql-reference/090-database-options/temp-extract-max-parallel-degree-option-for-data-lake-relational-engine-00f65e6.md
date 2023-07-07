@@ -172,7 +172,7 @@ For example syntax, see *Extract Data Lake Relational Engine Table Data to Azure
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[TEMP_EXTRACT_MAX_PARALLEL_DEGREE Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/8b1135ed7e324674bbfaede1484ce890.html "Sets the maximum parallel degree for the data extraction facility. The TEMP_EXTRACT_MAX_PARALLEL_DEGREE option limits the maximum number of threads that run in parallel to extract data.") :arrow_upper_right:
+[TEMP_EXTRACT_MAX_PARALLEL_DEGREE Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/8b1135ed7e324674bbfaede1484ce890.html "Sets the maximum parallel degree for the data extraction facility. The TEMP_EXTRACT_MAX_PARALLEL_DEGREE option limits the maximum number of threads that run in parallel to extract data.") :arrow_upper_right:
 
 [TEMP\_EXTRACT\_FILE\_PREFIX Option for Data Lake Relational Engine](temp-extract-file-prefix-option-for-data-lake-relational-engine-09cd773.md "Sets the prefix of file name for the generated output file of the data parallel extraction facility. thread_ID starts from 1. filecount starts from 1 for each thread ID. Thefilecount part increments when the size of the output file reaches the file size limit specified by the TEMP_EXTRACT_SIZE option.")
 

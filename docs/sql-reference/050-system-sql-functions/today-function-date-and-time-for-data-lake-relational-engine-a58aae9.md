@@ -50,5 +50,5 @@ SELECT TODAY( * ) FROM iq_dummy
 **Related Information**  
 
 
-[TODAY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/1f010045110b4fbfaebefa285ec75b87.html "Returns the current date. This is the historical syntax for CURRENT DATE.") :arrow_upper_right:
+[TODAY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/1f010045110b4fbfaebefa285ec75b87.html "Returns the current date. This is the historical syntax for CURRENT DATE.") :arrow_upper_right:
 

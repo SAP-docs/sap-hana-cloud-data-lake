@@ -178,19 +178,56 @@ TINYINT
 
 The type of index. Values include:
 
- 1
- :   Primary key
 
-  2
- :   Foreign key
+<dl>
+<dt><b>
 
-  3
- :   Secondary index \(includes unique constraints\)
+1
 
-  4
- :   Text indexes
+</b></dt>
+<dd>
 
- 
+Primary key
+
+
+
+</dd><dt><b>
+
+2
+
+</b></dt>
+<dd>
+
+Foreign key
+
+
+
+</dd><dt><b>
+
+3
+
+</b></dt>
+<dd>
+
+Secondary index \(includes unique constraints\)
+
+
+
+</dd><dt><b>
+
+4
+
+</b></dt>
+<dd>
+
+Text indexes
+
+
+
+</dd>
+</dl>
+
+
 
 </td>
 </tr>

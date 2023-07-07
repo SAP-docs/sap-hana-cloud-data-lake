@@ -30,19 +30,56 @@ ORDER BY <ordering expression>)
 
 ## Parameters
 
- *<expression\>*
- :   The expression on which to determine the last value in an ordered set.
 
-  *<window\_spec\>*
- :   Specified when using this function as a window function.
+<dl>
+<dt><b>
 
-  *<input\_expression\>*
- :   Any scalar expression that results to a single column.
+*<expression\>*
 
-  *<ordering\_expression\>*
- :   List of column names.
+</b></dt>
+<dd>
 
- 
+The expression on which to determine the last value in an ordered set.
+
+
+
+</dd><dt><b>
+
+*<window\_spec\>*
+
+</b></dt>
+<dd>
+
+Specified when using this function as a window function.
+
+
+
+</dd><dt><b>
+
+*<input\_expression\>*
+
+</b></dt>
+<dd>
+
+Any scalar expression that results to a single column.
+
+
+
+</dd><dt><b>
+
+*<ordering\_expression\>*
+
+</b></dt>
+<dd>
+
+List of column names.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio8cf5191242464c6bb1965cbb657bdab1__section_ojw_52h_trb"/>
 

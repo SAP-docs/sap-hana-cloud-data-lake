@@ -6,11 +6,6 @@ Groups `CREATE INDEX` statements together for execution at the same time.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -25,14 +20,32 @@ Groups `CREATE INDEX` statements together for execution at the same time.
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa614601884f21015b474d353173fad17__begin_parallel_parameters1"/>
 
 ## Parameters
 
- *<statement-list\>*
- :   A list of `CREATE INDEX` statements
 
- 
+<dl>
+<dt><b>
+
+*<statement-list\>*
+
+</b></dt>
+<dd>
+
+A list of `CREATE INDEX` statements
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa614601884f21015b474d353173fad17__begin_parallel_remarks1"/>
 
@@ -91,7 +104,7 @@ END PARALLEL IQ
 **Related Information**  
 
 
-[BEGIN PARALLEL IQ … END PARALLEL IQ Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/6632c2b487bf49449b7652a9e3bce605.html "Groups CREATE INDEX statements together for execution at the same time.") :arrow_upper_right:
+[BEGIN PARALLEL IQ … END PARALLEL IQ Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/6632c2b487bf49449b7652a9e3bce605.html "Groups CREATE INDEX statements together for execution at the same time.") :arrow_upper_right:
 
 [CREATE INDEX Statement for Data Lake Relational Engine](create-index-statement-for-data-lake-relational-engine-a617ca4.md "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.")
 

@@ -16,16 +16,45 @@ STR ( <numeric-expression> [ , <length>[ , <decimal> ] ] )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   Any approximate numeric \(FLOAT, REAL, or DOUBLE precision\) expression.
 
-  *<length\>*
- :   The number of characters to be returned \(including the decimal point, all digits to the right and left of the decimal point, the sign, if any, and blanks\). The default is 10 and the maximum length is 255.
+<dl>
+<dt><b>
 
-  *<decimal\>*
- :   The number of digits to the right of the decimal point to be returned. The default is 0.
+*<numeric-expression\>*
 
- 
+</b></dt>
+<dd>
+
+Any approximate numeric \(FLOAT, REAL, or DOUBLE precision\) expression.
+
+
+
+</dd><dt><b>
+
+*<length\>*
+
+</b></dt>
+<dd>
+
+The number of characters to be returned \(including the decimal point, all digits to the right and left of the decimal point, the sign, if any, and blanks\). The default is 10 and the maximum length is 255.
+
+
+
+</dd><dt><b>
+
+*<decimal\>*
+
+</b></dt>
+<dd>
+
+The number of digits to the right of the decimal point to be returned. The default is 0.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio6152b1608e3e4c5e898c592f645366b7__section_nbc_yt5_vrb"/>
 

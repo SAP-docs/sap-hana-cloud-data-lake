@@ -16,19 +16,48 @@ Returns a substring of a string.
 
 ## Parameters
 
- *<string-expression\>*
- :   The string from which a substring is to be returned.
 
-  *<start\>*
- :   The start position of the substring to return, in characters. A negative starting position specifies a number of characters from the end of the string instead of the beginning. The first character in the string is at position 1.
+<dl>
+<dt><b>
 
-  *<length\>*
- :   The length of the substring to return, in characters:
+*<string-expression\>*
 
-    -   A positive *<length\>* specifies that the substring ends *<length\>* characters to the right of the starting position.
-    -   A negative *<length\>* specifies that the substring ends *<length\>* characters to the left of the starting position.
+</b></dt>
+<dd>
 
- 
+The string from which a substring is to be returned.
+
+
+
+</dd><dt><b>
+
+*<start\>*
+
+</b></dt>
+<dd>
+
+The start position of the substring to return, in characters. A negative starting position specifies a number of characters from the end of the string instead of the beginning. The first character in the string is at position 1.
+
+
+
+</dd><dt><b>
+
+*<length\>*
+
+</b></dt>
+<dd>
+
+The length of the substring to return, in characters:
+
+-   A positive *<length\>* specifies that the substring ends *<length\>* characters to the right of the starting position.
+-   A negative *<length\>* specifies that the substring ends *<length\>* characters to the left of the starting position.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa58787e784f21015acc5ecadf5b1a9a0__SUBSTRING_returns1"/>
 
@@ -97,5 +126,5 @@ When the `ansi_substring` database option is set to ON \(default\), negative val
 
 [CHARINDEX Function \[String\] for Data Lake Relational Engine](charindex-function-string-for-data-lake-relational-engine-a53cde2.md "Returns the position of the first occurrence of a specified string in another string.")
 
-[SUBSTRING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/f114d3543b9c48f69b269b951d549034.html "Returns a substring of a string.") :arrow_upper_right:
+[SUBSTRING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/f114d3543b9c48f69b269b951d549034.html "Returns a substring of a string.") :arrow_upper_right:
 

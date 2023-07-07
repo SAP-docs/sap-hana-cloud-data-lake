@@ -1,6 +1,6 @@
 <!-- loioa540f97a84f21015bfc68a88c0565f03 -->
 
-# COT Function \[Numeric\]for Data Lake Relational Engine
+# COT Function \[Numeric\] for Data Lake Relational Engine
 
 Returns the cotangent of a number, expressed in radians.
 
@@ -16,10 +16,23 @@ COT ( <numeric-expression> )
 
 ## Parameters
 
- *<numeric-expression\>*
- :   The angle, in radians.
 
- 
+<dl>
+<dt><b>
+
+*<numeric-expression\>*
+
+</b></dt>
+<dd>
+
+The angle, in radians.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa540f97a84f21015bfc68a88c0565f03__COT_returns1"/>
 
@@ -52,5 +65,5 @@ SELECT COT( 0.52 ) FROM iq_dummy
 
 [Trigonometry Functions in Data Lake Relational Engine](trigonometry-functions-in-data-lake-relational-engine-caafd14.md "Some numeric functions return trigonometric information.")
 
-[COT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/efe32d94c2374ba4a64f6cac2dfe2cbc.html "Returns the cotangent of a number, expressed in radians.") :arrow_upper_right:
+[COT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/efe32d94c2374ba4a64f6cac2dfe2cbc.html "Returns the cotangent of a number, expressed in radians.") :arrow_upper_right:
 

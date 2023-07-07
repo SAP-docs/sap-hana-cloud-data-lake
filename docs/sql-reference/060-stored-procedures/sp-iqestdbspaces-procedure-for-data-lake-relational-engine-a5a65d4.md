@@ -24,19 +24,56 @@ sp_iqestdbspaces ( <db_size_in_bytes>, <iq_page_size>,
 
 ## Parameters
 
- *<db\_size\_in\_bytes\>*
- :   A DECIMAL\(16\) parameter that specifies the size of the database in bytes.
 
-  *<iq\_page\_size\>*
- :   A SMALLINT parameter that specifies the page size defined for the data lake Relational Engine segment of the database \(must be a power of 2 between 65536 and 524288; the default is 131072\).
+<dl>
+<dt><b>
 
-  *<min\_\#\_of\_bytes\>*
- :   An INT parameter that specifies the minimum number of bytes per dbspace segment. The default is 20,000,000 \(20 MB\).
+*<db\_size\_in\_bytes\>*
 
-  *<max\_\#\_of\_bytes\>*
- :   An INT parameter that specifies the maximum number of bytes per dbspace segment. The default is 2,146,304,000 \(2.146 GB\).
+</b></dt>
+<dd>
 
- 
+A DECIMAL\(16\) parameter that specifies the size of the database in bytes.
+
+
+
+</dd><dt><b>
+
+*<iq\_page\_size\>*
+
+</b></dt>
+<dd>
+
+A SMALLINT parameter that specifies the page size defined for the data lake Relational Engine segment of the database \(must be a power of 2 between 65536 and 524288; the default is 131072\).
+
+
+
+</dd><dt><b>
+
+*<min\_\#\_of\_bytes\>*
+
+</b></dt>
+<dd>
+
+An INT parameter that specifies the minimum number of bytes per dbspace segment. The default is 20,000,000 \(20 MB\).
+
+
+
+</dd><dt><b>
+
+*<max\_\#\_of\_bytes\>*
+
+</b></dt>
+<dd>
+
+An INT parameter that specifies the maximum number of bytes per dbspace segment. The default is 2,146,304,000 \(2.146 GB\).
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5a65d4e84f21015a001ad34c7f759fe__iq_refbb_1554"/>
 
@@ -57,59 +94,7 @@ Displays information about the number and size of dbspace segments based on the 
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
-
-You also need one of the following:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
--   MANAGE ANY DBSPACE
-
-
-
-</td>
-<td valign="top">
-
-System privileges
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+Requires EXECUTE object-level privilege on the procedure, along with the MANAGE ANY DBSPACE system privilege.
 
 
 

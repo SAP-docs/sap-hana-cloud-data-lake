@@ -23,16 +23,45 @@ sp_iqshowcompression ( <owner>, <table>, <column> )
 
 ## Parameters
 
- *<owner\>*
- :   The owner of the table for which you are setting compression.
 
-  *<table\>*
- :   The table for which you are setting compression.
+<dl>
+<dt><b>
 
-  *<column\>*
- :   The column for which you are setting compression.
+*<owner\>*
 
- 
+</b></dt>
+<dd>
+
+The owner of the table for which you are setting compression.
+
+
+
+</dd><dt><b>
+
+*<table\>*
+
+</b></dt>
+<dd>
+
+The table for which you are setting compression.
+
+
+
+</dd><dt><b>
+
+*<column\>*
+
+</b></dt>
+<dd>
+
+The column for which you are setting compression.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5fd29ba84f210159cb498816176a030__iq_iquda_122"/>
 
@@ -46,60 +75,10 @@ Returns the column name and compression setting. Compression setting values are 
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
+Requires EXECUTE object-level privilege on the procedure along with one of the following:
 
-You also need one of the following:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
--   ALTER ANY TABLE
--   ALTER ANY OBJECT
-
-
-
-</td>
-<td valign="top">
-
-System privileges
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+-   ALTER ANY TABLE system privilege
+-   ALTER ANY OBJECT system privilege
 
 
 

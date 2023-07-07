@@ -149,22 +149,67 @@ TINYINT
 
 The matching type for the constraint. Matching types include:
 
- 0
- :   Use the default matching
 
-  1
- :   SIMPLE
+<dl>
+<dt><b>
 
-  2
- :   FULL
+0
 
-  129
- :   SIMPLE UNIQUE
+</b></dt>
+<dd>
 
-  130
- :   FULL UNIQUE
+Use the default matching
 
- For more information about match types, see the MATCH clause of the CREATE TABLE statement.
+
+
+</dd><dt><b>
+
+1
+
+</b></dt>
+<dd>
+
+SIMPLE
+
+
+
+</dd><dt><b>
+
+2
+
+</b></dt>
+<dd>
+
+FULL
+
+
+
+</dd><dt><b>
+
+129
+
+</b></dt>
+<dd>
+
+SIMPLE UNIQUE
+
+
+
+</dd><dt><b>
+
+130
+
+</b></dt>
+<dd>
+
+FULL UNIQUE
+
+
+
+</dd>
+</dl>
+
+For more information about match types, see the MATCH clause of the CREATE TABLE statement.
 
 
 
@@ -221,5 +266,5 @@ Indicates whether the columns in the foreign key are allowed to contain the NULL
 **Related Information**  
 
 
-[SYSFKEY System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/24f16387665e47a492bd2517a5a27a33.html "Each row in the SYSFKEY system view describes a foreign key constraint in the system. The underlying system table for this view is ISYSFKEY.") :arrow_upper_right:
+[SYSFKEY System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/24f16387665e47a492bd2517a5a27a33.html "Each row in the SYSFKEY system view describes a foreign key constraint in the system. The underlying system table for this view is ISYSFKEY.") :arrow_upper_right:
 

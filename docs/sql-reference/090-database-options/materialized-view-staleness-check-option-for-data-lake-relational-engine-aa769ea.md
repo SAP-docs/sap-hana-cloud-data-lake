@@ -158,5 +158,5 @@ No
 **Related Information**  
 
 
-[MATERIALIZED_VIEW_STALENESS_CHECK Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/7f412b6887e147db9f22903b91bba87d.html "Controls which materialized views are checked for staleness.") :arrow_upper_right:
+[MATERIALIZED_VIEW_STALENESS_CHECK Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7f412b6887e147db9f22903b91bba87d.html "Controls which materialized views are checked for staleness.") :arrow_upper_right:
 

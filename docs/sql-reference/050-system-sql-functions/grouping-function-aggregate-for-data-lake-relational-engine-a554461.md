@@ -16,10 +16,23 @@ GROUPING ( <group-by-expression> )
 
 ## Parameters
 
- *<group-by-expression\>*
- :   An expression appearing as a grouping column in the result set of a query that uses a GROUP BY clause with the ROLLUP or CUBE keyword. The function identifies subtotal rows added to the result set by a ROLLUP or CUBE operation.
 
- 
+<dl>
+<dt><b>
+
+*<group-by-expression\>*
+
+</b></dt>
+<dd>
+
+An expression appearing as a grouping column in the result set of a query that uses a GROUP BY clause with the ROLLUP or CUBE keyword. The function identifies subtotal rows added to the result set by a ROLLUP or CUBE operation.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa554461384f21015aca0af2a35f9c2a7__GROUPING_returns1"/>
 
@@ -49,5 +62,5 @@ Data lake Relational Engine does not support the PERCENTILE\_CONT or PERCENTILE\
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[GROUPING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/259511aa310241949d6e8389561dc62c.html "Identifies whether a column in a ROLLUP or CUBE operation result set is NULL because it is part of a subtotal row, or NULL because of the underlying data.") :arrow_upper_right:
+[GROUPING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/259511aa310241949d6e8389561dc62c.html "Identifies whether a column in a ROLLUP or CUBE operation result set is NULL because it is part of a subtotal row, or NULL because of the underlying data.") :arrow_upper_right:
 

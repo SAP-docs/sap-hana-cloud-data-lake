@@ -16,10 +16,23 @@ BYTE_LENGTH ( <string-expression> )
 
 ## Parameters
 
- *<string-expression\>*
- :   The string that has the length to be calculated.
 
- 
+<dl>
+<dt><b>
+
+*<string-expression\>*
+
+</b></dt>
+<dd>
+
+The string that has the length to be calculated.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa53816b784f210159b849878d71ab1a8__BYTE_LENGTH_returns1"/>
 
@@ -66,7 +79,7 @@ SELECT BYTE_LENGTH( 'Test Message' ) FROM iq_dummy
 
 [String Functions in Data Lake Relational Engine](string-functions-in-data-lake-relational-engine-a52d1d9.md "String functions perform conversion, extraction, or manipulation operations on strings, or return information about strings.")
 
-[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_1_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
+[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
 
-[BYTE_LENGTH Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/da0bd303497b4828b0c89f22e692a6c5.html "Returns the number of bytes in a string.") :arrow_upper_right:
+[BYTE_LENGTH Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/da0bd303497b4828b0c89f22e692a6c5.html "Returns the number of bytes in a string.") :arrow_upper_right:
 

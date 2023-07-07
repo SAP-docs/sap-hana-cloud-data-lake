@@ -6,11 +6,6 @@ Implements error handling for compound statements \(if an error occurs in the TR
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -43,27 +38,85 @@ Implements error handling for compound statements \(if an error occurs in the TR
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 ## Parameters
 
-  *<statement-label\>* 
- :   When an ending *<statement-label\>* is specified, it must match the beginning *<statement-label\>*. The LEAVE statement can be used to resume execution at the first statement after the compound statement. The compound statement that is the body of a procedure or trigger has an implicit label that is the same as the name of the procedure or trigger.
 
-   *<local-declaration\>* 
- :   Immediately following the BEGIN TRY, a compound statement can have local declarations for objects that only exist within the compound statement. A compound statement can have a local declaration for a variable, a cursor, a temporary table, or an exception. Local declarations can be referenced by any statement in that compound statement, or in any compound statement nested within it. Local declarations of the compound statement are visible to the exception handler for the statement. Local declarations are not visible to other procedures that are called from within a compound statement.
+<dl class="glossary">
+<dt><b>
 
-   *<variable-declaration\>* 
- :   A valid DECLARE statement.
+ *<statement-label\>* 
 
-   *<exception-declaration\>* 
- :   A valid DECLARE statement.
+</b></dt>
+<dd>
 
-   *<cursor-declaration\>* 
- :   A valid DECLARE CURSOR statement.
+When an ending *<statement-label\>* is specified, it must match the beginning *<statement-label\>*. The LEAVE statement can be used to resume execution at the first statement after the compound statement. The compound statement that is the body of a procedure or trigger has an implicit label that is the same as the name of the procedure or trigger.
 
-   *<temporary-table-declaration\>* 
- :   A valid DECLARE LOCAL TEMPORARY TABLE statement.
 
- 
+
+</dd><dt><b>
+
+ *<local-declaration\>* 
+
+</b></dt>
+<dd>
+
+Immediately following the BEGIN TRY, a compound statement can have local declarations for objects that only exist within the compound statement. A compound statement can have a local declaration for a variable, a cursor, a temporary table, or an exception. Local declarations can be referenced by any statement in that compound statement, or in any compound statement nested within it. Local declarations of the compound statement are visible to the exception handler for the statement. Local declarations are not visible to other procedures that are called from within a compound statement.
+
+
+
+</dd><dt><b>
+
+ *<variable-declaration\>* 
+
+</b></dt>
+<dd>
+
+A valid DECLARE statement.
+
+
+
+</dd><dt><b>
+
+ *<exception-declaration\>* 
+
+</b></dt>
+<dd>
+
+A valid DECLARE statement.
+
+
+
+</dd><dt><b>
+
+ *<cursor-declaration\>* 
+
+</b></dt>
+<dd>
+
+A valid DECLARE CURSOR statement.
+
+
+
+</dd><dt><b>
+
+ *<temporary-table-declaration\>* 
+
+</b></dt>
+<dd>
+
+A valid DECLARE LOCAL TEMPORARY TABLE statement.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -91,10 +144,23 @@ None.
 
 ## Standards
 
- ANSI/ISO SQL Standard
- :   Not in the standard.
 
- 
+<dl>
+<dt><b>
+
+ANSI/ISO SQL Standard
+
+</b></dt>
+<dd>
+
+Not in the standard.
+
+
+
+</dd>
+</dl>
+
+
 
 These examples use the following table:
 

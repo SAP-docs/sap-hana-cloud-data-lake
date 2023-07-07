@@ -16,10 +16,23 @@ SPACE ( <integer-expression> )
 
 ## Parameters
 
- *<integer-expression\>*
- :   The number of spaces to return.
 
- 
+<dl>
+<dt><b>
+
+*<integer-expression\>*
+
+</b></dt>
+<dd>
+
+The number of spaces to return.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5815e2c84f210158cf48f3c618df22c__SPACE_returns1"/>
 
@@ -54,5 +67,5 @@ SELECT SPACE( 10 ) FROM iq_dummy
 **Related Information**  
 
 
-[SPACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/ad081410a2bf423c888257b5d0f621a3.html "Returns a specified number of spaces.") :arrow_upper_right:
+[SPACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ad081410a2bf423c888257b5d0f621a3.html "Returns a specified number of spaces.") :arrow_upper_right:
 

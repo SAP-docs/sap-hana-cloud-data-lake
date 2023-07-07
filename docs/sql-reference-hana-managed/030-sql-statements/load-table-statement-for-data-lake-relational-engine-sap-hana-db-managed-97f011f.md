@@ -2,12 +2,7 @@
 
 # LOAD TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)
 
-Imports data into a data lake Relational Engine database table from either the external object store \(Azure BLOB storage, an Amazon S3 bucket, S3-compliant bucket, or a Google Cloud Storage\) or from data lake Files containers \(the managed object store\).
-
-
-
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+Imports data into a data lake Relational Engine database table from either the external object store \(Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or a Google Cloud Storage\) or from data lake Files containers \(the managed object store\).
 
 
 
@@ -26,10 +21,9 @@ Imports data into a data lake Relational Engine database table from either the e
 
 
 ```
-LOAD [ INTO ] TABLE [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname].]<table-name>
-    ( <load-specification> [, …] )
-     { <from-using-file>[, ...] | <client-file>[, ...] | <parquet-load-group>[, ...] }
+LOAD [ INTO ] TABLE [ { <owner> | <schema-name> }<schema-name>.]<table-name>
+    [ <load-column> [, …] ]
+     { <from-using-file>[, ...] | <client-file>[, ...] }
     [ CONNECTION_STRING <connection-string> ]
     [ COMPRESSED | NOT COMPRESSED | AUTO COMPRESSED ]
     [ ENCODING '<encoding>' ]
@@ -41,7 +35,7 @@ LOAD [ INTO ] TABLE [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
     [ QUOTE '<enclosure-character>' ]
     [ QUOTE ESCAPE '<escape-character>' ]
     ESCAPES OFF
-    [ FORMAT { ascii | binary | bcp | csv | parquet } ]
+    [ FORMAT { ASCII | BINARY | BCP | CSV } ]
     [ DELIMITED BY '<string>' ]
     [ STRIP { OFF | RTRIM } ]
     [ BYTE ORDER { NATIVE | LOW | HIGH } ]
@@ -49,8 +43,8 @@ LOAD [ INTO ] TABLE [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
     [ NOTIFY <number-of-rows> ]
     [ ON FILE ERROR { ROLLBACK | FINISH | CONTINUE } ]
     [ PREVIEW { ON | OFF } ]
-    [ ROW DELIMITED BY '<delimiter-string>' ]
-    [ SKIP <number-of-rows> ]
+    [ ROW DELIMITED BY '<delimiter-string>' ' ]]
+    [ SKIP <number-of-rows>] ]
     [ HEADER SKIP [ ALL ] <number> ]
     [ HEADER DELIMITED BY '<string>' ] 
     [ WORD SKIP <number> ]
@@ -61,27 +55,22 @@ LOAD [ INTO ] TABLE [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
     [ ONLY LOG <log-what> [, …] ]
     [ LOG DELIMITED BY [, …] ]
     [ ALLOW MISSING COLUMNS { ON | OFF } ]
-    [ WITH MATCHING COLUMN NAMES ]
 ```
 
 ```
-<load-specification> ::=
-   { <column-name> [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <parquet-from-column> (varname] ] [ <filler-type> <column-spec> ] 
-   | <column-name> { { BINARY | ASCII } FILE( <integer> ) | { BINARY | ASCII } FILE ( '<string>' ) }   
-   | FILLER ( <filler-type> ) }
-```
-
-```
-<parquet-from-column> ::=
-   FROM COLUMN { '<parquet-column-name>' | <parquet-column-position> }
+<load-column> ::=
+   { <column-name> [ <column-spec> <nulls-spec> ]   
+   | FILLER ( [ <filler-type> ] ) 
+   | <column-name> VALUE <default-value>
 ```
 
 ```
 <column-spec> ::=
    { ASCII ( <input-width> )
    | PREFIX { 1 | 2 | 4 }
-   | BINARY [ <data-type> ] [ WITH NULL BYTE ] 
+   | BINARY [ <data-type> ] [ WITH NULL BYTE ]
+   | { BINARY | ASCII } FILE ( <integer> )
+   | { BINARY | ASCII } FILE ( '<string>' ) 
    | PREFIX { 1 | 2 | 4 } BINARY [ <data-type> ] [ WITH NULL BYTE ] [ VARYING ]
    | '<delimiter-string>'
    | DATE ( <input-date-format> )
@@ -90,8 +79,7 @@ LOAD [ INTO ] TABLE [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
    | FILE ETAG
    | ENCRYPTED ( <data-type> '<key-string>' [, '<algorithm-string>' ] )
    | VALUE <default-value>
-   | MISSING DEFAULT [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <default-value> (varname] }
+   | MISSING DEFAULT <default-value> }
    [ NULL ( { BLANKS | ZEROS | '<literal>' } [, ...] ) ]
 ```
 
@@ -103,19 +91,11 @@ LOAD [ INTO ] TABLE [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
 ```
 
 ```
-<from-using-file> ::= { FROM | USING FILE } { '<filename-string>' | <filename-variable> } [WITH ETAG '[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <etag> (varname]']
+<from-using-file> ::= { FROM | USING FILE } { '<filename-string>' | <filename-variable> } [WITH ETAG '<etag>']
 ```
 
 ```
 <client-file> ::= USING CLIENT FILE { '<filename-string>' | <filename-variable> }
-```
-
-```
-<parquet-load-group> ::=
-   ( <load-specification> [, …] )
-   FROM { '<filename-string>' | <filename-variable> } [WITH ETAG '[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <etag> (varname]'] 
 ```
 
 ```
@@ -141,87 +121,195 @@ LOAD [ INTO ] TABLE [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loio97f011fc1d834d8ea920911caa9638f2__section_mdz_zkr_brb"/>
 
 ## Parameters
 
- \{FROM | USING \[ CLIENT \] FILE\}
- :   > ### Note:  
+
+
+### \{FROM | USING \[ CLIENT \] FILE\}
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+> ### Note:  
 > The FROM and USING FILE clauses are synonymous.
 
-     Files Stored in data lake Files
-     :   The data source referenced by the filename is in the default data lake Files container.
 
-        The prefix `hdlfs:` identifies the file path as a data lake Files data source.
+<dl>
+<dt><b>
 
-        This example loads from a CSV file:
+Files Stored in data lake Files
 
-        ```
-        LOAD TABLE t1(c1) FROM 'hdlfs:///employeelist.csv'
-        ```
+</b></dt>
+<dd>
 
-      Files Stored in the External Object Store
-     :   In Azure Blob storage, *<filename-string\>* identifies the storage container name, and blob file name.
+The data source referenced by the filename is in the default data lake Files container.
 
-        In Amazon S3, S3-compliant provders, and Google Cloud Storage, *<filename-string\>* identifies the bucket name, and object name.
+The prefix `hdlfs:` identifies the file path as a data lake Files data source.
 
-        > ### Note:  
-        > Container names, bucket names, and file names are case-sensitive in *<filename-string\>*.
+This example loads from a CSV file:
 
-        ```
-        <filename-string> ::= bb:// | pb:// | s3:// | gs:// 
-        ```
+```
+LOAD TABLE t1(c1) FROM 'hdlfs:///employeelist.csv'
+```
 
-         bb://
-         :   Indicates "block blob". \(Azure only\)
 
-          pb://
-         :   Indicates "page blob". \(Azure only\)
 
-          s3://
-         :   Indicates "Amazon S3 bucketor S3-compliant buckets, such as SAP Converged Cloud"
+</dd><dt><b>
 
-          gs://
-         :   Indicates Google Cloud Storage bucket. \(Google Cloud only\)
+Files Stored in the External Object Store
 
-         Since *<filename-string\>* is passed to the server as a string, it's subject to the same formatting requirements as other SQL strings.
+</b></dt>
+<dd>
 
-        To specify more than one object, use a comma to separate each *<filename-string\>*.
+In Azure Blob storage, *<filename-string\>* identifies the storage container name, and blob file name.
 
-        If *<filename-string\>* WITH ETAG '<etag\>' is specified, the named object is loaded only if the ETag value matches. If a list of objects is specified and some of the ETags do not match, the LOAD statement will treat unmatched ETags as a file error and take the action specified by the ON FILE ERROR \{ ROLLBACK | FINISH | CONTINUE \} option. It will also be treated as a file error if the ETtag of an object changes while it is being loaded.
+In Amazon S3, S3-compliant provders, and Google Cloud Storage, *<filename-string\>* identifies the bucket name, and object name.
 
-        Because of resource constraints, data lake Relational Engine doesn't guarantee that all the data can be loaded. If resource allocation fails, the entire load transaction is rolled back. Any SKIP or LIMIT clause only applies in the beginning of the load, not to each file. Multiple objects are processed in parallel, except when using the SKIP or LIMIT clauses. The rows being skipped are processed single threaded from the objects in the order specified in the LOAD statement. Once the SKIP completes, the rest of the objects are processed in parallel if there's no LIMIT clause. If a LIMIT clause is specified, the entire load process is single threaded, and the number of rows are loaded from the objects in the order specified in the LOAD TABLE statement.
+> ### Note:  
+> Container names, bucket names, and file names are case-sensitive in *<filename-string\>*.
 
-        The LOAD TABLE statement can load compressed objects only in gzip format. Any object with an extension `.gz` or `.gzip` is compressed. Secondary files aren't supported during a compressed load. Compressed and uncompressed objects can be specified in the same LOAD TABLE statement. Each compressed object in a load is processed by one thread.
+```
+<filename-string> ::= bb:// | pb:// | s3:// | gs:// 
+```
 
-        USING CLIENT FILE bulk loads one or more files from a client. The character set of the file on the client side must be the same as the server collation. Client-side bulk loading incurs no administrative overhead, such as extra storage space, memory, or network-monitoring daemon requirements, but does forces single threaded processing for each file.
 
-        When bulk loading large objects, the USING CLIENT FILE clause applies to both primary and secondary files.
+<dl>
+<dt><b>
 
-        Client-side bulk loading is supported by Interactive SQL and ODBC/JDBC clients using the Command Sequence protocol. It is not supported by clients using the TDS protocol. For data security over a network, use Transport Layer Security. To control who can use client-side bulk loads, use the secure feature \(-sf\) server startup switch, enable the ALLOW\_READ\_CLIENT\_FILE database option, and the READ CLIENT FILE access control.
+bb://
 
-   CONNECTION\_STRING *<connection-string\>* 
- :   Specifies connection information
+</b></dt>
+<dd>
 
-    ```
-    <connection-string> ::= 
-       { <azure-connection> 
-       | <s3-connection>  
-       | <google-connection>}
-    ```
+Indicates "block blob". \(Azure only\)
 
-     *<azure-connection\>*
-     :   ```
+
+
+</dd><dt><b>
+
+pb://
+
+</b></dt>
+<dd>
+
+Indicates "page blob". \(Azure only\)
+
+
+
+</dd><dt><b>
+
+s3://
+
+</b></dt>
+<dd>
+
+Indicates "Amazon S3 bucketor S3-compliant buckets, such as SAP Converged Cloud"
+
+
+
+</dd><dt><b>
+
+gs://
+
+</b></dt>
+<dd>
+
+Indicates Google Cloud Storage bucket. \(Google Cloud only\)
+
+
+
+</dd>
+</dl>
+
+Since *<filename-string\>* is passed to the server as a string, it's subject to the same formatting requirements as other SQL strings.
+
+To specify more than one object, use a comma to separate each *<filename-string\>*.
+
+If *<filename-string\>* WITH ETAG '<etag\>' is specified, the named object is loaded only if the ETag value matches. If a list of objects is specified and some of the ETags do not match, the LOAD statement will treat unmatched ETags as a file error and take the action specified by the ON FILE ERROR \{ ROLLBACK | FINISH | CONTINUE \} option. It will also be treated as a file error if the ETtag of an object changes while it is being loaded.
+
+Because of resource constraints, data lake Relational Engine doesn't guarantee that all the data can be loaded. If resource allocation fails, the entire load transaction is rolled back.
+
+The LOAD TABLE statement can load compressed objects only in gzip format. Any object with an extension `.gz` or `.gzip` is compressed. Secondary files aren't supported during a compressed load. Compressed and uncompressed objects can be specified in the same LOAD TABLE statement. Each compressed object in a load is processed by one thread.
+
+USING CLIENT FILE bulk loads one or more files from a client. Client-side bulk loading only supports single threaded processing for each file
+
+When bulk loading external BLOBs \(using *<column-spec\>* FILE NAME\), the USING CLIENT FILE clause applies to both primary and secondary files.
+
+Client-side bulk loading is supported by Interactive SQL and ODBC/JDBC clients using the Command Sequence protocol. It is not supported by clients using the TDS protocol. For data security over a network, use Transport Layer Security. To control who can use client-side bulk loads, use the secure feature \(-sf\) server startup switch, enable the ALLOW\_READ\_CLIENT\_FILE database option, and the READ CLIENT FILE access control.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+
+
+### CONNECTION\_STRING *<connection-string\>*
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Specifies connection information
+
+```
+<connection-string> ::= 
+   { <azure-connection> 
+   | <s3-connection>  
+   | <google-connection>}
+```
+
+
+<dl>
+<dt><b>
+
+*<azure-connection\>*
+
+</b></dt>
+<dd>
+
+```
 <azure-connection> ::= 'DEFAULTENDPOINTSPROTOCOL=<endpoint-protocol>;
 	ACCOUNTNAME=<account-name>;
 	ACCOUNTKEY=<account-key>;
 	ENDPOINTSUFFIX=core.windows.net'
 ```
 
-        You can find *<azure-connection-string\>* in Azure portal. From your storage account, navigate to *Settings* \> *Access Keys*. Locate the *Connection string* section and copy the connection string to the clipboard. For *<azure-connection-string\>* examples, see the *Examples* section at the end of this topic.
+You can find *<azure-connection-string\>* in Azure portal. From your storage account, navigate to *Settings* \> *Access Keys*. Locate the *Connection string* section and copy the connection string to the clipboard. For *<azure-connection-string\>* examples, see the *Examples* section at the end of this topic.
 
-      *<s3-connection\>*
-     :   ```
+
+
+</dd><dt><b>
+
+*<s3-connection\>*
+
+</b></dt>
+<dd>
+
+```
 <s3-connection> ::= 'ENDPOINT=<endpoint>; 
 	ENDPOINT_TYPE={PATH | VIRTUAL-HOST}; 
 	ACCESS_KEY_ID=<access-key-string>; 
@@ -230,41 +318,151 @@ LOAD [ INTO ] TABLE [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
 	SESSION_TOKEN=<session-token>'
 ```
 
-        You can find your Amazon S3 option values in the AWS Management Console.
+You can find your Amazon S3 option values in the AWS Management Console.
 
-        For Amazon S3 and any S3-compliant storage providers, such as SAP Converged Cloud, specify the following options for the *<connection-string\>* clause:
+For Amazon S3 and any S3-compliant storage providers, such as SAP Converged Cloud, specify the following options for the *<connection-string\>* clause:
 
-         ENDPOINT
-         :   \(Optional for Amazon S3, mandatory for other S3-compliant providers\) When specified for Amazon S3 connections, the Amazon S3 client SDK uses its value as the endpoint to override. You can use this instead of REGION. If both this and the REGION option are specified, the value for REGION needs to be consistent with the value for ENDPOINT.
 
-         :   If a value is not specified for Amazon S3, the endpoint is determined by the Amazon S3 client SDK and you need to specify a value for the REGION option.
+<dl>
+<dt><b>
 
-          ENDPOINT\_TYPE
-         :   \(Only specify if ENDPOINT is defined\) Indicates how to construct the S3 endpoint when communicating with the object store provider. Values accepted are PATH or VIRTUAL\_HOST. If PATH is specified, Amazon S3 client SDK will construct a path-styled endpoint. If VIRTUAL\_HOST is specified, the Amazon S3 client SDK will construct a virtual-styled endpoint.
+ENDPOINT
 
-         :   Default value is VIRTUAL\_HOST.
+</b></dt>
+<dd>
 
-          ACCESS\_KEY\_ID
-         :   \(Mandatory\) For Amazon S3, you can find this option value in the AWS Management Console.
+\(Optional for Amazon S3, mandatory for other S3-compliant providers\) When specified for Amazon S3 connections, the Amazon S3 client SDK uses its value as the endpoint to override. You can use this instead of REGION. If both this and the REGION option are specified, the value for REGION needs to be consistent with the value for ENDPOINT.
 
-          SECRET\_ACCESS\_KEY\_ID
-         :   \(Mandatory\) For Amazon S3, you can find this option value in the AWS Management Console.
 
-          REGION
-         :   You can use this instead of ENDPOINT for Amazon S3. It allows you to work with Amazon S3 and any S3-compliant data sources.
 
-         :   If you do not specify this option, the value defaults to server option iqdl\_aws\_region which defaults to us-east-1.
+</dd>
+<dd>
 
-         :   If both this and the ENDPOINT option are specified, the value for REGION needs to be consistent with the value for ENDPOINT.
+If a value is not specified for Amazon S3, the endpoint is determined by the Amazon S3 client SDK and you need to specify a value for the REGION option.
 
-         :   If specified, but no value is provided, you are connected to a backend that uses a single server with no concept of regions.
 
-          SESSION\_TOKEN
-         :   If specified, the Amazon S3 client SDK will use its value when creating Amazon S3 credentials. If not specified it will be treated as an absence of MFA access for the account.
 
-       *<aws-connection\>*
-     \(DEPRECATED\) The following syntax is deprecated as of QRC 2, 2022. Instead, use the syntax above for Amazon S3 and any S3-compliant storage providers.
-     :   ```
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+ENDPOINT\_TYPE
+
+</b></dt>
+<dd>
+
+\(Only specify if ENDPOINT is defined\) Indicates how to construct the S3 endpoint when communicating with the object store provider. Values accepted are PATH or VIRTUAL\_HOST. If PATH is specified, Amazon S3 client SDK will construct a path-styled endpoint. If VIRTUAL\_HOST is specified, the Amazon S3 client SDK will construct a virtual-styled endpoint.
+
+
+
+</dd>
+<dd>
+
+Default value is VIRTUAL\_HOST.
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+ACCESS\_KEY\_ID
+
+</b></dt>
+<dd>
+
+\(Mandatory\) For Amazon S3, you can find this option value in the AWS Management Console.
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+SECRET\_ACCESS\_KEY\_ID
+
+</b></dt>
+<dd>
+
+\(Mandatory\) For Amazon S3, you can find this option value in the AWS Management Console.
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+REGION
+
+</b></dt>
+<dd>
+
+You can use this instead of ENDPOINT for Amazon S3. It allows you to work with Amazon S3 and any S3-compliant data sources.
+
+
+
+</dd>
+<dd>
+
+If you do not specify this option, the value defaults to server option iqdl\_aws\_region which defaults to us-east-1.
+
+
+
+</dd>
+<dd>
+
+If both this and the ENDPOINT option are specified, the value for REGION needs to be consistent with the value for ENDPOINT.
+
+
+
+</dd>
+<dd>
+
+If specified, but no value is provided, you are connected to a backend that uses a single server with no concept of regions.
+
+
+
+</dd>
+</dl>
+
+
+<dl>
+<dt><b>
+
+SESSION\_TOKEN
+
+</b></dt>
+<dd>
+
+If specified, the Amazon S3 client SDK will use its value when creating Amazon S3 credentials. If not specified it will be treated as an absence of MFA access for the account.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+*<aws-connection\>*\(DEPRECATED\) The following syntax is deprecated as of QRC 2, 2022. Instead, use the syntax above for Amazon S3 and any S3-compliant storage providers.
+
+</b></dt>
+<dd>
+
+```
 
  <aws-connection> ::=
 	ACCESS_KEY_ID '<access-key-id>'
@@ -272,158 +470,376 @@ LOAD [ INTO ] TABLE [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
 	REGION '<AWS-region>'
 ```
 
-        You can find *<access-key-id\>*, *<secret-access-key\>*, and *<AWS-region\>* in the IAM console. For *<aws-connection\>* examples, see the *Examples* section at the end of this topic.
+You can find *<access-key-id\>*, *<secret-access-key\>*, and *<AWS-region\>* in the IAM console. For *<aws-connection\>* examples, see the *Examples* section at the end of this topic.
 
-      *<google-connection\>*
-     :   ```
+
+
+</dd><dt><b>
+
+*<google-connection\>*
+
+</b></dt>
+<dd>
+
+```
 <google-connection> ::= 'CLIENT_EMAIL='<client-email>';
    PRIVATE_KEY='<private-key>';
    PRIVATE_KEY_ID='<private-key-id>'
 ```
 
-        You can find your *<google-connection\>* keys in Google Cloud Console, on the *Service Accounts* page. *<google-connection\>* accepts 'key=value' pairs separated by ';'. For *<google-connection\>* examples, see the *Examples* section at the end of this topic.
-
-   COMPRESSED | NOT COMPRESSED | AUTO COMPRESSED
- :   Specifies if the input files are compressed. If you're loading multiple input files in a single LOAD TABLE statement, this clause applies to all input files – you can't specify compression on a file-by-file basis.
-
-    If COMPRESSED is specified, data lake Relational Engine decompresses the data before loading it. If COMPRESSED is specified but the data is not compressed, then the load fails and returns an error.
-
-    If NOT COMPRESSED is specified, data lake Relational Engine loads the data without decompressing it.
-
-    The AUTO COMPRESSED clause is the default behavior, where data lake Relational Engine determines the compression property of each input file individually, based on its file extension `.gz` or `.gzip`.
-
-  ENCODING '*<encoding\>*'
- :   The ENCODING clause specifies the character set encoding of the input file. If the character set encoding is different from that of the database, character set conversion is performed during the load. If the data cannot be converted into the database character set, a conversion error is returned. If the ENCODING clause is not specified, the character set of the database is used. The clause applies to all files being loaded by the current LOAD TABLE statement. It's not possible to set different encoding options to individual files.The ENCODING clause does not work with binary load. An error occurs if either FORMAT BINARY is specified, or if a BINARY clause is specified in the column specification.
-
-    See [Character Set Encodings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_1_QRC/en-US/8a8f277561e547b8a4a0fdfc7f7db7f7.html "A complete list of supported character set encodings for SAP HANA Cloud, data lake and their aliases.") :arrow_upper_right: for a complete list of supported character set encodings.
-
-  BYTE ORDER MARK \{ ON | OFF \}
- :   By default data lake Relational Engine sets BYTE ORDER MARK to ON if the FORMAT is ASCII or BCP, and sets BYTE ORDER MARK to OFF if the FORMAT is BINARY, or if you specify BINARY in the column specification.
-
- :   When BYTE ORDER MARK is set to ON, data lake Relational Engine searches for and interprets a byte order mark at the beginning of each input file. If a byte order mark is located, it's not considered to be part of the data to be loaded. If data lake Relational Engine cannot locate a byte order mark in the file, it assumes the byte order of that file to be NATIVE. When both the ENCODING and the BYTE ORDER clauses are specified, data lake Relational Engine checks that the byte order specified, or found, is consistent with the endianness of the encoding. An error occurs if the byte order is different from the endianness of the encoding. Data lake Relational Engine decrypts the data in the input files using the provided encryption key and algorithm. If the ENCRYPTED clause is not specified or if NOT ENCRYPTED is specified, it checks that the byte order specified, or found, is consistent with the endianness of the encoding. An error occurs if the byte order is different from the endianness of the encoding.
-
-    If the ENCODING clause is specified:
-
-    -   If the BYTE ORDER MARK option is ON and you specify a UTF-16 encoding without an explicit endian, the database server searches for a BOM at the beginning of the data. If a BOM is present, it's used to determine the endianness of the data. Otherwise, the operating system endianness is assumed.
-
-    -   If the BYTE ORDER MARK option is ON and you specify a UTF-8 encoding, the server searches for a BOM at the beginning of the data. If a BOM is present, it's ignored.
+You can find your *<google-connection\>* keys in Google Cloud Console, on the *Service Accounts* page. *<google-connection\>* accepts 'key=value' pairs separated by ';'. For *<google-connection\>* examples, see the *Examples* section at the end of this topic.
 
 
-    If the ENCODING clause is not specified:
 
-    -   If you do not specify an ENCODING clause and the BYTE ORDER MARK option is ON, the server looks for a BOM at the beginning of the input data. If a BOM is located, the source encoding is automatically selected based on the encoding of the BOM \(UTF-16BE, UTF-16LE, or UTF-8\) and the BOM is not considered to be part of the data to be loaded.
-
-    -   If you do not specify an ENCODING clause and the BYTE ORDER MARK option is OFF, the database CHAR encoding is used, and the database server does not look for or interpret a BOM at the beginning of the data.
+</dd>
+</dl>
 
 
-    The BYTE ORDER clause does not work with binary load. An error occurs if either FORMAT BINARY is specified, or if a BINARY clause is specified in the column specification.
 
-  ENCRYPTED KEY '*<key\>*' | NOT ENCRYPTED
- :   \(Not to be confused with column-level encryption\) The ENCRYPTED clause specifies encryption settings for the input files. When loading encrypted data, you specify ENCRYPTED KEY followed by the key used to encrypt the data in the input file.
+</dd>
+</dl>
 
-    If ENCRYPTED is specified, data lake Relational Engine checks that the byte order specified, or found, is consistent with the endianness of the encoding. An error occurs if the byte order is different from the endianness of the encoding. Data lake Relational Engine decrypts the data in the input files using the provided encryption key and algorithm. If the ENCRYPTED clause is not specified or if NOT ENCRYPTED is specified, it checks that the byte order specified, or found, is consistent with the endianness of the encoding. An error occurs if the byte order is different from the endianness of the encoding and data lake Relational Engine will not decrypt the data.
 
-    It is possible to specify NOT ENCRYPTED even if the input file is actually encrypted. In this case, the data is loaded without decryption, and remains encrypted in the database.
 
-    If the input file is both encrypted and compressed, the file is first decrypted and then decompressed.
+### COMPRESSED | NOT COMPRESSED | AUTO COMPRESSED
 
-    If the BYTE ORDER MARK option is ON and you specify a UTF-16
 
-    If the input file is both encrypted and compressed, the load will not work if NOT ENCRYPTED and COMPRESSED are specified. This is because decompression requires the data to be decrypted first.
+<dl>
+<dt><b>
 
-    If encryption is specified, the loading of each input file can only be done in single-threaded mode. However, different input files can be loaded concurrently, with one worker per file.
 
- :   The clause applies to all files being loaded by the current LOAD TABLE statement. It's not possible to load from a combination of encrypted and non-encrypted files in the same statement.
 
-  CHECK CONSTRAINTS \{ ON | OFF \}
- :   Evaluates check constraints, which you can ignore or log. CHECK CONSTRAINTS defaults to ON.
+</b></dt>
+<dd>
 
-    Setting CHECK CONSTRAINTS OFF causes data lake Relational Engine to ignore all check constraint violations. This can be useful, for example, during database rebuilding. If a table has check constraints that call user-defined functions that are not yet created, the rebuild fails unless this option is set to OFF.
+Specifies if the input files are compressed. If you're loading multiple input files in a single LOAD TABLE statement, this clause applies to all input files – you can't specify compression on a file-by-file basis.
 
-    This option is mutually exclusive to the following options. If any of these options are specified in the same load, an error results:
+If COMPRESSED is specified, data lake Relational Engine decompresses the data before loading it. If COMPRESSED is specified but the data is not compressed, then the load fails and returns an error.
 
-    -   IGNORE CONSTRAINT ALL
-    -   IGNORE CONSTRAINT CHECK
-    -   LOG ALL
-    -   LOG CHECK
+If NOT COMPRESSED is specified, data lake Relational Engine loads the data without decompressing it.
 
-  DEFAULTS \{ ON | OFF \}
- :   Uses a column's default value. This option is ON by default. If the DEFAULTS option is OFF, any column not present in the column list is assigned NULL.
+The AUTO COMPRESSED clause is the default behavior, where data lake Relational Engine determines the compression property of each input file individually, based on its file extension `.gz` or `.gzip`.
 
-    The setting for the DEFAULTS option applies to all column default values, including AUTOINCREMENT.
 
-  QUOTES \{ ON | OFF \}
- :   Indicates that input strings are enclosed in quote characters. QUOTES is an optional clause and is ON by default. The first such character encountered in a string is treated as the quote character for the string. String data must be terminated with a matching quote.
 
-    With QUOTES ON, column or row delimiter characters can be included in the column value. Leading and ending quote characters are assumed not to be part of the value and are excluded from the loaded data value.
+</dd>
+</dl>
 
-    To include a quote character in a value with QUOTES ON, use two quotes. For example, this line includes a value in the third column that is a single quote character:
+
+
+### ENCODING '*<encoding\>*'
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+The ENCODING clause specifies the character set encoding of the input file. If the character set encoding is different from that of the database, character set conversion is performed during the load. If the data cannot be converted into the database character set, a conversion error is returned. If the ENCODING clause is not specified, the character set of the database is used. The clause applies to all files being loaded by the current LOAD TABLE statement. It's not possible to set different encoding options to individual files.The ENCODING clause does not work with binary load. An error occurs if either FORMAT BINARY is specified, or if a BINARY clause is specified in the column specification.
+
+See [Character Set Encodings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_1_QRC/en-US/8a8f277561e547b8a4a0fdfc7f7db7f7.html "A complete list of supported character set encodings for SAP HANA Cloud, data lake and their aliases.") :arrow_upper_right: for a complete list of supported character set encodings.
+
+
+
+</dd>
+</dl>
+
+
+
+### BYTE ORDER MARK \{ ON | OFF \}
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+By default data lake Relational Engine sets BYTE ORDER MARK to ON if the FORMAT is ASCII or BCP, and sets BYTE ORDER MARK to OFF if the FORMAT is BINARY, or if you specify BINARY in the column specification.
+
+
+
+</dd>
+<dd>
+
+When BYTE ORDER MARK is set to ON, data lake Relational Engine searches for and interprets a byte order mark at the beginning of each input file. If a byte order mark is located, it's not considered to be part of the data to be loaded. If data lake Relational Engine cannot locate a byte order mark in the file, it assumes the byte order of that file to be NATIVE. When both the ENCODING and the BYTE ORDER clauses are specified, data lake Relational Engine checks that the byte order specified, or found, is consistent with the endianness of the encoding. An error occurs if the byte order is different from the endianness of the encoding. Data lake Relational Engine decrypts the data in the input files using the provided encryption key and algorithm. If the ENCRYPTED clause is not specified or if NOT ENCRYPTED is specified, it checks that the byte order specified, or found, is consistent with the endianness of the encoding. An error occurs if the byte order is different from the endianness of the encoding.
+
+If the ENCODING clause is specified:
+
+-   If the BYTE ORDER MARK option is ON and you specify a UTF-16 encoding without an explicit endian, the database server searches for a BOM at the beginning of the data. If a BOM is present, it's used to determine the endianness of the data. Otherwise, the operating system endianness is assumed.
+
+-   If the BYTE ORDER MARK option is ON and you specify a UTF-8 encoding, the server searches for a BOM at the beginning of the data. If a BOM is present, it's ignored.
+
+
+If the ENCODING clause is not specified:
+
+-   If you do not specify an ENCODING clause and the BYTE ORDER MARK option is ON, the server looks for a BOM at the beginning of the input data. If a BOM is located, the source encoding is automatically selected based on the encoding of the BOM \(UTF-16BE, UTF-16LE, or UTF-8\) and the BOM is not considered to be part of the data to be loaded.
+
+-   If you do not specify an ENCODING clause and the BYTE ORDER MARK option is OFF, the database CHAR encoding is used, and the database server does not look for or interpret a BOM at the beginning of the data.
+
+
+The BYTE ORDER clause does not work with binary load. An error occurs if either FORMAT BINARY is specified, or if a BINARY clause is specified in the column specification.
+
+
+
+</dd>
+</dl>
+
+
+
+### ENCRYPTED KEY '*<key\>*' | NOT ENCRYPTED
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+\(Not to be confused with column-level encryption\) The ENCRYPTED clause specifies encryption settings for the input files. When loading encrypted data, you specify ENCRYPTED KEY followed by the key used to encrypt the data in the input file.
+
+If ENCRYPTED is specified, data lake Relational Engine checks that the byte order specified, or found, is consistent with the endianness of the encoding. An error occurs if the byte order is different from the endianness of the encoding. Data lake Relational Engine decrypts the data in the input files using the provided encryption key and algorithm. If the ENCRYPTED clause is not specified or if NOT ENCRYPTED is specified, it checks that the byte order specified, or found, is consistent with the endianness of the encoding. An error occurs if the byte order is different from the endianness of the encoding and data lake Relational Engine will not decrypt the data.
+
+It is possible to specify NOT ENCRYPTED even if the input file is actually encrypted. In this case, the data is loaded without decryption, and remains encrypted in the database.
+
+If the input file is both encrypted and compressed, the file is first decrypted and then decompressed.
+
+If the BYTE ORDER MARK option is ON and you specify a UTF-16
+
+If the input file is both encrypted and compressed, the load will not work if NOT ENCRYPTED and COMPRESSED are specified. This is because decompression requires the data to be decrypted first.
+
+If encryption is specified, the loading of each input file can only be done in single-threaded mode. However, different input files can be loaded concurrently, with one worker per file.
+
+
+
+</dd>
+<dd>
+
+The clause applies to all files being loaded by the current LOAD TABLE statement. It's not possible to load from a combination of encrypted and non-encrypted files in the same statement.
+
+
+
+</dd>
+</dl>
+
+
+
+### CHECK CONSTRAINTS \{ ON | OFF \}
+
+
+<dl>
+<dt><b>
+
+ 
+
+</b></dt>
+<dd>
+
+Evaluates check constraints, which you can ignore or log. CHECK CONSTRAINTS defaults to ON.
+
+Setting CHECK CONSTRAINTS OFF causes data lake Relational Engine to ignore all check constraint violations. This can be useful, for example, during database rebuilding. If a table has check constraints that call user-defined functions that are not yet created, the rebuild fails unless this option is set to OFF.
+
+This option is mutually exclusive to the following options. If any of these options are specified in the same load, an error results:
+
+-   IGNORE CONSTRAINT ALL
+-   IGNORE CONSTRAINT CHECK
+-   LOG ALL
+-   LOG CHECK
+
+
+
+</dd>
+</dl>
+
+
+
+### DEFAULTS \{ ON | OFF \}
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Uses a column's default value. This option is ON by default. If the DEFAULTS option is OFF, any column not present in the column list is assigned NULL.
+
+The setting for the DEFAULTS option applies to all column default values, including AUTOINCREMENT.
+
+
+
+</dd>
+</dl>
+
+
+
+### QUOTES \{ ON | OFF \}
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Indicates that input strings are enclosed in quote characters. QUOTES is an optional clause and is ON by default. The first such character encountered in a string is treated as the quote character for the string. String data must be terminated with a matching quote.
+
+With QUOTES ON, column or row delimiter characters can be included in the column value. Leading and ending quote characters are assumed not to be part of the value and are excluded from the loaded data value.
+
+To include a quote character in a value with QUOTES ON, use two quotes. For example, this line includes a value in the third column that is a single quote character:
+
+```
+'123 High Street, Anytown', '(715)398-2354',''''
+```
+
+With STRIP turned on \(the default\), trailing blanks are stripped from values before they are inserted. Trailing blanks are stripped only for non-quoted strings. Quoted strings retain their trailing blanks. Leading blank or TAB characters are trimmed only when the setting is ON.
+
+The data extraction facility provides options for handling quotes \(TEMP\_EXTRACT\_QUOTES, TEMP\_EXTRACT\_QUOTES\_ALL, and TEMP\_EXTRACT\_QUOTE\). If you plan to extract data to be loaded into an data lake Relational Engine main store table and the string fields contain column or row delimiter under default ASCII extraction, use the TEMP\_EXTRACT\_BINARY option for the extract and the FORMAT binary and QUOTES OFF clauses for LOAD TABLE.
+
+Limits:
+
+-   QUOTES ON applies only to column-delimited ASCII fields.
+-   With QUOTES ON, the first character of a column delimiter or row terminator cannot be a single or double quote mark.
+-   QUOTES ON forces single threaded processing for a given file.
+-   The QUOTES option does not apply to loading binary large object \(BLOB\) or character large object \(CLOB\) data from the secondary file, regardless of its setting. A leading or trailing quote is loaded as part of CLOB data. Two consecutive quotes between enclosing quotes are loaded as two consecutive quotes with the QUOTES ON option.
+-   SAP Adaptive Server Enterprise BCP does not support the QUOTES option. All field data is copied in or out equivalent to the QUOTES OFF setting. As QUOTES ON is the default setting for the data lake Relational Engine LOAD TABLE statement, specify QUOTES OFF when importing SAP ASE data from BCP output to a data lake Relational Engine table.
+
+Exceptions:
+
+-   If LOAD TABLE encounters any nonwhite characters after the ending quote character for an enclosed field, this error is reported and the load operation is rolled back:
 
     ```
-    '123 High Street, Anytown', '(715)398-2354',''''
+    Non-SPACE text found after ending quote character for
+    an enclosed field.
+    SQLSTATE: QTA14    SQLCODE: -1005014L
     ```
 
-    With STRIP turned on \(the default\), trailing blanks are stripped from values before they are inserted. Trailing blanks are stripped only for non-quoted strings. Quoted strings retain their trailing blanks. Leading blank or TAB characters are trimmed only when the setting is ON.
+-   With QUOTES ON, if a single or double quote is specified as the first character of the column delimiter, an error is reported and the load operation fails:
 
-    The data extraction facility provides options for handling quotes \(TEMP\_EXTRACT\_QUOTES, TEMP\_EXTRACT\_QUOTES\_ALL, and TEMP\_EXTRACT\_QUOTE\). If you plan to extract data to be loaded into an data lake Relational Engine main store table and the string fields contain column or row delimiter under default ASCII extraction, use the TEMP\_EXTRACT\_BINARY option for the extract and the FORMAT binary and QUOTES OFF clauses for LOAD TABLE.
-
-    Limits:
-
-    -   QUOTES ON applies only to column-delimited ASCII fields.
-    -   With QUOTES ON, the first character of a column delimiter or row terminator cannot be a single or double quote mark.
-    -   QUOTES ON forces single threaded processing for a given file.
-    -   The QUOTES option does not apply to loading binary large object \(BLOB\) or character large object \(CLOB\) data from the secondary file, regardless of its setting. A leading or trailing quote is loaded as part of CLOB data. Two consecutive quotes between enclosing quotes are loaded as two consecutive quotes with the QUOTES ON option.
-    -   SAP Adaptive Server Enterprise BCP does not support the QUOTES option. All field data is copied in or out equivalent to the QUOTES OFF setting. As QUOTES ON is the default setting for the data lake Relational Engine LOAD TABLE statement, specify QUOTES OFF when importing SAP ASE data from BCP output to a data lake Relational Engine table.
-    -   Not supported for FORMAT parquet.
-
-    Exceptions:
-
-    -   If LOAD TABLE encounters any nonwhite characters after the ending quote character for an enclosed field, this error is reported and the load operation is rolled back:
-
-        ```
-        Non-SPACE text found after ending quote character for
-        an enclosed field.
-        SQLSTATE: QTA14    SQLCODE: -1005014L
-        ```
-
-    -   With QUOTES ON, if a single or double quote is specified as the first character of the column delimiter, an error is reported and the load operation fails:
-
-        ```
-        Single or double quote mark cannot be the 1st character
-        of column delimiter or row terminator with QUOTES option
-        ON.
-        SQLSTATE: QCA90    SQLCODE: -1013090L
-        ```
+    ```
+    Single or double quote mark cannot be the 1st character
+    of column delimiter or row terminator with QUOTES option
+    ON.
+    SQLSTATE: QCA90    SQLCODE: -1013090L
+    ```
 
 
-  QUOTE *<enclosure-character\>*
- :   For TEXT data only; identifies the enclosure character to be placed around string values. If not specified, the default QUOTE character is either a single \('\) or double \("\) quotation mark, depending on what is used in the field. If QUOTES OFF is defined, QUOTE is ignored.
 
-    If the specified *<enclosure-character\>* is multibyte, only the first byte is used; the remaining bytes are ignored.
 
-    Not supported for FORMAT parquet.
+</dd>
+</dl>
 
-  QUOTE ESCAPE '*<escape-character\>*'
- :   Specifies the escape character used in the data. If not specified, the default QUOTE ESCAPE character is the value of QUOTE. For example, if QUOTE is defined as percent \(%\), but QUOTE ESCAPE is not defined, the default value for QUOTE ESCAPE becomes %. If neither QUOTE ESCAPE nor QUOTE are defined, QUOTE defaults to either a single \('\) or double \("\) quotation mark, depending on what is used in the field, and QUOTE ESCAPE defaults to match QUOTE.
 
-    If the specified ESCAPE character is multibyte, only the first byte is used; the remaining bytes are ignored.
 
-    If QUOTES ON and QUOTE ESCAPE is not defined, single quote becomes the ESCAPE character and must be escaped by another quote.
+### QUOTE *<enclosure-character\>*
 
-    Not supported for FORMAT parquet.
 
-  ESCAPES
- :   If you omit a *<column-spec\>* definition for an input field and ESCAPES is ON \(the default\), characters following the backslash character are recognized and interpreted as special characters by the database server. You can include newline characters as the combination \\n, and other characters as hexadecimal ASCII codes, such as \\x09 for the [Tab\] character. A sequence of two backslash characters \( \\\\ \) is interpreted as a single backslash.
+<dl>
+<dt><b>
 
-    > ### Note:  
-    > For data lake Relational Engine, you need to set ESCAPES OFF.
 
-  FORMAT \{ ascii | binary | bcp | csv | parquet \}
- :    ascii | binary
- :   These formats are defined by *<column-spec\>*. If you omit that definition for a column, by default data lake Relational Engine uses the format defined by this option. Input lines are assumed to have ASCII \(the default\) or binary fields, one row per line, with values separated by the column delimiter character.
 
-  bcp
- :   -   The BCP data file loaded into data lake Relational Engine tables must be exported \(BCP OUT\) in cross-platform file format using the -c option.
+</b></dt>
+<dd>
+
+For TEXT data only; identifies the enclosure character to be placed around string values. If not specified, the default QUOTE character is either a single \('\) or double \("\) quotation mark, depending on what is used in the field. If QUOTES OFF is defined, QUOTE is ignored.
+
+If the specified *<enclosure-character\>* is multibyte, only the first byte is used; the remaining bytes are ignored.
+
+
+
+</dd>
+</dl>
+
+
+
+### QUOTE ESCAPE '*<escape-character\>*'
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Specifies the escape character used in the data. If not specified, the default QUOTE ESCAPE character is the value of QUOTE. For example, if QUOTE is defined as percent \(%\), but QUOTE ESCAPE is not defined, the default value for QUOTE ESCAPE becomes %. If neither QUOTE ESCAPE nor QUOTE are defined, QUOTE defaults to either a single \('\) or double \("\) quotation mark, depending on what is used in the field, and QUOTE ESCAPE defaults to match QUOTE.
+
+If the specified ESCAPE character is multibyte, only the first byte is used; the remaining bytes are ignored.
+
+If QUOTES ON and QUOTE ESCAPE is not defined, single quote becomes the ESCAPE character and must be escaped by another quote.
+
+
+
+</dd>
+</dl>
+
+
+
+### ESCAPES
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+For data lake Relational Engine, you need to set ESCAPES OFF.
+
+
+
+</dd>
+</dl>
+
+
+
+### FORMAT \{ ASCII | BINARY | BCP | CSV \}
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+
+<dl>
+<dt><b>
+
+ascii | binary
+
+</b></dt>
+<dd>
+
+These formats are defined by *<column-spec\>*. If you omit that definition for a column, by default data lake Relational Engine uses the format defined by this option. Input lines are assumed to have ASCII \(the default\) or binary fields, one row per line, with values separated by the column delimiter character.
+
+
+
+</dd><dt><b>
+
+bcp
+
+</b></dt>
+<dd>
+
+-   The BCP data file loaded into data lake Relational Engine tables must be exported \(BCP OUT\) in cross-platform file format using the -c option.
 -   The default column delimiter for the LOAD TABLE statement is <tab\> and the default row terminator is <newline\>.
 -   The last column in a row must be terminated by the row terminator, not by the column delimiter. If the column delimiter is present before the row terminator, then the column delimiter is treated as a part of the data.
 -   Data for columns that are not the last column in the load specification must be delimited by the column delimiter only. If a row terminator is encountered before a column delimiter for a column that is not the last column, then the row terminator is treated as a part of the column data.
@@ -447,354 +863,611 @@ LOAD [ INTO ] TABLE [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
     ```
 
 
-      csv
-     :   A row in a CSV file must be terminated either by a row deliminator \(default newline\) or a column deliminator \(default coma\) followed by a row delimiter. The maximum size of a delimiter is 4 bytes. An error message appears if the deliminator exceeds 4 bytes.
 
-        A CSV file may contain partial rows, defined as any row with the number of fields less than the number of columns specified \(either explicitly or implicitly\). All fields missing from a partial row are assigned a NULL value. If the column is not nullable, an error message appears, and no data is imported.
 
-        If a table has K columns, a CSV file has M fields, and the LOAD TABLE statement indicates N columns \(either explicitly or implicitly\), when N <= K and N < M, columns missing from the column list in the load statement are assigned default values.
+</dd>
+</dl>
 
-      parquet
-     :   To load a Parquet format file into a table, use the FORMAT parquet clause and specify `.parquet` or `.parq` as the file name extension.
 
-        Not all LOAD TABLE clauses work with FORMAT parquet; some are ignored, while others can cause the LOAD TABLE statement to roll back. See [Loading Parquet Files](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_1_QRC/en-US/a054ac0ce09e47799e5f24860378056b.html "Parquet is an efficient, open-source, column-oriented format file designed for Apache Hadoop. You can load tables in Parquet format using the data lake Relational Engine LOAD TABLE statement.") :arrow_upper_right: in *SAP HANA Cloud, Data Lake Load and Unload Management* for details.
+<dl>
+<dt><b>
 
-   DELIMITED BY '*<string\>*'
- :   If you omit a column delimiter in the *<column-spec\>* definition, the default column delimiter character is a comma. You can specify an alternative column delimiter by providing a single ASCII character or the hexadecimal character representation. The DELIMITED BY clause is:
+csv
+
+</b></dt>
+<dd>
+
+A row in a CSV file must be terminated either by a row deliminator \(default newline\) or a column deliminator \(default coma\) followed by a row delimiter. The maximum size of a delimiter is 4 bytes. An error message appears if the deliminator exceeds 4 bytes.
+
+A CSV file may contain partial rows, defined as any row with the number of fields less than the number of columns specified \(either explicitly or implicitly\). All fields missing from a partial row are assigned a NULL value. If the column is not nullable, an error message appears, and no data is imported.
+
+If a table has K columns, a CSV file has M fields, and the LOAD TABLE statement indicates N columns \(either explicitly or implicitly\), when N <= K and N < M, columns missing from the column list in the load statement are assigned default values.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+
+
+### DELIMITED BY '*<string\>*'
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+If you omit a column delimiter in the *<column-spec\>* definition, the default column delimiter character is a comma. You can specify an alternative column delimiter by providing a single ASCII character or the hexadecimal character representation. The DELIMITED BY clause is:
+
+```
+... DELIMITED BY '\x09' ...
+```
+
+To use the newline character as a delimiter, you can specify either the special combination '\\n' or its ASCII value '\\x0a'. Although you can specify up to four characters in the *<column-spec\>* *<delimiter-string\>*, you can specify only a single character in the DELIMITED BY clause.
+
+When specifying the DATE column with the NULL clause, the date column is treated as a variable-width date field if DELIMITED BY clause is included. Otherwise, date column is treated as fixed-width date field.
+
+
+
+</dd>
+</dl>
+
+
+
+### STRIP \{ OFF | RTRIM \}
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Determines whether unquoted values should have trailing blanks stripped off before they are inserted. These STRIP keywords are accepted:
+
+-   STRIP OFF – does not strip off trailing blanks
+-   STRIP RTRIM – strips trailing blanks.
+-   STRIP ON – is deprecated. Use STRIP RTRIM.
+
+With STRIP turned on \(the default\), data lake Relational Engine strips trailing blanks from values before inserting them. This is effective only for VARCHAR data. STRIP OFF preserves trailing blanks.
+
+Trailing blanks are stripped only for unquoted strings. Quoted strings retain their trailing blanks. If you do not require blank sensitivity, you can use the FILLER option as an alternative to be more specific in the number of bytes to strip, instead of all the trailing spaces. STRIP OFF is more efficient for data lake Relational Engine, and it adheres to the ANSI standard when dealing with trailing blanks. \(CHAR data is always padded, so the STRIP option only affects VARCHAR data.\)
+
+The STRIP option applies only to variable-length non-binary data and does not apply to ASCII fixed-width inserts. For example, assume this schema:
+
+```
+CREATE TABLE t( c1 VARCHAR(3) );
+LOAD TABLE t( c1 ',' ) ........ STRIP RTRIM    // trailing blanks trimmed
+
+LOAD TABLE t( c1 ',' ) ........ STRIP OFF      // trailing blanks not trimmed
+
+LOAD TABLE t( c1 ASCII(3) ) ... STRIP RTRIM    // trailing blanks not trimmed
+LOAD TABLE t( c1 ASCII(3) ) ... STRIP OFF      // trailing blanks trimmed
+
+LOAD TABLE t( c1 BINARY ) ..... STRIP RTRIM    // trailing blanks trimmed
+LOAD TABLE t( c1 BINARY ) ..... STRIP OFF      // trailing blanks trimmed
+```
+
+Trailing blanks are always trimmed from binary data.
+
+
+
+</dd>
+</dl>
+
+
+
+### BYTE ORDER \{ NATIVE | LOW | HIGH \}
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Specifies the byte order during reads. This option applies to all binary input fields. You cannot set different BYTE ORDER options for individual files. If no BYTE ORDER is defined, the default is NATIVE. You can specify:
+
+-   NATIVE – \(default\)data lake Relational Engine always reads binary data in the format native to the machine it is running on.
+-   HIGH – when multibyte quantities have the high-order byte first \(for big-endian platforms\).
+-   LOW – when multibyte quantities have the low-order byte first \(for little-endian platforms\).
+
+
+
+</dd>
+</dl>
+
+
+
+### LIMIT *<number-of-rows\>*
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Specifies the maximum number of rows to insert into the table. The default is 0 for no limit. The maximum is 2<sup>31</sup> - 1 \(2147483647\) rows.
+
+
+
+</dd>
+</dl>
+
+
+
+### NOTIFY *<number-of-rows\>*
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Specifies that you be notified with a message each time the specified number of rows is successfully inserted into the table. The default is 0, meaning no notifications are printed. The value of this option overrides the value of the NOTIFY\_MODULUS database option.
+
+
+
+</dd>
+</dl>
+
+
+
+### ON FILE ERROR \{ ROLLBACK | FINISH | CONTINUE \}
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Specifies the action data lake Relational Engine takes when an input file cannot be opened because it does not exist or you have incorrect privileges to read the file. You can specify one of the following:
+
+-   ROLLBACK – returns an error and aborts the entire transaction \(the default\).
+-   FINISH – finishes the insertions already completed and ends the load operation.
+-   CONTINUE – skips the file to continue the load operation.
+
+Only one ON FILE ERROR clause is permitted.
+
+
+
+</dd>
+</dl>
+
+
+
+### PREVIEW \{ ON | OFF \}
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Displays the layout of input into the destination table including starting position, name, and data type of each column. Data lake Relational Engine displays this information at the start of the load process. If you are writing to a log file, this information is also included in the log.
+
+
+
+</dd>
+</dl>
+
+
+
+### ROW DELIMITED BY '*<delimiter-string\>*'
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Specifies a string up to 4 bytes in length that indicates the end of an input record. You can use this option only if all fields within the row are any of the following:
+
+-   Delimited with column terminators
+-   Data defined by the DATE or DATETIME *<column-spec\>* options
+-   ASCII fixed-length fields
+
+Always include ROW DELIMITED BY to ensure parallel loads. Omitting this clause from the LOAD specification may cause data lake Relational Engine to load serially rather than in parallel.
+
+You cannot use this clause if any input fields contain binary data. With this clause, a row terminator causes any missing fields to be set to NULL. All rows must have the same row delimiters, and it must be distinct from all column delimiters. The row and field delimiter strings cannot be an initial subset of each other. For example, you cannot specify "\*" as a field delimiter and "\*\#" as the row delimiter, but you could specify "\#" as the field delimiter with that row delimiter.
+
+If a row is missing its delimiters, data lake Relational Engine returns an error and rolls back the entire load transaction. The only exception is the final record of a file where it rolls back that row and returns a warning message.
+
+
+
+</dd>
+</dl>
+
+
+
+### SKIP *<number-of-rows\>*
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Defines the number of rows to skip at the beginning of the input tables for this load. The maximum number of rows to skip is 2<sup>31</sup> - 1 \(2147483647\). SKIP runs in single-threaded mode as it reads the rows to skip. Any SKIP clause only applies to the load not to each file.
+
+The default is 0.
+
+
+
+</dd>
+</dl>
+
+
+
+### HEADER SKIP \[ALL\] *<number\>* … HEADER DELIMITED BY '*<string\>*'
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+When you include ALL in your load statement for a multiple-file load, LOAD TABLE skips the number of header rows \(that you specify with *<number\>*\) from the start of each file, while omitting ALL just skips the number of header rows from just the first file. ALL does not change the results for a single-file load.
+
+HEADER SKIP *<number\>*, without ALL, specifies a number of lines at the beginning of the data file, including header rows, for LOAD TABLE to skip. All LOAD TABLE column specifications and other load options are ignored, until the specified number of rows is skipped.
+
+-   The number of lines to skip is greater than or equal to zero.
+-   Lines are determined by a 1-to-4-character delimiter string specified in the HEADER DELIMITED BY clause. The default HEADER DELIMITED BY string is the \\n character.
+-   The HEADER DELIMITED BY string has a maximum length of four characters. An error is returned, if the string length is greater than four or less than one.
+-   When a non-zero HEADER SKIP value is specified, all data inclusive of the HEADER DELIMITED BY delimiter is ignored, until the delimiter is encountered the number of times specified in the HEADER SKIP clause.
+-   All LOAD TABLE column specifications and other load options are ignored, until the specified number of rows has been skipped. After the specified number of rows has been skipped, the LOAD TABLE column specifications and other load options are applied to the remaining data.
+-   The "header" bytes are ignored only at the beginning of the data. When multiple files are specified in the USING clause, HEADER SKIP only ignores data starting from the first row of the first file, until it skips the specified number of header rows, even if those rows exist in subsequent files. LOAD TABLE does not look for headers once it starts parsing actual data.
+-   No error is reported, if LOAD TABLE processes all input data before skipping the number of rows specified by HEADER SKIP.
+
+HEADER SKIP ALL has the following behaviors:
+
+-   You cannot specify HEADER SKIP and HEADER SKIP ALL in the same LOAD TABLE statement; doing so results in an error.
+-   You can specify HEADER SKIP ALL *<number\>* and SKIP *<number-of-rows\>* together. When you do, the number of header rows \(specified in *<number\>*\) is skipped first, then SKIP *<number-of-rows\>* is performed until the statement reaches the number of rows you specified.
+-   You can specify HEADER SKIP ALL *<number\>* and LIMIT *<number-of-rows\>*. When you do, the number of header rows \(specified in *<number\>*\) is skipped first, then rows are loaded for the number of rows you specify.
+
+
+
+</dd>
+</dl>
+
+
+
+### WORD SKIP *<number\>*
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Allows the load to continue when it encounters data longer than the limit specified when the word index was created.
+
+If a row is not loaded because a word exceeds the maximum permitted size, a warning is written to the `.iqmsg` file. WORD size violations can be optionally logged to the MESSAGE LOG file and rejected rows logged to the ROW LOG file specified in the LOAD TABLE statement.
+
+-   If the option is not specified, LOAD TABLE reports an error and rolls back on the first occurrence of a word that is longer than the specified limit.
+-   *<number\>* specifies the number of times the “***Words exceeding the maximum permitted word length not supported***” error is ignored.
+-   0 \(zero\) means there is no limit.
+
+
+
+</dd>
+</dl>
+
+
+
+### ON PARTIAL INPUT ROW \{ ROLLBACK | CONTINUE \}
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Specifies the action to take when a partial input row is encountered during a load. You can specify one of the following:
+
+-   CONTINUE – \(default\) issues a warning and continues the load operation.
+-   ROLLBACK – aborts the entire load operation and reports the error:
 
     ```
-    ... DELIMITED BY '\x09' ...
+    Partial input record skipped at EOF.
+    SQLSTATE: QDC32    SQLSTATE: -1000232L
     ```
 
-    To use the newline character as a delimiter, you can specify either the special combination '\\n' or its ASCII value '\\x0a'. Although you can specify up to four characters in the *<column-spec\>* *<delimiter-string\>*, you can specify only a single character in the DELIMITED BY clause.
 
-    When specifying the DATE column with the NULL clause, the date column is treated as a variable-width date field if DELIMITED BY clause is included. Otherwise, date column is treated as fixed-width date field.
 
-    Not supported for FORMAT parquet.
 
-  STRIP \{ OFF | RTRIM \}
- :   Determines whether unquoted values should have trailing blanks stripped off before they are inserted. These STRIP keywords are accepted:
+</dd>
+</dl>
 
-    -   STRIP OFF – does not strip off trailing blanks
-    -   STRIP RTRIM – strips trailing blanks.
-    -   STRIP ON – is deprecated. Use STRIP RTRIM.
 
-    With STRIP turned on \(the default\), data lake Relational Engine strips trailing blanks from values before inserting them. This is effective only for VARCHAR data. STRIP OFF preserves trailing blanks.
 
-    Trailing blanks are stripped only for unquoted strings. Quoted strings retain their trailing blanks. If you do not require blank sensitivity, you can use the FILLER option as an alternative to be more specific in the number of bytes to strip, instead of all the trailing spaces. STRIP OFF is more efficient for data lake Relational Engine, and it adheres to the ANSI standard when dealing with trailing blanks. \(CHAR data is always padded, so the STRIP option only affects VARCHAR data.\)
+### IGNORE CONSTRAINT *<constraint-type\>* *<string\>*
 
-    The STRIP option applies only to variable-length non-binary data and does not apply to ASCII fixed-width inserts. For example, assume this schema:
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Specifies whether to ignore CHECK, UNIQUE, NULL, DATA VALUE, and FOREIGN KEY integrity constraint violations that occur during a load. *<string\>* is an integer that indicates the maximum number of violations to ignore before initiating a rollback. Specifying each *<constraint-type\>* has the following result:
+
+-   CHECK *<limit\>* – if *<limit\>* specifies zero, the number of CHECK constraint violations to ignore is infinite. If CHECK is not specified, the first occurrence of any CHECK constraint violation causes the LOAD TABLE statement to roll back. If *<limit\>* is nonzero, then the *<limit\>* +1 occurrence of a CHECK constraint violation causes the load to roll back.
+-   UNIQUE *<limit\>* – if *<limit\>* specifies zero, then the number of UNIQUE constraint violations to ignore is infinite. If *<limit\>* is nonzero, then the *<limit\>* +1 occurrence of a UNIQUE constraint violation causes the load to roll back.
+-   NULL *<limit\>* – if *<limit\>* specifies zero, then the number of NULL constraint violations to ignore is infinite. If *<limit\>* is nonzero, then the *<limit\>* +1 occurrence of a NULL constraint violation causes the load to roll back.
+-   FOREIGN KEY *<limit\>* – if *<limit\>* specifies zero, the number of FOREIGN KEY constraint violations to ignore is infinite. If *<limit\>* is nonzero, then the *<limit\>* +1 occurrence of a FOREIGN KEY constraint violation causes the load to roll back.
+-   DATA VALUE *<limit\>* – if the database option CONVERSION\_ERROR = ON, an error is reported and the statement rolls back. If *<limit\>* specifies zero, then the number of DATA VALUE constraint violations \(data type conversion errors\) to ignore is infinite. If *<limit\>* is nonzero, then the *<limit\>* +1 occurrence of a DATA VALUE constraint violation causes the load to roll back.
+-   ALL *<limit\>* – if the CONVERSION\_ERROR database option is ON, an error is reported and the statement rolls back. If *<limit\>* specifies zero, then the cumulative total of all integrity constraint violations to ignore is infinite. If *<limit\>* is nonzero, then load rolls back when the cumulative total of all ignored UNIQUE, NULL, DATA VALUE, and FOREIGN KEY integrity constraint violations exceeds the value of *<limit\>*. For example, if you specify this IGNORE CONSTRAINT option, the total number of integrity constraint violations cannot exceed 200, whereas the total number of NULL and UNIQUE constraint violations cannot exceed 50 and 100, respectively:
 
     ```
-    CREATE TABLE t( c1 VARCHAR(3) );
-    LOAD TABLE t( c1 ',' ) ........ STRIP RTRIM    // trailing blanks trimmed
-    
-    LOAD TABLE t( c1 ',' ) ........ STRIP OFF      // trailing blanks not trimmed
-    
-    LOAD TABLE t( c1 ASCII(3) ) ... STRIP RTRIM    // trailing blanks not trimmed
-    LOAD TABLE t( c1 ASCII(3) ) ... STRIP OFF      // trailing blanks trimmed
-    
-    LOAD TABLE t( c1 BINARY ) ..... STRIP RTRIM    // trailing blanks trimmed
-    LOAD TABLE t( c1 BINARY ) ..... STRIP OFF      // trailing blanks trimmed
+    IGNORE CONSTRAINT NULL 50, UNIQUE 100, ALL 200
     ```
 
-    Trailing blanks are always trimmed from binary data.
+    Whenever any of these limits is exceeded, the LOAD TABLE statement rolls back.
 
-  BYTE ORDER \{ NATIVE | LOW | HIGH \}
- :   Specifies the byte order during reads. This option applies to all binary input fields. You cannot set different BYTE ORDER options for individual files. If no BYTE ORDER is defined, the default is NATIVE. You can specify:
+    > ### Note:  
+    > A single row can have more than one integrity constraint violation. Every occurrence of an integrity constraint violation counts towards the limit of that type of violation.
+    > 
+    > Set the IGNORE CONSTRAINT option limit to a nonzero value if you are logging the ignored integrity constraint violations. Logging an excessive number of violations affects the performance of the load
 
-    -   NATIVE – \(default\)data lake Relational Engine always reads binary data in the format native to the machine it is running on.
-    -   HIGH – when multibyte quantities have the high-order byte first \(for big-endian platforms\).
-    -   LOW – when multibyte quantities have the low-order byte first \(for little-endian platforms\).
 
-    Not supported for FORMAT parquet.
+If CHECK, UNIQUE, NULL, or FOREIGN KEY is not specified in the IGNORE CONSTRAINT clause, then the load rolls back on the first occurrence of each of these types of integrity constraint violation.
 
-  LIMIT *<number-of-rows\>*
- :   Specifies the maximum number of rows to insert into the table. The default is 0 for no limit. The maximum is 2<sup>31</sup> - 1 \(2147483647\) rows.
+If DATA VALUE is not specified in the IGNORE CONSTRAINT clause, then the load rolls back on the first occurrence of this type of integrity constraint violation, unless the CONVERSION\_ERROR database option is OFF. If so, a warning is reported for any DATA VALUE constraint violation and the load continues.
 
-  NOTIFY *<number-of-rows\>*
- :   Specifies that you be notified with a message each time the specified number of rows is successfully inserted into the table. The default is 0, meaning no notifications are printed. The value of this option overrides the value of the NOTIFY\_MODULUS database option.
+When the load completes, an informational message regarding integrity constraint violations is logged in the `.iqmsg` file. This message contains the number of integrity constraint violations that occurred during the load and the number of rows that were skipped.
 
-  ON FILE ERROR \{ ROLLBACK | FINISH | CONTINUE \}
- :   Specifies the action data lake Relational Engine takes when an input file cannot be opened because it does not exist or you have incorrect privileges to read the file. You can specify one of the following:
 
-    -   ROLLBACK – returns an error and aborts the entire transaction \(the default\).
-    -   FINISH – finishes the insertions already completed and ends the load operation.
-    -   CONTINUE – skips the file to continue the load operation.
 
-    Only one ON FILE ERROR clause is permitted.
+</dd>
+</dl>
 
-  PREVIEW \{ ON | OFF \}
- :   Displays the layout of input into the destination table including starting position, name, and data type of each column. Data lake Relational Engine displays this information at the start of the load process. If you are writing to a log file, this information is also included in the log.
 
-  ROW DELIMITED BY '*<delimiter-string\>*'
- :   Specifies a string up to 4 bytes in length that indicates the end of an input record. You can use this option only if all fields within the row are any of the following:
 
-    -   Delimited with column terminators
-    -   Data defined by the DATE or DATETIME *<column-spec\>* options
-    -   ASCII fixed-length fields
+### MESSAGE LOG '*<string\>*'\] \[ROW LOG '*<string\>*'
 
-    Always include ROW DELIMITED BY to ensure parallel loads. Omitting this clause from the LOAD specification may cause data lake Relational Engine to load serially rather than in parallel.
 
-    You cannot use this clause if any input fields contain binary data. With this clause, a row terminator causes any missing fields to be set to NULL. All rows must have the same row delimiters, and it must be distinct from all column delimiters. The row and field delimiter strings cannot be an initial subset of each other. For example, you cannot specify "\*" as a field delimiter and "\*\#" as the row delimiter, but you could specify "\#" as the field delimiter with that row delimiter.
+<dl>
+<dt><b>
 
-    If a row is missing its delimiters, data lake Relational Engine returns an error and rolls back the entire load transaction. The only exception is the final record of a file where it rolls back that row and returns a warning message.
 
-    Not supported for FORMAT parquet.
 
-  SKIP *<number-of-rows\>*
- :   Defines the number of rows to skip at the beginning of the input tables for this load. The maximum number of rows to skip is 2<sup>31</sup> - 1 \(2147483647\). The default is 0. SKIP runs in single-threaded mode as it reads the rows to skip.
+</b></dt>
+<dd>
 
-    The FORMAT parquet clause does not support SKIP *<number-of-rows\>* and will return an error and roll back the LOAD TABLE statement, if specified.
+Specifies the names of files in which to log information about integrity constraint violations and the types of violations to log. Timestamps indicating the start and completion of the load are logged in both the MESSAGE LOG and the ROW LOG files. Both MESSAGE LOG and ROW LOG must be specified, or no information about integrity violations is logged.
 
-  HEADER SKIP \[ALL\] *<number\>* … HEADER DELIMITED BY '*<string\>*'
- :   When you include ALL in your load statement for a multiple-file load, LOAD TABLE skips the number of header rows \(that you specify with *<number\>*\) from the start of each file, while omitting ALL just skips the number of header rows from just the first file. ALL does not change the results for a single-file load.
+-   If the ONLY LOG clause is not specified, no information on integrity constraint violations is logged. Only the timestamps indicating the start and completion of the load are logged.
+-   Information is logged on all integrity constraint-type violations specified in the ONLY LOG clause or for all word index-length violations if the keyword WORD is specified.
+-   If constraint violations are being logged, every occurrence of an integrity constraint violation generates exactly one row of information in the MESSAGE LOG file.
 
-    HEADER SKIP *<number\>*, without ALL, specifies a number of lines at the beginning of the data file, including header rows, for LOAD TABLE to skip. All LOAD TABLE column specifications and other load options are ignored, until the specified number of rows is skipped.
+    The number of rows \(errors reported\) in the MESSAGE LOG file can exceed the IGNORE CONSTRAINT option limit, because the load is performed by multiple threads running in parallel. More than one thread might report that the number of constraint violations has exceeded the specified limit.
 
-    -   The number of lines to skip is greater than or equal to zero.
-    -   Lines are determined by a 1-to-4-character delimiter string specified in the HEADER DELIMITED BY clause. The default HEADER DELIMITED BY string is the \\n character.
-    -   The HEADER DELIMITED BY string has a maximum length of four characters. An error is returned, if the string length is greater than four or less than one.
-    -   When a non-zero HEADER SKIP value is specified, all data inclusive of the HEADER DELIMITED BY delimiter is ignored, until the delimiter is encountered the number of times specified in the HEADER SKIP clause.
-    -   All LOAD TABLE column specifications and other load options are ignored, until the specified number of rows has been skipped. After the specified number of rows has been skipped, the LOAD TABLE column specifications and other load options are applied to the remaining data.
-    -   The "header" bytes are ignored only at the beginning of the data. When multiple files are specified in the USING clause, HEADER SKIP only ignores data starting from the first row of the first file, until it skips the specified number of header rows, even if those rows exist in subsequent files. LOAD TABLE does not look for headers once it starts parsing actual data.
-    -   No error is reported, if LOAD TABLE processes all input data before skipping the number of rows specified by HEADER SKIP.
-    -   When you specify FORMAT parquet in the LOAD TABLE statement, data lake Relational Engine ignores the HEADER SKIP \[ALL\] clause and issues a message with this information.
+-   If constraint violations are being logged, exactly one row of information is logged in the ROW LOG file for a given row, regardless of the number of integrity constraint violations that occur on that row.
 
-    HEADER SKIP ALL has the following behaviors:
+    The number of distinct errors in the MESSAGE LOG file might not exactly match the number of rows in the ROW LOG file. The difference in the number of rows is due to the parallel processing of the load described above for the MESSAGE LOG.
 
-    -   You cannot specify HEADER SKIP and HEADER SKIP ALL in the same LOAD TABLE statement; doing so results in an error.
-    -   You can specify HEADER SKIP ALL *<number\>* and SKIP *<number-of-rows\>* together. When you do, the number of header rows \(specified in *<number\>*\) is skipped first, then SKIP *<number-of-rows\>* is performed until the statement reaches the number of rows you specified.
-    -   You can specify HEADER SKIP ALL *<number\>* and LIMIT *<number-of-rows\>*. When you do, the number of header rows \(specified in *<number\>*\) is skipped first, then rows are loaded for the number of rows you specify.
+-   The MESSAGE LOG and ROW LOG files cannot be raw partitions or named pipes.
+-   If the MESSAGE LOG or ROW LOG file already exists, new information is appended to the file.
+-   Specifying an invalid file name for the MESSAGE LOG or ROW LOG file generates an error.
+-   Specifying the same file name for the MESSAGE LOG and ROW LOG files generates an error.
 
-  WORD SKIP *<number\>*
- :   Allows the load to continue when it encounters data longer than the limit specified when the word index was created.
+Various combinations of the IGNORE CONSTRAINT and MESSAGE LOG clauses result in different logging actions:
 
-    If a row is not loaded because a word exceeds the maximum permitted size, a warning is written to the `.iqmsg` file. WORD size violations can be optionally logged to the MESSAGE LOG file and rejected rows logged to the ROW LOG file specified in the LOAD TABLE statement.
 
-    -   If the option is not specified, LOAD TABLE reports an error and rolls back on the first occurrence of a word that is longer than the specified limit.
-    -   *<number\>* specifies the number of times the “***Words exceeding the maximum permitted word length not supported***” error is ignored.
-    -   0 \(zero\) means there is no limit.
+<table>
+<tr>
+<th valign="top">
 
-  ON PARTIAL INPUT ROW \{ ROLLBACK | CONTINUE \}
- :   Specifies the action to take when a partial input row is encountered during a load. You can specify one of the following:
+IGNORE CONSTRAINT Specified?
 
-    -   CONTINUE – \(default\) issues a warning and continues the load operation.
-    -   ROLLBACK – aborts the entire load operation and reports the error:
 
-        ```
-        Partial input record skipped at EOF.
-        SQLSTATE: QDC32    SQLSTATE: -1000232L
-        ```
 
+</th>
+<th valign="top">
 
-    Not supported for FORMAT parquet.
+MESSAGE LOG Specified?
 
-  IGNORE CONSTRAINT *<constraint-type\>* *<string\>*
- :   Specifies whether to ignore CHECK, UNIQUE, NULL, DATA VALUE, and FOREIGN KEY integrity constraint violations that occur during a load. *<string\>* is an integer that indicates the maximum number of violations to ignore before initiating a rollback. Specifying each *<constraint-type\>* has the following result:
 
-    -   CHECK *<limit\>* – if *<limit\>* specifies zero, the number of CHECK constraint violations to ignore is infinite. If CHECK is not specified, the first occurrence of any CHECK constraint violation causes the LOAD TABLE statement to roll back. If *<limit\>* is nonzero, then the *<limit\>* +1 occurrence of a CHECK constraint violation causes the load to roll back.
-    -   UNIQUE *<limit\>* – if *<limit\>* specifies zero, then the number of UNIQUE constraint violations to ignore is infinite. If *<limit\>* is nonzero, then the *<limit\>* +1 occurrence of a UNIQUE constraint violation causes the load to roll back.
-    -   NULL *<limit\>* – if *<limit\>* specifies zero, then the number of NULL constraint violations to ignore is infinite. If *<limit\>* is nonzero, then the *<limit\>* +1 occurrence of a NULL constraint violation causes the load to roll back.
-    -   FOREIGN KEY *<limit\>* – if *<limit\>* specifies zero, the number of FOREIGN KEY constraint violations to ignore is infinite. If *<limit\>* is nonzero, then the *<limit\>* +1 occurrence of a FOREIGN KEY constraint violation causes the load to roll back.
-    -   DATA VALUE *<limit\>* – if the database option CONVERSION\_ERROR = ON, an error is reported and the statement rolls back. If *<limit\>* specifies zero, then the number of DATA VALUE constraint violations \(data type conversion errors\) to ignore is infinite. If *<limit\>* is nonzero, then the *<limit\>* +1 occurrence of a DATA VALUE constraint violation causes the load to roll back.
-    -   ALL *<limit\>* – if the CONVERSION\_ERROR database option is ON, an error is reported and the statement rolls back. If *<limit\>* specifies zero, then the cumulative total of all integrity constraint violations to ignore is infinite. If *<limit\>* is nonzero, then load rolls back when the cumulative total of all ignored UNIQUE, NULL, DATA VALUE, and FOREIGN KEY integrity constraint violations exceeds the value of *<limit\>*. For example, if you specify this IGNORE CONSTRAINT option, the total number of integrity constraint violations cannot exceed 200, whereas the total number of NULL and UNIQUE constraint violations cannot exceed 50 and 100, respectively:
 
-        ```
-        IGNORE CONSTRAINT NULL 50, UNIQUE 100, ALL 200
-        ```
+</th>
+<th valign="top">
 
-        Whenever any of these limits is exceeded, the LOAD TABLE statement rolls back.
+Action
 
-        > ### Note:  
-        > A single row can have more than one integrity constraint violation. Every occurrence of an integrity constraint violation counts towards the limit of that type of violation.
-        > 
-        > Set the IGNORE CONSTRAINT option limit to a nonzero value if you are logging the ignored integrity constraint violations. Logging an excessive number of violations affects the performance of the load
 
 
-    If CHECK, UNIQUE, NULL, or FOREIGN KEY is not specified in the IGNORE CONSTRAINT clause, then the load rolls back on the first occurrence of each of these types of integrity constraint violation.
+</th>
+</tr>
+<tr>
+<td valign="top">
 
-    If DATA VALUE is not specified in the IGNORE CONSTRAINT clause, then the load rolls back on the first occurrence of this type of integrity constraint violation, unless the CONVERSION\_ERROR database option is OFF. If so, a warning is reported for any DATA VALUE constraint violation and the load continues.
+Yes
 
-    When the load completes, an informational message regarding integrity constraint violations is logged in the `.iqmsg` file. This message contains the number of integrity constraint violations that occurred during the load and the number of rows that were skipped.
 
-  MESSAGE LOG '*<string\>*'\] \[ROW LOG '*<string\>*'
- :   Specifies the names of files in which to log information about integrity constraint violations and the types of violations to log. Timestamps indicating the start and completion of the load are logged in both the MESSAGE LOG and the ROW LOG files. Both MESSAGE LOG and ROW LOG must be specified, or no information about integrity violations is logged.
 
-    -   If the ONLY LOG clause is not specified, no information on integrity constraint violations is logged. Only the timestamps indicating the start and completion of the load are logged.
-    -   Information is logged on all integrity constraint-type violations specified in the ONLY LOG clause or for all word index-length violations if the keyword WORD is specified.
-    -   If constraint violations are being logged, every occurrence of an integrity constraint violation generates exactly one row of information in the MESSAGE LOG file.
+</td>
+<td valign="top">
 
-        The number of rows \(errors reported\) in the MESSAGE LOG file can exceed the IGNORE CONSTRAINT option limit, because the load is performed by multiple threads running in parallel. More than one thread might report that the number of constraint violations has exceeded the specified limit.
+Yes
 
-    -   If constraint violations are being logged, exactly one row of information is logged in the ROW LOG file for a given row, regardless of the number of integrity constraint violations that occur on that row.
 
-        The number of distinct errors in the MESSAGE LOG file might not exactly match the number of rows in the ROW LOG file. The difference in the number of rows is due to the parallel processing of the load described above for the MESSAGE LOG.
 
-    -   The MESSAGE LOG and ROW LOG files cannot be raw partitions or named pipes.
-    -   If the MESSAGE LOG or ROW LOG file already exists, new information is appended to the file.
-    -   Specifying an invalid file name for the MESSAGE LOG or ROW LOG file generates an error.
-    -   Specifying the same file name for the MESSAGE LOG and ROW LOG files generates an error.
+</td>
+<td valign="top">
 
-    Various combinations of the IGNORE CONSTRAINT and MESSAGE LOG clauses result in different logging actions:
+All ignored integrity constraint violations are logged, including the user specified limit, before the rollback.
 
 
-    <table>
-    <tr>
-    <th valign="top">
 
-    IGNORE CONSTRAINT Specified?
+</td>
+</tr>
+<tr>
+<td valign="top">
 
+No
 
-    
-    </th>
-    <th valign="top">
 
-    MESSAGE LOG Specified?
 
+</td>
+<td valign="top">
 
-    
-    </th>
-    <th valign="top">
+Yes
 
-    Action
 
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
+</td>
+<td valign="top">
 
-    Yes
+The first integrity constraint violation is logged before the rollback.
 
 
-    
-    </td>
-    <td valign="top">
 
-    Yes
+</td>
+</tr>
+<tr>
+<td valign="top">
 
+Yes
 
-    
-    </td>
-    <td valign="top">
 
-    All ignored integrity constraint violations are logged, including the user specified limit, before the rollback.
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
+No
 
-    No
 
 
-    
-    </td>
-    <td valign="top">
+</td>
+<td valign="top">
 
-    Yes
+Nothing is logged.
 
 
-    
-    </td>
-    <td valign="top">
 
-    The first integrity constraint violation is logged before the rollback.
+</td>
+</tr>
+<tr>
+<td valign="top">
 
+No
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    Yes
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
+No
 
-    No
 
 
-    
-    </td>
-    <td valign="top">
+</td>
+<td valign="top">
 
-    Nothing is logged.
+Nothing is logged. The first integrity constraint violation causes a rollback.
 
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
 
-    No
+</td>
+</tr>
+</table>
 
+> ### Tip:  
+> Set the IGNORE CONSTRAINT clause limit to a nonzero value, if you are logging the ignored integrity constraint violations. If a single row has more than one integrity constraint violation, a row for each violation is written to the MESSAGE LOG file. Logging an excessive number of violations affects the performance of the load.
 
-    
-    </td>
-    <td valign="top">
 
-    No
 
+</dd>
+</dl>
 
-    
-    </td>
-    <td valign="top">
 
-    Nothing is logged. The first integrity constraint violation causes a rollback.
 
+### LOG DELIMITED BY
 
-    
-    </td>
-    </tr>
-    </table>
-    
-    > ### Tip:  
-    > Set the IGNORE CONSTRAINT clause limit to a nonzero value, if you are logging the ignored integrity constraint violations. If a single row has more than one integrity constraint violation, a row for each violation is written to the MESSAGE LOG file. Logging an excessive number of violations affects the performance of the load.
 
-  LOG DELIMITED BY
- :   Specifies the separator between data values in the ROW LOG file. The default separator is a comma.
+<dl>
+<dt><b>
 
-    Data lake Relational Engine no longer returns an error message when FORMAT bcp is specified as a LOAD TABLE clause. In addition, these conditions are verified and proper error messages are returned:
 
-  ALLOW MISSING COLUMNS \{ ON | OFF \}
- :   Determines the behavior when one or more columns in the LOAD TABLE statement cannot be matched with a column in a given file. The default value is OFF. When this clause is OFF, the statement fails if a column cannot be matched.
 
-    When this clause is ON, columns that cannot be matched are populated with the column's default value. If no default value is defined, NULL values are loaded. If the column has no default value and is defined as NOT NULL, the statement fails. Use the MISSING DEFAULT column option to specify a default value to use when the column cannot be matched.
+</b></dt>
+<dd>
 
-  WITH MATCHING COLUMN NAMES
- :   \(Applies to FORMAT parquet only\) Specifies that the column names in the data lake Relational Engine table match the column names in the Parquet files being loaded. This is equivalent to specifying FROM COLUMN '*<iq-column-name\>*' for each column in the load specification. For example, the following two statements are equivalent:
+Specifies the separator between data values in the ROW LOG file. The default separator is a comma.
 
-    ```
-    LOAD INTO TABLE T (
-    	temperature,
-    	humidity,
-    	ts )
-        FROM 'file1.parquet'
-        WITH MATCHING COLUMN NAMES
-        FORMAT PARQUET
-        ESCAPES OFF;
-    
-    LOAD INTO TABLE T (
-    	temperature FROM COLUMN 'temperature',
-    	humidity FROM COLUMN 'humidity',
-    	ts FROM COLUMN 'ts' )
-        FROM 'file1.parquet'
-        FORMAT PARQUET
-        ESCAPES OFF ;
-    ```
+Data lake Relational Engine no longer returns an error message when FORMAT bcp is specified as a LOAD TABLE clause. In addition, these conditions are verified and proper error messages are returned:
 
-    You can override individual columns by specifying FROM COLUMN for those columns.
 
- 
+
+</dd>
+</dl>
+
+
+
+### ALLOW MISSING COLUMNS \{ ON | OFF \}
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Determines the behavior when one or more columns in the LOAD TABLE statement cannot be matched with a column in a given file. The default value is OFF. When this clause is OFF, the statement fails if a column cannot be matched.
+
+When this clause is ON, columns that cannot be matched are populated with the column's default value. If no default value is defined, NULL values are loaded. If the column has no default value and is defined as NOT NULL, the statement fails. Use the MISSING DEFAULT column option to specify a default value to use when the column cannot be matched.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio97f011fc1d834d8ea920911caa9638f2__section_qdr_blr_brb"/>
 
@@ -851,15 +1524,15 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     </tr>
     <tr>
     <td valign="top">
-
-    Prefix portion
+    
+        Prefix portion
 
 
     
     </td>
     <td valign="top">
-
-    Always a binary value.
+    
+        Always a binary value.
 
 
     
@@ -867,15 +1540,15 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     </tr>
     <tr>
     <td valign="top">
-
-    Associated data portion
+    
+        Associated data portion
 
 
     
     </td>
     <td valign="top">
-
-    If you use:
+    
+        If you use:
 
     -   The PREFIX clause without BINARY – a character format \(ASCII data\)
     -   The PREFIX clause with BINARY – a binary format and which can only be specified for a VARCHAR or VARBINARY column.
@@ -933,8 +1606,8 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     </tr>
     <tr>
     <td valign="top">
-
-    yyyy or YYYY
+    
+        yyyy or YYYY
 
     yy or YY
 
@@ -942,8 +1615,8 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     
     </td>
     <td valign="top">
-
-    Represents number of year. Default is current year.
+    
+        Represents number of year. Default is current year.
 
 
     
@@ -951,15 +1624,15 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     </tr>
     <tr>
     <td valign="top">
-
-    mm or MM
+    
+        mm or MM
 
 
     
     </td>
     <td valign="top">
-
-    Represents number of month. Always use leading zero or blank for number of the month where appropriate, for example, '05' for May. DATE value must include a month. For example, if the DATE value you enter is 1998, you receive an error. If you enter '03', data lake Relational Engine applies the default year and day and converts it to '1998-03-01'.
+    
+        Represents number of month. Always use leading zero or blank for number of the month where appropriate, for example, '05' for May. DATE value must include a month. For example, if the DATE value you enter is 1998, you receive an error. If you enter '03', data lake Relational Engine applies the default year and day and converts it to '1998-03-01'.
 
 
     
@@ -967,8 +1640,8 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     </tr>
     <tr>
     <td valign="top">
-
-    dd or DD
+    
+        dd or DD
 
     jjj or JJJ
 
@@ -976,8 +1649,8 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     
     </td>
     <td valign="top">
-
-    Represents number of day. Default day is 01. Always use leading zeros for number of day where appropriate, for example, '01' for first day. J or j indicates a Julian day \(1 to 366\) of the year.
+    
+        Represents number of day. Default day is 01. Always use leading zeros for number of day where appropriate, for example, '01' for first day. J or j indicates a Julian day \(1 to 366\) of the year.
 
 
     
@@ -985,31 +1658,15 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     </tr>
     <tr>
     <td valign="top">
-
-    hh or HH
+    
+        hh or HH
 
 
     
     </td>
     <td valign="top">
-
-    Represents hour. Hour is based on 24-hour clock. Always use leading zeros or blanks for hour where appropriate, for example, '01' for 1 am. '00' is also valid value for hour of 12 a.m.
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    nn
-
-
-    
-    </td>
-    <td valign="top">
-
-    Represents minute. Always use leading zeros for minute where appropriate, for example, '08' for 8 minutes.
+        Represents hour. Hour is based on 24-hour clock. Always use leading zeros or blanks for hour where appropriate, for example, '01' for 1 am. '00' is also valid value for hour of 12 a.m.
 
 
     
@@ -1017,31 +1674,15 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     </tr>
     <tr>
     <td valign="top">
-
-    ss\[.ssssss\]
+    
+        nn
 
 
     
     </td>
     <td valign="top">
-
-    Represents seconds and fraction of a second.
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    aa
-
-
-    
-    </td>
-    <td valign="top">
-
-    Represents the a.m. or p.m. designation.
+        Represents minute. Always use leading zeros for minute where appropriate, for example, '08' for 8 minutes.
 
 
     
@@ -1049,31 +1690,15 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     </tr>
     <tr>
     <td valign="top">
-
-    pp
+    
+        ss\[.ssssss\]
 
 
     
     </td>
     <td valign="top">
-
-    Represents the p.m. designation only if needed.
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    hh
-
-
-    
-    </td>
-    <td valign="top">
-
-    Data lake Relational Engine assumes zero for minutes and seconds. For example, if the data lake Relational Engine value you enter is '03', data lake Relational Engine converts it to '03:00:00.0000'.
+        Represents seconds and fraction of a second.
 
 
     
@@ -1081,15 +1706,63 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     </tr>
     <tr>
     <td valign="top">
-
-    hh:nn or hh:mm
+    
+        aa
 
 
     
     </td>
     <td valign="top">
+    
+        Represents the a.m. or p.m. designation.
 
-    Data lake Relational Engine assumes zero for seconds. For example, if the time value you enter is '03:25', data lake Relational Engine converts it to '03:25:00.0000'.
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        pp
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Represents the p.m. designation only if needed.
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        hh
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Data lake Relational Engine assumes zero for minutes and seconds. For example, if the data lake Relational Engine value you enter is '03', data lake Relational Engine converts it to '03:00:00.0000'.
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        hh:nn or hh:mm
+
+
+    
+    </td>
+    <td valign="top">
+    
+        Data lake Relational Engine assumes zero for seconds. For example, if the time value you enter is '03:25', data lake Relational Engine converts it to '03:25:00.0000'.
 
 
     
@@ -1119,31 +1792,15 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     </tr>
     <tr>
     <td valign="top">
-
-    12/31/98
+    
+        12/31/98
 
 
     
     </td>
     <td valign="top">
-
-    DATE \('MM/DD/YY'\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    19981231
-
-
-    
-    </td>
-    <td valign="top">
-
-    DATE \('YYYYMMDD'\)
+        DATE \('MM/DD/YY'\)
 
 
     
@@ -1151,31 +1808,15 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     </tr>
     <tr>
     <td valign="top">
-
-    123198140150
+    
+        19981231
 
 
     
     </td>
     <td valign="top">
-
-    DATETIME \('MMDDYYhhnnss'\)
-
-
     
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-
-    14:01:50 12-31-98
-
-
-    
-    </td>
-    <td valign="top">
-
-    DATETIME \('hh:nn:ss MM-DD-YY'\)
+        DATE \('YYYYMMDD'\)
 
 
     
@@ -1183,15 +1824,15 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     </tr>
     <tr>
     <td valign="top">
-
-    18:27:53
+    
+        123198140150
 
 
     
     </td>
     <td valign="top">
-
-    DATETIME \('hh:nn:ss'\)
+    
+        DATETIME \('MMDDYYhhnnss'\)
 
 
     
@@ -1199,15 +1840,47 @@ For ASCII, BINARY, CSV and BCP formats, data lake Relational Engine supports bot
     </tr>
     <tr>
     <td valign="top">
-
-    12/31/98 02:01:50AM
+    
+        14:01:50 12-31-98
 
 
     
     </td>
     <td valign="top">
+    
+        DATETIME \('hh:nn:ss MM-DD-YY'\)
 
-    DATETIME \('MM/DD/YY hh:nn:ssaa'\)
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        18:27:53
+
+
+    
+    </td>
+    <td valign="top">
+    
+        DATETIME \('hh:nn:ss'\)
+
+
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+        12/31/98 02:01:50AM
+
+
+    
+    </td>
+    <td valign="top">
+    
+        DATETIME \('MM/DD/YY hh:nn:ssaa'\)
 
 
     
@@ -1260,71 +1933,12 @@ Use the VALUE option to specify a load default column value. You can load a defa
 -   The LOAD TABLE DEFAULTS option must be ON in order to use the default value specified in the LOAD TABLE statement. If the DEFAULTS option is OFF, the specified load default value is used and a NULL value is inserted into the column instead.
 -   The LOAD TABLE statement must contain at least one column that needs to be loaded from the file specified in the LOAD TABLE statement. Otherwise, an error is reported and the load is performed.
 -   The specified load default value must conform to the supported default values for columns and default value restrictions. The LOAD TABLE DEFAULT option doesn't support AUTOINCREMENT, IDENTITY, or GLOBAL AUTOINCREMENT as a load default value.
--   The LOAD TABLE VALUE *<default-value\>* must be of the same character set as that of the database.
 -   Encryption of the default value isn't supported for the load default values specified in the LOAD TABLE VALUE clause.
 -   A constraint violation caused by evaluation of the specified load default value is counted for each row that is inserted in the table.
 
 Use the MISSING DEFAULT option to specify a default column value to use if the column cannot be matched with a column in the loaded file. This option only applies when ALLOW MISSING COLUMNS is ON.
 
 Another important part of the *<load-specification\>* is the FILLER option. This option indicates you want to skip over a specified field in the source input file. For example, there may be characters at the end of rows or even entire fields in the input files that you don't want to add to the table. As with the *<column-spec\>* definition, FILLER specifies ASCII fixed length of bytes, variable length characters delimited by a separator, and binary fields using PREFIX bytes.
-
-
-
-### Parquet Files
-
-By default, data lake Relational Engine loads data from Parquet files into a table using the column order in the file: the first column in the Parquet file is loaded into the first column in the LOAD TABLE statement, and so on. Use the FROM COLUMN syntax to override this order with a specific column in the Parquet file, using either the column name or column number \(1-origin\). Case-sensitive column names are preferred when matching, but if there are no case-sensitive matches, case-insensitive names are matched. If there are multiple matches in either step of matching, the statement fails. If there are no matches, the statement may fail depending on the ALLOW MISSING COLUMNS settings.
-
-Specifying FROM COLUMN overrides WITH MATCHING COLUMN NAMES for that column.
-
-When you specify FROM COLUMN for a column, that column still occupies its position when determining which data is loaded into other columns:
-
-```
-LOAD INTO TABLE T (
-	time_stamp, -- Column 1
-	humid FROM COLUMN 'humidity', -- Column 2, overridden
-	temp, -- Column 3 )
-FROM 'file1.parquet'
-FORMAT parquet
-ESCAPES OFF ;
-```
-
-In this example, temp still gets data from the third column in the Parquet file because it is the third column in the statement.
-
-When you specify FORMAT parquet in the LOAD TABLE statement, data lake Relational Engine ignores the following *<column-spec\>* options and issues a message with this information:
-
-```
-ASCII ( <input-width> )
-```
-
-```
-PREFIX { 1 | 2 | 4 }
-```
-
-```
-BINARY [ WITH NULL BYTE ]
-```
-
-```
-PREFIX { 1 | 2 | 4 } BINARY [ WITH NULL BYTE ] [ VARYING ]
-```
-
-```
-'<delimiter-string>'
-```
-
-The FORMAT parquet clause doesn't support the following *<load-specification\>* options. If you specify both, data lake Relational Engine returns an error and rolls back the LOAD TABLE statement:
-
-```
-FILLER <filler-type>
-```
-
-```
-<filler-type> ::=
-    { <input-width>
-     | PREFIX { 1 | 2 | 4 }
-     | '<delimiter-string>'
-      }
-```
 
 
 
@@ -1336,7 +1950,10 @@ FILLER <filler-type>
 
 ### 
 
- You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\). 
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 
@@ -1725,76 +2342,6 @@ LOAD TABLE T5 (C1,C2,C3 ASCII FILE (',') NULL('NULL'),C4 BINARY FILE (',') NULL(
     ESCAPES OFF;
 ```
 
-**Example 6:** This example loads a Parquet file. The statement loads five columns into table T6 from Parquet file `MULTI.PARQUET`.
-
-Example 6 syntax for Azure:
-
-```
-LOAD TABLE T6 
-    ( C1, C2, C3, C4, C5 )
-    FROM 'bb://MY_AZURE_CONTAINER_6/MULTI.PARQUET'
-    FORMAT PARQUET
-    CONNECTION_STRING 'DefaultEndpointsProtocol=https;AccountName=example;
-        AccountKey=example_key;
-        EndpointSuffix=core.windows.net'
-    ESCAPES OFF;
-```
-
-Example 6 syntax for Amazon S3:
-
-```
-LOAD TABLE T6 
-    ( C1, C2, C3, C4, C5 )
-    FROM 's3://MY_BUCKET_6/MULTI.PARQUET'
-    FORMAT PARQUET
-    CONNECTION_STRING 'ACCESS_KEY_ID=xyz;
-        SECRET_ACCESS_KEY=abc;
-        REGION=eu-central-1;
-        SESSION_TOKEN=pqr'
-    ESCAPES OFF;
-```
-
-Example 6 syntax for SAP Converged Cloud, which is an S3-compliant provider:
-
-```
-LOAD TABLE T6
-    ( C1, C2, C3, C4, C5 )
-    USING FILE 's3://sap-hanadatalake/hdl_folder/MULTI.PARQUET'
-    FORMAT PARQUET
-    CONNECTION_STRING 'ACCESS_KEY_ID=ftwbaebtwjomo;
-        SECRET_ACCESS_KEY=fomoicymiimhoidc;
-        ENDPOINT_TYPE=PATH;
-	   REGION=eu-de-1;
-        ENDPOINT=https://objectstore-3.eu-de-1.cloud.sap'
-    ESCAPES OFF;
-```
-
-\(DEPRECATED\) Example 6 syntax for Amazon S3:
-
-```
-LOAD TABLE T6 
-    ( C1, C2, C3, C4, C5 )
-    FROM 's3://MY_BUCKET_6/MULTI.PARQUET'
-    FORMAT PARQUET
-    ACCESS_KEY_ID 'DNLDLRVIRGQQ9EXAMPLE'
-    SECRET_ACCESS_KEY 'CMKCKQUHQFPP8EXAMPLE/123abc/Example12'
-    REGION 'us-east-2'
-    ESCAPES OFF;
-```
-
-Example 6 syntax for Google Cloud:
-
-```
-LOAD TABLE T6 
-    ( C1, C2, C3, C4, C5 )
-    FROM 'gs://MY_BUCKET_6/MULTI.PARQUET'
-    FORMAT PARQUET
-    CONNECTION_STRING 'client_email=XXXXXXXX;
-    private_key=-----BEGIN PRIVATE KEY-----\nXXXXXXXX\n-----END PRIVATE KEY-----\n;
-    private_key_id=XXXXXXXX'
-    ESCAPES OFF;
-```
-
 Example 7 syntax showing LOAD from data lake Files:
 
 ```
@@ -2068,29 +2615,10 @@ LOAD TABLE t1 (c1 PREFIX 2 BINARY WITH NULL BYTE) FROM 'xxx' FORMAT BINARY
 
 You can only specify prefix *<n\>* binary for VARCHAR and VARBINARY columns; which in this example is c1.
 
-This example loads three Parquet files into a table, using two load groups to handle differences in column names between the files:
-
-```
-LOAD INTO TABLE T (
-    temperature FROM COLUMN 'Temperature',
-    Humidity FROM COLUMN 'Humidity',
-    ts FROM COLUMN 'Time'
-) 
-    FROM file1.parquet, file3.parquet
-( 
-    humidity FROM COLUMN 'Humidity',
-    temperature FROM COLUMN Temperature',
-    ts FROM COLUMN 'Timestamp'  
-) 
-    FROM file2.parquet
-    FORMAT PARQUET
-    ESCAPES OFF ;
-```
-
 **Related Information**  
 
 
-[LOAD TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/7ca3f60902f3473296cb309533d89210.html "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, S3-compliant bucket, or a Google Cloud Storage) or from data lake Files containers (the managed object store).") :arrow_upper_right:
+[LOAD TABLE Statement for Data Lake Relational Engine (Non-Parquet Formats)](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/7ca3f60902f3473296cb309533d89210.html "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or a Google Cloud Storage) or from data lake Files containers (the managed object store).") :arrow_upper_right:
 
 [SAP HANA Cloud, Data Lake Load and Unload Management](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_1_QRC/en-US/e77c96193a604e05ba198e424de2ed6c.html "Data load (import) and export (unload) procedures for data lake Relational Engine, including loading from and unloading to data lake Files.") :arrow_upper_right:
 

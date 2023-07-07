@@ -6,11 +6,6 @@ Validates changes to the settings of existing LDAP server configuration objects 
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -26,19 +21,18 @@ VALIDATE LDAP SERVER [ { <ldapua-server-name> | <ldapua-server-attributes> } ]
 ```
 <ldapua-server-attributes> ::=
    { SEARCH DN
-      { URL { '[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <URL_string> (varname]' | NULL } 
-         | ACCESS ACCOUNT { '[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <DN_string> (varname]' | NULL } 
-         | IDENTIFIED BY { '[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <password> (varname]' | NULL }
-      | AUTHENTICATION URL { '[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <URL_string> (varname]' | NULL } 
-      | CONNECTION TIMEOUT [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <timeout_value> (varname] 
-      | CONNECTION RETRIES [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <retry_value> (varname]  }
+      { URL { '<URL_string>' | NULL } 
+         | ACCESS ACCOUNT { '<DN_string>' | NULL } 
+         | IDENTIFIED BY { '<password>' | NULL }
+      | AUTHENTICATION URL { '<URL_string>' | NULL } 
+      | CONNECTION TIMEOUT <timeout_value> 
+      | CONNECTION RETRIES <retry_value>  }
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -46,37 +40,122 @@ VALIDATE LDAP SERVER [ { <ldapua-server-name> | <ldapua-server-attributes> } ]
 
 ## Parameters
 
- *<ldapua-server-name\>*
- :   Identifies the LDAP server configuration object.
 
-  URL \{ '*<URL\_string\>*' | NULL \}
- :   Identifies the host \(by name or by IP address\), port number, and the search to be performed for the DN lookup for a given user ID. This value is validated for correct LDAP URL syntax before it is stored in the `ISYSLDAPSERVER` system table. The maximum size for this string is 1024 bytes.
+<dl>
+<dt><b>
 
-  ACCESS ACCOUNT \{ '*<DN\_string\>*' | NULL \}
- :   A user created on the LDAP server for use by data lake Relational Engine, not a user within data lake Relational Engine. The distinguished name \(DN\) for this user is used to connect to the LDAP server. This user has permissions within the LDAP server to search for DNs by user ID in the locations specified by the SEARCH DN URL. The maximum size for this string is 1024 bytes.
+*<ldapua-server-name\>*
 
-  IDENTIFIED BY \{ '*<password\>*' | NULL \}
- :   Provides the password associated with the ACCESS ACCOUNT user. The password is stored using symmetric encryption on disk. Use the value NULL to clear the password and set it to none. The maximum size of a clear text password is 255 bytes.
+</b></dt>
+<dd>
 
-  IDENTIFIED BY ENCRYPTED \{ *<encrypted-password\>* | NULL \}
- :   Configures the password associated with the ACCESS ACCOUNT distinguished name in an encrypted format. The binary value is the encrypted password and is stored on disk as is. Use the value NULL to clear the password and set it to none. The maximum size of the binary is 289 bytes.
+Identifies the LDAP server configuration object.
 
-  AUTHENTICATION URL \{ '*<URL\_string\>*' | NULL \}
- :   Identifies the host \(by name or IP address\) and the port number of the LDAP server to use for authentication of the user. This is the value defined for *<URL\_string\>* and is validated for correct LDAP URL syntax before it is stored in `ISYSLDAPSERVER` system table. The DN of the user obtained from a prior DN search and the user password bind a new connection to the authentication URL. A successful connection to the LDAP server is considered proof of the identity of the connecting user. The maximum size for this string is 1024 bytes.
 
-  CONNECTION TIMEOUT *<timeout\_value\>*
- :   Specifies the connection timeout from data lake Relational Engine to the LDAP server for both DN searches and authentication. This value is in milliseconds, with a default value of 10 seconds.
 
-  CONNECTION RETRIES*<retry\_value\>*
- :   Specifies the number of retries on connections from data lake Relational Engine to the LDAP server for both DN searches and authentication. The valid range of values is 1 through 60, with a default value of 3.
+</dd><dt><b>
 
-  CHECK *<userid\>*
- :   The userID whose existence is validated on the LDAP server.
+URL \{ '*<URL\_string\>*' | NULL \}
 
-  *<user-dn-string\>*
- :   Compares a user's DN value with the user ID for verification purposes.
+</b></dt>
+<dd>
 
- 
+Identifies the host \(by name or by IP address\), port number, and the search to be performed for the DN lookup for a given user ID. This value is validated for correct LDAP URL syntax before it is stored in the `ISYSLDAPSERVER` system table. The maximum size for this string is 1024 bytes.
+
+
+
+</dd><dt><b>
+
+ACCESS ACCOUNT \{ '*<DN\_string\>*' | NULL \}
+
+</b></dt>
+<dd>
+
+A user created on the LDAP server for use by data lake Relational Engine, not a user within data lake Relational Engine. The distinguished name \(DN\) for this user is used to connect to the LDAP server. This user has permissions within the LDAP server to search for DNs by user ID in the locations specified by the SEARCH DN URL. The maximum size for this string is 1024 bytes.
+
+
+
+</dd><dt><b>
+
+IDENTIFIED BY \{ '*<password\>*' | NULL \}
+
+</b></dt>
+<dd>
+
+Provides the password associated with the ACCESS ACCOUNT user. The password is stored using symmetric encryption on disk. Use the value NULL to clear the password and set it to none. The maximum size of a clear text password is 255 bytes.
+
+
+
+</dd><dt><b>
+
+IDENTIFIED BY ENCRYPTED \{ *<encrypted-password\>* | NULL \}
+
+</b></dt>
+<dd>
+
+Configures the password associated with the ACCESS ACCOUNT distinguished name in an encrypted format. The binary value is the encrypted password and is stored on disk as is. Use the value NULL to clear the password and set it to none. The maximum size of the binary is 289 bytes.
+
+
+
+</dd><dt><b>
+
+AUTHENTICATION URL \{ '*<URL\_string\>*' | NULL \}
+
+</b></dt>
+<dd>
+
+Identifies the host \(by name or IP address\) and the port number of the LDAP server to use for authentication of the user. This is the value defined for *<URL\_string\>* and is validated for correct LDAP URL syntax before it is stored in `ISYSLDAPSERVER` system table. The DN of the user obtained from a prior DN search and the user password bind a new connection to the authentication URL. A successful connection to the LDAP server is considered proof of the identity of the connecting user. The maximum size for this string is 1024 bytes.
+
+
+
+</dd><dt><b>
+
+CONNECTION TIMEOUT *<timeout\_value\>*
+
+</b></dt>
+<dd>
+
+Specifies the connection timeout from data lake Relational Engine to the LDAP server for both DN searches and authentication. This value is in milliseconds, with a default value of 10 seconds.
+
+
+
+</dd><dt><b>
+
+CONNECTION RETRIES*<retry\_value\>*
+
+</b></dt>
+<dd>
+
+Specifies the number of retries on connections from data lake Relational Engine to the LDAP server for both DN searches and authentication. The valid range of values is 1 through 60, with a default value of 3.
+
+
+
+</dd><dt><b>
+
+CHECK *<userid\>*
+
+</b></dt>
+<dd>
+
+The userID whose existence is validated on the LDAP server.
+
+
+
+</dd><dt><b>
+
+*<user-dn-string\>*
+
+</b></dt>
+<dd>
+
+Compares a user's DN value with the user ID for verification purposes.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa426f91384f21015b827d45ce9fce3a7__IQ_Usage"/>
 

@@ -255,13 +255,34 @@ FP index type.
 
 ## Parameters
 
- *<table.name\>*
- :   A parameter that specifies the name of the table.
 
-  *<owner-name\>*
- :   A parameter that specifies the owner name.
+<dl>
+<dt><b>
 
- 
+*<table.name\>*
+
+</b></dt>
+<dd>
+
+A parameter that specifies the name of the table.
+
+
+
+</dd><dt><b>
+
+*<owner-name\>*
+
+</b></dt>
+<dd>
+
+A parameter that specifies the owner name.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa87e284f84f21015b893da0ff4572d65__section_rqy_bvz_mbb"/>
 
@@ -275,63 +296,13 @@ Include the optional *<table.name\>* parameter to generate details for that tabl
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). If you own the object referenced by the procedure, no additional privilege is required.
-
-If you own the object, no additional privilege is require.
+Requires EXECUTE object-level privilege on the procedure. If you own the object referenced by the procedure, no additional privilege is required.
 
 For objects owned by others, you need one of the following privileges:
 
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
 -   ALTER ANY INDEX system privilege
 -   ALTER ANY OBJECT system privilege
--   REFERENCES permissions on the table
-
-
-
-</td>
-<td valign="top">
-
-System privileges
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+-   REFERENCES object-level privilege on the table
 
 
 

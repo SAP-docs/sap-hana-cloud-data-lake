@@ -6,11 +6,6 @@ Sets the default schema for the connection
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -24,11 +19,8 @@ SET SCHEMA [ <schema_name> ]
 
 
 
-<a name="loiob23679a94d9f45a4b169f484005f46da__set_schema_remarks1"/>
-
-## Remarks
-
-When executing a SQL statement that references a database object, if a schema name is not specified, then the current value of the SET SCHEMA statement is cleared. The SET schema remains in effect for the duration of the connection or until reset to another schema name or cleared.
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -41,6 +33,14 @@ When executing a SQL statement that references a database object, if a schema na
 ### 
 
 None
+
+
+
+<a name="loiob23679a94d9f45a4b169f484005f46da__set_schema_remarks1"/>
+
+## Remarks
+
+When executing a SQL statement that references a database object, if a schema name is not specified, then the current value of the SET SCHEMA statement is cleared. The SET schema remains in effect for the duration of the connection or until reset to another schema name or cleared.
 
 
 

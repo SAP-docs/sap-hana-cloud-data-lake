@@ -28,10 +28,23 @@ sp_iqconnection [ <connhandle> ]
 
 ## Parameters
 
- *<connhandle\>*
- :   The ID number of the connection.
 
- 
+<dl>
+<dt><b>
+
+*<connhandle\>*
+
+</b></dt>
+<dd>
+
+The ID number of the connection.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa4da343584f210159719d7a4830c267f__IQ_Returns"/>
 
@@ -540,59 +553,10 @@ p.put("RemotePWD",",,CON=myconnection");
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). 
+Requires all of:
 
-You also need one of the following:
-
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
--   MONITOR
-
-
-
-</td>
-<td valign="top">
-
-System privileges
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+-   EXECUTE object-level privilege on the procedure
+-   MONITOR system privilege
 
 
 

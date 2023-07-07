@@ -6,11 +6,6 @@ Removes a class, a package, or a JAR file from a database. Removed classes are n
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -29,23 +24,65 @@ REMOVE JAVA <classes_to_remove>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa6230d6784f21015819abbfa7efd1fde__IQ_Parameters"/>
 
 ## Parameters
 
- CLASS *<java\_class\_name\>*
- :   Specifies the name of one or more Java classes to be removed. Those classes must be installed classes in the current database.
 
-  PACKAGE *<java\_package\_name\>*
- :   Specifies the name of one or more Java packages to be removed. Those packages must be the name of packages in the current database.
+<dl>
+<dt><b>
 
-  JAR *<jar\_name\>*
- :   Specifies a character string value of maximum length 255. Each *<jar\_name\>* must be equal to the *<jar\_name\>* of a retained JAR in the current database. Equality of *<jar\_name\>* is determined by the character string comparison rules of the SQL system.
+CLASS *<java\_class\_name\>*
 
-  RETAIN CLASSES
- :   The specified JARs are no longer retained in the database, and the retained classes have no associated JAR. If RETAIN CLASSES is specified, this is the only action of the `REMOVE` statement.
+</b></dt>
+<dd>
 
- 
+Specifies the name of one or more Java classes to be removed. Those classes must be installed classes in the current database.
+
+
+
+</dd><dt><b>
+
+PACKAGE *<java\_package\_name\>*
+
+</b></dt>
+<dd>
+
+Specifies the name of one or more Java packages to be removed. Those packages must be the name of packages in the current database.
+
+
+
+</dd><dt><b>
+
+JAR *<jar\_name\>*
+
+</b></dt>
+<dd>
+
+Specifies a character string value of maximum length 255. Each *<jar\_name\>* must be equal to the *<jar\_name\>* of a retained JAR in the current database. Equality of *<jar\_name\>* is determined by the character string comparison rules of the SQL system.
+
+
+
+</dd><dt><b>
+
+RETAIN CLASSES
+
+</b></dt>
+<dd>
+
+The specified JARs are no longer retained in the database, and the retained classes have no associated JAR. If RETAIN CLASSES is specified, this is the only action of the `REMOVE` statement.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa6230d6784f21015819abbfa7efd1fde__IQ_Permissions"/>
 

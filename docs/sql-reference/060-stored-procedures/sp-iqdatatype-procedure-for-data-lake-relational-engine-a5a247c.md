@@ -23,20 +23,49 @@ sp_iqdatatype [ <type-name> ], [ <type-owner> ], [ <type-type> ]
 
 ## Parameters
 
- *<type-name\>*
- :   The name of the data type.
 
-  *<type-owner\>*
- :   The name of the creator of the data type.
+<dl>
+<dt><b>
 
-  *<type-type\>*
- :   The type of data type. Allowed values are:
+*<type-name\>*
 
-    -   SYSTEM – displays information about system defined data types \(data types owned by user SYS or dbo\) only
-    -   ALL – displays information about user and system data types
-    -   Any other value – displays information about user data types
+</b></dt>
+<dd>
 
- 
+The name of the data type.
+
+
+
+</dd><dt><b>
+
+*<type-owner\>*
+
+</b></dt>
+<dd>
+
+The name of the creator of the data type.
+
+
+
+</dd><dt><b>
+
+*<type-type\>*
+
+</b></dt>
+<dd>
+
+The type of data type. Allowed values are:
+
+-   SYSTEM – displays information about system defined data types \(data types owned by user SYS or dbo\) only
+-   ALL – displays information about user and system data types
+-   Any other value – displays information about user data types
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5a247c884f21015aec1a5aff2384bc2__section_yyv_yrz_mbb"/>
 
@@ -196,7 +225,7 @@ The sp\_iqdatatype procedure returns information in the following columns:
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

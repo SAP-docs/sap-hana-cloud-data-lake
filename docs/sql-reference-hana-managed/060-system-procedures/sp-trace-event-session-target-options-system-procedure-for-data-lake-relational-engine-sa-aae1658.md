@@ -27,16 +27,45 @@ sp_trace_event_session_target_options(
 
 ## Parameters
 
-  *<session\_name\>* 
- :   Use this optional CHAR\(256\) parameter to specify the name of the trace event session. The default is NULL. If a session name is not specified or is NULL, information is returned for all trace event sessions.
 
-   *<include\_server\_sessions\>* 
- :   Use this optional BIT parameter to specify whether or not engine-level trace event sessions are returned. This parameter can be 0 \(do not return engine-level trace event sessions\) or 1 \(return engine-level trace event sessions\). The default is 0.
+<dl>
+<dt><b>
 
-   *<include\_audit\_events\>* 
- :   Use this optional BIT parameter to specify whether or not audit events are returned. This parameter can be 0 \(do not return audit events\) or 1 \(return audit events\). The default is 0.
+ *<session\_name\>* 
 
- 
+</b></dt>
+<dd>
+
+Use this optional CHAR\(256\) parameter to specify the name of the trace event session. The default is NULL. If a session name is not specified or is NULL, information is returned for all trace event sessions.
+
+
+
+</dd><dt><b>
+
+ *<include\_server\_sessions\>* 
+
+</b></dt>
+<dd>
+
+Use this optional BIT parameter to specify whether or not engine-level trace event sessions are returned. This parameter can be 0 \(do not return engine-level trace event sessions\) or 1 \(return engine-level trace event sessions\). The default is 0.
+
+
+
+</dd><dt><b>
+
+ *<include\_audit\_events\>* 
+
+</b></dt>
+<dd>
+
+Use this optional BIT parameter to specify whether or not audit events are returned. This parameter can be 0 \(do not return audit events\) or 1 \(return audit events\). The default is 0.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioaae165896e5d4689b72835021f67795e__section_inz_tl2_srb"/>
 
@@ -173,7 +202,10 @@ This procedure returns option information for one, or all, trace event sessions 
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

@@ -23,29 +23,58 @@ sp\_delete\_etd\_file\( *<file\_name\_pattern\>*\)
 
 ## Parameters
 
- *<file\_name\_pattern\>*
- :   Enter a file name pattern for ETD file name matching. Accepts the wildcard characters ***\**** and ***?*** .
 
-    If null, then deletes all ETD files.
+<dl>
+<dt><b>
 
- 
+*<file\_name\_pattern\>*
+
+</b></dt>
+<dd>
+
+Enter a file name pattern for ETD file name matching. Accepts the wildcard characters ***\**** and ***?*** .
+
+If null, then deletes all ETD files.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioee5019e64a0247cbaf7c8cde5905b3a2__section_lzx_3d2_srb"/>
 
 ## Parameters
 
- *<file\_name\_pattern\>*
- :   Enter a file name pattern for ETD file name matching. Accepts the wildcard characters ***\**** and ***?*** .
 
-    If null, then deletes all ETD files.
+<dl>
+<dt><b>
 
- 
+*<file\_name\_pattern\>*
+
+</b></dt>
+<dd>
+
+Enter a file name pattern for ETD file name matching. Accepts the wildcard characters ***\**** and ***?*** .
+
+If null, then deletes all ETD files.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioee5019e64a0247cbaf7c8cde5905b3a2__section_x1g_44c_zmb"/>
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

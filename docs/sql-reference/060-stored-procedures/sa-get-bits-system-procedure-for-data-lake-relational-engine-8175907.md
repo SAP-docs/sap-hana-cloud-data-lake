@@ -26,13 +26,34 @@ sa_get_bits(
 
 ## Parameters
 
-  *<bit\_string\>* 
- :   Use this LONG VARBIT parameter to specify the bit string from which to get the bits. If the *<bit\_string\>* parameter is NULL, then no rows are returned.
 
-   *<only\_on\_bits\>* 
- :   Use this optional BIT parameter to specify whether to return only rows with on bits \(bits with the value of 1\). Specify 1 \(the default\) to return only rows with on bits; specify 0 to return rows for all bits in the bit string.
+<dl>
+<dt><b>
 
- 
+ *<bit\_string\>* 
+
+</b></dt>
+<dd>
+
+Use this LONG VARBIT parameter to specify the bit string from which to get the bits. If the *<bit\_string\>* parameter is NULL, then no rows are returned.
+
+
+
+</dd><dt><b>
+
+ *<only\_on\_bits\>* 
+
+</b></dt>
+<dd>
+
+Use this optional BIT parameter to specify whether to return only rows with on bits \(bits with the value of 1\). Specify 1 \(the default\) to return only rows with on bits; specify 0 to return rows for all bits in the bit string.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio817590756ce21014a0abf2e01acdf61e__sa_get_bits_output1"/>
 
@@ -177,11 +198,18 @@ The sa\_get\_bits system procedure can be used to convert a bit string into a re
 
 
 
-<a name="loio817590756ce21014a0abf2e01acdf61e__section_rbg_lhd_srb"/>
+<a name="loio817590756ce21014a0abf2e01acdf61e__sa_get_bits_priv1"/>
 
-## Permissions
+## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). You also need the MONITOR system privilege.
+
+
+### 
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure
+-   MONITOR system privilege
 
 
 
@@ -194,5 +222,5 @@ None
 **Related Information**  
 
 
-[sa_get_bits System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/dc051ed9b19649ec91efd03e157132cb.html "Takes a bit string and returns a row for each bit in the string. By default, only rows with a bit value of 1 are returned.") :arrow_upper_right:
+[sa_get_bits System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/dc051ed9b19649ec91efd03e157132cb.html "Takes a bit string and returns a row for each bit in the string. By default, only rows with a bit value of 1 are returned.") :arrow_upper_right:
 

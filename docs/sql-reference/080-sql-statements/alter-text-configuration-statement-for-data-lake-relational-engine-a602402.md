@@ -6,11 +6,6 @@ Alters a text configuration object.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -19,9 +14,7 @@ Alters a text configuration object.
 
 
 ```
-ALTER TEXT CONFIGURATION [ { [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <schema-name> (varname] }.]<config-name>
+ALTER TEXT CONFIGURATION [ { <owner> | <schema-name> }.]<config-name>
 ...{ STOPLIST <stoplist> 
 ...| DROP STOPLIST
 ...| { MINIMUM | MAXIMUM } TERM LENGTH <integer>
@@ -32,34 +25,100 @@ ALTER TEXT CONFIGURATION [ { [/pandoc/div/div/horizontalrule/codeblock/span/va
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa602402c84f21015a00eb58f531612a0__IQ_Parameters"/>
 
 ## Parameters
 
- DROP *<stoplist\>*
- :   A string expression used to create or replace the list of terms to ignore when building a TEXT index. Terms specified in this list are also ignored in a query. Separate stoplist terms with spaces.
 
-    Stoplist terms cannot contain whitespace and should not contain non-alphanumeric characters. Non-alphanumeric characters are interpreted as spaces and break the term into multiple terms. For example, “and/or” is interpreted as the two terms “and” and “or”. The maximum number of stoplist terms is 7999.
+<dl>
+<dt><b>
 
-  DROP STOPLIST
- :   Use to drop the stoplist for a text configuration object.
+DROP *<stoplist\>*
 
-  MINIMUM TERM LENGTH
- :   Specifies the minimum length, in characters, of a term to include in the TEXT index. The value specified in the MINIMUM TERM LENGTH clause is ignored when using NGRAM TEXT indexes. Terms that are shorter than this setting are ignored when building or refreshing the TEXT index. The value of this option must be greater than 0. If you set this option to be higher than MAXIMUM TERM LENGTH, the value of MAXIMUM TERM LENGTH is automatically adjusted to be the same as the new MINIMUM TERM LENGTH value.
+</b></dt>
+<dd>
 
-  MAXIMUM TERM LENGTH
- :   With GENERIC TEXT indexes, specifies the maximum length, in characters, of a term to include in the TEXT index. Terms that are longer than this setting are ignored when building or refreshing the TEXT index. The value of MAXIMUM TERM LENGTH must be less than or equal to 60. If you set this option to be lower than MINIMUM TERM LENGTH, the value of MINIMUM TERM LENGTH is automatically adjusted to be the same as the new MAXIMUM TERM LENGTH value.
+A string expression used to create or replace the list of terms to ignore when building a TEXT index. Terms specified in this list are also ignored in a query. Separate stoplist terms with spaces.
 
-  TERM BREAKER
- :   Specifies the name of the algorithm to use for separating column values into terms. The choices for IN SYSTEM tables are GENERIC \(the default\) or NGRAM. The GENERIC algorithm treats any string of one or more alphanumerics, separated by non-alphanumerics, as a term. The NGRAM algorithm breaks strings into n-grams. An n-gram is an n-character substring of a larger string. The NGRAM term breaker is required for fuzzy \(approximate\) matching, or for documents that do not use whitespace or non-alphanumeric characters to separate terms. NGRAM is supported for IN SYSTEM tables. NGRAM term breaker is built on TEXT indexes, so use text configuration object settings to define whether to use an NGRAM or GENERIC TEXT index. TERM BREAKER can include the specification for the external term breaker library using EXTERNAL NAME and the library entry point.
+Stoplist terms cannot contain whitespace and should not contain non-alphanumeric characters. Non-alphanumeric characters are interpreted as spaces and break the term into multiple terms. For example, “and/or” is interpreted as the two terms “and” and “or”. The maximum number of stoplist terms is 7999.
 
-  PREFILTER EXTERNAL NAME
- :   Specifies the entry\_point and the library name of the external pre-filter library provided by external vendors.
 
-  DROP PREFILTER
- :   Drops the external prefilter and sets NULL to the prefilter columns in `ISYSTEXTCONFIG` table.
 
- 
+</dd><dt><b>
+
+DROP STOPLIST
+
+</b></dt>
+<dd>
+
+Use to drop the stoplist for a text configuration object.
+
+
+
+</dd><dt><b>
+
+MINIMUM TERM LENGTH
+
+</b></dt>
+<dd>
+
+Specifies the minimum length, in characters, of a term to include in the TEXT index. The value specified in the MINIMUM TERM LENGTH clause is ignored when using NGRAM TEXT indexes. Terms that are shorter than this setting are ignored when building or refreshing the TEXT index. The value of this option must be greater than 0. If you set this option to be higher than MAXIMUM TERM LENGTH, the value of MAXIMUM TERM LENGTH is automatically adjusted to be the same as the new MINIMUM TERM LENGTH value.
+
+
+
+</dd><dt><b>
+
+MAXIMUM TERM LENGTH
+
+</b></dt>
+<dd>
+
+With GENERIC TEXT indexes, specifies the maximum length, in characters, of a term to include in the TEXT index. Terms that are longer than this setting are ignored when building or refreshing the TEXT index. The value of MAXIMUM TERM LENGTH must be less than or equal to 60. If you set this option to be lower than MINIMUM TERM LENGTH, the value of MINIMUM TERM LENGTH is automatically adjusted to be the same as the new MAXIMUM TERM LENGTH value.
+
+
+
+</dd><dt><b>
+
+TERM BREAKER
+
+</b></dt>
+<dd>
+
+Specifies the name of the algorithm to use for separating column values into terms. The choices for IN SYSTEM tables are GENERIC \(the default\) or NGRAM. The GENERIC algorithm treats any string of one or more alphanumerics, separated by non-alphanumerics, as a term. The NGRAM algorithm breaks strings into n-grams. An n-gram is an n-character substring of a larger string. The NGRAM term breaker is required for fuzzy \(approximate\) matching, or for documents that do not use whitespace or non-alphanumeric characters to separate terms. NGRAM is supported for IN SYSTEM tables. NGRAM term breaker is built on TEXT indexes, so use text configuration object settings to define whether to use an NGRAM or GENERIC TEXT index. TERM BREAKER can include the specification for the external term breaker library using EXTERNAL NAME and the library entry point.
+
+
+
+</dd><dt><b>
+
+PREFILTER EXTERNAL NAME
+
+</b></dt>
+<dd>
+
+Specifies the entry\_point and the library name of the external pre-filter library provided by external vendors.
+
+
+
+</dd><dt><b>
+
+DROP PREFILTER
+
+</b></dt>
+<dd>
+
+Drops the external prefilter and sets NULL to the prefilter columns in `ISYSTEXTCONFIG` table.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa602402c84f21015a00eb58f531612a0__IQ_Usage"/>
 

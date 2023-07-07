@@ -6,11 +6,6 @@ Creates a user-defined function in the database. A function can be created for a
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -19,27 +14,20 @@ Creates a user-defined function in the database. A function can be created for a
 
 
 ```
-CREATE [ OR REPLACE ] [ TEMPORARY ] FUNCTION [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) { [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] } (span].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <function-name> (varname]
-   [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) ( [ IN [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <parameter-name> (varname] [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <data-type> (varname] [ DEFAULT [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <expression> (varname] ], … ] )
-   RETURNS [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <data-type> (varname] 
+CREATE [ OR REPLACE ] [ TEMPORARY ] FUNCTION [ { <owner> | <schema-name> }.]<function-name>
+   ( [ IN <parameter-name> <data-type> [ DEFAULT <expression> ], … ] )
+   RETURNS <data-type> 
    [ SQL SECURITY { INVOKER | DEFINER } ]
    [ ON EXCEPTION RESUME ]
    [ [ NOT ] DETERMINISTIC ]
-   { [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <compound-statement> (varname] 
-      | AS [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <sql-statement> (varname] [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <sql-statement> (varname]... } (span]
+   { <compound-statement> 
+      | AS <sql-statement> <sql-statement>... }
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -47,53 +35,114 @@ CREATE [ OR REPLACE ] [ TEMPORARY ] FUNCTION [ [/pandoc/div/div/horizontalrul
 
 ## Parameters
 
- CREATE \[ OR REPLACE \]
- :   Parameter names must conform to the rules for database identifiers. They must have a valid SQL data type and be prefixed by the keyword IN, signifying that the argument is an expression that provides a value to the function.
 
-    The CREATE clause creates a new function, while the OR REPLACE clause replaces an existing function with the same name. When a function is replaced, the definition of the function is changed but the existing permissions are preserved. You cannot use the OR REPLACE clause with temporary functions.
+<dl>
+<dt><b>
 
-  TEMPORARY
- :   The function is visible only by the connection that created it, and that it is automatically dropped when the connection is dropped. Temporary functions can also be explicitly dropped. You cannot perform ALTER, GRANT, or REVOKE operations on them, and unlike other functions, temporary functions are not recorded in the catalog or transaction log.
+CREATE \[ OR REPLACE \]
 
-    Temporary functions execute with the permissions of their creator \(current user\), and can only be owned by their creator. Therefore, do not specify owner when creating a temporary function. They can be created and dropped when connected to a read-only database.
+</b></dt>
+<dd>
 
-  SQL SECURITY
- :   Defines whether the function is executed as the INVOKER, the user who is calling the function, or as the DEFINER, the user who owns the function. The default is DEFINER.
+Parameter names must conform to the rules for database identifiers. They must have a valid SQL data type and be prefixed by the keyword IN, signifying that the argument is an expression that provides a value to the function.
 
-    When INVOKER is specified, more memory is used because annotation must be done for each user that calls the procedure. Also, name resolution is done as the invoker as well. Therefore, take care to qualify all object names \(tables, procedures, and so on\) with their appropriate owner.
+The CREATE clause creates a new function, while the OR REPLACE clause replaces an existing function with the same name. When a function is replaced, the definition of the function is changed but the existing permissions are preserved. You cannot use the OR REPLACE clause with temporary functions.
 
-  *<data-type\>*
- :   The data type of the parameter. Set the data type explicitly, or specify the %TYPE or %ROWTYPE attribute to set the data type to the data type of another object in the database. Use %TYPE to set it to the data type of a column in a table or view. Use %ROWTYPE to set the data type to a composite data type derived from a row in a table or view. LONG BINARY and LONG VARCHAR are not permitted as return-value data types.
 
-  *<compound-statement\>*
- :   A set of SQL statements bracketed by BEGIN and END, and separated by semicolons. See *BEGIN … END Statement*.
 
-  ON EXCEPTION RESUME
- :   Uses Transact-SQL-like error handling. See *CREATE PROCEDURE Statement*.
+</dd><dt><b>
 
-  \[NOT\] DETERMINISTIC
- :   Function is re-evaluated each time it is called in a query. The results of functions not specified in this manner may be cached for better performance, and re-used each time the function is called with the same parameters during query evaluation.
+TEMPORARY
 
-    Functions that have side effects, such as modifying the underlying data, should be declared as NOT DETERMINISTIC. For example, a function that generates primary key values and is used in an INSERT … SELECT statement should be declared NOT DETERMINISTIC:
+</b></dt>
+<dd>
 
-    ```
-    CREATE FUNCTION keygen( increment INTEGER ) 
-    RETURNS INTEGER 
-    NOT DETERMINISTIC 
-    BEGIN   
-      DECLARE keyval INTEGER;  
-      UPDATE counter SET x = x + increment;  
-      SELECT counter.x INTO keyval FROM counter;   
-      RETURN keyval 
-    END 
-    INSERT INTO new_table 
-    SELECT keygen(1), ... 
-    FROM old_table
-    ```
+The function is visible only by the connection that created it, and that it is automatically dropped when the connection is dropped. Temporary functions can also be explicitly dropped. You cannot perform ALTER, GRANT, or REVOKE operations on them, and unlike other functions, temporary functions are not recorded in the catalog or transaction log.
 
-    Functions may be declared as DETERMINISTIC if they always return the same value for given input parameters. All user-defined functions are treated as deterministic unless they are declared NOT DETERMINISTIC. Deterministic functions return a consistent result for the same parameters and are free of side effects. That is, the database server assumes that two successive calls to the same function with the same parameters will return the same result without unwanted side-effects on the semantics of the query.
+Temporary functions execute with the permissions of their creator \(current user\), and can only be owned by their creator. Therefore, do not specify owner when creating a temporary function. They can be created and dropped when connected to a read-only database.
 
- 
+
+
+</dd><dt><b>
+
+SQL SECURITY
+
+</b></dt>
+<dd>
+
+Defines whether the function is executed as the INVOKER, the user who is calling the function, or as the DEFINER, the user who owns the function. The default is DEFINER.
+
+When INVOKER is specified, more memory is used because annotation must be done for each user that calls the procedure. Also, name resolution is done as the invoker as well. Therefore, take care to qualify all object names \(tables, procedures, and so on\) with their appropriate owner.
+
+
+
+</dd><dt><b>
+
+*<data-type\>*
+
+</b></dt>
+<dd>
+
+The data type of the parameter. Set the data type explicitly, or specify the %TYPE or %ROWTYPE attribute to set the data type to the data type of another object in the database. Use %TYPE to set it to the data type of a column in a table or view. Use %ROWTYPE to set the data type to a composite data type derived from a row in a table or view. LONG BINARY and LONG VARCHAR are not permitted as return-value data types.
+
+
+
+</dd><dt><b>
+
+*<compound-statement\>*
+
+</b></dt>
+<dd>
+
+A set of SQL statements bracketed by BEGIN and END, and separated by semicolons. See *BEGIN … END Statement*.
+
+
+
+</dd><dt><b>
+
+ON EXCEPTION RESUME
+
+</b></dt>
+<dd>
+
+Uses Transact-SQL-like error handling. See *CREATE PROCEDURE Statement*.
+
+
+
+</dd><dt><b>
+
+\[NOT\] DETERMINISTIC
+
+</b></dt>
+<dd>
+
+Function is re-evaluated each time it is called in a query. The results of functions not specified in this manner may be cached for better performance, and re-used each time the function is called with the same parameters during query evaluation.
+
+Functions that have side effects, such as modifying the underlying data, should be declared as NOT DETERMINISTIC. For example, a function that generates primary key values and is used in an INSERT … SELECT statement should be declared NOT DETERMINISTIC:
+
+```
+CREATE FUNCTION keygen( increment INTEGER ) 
+RETURNS INTEGER 
+NOT DETERMINISTIC 
+BEGIN   
+  DECLARE keyval INTEGER;  
+  UPDATE counter SET x = x + increment;  
+  SELECT counter.x INTO keyval FROM counter;   
+  RETURN keyval 
+END 
+INSERT INTO new_table 
+SELECT keygen(1), ... 
+FROM old_table
+```
+
+Functions may be declared as DETERMINISTIC if they always return the same value for given input parameters. All user-defined functions are treated as deterministic unless they are declared NOT DETERMINISTIC. Deterministic functions return a consistent result for the same parameters and are free of side effects. That is, the database server assumes that two successive calls to the same function with the same parameters will return the same result without unwanted side-effects on the semantics of the query.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa61796cb84f2101594a2b0b5a6993b95__create_funct_remarks1"/>
 
@@ -201,8 +250,8 @@ Automatic commit
         </tr>
         <tr>
         <td valign="top">
-
-        joe smith
+        
+                joe smith
 
 
         
@@ -230,8 +279,8 @@ Automatic commit
         </tr>
         <tr>
         <td valign="top">
-
-        Fran Whitney
+        
+                Fran Whitney
 
 
         
@@ -239,8 +288,8 @@ Automatic commit
         </tr>
         <tr>
         <td valign="top">
-
-        Matthew Cobb
+        
+                Matthew Cobb
 
 
         
@@ -248,8 +297,8 @@ Automatic commit
         </tr>
         <tr>
         <td valign="top">
-
-        Philip Chin
+        
+                Philip Chin
 
 
         
@@ -257,8 +306,8 @@ Automatic commit
         </tr>
         <tr>
         <td valign="top">
-
-        Julie Jordan
+        
+                Julie Jordan
 
 
         
@@ -266,8 +315,8 @@ Automatic commit
         </tr>
         <tr>
         <td valign="top">
-
-        Robert Breault
+        
+                Robert Breault
 
 
         
@@ -275,8 +324,8 @@ Automatic commit
         </tr>
         <tr>
         <td valign="top">
-
-        ...
+        
+                ...
 
 
         
@@ -314,5 +363,5 @@ Automatic commit
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[CREATE FUNCTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/abddfd62461747b08416521922da3577.html "Creates a user-defined function in the database. A function can be created for another user by specifying an owner name. Subject to permissions, a user-defined function can be used in exactly the same way as other non-aggregate functions.") :arrow_upper_right:
+[CREATE FUNCTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/abddfd62461747b08416521922da3577.html "Creates a user-defined function in the database. A function can be created for another user by specifying an owner name. Subject to permissions, a user-defined function can be used in exactly the same way as other non-aggregate functions.") :arrow_upper_right:
 

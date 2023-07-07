@@ -23,16 +23,45 @@ sp_iqindexsize [ [ <owner>.]<table_name>.]<index_name>
 
 ## Parameters
 
- *<owner\>*
- :   The owner of the table.
 
-  *<table\_name\>*
- :   The name of the table.
+<dl>
+<dt><b>
 
-  *<index\_name\>*
- :   The name of the index.
+*<owner\>*
 
- 
+</b></dt>
+<dd>
+
+The owner of the table.
+
+
+
+</dd><dt><b>
+
+*<table\_name\>*
+
+</b></dt>
+<dd>
+
+The name of the table.
+
+
+
+</dd><dt><b>
+
+*<index\_name\>*
+
+</b></dt>
+<dd>
+
+The name of the index.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa5ad8fe784f21015bda0e710013b6646__sp_iqindexsize_returns1"/>
 
@@ -184,64 +213,20 @@ You must specify the *<index\_name\>* parameter with this procedure. To restrict
 
 
 
-<a name="loioa5ad8fe784f21015bda0e710013b6646__iq_refbb_1619"/>
+<a name="loioa5ad8fe784f21015bda0e710013b6646__sp_iqindexsize_priv1"/>
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). If you own the object referenced by the procedure, no additional privilege is required.
+
+
+### 
+
+Requires EXECUTE object-level privilege on the procedure. If you own the object referenced by the procedure, no additional privilege is required.
 
 For objects owned by others, you need one of the following privileges:
 
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
--   ALTER ANY TABLE
--   ALTER ANY INDEX
-
-
-
-</td>
-<td valign="top">
-
-System privileges
-
-
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
-
-</td>
-</tr>
-</table>
+-   ALTER ANY TABLE system privilege
+-   ALTER ANY INDEX system privilege
 
 
 

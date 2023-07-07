@@ -21,10 +21,23 @@ sa_db_properties( [ <dbidparm> ] )
 
 ## Parameters
 
-  *<dbidparm\>* 
- :   Use this optional INTEGER parameter to specify the database ID number. The default is NULL.
 
- 
+<dl>
+<dt><b>
+
+ *<dbidparm\>* 
+
+</b></dt>
+<dd>
+
+Use this optional INTEGER parameter to specify the database ID number. The default is NULL.
+
+
+
+</dd>
+</dl>
+
+
 
 ## Result Set
 
@@ -182,9 +195,12 @@ If *<dbidparm\>* is greater than zero, then database properties for the supplied
 
 ## Privileges
 
-You need to have the EXECUTE privilege on the system procedure.
+Requires EXECUTE object-level privilege on the procedure.
 
-To execute this system procedure for other databases, you'll also need either the SERVER OPERATOR or MONITOR system privilege.
+To execute this procedure for other databases, also requires one of:
+
+-   SERVER OPERATOR system privilege
+-   MONITOR system privilege
 
 
 

@@ -7,8 +7,7 @@ Create a new data lake Relational Engine relational container.
 
 
 ```
-CALL SYSHDL.CREATE_CONTAINER('[/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <relational_container_name> (varname]', '<hana_user_name>' ); 
+CALL SYSHDL.CREATE_CONTAINER('<relational_container_name>', '<hana_user_name>' ); 
 ```
 
 
@@ -17,13 +16,34 @@ CALL SYSHDL.CREATE_CONTAINER('[/pandoc/div/div/horizontalrule/codeblock/span/var
 
 ## Parameters
 
- *<relational\_container\_name\>*
- :   Specifies the name of the new relational container. This name must be unique.
 
-  *<hana\_user\_name\>*
- :   Specifies the SAP HANA database user who is to manage the relational container.
+<dl>
+<dt><b>
 
- 
+*<relational\_container\_name\>*
+
+</b></dt>
+<dd>
+
+Specifies the name of the new relational container. This name must be unique.
+
+
+
+</dd><dt><b>
+
+*<hana\_user\_name\>*
+
+</b></dt>
+<dd>
+
+Specifies the SAP HANA database user who is to manage the relational container.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio05a5d3bfe1d14dd5807b9f4ac2e759f3__section_zhc_rnx_cjb"/>
 
@@ -31,14 +51,16 @@ CALL SYSHDL.CREATE_CONTAINER('[/pandoc/div/div/horizontalrule/codeblock/span/var
 
 The system procedure performs the following tasks:
 
--   Creates the relational container using the specified name. The relational container name combines the container group name and the container group, **SYSHDL\_*<relational\_container\_name\>***.
--   Creates the container administrator role for the relational container. The role name combines the relational container name with the suffix \_ROLE \(**SYSHDL\_*<relational\_container\_name\>*\_ROLE**\). The SAP HANA database user specified becomes a member of the role as an administrator.
--   Creates the SAP HANA database and data lake Relational Engine relational container schemas. Both schemas have the same name, which is the same as the relational container name.
+-   Creates the relational container using the specified name. Once created, the relational container name is prefaced with SYSHDL **\(SYSHDL\_*<relational\_container\_name\>*\)**. The owner of the relational container has the same name as the relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   Creates the container administrator role for the relational container. The SAP HANA database user specified becomes a member of the container administrator role. The role name combines the relational container name with the suffix \_ROLE, **\(SYSHDL\_*<relational\_container\_name\>*\_ROLE\)**.
+-   Creates the defaultdata lake Relational Engine and SAP HANA database relational container schemas. Both schemas have the same name, which is the same as the relational container name, **\(SYSHDL\_*<relational\_container\_name\>*\)**.
 -   Creates the SAP HANA database remote source for the data lake Relational Engine relational container. The remote source name combines the relational container name with the suffix \_SOURCE \(**SYSHDL\_*<relational\_container\_name\>*\_SOURCE**\).
+-   Creates the remote server for the relational container. The remote server name combines the relational container name with the suffix \_SERVER \(**SYSHDL\_*<relational\_container\_name\>*\_SERVER**\).
+-   Creates the REMOTE\_EXECUTE procedure.
 -   Grants the following permissions to the container administrator role with the ability to grant the privileges to other users and roles.
     -   EXECUTE permission on the REMOTE\_EXECUTE procedure in the SAP HANA database relational container schema.
     -   CREATE VIRTUAL TABLE and REMOTE TABLE ADMIN permissions on the relational container remote source.
-    -   SELECT, ALTER, UPDATE, INSERT and DELETE permissions on the SAP HANA database relational container schema with the ability to grant the privileges to other users.
+    -   SELECT, ALTER, UPDATE, INSERT, and DELETE permissions on the SAP HANA database relational container schema.
 
 
 

@@ -101,7 +101,7 @@ If no indexes are found with a ridmap version of 0, the message "No indexes requ
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -111,10 +111,9 @@ To run this procedure, you need the EXECUTE privilege on the procedure. See [GRA
 
 In this example, columns a, c, d, and f on table t1 are identified as having a ridmap version of 0 and require an FP index rebuild to use the zone map feature.
 
-> ### Sample Code:  
-> ```
-> dbo.sp_iqzonemapenable 't1', 'user1'
-> ```
+```
+dbo.sp_iqzonemapenable 't1', 'user1'
+```
 
 
 <table>
@@ -302,10 +301,9 @@ call "sp\_iqrebuildindex"\('USER1.t1', column f'\)
 
 In this example, no columns on the table t2 are identified as having a ridmap version of 0.
 
-> ### Sample Code:  
-> ```
-> dbo.sp_iqzonemapenable 't2', 'user2'
-> ```
+```
+dbo.sp_iqzonemapenable 't2', 'user2'
+```
 
 
 <table>

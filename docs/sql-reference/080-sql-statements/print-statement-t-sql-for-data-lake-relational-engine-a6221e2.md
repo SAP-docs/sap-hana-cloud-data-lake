@@ -6,11 +6,6 @@ Displays a message on the message window of the database server.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -21,6 +16,11 @@ Displays a message on the message window of the database server.
 ```
 PRINT <format-string> [, <arg-list>]
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -77,34 +77,4 @@ None
     PRINT 'Variable 1 = %1!, Variable 2 = %2!', @var1, @var2
     ```
 
--   The following example uses `RAISERROR` to disallow connections:
-
-    ```
-    CREATE procedure DBA.login_check() 
-    begin
-      // Allow a maximum of 3 concurrent connections
-      IF( db_property('ConnCount') > 3 ) then
-      raiserror 28000
-        'User %1! is not allowed to connect -- there are
-          already %2! users logged on',
-          current user,  
-          cast(db_property('ConnCount') as int)-1;
-        ELSE 
-      call sp_login_environment; 
-        end if;
-    end
-    go
-    grant execute on DBA.login_check to PUBLIC
-    go
-    set option PUBLIC.Login_procedure='DBA.login_check' 
-    go
-    ```
-
-    For an alternate way to disallow connections, use the `LOGIN_PROCEDURE` option or the `sp_iqmodifylogin` system stored procedure.
-
-
-**Related Information**  
-
-
-[LOGIN\_PROCEDURE Option for Data Lake Relational Engine](../090-database-options/login-procedure-option-for-data-lake-relational-engine-a63d00e.md "Specifies a login procedure that sets connection compatibility options at start-up.")
 

@@ -6,11 +6,6 @@ Establishes a connection to the database identified by *<database-name\>* runnin
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -18,8 +13,16 @@ Establishes a connection to the database identified by *<database-name\>* runnin
 
 
 
- Syntax 1
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1
+
+</b></dt>
+<dd>
+
+```
 CONNECT
    …[ TO <engine-name> ]
    …[ DATABASE <database-name> ]
@@ -27,48 +30,108 @@ CONNECT
    …[ USER ] <userid> [ IDENTIFIED BY ]
 ```
 
-  Syntax 2
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2
+
+</b></dt>
+<dd>
+
+```
 CONNECT USING <connect-string>
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
 
 <a name="loioa6164a2584f210158b79b517cd3c0491__IQ_Parameters"/>
 
 ## Parameters
 
- AS *<connection-name\>*
- :   Connection can optionally be named by specifying the clause. This allows multiple connections to the same database, or multiple connections to the same or different database servers, all simultaneously. Each connection has its own associated transaction. You might even get locking conflicts between your transactions if, for example, you try to modify the same record in the same database from two different connections.
 
-  *<connect-string\>*
- :   A list of parameter settings of the form keyword=*<value\>*, and must be enclosed in single quotes.
+<dl>
+<dt><b>
 
- 
+AS *<connection-name\>*
+
+</b></dt>
+<dd>
+
+Connection can optionally be named by specifying the clause. This allows multiple connections to the same database, or multiple connections to the same or different database servers, all simultaneously. Each connection has its own associated transaction. You might even get locking conflicts between your transactions if, for example, you try to modify the same record in the same database from two different connections.
+
+
+
+</dd><dt><b>
+
+*<connect-string\>*
+
+</b></dt>
+<dd>
+
+A list of parameter settings of the form keyword=*<value\>*, and must be enclosed in single quotes.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa6164a2584f210158b79b517cd3c0491__IQ_Usage"/>
 
 ## Remarks
 
- Embedded SQL behavior
- :   If no *<engine-name\>* is specified, the default local database server is assumed \(the first database server started\). If no *<database-name\>* is specified, the first database on the given server is assumed.
 
-    The user ID and password are used for permission checks on all dynamic SQL statements. By default, the password is case-sensitive; the user ID is not. You can connect without a password by using a host variable for the password and setting the value of the host variable to be the null pointer.
+<dl>
+<dt><b>
 
-  Dbisql behavior
- :   If no database or server is specified in the CONNECT statement, dbisql remains connected to the current database, rather than to the default server and database. If a database name is specified without a server name, dbisql attempts to connect to the specified database on the current server. You must specify the database name defined in the -n database switch, not the database file name. If a server name is specified without a database name, dbisql connects to the default database on the specified server. For example, if this batch is executed while connected to a database, the two tables are created in the same database:
+Embedded SQL behavior
 
-    ```
-    CREATE TABLE t1( c1 int );
-    CONNECT HDLADMIN IDENTIFIED BY <password>;
-    CREATE TABLE t2 ( c1 int );
-    ```
+</b></dt>
+<dd>
 
-    No other database statements are allowed until a successful CONNECT statement has been executed.
+If no *<engine-name\>* is specified, the default local database server is assumed \(the first database server started\). If no *<database-name\>* is specified, the first database on the given server is assumed.
 
-    The user ID and password check the permissions on SQL statements. If the password or the user ID and password are not specified, the user is prompted to type the missing information. By default, the password is case-sensitive; the user ID is not.
+The user ID and password are used for permission checks on all dynamic SQL statements. By default, the password is case-sensitive; the user ID is not. You can connect without a password by using a host variable for the password and setting the value of the host variable to be the null pointer.
 
- Multiple connections are managed through the concept of a current connection. After a successful connect statement, the new connection becomes the current one. To switch to a different connection, use SET CONNECTION. Executing a CONNECT statement does not close the existing connection \(if any\). Use DISCONNECT to drop connections.
+
+
+</dd><dt><b>
+
+Dbisql behavior
+
+</b></dt>
+<dd>
+
+If no database or server is specified in the CONNECT statement, dbisql remains connected to the current database, rather than to the default server and database. If a database name is specified without a server name, dbisql attempts to connect to the specified database on the current server. You must specify the database name defined in the -n database switch, not the database file name. If a server name is specified without a database name, dbisql connects to the default database on the specified server. For example, if this batch is executed while connected to a database, the two tables are created in the same database:
+
+```
+CREATE TABLE t1( c1 int );
+CONNECT HDLADMIN IDENTIFIED BY <password>;
+CREATE TABLE t2 ( c1 int );
+```
+
+No other database statements are allowed until a successful CONNECT statement has been executed.
+
+The user ID and password check the permissions on SQL statements. If the password or the user ID and password are not specified, the user is prompted to type the missing information. By default, the password is case-sensitive; the user ID is not.
+
+
+
+</dd>
+</dl>
+
+Multiple connections are managed through the concept of a current connection. After a successful connect statement, the new connection becomes the current one. To switch to a different connection, use SET CONNECTION. Executing a CONNECT statement does not close the existing connection \(if any\). Use DISCONNECT to drop connections.
 
 Static SQL statements use the user ID and password specified with the -l option on the SQLPP statement line. If no -l option is given, the user ID and password of the CONNECT statement are used for static SQL statements also.
 

@@ -80,14 +80,43 @@ TINYINT
 
 The status of the object. Values include:
 
+
+<dl>
+<dt><b>
+
 1 \(valid\)
-:   The object is available for use by the database server. This status is synonymous with ENABLED. That is, if you ENABLE an object, the status changes to VALID.
+
+</b></dt>
+<dd>
+
+The object is available for use by the database server. This status is synonymous with ENABLED. That is, if you ENABLE an object, the status changes to VALID.
+
+
+
+</dd><dt><b>
 
 2 \(invalid\)
-:   An attempt to recompile the object after an internal operation has failed, for example, after a schema-altering modification to an object on which it depends. The database server continues to try to recompile the object whenever it is referenced in a statement.
+
+</b></dt>
+<dd>
+
+An attempt to recompile the object after an internal operation has failed, for example, after a schema-altering modification to an object on which it depends. The database server continues to try to recompile the object whenever it is referenced in a statement.
+
+
+
+</dd><dt><b>
 
 4 \(disabled\)
-:   The object has been explicitly disabled by the user, for example using an ALTER TABLE...DISABLE VIEW DEPENDENCIES statement.
+
+</b></dt>
+<dd>
+
+The object has been explicitly disabled by the user, for example using an ALTER TABLE...DISABLE VIEW DEPENDENCIES statement.
+
+
+
+</dd>
+</dl>
 
 
 

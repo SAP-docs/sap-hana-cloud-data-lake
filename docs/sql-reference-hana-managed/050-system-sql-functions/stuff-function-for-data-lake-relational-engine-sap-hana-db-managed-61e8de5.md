@@ -16,19 +16,56 @@ STUFF ( <string-expression1>, <start>, <length>, <string-expression2> )
 
 ## Parameters
 
- *<string-expression1\>*
- :   The string to be modified by the `STUFF` function.
 
-  *<start\>*
- :   The character position at which to begin deleting characters. The first character in the string is position 1.
+<dl>
+<dt><b>
 
-  *<length\>*
- :   The number of characters to delete.
+*<string-expression1\>*
 
-  *<string-expression2\>*
- :   The string to be inserted. To delete a portion of a string using the `STUFF` function, use a replacement string of NULL
+</b></dt>
+<dd>
 
- 
+The string to be modified by the `STUFF` function.
+
+
+
+</dd><dt><b>
+
+*<start\>*
+
+</b></dt>
+<dd>
+
+The character position at which to begin deleting characters. The first character in the string is position 1.
+
+
+
+</dd><dt><b>
+
+*<length\>*
+
+</b></dt>
+<dd>
+
+The number of characters to delete.
+
+
+
+</dd><dt><b>
+
+*<string-expression2\>*
+
+</b></dt>
+<dd>
+
+The string to be inserted. To delete a portion of a string using the `STUFF` function, use a replacement string of NULL
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio61e8de5f839d426fb531c723d03acddb__section_uw1_yr5_vrb"/>
 

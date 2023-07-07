@@ -2,7 +2,7 @@
 
 # TEMP\_EXTRACT\_SIZE<N\> Options for Data Lake Relational Engine \(SAP HANA DB-Managed\)
 
-Specifies the data lake Filescontainer object file name, or theAzure block blob name, or the Amazon S3 bucket object name you’re extracting to. You must specify the name when extracting data from data lake Relational Engine to cloud storage.
+Specifies the maximum sizes of the corresponding output files used by the data extraction facility.
 
 
 
@@ -15,60 +15,85 @@ Specifies the data lake Filescontainer object file name, or theAzure block blob 
 
 
 
-<a name="loioc475f53096e540a9840e2f2e4c584ad4__section_zvd_wsc_dxb"/>
+<a name="loioc475f53096e540a9840e2f2e4c584ad4__section_vqj_3mg_hxb"/>
 
 ## Syntax
 
 ```
-TEMP_EXTRACT_NAME<N> = <string_expression>
+TEMP_EXTRACT_SIZEn = <value>
 ```
 
 
 
-<a name="loioc475f53096e540a9840e2f2e4c584ad4__section_yg5_wsc_dxb"/>
+<a name="loioc475f53096e540a9840e2f2e4c584ad4__section_pzx_3mg_hxb"/>
 
 ## Allowed Values
 
-A specially formed name specifying either:
+There are eight options: TEMP\_EXTRACT\_SIZE1 through TEMP\_EXTRACT\_SIZE8.
 
--   The pathname to an object file in a data lake Files container. The prefix "`hdlfs:`" identifies the path as a data lake Files path.
 
-    For example, this *<string\_expression\>* extracts data to a container named `analytics` in data lake Files:
+<table>
+<tr>
+<th valign="top" rowspan="1">
 
-    ```
-    TEMP_EXTRACT_NAME1 = 'hdlfs://analytics/Q3trend.csv'
-    ```
-
-    If you don't specify a container name, it extracts to the default data lake Files container:
-
-    ```
-    TEMP_EXTRACT_NAME1 = 'hdlfs:///leaves.csv'
-    ```
-
--   **Amazon S3 storage**: The object name of the file in the Amazon S3 bucket you're extracting to. For example:
-
-    ```
-    TEMP_EXTRACT_NAME2 = s3://<bucket_name>/<object_name>
-    ```
-
--   **Azure Blob storage**: The name of the block blob you're extracting to. `bb:` indicates a block blob. For example:
-
-    ```
-    TEMP_EXTRACT_NAME2 = bb://<container_name>/<folder_name>/<block_blob_name>
-    ```
+Device Type
 
 
 
+</th>
+<th valign="top" rowspan="1">
 
-<a name="loioc475f53096e540a9840e2f2e4c584ad4__section_jtq_xsc_dxb"/>
+Size
+
+
+
+</th>
+</tr>
+<tr>
+<td valign="top" rowspan="1">
+
+Storage file
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+0 – 512 GB
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="1">
+
+Other
+
+
+
+</td>
+<td valign="top" rowspan="1">
+
+9007199254740992 KB \(8192 petabytes “unlimited”\)
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+<a name="loioc475f53096e540a9840e2f2e4c584ad4__section_p23_pfm_2xb"/>
 
 ## Default
 
-Null. If you don’t specify a file name, no file is extracted.
+0 or NULL
 
 
 
-<a name="loioc475f53096e540a9840e2f2e4c584ad4__section_p5f_ysc_dxb"/>
+<a name="loioc475f53096e540a9840e2f2e4c584ad4__section_aqb_qfm_2xb"/>
 
 ## Privileges
 
@@ -78,11 +103,14 @@ Privilege Category: PUBLIC
 
 ### 
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 
-<a name="loioc475f53096e540a9840e2f2e4c584ad4__section_j4z_ysc_dxb"/>
+<a name="loioc475f53096e540a9840e2f2e4c584ad4__section_p13_sfm_2xb"/>
 
 ## Scope
 
@@ -182,19 +210,21 @@ No
 
 
 
-<a name="loioc475f53096e540a9840e2f2e4c584ad4__section_lj5_zsc_dxb"/>
+<a name="loioc475f53096e540a9840e2f2e4c584ad4__section_i4h_tfm_2xb"/>
 
 ## Remarks
 
-Used for data extraction from data lake Relational Engine to either a data lake Files container, or to Azure Blob storage, or to an Amazon S3 bucket.
+TEMP\_EXTRACT\_SIZE1 through TEMP\_EXTRACT\_SIZE8 are used to specify the maximum sizes of the corresponding output files used by the data extraction facility. TEMP\_EXTRACT\_SIZE1 specifies the maximum size of the output file specified by TEMP\_EXTRACT\_NAME1, TEMP\_EXTRACT\_SIZE2 specifies the maximum size of the output file specified by TEMP\_EXTRACT\_NAME2, and so on.
 
-Azure block blobs have a size limit of 4.75 TB. Amazon S3 objects have a size limit of 5 TB. If your extraction exceeds these limits, then you require multiple output files. Use TEMP\_EXTRACT\_NAME*<N\>* if the size limit in TEMP\_EXTRACT\_NAME1 is too small for the amount of data you're extracting.
+With large cloud storage, such as JFS2, support file size larger than the default value, set TEMP\_EXTRACT\_SIZEn to the value that cloud storage allows. For example, to support l TB set option:
 
-Files must be smaller than the Azure and Amazon S3 limits. For example, if you're extracting 16 TB to Azure Blob storage, you define four files: TEMP\_EXTRACT\_NAME1, TEMP\_EXTRACT\_NAME2, and TEMP\_EXTRACT\_NAME3 of 4.75 TB each, and TEMP\_EXTRACT\_NAME4 with 1.75 TB.
+```
+TEMP_EXTRACT_SIZE1 = 1073741824 KB
+```
 
-At the end of your data extraction SELECT statement, set TEMP\_EXTRACT\_NAME*<N\>* to an empty string. If you don't disable, then the next SELECT statement overwrites the object in cloud storage.
+If you are extracting to a single file or a single named pipe, leave the options TEMP\_EXTRACT\_NAME2 through TEMP\_EXTRACT\_NAME8 and TEMP\_EXTRACT\_SIZE1 through TEMP\_EXTRACT\_SIZE8 at their default values.
 
-For example syntax, see *Extract Data Lake Relational Engine Table Data to Azure Blob Storage* and *Extract Data Lake Relational Engine Table Data to an Amazon S3 Bucket*.
+The TEMP\_EXTRACT\_SIZE*<n\>* options are not compatible with TEMP\_EXTRACT\_APPEND. If you try to restrict the size of the extract append output file, data lake Relational Engine reports an error.
 
 **Related Information**  
 
@@ -205,7 +235,7 @@ For example syntax, see *Extract Data Lake Relational Engine Table Data to Azure
 
 [TEMP\_EXTRACT\_CONNECTION\_STRING Option \(Deprecated\) for Data Lake Relational Engine \(SAP HANA DB-Managed\)](temp-extract-connection-string-option-deprecated-for-data-lake-relational-engine-sap-hana-102fce6.md "Specifies the connection string of your Azure storage account.")
 
-[TEMP\_EXTRACT\_NAME<N\> Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](temp-extract-name-n-option-for-data-lake-relational-engine-sap-hana-db-managed-1f0b3e1.md)
+[TEMP\_EXTRACT\_NAME<N\> Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](temp-extract-name-n-option-for-data-lake-relational-engine-sap-hana-db-managed-1f0b3e1.md "Specifies the data lake Filescontainer object file name, or theAzure block blob name, or the Amazon S3 bucket object name you’re extracting to. You must specify the name when extracting data from data lake Relational Engine to cloud storage.")
 
 [TEMP\_EXTRACT\_REGION Option \(Deprecated\) for Data Lake Relational Engine \(SAP HANA DB-Managed\)](temp-extract-region-option-deprecated-for-data-lake-relational-engine-sap-hana-db-managed-38858a2.md "Specifies the AWS region where your Amazon S3 bucket resides. You must specify the region when extracting data from the Amazon S3 bucket.")
 

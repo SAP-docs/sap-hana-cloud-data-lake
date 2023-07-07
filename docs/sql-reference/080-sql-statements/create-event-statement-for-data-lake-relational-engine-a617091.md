@@ -6,11 +6,6 @@ Defines an event and its associated handler for automating predefined actions. A
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -73,125 +68,284 @@ CREATE [ OR REPLACE ] EVENT <event-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loioa617091784f210158db2e43f0733ae5d__create_event_parm1"/>
 
 ## Parameters
 
- *<event-name\>*
- :   The event name is an identifier. An event has a creator, which is the user creating the event, and the event handler executes with the privileges of that creator. This is the same as stored procedure execution. You cannot create events owned by other users.
 
-  *<user-name\>*
- :   Optionally, specify the name of a user in the system; when the event runs, it runs with the privileges of *<user-name\>*. If this parameter is not specified, the event runs with the privileges of the user who created the event. *<user-name\>* should not be confused with an owner of the event, however; events do not have owners.
+<dl>
+<dt><b>
 
-  OR REPLACE clause
- :   Specifying OR REPLACE \(CREATE OR REPLACE EVENT\) creates an event or replaces an event with the same name. If the event already exists, then all comments are preserved when you use the OR REPLACE clause, but all existing attributes of the event are dropped.
+*<event-name\>*
 
-  TYPE *<event-type\>*
- :   One of a set of system-defined event types. The event types are case-insensitive. To specify the conditions under which this *<event-type\>* triggers the event, use the WHERE clause.
+</b></dt>
+<dd>
 
-     BackupEnd
-     :   Take action at the end of a backup.
-
-      Connect / ConnectFailed
-     :   When a connection is made \(Connect\) or when a connection attempt fails \(ConnectFailed\), you may want to use these events for security purposes. As an alternative to a connect event handler, you may want to consider using a login procedure.
-
-      DatabaseStart
-     :   Take action when a database is started.
-
-      Disconnect
-     :   Take action when a user or application disconnects.
-
-      Diskspace
-     :   Tracks the available space on the device holding the database file \(DBDiskSpace\), the transaction log file \(LogDiskSpace\), or temporary file \(TempDiskSpace\).
-
-        If the database contains an event handler for one of the DiskSpace types, the database server checks the available space on each device associated with the relevant file every 30 seconds.
-
-        In the event the database has more than one dbspace, on separate drives, DBDiskSpace checks each drive and acts depending on the lowest available space.
-
-        LogDiskSpace checks the location of the transaction log and any mirrored transaction log, and reports based on the least available space.
-
-      File size
-     :   Take action when the file reaches a specified size. This can be used for the database file \(GrowDB\), the transaction log \(GrowLog\), or the temporary file \(GrowTemp\).
-
-        You may want to use file size events to track unusual actions on the database, or monitor bulk operations.
-
-      GlobalAutoincrement
-     :   When the number of remaining values for a column defined with GLOBAL AUTOINCREMENT is within one percent of its range, the GlobalAutoincrement event fires. A typical action for the handler could be to request a new value for the GLOBAL\_DATABASE\_ID clause.
-
-        You can use the `EVENT_CONDITION` function with RemainingValues as an argument for this event type. RemainingValues returns the number of remaining values that can be generated for the column, while TableName returns the table containing the GLOBAL AUTOINCREMENT column that is near the end of its range.
-
-      RAISERROR
-     :   When a RAISERROR statement is executed, you can use the RAISERROR event type to take actions. The error number used in the RAISERROR statement can be determined within the event handler using the EVENT\_CONDITION function \(for example, `EVENT_CONDITION( 'ErrorNumber' )`\).
-
-      ServerIdle
-     :   If the database contains an event handler for the ServerIdle type, the server checks for server activity every 30 seconds.
-
-   WHERE *<trigger-condition\>*
- :   The trigger condition determines the condition under which an event is fired. For example, to take an action when the storage space containing the transaction log becomes more than 80 percent full, use this triggering condition:
-
-    ```
-    ...
-                  WHERE event_condition( 'LogDiskSpacePercentFree' ) < 20
-                  ...
-    ```
-
-    The argument to the EVENT\_CONDITION function must be valid for the event type. You can use multiple AND conditions to make up the WHERE clause, but you cannot use OR conditions or other conditions.
-
-    You can specify a variable name for the event\_condition value.
-
-  SCHEDULE *<schedule-spec\>*
- :   Specifies when scheduled actions are to take place. The sequence of times acts as a set of triggering conditions for the associated actions defined in the event handler.You can create more than one schedule for a given event and its associated handler. This permits complex schedules to be implemented. While it is compulsory to provide a schedule name when there is more than one schedule, it is optional if you provide only a single schedule.
-
-    You can list schedule names by querying the system table `SYSSCHEDULE`. For example:
-
-    ```
-    SELECT event_id, sched_name FROM SYS.SYSSCHEDULE
-    ```
-
-    Each event has a unique event ID. Use the `event_id` columns of `SYSEVENT` and `SYSSCHEDULE` to match the event to the associated schedule.
-
-    When a nonrecurring scheduled event has passed, its schedule is deleted, but the event handler is not deleted.
-
-    Scheduled event times are calculated when the schedules are created, and again when the event handler completes execution. The next event time is computed by inspecting the schedule or schedules for the event, and finding the next schedule time that is in the future. If an event handler is instructed to run every hour between 9:00 and 5:00, and it takes 65 minutes to execute, it runs at 9:00, 11:00, 1:00, 3:00, and 5:00. If you want execution to overlap, you must create more than one event.
-
-    The subclauses of a schedule definition are as follows:
-
-    -   START DATE – the date on which scheduled events are to start occurring. The default is the current date.
-    -   START TIME – the first scheduled time for each day on which the event is scheduled. If a START DATE is specified, the START TIME refers to that date. If no START DATE is specified, the START TIME is on the current day \(unless the time has passed\) and each subsequent day.
-
-        You can specify a variable name for *<start-time\>*.
-
-    -   BETWEEN … AND – a range of times during the day outside of which no scheduled times occur. If a START DATE is specified, the scheduled times do not occur until that date.
-
-        You can specify a variable name for *<start-time\>* and *<end-time\>*.
-
-    -   EVERY – an interval between successive scheduled events. Scheduled events occur only after the START TIME for the day, or in the range specified by BETWEEN …AND.
-
-        You can specify a variable name for *<period\>*.
-
-    -   ON – a list of days on which the scheduled events occur. The default is every day. These can be specified as days of the week or days of the month.
-
-        Days of the week are Monday, Tuesday, and so on. The abbreviated forms of the day, such as Mon, Tue, and so on, may also be used. The database server recognizes both full-length and abbreviated day names in any of the languages supported by data lake Relational Engine.
-
-        Days of the month are integers from 0 to 31. A value of 0 represents the last day of any month.
+The event name is an identifier. An event has a creator, which is the user creating the event, and the event handler executes with the privileges of that creator. This is the same as stored procedure execution. You cannot create events owned by other users.
 
 
-    Each time a scheduled event handler is completed, the next scheduled time and date is calculated.
 
-    -   If the EVERY clause is used, find whether the next scheduled time falls on the current day, and is before the end of the BETWEEN …AND range. If so, that is the next scheduled time.
-    -   If the next scheduled time does not fall on the current day, find the next date on which the event is to be executed.
-    -   Find the START TIME for that date, or the beginning of the BETWEEN … AND range.
+</dd><dt><b>
 
-  ENABLE | DISABLE
- :   By default, event handlers are enabled. When DISABLE is specified, the event handler does not execute even when the scheduled time or triggering condition occurs. A TRIGGER EVENT statement does not cause a disabled event handler to be executed
+*<user-name\>*
 
-  AT \{ CONSOLIDATED | REMOTE | ALL \}
- :   To execute events at remote or consolidated databases in a SQL Remote setup, use this clause to restrict the databases at which the event is handled. By default, all databases execute the event.
+</b></dt>
+<dd>
 
-  HANDLER
- :   Each event has one handler. Like the body of a stored procedure, the handler is a compound statement. There are some differences, though: you can use an EXCEPTION clause within the compound statement to handle errors, but not the ON EXCEPTION RESUME clause provided within stored procedures.
+Optionally, specify the name of a user in the system; when the event runs, it runs with the privileges of *<user-name\>*. If this parameter is not specified, the event runs with the privileges of the user who created the event. *<user-name\>* should not be confused with an owner of the event, however; events do not have owners.
 
- 
+
+
+</dd><dt><b>
+
+OR REPLACE clause
+
+</b></dt>
+<dd>
+
+Specifying OR REPLACE \(CREATE OR REPLACE EVENT\) creates an event or replaces an event with the same name. If the event already exists, then all comments are preserved when you use the OR REPLACE clause, but all existing attributes of the event are dropped.
+
+
+
+</dd><dt><b>
+
+TYPE *<event-type\>*
+
+</b></dt>
+<dd>
+
+One of a set of system-defined event types. The event types are case-insensitive. To specify the conditions under which this *<event-type\>* triggers the event, use the WHERE clause.
+
+
+<dl>
+<dt><b>
+
+BackupEnd
+
+</b></dt>
+<dd>
+
+Take action at the end of a backup.
+
+
+
+</dd><dt><b>
+
+Connect / ConnectFailed
+
+</b></dt>
+<dd>
+
+When a connection is made \(Connect\) or when a connection attempt fails \(ConnectFailed\), you may want to use these events for security purposes. As an alternative to a connect event handler, you may want to consider using a login procedure.
+
+
+
+</dd><dt><b>
+
+DatabaseStart
+
+</b></dt>
+<dd>
+
+Take action when a database is started.
+
+
+
+</dd><dt><b>
+
+Disconnect
+
+</b></dt>
+<dd>
+
+Take action when a user or application disconnects.
+
+
+
+</dd><dt><b>
+
+Diskspace
+
+</b></dt>
+<dd>
+
+Tracks the available space on the device holding the database file \(DBDiskSpace\), the transaction log file \(LogDiskSpace\), or temporary file \(TempDiskSpace\).
+
+If the database contains an event handler for one of the DiskSpace types, the database server checks the available space on each device associated with the relevant file every 30 seconds.
+
+In the event the database has more than one dbspace, on separate drives, DBDiskSpace checks each drive and acts depending on the lowest available space.
+
+LogDiskSpace checks the location of the transaction log and any mirrored transaction log, and reports based on the least available space.
+
+
+
+</dd><dt><b>
+
+File size
+
+</b></dt>
+<dd>
+
+Take action when the file reaches a specified size. This can be used for the database file \(GrowDB\), the transaction log \(GrowLog\), or the temporary file \(GrowTemp\).
+
+You may want to use file size events to track unusual actions on the database, or monitor bulk operations.
+
+
+
+</dd><dt><b>
+
+GlobalAutoincrement
+
+</b></dt>
+<dd>
+
+When the number of remaining values for a column defined with GLOBAL AUTOINCREMENT is within one percent of its range, the GlobalAutoincrement event fires. A typical action for the handler could be to request a new value for the GLOBAL\_DATABASE\_ID clause.
+
+You can use the `EVENT_CONDITION` function with RemainingValues as an argument for this event type. RemainingValues returns the number of remaining values that can be generated for the column, while TableName returns the table containing the GLOBAL AUTOINCREMENT column that is near the end of its range.
+
+
+
+</dd><dt><b>
+
+RAISERROR
+
+</b></dt>
+<dd>
+
+When a RAISERROR statement is executed, you can use the RAISERROR event type to take actions. The error number used in the RAISERROR statement can be determined within the event handler using the EVENT\_CONDITION function \(for example, `EVENT_CONDITION( 'ErrorNumber' )`\).
+
+
+
+</dd><dt><b>
+
+ServerIdle
+
+</b></dt>
+<dd>
+
+If the database contains an event handler for the ServerIdle type, the server checks for server activity every 30 seconds.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+WHERE *<trigger-condition\>*
+
+</b></dt>
+<dd>
+
+The trigger condition determines the condition under which an event is fired. For example, to take an action when the storage space containing the transaction log becomes more than 80 percent full, use this triggering condition:
+
+```
+...
+              WHERE event_condition( 'LogDiskSpacePercentFree' ) < 20
+              ...
+```
+
+The argument to the EVENT\_CONDITION function must be valid for the event type. You can use multiple AND conditions to make up the WHERE clause, but you cannot use OR conditions or other conditions.
+
+You can specify a variable name for the event\_condition value.
+
+
+
+</dd><dt><b>
+
+SCHEDULE *<schedule-spec\>*
+
+</b></dt>
+<dd>
+
+Specifies when scheduled actions are to take place. The sequence of times acts as a set of triggering conditions for the associated actions defined in the event handler.You can create more than one schedule for a given event and its associated handler. This permits complex schedules to be implemented. While it is compulsory to provide a schedule name when there is more than one schedule, it is optional if you provide only a single schedule.
+
+You can list schedule names by querying the system table `SYSSCHEDULE`. For example:
+
+```
+SELECT event_id, sched_name FROM SYS.SYSSCHEDULE
+```
+
+Each event has a unique event ID. Use the `event_id` columns of `SYSEVENT` and `SYSSCHEDULE` to match the event to the associated schedule.
+
+When a nonrecurring scheduled event has passed, its schedule is deleted, but the event handler is not deleted.
+
+Scheduled event times are calculated when the schedules are created, and again when the event handler completes execution. The next event time is computed by inspecting the schedule or schedules for the event, and finding the next schedule time that is in the future. If an event handler is instructed to run every hour between 9:00 and 5:00, and it takes 65 minutes to execute, it runs at 9:00, 11:00, 1:00, 3:00, and 5:00. If you want execution to overlap, you must create more than one event.
+
+The subclauses of a schedule definition are as follows:
+
+-   START DATE – the date on which scheduled events are to start occurring. The default is the current date.
+-   START TIME – the first scheduled time for each day on which the event is scheduled. If a START DATE is specified, the START TIME refers to that date. If no START DATE is specified, the START TIME is on the current day \(unless the time has passed\) and each subsequent day.
+
+    You can specify a variable name for *<start-time\>*.
+
+-   BETWEEN … AND – a range of times during the day outside of which no scheduled times occur. If a START DATE is specified, the scheduled times do not occur until that date.
+
+    You can specify a variable name for *<start-time\>* and *<end-time\>*.
+
+-   EVERY – an interval between successive scheduled events. Scheduled events occur only after the START TIME for the day, or in the range specified by BETWEEN …AND.
+
+    You can specify a variable name for *<period\>*.
+
+-   ON – a list of days on which the scheduled events occur. The default is every day. These can be specified as days of the week or days of the month.
+
+    Days of the week are Monday, Tuesday, and so on. The abbreviated forms of the day, such as Mon, Tue, and so on, may also be used. The database server recognizes both full-length and abbreviated day names in any of the languages supported by data lake Relational Engine.
+
+    Days of the month are integers from 0 to 31. A value of 0 represents the last day of any month.
+
+
+Each time a scheduled event handler is completed, the next scheduled time and date is calculated.
+
+-   If the EVERY clause is used, find whether the next scheduled time falls on the current day, and is before the end of the BETWEEN …AND range. If so, that is the next scheduled time.
+-   If the next scheduled time does not fall on the current day, find the next date on which the event is to be executed.
+-   Find the START TIME for that date, or the beginning of the BETWEEN … AND range.
+
+
+
+</dd><dt><b>
+
+ENABLE | DISABLE
+
+</b></dt>
+<dd>
+
+By default, event handlers are enabled. When DISABLE is specified, the event handler does not execute even when the scheduled time or triggering condition occurs. A TRIGGER EVENT statement does not cause a disabled event handler to be executed
+
+
+
+</dd><dt><b>
+
+AT \{ CONSOLIDATED | REMOTE | ALL \}
+
+</b></dt>
+<dd>
+
+To execute events at remote or consolidated databases in a SQL Remote setup, use this clause to restrict the databases at which the event is handled. By default, all databases execute the event.
+
+
+
+</dd><dt><b>
+
+HANDLER
+
+</b></dt>
+<dd>
+
+Each event has one handler. Like the body of a stored procedure, the handler is a compound statement. There are some differences, though: you can use an EXCEPTION clause within the compound statement to handle errors, but not the ON EXCEPTION RESUME clause provided within stored procedures.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa617091784f210158db2e43f0733ae5d__create_event_remarks1"/>
 

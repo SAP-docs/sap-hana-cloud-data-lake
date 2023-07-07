@@ -28,22 +28,72 @@ ALTER TABLE <remote-schema-name>.<remote-table-name>
 
 ## Parameters
 
- *<remote-schema-name\>*
- :   IN FILES\_SERVICE The name of the schema. If a schema name is not provided, the current schema is used.
 
-  *<remote-table-name\>*
- :   The name of the table.
+<dl>
+<dt><b>
 
-  REFRESH
- :   The refresh mode of the table.
+*<remote-schema-name\>*
 
-     `MANUAL`
-     :   Sets the refresh mode to manual, and must be refreshed using the [REFRESH (Remote) TABLE Statement for Data Lake Relational Engine [SQL on Files]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/e2756579d6354112a5e5e0f9fe0c2ccb.html "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.") :arrow_upper_right:.
+</b></dt>
+<dd>
 
-      `AUTO`
-     :   Sets the refresh to automatically occur with every SELECT query on the table.
+IN FILES\_SERVICE The name of the schema. If a schema name is not provided, the current schema is used.
 
-  
+
+
+</dd><dt><b>
+
+*<remote-table-name\>*
+
+</b></dt>
+<dd>
+
+The name of the table.
+
+
+
+</dd><dt><b>
+
+REFRESH
+
+</b></dt>
+<dd>
+
+The refresh mode of the table.
+
+
+<dl>
+<dt><b>
+
+`MANUAL`
+
+</b></dt>
+<dd>
+
+Sets the refresh mode to manual, and must be refreshed using the [REFRESH (Remote) TABLE Statement for Data Lake Relational Engine [SQL on Files]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/e2756579d6354112a5e5e0f9fe0c2ccb.html "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.") :arrow_upper_right:.
+
+
+
+</dd><dt><b>
+
+`AUTO`
+
+</b></dt>
+<dd>
+
+Sets the refresh to automatically occur with every SELECT query on the table.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd>
+</dl>
+
+
 
 ## Remarks
 
@@ -67,7 +117,10 @@ does not match current runtime files version: '<internal_version2>'
 
 ## Privileges
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

@@ -6,11 +6,6 @@ Renames indexes in base or global temporary tables, foreign key role names of in
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -19,17 +14,15 @@ Renames indexes in base or global temporary tables, foreign key role names of in
 
 
 ```
-ALTER { INDEX [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <index-name> (varname] | [ INDEX ] FOREIGN KEY [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <role-name> (varname] | [ INDEX ] PRIMARY KEY }
-   ON [ [/pandoc/div/div/horizontalrule/codeblock/span/span
-     {""}) { [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <owner> (varname] | [/pandoc/div/div/horizontalrule/codeblock/span/span/varname
-     {"varname"}) <schema-name> (varname] } (span].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <table-name> (varname]
-     [ RENAME { TO | AS } [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <new-name> (varname] ]
+ALTER { INDEX <index-name> | [ INDEX ] FOREIGN KEY <role-name> | [ INDEX ] PRIMARY KEY }
+   ON [ { <owner> | <schema-name> }.]<table-name>
+     [ RENAME { TO | AS } <new-name> ]
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -37,13 +30,34 @@ ALTER { INDEX [/pandoc/div/div/horizontalrule/codeblock/span/varname
 
 ## Parameters
 
- *<table-name\>*
- :   Specifies the name of the table that contains the index or foreign key to rename.
 
-  RENAME TO | AS *<new-name\>*
- :   Specifies the new name of the index or foreign key role.
+<dl>
+<dt><b>
 
- 
+*<table-name\>*
+
+</b></dt>
+<dd>
+
+Specifies the name of the table that contains the index or foreign key to rename.
+
+
+
+</dd><dt><b>
+
+RENAME TO | AS *<new-name\>*
+
+</b></dt>
+<dd>
+
+Specifies the new name of the index or foreign key role.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa612b20e84f21015b756a29e4fc11d93__alter_index_remarks1"/>
 
@@ -120,7 +134,7 @@ Automatic commit. Clears the Results tab in the Results pane in Interactive SQL.
 
 [CREATE TABLE Statement for Data Lake Relational Engine](create-table-statement-for-data-lake-relational-engine-a619764.md "Creates a new table in the database or on a remote server.")
 
-[ALTER INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/daf745a457cc4f3ba56275c28dc14929.html "Renames indexes in base or global temporary tables, foreign key role names of indexes and foreign keys explicitly created by a user, or changes the clustered nature of an index on a catalog store table. You can&apos;t rename indexes created to enforce key constraints.") :arrow_upper_right:
+[ALTER INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/daf745a457cc4f3ba56275c28dc14929.html "Renames indexes in base or global temporary tables, foreign key role names of indexes and foreign keys explicitly created by a user, or changes the clustered nature of an index on a catalog store table. You can&apos;t rename indexes created to enforce key constraints.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

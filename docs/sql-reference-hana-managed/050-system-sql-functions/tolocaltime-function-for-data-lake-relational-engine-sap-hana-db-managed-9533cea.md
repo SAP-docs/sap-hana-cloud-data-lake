@@ -16,10 +16,23 @@ TOLOCALTIME( <timestamp-expression> )
 
 ## Parameters
 
- *<timestamp-expression\>*
- :   The TIMESTAMP WITH TIME ZONE or TIMESTAMP expression to be converted. The TIMESTAMP WITH TIME ZONE value is converted to UTC before determining the local time. A TIMESTAMP value is assumed to be in UTC.
 
- 
+<dl>
+<dt><b>
+
+*<timestamp-expression\>*
+
+</b></dt>
+<dd>
+
+The TIMESTAMP WITH TIME ZONE or TIMESTAMP expression to be converted. The TIMESTAMP WITH TIME ZONE value is converted to UTC before determining the local time. A TIMESTAMP value is assumed to be in UTC.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio9533cea8d9b04beb9ed814b1a9ef641d__section_bzm_fjv_vrb"/>
 

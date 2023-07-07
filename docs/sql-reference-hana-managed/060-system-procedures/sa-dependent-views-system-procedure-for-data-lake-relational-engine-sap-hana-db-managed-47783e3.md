@@ -28,13 +28,34 @@ sa_dependent_views(
 
 ## Parameters
 
-  *<tbl\_name\>* 
- :   Use this optional CHAR\(128\) parameter to specify the name of the table or view. The default is NULL.
 
-   *<owner\_name\>* 
- :   Use this optional CHAR\(128\) parameter to specify the owner for *<tbl\_name\>*. The default is NULL.
+<dl>
+<dt><b>
 
- 
+ *<tbl\_name\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(128\) parameter to specify the name of the table or view. The default is NULL.
+
+
+
+</dd><dt><b>
+
+ *<owner\_name\>* 
+
+</b></dt>
+<dd>
+
+Use this optional CHAR\(128\) parameter to specify the owner for *<tbl\_name\>*. The default is NULL.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loio47783e3af31b4f27a28b41ad534f8332__section_qrn_454_rrb"/>
 
@@ -136,7 +157,10 @@ No errors are generated if no existing tables satisfy the specified criteria for
 
 ## Permissions
 
-You have the EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

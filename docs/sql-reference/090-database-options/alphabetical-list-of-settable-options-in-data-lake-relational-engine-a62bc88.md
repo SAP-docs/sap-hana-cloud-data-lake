@@ -2,7 +2,7 @@
 
 # Alphabetical List of Settable Options in Data Lake Relational Engine
 
-Descriptions of settable database options.
+Settable database options let you configure database behavior.
 
 Some option names are followed by a class indicator in square brackets to indicate whether they are Transact-SQL or Interactive SQL options:
 

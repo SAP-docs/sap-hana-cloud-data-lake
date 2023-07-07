@@ -6,11 +6,6 @@ Stores a comment, in the system tables, about a database object.
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 > ### Restriction:  
 > This data lake Relational Engine SQL statement can be used when connected as follows:
 > 
@@ -39,11 +34,8 @@ COMMENT ON
    | SERVICE <web-service-name>
    | SEQUENCE [ <owner>.]<sequence-name>
    | TABLE [ <owner>.]<table-name>
-   | TEXT CONFIGURATION [ [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) < owner> (varname].][/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <text-config-name> (varname]
-   | TEXT INDEX [/pandoc/div/div/horizontalrule/codeblock/span/varname
-     {"varname"}) <text-index-name> (varname] 
+   | TEXT CONFIGURATION [ < owner>.]<text-config-name>
+   | TEXT INDEX <text-index-name> 
    | TRIGGER [ [ <owner>.]<table-name>.]<trigger-name>
    | USER <userid>
    | VIEW [ <owner>.]<view-name> }
@@ -60,6 +52,11 @@ COMMENT ON
    | C_ODBC32 
    | C_ODBC64 }
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 

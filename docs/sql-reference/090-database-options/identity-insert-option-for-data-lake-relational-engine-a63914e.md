@@ -201,7 +201,7 @@ The value for the option is set to Customers for the user HDLADMIN and temporary
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[IDENTITY_INSERT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/3122a9a6dcee455791a4097b41c21407.html "Enables users to insert values into or to update an IDENTITY or AUTOINCREMENT column.") :arrow_upper_right:
+[IDENTITY_INSERT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3122a9a6dcee455791a4097b41c21407.html "Enables users to insert values into or to update an IDENTITY or AUTOINCREMENT column.") :arrow_upper_right:
 
 [Scope and Duration of Database Options](scope-and-duration-of-database-options-a629c37.md "You can set options at three levels of scope: public, user, and temporary.")
 

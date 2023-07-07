@@ -13,33 +13,83 @@ Displays information about columns in a database.
 
 
 
- Syntax 1
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1
+
+</b></dt>
+<dd>
+
+```
 sp_iqcolumn ( [ <table_name> ],[ <table_owner> ], [ <table_loc> ] )
 ```
 
-  Syntax 2
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2
+
+</b></dt>
+<dd>
+
+```
 sp_iqcolumn [ table_name='<table_name>' ],
    [ table_owner='<tableowner>' ],[ table_loc='<table_loc>' ]
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa59eafaf84f21015b9cffa01dc3a9639__iq_refbb_1449"/>
 
 ## Parameters
 
- *<table\_name\>*
- :   A parameter that specifies the name of the table.
 
-  *<table\_owner\>*
- :   A parameter that specifies the name of the table.
+<dl>
+<dt><b>
 
-  *<table\_loc\>*
- :   A parameter that specifies the location of the table.
+*<table\_name\>*
 
- 
+</b></dt>
+<dd>
+
+A parameter that specifies the name of the table.
+
+
+
+</dd><dt><b>
+
+*<table\_owner\>*
+
+</b></dt>
+<dd>
+
+A parameter that specifies the name of the table.
+
+
+
+</dd><dt><b>
+
+*<table\_loc\>*
+
+</b></dt>
+<dd>
+
+A parameter that specifies the location of the table.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa59eafaf84f21015b9cffa01dc3a9639__section_tbj_5wz_mbb"/>
 
@@ -309,7 +359,7 @@ The parameters can be specified in any order. Enclose '*<table\_name\>*' and '*<
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
+Requires EXECUTE object-level privilege on the procedure.
 
 
 

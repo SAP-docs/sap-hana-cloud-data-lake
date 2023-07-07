@@ -33,5 +33,5 @@ ALTER VIEW "SYS"."SYSCOLUMNS"( creator,cname,tname,coltype,nulls,length,
 **Related Information**  
 
 
-[SYSCOLUMNS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/f263dc28f1b949218ef7ba6c4b0f82dc.html "Each row in the SYSCOLUMNS view describes one column of each table and view in the catalog.") :arrow_upper_right:
+[SYSCOLUMNS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/f263dc28f1b949218ef7ba6c4b0f82dc.html "Each row in the SYSCOLUMNS view describes one column of each table and view in the catalog.") :arrow_upper_right:
 

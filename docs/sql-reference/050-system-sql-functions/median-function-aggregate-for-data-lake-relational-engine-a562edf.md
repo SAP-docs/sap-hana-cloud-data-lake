@@ -6,30 +6,72 @@ Returns the median of an expression.
 
 
 
- Syntax 1
- :   ```
+
+<dl>
+<dt><b>
+
+Syntax 1
+
+</b></dt>
+<dd>
+
+```
 MEDIAN ( [ ALL | DISTINCT ] <expression> )
 ```
 
-  Syntax 2
- :   ```
+
+
+</dd><dt><b>
+
+Syntax 2
+
+</b></dt>
+<dd>
+
+```
 MEDIAN ( [ ALL | DISTINCT ] <expression> )
 OVER ( <window-spec> )
 ```
 
- 
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa562edfc84f210159175c2831fabbd47__MEDIAN_parm1"/>
 
 ## Parameters
 
- *<expression\>*
- :   A numeric expression for which a median value is to be computed.
 
-  *<window-spec\>*
- :   Specified when using this function as a window function.
+<dl>
+<dt><b>
 
- 
+*<expression\>*
+
+</b></dt>
+<dd>
+
+A numeric expression for which a median value is to be computed.
+
+
+
+</dd><dt><b>
+
+*<window-spec\>*
+
+</b></dt>
+<dd>
+
+Specified when using this function as a window function.
+
+
+
+</dd>
+</dl>
+
+
 
 <a name="loioa562edfc84f210159175c2831fabbd47__MEDIAN_remarks1"/>
 
@@ -351,5 +393,5 @@ Evans
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[MEDIAN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_1_QRC/en-US/d48698c99cd5450980130ce6dcd32356.html "Returns the median of an expression.") :arrow_upper_right:
+[MEDIAN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/d48698c99cd5450980130ce6dcd32356.html "Returns the median of an expression.") :arrow_upper_right:
 
