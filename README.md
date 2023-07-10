@@ -1,4 +1,4 @@
-[![REUSE status]()]()
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-docs/sap-hana-cloud-data-lake)](https://api.reuse.software/info/github.com/SAP-docs/sap-hana-cloud-data-lake)
 
 # Contributions to SAP HANA Cloud, Data Lake Documentation
 
