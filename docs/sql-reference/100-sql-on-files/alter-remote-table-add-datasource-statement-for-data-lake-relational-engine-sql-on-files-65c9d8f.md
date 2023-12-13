@@ -11,10 +11,12 @@ Attach an external data source, such as a file or directory, to a SQL on Files r
 
 
 
-> ### Restriction:  
-> This topic is limited to SQL on Files use cases.
-> 
-> This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio65c9d8fb06914172a3960b804f7613f3__section_fry_b3b_nqb"/>
+
+## Usage
+
+-   This topic is limited to SQL on Files use cases.
+-   This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -80,7 +82,7 @@ ALTER TABLE <remote-schema-name>.<remote-table-name> IN FILES_SERVICE ADD DATASO
 
 <datasource-option> ::=
 	{ <csv-format-option>
-	 SKIP <integer> }
+	 SKIP <integer> };
 ```
 
 
@@ -180,7 +182,7 @@ The value extraction from a path segments happens in the following steps:
 
 Note that using a DATE, TIME, or TIMESTAMP format cannot be configured for `FROM DIRECTORY` mapped columns. The default values always apply.
 
-See [Structuring a Data Lake Files Folder Hierarchy for Big Data](https://help.sap.com/viewer/3ef213750ce94aac885ac4fc54ea212f/2023_2_QRC/en-US/c712a4dff1ad429cad9a2a3e42336e42.html "Structure data for optimal performance by understanding how SQL on Files tables handle predicates.") :arrow_upper_right: for further examples and guidance on how to use `FROM DIRECTORY` mapping effectively.
+See [Structuring a Data Lake Files Folder Hierarchy for Big Data](https://help.sap.com/viewer/3ef213750ce94aac885ac4fc54ea212f/2023_4_QRC/en-US/c712a4dff1ad429cad9a2a3e42336e42.html "Structure data for optimal performance by understanding how SQL on Files tables handle predicates.") :arrow_upper_right: for further examples and guidance on how to use `FROM DIRECTORY` mapping effectively.
 
 
 
@@ -447,39 +449,29 @@ The following format specifiers are available for SQL on Files tables:
 
 Format Specifier
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
 <tr>
 <td valign="top">
 
- `YYYY` 
-
-
+`YYYY` 
 
 </td>
 <td valign="top">
 
 The year, including the century. Range = \[0001,9999\]. The default is 1.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `RRRR` 
-
-
+`RRRR` 
 
 </td>
 <td valign="top">
@@ -512,233 +504,175 @@ If the century is not provided, the following is returned:
 <tr>
 <td valign="top">
 
- `RR` 
-
-
+`RR` 
 
 </td>
 <td valign="top">
 
 The year, without the century. Range = \[00,99\]. The same behavior occurs as for `RRRR` when the century is omitted. The default is 1.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `MM` 
-
-
+`MM` 
 
 </td>
 <td valign="top">
 
 A numerical month value. Range = \[01,12\]. The default is 1.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `MON` 
-
-
+`MON` 
 
 </td>
 <td valign="top">
 
 An abbreviated month name \(for example, DEC\).
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `MONTH` 
-
-
+`MONTH` 
 
 </td>
 <td valign="top">
 
 The full month name \(for example, DECEMBER\).
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `DD` 
-
-
+`DD` 
 
 </td>
 <td valign="top">
 
 The day of the month. Range = \[01,31\]. The default is 1.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `DDD` 
-
-
+`DDD` 
 
 </td>
 <td valign="top">
 
 A numerical value representing a day of the year. Range = \[001,366\]. The default is 1.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `HH` 
-
-
+`HH` 
 
 </td>
 <td valign="top">
 
 The hour, in 12 or 24 hour format, depending on if `AP` is included. Range = \[00,23\] or \[01,12\]. The default is 0.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `HH12` 
-
-
+`HH12` 
 
 </td>
 <td valign="top">
 
 The hour, in 12 hour format. Range = \[01,12\]. `AP` is required. The default is 0.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `HH24` 
-
-
+`HH24` 
 
 </td>
 <td valign="top">
 
 The hour, in 24 hour format. Range = \[00,23\]. The default is 0.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `AP` 
-
-
+`AP` 
 
 </td>
 <td valign="top">
 
 Meridian indicator. Range = \{AM,PM\}.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `MI` 
-
-
+`MI` 
 
 </td>
 <td valign="top">
 
 The minute of the hour. Range = \[00,59\]. The default is 0.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `SS` 
-
-
+`SS` 
 
 </td>
 <td valign="top">
 
 The second of the minute. Range = \[00,59\]. The default is 0.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `SSSSS` 
-
-
+`SSSSS` 
 
 </td>
 <td valign="top">
 
 The second of the day. Range = \[00,86399\]. The default is 0.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `SF` 
-
-
+`SF` 
 
 </td>
 <td valign="top">
 
 The second of the minute, with an optional fraction separated by a period \( . \).
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- `FF[1-7]` 
-
-
+`FF[1-7]` 
 
 </td>
 <td valign="top">
@@ -746,8 +680,6 @@ The second of the minute, with an optional fraction separated by a period \( . \
 The fraction of a second, in 100 nanoseconds. Range = \[0000000,9999999\]. The default is 0.
 
 The precision specifier is optional; the default is 7. Leading zeros are recognized \(for example, 0010000 yields 1 millisecond\).
-
-
 
 </td>
 </tr>
@@ -927,5 +859,5 @@ ALTER TABLE external_schema.external_table IN FILES_SERVICE ADD DATASOURCE
 
 [ALTER \(Remote\) TABLE DROP DATASOURCE Statement for Data Lake Relational Engine \[SQL on Files\]](alter-remote-table-drop-datasource-statement-for-data-lake-relational-engine-sql-on-files-a9da29f.md "Remove a data source from a SQL on Files table.")
 
-[ALTER (Remote) TABLE ADD DATASOURCE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) [SQL on Files]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/e6e7243b09c34d48adf387e96f43c014.html "Attach an external data source, such as a file or directory, to a SQL on Files remote table.") :arrow_upper_right:
+[ALTER (Remote) TABLE ADD DATASOURCE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/e6e7243b09c34d48adf387e96f43c014.html "Attach an external data source, such as a file or directory, to a SQL on Files remote table.") :arrow_upper_right:
 

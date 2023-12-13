@@ -7,5 +7,5 @@ For dates in the first 9 days of a month and hours less than 10, SAP Adaptive Se
 **Related Information**  
 
 
-[SAP HANA Cloud, Data Lake Load and Unload Management](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/LATEST/en-US/e77c96193a604e05ba198e424de2ed6c.html)
+[SAP HANA Cloud, Data Lake Relational Engine Load and Unload Management](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/LATEST/en-US/e77c96193a604e05ba198e424de2ed6c.html)
 

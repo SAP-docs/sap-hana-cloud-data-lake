@@ -6,10 +6,13 @@ Each row of the SYSREMOTEUSERS view describes a user ID with the REMOTE system p
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bea086e6c5f1014bac2b2cc97449637__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -33,6 +36,6 @@ dateadd(mi, PROPERTY('TimeZoneAdjustment'), r.time_received) as time_received ,
 r.log_received, r.confirm_received, r.receive_count, r.rereceive_count ,  
 TODATETIMEOFFSET( r.time_sent, 0 ) as time_sent_utc ,  
 TODATETIMEOFFSET( r.time_received, 0 ) as time_received_utc  
-FROM SYS.ISYSREMOTEUSER r JOIN SYS.ISYSUSER u ON ( u.user_id = r.user_id ) JOIN SYS.ISYSREMOTETYPE t ON ( t.type_id = r.type_id )
+FROM SYS.ISYSREMOTEUSER r JOIN SYS.ISYSUSER u ON ( u.user_id = r.user_id ) JOIN SYS.ISYSREMOTETYPE t ON ( t.type_id = r.type_id );
 ```
 

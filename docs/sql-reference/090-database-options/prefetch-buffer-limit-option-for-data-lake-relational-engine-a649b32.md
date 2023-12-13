@@ -6,8 +6,11 @@ Specifies the amount of memory used for prefetching.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa649b32b84f21015800fa1e4f5ac31ca__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

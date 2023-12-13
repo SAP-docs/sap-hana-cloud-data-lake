@@ -6,10 +6,13 @@ Lists JWT providers configured in the data lake Relational Engine database. The 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio40fe6b4c8fe54af39a008dcc5fd5cd2b__section_i2m_qpq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Lists JWT providers configured in the data lake Relational Engine database. The 
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The ID of the JWT provider.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The ID of the JWT provider.
 
 jwt\_provider\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(256\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the JWT provider.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ The name of the JWT provider.
 
 issuer\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(512\)
 
-
-
 </td>
 <td valign="top">
 
 The issuer name of the JWT provider.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ The issuer name of the JWT provider.
 
 external\_identity\_claim
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(256\)
 
-
-
 </td>
 <td valign="top">
 
 The claim provided in the JWT tokens to use for mapping the JWT user name to the data lake Relational Engine database user.
-
-
 
 </td>
 </tr>
@@ -135,21 +108,15 @@ The claim provided in the JWT tokens to use for mapping the JWT user name to the
 
 priority
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 The priority of the JWT provider.
-
-
 
 </td>
 </tr>

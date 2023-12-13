@@ -12,7 +12,7 @@ Windowed aggregate syntax.
 
 ```
 LAST_VALUE (<expression> [IGNORE NULLS | RESPECT NULLS])
-OVER (<window-spec>)
+OVER (<window-spec>);
 ```
 
 **Syntax 2**
@@ -21,7 +21,7 @@ Simple aggregate syntax.
 
 ```
 LAST_VALUE (<input expression> [IGNORE NULLS | RESPECT NULLS] 
-ORDER BY <ordering expression>)
+ORDER BY <ordering expression>);
 ```
 
 
@@ -83,7 +83,7 @@ List of column names.
 
 <a name="loio8cf5191242464c6bb1965cbb657bdab1__section_ojw_52h_trb"/>
 
-## Returns
+## Result Set
 
 \(Syntax 1\) Returns the data type of the argument.
 
@@ -143,28 +143,20 @@ The returned result set is:
 
 employee\_name
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Salary
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
 DepartmentID
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 highest\_paid
-
-
 
 </th>
 </tr>
@@ -173,28 +165,20 @@ highest\_paid
 
 Michael Lynch
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 24,903.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 500
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Juan Martinez
-
-
 
 </td>
 </tr>
@@ -203,28 +187,20 @@ Juan Martinez
 
 Juanph Barker
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 27,290.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 500
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Juan Martinez
-
-
 
 </td>
 </tr>
@@ -233,28 +209,20 @@ Juan Martinez
 
 Sheila Romero
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 27,500.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 500
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Juan Martinez
-
-
 
 </td>
 </tr>
@@ -263,28 +231,20 @@ Juan Martinez
 
 Felicia Kuo
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 28,200.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 500
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Juan Martinez
-
-
 
 </td>
 </tr>
@@ -293,28 +253,20 @@ Juan Martinez
 
 Jeannette Bertrand
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 29,800.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 500
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Juan Martinez
-
-
 
 </td>
 </tr>
@@ -323,28 +275,20 @@ Juan Martinez
 
 Jane Braun
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 34,300.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 500
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Juan Martinez
-
-
 
 </td>
 </tr>
@@ -353,28 +297,20 @@ Juan Martinez
 
 Anthony Rebeiro
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 34,576.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 500
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Juan Martinez
-
-
 
 </td>
 </tr>
@@ -383,28 +319,20 @@ Juan Martinez
 
 Charles Crowley
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 41,700.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 500
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Juan Martinez
-
-
 
 </td>
 </tr>
@@ -413,28 +341,20 @@ Juan Martinez
 
 Juan Martinez
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 55,500.800
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 500
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Juan Martinez
-
-
 
 </td>
 </tr>
@@ -443,28 +363,20 @@ Juan Martinez
 
 Doug Charlton
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 28,300.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 400
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Scott Evans
-
-
 
 </td>
 </tr>
@@ -473,28 +385,20 @@ Scott Evans
 
 Elizabeth Lambert
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 29,384.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 400
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Scott Evans
-
-
 
 </td>
 </tr>
@@ -503,28 +407,20 @@ Scott Evans
 
 Joyce Butterfield
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 34,011.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 400
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Scott Evans
-
-
 
 </td>
 </tr>
@@ -533,28 +429,20 @@ Scott Evans
 
 Robert Nielsen
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 34,889.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 400
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Scott Evans
-
-
 
 </td>
 </tr>
@@ -563,28 +451,20 @@ Scott Evans
 
 Alex Ahmed
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 34,992.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 400
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Scott Evans
-
-
 
 </td>
 </tr>
@@ -593,28 +473,20 @@ Scott Evans
 
 Ruth Wetherby
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 35,745.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 400
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Scott Evans
-
-
 
 </td>
 </tr>
@@ -623,28 +495,20 @@ Scott Evans
 
 ...
 
+</td>
+<td valign="top" rowspan="1">
 
+...
 
 </td>
 <td valign="top" rowspan="1">
 
 ...
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 ...
-
-
-
-</td>
-<td valign="top" rowspan="1">
-
-...
-
-
 
 </td>
 </tr>
@@ -657,7 +521,7 @@ This example uses the simple aggregate function syntax:
 ```
 SELECT LAST_VALUE (COL1 ORDER BY COL2) from T1
 SELECT LAST_VALUE (COL1+COL2 ORDER BY COL3, COL4) from T1 
-SELECT LAST_VALUE (COL1+2 ORDER BY COL2) from T1
+SELECT LAST_VALUE (COL1+2 ORDER BY COL2) from T1;
 ```
 
 **Related Information**  
@@ -665,5 +529,5 @@ SELECT LAST_VALUE (COL1+2 ORDER BY COL2) from T1
 
 [WINDOW Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/window-clause-for-data-lake-relational-engine-sap-hana-db-managed-c83b61b.md "Defines all or part of a window for use with window functions such as AVG and RANK in a SELECT statement.")
 
-[LAST_VALUE Function [Aggregate] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a55bfa7784f21015b86bd5dcfa28a6a5.html "Returns the last value from a set of values.") :arrow_upper_right:
+[LAST_VALUE Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a55bfa7784f21015b86bd5dcfa28a6a5.html "Returns the last value from a set of values.") :arrow_upper_right:
 

@@ -7,7 +7,7 @@ Returns the conformity of a given SQL statement to a specified standard.
 
 
 ```
-SQLFLAGGER ( <sql-standard-string>, <sql-statement-string> )
+SQLFLAGGER ( <sql-standard-string>, <sql-statement-string> );
 ```
 
 
@@ -55,7 +55,7 @@ The SQL statement to check for conformance.
 
 <a name="loio52950a0cb81b4e09a835e1c464f11a64__section_v5j_xw5_vrb"/>
 
-## Returns
+## Result Set
 
 LONG VARCHAR
 
@@ -104,5 +104,5 @@ You can also use the iqsqlpp SQL Preprocessor Utility to flag any Embedded SQL t
 **Related Information**  
 
 
-[SQLFLAGGER Function [Miscellaneous] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a581e75f84f210158c3cd3ba6b97a9eb.html "Returns the conformity of a given SQL statement to a specified standard.") :arrow_upper_right:
+[SQLFLAGGER Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a581e75f84f210158c3cd3ba6b97a9eb.html "Returns the conformity of a given SQL statement to a specified standard.") :arrow_upper_right:
 

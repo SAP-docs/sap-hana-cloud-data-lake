@@ -6,10 +6,13 @@ Allows load, insert, update, or delete operations to bypass the referential inte
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa635241084f21015aab4acfa1a173538__section_ajq_xqq_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Allows load, insert, update, or delete operations to bypass the referential inte
 ## Syntax
 
 ```
-DISABLE_RI_CHECK = { ON | OFF }
+DISABLE_RI_CHECK = { ON | OFF };
 ```
 
 
@@ -64,28 +67,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -94,28 +89,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -124,28 +111,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -170,5 +149,5 @@ Users are responsible for ensuring that no referential integrity violation occur
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[DISABLE_RI_CHECK Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/4b9fb5d8d0e24b1984950aa752543793.html "Allows load, insert, update, or delete operations to bypass the referential integrity check, improving performance.") :arrow_upper_right:
+[DISABLE_RI_CHECK Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/4b9fb5d8d0e24b1984950aa752543793.html "Allows load, insert, update, or delete operations to bypass the referential integrity check, improving performance.") :arrow_upper_right:
 

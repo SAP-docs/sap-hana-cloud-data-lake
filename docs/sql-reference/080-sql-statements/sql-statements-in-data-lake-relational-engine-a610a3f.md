@@ -2,5 +2,5 @@
 
 # SQL Statements in Data Lake Relational Engine
 
-Descriptions of the SQL statements available in data lake Relational Engine, including some that can be used only from Embedded SQL or Interactive SQL.
+Data lake Relational Engine supports many SQL statements to allow you to perform such tasks as create database objects, administer your system, and manipulate data.
 

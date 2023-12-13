@@ -16,7 +16,7 @@ Syntax 1
 <dd>
 
 ```
-CORR ( <dependent-expression>, <independent-expression> )
+CORR ( <dependent-expression>, <independent-expression> );
 ```
 
 
@@ -30,7 +30,7 @@ Syntax 2
 
 ```
 CORR ( <dependent-expression>, <independent-expression> )
-OVER ( <window-spec> )
+OVER ( <window-spec> );
 ```
 
 
@@ -86,7 +86,7 @@ Specified when using this function as a window function.
 
 <a name="loioa53fefea84f21015a7ac9e118cc9795c__CORR_retunrs1"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -101,7 +101,7 @@ The `CORR` function converts its arguments to DOUBLE, performs the computation i
 Both *<dependent-expression\>* and *<independent-expression\>* are numeric. The function is applied to the set of \(*<dependent-expression\>*, *<independent-expression\>*\) after eliminating the pairs for which either *<dependent-expression\>* or *<independent-expression\>* is NULL. The following computation is made, where *<x\>* represents the *<dependent-expression\>* and *<y\>* represents the *<independent-expression\>*:
 
 ```
-COVAR_POP (y, x) / (STDDEV_POP (x) * STDDEV_POP (y))
+COVAR_POP (y, x) / (STDDEV_POP (x) * STDDEV_POP (y));
 ```
 
 > ### Note:  
@@ -134,5 +134,5 @@ SELECT CORR( Salary, ( YEAR( NOW( ) ) - YEAR( BirthDate ) ) ) FROM Employees;
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[CORR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ea68d7a3796040bf9adb352e0756650e.html "Returns the correlation coefficient of a set of number pairs.") :arrow_upper_right:
+[CORR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ea68d7a3796040bf9adb352e0756650e.html "Returns the correlation coefficient of a set of number pairs.") :arrow_upper_right:
 

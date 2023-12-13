@@ -6,10 +6,13 @@ Each row in the SYS.SYSUSERMESSAGE system view holds a user-defined message for 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3beb0a2a6c5f10149b6a8464d96325f5__section_vwg_vhq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYS.SYSUSERMESSAGE system view holds a user-defined message for 
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 error
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 A unique identifying number for the error condition.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ A unique identifying number for the error condition.
 
 uid
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The user number that defined the message.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ The user number that defined the message.
 
 description
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The message corresponding to the error condition.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ The message corresponding to the error condition.
 
 langid
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 Reserved.
-
-
 
 </td>
 </tr>
@@ -135,5 +108,5 @@ Reserved.
 **Related Information**  
 
 
-[SYSUSERMESSAGE System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/96ce66486fbf4da3a705c8daa1dbc85f.html "Each row in the SYS.SYSUSERMESSAGE system view holds a user-defined message for an error condition.") :arrow_upper_right:
+[SYSUSERMESSAGE System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/96ce66486fbf4da3a705c8daa1dbc85f.html "Each row in the SYS.SYSUSERMESSAGE system view holds a user-defined message for an error condition.") :arrow_upper_right:
 

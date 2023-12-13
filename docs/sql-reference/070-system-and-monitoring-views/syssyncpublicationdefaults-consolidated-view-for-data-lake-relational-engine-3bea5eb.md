@@ -6,10 +6,13 @@ The SYSSYNCPUBLICATIONDEFAULTS view provides the default synchronization setting
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bea5eb06c5f101498e9b0aa6a05942b__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -25,6 +28,6 @@ ALTER VIEW "SYS"."SYSSYNCPUBLICATIONDEFAULTS"
     "s"."server_connect",
     "s"."server_conn_type"
     from "SYS"."SYSSYNC2" as "s" join "SYS"."SYSPUBLICATION" as "p" on("p"."publication_id" = "s"."publication_id") where
-    "s"."site_name" is null
+    "s"."site_name" is null;
 ```
 

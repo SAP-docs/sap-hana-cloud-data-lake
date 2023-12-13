@@ -6,8 +6,11 @@ Time after which an unused connection in the connection pool on a worker node wi
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa4d7ecd084f210159240e00d96fb58d7__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

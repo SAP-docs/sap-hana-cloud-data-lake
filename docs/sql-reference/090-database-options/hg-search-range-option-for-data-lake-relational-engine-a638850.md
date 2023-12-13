@@ -6,8 +6,11 @@ Specifies the maximum number of Btree pages used in evaluating a range predicate
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa638850284f21015a1a9993e5cc4b710__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

@@ -6,22 +6,25 @@ Reports detailed usage information for secondary \(non-FP\) indexes accessed by 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5ae206484f210158d7db008e8f2fa2e__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqindexuse 
+sp_iqindexuse; 
 ```
 
 
 
 <a name="loioa5ae206484f210158d7db008e8f2fa2e__section_ivm_zd1_nbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -30,14 +33,10 @@ sp_iqindexuse
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,14 +45,10 @@ Description
 
 IndexName
 
-
-
 </td>
 <td valign="top">
 
 Index name
-
-
 
 </td>
 </tr>
@@ -62,14 +57,10 @@ Index name
 
 TableName
 
-
-
 </td>
 <td valign="top">
 
 Table name
-
-
 
 </td>
 </tr>
@@ -78,14 +69,10 @@ Table name
 
 Owner
 
-
-
 </td>
 <td valign="top">
 
 User name of index owner
-
-
 
 </td>
 </tr>
@@ -94,14 +81,10 @@ User name of index owner
 
 UID
 
-
-
 </td>
 <td valign="top">
 
 Index unique identifier. UID is a number assigned by the system that uniquely identifies the instance of the index \(where instance is defined when an object is created\).
-
-
 
 </td>
 </tr>
@@ -110,14 +93,10 @@ Index unique identifier. UID is a number assigned by the system that uniquely id
 
 Type
 
-
-
 </td>
 <td valign="top">
 
 Index type
-
-
 
 </td>
 </tr>
@@ -126,14 +105,10 @@ Index type
 
 LastDT
 
-
-
 </td>
 <td valign="top">
 
 Date/time of last access
-
-
 
 </td>
 </tr>
@@ -142,14 +117,10 @@ Date/time of last access
 
 NOpt
 
-
-
 </td>
 <td valign="top">
 
 Number of metadata or uniqueness accesses
-
-
 
 </td>
 </tr>
@@ -158,14 +129,10 @@ Number of metadata or uniqueness accesses
 
 NQry
 
-
-
 </td>
 <td valign="top">
 
 Number of query accesses
-
-
 
 </td>
 </tr>
@@ -174,14 +141,10 @@ Number of query accesses
 
 NConstraint
 
-
-
 </td>
 <td valign="top">
 
 Number of accesses for unique or referential integrity checks
-
-
 
 </td>
 </tr>
@@ -217,7 +180,7 @@ None
 
 <a name="loioa5ae206484f210158d7db008e8f2fa2e__iq_refbb_1627"/>
 
-## Example
+## Examples
 
 The following shows sample output from the sp\_iqindexuse procedure:
 
@@ -228,35 +191,25 @@ The following shows sample output from the sp\_iqindexuse procedure:
 
 IndexName
 
-
-
 </th>
 <th valign="top">
 
 TableName
-
-
 
 </th>
 <th valign="top">
 
 Owner
 
-
-
 </th>
 <th valign="top">
 
 UID
 
-
-
 </th>
 <th valign="top">
 
 Type
-
-
 
 </th>
 </tr>
@@ -265,35 +218,25 @@ Type
 
 n\_nationkey\_hg
 
-
-
 </td>
 <td valign="top">
 
 nation
-
-
 
 </td>
 <td valign="top">
 
 HDLADMIN
 
-
-
 </td>
 <td valign="top">
 
 29
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 </tr>
@@ -302,35 +245,25 @@ HG
 
 n\_regionkey\_hg
 
-
-
 </td>
 <td valign="top">
 
 nation
-
-
 
 </td>
 <td valign="top">
 
 HDLADMIN
 
-
-
 </td>
 <td valign="top">
 
 31
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 </tr>
@@ -339,35 +272,25 @@ HG
 
 r\_regionkey\_hg
 
-
-
 </td>
 <td valign="top">
 
 region
-
-
 
 </td>
 <td valign="top">
 
 HDLADMIN
 
-
-
 </td>
 <td valign="top">
 
 47
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 </tr>
@@ -376,35 +299,25 @@ HG
 
 s\_suppkey\_hg
 
-
-
 </td>
 <td valign="top">
 
 supplier
-
-
 
 </td>
 <td valign="top">
 
 HDLADMIN
 
-
-
 </td>
 <td valign="top">
 
 64
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 </tr>
@@ -413,35 +326,25 @@ HG
 
 p\_partkey\_hg
 
-
-
 </td>
 <td valign="top">
 
 part
-
-
 
 </td>
 <td valign="top">
 
 HDLADMIN
 
-
-
 </td>
 <td valign="top">
 
 87
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 </tr>
@@ -450,35 +353,25 @@ HG
 
 s\_suppkey\_hg
 
-
-
 </td>
 <td valign="top">
 
 supplier
-
-
 
 </td>
 <td valign="top">
 
 HDLADMIN
 
-
-
 </td>
 <td valign="top">
 
 64
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 </tr>
@@ -491,29 +384,21 @@ HG
 
 LastDT
 
-
-
 </th>
 <th valign="top">
 
 NOpt
-
-
 
 </th>
 <th valign="top">
 
 NQry
 
-
-
 </th>
 <th valign="top">
 
 NConstraint
 
-
-
 </th>
 </tr>
 <tr>
@@ -521,28 +406,20 @@ NConstraint
 
 20070917 22:08:06~
 
-
-
 </td>
 <td valign="top">
 
 12
-
-
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 12
-
-
 
 </td>
 </tr>
@@ -551,28 +428,20 @@ NConstraint
 
 20070917 22:08:06~
 
-
-
 </td>
 <td valign="top">
 
 12
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -581,28 +450,20 @@ NConstraint
 
 20070917 22:08:06~
 
-
-
 </td>
 <td valign="top">
 
 12
-
-
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 12
-
-
 
 </td>
 </tr>
@@ -611,28 +472,20 @@ NConstraint
 
 20070917 22:08:06~
 
-
-
 </td>
 <td valign="top">
 
 12
-
-
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 12
-
-
 
 </td>
 </tr>
@@ -640,29 +493,21 @@ NConstraint
 <td valign="top">
 
 20070917 22:08:06~
-
-
 
 </td>
 <td valign="top">
 
 6
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 6
-
-
 
 </td>
 </tr>
@@ -671,28 +516,20 @@ NConstraint
 
 20070917 22:08:06~
 
-
-
 </td>
 <td valign="top">
 
 12
-
-
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 12
-
-
 
 </td>
 </tr>
@@ -707,11 +544,11 @@ NConstraint
 
 [sp\_iqtableuse Procedure for Data Lake Relational Engine](sp-iqtableuse-procedure-for-data-lake-relational-engine-a5bae03.md "Reports detailed usage information for tables accessed by the workload.")
 
-[sp\_iqunusedcolumn Procedure for Data Lake Relational Engine](sp-iqunusedcolumn-procedure-for-data-lake-relational-engine-a5bbef3.md "Reports IQ columns that were not referenced by the workload.")
+[sp\_iqunusedcolumn Procedure for Data Lake Relational Engine](sp-iqunusedcolumn-procedure-for-data-lake-relational-engine-a5bbef3.md "Reports columns that were not referenced by the workload.")
 
-[sp\_iqunusedindex Procedure for Data Lake Relational Engine](sp-iqunusedindex-procedure-for-data-lake-relational-engine-a5bc6ce.md "Reports IQ secondary (non-FP) indexes that were not referenced by the workload.")
+[sp\_iqunusedindex Procedure for Data Lake Relational Engine](sp-iqunusedindex-procedure-for-data-lake-relational-engine-a5bc6ce.md "Reports secondary (non-FP) indexes that were not referenced by the workload.")
 
-[sp\_iqunusedtable Procedure for Data Lake Relational Engine](sp-iqunusedtable-procedure-for-data-lake-relational-engine-a5bced3.md "Reports IQ tables that were not referenced by the workload.")
+[sp\_iqunusedtable Procedure for Data Lake Relational Engine](sp-iqunusedtable-procedure-for-data-lake-relational-engine-a5bced3.md "Reports tables that were not referenced by the workload.")
 
 [sp\_iqworkmon Procedure for Data Lake Relational Engine](sp-iqworkmon-procedure-for-data-lake-relational-engine-a5c13d2.md "Controls collection of workload monitor usage information, and reports monitoring collection status. sp_iqworkmon collects information only for queries (SQL statements containing a FROM clause). You cannot use sp_iqworkmon for INSERT or LOAD statements.")
 

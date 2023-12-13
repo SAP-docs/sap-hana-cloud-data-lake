@@ -6,17 +6,20 @@ Specifies error handling in an Embedded SQL program.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa628d54984f210158db8a906f33f2297__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 WHENEVER
    { SQLERROR | SQLWARNING | NOTFOUND }
-   … { GOTO <label> | STOP | CONTINUE | <C code;> }
+   … { GOTO <label> | STOP | CONTINUE | <C code;> };
 ```
 
 

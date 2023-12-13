@@ -6,10 +6,13 @@ Lets you conditionally execute the first list of SQL statements whose *<search-c
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61f4dea84f2101596209eca0aa72455__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -17,7 +20,7 @@ Lets you conditionally execute the first list of SQL statements whose *<search-c
 IF <search-condition> THEN <statement-list>
 ... [ ELSEIF <search-condition> THEN <statement-list> ]...
 ... [ ELSE <statement-list> ]
-... END IF
+... END IF;
 ```
 
 
@@ -96,7 +99,7 @@ None
     		END IF ;
     	END LOOP CustomerLoop ;
     	CLOSE curThisCust ;
-    END
+    END;
     ```
 
 -   The following example illustrates the use of the `ELSEIF` statement:
@@ -114,7 +117,7 @@ None
        PRINT 'something else';
      ENDIF
     END
-    
+    ;
     ```
 
 

@@ -6,10 +6,13 @@ Removes the ability of a user to manage passwords and administer the system priv
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa4277db384f21015b89afd8851d4c373__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ REVOKE [ ADMIN OPTION FOR ] CHANGE PASSWORD
    [ ( { <target_user_list> 
        | ANY 
        | ANY WITH ROLES <target_role_list> } ) ]
-   FROM <user_ID> [,...]
+   FROM <user_ID> [,...];
 
 ```
 
@@ -97,14 +100,10 @@ Depending on how the CHANGE PASSWORD system privilege was initially granted, usi
 
 Clause Used When CHANGE PASSWORD was Originally Granted
 
-
-
 </th>
 <th valign="top">
 
 Result When Using ADMIN OPTION FOR when revoking CHANGE PASSWORD
-
-
 
 </th>
 </tr>
@@ -113,14 +112,10 @@ Result When Using ADMIN OPTION FOR when revoking CHANGE PASSWORD
 
 The WITH ADMIN OPTION clause
 
-
-
 </td>
 <td valign="top">
 
 Revokes only the ability to administer the CHANGE PASSWORD system privilege \(that is, grant the system privilege to another user\) — the ability to actually manage passwords for other users remains.
-
-
 
 </td>
 </tr>
@@ -129,14 +124,10 @@ Revokes only the ability to administer the CHANGE PASSWORD system privilege \(th
 
 The WITH ADMIN ONLY OPTION clause
 
-
-
 </td>
 <td valign="top">
 
 Semantically equivalent to revoking the entire CHANGE PASSWORD system privilege
-
-
 
 </td>
 </tr>
@@ -145,14 +136,10 @@ Semantically equivalent to revoking the entire CHANGE PASSWORD system privilege
 
 The WITH NO ADMIN OPTION clause
 
-
-
 </td>
 <td valign="top">
 
 Nothing is revoked because there were no administrative rights granted in the first place.
-
-
 
 </td>
 </tr>
@@ -187,13 +174,13 @@ ANSI SQL – compliance level: Transact-SQL extension
 -   The following example removes the ability of `Joe` to manage the passwords of `Sally`or `Bob`:
 
     ```
-    REVOKE CHANGE PASSWORD (Sally, Bob) FROM Joe
+    REVOKE CHANGE PASSWORD (Sally, Bob) FROM Joe;
     ```
 
 -   The following example if the CHANGE PASSWORD system privilege was originally granted to `Sam` with the WITH ADMIN OPTION clause, this example removes the ability of `Sam` to grant the CHANGE PASSWORD system privilege to another user, but still allows `Sam` to manage passwords for those users specified in the original `GRANT CHANGE PASSWORD` statement. However, if the CHANGE PASSWORD system privilege was originally granted to `Sam` with the WITH ADMIN ONLY OPTION clause, this example removes all permissions to the system privilege from `Sam`.
 
     ```
-    REVOKE ADMIN OPTION FOR CHANGE PASSWORD FROM Sam
+    REVOKE ADMIN OPTION FOR CHANGE PASSWORD FROM Sam;
     ```
 
 

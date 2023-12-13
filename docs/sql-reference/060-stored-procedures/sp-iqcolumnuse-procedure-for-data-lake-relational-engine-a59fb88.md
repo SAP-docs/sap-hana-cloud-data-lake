@@ -6,22 +6,25 @@ Reports detailed usage information for columns accessed by the workload.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa59fb88884f2101590c4b062754a459a__section_qj1_zvh_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqcolumnuse
+sp_iqcolumnuse;
 ```
 
 
 
 <a name="loioa59fb88884f2101590c4b062754a459a__section_swt_k5z_mbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -30,14 +33,10 @@ sp_iqcolumnuse
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,14 +45,10 @@ Description
 
 TableName
 
-
-
 </td>
 <td valign="top">
 
 Table name.
-
-
 
 </td>
 </tr>
@@ -62,14 +57,10 @@ Table name.
 
 ColumnName
 
-
-
 </td>
 <td valign="top">
 
 Column name.
-
-
 
 </td>
 </tr>
@@ -78,14 +69,10 @@ Column name.
 
 Owner
 
-
-
 </td>
 <td valign="top">
 
 User name of column owner.
-
-
 
 </td>
 </tr>
@@ -94,14 +81,10 @@ User name of column owner.
 
 UID
 
-
-
 </td>
 <td valign="top">
 
 Column unique identifier, a number assigned by the system that uniquely identifies the instance of the column \(where instance is defined when an object is created\).
-
-
 
 </td>
 </tr>
@@ -110,14 +93,10 @@ Column unique identifier, a number assigned by the system that uniquely identifi
 
 LastDT
 
-
-
 </td>
 <td valign="top">
 
 Date/time of last access.
-
-
 
 </td>
 </tr>
@@ -126,14 +105,10 @@ Date/time of last access.
 
 NRef
 
-
-
 </td>
 <td valign="top">
 
 Number of query references.
-
-
 
 </td>
 </tr>
@@ -171,7 +146,7 @@ None
 
 <a name="loioa59fb88884f2101590c4b062754a459a__iq_refbb_1459"/>
 
-## Example
+## Examples
 
 The following example shows sample output from the sp\_iqcolumnuse procedure \(the long numbers are temporary IDs\):
 
@@ -182,22 +157,16 @@ The following example shows sample output from the sp\_iqcolumnuse procedure \(t
 
 TableName
 
-
-
 </th>
 <th valign="top">
 
 ColumnName
-
-
 
 </th>
 <th valign="top">
 
 Owner
 
-
-
 </th>
 </tr>
 <tr>
@@ -205,21 +174,15 @@ Owner
 
 orders
 
-
-
 </td>
 <td valign="top">
 
 o\_orderdate
 
-
-
 </td>
 <td valign="top">
 
 HDLADMIN
-
-
 
 </td>
 </tr>
@@ -228,21 +191,15 @@ HDLADMIN
 
 orders
 
-
-
 </td>
 <td valign="top">
 
 o\_shippriority
 
-
-
 </td>
 <td valign="top">
 
 HDLADMIN
-
-
 
 </td>
 </tr>
@@ -250,22 +207,16 @@ HDLADMIN
 <td valign="top">
 
 lineitem
-
-
 
 </td>
 <td valign="top">
 
 l\_orderkey
 
-
-
 </td>
 <td valign="top">
 
 HDLADMIN
-
-
 
 </td>
 </tr>
@@ -273,22 +224,16 @@ HDLADMIN
 <td valign="top">
 
 lineitem
-
-
 
 </td>
 <td valign="top">
 
 l\_extendedp..
 
-
-
 </td>
 <td valign="top">
 
 HDLADMIN
-
-
 
 </td>
 </tr>
@@ -296,22 +241,16 @@ HDLADMIN
 <td valign="top">
 
 lineitem
-
-
 
 </td>
 <td valign="top">
 
 l\_discount
 
-
-
 </td>
 <td valign="top">
 
 HDLADMIN
-
-
 
 </td>
 </tr>
@@ -320,21 +259,15 @@ HDLADMIN
 
 lineitem
 
-
-
 </td>
 <td valign="top">
 
 l\_shipdate
 
-
-
 </td>
 <td valign="top">
 
 HDLADMIN
-
-
 
 </td>
 </tr>
@@ -343,21 +276,15 @@ HDLADMIN
 
 \#tmp1
 
-
-
 </td>
 <td valign="top">
 
 expression
 
-
-
 </td>
 <td valign="top">
 
 HDLADMIN
-
-
 
 </td>
 </tr>
@@ -366,21 +293,15 @@ HDLADMIN
 
 \#tmp1
 
-
-
 </td>
 <td valign="top">
 
 expression
 
-
-
 </td>
 <td valign="top">
 
 HDLADMIN
-
-
 
 </td>
 </tr>
@@ -393,21 +314,15 @@ HDLADMIN
 
 UID
 
-
-
 </th>
 <th valign="top">
 
 LastDT
 
-
-
 </th>
 <th valign="top">
 
 NRef
-
-
 
 </th>
 </tr>
@@ -416,21 +331,15 @@ NRef
 
 151
 
-
-
 </td>
 <td valign="top">
 
 20070927 22:41:22..
 
-
-
 </td>
 <td valign="top">
 
 13
-
-
 
 </td>
 </tr>
@@ -439,21 +348,15 @@ NRef
 
 154
 
-
-
 </td>
 <td valign="top">
 
 20070927 22:41:22..
 
-
-
 </td>
 <td valign="top">
 
 13
-
-
 
 </td>
 </tr>
@@ -462,21 +365,15 @@ NRef
 
 186
 
-
-
 </td>
 <td valign="top">
 
 20070927 22:41:22..
 
-
-
 </td>
 <td valign="top">
 
 13
-
-
 
 </td>
 </tr>
@@ -485,21 +382,15 @@ NRef
 
 191
 
-
-
 </td>
 <td valign="top">
 
 20070927 22:41:22..
 
-
-
 </td>
 <td valign="top">
 
 13
-
-
 
 </td>
 </tr>
@@ -508,21 +399,15 @@ NRef
 
 192
 
-
-
 </td>
 <td valign="top">
 
 20070927 22:41:22..
 
-
-
 </td>
 <td valign="top">
 
 13
-
-
 
 </td>
 </tr>
@@ -531,21 +416,15 @@ NRef
 
 196
 
-
-
 </td>
 <td valign="top">
 
 20070927 22:41:22..
 
-
-
 </td>
 <td valign="top">
 
 13
-
-
 
 </td>
 </tr>
@@ -554,21 +433,15 @@ NRef
 
 10000000001218
 
-
-
 </td>
 <td valign="top">
 
 20070927 22:57:36..
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 </tr>
@@ -577,21 +450,15 @@ NRef
 
 10000000001222
 
-
-
 </td>
 <td valign="top">
 
 20070927 22:41:58..
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 </tr>
@@ -606,11 +473,11 @@ NRef
 
 [sp\_iqtableuse Procedure for Data Lake Relational Engine](sp-iqtableuse-procedure-for-data-lake-relational-engine-a5bae03.md "Reports detailed usage information for tables accessed by the workload.")
 
-[sp\_iqunusedcolumn Procedure for Data Lake Relational Engine](sp-iqunusedcolumn-procedure-for-data-lake-relational-engine-a5bbef3.md "Reports IQ columns that were not referenced by the workload.")
+[sp\_iqunusedcolumn Procedure for Data Lake Relational Engine](sp-iqunusedcolumn-procedure-for-data-lake-relational-engine-a5bbef3.md "Reports columns that were not referenced by the workload.")
 
-[sp\_iqunusedindex Procedure for Data Lake Relational Engine](sp-iqunusedindex-procedure-for-data-lake-relational-engine-a5bc6ce.md "Reports IQ secondary (non-FP) indexes that were not referenced by the workload.")
+[sp\_iqunusedindex Procedure for Data Lake Relational Engine](sp-iqunusedindex-procedure-for-data-lake-relational-engine-a5bc6ce.md "Reports secondary (non-FP) indexes that were not referenced by the workload.")
 
-[sp\_iqunusedtable Procedure for Data Lake Relational Engine](sp-iqunusedtable-procedure-for-data-lake-relational-engine-a5bced3.md "Reports IQ tables that were not referenced by the workload.")
+[sp\_iqunusedtable Procedure for Data Lake Relational Engine](sp-iqunusedtable-procedure-for-data-lake-relational-engine-a5bced3.md "Reports tables that were not referenced by the workload.")
 
 [sp\_iqworkmon Procedure for Data Lake Relational Engine](sp-iqworkmon-procedure-for-data-lake-relational-engine-a5c13d2.md "Controls collection of workload monitor usage information, and reports monitoring collection status. sp_iqworkmon collects information only for queries (SQL statements containing a FROM clause). You cannot use sp_iqworkmon for INSERT or LOAD statements.")
 

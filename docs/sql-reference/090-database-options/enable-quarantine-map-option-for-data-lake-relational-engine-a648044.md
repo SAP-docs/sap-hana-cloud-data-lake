@@ -6,8 +6,11 @@ Controls whether data lake Relational Engine quarantines corrupted disk blocks t
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa6480443120d49478a5faeb81417fd49__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

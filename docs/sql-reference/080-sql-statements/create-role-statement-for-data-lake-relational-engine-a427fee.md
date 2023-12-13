@@ -6,16 +6,19 @@ Creates a new role, extends an existing user to act as a role, or manages role a
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa427feea84f21015941fe83a5ba6eb0b__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 CREATE [ OR REPLACE ] ROLE { <role_name> | FOR USER <user_id> }
-   [ WITH ADMIN [ ONLY ] <admin_name> [...] , [ SYS_MANAGE_ROLES_ROLE ]
+   [ WITH ADMIN [ ONLY ] <admin_name> [...] , [ SYS_MANAGE_ROLES_ROLE ];
 ```
 
 
@@ -166,33 +169,33 @@ ANSI SQL – compliance level: Transact-SQL extension
 -   The following example creates the role `Sales`. Only global role administrator can administer the role.
 
     ```
-    CREATE ROLE Sales
+    CREATE ROLE Sales;
     ```
 
 -   The following example extends the existing user `Jane` to act as a role.
 
     ```
-    CREATE OR REPLACE ROLE FOR USER Jane
+    CREATE OR REPLACE ROLE FOR USER Jane;
     ```
 
 -   The following example creates the role `Finance` with `Mary` and `Jeff` as role administrators with administrative rights to the role. Global role administrators cannot administer this role.
 
     ```
-    CREATE ROLE Finance WITH ADMIN Mary, Jeff
+    CREATE ROLE Finance WITH ADMIN Mary, Jeff;
     ```
 
 -   The following example creates the role `Marketing` with `Mary` and `Jeff` as role administrators. Global role administrators can also manage this role.
 
     ```
     CREATE ROLE Finance 
-    WITH ADMIN ONLY Mary, Jeff, SYS_MANAGE_ROLES_ROLE
+    WITH ADMIN ONLY Mary, Jeff, SYS_MANAGE_ROLES_ROLE;
     ```
 
 -   In the following example, `Finance` is an existing role with `Harry` and `Susan` as role administrators with administrative rights. You want to keep `Susan` as an administrator, replace `Harry`, and add the global role administrator. The new role administrators will have administrative rights only. This statement keeps `Susan` as an administrator, but `Susan` retains administrative rights to the role since the original administrative rights granted were higher. `Harry` is replaced by `Bob` and `Sarah`, with administrative rights only, and the global role administrator is added to the role. `Harry` remains a member of the role, but has no administrative rights.
 
     ```
     CREATE OR REPLACE ROLE Finance 
-    WITH ADMIN ONLY Susan, Bob, Sarah, SYS_MANAGE_ROLE_ROLE
+    WITH ADMIN ONLY Susan, Bob, Sarah, SYS_MANAGE_ROLE_ROLE;
     ```
 
 

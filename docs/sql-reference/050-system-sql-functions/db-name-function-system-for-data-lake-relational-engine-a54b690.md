@@ -7,7 +7,7 @@ Returns the database name.
 
 
 ```
-DB_NAME ( [ <database-id> ] )
+DB_NAME ( [ <database-id> ] );
 ```
 
 
@@ -34,7 +34,7 @@ The ID of the database, in the form of a numeric expression.
 
 
 
-## Returns
+## Result Set
 
 VARCHAR
 
@@ -66,7 +66,7 @@ If no *<database-id\>* is supplied, the name of the current database is returned
 Returns the database name iqdemo, when executed against the iq\_dummy database:
 
 ```
-SELECT DB_NAME( 0 ) FROM iq_dummy
+SELECT DB_NAME( 0 ) FROM iq_dummy;
 ```
 
 **Related Information**  

@@ -16,7 +16,7 @@ Syntax 1
 <dd>
 
 ```
-MEDIAN ( [ ALL | DISTINCT ] <expression> )
+MEDIAN ( [ ALL | DISTINCT ] <expression> );
 ```
 
 
@@ -30,7 +30,7 @@ Syntax 2
 
 ```
 MEDIAN ( [ ALL | DISTINCT ] <expression> )
-OVER ( <window-spec> )
+OVER ( <window-spec> );
 ```
 
 
@@ -109,7 +109,7 @@ The following query returns the median salary for each department in Florida:
 SELECT DepartmentID, Surname, Salary,
 MEDIAN(Salary) OVER (PARTITION BY DepartmentID) "Median"
 FROM Employees
-WHERE State IN ('FL')
+WHERE State IN ('FL');
 ```
 
 The returned result is:
@@ -121,28 +121,20 @@ The returned result is:
 
 DepartmentID
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Surname
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
 Salary
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Median
-
-
 
 </th>
 </tr>
@@ -150,29 +142,21 @@ Median
 <td valign="top" rowspan="1">
 
 100
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 Lull
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 87,900.000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 73,870.000
-
-
 
 </td>
 </tr>
@@ -181,28 +165,20 @@ Lull
 
 100
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Gowda
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 59,840.000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 73,870.000
-
-
 
 </td>
 </tr>
@@ -210,29 +186,21 @@ Gowda
 <td valign="top" rowspan="1">
 
 200
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 Sterling
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 64,900.000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 76,200.000
-
-
 
 </td>
 </tr>
@@ -241,28 +209,20 @@ Sterling
 
 200
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Kelly
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 87,500.000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 76,200.000
-
-
 
 </td>
 </tr>
@@ -271,28 +231,20 @@ Kelly
 
 300
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Litton
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 58,930.000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 58,930.000
-
-
 
 </td>
 </tr>
@@ -300,59 +252,43 @@ Litton
 <td valign="top" rowspan="1">
 
 400
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 Francis
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 53,870.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 38,70.000
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top" rowspan="1">
 
 400
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 Charlton
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 28,300.000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 53,870.000
-
-
 
 </td>
 </tr>
@@ -361,28 +297,20 @@ Charlton
 
 400
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Evans
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 68,940.000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 53,870.000
-
-
 
 </td>
 </tr>
@@ -393,5 +321,5 @@ Evans
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[MEDIAN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/d48698c99cd5450980130ce6dcd32356.html "Returns the median of an expression.") :arrow_upper_right:
+[MEDIAN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/d48698c99cd5450980130ce6dcd32356.html "Returns the median of an expression.") :arrow_upper_right:
 

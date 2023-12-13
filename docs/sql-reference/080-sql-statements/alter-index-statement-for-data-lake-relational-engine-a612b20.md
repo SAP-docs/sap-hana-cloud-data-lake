@@ -6,17 +6,20 @@ Renames indexes in base or global temporary tables, foreign key role names of in
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa612b20e84f21015b756a29e4fc11d93__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 ALTER { INDEX <index-name> | [ INDEX ] FOREIGN KEY <role-name> | [ INDEX ] PRIMARY KEY }
    ON [ { <owner> | <schema-name> }.]<table-name>
-     [ RENAME { TO | AS } <new-name> ]
+     [ RENAME { TO | AS } <new-name> ];
 ```
 
 
@@ -111,7 +114,7 @@ Automatic commit. Clears the Results tab in the Results pane in Interactive SQL.
 
     ```
     ALTER INDEX COL1_HG_OLD ON jal.mytable 
-    RENAME AS COL1_HG_NEW
+    RENAME AS COL1_HG_NEW;
     ```
 
 -   The following example renames a foreign key role name ky\_dept\_id in table dba.Employees to emp\_dept\_id:
@@ -119,7 +122,7 @@ Automatic commit. Clears the Results tab in the Results pane in Interactive SQL.
     ```
     ALTER INDEX FOREIGN KEY ky_dept_id
     ON dba.Employees 
-    RENAME TO emp_dept_id
+    RENAME TO emp_dept_id;
     ```
 
 
@@ -128,13 +131,13 @@ Automatic commit. Clears the Results tab in the Results pane in Interactive SQL.
 
 [CREATE INDEX Statement for Data Lake Relational Engine](create-index-statement-for-data-lake-relational-engine-a617ca4.md "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.")
 
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
-
 [ALTER TABLE Statement for Data Lake Relational Engine](alter-table-statement-for-data-lake-relational-engine-39f1ec0.md "Modifies a table definition.")
 
 [CREATE TABLE Statement for Data Lake Relational Engine](create-table-statement-for-data-lake-relational-engine-a619764.md "Creates a new table in the database or on a remote server.")
 
-[ALTER INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/daf745a457cc4f3ba56275c28dc14929.html "Renames indexes in base or global temporary tables, foreign key role names of indexes and foreign keys explicitly created by a user, or changes the clustered nature of an index on a catalog store table. You can&apos;t rename indexes created to enforce key constraints.") :arrow_upper_right:
-
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
+
+[DROP INDEX Statement for Data Lake Relational Engine](drop-index-statement-for-data-lake-relational-engine-82d6c17.md "Removes an index from the database.")
+
+[ALTER INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/daf745a457cc4f3ba56275c28dc14929.html "Renames indexes in base or global temporary tables, foreign key role names of indexes and foreign keys explicitly created by a user, or changes the clustered nature of an index on a catalog store table. You can't rename indexes created to enforce key constraints.") :arrow_upper_right:
 

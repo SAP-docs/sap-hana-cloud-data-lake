@@ -6,12 +6,14 @@ Controls how a date, time, or timestamp value is passed to the client applicatio
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Setting Database Options](remote-execute-usage-examples-for-setting-database-options-0023bea.md).
+<a name="loio77c385f40ad1417d8f1ea8ca653456e9__section_dzz_4jj_kyb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,7 +22,7 @@ Controls how a date, time, or timestamp value is passed to the client applicatio
 ## Syntax
 
 ```
-RETURN_DATE_TIME_AS_STRING = { ON | OFF }
+RETURN_DATE_TIME_AS_STRING = { ON | OFF };
 ```
 
 
@@ -51,10 +53,38 @@ Privilege Category: PUBLIC
 
 ### 
 
-Requires one of:
+The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
 
--   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
+-   To set a database option temporarily, use the SET\_TEMPORARY\_OPTION procedure, which requires you be a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+
+    -   See [SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md).
+
+
+
+
+
+</dd><dt><b>
+
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+-   Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this database option.
+
+
+
+</dd>
+</dl>
 
 
 
@@ -69,28 +99,20 @@ Requires one of:
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -99,28 +121,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+No
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
-
-</td>
-<td valign="top">
-
-No
-
-
 
 </td>
 </tr>
@@ -129,28 +143,20 @@ No
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -175,11 +181,13 @@ Interactive SQL automatically turns the RETURN\_DATE\_TIME\_AS\_STRING option ON
 
 [DATE\_FORMAT Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](date-format-option-for-data-lake-relational-engine-sap-hana-db-managed-3e2ecb4.md "Sets the format used for dates retrieved from the database.")
 
+[SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md "Grant database options temporarily for the current connection only on a data lake Relational Engine relational container.")
+
 [TIME\_FORMAT Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](time-format-option-for-data-lake-relational-engine-sap-hana-db-managed-5f6bdfd.md "Sets the format used for times retrieved from the database.")
 
 [TIMESTAMP\_FORMAT Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](timestamp-format-option-for-data-lake-relational-engine-sap-hana-db-managed-002566c.md "Sets the format used for timestamps retrieved from the database.")
 
-[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine database behaves or performs.") :arrow_upper_right:
+[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
 
-[RETURN_DATE_TIME_AS_STRING Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a652ffd684f2101583dcef31685601cf.html "Controls how a date, time, or timestamp value is passed to the client application when queried.") :arrow_upper_right:
+[RETURN_DATE_TIME_AS_STRING Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a652ffd684f2101583dcef31685601cf.html "Controls how a date, time, or timestamp value is passed to the client application when queried.") :arrow_upper_right:
 

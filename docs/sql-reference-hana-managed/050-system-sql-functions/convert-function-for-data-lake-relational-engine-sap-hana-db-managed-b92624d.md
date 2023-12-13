@@ -7,7 +7,7 @@ Returns an expression converted to a supplied data type.
 
 
 ```
-CONVERT ( <data-type>, <expression> [ , <format-style> ] )
+CONVERT ( <data-type>, <expression> [ , <format-style> ] );
 ```
 
 
@@ -60,7 +60,7 @@ If no *<format-style\>* argument is provided, the database option settings are u
 
 <a name="loiob92624d74b14466cb6f758da6ed87324__section_cxh_2rl_srb"/>
 
-## Returns
+## Result Set
 
 The data type specified.
 
@@ -81,21 +81,15 @@ The CONVERT format style code output is as follows:
 
 Without Century \(yy\)
 
-
-
 </th>
 <th valign="top">
 
 With Century \(yyyy\)
 
-
-
 </th>
 <th valign="top">
 
 Output
-
-
 
 </th>
 </tr>
@@ -104,21 +98,15 @@ Output
 
 –
 
-
-
 </td>
 <td valign="top">
 
 0 or 100
 
-
-
 </td>
 <td valign="top">
 
 mmm dd yyyy hh:nnAM \(or PM\)
-
-
 
 </td>
 </tr>
@@ -127,21 +115,15 @@ mmm dd yyyy hh:nnAM \(or PM\)
 
 1
 
-
-
 </td>
 <td valign="top">
 
 101
 
-
-
 </td>
 <td valign="top">
 
 mm/dd/yy\[yy\]
-
-
 
 </td>
 </tr>
@@ -150,21 +132,15 @@ mm/dd/yy\[yy\]
 
 2
 
-
-
 </td>
 <td valign="top">
 
 102
 
-
-
 </td>
 <td valign="top">
 
 \[yy\]yy.mm.dd
-
-
 
 </td>
 </tr>
@@ -173,21 +149,15 @@ mm/dd/yy\[yy\]
 
 3
 
-
-
 </td>
 <td valign="top">
 
 103
 
-
-
 </td>
 <td valign="top">
 
 dd/mm/yy\[yy\]
-
-
 
 </td>
 </tr>
@@ -196,21 +166,15 @@ dd/mm/yy\[yy\]
 
 4
 
-
-
 </td>
 <td valign="top">
 
 104
 
-
-
 </td>
 <td valign="top">
 
 dd.mm.yy\[yy\]
-
-
 
 </td>
 </tr>
@@ -219,21 +183,15 @@ dd.mm.yy\[yy\]
 
 5
 
-
-
 </td>
 <td valign="top">
 
 105
 
-
-
 </td>
 <td valign="top">
 
 dd-mm-yy\[yy\]
-
-
 
 </td>
 </tr>
@@ -242,21 +200,15 @@ dd-mm-yy\[yy\]
 
 6
 
-
-
 </td>
 <td valign="top">
 
 106
 
-
-
 </td>
 <td valign="top">
 
 dd mmm yy\[yy\]
-
-
 
 </td>
 </tr>
@@ -265,21 +217,15 @@ dd mmm yy\[yy\]
 
 7
 
-
-
 </td>
 <td valign="top">
 
 107
 
-
-
 </td>
 <td valign="top">
 
 mmm dd, yy\[yy\]
-
-
 
 </td>
 </tr>
@@ -288,21 +234,15 @@ mmm dd, yy\[yy\]
 
 8
 
-
-
 </td>
 <td valign="top">
 
 108
 
-
-
 </td>
 <td valign="top">
 
 hh:nn:ss
-
-
 
 </td>
 </tr>
@@ -311,21 +251,15 @@ hh:nn:ss
 
 –
 
-
-
 </td>
 <td valign="top">
 
 9 or 109
 
-
-
 </td>
 <td valign="top">
 
 mmm dd yyyy hh:nn:ss:sssAM \(or PM\)
-
-
 
 </td>
 </tr>
@@ -334,21 +268,15 @@ mmm dd yyyy hh:nn:ss:sssAM \(or PM\)
 
 10
 
-
-
 </td>
 <td valign="top">
 
 110
 
-
-
 </td>
 <td valign="top">
 
 mm-dd-yy\[yy\]
-
-
 
 </td>
 </tr>
@@ -357,21 +285,15 @@ mm-dd-yy\[yy\]
 
 11
 
-
-
 </td>
 <td valign="top">
 
 111
 
-
-
 </td>
 <td valign="top">
 
 \[yy\]yy/mm/dd
-
-
 
 </td>
 </tr>
@@ -380,21 +302,15 @@ mm-dd-yy\[yy\]
 
 12
 
-
-
 </td>
 <td valign="top">
 
 112
 
-
-
 </td>
 <td valign="top">
 
 \[yy\]yymmdd
-
-
 
 </td>
 </tr>
@@ -403,21 +319,15 @@ mm-dd-yy\[yy\]
 
 –
 
-
-
 </td>
 <td valign="top">
 
 13 or 113
 
-
-
 </td>
 <td valign="top">
 
 dd mmm yyyy hh:nn:ss:sss \(24 hour clock, Europe default + milliseconds, 4-digit year\)
-
-
 
 </td>
 </tr>
@@ -426,44 +336,32 @@ dd mmm yyyy hh:nn:ss:sss \(24 hour clock, Europe default + milliseconds, 4-digit
 
 14
 
-
-
 </td>
 <td valign="top">
 
 114
-
-
 
 </td>
 <td valign="top">
 
 hh:nn:ss \(24 hour clock\)
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 –
-
-
 
 </td>
 <td valign="top">
 
 20 or 120
 
-
-
 </td>
 <td valign="top">
 
 yyyy-mm-dd hh:nn:ss \(24-hour clock, ODBC canonical, 4-digit year\)
-
-
 
 </td>
 </tr>
@@ -472,21 +370,15 @@ yyyy-mm-dd hh:nn:ss \(24-hour clock, ODBC canonical, 4-digit year\)
 
 –
 
-
-
 </td>
 <td valign="top">
 
 21 or 121
 
-
-
 </td>
 <td valign="top">
 
 yyyy-mm-dd hh:nn:ss.sss \(24 hour clock, ODBC canonical with milliseconds, 4-digit year\)
-
-
 
 </td>
 </tr>
@@ -495,21 +387,15 @@ yyyy-mm-dd hh:nn:ss.sss \(24 hour clock, ODBC canonical with milliseconds, 4-dig
 
 36
 
-
-
 </td>
 <td valign="top">
 
 136
 
-
-
 </td>
 <td valign="top">
 
 hh:nn:ss.ssssssAM \(or PM\)
-
-
 
 </td>
 </tr>
@@ -518,21 +404,15 @@ hh:nn:ss.ssssssAM \(or PM\)
 
 37
 
-
-
 </td>
 <td valign="top">
 
 137
 
-
-
 </td>
 <td valign="top">
 
 hh:nn:ss.ssssss
-
-
 
 </td>
 </tr>
@@ -541,21 +421,15 @@ hh:nn:ss.ssssss
 
 38
 
-
-
 </td>
 <td valign="top">
 
 138
 
-
-
 </td>
 <td valign="top">
 
 mmm dd yy\[yy\] hh:nn:ss.ssssssAM \(or PM\)
-
-
 
 </td>
 </tr>
@@ -564,21 +438,15 @@ mmm dd yy\[yy\] hh:nn:ss.ssssssAM \(or PM\)
 
 39
 
-
-
 </td>
 <td valign="top">
 
 139
 
-
-
 </td>
 <td valign="top">
 
 mmm dd yy\[yy\] hh:nn:ss.ssssss
-
-
 
 </td>
 </tr>
@@ -587,21 +455,15 @@ mmm dd yy\[yy\] hh:nn:ss.ssssss
 
 40
 
-
-
 </td>
 <td valign="top">
 
 140
 
-
-
 </td>
 <td valign="top">
 
 \[yy\]yy-mm-dd hh:nn:ss.ssssss
-
-
 
 </td>
 </tr>
@@ -610,21 +472,15 @@ mmm dd yy\[yy\] hh:nn:ss.ssssss
 
 –
 
-
-
 </td>
 <td valign="top">
 
 365
 
-
-
 </td>
 <td valign="top">
 
 yyyyjjj \(as a string or integer, where jjj is the Julian day number from 1 to 366 within the year\)
-
-
 
 </td>
 </tr>
@@ -639,21 +495,15 @@ Abbreviations and values for date parts in the CONVERT format style table:
 
 Abbreviation
 
-
-
 </th>
 <th valign="top">
 
 Date Part
 
-
-
 </th>
 <th valign="top">
 
 Values
-
-
 
 </th>
 </tr>
@@ -662,21 +512,15 @@ Values
 
 hh
 
-
-
 </td>
 <td valign="top">
 
 hour
 
-
-
 </td>
 <td valign="top">
 
 0 – 23
-
-
 
 </td>
 </tr>
@@ -685,21 +529,15 @@ hour
 
 nn
 
-
-
 </td>
 <td valign="top">
 
 minute
 
-
-
 </td>
 <td valign="top">
 
 0 – 59
-
-
 
 </td>
 </tr>
@@ -708,21 +546,15 @@ minute
 
 ss
 
-
-
 </td>
 <td valign="top">
 
 second
 
-
-
 </td>
 <td valign="top">
 
 0 – 59
-
-
 
 </td>
 </tr>
@@ -731,21 +563,15 @@ second
 
 sss
 
-
-
 </td>
 <td valign="top">
 
 millisecond
 
-
-
 </td>
 <td valign="top">
 
 0 – 999
-
-
 
 </td>
 </tr>
@@ -754,21 +580,15 @@ millisecond
 
 ssssss
 
-
-
 </td>
 <td valign="top">
 
 microsecond
 
-
-
 </td>
 <td valign="top">
 
 0 – 999999
-
-
 
 </td>
 </tr>
@@ -777,21 +597,15 @@ microsecond
 
 mmm
 
-
-
 </td>
 <td valign="top">
 
 month
 
-
-
 </td>
 <td valign="top">
 
 jan to dec
-
-
 
 </td>
 </tr>
@@ -800,21 +614,15 @@ jan to dec
 
 dd
 
-
-
 </td>
 <td valign="top">
 
 day
 
-
-
 </td>
 <td valign="top">
 
 1 – 31
-
-
 
 </td>
 </tr>
@@ -823,21 +631,15 @@ day
 
 yyyy
 
-
-
 </td>
 <td valign="top">
 
 year
 
-
-
 </td>
 <td valign="top">
 
 0001 – 9999
-
-
 
 </td>
 </tr>
@@ -846,21 +648,15 @@ year
 
 mm
 
-
-
 </td>
 <td valign="top">
 
 month
 
-
-
 </td>
 <td valign="top">
 
 1 – 12
-
-
 
 </td>
 </tr>
@@ -884,7 +680,7 @@ The following statements illustrate the use of format styles:
 
 ```
 SELECT CONVERT( CHAR( 20 ), order_date, 104 )
-FROM sales_order
+FROM sales_order;
 ```
 
 
@@ -893,8 +689,6 @@ FROM sales_order
 <th valign="top">
 
 order\_date
-
-
 
 </th>
 </tr>
@@ -903,16 +697,12 @@ order\_date
 
 16.03.1993
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 20.03.1993
-
-
 
 </td>
 </tr>
@@ -921,16 +711,12 @@ order\_date
 
 23.03.1993
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 25.03.1993
-
-
 
 </td>
 </tr>
@@ -939,15 +725,13 @@ order\_date
 
 ...
 
-
-
 </td>
 </tr>
 </table>
 
 ```
 SELECT CONVERT( CHAR( 20 ), order_date, 7 )
-FROM sales_order
+FROM sales_order;
 ```
 
 
@@ -957,16 +741,12 @@ FROM sales_order
 
 order\_date
 
-
-
 </th>
 </tr>
 <tr>
 <td valign="top">
 
 mar 16, 93
-
-
 
 </td>
 </tr>
@@ -975,16 +755,12 @@ mar 16, 93
 
 mar 20, 93
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 mar 23, 93
-
-
 
 </td>
 </tr>
@@ -993,16 +769,12 @@ mar 23, 93
 
 mar 25, 93
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 ...
-
-
 
 </td>
 </tr>
@@ -1022,21 +794,15 @@ FROM sales_order;
 
 order\_datetime
 
-
-
 </th>
 <th valign="top">
 
 order\_datetime40
 
-
-
 </th>
 <th valign="top">
 
 order\_datetime140
-
-
 
 </th>
 </tr>
@@ -1045,21 +811,15 @@ order\_datetime140
 
 03/05/2009 01:03.05.123456
 
-
-
 </td>
 <td valign="top">
 
 09-03-05 01:03:05.123456
 
-
-
 </td>
 <td valign="top">
 
 2009-03-05 01:03:05.123456
-
-
 
 </td>
 </tr>
@@ -1068,34 +828,28 @@ order\_datetime140
 
 03/05/2009 13:05.07.654321
 
-
-
 </td>
 <td valign="top">
 
 09-03-05 13:05:07.654321
-
-
 
 </td>
 <td valign="top">
 
 2009-03-05 13:05:07.654321
 
-
-
 </td>
 </tr>
 </table>
 
 ```
-SELECT CONVERT(CHAR(50), DATETIME('2009-11-03 11:10:42.033189'), 136) FROM iq_dummy
+SELECT CONVERT(CHAR(50), DATETIME('2009-11-03 11:10:42.033189'), 136) FROM iq_dummy;
 ```
 
 returns `11:10:42.033189AM`.
 
 ```
-SELECT CONVERT(CHAR(50), NOW(), 137) FROM iq_dummy
+SELECT CONVERT(CHAR(50), NOW(), 137) FROM iq_dummy;
 ```
 
 returns `14:54:48.794122`.
@@ -1137,11 +891,11 @@ SELECT CONVERT(DATE, tab.char7_col, 365) FROM tab;
 The following statement illustrates conversion to an integer, and returns the value 5:
 
 ```
-SELECT CONVERT( integer, 5.2 ) FROM iq_dummy
+SELECT CONVERT( integer, 5.2 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[CONVERT Function [Data Type Conversion] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a53f6efb84f21015af0e8594ce5cd68e.html "Returns an expression converted to a supplied data type.") :arrow_upper_right:
+[CONVERT Function \[Data Type Conversion\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a53f6efb84f21015af0e8594ce5cd68e.html "Returns an expression converted to a supplied data type.") :arrow_upper_right:
 

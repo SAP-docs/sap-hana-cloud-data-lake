@@ -6,10 +6,13 @@ Repeats the execution of a statement list once for each row in a cursor.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61e906784f210158fadf7350f8470f5__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,7 +23,7 @@ Repeats the execution of a statement list once for each row in a cursor.
       ... [ { FOR { UPDATE BY { VALUES | TIMESTAMP | LOCK } | FOR READ ONLY } ]
       | USING <variable-name> }
    DO <statement-list>
-   END FOR [ <statement-label> ]
+   END FOR [ <statement-label> ];
 ```
 
 ```

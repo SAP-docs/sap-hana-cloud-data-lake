@@ -7,14 +7,14 @@ Generates numbers starting at 1 for each successive row in the results of the qu
 
 
 ```
-NUMBER ( * )
+NUMBER ( * );
 ```
 
 
 
 <a name="loioa56a888784f21015bbaed2c2a214738e__NUMBER_returns1"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -29,7 +29,7 @@ Use the `NUMBER` function only in a select list or a `SET` clause of an `UPDATE`
 ```
 update empl
 set seq_id = number(*)
-order by empl_id
+order by empl_id;
 ```
 
 In an `UPDATE` statement, if the `NUMBER (*)` function is used in the `SET` clause and the `FROM` clause specifies a one-to-many join, `NUMBER (*)` generates unique numbers that increase, but may not increment sequentially due to row elimination.
@@ -59,7 +59,7 @@ This statement returns the following numbered list:
 ```
 SELECT NUMBER( * )
 FROM Departments
-WHERE DepartmentID > 10
+WHERE DepartmentID > 10;
 ```
 
 
@@ -69,16 +69,12 @@ WHERE DepartmentID > 10
 
           number\(\*\)
 
-
-
 </th>
 </tr>
 <tr>
 <td valign="top" rowspan="1">
 
                            1
-
-
 
 </td>
 </tr>
@@ -87,16 +83,12 @@ WHERE DepartmentID > 10
 
                            2
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top" rowspan="1">
 
                            3
-
-
 
 </td>
 </tr>
@@ -105,16 +97,12 @@ WHERE DepartmentID > 10
 
                            4
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top" rowspan="1">
 
                            5
-
-
 
 </td>
 </tr>
@@ -123,5 +111,5 @@ WHERE DepartmentID > 10
 **Related Information**  
 
 
-[NUMBER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/473f30fba028466f85cbeb5397f95320.html "Generates numbers starting at 1 for each successive row in the results of the query.") :arrow_upper_right:
+[NUMBER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/473f30fba028466f85cbeb5397f95320.html "Generates numbers starting at 1 for each successive row in the results of the query.") :arrow_upper_right:
 

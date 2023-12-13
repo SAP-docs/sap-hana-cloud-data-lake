@@ -6,10 +6,13 @@ Exports data from data lake Relational Engine to either the external object stor
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio7ad454a70dc84dbfbdfb2513e415fcd2__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,14 +26,13 @@ UNLOAD <data-source> <data-target> [ <unload-option> ... ]
 <data-source> ::=  
    { <select-statement> 
    | [ FROM ] TABLE [ { <owner> | <schema-name> }.]<table-name> }
- 
+
 <data-target> ::=  
    { TO <filename>
    | INTO FILE <filename>
    | INTO CLIENT FILE <client-filename> } 
 
-<filename> ::=
-    { <filename-pattern> | <string> | <variable> }
+<filename> ::= { <filename-pattern> | <string> | <variable> }
 
 <filename-pattern> ::= <a string that contains a '^' character> 
 
@@ -39,11 +41,12 @@ UNLOAD <data-source> <data-target> [ <unload-option> ... ]
    | SECRET_ACCESS_KEY <string>  
    | REGION <string>
    | BYTE ORDER MARK { ON | OFF }  
-   | CONNECTION_STRING <connection_string>  
+   | CONNECTION_STRING <connection_string>
+   | WITH CREDENTIAL <purpose-def>
    | DELIMITED BY <string>  
    | ENCODING <encoding>  
    | { ENCRYPTED KEY '<key>' [ ALGORITHM '<algorithm>' ] | NOT ENCRYPTED }  
-   | ESCAPES { ON | OFF }  
+   | ESCAPES { ON | OFF }  l
    | FORMAT { PARQUET | TEXT | BINARY [ PREFIX( <length> ) [ VARYING ] ] [ SWAP ] } 
    | MAX FILE SIZE <size> 
    | MAX PARALLEL DEGREE <integer>
@@ -58,7 +61,7 @@ UNLOAD <data-source> <data-target> [ <unload-option> ... ]
 
 <encoding> ::= <string>  
 
-<algorithm> ::= { 'AES' | 'AES256' | 'AES_FIPS' | 'AES256_FIPS' }
+<algorithm> ::= { 'AES' | 'AES256' | 'AES_FIPS' | 'AES256_FIPS' };
 ```
 
 
@@ -198,7 +201,9 @@ Specifies the name and location of the single file that will contain the unloade
 
 The *<filename\>* prefix specifies the type of data store you're targetting:
 
--   `hdlfs:///` - write to data lake Files
+-   `hdlfs:///` - write to the defaultdata lake Files container
+
+-   `hdlfs://` to write to a non-default container \(one outside of your data lake instance\)
 
 -   `bb://` - write to Azure BLOB storage
 
@@ -300,7 +305,7 @@ If the filename or filename-pattern ends with "gz" or "gzip", the output gets co
 <dl>
 <dt><b>
 
- 
+
 
 </b></dt>
 <dd>
@@ -360,7 +365,7 @@ If the filename or filename-pattern ends with "gz" or "gzip", the output gets co
 <dl>
 <dt><b>
 
- 
+
 
 </b></dt>
 <dd>
@@ -374,14 +379,96 @@ The credentials required to write to Azure BLOB storage, Amazon S3 or S3-complia
 
 ```
 <connection_string> ::= 
-   { <azure_connection> 
+   { <non-default-hdlfs-instance> 
+   | <azure_connection> 
    | <s3_connection>  
-   | <google_connection>}
+   | <google_connection>};
 ```
 
 
 <dl>
 <dt><b>
+
+*<non-default-hdlfs-instance\>*
+
+</b></dt>
+<dd>
+
+```
+<non-default-hdlfs-instance> ::= 'ENDPOINT=<endpoint>;
+	CA_CERTIFICATE=<certificate-content>;
+	CLIENT_CERTIFICATE=<certificate-content>;
+	CLIENT_KEY=<client-certificate-key>;
+	KEY_PASSWORD= <certificate_key_password>';
+```
+
+This clause is optional for data lake Files containers. If you don't specify it, the UNLOAD statement will connect to the default data lake Files container provisioned within your data lake instance. If you do, the UNLOAD statement can connect to an alternate, non-default data lake Files container within a separate data lake instance.
+
+Specify the following options for the *<connection-string\>* clause:
+
+
+<dl>
+<dt><b>
+
+ENDPOINT
+
+</b></dt>
+<dd>
+
+\(Mandatory\) Represents the non-default data lake Files container endpoint. Use 'https://' as a prefix.
+
+
+
+</dd><dt><b>
+
+CA\_CERTIFICATE
+
+</b></dt>
+<dd>
+
+Specifies the data lake Files server certificate used to verify the connection during SSL handshake. If left blank, it will be picked from the default data lake Files container.
+
+
+
+</dd><dt><b>
+
+CLIENT\_CERTIFICATE
+
+</b></dt>
+<dd>
+
+\(Not needed if the WITH CREDENTIAL clause is specified\) Specifies the client certificate for the data lake Files container. This certificate may hold the entire chain of certificates. Accepts content in PEM format.
+
+
+
+</dd><dt><b>
+
+CLIENT\_KEY
+
+</b></dt>
+<dd>
+
+\(Not needed if the WITH CREDENTIAL clause is specified\) Represents a private key. Accepts content in PEM format.
+
+
+
+</dd><dt><b>
+
+KEY\_PASSWORD
+
+</b></dt>
+<dd>
+
+If specified, this value will be the password used to decrypt the client key. If not specified, and if the CLIENT\_KEY option is specified, it would be assumed to be in unencrypted form.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
 
 *<azure\_connection\>*
 
@@ -392,7 +479,7 @@ The credentials required to write to Azure BLOB storage, Amazon S3 or S3-complia
 <azure_connection> ::= 'DEFAULTENDPOINTSPROTOCOL=<endpoint_protocol>;
 	ACCOUNTNAME=<account_name>;
 	ACCOUNTKEY=<account_key>;
-	ENDPOINTSUFFIX=core.windows.net'
+	ENDPOINTSUFFIX=core.windows.net';
 ```
 
 You can find the *<azure\_connection\_string\>* values in the Azure portal. From your storage account, navigate to *Settings* \> *Access Keys*. Locate the *Connection string* section and copy the connection string to the clipboard. For *<azure\_connection\_string\>* examples, see the *Examples* section at the end of this topic.
@@ -412,7 +499,7 @@ You can find the *<azure\_connection\_string\>* values in the Azure portal. From
 	ACCESS_KEY_ID=<access key string>; 
 	SECRET_ACCESS_KEY=<secret key string>; 
 	REGION=<region string>; 
-	SESSION_TOKEN=<session token>'
+	SESSION_TOKEN=<session token>';
 ```
 
 You can find your Amazon S3 option values in the AWS Management Console.
@@ -564,7 +651,7 @@ If specified, the Amazon S3 client SDK will use its value when creating Amazon S
  <aws_connection> ::=
 	ACCESS_KEY_ID '<access_key_id>'
 	SECRET_ACCESS_KEY '<secret_access_key>' 
-	REGION '<AWS_region>'
+	REGION '<AWS_region>';
 ```
 
 You can find *<access\_key\_id\>*, *<secret\_access\_key\>*, and *<AWS\_region\>* in the IAM console. For *<aws\_connection\>* examples, see the *Examples* section at the end of this topic.
@@ -581,7 +668,7 @@ You can find *<access\_key\_id\>*, *<secret\_access\_key\>*, and *<AWS\_region\>
 ```
 <google_connection> ::= 'CLIENT_EMAIL='<client_email>';
 	PRIVATE_KEY='<private_key>';
-     PRIVATE_KEY_ID='<private_key_id>'
+     PRIVATE_KEY_ID='<private_key_id>';
 ```
 
 You can find your *<google\_connection\>* keys in Google Cloud Console, on the *Service Accounts* page. *<google\_connection\>* accepts ‘key=value’ pairs separated by ‘;’. For *<google\_connection\>* examples, see the *Examples* section at the end of this topic.
@@ -590,6 +677,26 @@ You can find your *<google\_connection\>* keys in Google Cloud Console, on the *
 
 </dd>
 </dl>
+
+
+
+</dd>
+</dl>
+
+
+
+### WITH CREDENTIAL *<purpose-def\>*
+
+
+<dl>
+<dt><b>
+
+
+
+</b></dt>
+<dd>
+
+Specifies the name of the credential's purpose as defined in the CREATE CREDENTIAL statement.
 
 
 
@@ -646,7 +753,7 @@ If this option is set to an empty string for ASCII extractions, the extracted da
 
 \(Not applicable to Parquet format\)All database data is translated from the database character encoding to the specified encoding. When ENCODING is not specified, the database's CHAR encoding is used. Character set translation is performed first, before compression or encryption is optionally applied. Specify the BYTE ORDER MARK clause to include a byte order mark in the data.
 
-See [Character Set Encodings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/8a8f277561e547b8a4a0fdfc7f7db7f7.html "A complete list of supported character set encodings for SAP HANA Cloud, data lake and their aliases.") :arrow_upper_right: for a complete list of supported character set encodings.
+See [Character Set Encodings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/8a8f277561e547b8a4a0fdfc7f7db7f7.html "A complete list of supported character set encodings for SAP HANA Cloud, data lake and their aliases.") :arrow_upper_right: for a complete list of supported character set encodings.
 
 
 
@@ -947,7 +1054,7 @@ If NULL FORMAT ZEROS is specified, the number of characters that an ASCII extrac
 <dl>
 <dt><b>
 
- 
+
 
 </b></dt>
 <dd>
@@ -1066,117 +1173,100 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 ## Examples
 
-This example unloads all data in table t1 to the default container in data lake Files, in binary format:
+These examples unload data from data lake Files:
 
-```
-UNLOAD SELECT * FROM t1 
-    INTO FILE 'hdlfs:///Q3_results.dat'
-    FORMAT BINARY
-```
+> ### Note:  
+> To unload data to a non-default data lake Files container \(one outside of your data lake instance\), use <code>hdlfs://<i class="varname">&lt;container-name&gt;</i>/<i class="varname">&lt;filename&gt;</i></code> and include the CONNECTION\_STRING and WITH CREDENTIAL clauses.
 
-This example unloads all data in table foo to the specified container in data lake Files, in Parquet format using compression:
+-   This example unloads all data in table t1 to the default data lake Files container, in binary format:
 
-```
-UNLOAD SELECT * FROM foo 
-    INTO FILE 'hdlfs:///shared/unload_foo.parquet'  
-    FORMAT PARQUET
-    COMPRESSION 'BROTLI';
-```
+    ```
+    UNLOAD SELECT * FROM t1 
+        INTO FILE 'hdlfs:///Q3_results.dat'
+        FORMAT BINARY;
+    ```
 
-This example unloads all data in table foo2 to the specified container in data lake Files, in Parquet format with a rowgroup size of two:
+-   This example unloads all data in table foo in Parquet format using compression:
 
-```
-UNLOAD SELECT * FROM foo2 
-    INTO FILE 'hdlfs:///shared/unload_foo2.parquet'
-    FORMAT PARQUET
-    ROW GROUP SIZE 2;
-```
+    ```
+    UNLOAD SELECT * FROM foo 
+        INTO FILE 'hdlfs:///unload_foo.parquet'
+        FORMAT PARQUET
+        COMPRESSION 'BROTLI';
+    ```
 
-This example unloads all data in table foo3 to the specified container in data lake Files, in Parquet format with a rowgroup size of 50 and a max file sixe of 500 KBs:
+-   This example unloads all data in table foo to a non-default data lake Files container \(one outside of your data lake instance\), using a connection string and credentials:
 
-```
-UNLOAD SELECT * FROM foo3 
-    INTO FILE 'hdlfs:///shared/unload_foo3.parquet' 
-    FORMAT PARQUET
-    ROW GROUP SIZE 50
-    MAX FILE SIZE 500;
-```
+    ```
+    UNLOAD SELECT * FROM foo 
+        INTO FILE 'hdlfs://XXXXXXXX-XXXX-411c-821f-XXXXfd7f391c/unload_foo.csv'
+        CONNECTION_STRING 'ENDPOINT=https://XXXXXXXX-XXXX-411c-821f-XXXXfd7f391c.files.hdl.XXXXXXX-XXX.XXXev-XXX.hanacloud.XXXXX.com'
+        WITH CREDENTIAL 'MyCredential2';
+    ```
 
-This example unloads the entire contents of table t1 to Amazon S3, using compression and parallel extraction \(up to five threads\):
+-   This example unloads all data in table foo2 to the default data lake Files container, in Parquet format with a rowgroup size of 50 and a max file sixe of 500 KBs:
 
-```
-UNLOAD FROM TABLE t1 
-    INTO FILE 's3://my_S3_data/Q3results^.gz'
-    CONNECTION_STRING 'ACCESS_KEY_ID=xyz;
-    	SECRET_ACCESS_KEY=abc;
-    	REGION=eu-central-1;
-    	SESSION_TOKEN=pqr'
-    MAX PARALLEL DEGREE 5;
-```
+    ```
+    UNLOAD SELECT * FROM foo2 
+        INTO FILE 'hdlfs:///unload_foo2.parquet'
+        FORMAT PARQUET
+        ROW GROUP SIZE 2;
+    ```
 
-This example unloads the entire contents of table t1 to SAP Converged Cloud \(an S3-compliant storage provider\), using compression and parallel extraction \(up to five threads\) with a part size of 10 MB:
 
-```
-UNLOAD FROM TABLE t1 
-    INTO FILE '‘s3://sap-hanadatalake/hdl_folder/Q3results^.gz'
-    CONNECTION_STRING 'ACCESS_KEY_ID=xyz;
-    	SECRET_ACCESS_KEY=abc;
-    	REGION=eu-central-1;
-    	SESSION_TOKEN=pqr;
-	    ENDPOINT_TYPE=PATH;
-	    ENDPOINT=https://objectstore-3.<CC_REGION>.cloud.sap'
-    MAX PARALLEL DEGREE 5
-    MAX PART SIZE 10 MB;
-```
+These examples unload the entire contents of table t1, using compression and parallel extraction:
 
-This example unloads the entire contents of table t1 to Azure storage, using compression and parallel extraction \(up to five threads\):
+-   This example unloads the entire contents of table t1 to Amazon S3, using compression and parallel extraction \(up to five threads\) with a part size of 10 MB:
 
-```
-UNLOAD FROM TABLE t1 
-    INTO FILE 'bb://my_azure_data/Q3results^.gz'
-    CONNECTION_STRING 'DefaultEndpointsProtocol=https;
-    	AccountName=example;
-    	AccountKey=example_key;
-    	EndpointSuffix=core.windows.net'
-    MAX PARALLEL DEGREE 5;
-```
+    ```
+    UNLOAD FROM TABLE t1 
+        INTO FILE 's3://my_S3_data/Q3results^.gz'
+        CONNECTION_STRING 'ACCESS_KEY_ID=xyz;
+        	SECRET_ACCESS_KEY=abc;
+        	REGION=eu-central-1;
+        	SESSION_TOKEN=pqr'
+        MAX PARALLEL DEGREE 5
+        MAX PART SIZE 10 MB;
+    ```
 
-This example unloads the entire contents of table t1 to Google Cloud Storage, using compression and parallel extraction \(up to five threads\):
+-   This example unloads the entire contents of table t1 to Azure storage, using compression and parallel extraction \(up to five threads\):
 
-```
-UNLOAD FROM TABLE t1 
-    INTO FILE 'gs://my_bucket/Q3results^.gz'
-    CONNECTION_STRING 'client_email=XXXXXXXX;
-    	PRIVATE_KEY=-----BEGIN PRIVATE KEY-----\nXXXXXXXX\n-----END PRIVATE KEY-----\n;
-    	PRIVATE_KEY_ID=XXXXXXXX'
-    MAX PARALLEL DEGREE 5;
-```
+    ```
+    UNLOAD FROM TABLE t1 
+        INTO FILE 'bb://my_azure_data/Q3results^.gz'
+        CONNECTION_STRING 'DefaultEndpointsProtocol=https;
+        	AccountName=example;
+        	AccountKey=example_key;
+        	EndpointSuffix=core.windows.net'
+        MAX PARALLEL DEGREE 5;
+    ```
 
-\(Deprecated\) This example unloads the entire contents of table t1 to S3 storage, using compression and parallel extraction \(up to five threads\):
+-   This example unloads the entire contents of table t1 to Google Cloud Storage, using compression and parallel extraction \(up to five threads\):
 
-```
-UNLOAD FROM TABLE t1 
-    INTO FILE 's3://my_S3_data/Q3results^.gz'
-    ACCESS_KEY_ID 'XXXXXXXXXXXXXXXXXXXX'
-    SECRET_ACCESS_KEY 'XXXXXXXXXXXXXXXXXXXX/XXXXXX/XXXXXXXXX'
-    REGION 'us-east-2'
-    MAX PARALLEL DEGREE 5;
-```
+    ```
+    UNLOAD FROM TABLE t1 
+        INTO FILE 'gs://my_bucket/Q3results^.gz'
+        CONNECTION_STRING 'client_email=XXXXXXXX;
+        	PRIVATE_KEY=-----BEGIN PRIVATE KEY-----\nXXXXXXXX\n-----END PRIVATE KEY-----\n;
+        	PRIVATE_KEY_ID=XXXXXXXX'
+        MAX PARALLEL DEGREE 5;
+    ```
+
 
 **Related Information**  
 
 
-[UNLOAD Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/5049a399ee2241dda78d47a0a3cc46e9.html "Exports data from data lake Relational Engine to either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, Google Cloud Storage) or to data lake Files containers (the managed object store).") :arrow_upper_right:
+[UNLOAD Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/5049a399ee2241dda78d47a0a3cc46e9.html "Exports data from data lake Relational Engine to either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, Google Cloud Storage) or to data lake Files containers (the managed object store).") :arrow_upper_right:
 
-[SAP HANA Cloud, Data Lake Load and Unload Management](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_2_QRC/en-US/e77c96193a604e05ba198e424de2ed6c.html "Data load (import) and export (unload) procedures for data lake Relational Engine, including loading from and unloading to data lake Files.") :arrow_upper_right:
+[SAP HANA Cloud, Data Lake Relational Engine Load and Unload Management](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/e77c96193a604e05ba198e424de2ed6c.html "Data load (import) and export (unload) procedures for data lake Relational Engine, including loading from and unloading to data lake Files.") :arrow_upper_right:
 
-[Unloading Data to the External Object Store](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_2_QRC/en-US/31a19ffdd4af430c8ebc962cbac2cf5a.html "Unload (extract) data from data lake Relational Engine to the external object store using either the UNLOAD statement, or the data extraction facility.") :arrow_upper_right:
+[Unloading Data to the External Object Store](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/31a19ffdd4af430c8ebc962cbac2cf5a.html "Unload (extract) data from data lake Relational Engine to the external object store using either the UNLOAD statement, or the data extraction facility.") :arrow_upper_right:
 
-[Unloading Data to Data Lake Files from Data Lake Relational Engine](https://help.sap.com/viewer/b239ed4bb73a4f07886657e237f1875f/2023_2_QRC/en-US/128c5bced169487f98eb2e2a49e7fd45.html "Use the UNLOAD statement to unload data to data lake Files.") :arrow_upper_right:
+[Unloading Data to Data Lake Files from Data Lake Relational Engine](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/128c5bced169487f98eb2e2a49e7fd45.html "Use the UNLOAD statement to unload data to data lake Files.") :arrow_upper_right:
 
 [TEMP\_EXTRACT\_GZ\_COMPRESSION\_LEVEL Option for Data Lake Relational Engine](../090-database-options/temp-extract-gz-compression-level-option-for-data-lake-relational-engine-ee9f6aa.md "The compression level balances compression with speed when the TEMP_EXTRACT_COMPRESS option is set to ON.")
 
-[SAP HANA Cloud, Data Lake Terminology](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2023_2_QRC/en-US/d003004765fb4475b14d83e5c51b117f.html "Definitions of data lake terms used in this document.") :arrow_upper_right:
+[SAP HANA Cloud, Data Lake Terminology](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2023_4_QRC/en-US/d003004765fb4475b14d83e5c51b117f.html "Definitions of data lake terms used in this document.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

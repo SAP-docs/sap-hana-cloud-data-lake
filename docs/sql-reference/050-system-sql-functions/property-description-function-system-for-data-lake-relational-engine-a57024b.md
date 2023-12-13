@@ -7,7 +7,7 @@ Returns a description of a property.
 
 
 ```
-PROPERTY_DESCRIPTION ( { <property-id> | <property-name> } )
+PROPERTY_DESCRIPTION ( { <property-id> | <property-name> } );
 ```
 
 
@@ -45,7 +45,7 @@ A string giving the name of the property.
 
 
 
-## Returns
+## Result Set
 
 VARCHAR
 
@@ -78,6 +78,6 @@ Each property has both a number and a name, but the number is subject to change 
 The following statement returns the description "Number of index insertions":
 
 ```
-SELECT PROPERTY_DESCRIPTION( 'IndAdd' ) FROM iq_dummy
+SELECT PROPERTY_DESCRIPTION( 'IndAdd' ) FROM iq_dummy;
 ```
 

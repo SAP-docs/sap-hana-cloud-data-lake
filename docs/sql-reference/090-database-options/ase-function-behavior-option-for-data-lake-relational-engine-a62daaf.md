@@ -6,10 +6,13 @@ Specifies that output of data lake Relational Engine functions, including INTTOH
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa62daafc84f21015b621feed0116ead6__section_d3p_24q_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Specifies that output of data lake Relational Engine functions, including INTTOH
 ## Syntax
 
 ```
-ASE_FUNCTION_BEHAVIOR = { ON | OFF }
+ASE_FUNCTION_BEHAVIOR = { ON | OFF };
 ```
 
 
@@ -60,28 +63,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -90,28 +85,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -120,28 +107,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -168,13 +147,13 @@ In this example, the HEXTOINT function returns a different value based on whethe
 The HEXTOINT function returns 4294967287 with ASE\_BEHAVIOR\_FUNCTION OFF:
 
 ```
-select hextoint('fffffff7') from iq_dummy
+select hextoint('fffffff7') from iq_dummy;
 ```
 
 The HEXTOINT function returns -9 with ASE\_BEHAVIOR\_FUNCTION ON:
 
 ```
-select hextoint('fffffff7') from iq_dummy
+select hextoint('fffffff7') from iq_dummy;
 ```
 
 **Related Information**  

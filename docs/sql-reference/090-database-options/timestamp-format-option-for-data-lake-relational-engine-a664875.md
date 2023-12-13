@@ -6,10 +6,13 @@ Sets the format used for timestamps retrieved from the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa664875c84f21015ab41889496f22a0b__section_ajq_xqq_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Sets the format used for timestamps retrieved from the database.
 ## Syntax
 
 ```
-TIMESTAMP_FORMAT = <string>
+TIMESTAMP_FORMAT = <string>;
 ```
 
 
@@ -64,28 +67,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -94,28 +89,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -124,28 +111,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -166,14 +145,10 @@ The format is a string using these symbols:
 
 Symbol
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Description
-
-
 
 </th>
 </tr>
@@ -182,14 +157,10 @@ Description
 
 yy
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2-digit year.
-
-
 
 </td>
 </tr>
@@ -198,14 +169,10 @@ yy
 
 yyyy
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 4-digit year.
-
-
 
 </td>
 </tr>
@@ -214,14 +181,10 @@ yyyy
 
 mm
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2-digit month, or two digit minutes if following a colon \(as in 'hh:mm'\).
-
-
 
 </td>
 </tr>
@@ -230,14 +193,10 @@ mm
 
 mmm
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 3-character short form for name of the month of year.
-
-
 
 </td>
 </tr>
@@ -246,14 +205,10 @@ mmm
 
 mmmm\[m...\]
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Character long form for month name—as many characters as there are m's, until the number of m’s specified exceeds the number of characters in the month’s name.
-
-
 
 </td>
 </tr>
@@ -262,14 +217,10 @@ Character long form for month name—as many characters as there are m's, until 
 
 dd
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2-digit day of month.
-
-
 
 </td>
 </tr>
@@ -278,14 +229,10 @@ dd
 
 ddd
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 3-character short form for name of the day of week.
-
-
 
 </td>
 </tr>
@@ -294,14 +241,10 @@ ddd
 
 dddd\[d...\]
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Character long form for day name—as many characters as there are d's, until the number of d’s specified exceeds the number of characters in the day’s name.
-
-
 
 </td>
 </tr>
@@ -310,14 +253,10 @@ Character long form for day name—as many characters as there are d's, until th
 
 hh
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2-digit hours.
-
-
 
 </td>
 </tr>
@@ -326,14 +265,10 @@ hh
 
 nn
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2-digit minutes.
-
-
 
 </td>
 </tr>
@@ -342,14 +277,10 @@ nn
 
 ss.SSS
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Seconds \(ss\) and fractions of a second \(SSS\), up to six decimal places. Not all platforms support timestamps to a precision of six places.
-
-
 
 </td>
 </tr>
@@ -358,14 +289,10 @@ Seconds \(ss\) and fractions of a second \(SSS\), up to six decimal places. Not 
 
 aa
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 a.m. or p.m. \(12-hour clock\).
-
-
 
 </td>
 </tr>
@@ -374,14 +301,10 @@ a.m. or p.m. \(12-hour clock\).
 
 pp
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 p.m. if needed \(12-hour clock.\)
-
-
 
 </td>
 </tr>
@@ -402,7 +325,7 @@ Multibyte characters are not supported in format strings. Only single-byte chara
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[TIMESTAMP_FORMAT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/002566cefa3a43bca454142befc1cdac.html "Sets the format used for timestamps retrieved from the database.") :arrow_upper_right:
+[TIMESTAMP_FORMAT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/002566cefa3a43bca454142befc1cdac.html "Sets the format used for timestamps retrieved from the database.") :arrow_upper_right:
 
 [DATE\_FORMAT Option for Data Lake Relational Engine](date-format-option-for-data-lake-relational-engine-a632563.md "Sets the format used for dates retrieved from the database.")
 

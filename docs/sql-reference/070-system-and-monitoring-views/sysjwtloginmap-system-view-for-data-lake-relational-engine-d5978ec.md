@@ -6,10 +6,13 @@ Lists the JWT-user mappings configured in the data lake Relational Engine databa
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loiod5978ec7e26643178577c42bcecb6c64__section_i2m_qpq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Lists the JWT-user mappings configured in the data lake Relational Engine databa
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 login\_id
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(1024\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the user known to the JWT provider.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The name of the user known to the JWT provider.
 
 jwt\_provider\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The ID of the JWT provider.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ The ID of the JWT provider.
 
 database\_uid
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The data lake Relational Engine database user ID to which login\_id is mapped.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ The data lake Relational Engine database user ID to which login\_id is mapped.
 
 object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 A unique identifier for the mapping.
-
-
 
 </td>
 </tr>

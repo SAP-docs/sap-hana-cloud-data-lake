@@ -51,14 +51,15 @@ Specifies the SAP HANA database user who is to manage the relational container.
 
 The system procedure performs the following tasks:
 
--   Creates the relational container using the specified name. Once created, the relational container name is prefaced with SYSHDL **\(SYSHDL\_*<relational\_container\_name\>*\)**. The owner of the relational container has the same name as the relational container \(SYSHDL\_*<relational\_container\_name\>*\).
--   Creates the container administrator role for the relational container. The SAP HANA database user specified becomes a member of the container administrator role. The role name combines the relational container name with the suffix \_ROLE, **\(SYSHDL\_*<relational\_container\_name\>*\_ROLE\)**.
+-   Creates the relational container using the specified name. **\(SYSHDL\_*<relational\_container\_name\>*\)**. The owner of the relational container has the same name as the relational container.
+-   Creates the container administrator role for the relational container. The SAP HANA database user specified is the default member of the container administrator role. The role name combines the relational container name with the suffix \_ROLE, **\(SYSHDL\_*<relational\_container\_name\>*\_ROLE\)**.
+-   Creates the relational container user, an SAP HANA database user, which owns the SAP HANA database relational container schema and all associated procedures, servers, and sources. It is the user who communicates with the data lake Relational Engine relational container **\(SYSHDL\_*<relational\_container\_name\>*\)**.
 -   Creates the defaultdata lake Relational Engine and SAP HANA database relational container schemas. Both schemas have the same name, which is the same as the relational container name, **\(SYSHDL\_*<relational\_container\_name\>*\)**.
--   Creates the SAP HANA database remote source for the data lake Relational Engine relational container. The remote source name combines the relational container name with the suffix \_SOURCE \(**SYSHDL\_*<relational\_container\_name\>*\_SOURCE**\).
--   Creates the remote server for the relational container. The remote server name combines the relational container name with the suffix \_SERVER \(**SYSHDL\_*<relational\_container\_name\>*\_SERVER**\).
--   Creates the REMOTE\_EXECUTE procedure.
+-   Creates the SAP HANA database remote source for the data lake Relational Engine relational container. The remote source name combines the relational container name with the suffix \_SOURCE **\(SYSHDL\_*<relational\_container\_name\>*\_SOURCE\)**.
+-   Creates the remote server for the relational container. The remote server name combines the relational container name with the suffix \_SERVER **\(SYSHDL\_*<relational\_container\_name\>*\_SERVER\)**.
+-   Creates the REMOTE\_EXECUTE and REMOTE\_EXECUTE\_DDL procedures, which are owned by the relational container user.
 -   Grants the following permissions to the container administrator role with the ability to grant the privileges to other users and roles.
-    -   EXECUTE permission on the REMOTE\_EXECUTE procedure in the SAP HANA database relational container schema.
+    -   EXECUTE permission on the REMOTE\_EXECUTE and REMOTE\_EXECUTE\_DDL procedures.
     -   CREATE VIRTUAL TABLE and REMOTE TABLE ADMIN permissions on the relational container remote source.
     -   SELECT, ALTER, UPDATE, INSERT, and DELETE permissions on the SAP HANA database relational container schema.
 
@@ -86,7 +87,7 @@ CALL SYSHDL.CREATE_CONTAINER('CONTAINER1', 'USER1');
 **Related Information**  
 
 
-[Manage Relational Containers in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/0b494fedebb243fc9bd92c87bac7ddd4.html "A relational container is a repository within the container group that contains data lake Relational Engine objects. It allows for the isolation of data between containers and provides control over which containers a user can access.") :arrow_upper_right:
+[Manage Relational Containers in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/0b494fedebb243fc9bd92c87bac7ddd4.html "Relational containers are managed from the SAP HANA database instance, but are stored in the data lake Relational Engine instance.") :arrow_upper_right:
 
-[Creating a Relational Container in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/ab555a3a98204db88d1aab58b51f15ce.html "Create a relational container in the data lake Relational Engine container group.") :arrow_upper_right:
+[Creating a Relational Container in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/ab555a3a98204db88d1aab58b51f15ce.html "Create a relational container in the data lake Relational Engine container group.") :arrow_upper_right:
 

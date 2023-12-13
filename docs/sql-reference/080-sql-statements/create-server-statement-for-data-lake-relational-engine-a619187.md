@@ -6,10 +6,13 @@ Creates a remote server.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa619187d84f210158b3081e7245e94a0__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -17,7 +20,7 @@ Creates a remote server.
 CREATE SERVER <server-name> 
    CLASS '{ ASEODBC | HANAODBC | ODBC | IQODBC }' 
    USING '<SQL_endpoint>' 
-   [ READ ONLY ]
+   [ READ ONLY ];
 ```
 
 
@@ -66,7 +69,10 @@ Specifies that the remote server is a read-only data source. Any update request 
 
 `CREATE SERVER` defines a remote server from the data lake Relational Engine catalogs.
 
-The value for TrustedFile must be /ase/python\_client/config/trusted.txt. This file is populated with the CREATE and DROP CERTIFICATE statement. The DigiCertRootCA is required to connect to SAP Cloud databases.
+The value for TrustedFile must be /ase/python\_client/config/trusted.txt. This file is populated with the CREATE and DROP CERTIFICATE statement. The DigiCert Global Root G2 certificate is required to connect to SAP Cloud databases.
+
+> ### Note:  
+> You can find details about root certificate updates on the DigiCert website at [https://knowledge.digicert.com/general-information/digicert-root-and-intermediate-ca-certificate-updates-2023](https://knowledge.digicert.com/general-information/digicert-root-and-intermediate-ca-certificate-updates-2023). Also see SAP Note [3397584](https://me.sap.com/notes/3397584), SAP Note [3327214](https://me.sap.com/notes/3327214) and SAP Note [3399572](https://me.sap.com/notes/3399572).
 
 
 
@@ -93,7 +99,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 ## Examples
 
-This example creates a remote HANA server:
+This example creates a remote SAP HANA server:
 
 ```
 CREATE SERVER myHANAserver CLASS 'HANAODBC' USING 
@@ -109,17 +115,17 @@ ssltrustcert=Yes;
 UID=DBADMIN;PWD=xxx;'
 ```
 
-This example creates a remote IQ server:
+This example creates a remote SAP IQ server:
 
 ```
 CREATE SERVER myIQserver CLASS 'IQODBC' USING
    'DRIVER=libdbodbc17_r.so;
     UID=HDLADMIN;PWD=xxx;
     host=d0aeefbf-7075-49cd-b827-812cd947655e.xxx.com:443;
-   ENC=TLS(trusted_certificates=*;direct=yes;certificate_name=hanacloud.xxx.com)'
+   ENC=TLS(trusted_certificates=*;direct=yes;certificate_name=hanacloud.xxx.com)';
 ```
 
-This example creates a remote ASE cloud server:
+This example creates a remote SAP ASE cloud server:
 
 ```
 CREATE SERVER myASEserver  CLASS 'ASEODBC' USING 

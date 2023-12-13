@@ -6,15 +6,18 @@ Estimates the amount of space needed to create an index based on the number of r
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5a7f06d84f210158e22bbecee776c23__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqestspace ( <table_name>, <#_of_rows>, <iq_page_size> )
+sp_iqestspace ( <table_name>, <#_of_rows>, <iq_page_size> );
 ```
 
 

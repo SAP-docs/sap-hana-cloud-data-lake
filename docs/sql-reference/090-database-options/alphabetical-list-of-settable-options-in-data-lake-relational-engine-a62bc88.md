@@ -4,6 +4,8 @@
 
 Settable database options let you configure database behavior.
 
+
+
 Some option names are followed by a class indicator in square brackets to indicate whether they are Transact-SQL or Interactive SQL options:
 
 -   \[Interactive SQL\] – The option changes how Interactive SQL interacts with the database.

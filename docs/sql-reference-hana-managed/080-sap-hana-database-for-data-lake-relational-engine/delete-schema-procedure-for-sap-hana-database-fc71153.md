@@ -46,7 +46,7 @@ You cannot drop a data lake Relational Engine schema that contains objects. When
 
 ## Privileges
 
-You are a member of the container group administrator role, SYSHDL\_<relational\_container\_name\>\_ROLE, for the relational container.
+You are a member of the container administrator role, SYSHDL\_*<relational\_container\_name\>*\_ROLE, for the relational container.
 
 
 

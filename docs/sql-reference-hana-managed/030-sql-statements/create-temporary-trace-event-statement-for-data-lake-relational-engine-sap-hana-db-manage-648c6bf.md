@@ -6,10 +6,13 @@ Creates a user trace event that persists until the database is stopped.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user. It cannot be run using the REMOTE\_EXECUTE procedure.
+<a name="loio648c6bf7ab2444cd8182c4a06d3dad86__section_f3y_mhw_ysb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected directly to data lake Relational Engine **coordinator** as a data lake Relational Engine user. This syntax cannot be run using the REMOTE\_EXECUTE procedure.
 
 
 
@@ -23,7 +26,7 @@ CREATE [ OR REPLACE ] TEMPORARY TRACE EVENT <trace-event-name>
  | WARNING
  | INFORMATION
  | DEBUG } ]
-[ ( <field-name> <field-type> [ , ... ] ] )
+[ ( <field-name> <field-type> [ , ... ] ] );
 ```
 
 
@@ -41,7 +44,7 @@ CREATE [ OR REPLACE ] TEMPORARY TRACE EVENT <trace-event-name>
 <dl class="glossary">
 <dt><b>
 
- *<trace-event-name\>* 
+*<trace-event-name\>* 
 
 </b></dt>
 <dd>
@@ -77,14 +80,10 @@ If the severity level is not specified, the default severity level \(DEBUG\) is 
 
 Level
 
-
-
 </th>
 <th valign="top">
 
 Severity value range
-
-
 
 </th>
 </tr>
@@ -93,14 +92,10 @@ Severity value range
 
 ALWAYS
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -109,14 +104,10 @@ ALWAYS
 
 CRITICAL
 
-
-
 </td>
 <td valign="top">
 
 1-50
-
-
 
 </td>
 </tr>
@@ -125,14 +116,10 @@ CRITICAL
 
 ERROR
 
-
-
 </td>
 <td valign="top">
 
 51-100
-
-
 
 </td>
 </tr>
@@ -141,14 +128,10 @@ ERROR
 
 WARNING
 
-
-
 </td>
 <td valign="top">
 
 101-150
-
-
 
 </td>
 </tr>
@@ -157,14 +140,10 @@ WARNING
 
 INFORMATION
 
-
-
 </td>
 <td valign="top">
 
 151-200
-
-
 
 </td>
 </tr>
@@ -173,14 +152,10 @@ INFORMATION
 
 DEBUG
 
-
-
 </td>
 <td valign="top">
 
 201-255
-
-
 
 </td>
 </tr>
@@ -190,7 +165,7 @@ DEBUG
 
 </dd><dt><b>
 
- *<field-name\>* 
+*<field-name\>* 
 
 </b></dt>
 <dd>
@@ -201,7 +176,7 @@ The field that gathers information of a specific type from the user trace event.
 
 </dd><dt><b>
 
- *<field-type\>* 
+*<field-type\>* 
 
 </b></dt>
 <dd>
@@ -228,8 +203,6 @@ A trace event is stored in memory and is dropped when the database server stops 
 ## Privileges
 
 You have the MANAGE ANY TRACE SESSION system privilege.
-
-See [GRANT System Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a3dfcb0284f21015b74ac3cded42ee69.html "Grants specific system privileges to users or roles, with or without administrative rights.") :arrow_upper_right: for assistance with granting privileges.
 
 
 
@@ -263,6 +236,8 @@ Not in the standard.
 
 
 
+## Example
+
 The following statement creates a user trace event:
 
 ```
@@ -272,5 +247,7 @@ CREATE TEMPORARY TRACE EVENT my_event( id INTEGER, information LONG VARCHAR );
 **Related Information**  
 
 
-[CREATE TEMPORARY TRACE EVENT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/816cfdb66ce21014b8ff8c954b0293b5.html "Creates a user trace event that persists until the database is stopped.") :arrow_upper_right:
+[CREATE TEMPORARY TRACE EVENT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/816cfdb66ce21014b8ff8c954b0293b5.html "Creates a user trace event that persists until the database is stopped.") :arrow_upper_right:
+
+[DROP TRACE EVENT Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-trace-event-statement-for-data-lake-relational-engine-sap-hana-db-managed-6357958.md "Drops a user-defined trace event.")
 

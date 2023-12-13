@@ -6,10 +6,13 @@ The SYSSQLSERVERTYPE system view contains information relating to compatibility 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bea339d6c5f101490739fcc01ea2b3e__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ The SYSSQLSERVERTYPE system view contains information relating to compatibility 
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 ss\_user\_type
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 The Adaptive Server Enterprise user type.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The Adaptive Server Enterprise user type.
 
 ss\_domain\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 The Adaptive Server Enterprise domain ID.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ The Adaptive Server Enterprise domain ID.
 
 ss\_type\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR \(30\)
 
-
-
 </td>
 <td valign="top">
 
 The Adaptive Server Enterprise type name.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ The Adaptive Server Enterprise type name.
 
 primary\_sa\_domain\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 The corresponding data lake Relational Engine primary domain ID.
-
-
 
 </td>
 </tr>
@@ -135,21 +108,15 @@ The corresponding data lake Relational Engine primary domain ID.
 
 primary\_sa\_user\_type
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 The corresponding data lake Relational Engine primary user type.
-
-
 
 </td>
 </tr>

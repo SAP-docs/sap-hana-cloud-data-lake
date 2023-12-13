@@ -6,10 +6,13 @@ Each row in the SYSTRIGGER system view describes one trigger in the database. Th
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bead2516c5f1014980c8a7f234ac01d__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYSTRIGGER system view describes one trigger in the database. Th
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 trigger\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 A unique number for the trigger in the SYSTRIGGER view.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ A unique number for the trigger in the SYSTRIGGER view.
 
 table\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The table ID of the table to which this trigger belongs.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ The table ID of the table to which this trigger belongs.
 
 object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The object ID for the trigger in the database.
-
-
 
 </td>
 </tr>
@@ -112,14 +91,10 @@ The object ID for the trigger in the database.
 
 event
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -228,14 +203,10 @@ UPDATE
 
 trigger\_time
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -322,21 +293,15 @@ AFTER \(statement-level trigger\)
 
 trigger\_order
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 The order in which are fired when there are multiple triggers of the same type \(insert, update, or delete\) set to fire at the same time \(applies to BEFORE or AFTER triggers only, only\).
-
-
 
 </td>
 </tr>
@@ -345,21 +310,15 @@ The order in which are fired when there are multiple triggers of the same type \
 
 foreign\_table\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The ID of the table containing a foreign key definition that has a referential triggered action \(such as ON DELETE CASCADE\). The foreign\_table\_id value reflects the value of ISYSIDX.table\_id.
-
-
 
 </td>
 </tr>
@@ -368,21 +327,15 @@ The ID of the table containing a foreign key definition that has a referential t
 
 foreign\_key\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The ID of the foreign key for the table referenced by foreign\_table\_id. The foreign\_key\_id value reflects the value of ISYSIDX.index\_id.
-
-
 
 </td>
 </tr>
@@ -391,14 +344,10 @@ The ID of the foreign key for the table referenced by foreign\_table\_id. The fo
 
 referential\_action
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -463,21 +412,15 @@ RESTRICT
 
 trigger\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the trigger. One table cannot have two triggers with the same name.
-
-
 
 </td>
 </tr>
@@ -486,21 +429,15 @@ The name of the trigger. One table cannot have two triggers with the same name.
 
 trigger\_defn
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The command that was used to create the trigger.
-
-
 
 </td>
 </tr>
@@ -509,21 +446,15 @@ The command that was used to create the trigger.
 
 remarks
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 Remarks about the trigger. This value is stored in the ISYSREMARK system table.
-
-
 
 </td>
 </tr>
@@ -532,21 +463,15 @@ Remarks about the trigger. This value is stored in the ISYSREMARK system table.
 
 source
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The SQL source for the trigger. This value is stored in the ISYSSOURCE system table.
-
-
 
 </td>
 </tr>

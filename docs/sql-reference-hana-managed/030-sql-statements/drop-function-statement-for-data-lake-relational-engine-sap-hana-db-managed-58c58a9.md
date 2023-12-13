@@ -2,18 +2,16 @@
 
 # DROP FUNCTION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)
 
-Removes user-defined function from the database.
+Removes a user-defined function from the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -28,7 +26,7 @@ DROP FUNCTION [ IF EXISTS ] [ <schema-name>.]<function-name> 
 
 
 
-<a name="loio58c58a93e1de4d409e3776c4b92790e1__IQ_Parameters"/>
+<a name="loio58c58a93e1de4d409e3776c4b92790e1__section_uxw_drq_dzb"/>
 
 ## Parameters
 
@@ -41,7 +39,7 @@ IF EXISTS
 </b></dt>
 <dd>
 
-Prevents the return of an error if the specified function does not exist.
+Use if you do not want an error returned when the DROP statement attempts to remove a database object that does not exist.
 
 
 
@@ -50,9 +48,21 @@ Prevents the return of an error if the specified function does not exist.
 
 
 
-<a name="loio58c58a93e1de4d409e3776c4b92790e1__IQ_Permissions"/>
+<a name="loio58c58a93e1de4d409e3776c4b92790e1__section_wwm_2rq_dzb"/>
+
+## Remarks
+
+None
+
+
+
+<a name="loio58c58a93e1de4d409e3776c4b92790e1__section_kcj_3rq_dzb"/>
 
 ## Privileges
+
+
+
+### 
 
 The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
 
@@ -60,21 +70,21 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
 
 </b></dt>
 <dd>
 
-Requires one of:
+To use REMOTE\_EXECUTE requires one of the following:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 
 </dd><dt><b>
 
-Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+Connected directly to data lake Relational Engine **coordinator** as a data lake Relational Engine user:
 
 </b></dt>
 <dd>
@@ -92,17 +102,19 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </dd>
 </dl>
 
+See [GRANT System Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a3dfcb0284f21015b74ac3cded42ee69.html "Grants specific system privileges to users or roles, with or without administrative rights.") :arrow_upper_right: or [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right: for assistance with granting privileges.
 
 
-<a name="loio58c58a93e1de4d409e3776c4b92790e1__IQ_Side_Effects"/>
+
+<a name="loio58c58a93e1de4d409e3776c4b92790e1__section_pj3_jrq_dzb"/>
 
 ## Side Effects
 
--   Automatic commit. Closes all cursors for the current connection.
+-   Automatic commit. Clears the Data window in dbisql.
 
 
 
-<a name="loio58c58a93e1de4d409e3776c4b92790e1__IQ_Standards"/>
+<a name="loio58c58a93e1de4d409e3776c4b92790e1__section_ulw_lrq_dzb"/>
 
 ## Standards
 
@@ -110,14 +122,14 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 
 
 
-<a name="loio58c58a93e1de4d409e3776c4b92790e1__IQ_Examples"/>
+<a name="loio58c58a93e1de4d409e3776c4b92790e1__section_bhb_krq_dzb"/>
 
 ## Examples
 
-The following example drops the `Departments` function from the database:
+This example drops the user-defined function myfunction1 if it exists from the database.
 
 ```
-DROP FUNCTION Departments
+DROP FUNCTION IF EXISTS myfunction1;
 ```
 
 **Related Information**  
@@ -127,5 +139,5 @@ DROP FUNCTION Departments
 
 [ALTER FUNCTION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](alter-function-statement-for-data-lake-relational-engine-sap-hana-db-managed-3d7a54b.md "Modifies an existing function. Include the entire modified function in the ALTER FUNCTION statement.")
 
-[DROP Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a61c216b84f21015baa181c153419bbb.html "Removes objects from the database.") :arrow_upper_right:
+[DROP FUNCTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/d42de2d8355a4762b5a47e810d55653f.html "Removes a user-defined function from the database.") :arrow_upper_right:
 

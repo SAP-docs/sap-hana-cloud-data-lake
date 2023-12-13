@@ -6,16 +6,17 @@ Modifies a table definition.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
 
 
 
 
+
+### 
 
 ```
 ALTER TABLE [ <schema-name>.]<table-name>
@@ -31,7 +32,7 @@ ALTER TABLE [ <schema-name>.]<table-name>
             | <hash-range-partitioning-scheme>
    | SUBPARTITION BY RANGE <range-partition-decl>
    | ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>
-   | UNPARTITION
+   | UNPARTITION;
 ```
 
 
@@ -46,36 +47,14 @@ ALTER TABLE [ <schema-name>.]<table-name>
 ## Parameters
 
 
+
+### *<create-column\>*
+
+
 <dl>
 <dt><b>
 
-ALTER OWNER
 
-</b></dt>
-<dd>
-
-Changes the owner of a table.
-
--   You cannot use the ALTER OWNER clause in conjunction with any other *<alter-clause\>* clauses of the ALTER TABLE statement:
-
-    -   \[ PRESERVE | DROP \] PERMISSIONS – if you do not want the new owner to have the same privileges as the old owner, use the DROP privileges clause \(default\) to drop all explicitly-granted privileges that allow a user access to the table. Implicitly-granted privileges given to the owner of the table are given to the new owner and dropped from the old owner.
-    -   \[ PRESERVE | DROP \] FOREIGN KEYS – if you want to prevent the new owner from accessing data in referenced tables, use the DROP FOREIGN KEYS clause \(default\) to drop all foreign keys within the table, as well as all foreign keys referring to the table. Use of the PRESERVE FOREIGN KEYS clause with the DROP PERMISSIONS clause fails unless all referencing tables are owned by the new owner.
-
--   The ALTER TABLE ALTER OWNER statement fails if:
-
-    -   Another table with the same name as the original table exists and is owned by the new user.
-    -   The PRESERVE FOREIGN KEYS and PRESERVE PERMISSIONS clauses are both specified and there is a foreign key owned by a user other than the new table owner referencing the table that relies on implicitly-granted privileges \(such as those given to the owner of a table\). To avoid this failure, explicitly grant SELECT privileges to the referring table's original owner, or drop the foreign keys.
-    -   The PRESERVE FOREIGN KEYS clause is specified, but the PRESERVE PERMISSIONS clause is NOT, and there is a foreign key owned by a user other than the new table owner referencing the table. To avoid this failure, drop the foreign keys.
-    -   The PRESERVE FOREIGN KEYS clause is specified and the table contains a foreign key that relies on implicitly granted privileges \(such as those given to the owner of a table\). To avoid this failure, explicitly GRANT SELECT privileges to the new owner on the referenced table, or drop the foreign keys.
-    -   The table contains a column with a default value that refers to a sequence, and the USAGE privilege of the sequence generator relies on implicitly-granted privileges \(such as those given to the owner of a sequence\). To avoid this failure, explicitly grant USAGE privilege on the sequence generator to the new owner of the table.
-    -   Enabled materialized views that depend on the original table exist.
-
-
-
-
-</dd><dt><b>
-
- *<create-column\>*
 
 </b></dt>
 <dd>
@@ -85,7 +64,7 @@ Adds a new column or column constraint to the table object.
 ```
 <create-column> ::= 
    <column-name> <column-definition> [ <column-constraint> ]
-   | <table-constraint>
+   | <table-constraint>;
 ```
 
 
@@ -103,7 +82,7 @@ Defines a table column. Two columns in the same table cannot have the same name.
 <column definition> ::= 
    <column-name> <data-type> [ NOT NULL | NULL  ] 
     [ IN <dbspace-name> ] 
-    [ DEFAULT <default-value> | IDENTITY ]
+    [ DEFAULT <default-value> | IDENTITY ];
 ```
 
 
@@ -140,7 +119,7 @@ Specifies a default value to be assigned to the column if an INSERT statement do
    | NULL 
    | TIMESTAMP 
    | LAST USER 
-   | USER
+   | USER;
 ```
 
 
@@ -177,9 +156,18 @@ See *<table-constraint\>* and *<column-constraint\>* in *CREATE TABLE Statement 
 
 
 
-</dd><dt><b>
+</dd>
+</dl>
 
-*<column-alteration\>*
+
+
+### *<column-alteration\>*
+
+
+<dl>
+<dt><b>
+
+
 
 </b></dt>
 <dd>
@@ -190,7 +178,7 @@ Changes the column definition.
 <column-alteration> ::= 
    { <column-data-type> | <alterable-column-attribute> } [ <alterable-column-attribute> … ]  
     | ADD [ CONSTRAINT[ <constraint-name> ] CHECK ( <condition> )  
-    | DROP { DEFAULT | CHECK | CONSTRAINT <constraint-name> }
+    | DROP { DEFAULT | CHECK | CONSTRAINT <constraint-name> };
 ```
 
 ```
@@ -198,7 +186,7 @@ Changes the column definition.
    [ NOT ] NULL 
    | DEFAULT <default-value>  
    | [ CONSTRAINT <constraint-name> ] CHECK { NULL | ( <condition> ) 
-     }
+     };
 ```
 
 
@@ -263,9 +251,18 @@ Removes the default value of an existing column in a table. You can also use the
 
 
 
-</dd><dt><b>
+</dd>
+</dl>
 
-DROP *<drop-object\>*
+
+
+### DROP *<drop-object\>*
+
+
+<dl>
+<dt><b>
+
+
 
 </b></dt>
 <dd>
@@ -280,7 +277,7 @@ Drops a table object.
    | UNIQUE ( <index-columns-list> )  
    | PRIMARY KEY 
    | FOREIGN KEY <fkey-name>
-   | { PARTITION | SUBPARTITION } <range-partition-name>
+   | { PARTITION | SUBPARTITION } <range-partition-name>;
 ```
 
 
@@ -367,9 +364,18 @@ Drops the specified partition or subpartition. The rows in the partition or subp
 
 
 
-</dd><dt><b>
+</dd>
+</dl>
 
-RENAME *<rename-object\>*
+
+
+### RENAME *<rename-object\>*
+
+
+<dl>
+<dt><b>
+
+
 
 </b></dt>
 <dd>
@@ -381,7 +387,7 @@ Renames an object in the table.
    <new-table-name>  
    | <column-name> TO <new-column-name>   
    | CONSTRAINT <constraint-name> TO <new-constraint-name> 
-   | { PARTITION | SUBPARTITION } <range-partition-name> TO <new-range-partition-name>
+   | { PARTITION | SUBPARTITION } <range-partition-name> TO <new-range-partition-name>;
 ```
 
 
@@ -435,9 +441,18 @@ Changes the name of an existing partition or sub-partition.
 
 
 
-</dd><dt><b>
+</dd>
+</dl>
 
-SPLIT \{ PARTITION | SUBPARTITION \} *<split-object\>*
+
+
+### SPLIT \{ PARTITION | SUBPARTITION \} *<split-object\>*
+
+
+<dl>
+<dt><b>
+
+
 
 </b></dt>
 <dd>
@@ -446,7 +461,7 @@ Splits an existing range partition or subpartition.
 
 ```
 <split-object> ::= <range-partition-decl> 
-        INTO ( <range-partition-decl>, <range-partition-decl> )
+        INTO ( <range-partition-decl>, <range-partition-decl> );
 ```
 
 When splitting a partition or subpartition, the names of the new partitions must be unique and cannot include the name of the original partition. All data from the original partition must fit into only one of the resulting partitions. Data cannot move between partitions.
@@ -455,9 +470,18 @@ When splitting a partition or subpartition, the upper boundary of the new partit
 
 
 
-</dd><dt><b>
+</dd>
+</dl>
 
-MERGE \{ PARTITION | SUBPARTITION \}
+
+
+### MERGE \{ PARTITION | SUBPARTITION\}
+
+
+<dl>
+<dt><b>
+
+
 
 </b></dt>
 <dd>
@@ -466,9 +490,18 @@ Merges *<partition-name-1\>* into *<partition-name-2\>*. Two partitions can be m
 
 
 
-</dd><dt><b>
+</dd>
+</dl>
 
-PARTITION BY
+
+
+### PARTITION BY
+
+
+<dl>
+<dt><b>
+
+
 
 </b></dt>
 <dd>
@@ -515,7 +548,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 
 ```
 <range-partitioning-scheme> ::=
-   RANGE ( <column_name> ) ( <range-partition-decl> [,...] )
+   RANGE ( <column_name> ) ( <range-partition-decl> [,...] );
 ```
 
 
@@ -529,7 +562,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 
 ```
 <range-partition-decl> ::=
-   <partition-name> VALUES <= ( { <constant-expression> | MAX } [,...] )
+   <partition-name> VALUES <= ( { <constant-expression> | MAX } [,...] );
 ```
 
 
@@ -628,14 +661,14 @@ Maps data to partitions based on partition-key values processed by an internal h
 
 ```
 <hash-partitioning-scheme> ::=
-   HASH ( <column_name> [,... ] )
+   HASH ( <column_name> [,... ] );
 ```
 
 In a hash-partitioning declaration, the partition-key is a column or group of columns, whose composite value determines the partition where each row of data is stored:
 
 ```
 hash-partitioning-scheme: 
-  HASH  ( <partition-key> [ , <partition-key>, … ] )
+  HASH  ( <partition-key> [ , <partition-key>, … ] );
 ```
 
 Restrictions:
@@ -658,7 +691,7 @@ Maps data to partitions based on partition-key values processed by an internal h
 ```
 <hash-range-partitioning-scheme> ::=
    PARTITION BY HASH  ( <column_name> [,... ] )
-    SUBPARTITION BY <range-partition-scheme>
+    SUBPARTITION BY <range-partition-scheme>;
 ```
 
 The hash partition specifies how the data is logically distributed and colocated; the range subpartition specifies how the data is physically placed. The new range subpartition is logically partitioned by hash with the same hash partition keys as the existing hash-range partitioned table. The range subpartition key is restricted to one column.
@@ -677,9 +710,18 @@ Restrictions:
 
 
 
-</dd><dt><b>
+</dd>
+</dl>
 
-SUBPARTITION BY RANGE
+
+
+### SUBPARTITION BY RANGE
+
+
+<dl>
+<dt><b>
+
+
 
 </b></dt>
 <dd>
@@ -692,16 +734,25 @@ Subpartitions an existing hash-partition table.
 <dd>
 
 ```
-SUBPARTITION BY <range-partition-decl>
+SUBPARTITION BY <range-partition-decl>;
 ```
 
 Subpartitions on a range-partitioned table are not supported.
 
 
 
-</dd><dt><b>
+</dd>
+</dl>
 
-ADD \{PARTITION|SUBPARTITION\} BY RANGE
+
+
+### ADD \{PARTITION|SUBPARTITION\} BY RANGE
+
+
+<dl>
+<dt><b>
+
+
 
 </b></dt>
 <dd>
@@ -709,16 +760,25 @@ ADD \{PARTITION|SUBPARTITION\} BY RANGE
 Adds a new partition to an existing range-partition table or a new subpartition to an existing hash range-partition table.
 
 ```
-ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>
+ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>;
 ```
 
 The value of the *<range-partition-decl\>* must exceed the existing partition boundary. Only one partition or subpartition can be added per ADD clause. Use SPLIT PARTITION to add a range within the existing boundary.
 
 
 
-</dd><dt><b>
+</dd>
+</dl>
 
-UNPARTITION
+
+
+### UNPARTITION
+
+
+<dl>
+<dt><b>
+
+
 
 </b></dt>
 <dd>
@@ -760,10 +820,37 @@ If SELECT *<\*\>* is used in a view definition and you alter a table referenced 
 
 ### 
 
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
+
+
+</dd>
+<dd>
+
+To move a table between relational containers \(for example, from SYSHDL\_CONTAINER1 to SYSHDL\_CONTAINER2\), also requires:
+
+-   You are a member of the relational container administration role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), containing the table being moved \(source relational container\).
+-   The ALTER object-level privilege on therelational container schema in the destination relational container is granted to the container administrator role of the source relational container.
+
+
+
+</dd>
+</dl>
 
 
 
@@ -806,7 +893,7 @@ Requires one of:
 
     ```
     ALTER TABLE CUSTOMERS ADD SALESCONTACT INTEGER
-       REFERENCES EMPLOYEE(EMPLOYEEID)
+       REFERENCES EMPLOYEE(EMPLOYEEID);
     ```
 
 -   The following example adds a new column CUSTOMERNUM to the Customers table and assigns a default value of 88:
@@ -928,9 +1015,11 @@ Requires one of:
 
 [CREATE TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-6c3afae.md "Creates a new table in the database or on a remote server.")
 
+[DROP TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-1e62d19.md "Removes a table from the database.")
+
+[Moving a Table Between Schemas and Relational Containers](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/7cc5b90e27e145aa9542a7a494bd61ef.html "Move a data lake Relational Engine physical table between schemas in the same relational container or between relational containers.") :arrow_upper_right:
+
 [Data Types Compatibility with SAP HANA Database for the CREATE TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](data-types-compatibility-with-sap-hana-database-for-the-create-table-statement-for-data-l-e77d888.md "The data lake Relational Engine CREATE TABLE statement lets you create a data lake Relational Engine physical table.")
 
-[ALTER TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/39f1ec0fd2c9451c8b64df54efe48a03.html "Modifies a table definition.") :arrow_upper_right:
-
-[DROP Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-statement-for-data-lake-relational-engine-sap-hana-db-managed-367d71d.md "Removes objects from the database.")
+[ALTER TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/39f1ec0fd2c9451c8b64df54efe48a03.html "Modifies a table definition.") :arrow_upper_right:
 

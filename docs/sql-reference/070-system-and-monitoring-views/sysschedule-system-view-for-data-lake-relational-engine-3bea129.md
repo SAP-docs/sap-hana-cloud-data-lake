@@ -6,10 +6,13 @@ Each row in the SYSSCHEDULE system view describes a time at which an event is to
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bea12936c5f1014ab3693753eb66c8f__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYSSCHEDULE system view describes a time at which an event is to
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 event\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The unique number assigned to each event.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The unique number assigned to each event.
 
 sched\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name associated with the schedule for the event.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ The name associated with the schedule for the event.
 
 recurring
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
 
-
-
 </td>
 <td valign="top">
 
 Indicates if the schedule is repeating.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ Indicates if the schedule is repeating.
 
 start\_time
 
-
-
 </td>
 <td valign="top">
 
 TIME
 
-
-
 </td>
 <td valign="top">
 
 The schedule start time.
-
-
 
 </td>
 </tr>
@@ -135,21 +108,15 @@ The schedule start time.
 
 stop\_time
 
-
-
 </td>
 <td valign="top">
 
 TIME
 
-
-
 </td>
 <td valign="top">
 
 The schedule stop time if BETWEEN was used.
-
-
 
 </td>
 </tr>
@@ -158,21 +125,15 @@ The schedule stop time if BETWEEN was used.
 
 start\_date
 
-
-
 </td>
 <td valign="top">
 
 DATE
 
-
-
 </td>
 <td valign="top">
 
 The first date on which the event is scheduled to execute.
-
-
 
 </td>
 </tr>
@@ -181,14 +142,10 @@ The first date on which the event is scheduled to execute.
 
 days\_of\_week
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
-
-
 
 </td>
 <td valign="top">
@@ -212,14 +169,10 @@ A bit mask indicating the days of the week on which the event is scheduled:
 
 days\_of\_month
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
-
-
 
 </td>
 <td valign="top">
@@ -240,14 +193,10 @@ A bit mask indicating the days of the month on which the event is scheduled. Som
 
 interval\_units
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(10\)
-
-
 
 </td>
 <td valign="top">
@@ -267,21 +216,15 @@ The interval unit specified by EVERY:
 
 interval\_amt
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The period specified by EVERY.
-
-
 
 </td>
 </tr>

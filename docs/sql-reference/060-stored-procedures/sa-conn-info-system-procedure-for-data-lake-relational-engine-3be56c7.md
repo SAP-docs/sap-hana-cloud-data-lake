@@ -6,15 +6,18 @@ Reports connection property information.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be56c746c5f10148ef0b7a3d2a40f18__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_conn_info( [ <connidparm> ] )
+sa_conn_info( [ <connidparm> ] );
 ```
 
 
@@ -25,7 +28,7 @@ sa_conn_info( [ <connidparm> ] )
 <dl>
 <dt><b>
 
- *<connidparm\>* 
+*<connidparm\>* 
 
 </b></dt>
 <dd>
@@ -48,21 +51,15 @@ This optional INTEGER parameter specifies the connection ID number. The default 
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -71,21 +68,15 @@ Description
 
 Number
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the connection ID \(a number\) for the current connection.
-
-
 
 </td>
 </tr>
@@ -94,14 +85,10 @@ Returns the connection ID \(a number\) for the current connection.
 
 Name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
-
-
 
 </td>
 <td valign="top">
@@ -110,8 +97,6 @@ Returns an identifier \(string\) for the current connection.
 
 Temporary connection names have `INT:` prepended to the connection name.
 
-
-
 </td>
 </tr>
 <tr>
@@ -119,21 +104,15 @@ Temporary connection names have `INT:` prepended to the connection name.
 
 Userid
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the user ID for the connection.
-
-
 
 </td>
 </tr>
@@ -142,21 +121,15 @@ Returns the user ID for the connection.
 
 DBNumber
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the ID number of the database.
-
-
 
 </td>
 </tr>
@@ -165,21 +138,15 @@ Returns the ID number of the database.
 
 LastReqTime
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the time at which the last request for the specified connection started, in the timezone of the database. This property can return an empty string for internal connections, such as events.
-
-
 
 </td>
 </tr>
@@ -188,21 +155,15 @@ Returns the time at which the last request for the specified connection started,
 
 ReqType
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the type of the last request. If a connection has been cached by connection pooling, its ReqType value is CONNECT\_POOL\_CACHE.
-
-
 
 </td>
 </tr>
@@ -211,21 +172,15 @@ Returns the type of the last request. If a connection has been cached by connect
 
 CommLink
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the communication link for the connection. This is one of the network protocols supported by data lake Relational Engine, or local for a same-computer connection.
-
-
 
 </td>
 </tr>
@@ -234,21 +189,15 @@ Returns the communication link for the connection. This is one of the network pr
 
 NodeAddr
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the address of the client in a client/server connection.
-
-
 
 </td>
 </tr>
@@ -257,21 +206,15 @@ Returns the address of the client in a client/server connection.
 
 ClientPort
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the client's TCP/IP port number or 0 if the connection isn't a TCP/IP connection.
-
-
 
 </td>
 </tr>
@@ -280,21 +223,15 @@ Returns the client's TCP/IP port number or 0 if the connection isn't a TCP/IP co
 
 ServerPort
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the database server's TCP/IP port number or 0.
-
-
 
 </td>
 </tr>
@@ -303,21 +240,15 @@ Returns the database server's TCP/IP port number or 0.
 
 BlockedOn
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns zero if the current connection isn't blocked, or if it is blocked, the connection number on which the connection is blocked because of a locking conflict.
-
-
 
 </td>
 </tr>
@@ -326,14 +257,10 @@ Returns zero if the current connection isn't blocked, or if it is blocked, the c
 
 LockRowID
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
-
-
 
 </td>
 <td valign="top">
@@ -342,8 +269,6 @@ Returns the identifier of the locked row.
 
 LockRowID is NULL if the connection is not waiting on a lock associated with a row \(that is, it is not waiting on a lock, or it is waiting on a lock that has no associated row\).
 
-
-
 </td>
 </tr>
 <tr>
@@ -351,14 +276,10 @@ LockRowID is NULL if the connection is not waiting on a lock associated with a r
 
 LockIndexID
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
-
-
 
 </td>
 <td valign="top">
@@ -367,8 +288,6 @@ Returns the identifier of the locked index.
 
 LockIndexID is -1 if the lock is associated with all indexes on the table in LockTable. LockIndexID is NULL if the connection is not waiting on a lock associated with an index \(that is, it is not waiting on a lock, or it is waiting on a lock that has no associated index\).
 
-
-
 </td>
 </tr>
 <tr>
@@ -376,21 +295,15 @@ LockIndexID is -1 if the lock is associated with all indexes on the table in Loc
 
 LockTable
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the name of the table associated with a lock if the connection is currently waiting for a lock. The LockTable value is an empty string if there is no lock, or if the object associated with the lock is not a table.
-
-
 
 </td>
 </tr>
@@ -399,21 +312,15 @@ Returns the name of the table associated with a lock if the connection is curren
 
 UncommitOps
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the number of uncommitted operations.
-
-
 
 </td>
 </tr>
@@ -422,21 +329,15 @@ Returns the number of uncommitted operations.
 
 ParentConnection
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the connection ID of the connection that created a temporary connection to perform a database operation \(such as performing a backup or creating a database\). For other types of connections, this property returns NULL.
-
-
 
 </td>
 </tr>
@@ -445,21 +346,15 @@ Returns the connection ID of the connection that created a temporary connection 
 
 LockObject
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the name of the object associated with the lock for which the connection is waiting, if any. If the object is a table, this value is the same as the LockTable value. LockObject is NULL if the connection is not waiting for a lock.
-
-
 
 </td>
 </tr>
@@ -468,21 +363,15 @@ Returns the name of the object associated with the lock for which the connection
 
 LockObjectType
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(20\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the type of the object associated with the lock for which the connection is waiting, if any. LockObjectType is NULL if the connection is not waiting for a lock.
-
-
 
 </td>
 </tr>
@@ -526,7 +415,9 @@ None
 
 
 
-The following example uses the sa\_conn\_info system procedure to return a result set summarizing connection properties for all connections to the server.
+## Examples
+
+This example uses the sa\_conn\_info system procedure to return a result set summarizing connection properties for all connections to the server.
 
 ```
 CALL sa_conn_info( );
@@ -539,35 +430,25 @@ CALL sa_conn_info( );
 
 Number
 
-
-
 </th>
 <th valign="top">
 
 Name
-
-
 
 </th>
 <th valign="top">
 
 Userid
 
-
-
 </th>
 <th valign="top">
 
 DBNumber
 
-
-
 </th>
 <th valign="top">
 
 ...
-
-
 
 </th>
 </tr>
@@ -576,35 +457,25 @@ DBNumber
 
 79
 
-
-
 </td>
 <td valign="top">
 
 SQL\_DBC\_10dcf810
-
-
 
 </td>
 <td valign="top">
 
 HDLADMIN
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 ...
-
-
 
 </td>
 </tr>
@@ -613,35 +484,25 @@ HDLADMIN
 
 46
 
-
-
 </td>
 <td valign="top">
 
 setup
-
-
 
 </td>
 <td valign="top">
 
 User1
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 ...
-
-
 
 </td>
 </tr>
@@ -650,41 +511,31 @@ User1
 
 ...
 
+</td>
+<td valign="top">
 
+...
 
 </td>
 <td valign="top">
 
 ...
 
-
-
 </td>
 <td valign="top">
 
 ...
 
-
-
 </td>
 <td valign="top">
 
 ...
-
-
-
-</td>
-<td valign="top">
-
-...
-
-
 
 </td>
 </tr>
 </table>
 
-The following example uses the sa\_conn\_info system to return the number of blocked connections.
+This example uses the sa\_conn\_info system to return the number of blocked connections.
 
 ```
 SELECT COUNT(*) FROM sa_conn_info()

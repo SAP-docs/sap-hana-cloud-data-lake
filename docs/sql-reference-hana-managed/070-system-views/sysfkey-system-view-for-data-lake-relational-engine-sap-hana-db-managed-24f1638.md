@@ -6,16 +6,12 @@ Each row in the SYSFKEY system view describes a foreign key constraint in the sy
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system view can be used when connected as follows:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Viewing System Views](remote-execute-usage-examples-for-viewing-system-views-8b235c7.md).
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE\_QUERY procedure.
-> 
->     -   See [REMOTE\_EXECUTE\_QUERY Usage Examples for Viewing System Views](remote-execute-query-usage-examples-for-viewing-system-views-ada51c0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system view can be used when connected as follows:
+
+-   Connected to SAP HANA database as a SAP HANA database user, and using SAP HANA database REMOTE\_EXECUTE\_QUERY.
+
 
 
 
@@ -26,21 +22,15 @@ Each row in the SYSFKEY system view describes a foreign key constraint in the sy
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -49,21 +39,15 @@ Description
 
 foreign\_table\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The table number of the foreign table.
-
-
 
 </td>
 </tr>
@@ -72,21 +56,15 @@ The table number of the foreign table.
 
 foreign\_index\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The index number for the foreign key.
-
-
 
 </td>
 </tr>
@@ -95,21 +73,15 @@ The index number for the foreign key.
 
 primary\_table\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The table number of the primary table.
-
-
 
 </td>
 </tr>
@@ -118,21 +90,15 @@ The table number of the primary table.
 
 primary\_index\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The index number of the primary key.
-
-
 
 </td>
 </tr>
@@ -141,14 +107,10 @@ The index number of the primary key.
 
 match\_type
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
-
-
 
 </td>
 <td valign="top">
@@ -217,8 +179,6 @@ FULL UNIQUE
 
 For more information about match types, see the MATCH clause of the CREATE TABLE statement.
 
-
-
 </td>
 </tr>
 <tr>
@@ -226,21 +186,15 @@ For more information about match types, see the MATCH clause of the CREATE TABLE
 
 check\_on\_commit
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates whether INSERT and UPDATE statements should wait until the COMMIT to check if foreign keys are still valid. Values are 'Y' for wait or 'N' for do not wait.
-
-
 
 </td>
 </tr>
@@ -249,28 +203,32 @@ Indicates whether INSERT and UPDATE statements should wait until the COMMIT to c
 
 nulls
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
 
 Indicates whether the columns in the foreign key are allowed to contain the NULL value. This setting is independent of the nulls setting in the columns contained in the foreign key. Values are 'Y' for allowed or 'N' for not allowed.
 
-
-
 </td>
 </tr>
 </table>
 
+
+
+<a name="loio24f16387665e47a492bd2517a5a27a33__section_gj1_wy1_4yb"/>
+
+## Privileges
+
+To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE privilege on the remote source <hana\_relational\_container\_schema\>\_SOURCE.
+
+-   See [REMOTE\_EXECUTE\_QUERY Usage Examples for Viewing System Views](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/a898e08b84f21015969fa437e89860c8/ada51c0074354a5f99b60c14cffb653c.html).
+
 **Related Information**  
 
 
-[SYSFKEY System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/3be8a8d96c5f1014bb2cb502516a5227.html "Each row in the SYSFKEY system view describes a foreign key constraint in the system. The underlying system table for this view is ISYSFKEY.") :arrow_upper_right:
+[SYSFKEY System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3be8a8d96c5f1014bb2cb502516a5227.html "Each row in the SYSFKEY system view describes a foreign key constraint in the system. The underlying system table for this view is ISYSFKEY.") :arrow_upper_right:
 

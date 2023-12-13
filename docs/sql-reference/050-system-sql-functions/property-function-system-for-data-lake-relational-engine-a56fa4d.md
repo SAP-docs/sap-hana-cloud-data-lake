@@ -7,7 +7,7 @@ Returns the value of the specified server-level property as a string.
 
 
 ```
-PROPERTY ( { <property-id> | <property-name> } )
+PROPERTY ( { <property-id> | <property-name> } );
 ```
 
 
@@ -45,7 +45,7 @@ A string giving the name of the property.
 
 
 
-## Returns
+## Result Set
 
 VARCHAR
 
@@ -78,7 +78,7 @@ Each property has both a number and a name, but the number is subject to change 
 The following statement returns the name of the current database server:
 
 ```
-SELECT PROPERTY( 'Name' ) FROM iq_dummy
+SELECT PROPERTY( 'Name' ) FROM iq_dummy;
 ```
 
 **Related Information**  

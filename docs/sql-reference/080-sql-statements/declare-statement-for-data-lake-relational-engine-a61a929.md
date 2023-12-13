@@ -6,10 +6,13 @@ Declares a SQL variable within a compound statement `(BEGIN... END)`.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61a929684f210159132aa8321341448__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -40,7 +43,7 @@ DECLARE
       | TIMESTAMP 
       | USER 
       | UTC TIMESTAMP } 
-   | USER }
+   | USER };
 ```
 
 

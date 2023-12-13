@@ -6,15 +6,18 @@ Displays information about stored procedure parameters, including result set var
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5b2c2d384f21015b941b298f2b5d54c__section_p4t_vqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqprocparm [ <proc-name> ], [ <proc-owner> ], [ <proc-type> ]
+sp_iqprocparm [ <proc-name> ], [ <proc-owner> ], [ <proc-type> ];
 ```
 
 
@@ -69,7 +72,7 @@ sp_iqprocparm [ <proc-name> ], [ <proc-owner> ], [ <proc-type> ]
 
 <a name="loioa5b2c2d384f21015b941b298f2b5d54c__sp_iqprocparm_returns1"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -78,14 +81,10 @@ sp_iqprocparm [ <proc-name> ], [ <proc-owner> ], [ <proc-type> ]
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -94,14 +93,10 @@ Description
 
 proc\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the procedure
-
-
 
 </td>
 </tr>
@@ -110,14 +105,10 @@ The name of the procedure
 
 proc\_owner
 
-
-
 </td>
 <td valign="top">
 
 The owner of the procedure
-
-
 
 </td>
 </tr>
@@ -126,14 +117,10 @@ The owner of the procedure
 
 parm\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the parameter
-
-
 
 </td>
 </tr>
@@ -141,8 +128,6 @@ The name of the parameter
 <td valign="top">
 
 parm\_type
-
-
 
 </td>
 <td valign="top">
@@ -163,8 +148,6 @@ The type of parameter is one of the following values:
 
 parm\_mode
 
-
-
 </td>
 <td valign="top">
 
@@ -184,14 +167,10 @@ The mode of the parameter: whether a parameter supplies a value to the procedure
 
 domain\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the data type of the parameter as listed in the SYSDOMAIN system table
-
-
 
 </td>
 </tr>
@@ -200,14 +179,10 @@ The name of the data type of the parameter as listed in the SYSDOMAIN system tab
 
 width
 
-
-
 </td>
 <td valign="top">
 
 The length of string parameters, the precision of numeric parameters, and the number of bytes of storage for all other data types
-
-
 
 </td>
 </tr>
@@ -216,14 +191,10 @@ The length of string parameters, the precision of numeric parameters, and the nu
 
 scale
 
-
-
 </td>
 <td valign="top">
 
 The number of digits after the decimal point for numeric data type parameters and zero for all other data types
-
-
 
 </td>
 </tr>
@@ -232,14 +203,10 @@ The number of digits after the decimal point for numeric data type parameters an
 
 default
 
-
-
 </td>
 <td valign="top">
 
 The default value of the parameter, held as a string
-
-
 
 </td>
 </tr>
@@ -262,14 +229,10 @@ If you do not specify either of the first two parameters, but specify the next p
 
 Syntax
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Output
-
-
 
 </th>
 </tr>
@@ -278,14 +241,10 @@ Output
 
 sp\_iqprocparm
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Displays parameters for all procedures in the database not owned by dbo or SYS.
-
-
 
 </td>
 </tr>
@@ -294,14 +253,10 @@ Displays parameters for all procedures in the database not owned by dbo or SYS.
 
 sp\_iqprocparm sp\_test
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Displays information about the procedure sp\_test.
-
-
 
 </td>
 </tr>
@@ -310,14 +265,10 @@ Displays information about the procedure sp\_test.
 
 sp\_iqprocparm non\_existing\_proc
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 No rows returned, as the procedure non\_existing\_proc does not exist.
-
-
 
 </td>
 </tr>
@@ -326,14 +277,10 @@ No rows returned, as the procedure non\_existing\_proc does not exist.
 
 sp\_iqprocparm NULL, DBA
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Displays parameters for all procedures owned by DBA.
-
-
 
 </td>
 </tr>
@@ -342,14 +289,10 @@ Displays parameters for all procedures owned by DBA.
 
 sp\_iqprocparm sp\_test, DBA
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Displays parameters for the procedure sp\_test owned by DBA.
-
-
 
 </td>
 </tr>
@@ -358,14 +301,10 @@ Displays parameters for the procedure sp\_test owned by DBA.
 
 sp\_iqprocparm sp\_iqtable
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 sp\_iqtable is a system procedure. If there is no user-defined procedure also named sp\_iqtable, no rows are returned \(by default, only user-defined procedures are returned\).
-
-
 
 </td>
 </tr>
@@ -374,14 +313,10 @@ sp\_iqtable is a system procedure. If there is no user-defined procedure also na
 
 sp\_iqprocparm sp\_iqtable, dbo
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 No rows returned, as the procedure sp\_iqtable is not a user procedure \(by default, only user procedures are returned\).
-
-
 
 </td>
 </tr>
@@ -390,14 +325,10 @@ No rows returned, as the procedure sp\_iqtable is not a user procedure \(by defa
 
 sp\_iqprocparm NULL, NULL, SYSTEM
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Displays parameters for all system procedures \(owned by dbo or SYS\).
-
-
 
 </td>
 </tr>
@@ -406,14 +337,10 @@ Displays parameters for all system procedures \(owned by dbo or SYS\).
 
 sp\_iqprocparm sp\_iqtable, NULL, SYSTEM
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Displays parameters of the system procedure sp\_iqtable.
-
-
 
 </td>
 </tr>
@@ -422,14 +349,10 @@ Displays parameters of the system procedure sp\_iqtable.
 
 sp\_iqprocparm sp\_iqtable, dbo, ALL
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Displays parameters of the system procedure sp\_iqtable owned by dbo.
-
-
 
 </td>
 </tr>
@@ -474,7 +397,7 @@ None
 -   Display information about the parameters of the user-defined procedure sp\_test:
 
     ```
-    sp_iqprocparm sp_test
+    sp_iqprocparm sp_test;
     ```
 
     ```

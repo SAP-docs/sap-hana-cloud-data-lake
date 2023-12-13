@@ -7,7 +7,7 @@ Returns an integer from 1 to 31 corresponding to the day of the month of the dat
 
 
 ```
-DAY ( <date-expression> )
+DAY ( <date-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The date.
 
 <a name="loioa5493fe284f2101587fac052951c6f01__DAY_returns1"/>
 
-## Returns
+## Result Set
 
 SMALLINT
 
@@ -57,11 +57,11 @@ SMALLINT
 The following statement returns the value 12:
 
 ```
-SELECT DAY( '2001-09-12' ) FROM iq_dummy
+SELECT DAY( '2001-09-12' ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[DAY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ff00ee7be6544c12a1e279a814961857.html "Returns an integer from 1 to 31 corresponding to the day of the month of the date specified.") :arrow_upper_right:
+[DAY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ff00ee7be6544c12a1e279a814961857.html "Returns an integer from 1 to 31 corresponding to the day of the month of the date specified.") :arrow_upper_right:
 

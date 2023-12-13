@@ -7,7 +7,7 @@ Returns the starting position of the first occurrence of a specified pattern.
 
 
 ```
-PATINDEX ( '%<pattern>%', <string-expression> )
+PATINDEX ( '%<pattern>%', <string-expression> );
 ```
 
 
@@ -49,7 +49,7 @@ The string to be searched for the pattern.
 
 <a name="loioa56c8f8684f210158653d0c858b0e559__PATINDEX_returns1"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -70,14 +70,10 @@ The pattern uses the same wildcards as the `LIKE` comparison. This table lists t
 
 Wildcard
 
-
-
 </th>
 <th valign="top">
 
 Matches
-
-
 
 </th>
 </tr>
@@ -86,14 +82,10 @@ Matches
 
 \_ \(underscore\)
 
-
-
 </td>
 <td valign="top">
 
 Any one character
-
-
 
 </td>
 </tr>
@@ -102,14 +94,10 @@ Any one character
 
 % \(percent\)
 
-
-
 </td>
 <td valign="top">
 
 Any string of zero or more characters
-
-
 
 </td>
 </tr>
@@ -118,14 +106,10 @@ Any string of zero or more characters
 
 \[\]
 
-
-
 </td>
 <td valign="top">
 
 Any single character in the specified range or set
-
-
 
 </td>
 </tr>
@@ -134,14 +118,10 @@ Any single character in the specified range or set
 
 \[^\]
 
-
-
 </td>
 <td valign="top">
 
 Any single character not in the specified range or set
-
-
 
 </td>
 </tr>
@@ -177,13 +157,13 @@ All the positions or offsets, returned or specified, in the `PATINDEX` function 
 -   The following statement returns the value 2:
 
     ```
-    SELECT PATINDEX( '%hoco%', 'chocolate' ) FROM iq_dummy
+    SELECT PATINDEX( '%hoco%', 'chocolate' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 11:
 
     ```
-    SELECT PATINDEX ('%4_5_', '0a1A 2a3A 4a5A') FROM iq_dummy
+    SELECT PATINDEX ('%4_5_', '0a1A 2a3A 4a5A') FROM iq_dummy;
     ```
 
 
@@ -194,5 +174,5 @@ All the positions or offsets, returned or specified, in the `PATINDEX` function 
 
 [LOCATE Function \[String\] for Data Lake Relational Engine](locate-function-string-for-data-lake-relational-engine-a55fae8.md "Returns the position of one string within another.")
 
-[PATINDEX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/073fd346f10a409b98efefed3192ff77.html "Returns the starting position of the first occurrence of a specified pattern.") :arrow_upper_right:
+[PATINDEX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/073fd346f10a409b98efefed3192ff77.html "Returns the starting position of the first occurrence of a specified pattern.") :arrow_upper_right:
 

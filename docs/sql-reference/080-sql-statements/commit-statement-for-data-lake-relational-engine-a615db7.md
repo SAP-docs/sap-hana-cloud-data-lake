@@ -6,10 +6,13 @@ Makes changes to the database permanent, or terminates a user-defined transactio
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa615db7b84f21015b755e11e289ef47c__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,7 +26,7 @@ Syntax 1 – Ends a Transaction and Makes All Changes Permanent
 <dd>
 
 ```
-COMMIT [ WORK ]
+COMMIT [ WORK ];
 ```
 
 
@@ -36,7 +39,7 @@ Syntax 2 – Constructs Nested Transactions
 <dd>
 
 ```
-COMMIT TRAN[SACTION ] [ <transaction-name> ]
+COMMIT TRAN[SACTION ] [ <transaction-name> ];
 ```
 
 
@@ -110,7 +113,7 @@ None
 -   The following example commits the current transaction:
 
     ```
-    COMMIT
+    COMMIT;
     ```
 
 -   The following example shows how the Transact-SQL batch reports successive values of `@@trancount` as 0, 1, 2, 1, 0:

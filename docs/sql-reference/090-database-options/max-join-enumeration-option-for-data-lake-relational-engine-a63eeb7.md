@@ -6,8 +6,11 @@ Controls the maximum number of tables to be optimized for join order after optim
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63eeb7884f210158f16b0a316e7e5e1__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

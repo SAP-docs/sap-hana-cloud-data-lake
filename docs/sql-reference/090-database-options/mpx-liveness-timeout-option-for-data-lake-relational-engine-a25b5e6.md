@@ -6,8 +6,11 @@ Time, in seconds, before a heartbeat on a secondary server declares the coordina
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa25b5e6f84f21015bad59eda122ceed0__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

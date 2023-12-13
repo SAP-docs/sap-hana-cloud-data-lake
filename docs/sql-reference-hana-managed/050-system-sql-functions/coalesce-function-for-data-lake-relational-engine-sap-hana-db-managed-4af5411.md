@@ -7,7 +7,7 @@ Returns the first non-NULL expression from a list.
 
 
 ```
-COALESCE ( <expression>, <expression> [ , … ] )
+COALESCE ( <expression>, <expression> [ , … ] );
 ```
 
 
@@ -36,7 +36,7 @@ Any expression.
 
 <a name="loio4af5411816c4466b9335a79034b00833__section_gfy_4rl_srb"/>
 
-## Returns
+## Result Set
 
 ANY
 
@@ -57,11 +57,11 @@ ANY
 The following statement returns the value 34:
 
 ```
-SELECT COALESCE( NULL, 34, 13, 0 ) FROM iq_dummy
+SELECT COALESCE( NULL, 34, 13, 0 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[COALESCE Function [Miscellaneous] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a53d627984f21015a1fa9a5eb36a5dde.html "Returns the first non-NULL expression from a list.") :arrow_upper_right:
+[COALESCE Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a53d627984f21015a1fa9a5eb36a5dde.html "Returns the first non-NULL expression from a list.") :arrow_upper_right:
 

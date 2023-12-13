@@ -6,10 +6,13 @@ The sp\_iqsysmon examples here show output information.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa48026b384f2101598ebdc87a2fbefd9__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,7 +23,7 @@ The sp\_iqsysmon examples here show output information.
 The following example displays output for the Buffer Allocation \(Main and Temporary\) after 20 minutes:
 
 ```
-sp_iqsysmon '00:20:00', 'mbufalloc tbufalloc'
+sp_iqsysmon '00:20:00', 'mbufalloc tbufalloc';
 ```
 
 ```
@@ -222,7 +225,7 @@ Load                        0      0       0            0       0       0
 The following example displays output for the Buffer Manager \(Main and Temporary\) after 20 minutes:
 
 ```
-sp_iqsysmon '00:20:00', 'mbufman tbufman'
+sp_iqsysmon '00:20:00', 'mbufman tbufman';
 ```
 
 ```
@@ -415,7 +418,7 @@ IONumWaits                      0      0%
 The following example displays output for the Buffer Pool \(Main and Temporary\) after 20 minutes:
 
 ```
-sp_iqsysmon '00:20:00', 'mbufpool tbufpool'
+sp_iqsysmon '00:20:00', 'mbufpool tbufpool';
 ```
 
 ```
@@ -536,7 +539,7 @@ nAffinityArea                   0 ( 0.0% )
 The following example displays output for the Prefetch Manager \(Main and Temporary\) after 20 minutes:
 
 ```
-sp_iqsysmon '00:20:00', 'mprefetch tprefetch'
+sp_iqsysmon '00:20:00', 'mprefetch tprefetch';
 ```
 
 ```
@@ -576,7 +579,7 @@ PFMgrCondVar                Locks  0  Lock-Waits 0 ( 0.0% )  Signals 0  Broadcas
 The following example displays output for the data lake Relational Engine Store Free List \(Main and Temporary\) after 20 minutes:
 
 ```
-sp_iqsysmon '00:20:00', 'mfreelist tfreelist'
+sp_iqsysmon '00:20:00', 'mfreelist tfreelist';
 ```
 
 ```
@@ -610,7 +613,7 @@ FLMutexWaits                    0 ( 0.0% )
 The following example displays output for Memory Manager, Thread Manager, CPU utilization, Transaction Manager after 20 minutes:
 
 ```
-sp_iqsysmon '00:20:00', 'memory threads cpu txn'
+sp_iqsysmon '00:20:00', 'memory threads cpu txn';
 ```
 
 ```
@@ -683,7 +686,7 @@ TxnMgrVersionLock               Locks     0       Lock-Wait 0 ( 0.0 %)  Signals 
 The following example displays output for server context and catalog statistics after 20 minutes:
 
 ```
-sp_iqsysmon '00:20:00', 'context catalog'
+sp_iqsysmon '00:20:00', 'context catalog';
 ```
 
 ```

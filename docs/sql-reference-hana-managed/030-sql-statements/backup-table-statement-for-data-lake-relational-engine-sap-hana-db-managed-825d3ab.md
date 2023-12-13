@@ -6,12 +6,11 @@ Backup data lake Relational Engine tables.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
 
 
 
@@ -21,7 +20,7 @@ BACKUP TABLE <schema-name>.<table_name> TO <location>
    KEY <encryption_key>
    CONNECTION_STRING <connection_string>
    MAX PART SIZE <integer> BYTES|KB|MB|GB|TB
-   MAX PART WRITERS <integer>
+   MAX PART WRITERS <integer>;
 ```
 
 
@@ -59,7 +58,9 @@ Location where the table backup dump will be created in the relevant object stor
 
 -   data lake Files container
 
-    <code>hdlfs:///<i class="varname">&lt;backup-prefix&gt;</i></code>
+    To connect to the default data lake Files container, use: <code>hdlfs:///<i class="varname">&lt;backup-prefix&gt;</i></code>
+
+    To connect to a non-default data lake Files container \(one outside of your data lake instance\), use: <code>hdlfs://<i class="varname">&lt;container&gt;</i>/<i class="varname">&lt;backup-prefix&gt;</i></code>
 
 -   Azure Blob Storage
 
@@ -109,10 +110,85 @@ Connection information for the object store in use:
 
 ```
 <connection_string> ::= 
-   { <azure_connection> 
+   { <non-default-hdlfs-instance> 
+   | <azure_connection> 
    | <s3_connection>
-   | <google_connection> }
+   | <google_connection> };
 ```
+
+***<non-default-hdlfs-instance\>***
+
+```
+<non-default-hdlfs-instance> ::= 'ENDPOINT=<endpoint>;
+	CA_CERTIFICATE=<certificate-content>;
+	CLIENT_CERTIFICATE=<certificate-content>;
+	CLIENT_KEY=<client-certificate-key>;
+	KEY_PASSWORD= <certificate_key_password>';
+```
+
+This clause is optional for data lake Files containers. If you don't specify it, the LOAD statement will connect to the default data lake Files container provisioned within your data lake instance. If you do, the LOAD statement can connect to an alternate, non-default data lake Files container within a separate data lake instance.
+
+Specify the following options for the *<connection-string\>* clause:
+
+
+<dl>
+<dt><b>
+
+ENDPOINT
+
+</b></dt>
+<dd>
+
+\(Mandatory\) Represents the non-default data lake Files container endpoint. Use 'https://' as a prefix.
+
+
+
+</dd><dt><b>
+
+CA\_CERTIFICATE
+
+</b></dt>
+<dd>
+
+Specifies the data lake Files server certificate used to verify the connection during SSL handshake. If left blank, it will be picked from the default data lake Files container.
+
+
+
+</dd><dt><b>
+
+CLIENT\_CERTIFICATE
+
+</b></dt>
+<dd>
+
+\(Mandatory\) Specifies the client certificate for the data lake Files container. This certificate may hold the entire chain of certificates. Accepts content in PEM format.
+
+
+
+</dd><dt><b>
+
+CLIENT\_KEY
+
+</b></dt>
+<dd>
+
+\(Mandatory\) Represents a private key. Accepts content in PEM format.
+
+
+
+</dd><dt><b>
+
+KEY\_PASSWORD
+
+</b></dt>
+<dd>
+
+If specified, this value will be the password used to decrypt the client key. If not specified, and if the CLIENT\_KEY option is specified, it would be assumed to be in unencrypted form.
+
+
+
+</dd>
+</dl>
 
 ***<azure\_connection\>***
 
@@ -120,7 +196,7 @@ Connection information for the object store in use:
 <azure_connection> ::= 'DEFAULTENDPOINTSPROTOCOL=<endpoint_protocol>;
 	ACCOUNTNAME=<account_name>;
 	ACCOUNTKEY=<account_key>;
-	ENDPOINTSUFFIX=core.windows.net'
+	ENDPOINTSUFFIX=core.windows.net';
 ```
 
 Find your *<azure\_connection\_string\>*, including the access keys from your storage account, in the Azure portal. Locate the *Connection string* section and copy the connection string to the clipboard.
@@ -130,7 +206,7 @@ Find your *<azure\_connection\_string\>*, including the access keys from your st
 ```
 <google_connection> ::= 'CLIENT_EMAIL='<client_email>';
 	PRIVATE_KEY='<private_key>';
-     PRIVATE_KEY_ID='<private_key_id>'
+     PRIVATE_KEY_ID='<private_key_id>';
 ```
 
 Find your *<google\_connection\_string\>* comprising the fields *<client\_email\>*, *<private\_key\>*, *<private\_key\_id\>* in the Google Cloud Storage Platform console on the *Service Accounts* page.
@@ -143,7 +219,7 @@ Find your *<google\_connection\_string\>* comprising the fields *<client\_email\
 	ACCESS_KEY_ID=<access key string>; 
 	SECRET_ACCESS_KEY=<secret key string>; 
 	REGION=<region string>; 
-	SESSION_TOKEN=<session token>'
+	SESSION_TOKEN=<session token>';
 ```
 
 Find your Amazon S3 option values in the AWS Management Console.
@@ -288,7 +364,7 @@ If specified, the Amazon S3 client SDK will use its value when creating Amazon S
  <aws_connection> ::=
 	ACCESS_KEY_ID '<access-key-id>'
 	SECRET_ACCESS_KEY '<secret-access-key>' 
-	REGION '<AWS-region>'
+	REGION '<AWS-region>';
 ```
 
 Find your AWS *<access\_key\_id\>*, *<secret\_access\_key\>*, and *<AWS\_region\>* in the AWS Management Console.
@@ -367,7 +443,7 @@ The default value is 4.
     >         SECRET_ACCESS_KEY=fghvghvgh;
     >         REGION=eu-central-1;
     >         SESSION_TOKEN=FwoGZXIvYXdzECcaD' 
-    >     KEY 'abc123'
+    >     KEY 'abc123';
     > ```
     > 
     > In this example, the RESTORE TABLE statement returns an error.
@@ -378,7 +454,7 @@ The default value is 4.
     > 
     > ```
     > CREATE TABLE TABLE_2 
-    > 	(ID INTEGER NOT NULL, NAME VARCHAR(20))
+    > 	(ID INTEGER NOT NULL, NAME VARCHAR(20));
     > ```
 
 
@@ -392,10 +468,27 @@ The default value is 4.
 
 ### 
 
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
+
+
+</dd>
+</dl>
 
 
 
@@ -414,27 +507,48 @@ Data lake Relational Engine table backups are encrypted using the AES256 encrypt
 
 ## Examples
 
-**Data Lake Files**
+Connecting to a defaultdata lake Files container:
+
+> ### Note:  
+> To connect to a non-default data lake Files container \(one outside of your data lake instance\), use <code>'hdlfs://<i class="varname">&lt;container-name&gt;</i>/T100_backup'</code> and include the CONNECTION\_STRING.
 
 ```
 BACKUP TABLE HDL_T100 TO
-    'hdlfs:///hdl_folder/T100_backup'
+    'hdlfs:///T100_backup'
     WITH COMPRESSION 3
     KEY 'abc123';
 ```
 
-**Data Lake Files**
+Connecting to a defaultdata lake Files container:
 
 ```
 BACKUP TABLE HDL_T100 TO
-    'hdlfs:///hdl_folder/T100_backup'
+    'hdlfs:///T100_backup'
     WITH COMPRESSION 3
     KEY 'abc123'
     MAX PART SIZE 20
     MAX PART WRITERS 5;
 ```
 
-**Azure Blob Storage**
+Connecting to a non-default data lake Files container:
+
+```
+BACKUP TABLE HDL_T100 TO
+    'hdlfs://XXXXXXXX-XXXX-411c-821f-XXXXfd7f391c/T100_backup'
+    CONNECTION_STRING 'ENDPOINT=https://XXXXXXXX-XXXX-411c-821f-XXXXfd7f391c.files.hdl.XXXXXXX-XXX.XXXev-XXX.hanacloud.XXXXX.com;
+	   CLIENT_CERTIFICATE= -----BEGIN CERTIFICATE-----
+		  abc
+		  -----END CERTIFICATE-----;
+	   CLIENT_KEY= -----BEGIN PRIVATE KEY-----
+		  xyz
+		  -----END PRIVATE KEY-----'
+    WITH COMPRESSION 3
+    KEY 'abc123'
+    MAX PART SIZE 20
+    MAX PART WRITERS 5;
+```
+
+Azure Blob Storage
 
 ```
 BACKUP TABLE HDL_T101 TO
@@ -447,7 +561,7 @@ BACKUP TABLE HDL_T101 TO
     WITH COMPRESSION 7;
 ```
 
-**Amazon S3 storage**
+Amazon S3 storage
 
 ```
 BACKUP TABLE HDL_T2000 TO
@@ -460,20 +574,7 @@ BACKUP TABLE HDL_T2000 TO
     WITH COMPRESSION 3; 
 ```
 
-**SAP Converged Cloud \(an S3-compliant provider\) storage**
-
-```
-BACKUP TABLE HDL_T2000 TO
-    ‘s3://sap-hanadatalake/hdl_folder'
-    CONNECTION_STRING 'ACCESS_KEY_ID=ftwbaebtwjomo;
-        SECRET_ACCESS_KEY=fomoicymiimhoidc;
-        ENDPOINT_TYPE=PATH;
-        REGION=eu-de-1;
-        ENDPOINT=https://objectstore-3.eu-de-1.cloud.sap' 
-    WITH COMPRESSION 3;
-```
-
-**Google Cloud Storage**
+Google Cloud Storage
 
 ```
 BACKUP TABLE original_table TO 
@@ -481,19 +582,7 @@ BACKUP TABLE original_table TO
     CONNECTION_STRING 'client_email=xxx;
         private_key=yyy;
         private_key_id=zzz'
-    WITH COMPRESSION 1 key 'abc123DEF!@#$%^&*()'
-```
-
-\(DEPRECATED\) The following syntax was used for Amazon S3 and is deprecated as of QRC 2, 2022. Use the syntax above for **Amazon S3 and any S3-compliant providers** instead.
-
-```
-BACKUP TABLE HDL_T2000 TO
-    's3://sap-hanadatalake/hdl_folder'
-    REGION 'us-east-1'
-    ACCESS_KEY_ID 'ftwbaebtwjomo'
-    SECRET_ACCESS_KEY 'fomoicymiimhoidc'
-    KEY 'abc123'
-    WITH COMPRESSION 3;
+    WITH COMPRESSION 1 key 'abc123DEF!@#$%^&*()';
 ```
 
 **Related Information**  
@@ -501,7 +590,7 @@ BACKUP TABLE HDL_T2000 TO
 
 [RESTORE TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](restore-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-1128b04.md "Restore backed up tables in data lake Relational Engine.")
 
-[Table-Level Backup and Restore of Data in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/5483df1be61442c18d65e0ee66fe27a1.html "Data lake Relational Engine provides table-level backup and restore functionality that enables you to backup and restore individual tables by creating an image of data (FP index in binary format) for all columns in a data lake Relational Engine table.") :arrow_upper_right:
+[Table-Level Backup and Restore of Data in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/5483df1be61442c18d65e0ee66fe27a1.html "Data lake Relational Engine provides table-level backup and restore functionality that enables you to backup and restore individual tables by creating an image of data (FP index in binary format) for all columns in a data lake Relational Engine table.") :arrow_upper_right:
 
-[BACKUP TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/5c2f08fec3194c57ae23a640fc0cf73f.html "Backup data lake Relational Engine tables.") :arrow_upper_right:
+[BACKUP TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/5c2f08fec3194c57ae23a640fc0cf73f.html "Backup data lake Relational Engine tables.") :arrow_upper_right:
 

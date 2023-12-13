@@ -7,7 +7,7 @@ Returns the cotangent of a number, expressed in radians.
 
 
 ```
-COT ( <numeric-expression> )
+COT ( <numeric-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The angle, in radians.
 
 <a name="loioefe32d94c2374ba4a64f6cac2dfe2cbc__section_mhd_rpl_srb"/>
 
-## Returns
+## Result Set
 
 This function converts its argument to DOUBLE, performs the computation in double-precision floating point, and returns a DOUBLE as the result. If the parameter is NULL, the result is NULL.
 
@@ -57,11 +57,11 @@ This function converts its argument to DOUBLE, performs the computation in doubl
 The following statement returns the value 1.74653:
 
 ```
-SELECT COT( 0.52 ) FROM iq_dummy
+SELECT COT( 0.52 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[COT Function [Numeric] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a540f97a84f21015bfc68a88c0565f03.html "Returns the cotangent of a number, expressed in radians.") :arrow_upper_right:
+[COT Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a540f97a84f21015bfc68a88c0565f03.html "Returns the cotangent of a number, expressed in radians.") :arrow_upper_right:
 

@@ -2,11 +2,11 @@
 
 # SQL Statements in Data Lake Relational Engine \(SAP HANA DB-Managed\)
 
-Execute data lake Relational Engine SQL statements.
+Data lake Relational Engine supports many SQL statements to allow you to perform such tasks as create database objects, administer your system, and manipulate data.
 
 Some data lake Relational Engine SQL statement can only be executed within the REMOTE\_EXECUTE procedure. A few can be run either within the REMOTE\_EXECUTE procedure or when directly connected to data lake Relational Engine. Check the **Restriction** section at the beginning of each SQL statement for guidance.
 
-For examples running SQL statements using the REMOTE\_EXECUTE procedure, see [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+For examples running SQL statements using the REMOTE\_EXECUTE procedure, see [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
 
 
 
@@ -17,5 +17,5 @@ For SAP HANA database SQL statements specific to data lake Relational Engine, se
 
 [SAP HANA Database for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../080-sap-hana-database-for-data-lake-relational-engine/sap-hana-database-for-data-lake-relational-engine-sap-hana-6f738e7.md "The information in this section pertains to concepts and statements specific to SAP HANA Database when used within a data lake Relational Engine context.")
 
-[REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md "Execute a data lake Relational Engine SQL statement by embedding the statement in the REMOTE_EXECUTE procedure.")
+[REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md "To run data lake Relational Engine SQL statements using the SAP HANA database REMOTE_EXECUTE or REMOTE_EXECUTE_DDL procedure, you embed the SQL syntax within the procedure.")
 

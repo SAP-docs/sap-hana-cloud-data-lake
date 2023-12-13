@@ -6,8 +6,11 @@ Controls the minimum number of tables being joined together before any join opti
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63be24b84f210158835e52f5dcf32ee__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

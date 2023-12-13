@@ -6,10 +6,13 @@ Each row in the SYSREMOTEUSER system view describes a user ID with the REMOTE sy
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be9ff0f6c5f1014937ee9f5500be619__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYSREMOTEUSER system view describes a user ID with the REMOTE sy
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 user\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The user number of the user with REMOTE privilege.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The user number of the user with REMOTE privilege.
 
 consolidate
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates whether the user was granted CONSOLIDATE privilege \(Y\) or REMOTE privileges \(N\).
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ Indicates whether the user was granted CONSOLIDATE privilege \(Y\) or REMOTE pri
 
 type\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 Identifies which of the message systems is used to send messages to the user.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ Identifies which of the message systems is used to send messages to the user.
 
 address
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The address to which messages are to be sent. The address must be appropriate for the address\_type.
-
-
 
 </td>
 </tr>
@@ -135,21 +108,15 @@ The address to which messages are to be sent. The address must be appropriate fo
 
 frequency
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 How frequently messages are sent.
-
-
 
 </td>
 </tr>
@@ -158,21 +125,15 @@ How frequently messages are sent.
 
 send\_time
 
-
-
 </td>
 <td valign="top">
 
 TIME
 
-
-
 </td>
 <td valign="top">
 
 The next time messages are to be sent to this user.
-
-
 
 </td>
 </tr>
@@ -181,21 +142,15 @@ The next time messages are to be sent to this user.
 
 log\_send
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Messages are sent only to subscribers for whom log\_send is greater than log\_sent.
-
-
 
 </td>
 </tr>
@@ -204,21 +159,15 @@ Messages are sent only to subscribers for whom log\_send is greater than log\_se
 
 time\_sent
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 The local time the most recent message was sent to this subscriber.
-
-
 
 </td>
 </tr>
@@ -227,21 +176,15 @@ The local time the most recent message was sent to this subscriber.
 
 log\_sent
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The log offset for the most recently sent operation.
-
-
 
 </td>
 </tr>
@@ -250,21 +193,15 @@ The log offset for the most recently sent operation.
 
 confirm\_sent
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The log offset for the most recently confirmed operation from this subscriber.
-
-
 
 </td>
 </tr>
@@ -273,21 +210,15 @@ The log offset for the most recently confirmed operation from this subscriber.
 
 send\_count
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 How many messages have been sent.
-
-
 
 </td>
 </tr>
@@ -296,21 +227,15 @@ How many messages have been sent.
 
 resend\_count
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Counter to ensure that messages are applied only once at the subscriber database.
-
-
 
 </td>
 </tr>
@@ -319,21 +244,15 @@ Counter to ensure that messages are applied only once at the subscriber database
 
 time\_received
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 The local time when the most recent message was received from this subscriber.
-
-
 
 </td>
 </tr>
@@ -342,21 +261,15 @@ The local time when the most recent message was received from this subscriber.
 
 log\_received
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The log offset in the database of the subscriber for the operation that was most recently received at the current database.
-
-
 
 </td>
 </tr>
@@ -365,21 +278,15 @@ The log offset in the database of the subscriber for the operation that was most
 
 confirm\_received
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The log offset in the database of the subscriber for the most recent operation for which a confirmation message has been sent.
-
-
 
 </td>
 </tr>
@@ -388,21 +295,15 @@ The log offset in the database of the subscriber for the most recent operation f
 
 receive\_count
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 How many messages have been received.
-
-
 
 </td>
 </tr>
@@ -411,21 +312,15 @@ How many messages have been received.
 
 rereceive\_count
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Counter to ensure that messages are applied only once at the current database.
-
-
 
 </td>
 </tr>
@@ -434,21 +329,15 @@ Counter to ensure that messages are applied only once at the current database.
 
 time\_sent\_utc
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE
 
-
-
 </td>
 <td valign="top">
 
 The UTC time the most recent message was sent to this subscriber.
-
-
 
 </td>
 </tr>
@@ -457,21 +346,15 @@ The UTC time the most recent message was sent to this subscriber.
 
 time\_received\_utc
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE
 
-
-
 </td>
 <td valign="top">
 
 The UTC time when the most recent message was received from this subscriber.
-
-
 
 </td>
 </tr>

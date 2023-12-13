@@ -11,7 +11,7 @@ STACK_TRACE(
 [ <stack-frames>
 [, <detail-level>
 [, <connection-id> ] ] ]
-)
+);
 ```
 
 
@@ -127,7 +127,7 @@ Use the connection\_id option to filter the results returned to the specified co
 
 <a name="loio81fd67bc6ce2101497f0d65edc4451bd__STACK_TRACE_returns1"/>
 
-## Returns
+## Result Set
 
 LONG VARCHAR representing the stack trace of the current statement.
 
@@ -167,6 +167,8 @@ Not in the standard.
 
 
 
+## Example
+
 The following example illustrates a procedure call stack trace:
 
 ```
@@ -205,5 +207,5 @@ line_num row_value
 **Related Information**  
 
 
-[STACK_TRACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/387c96c17c9141249abeff9a59d22ec4.html "Returns information about the stack trace for the current statement.") :arrow_upper_right:
+[STACK_TRACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/387c96c17c9141249abeff9a59d22ec4.html "Returns information about the stack trace for the current statement.") :arrow_upper_right:
 

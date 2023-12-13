@@ -23,14 +23,10 @@ Choose one or both of the following options:
 
 Option
 
-
-
 </th>
 <th valign="top">
 
 Action
-
-
 
 </th>
 </tr>
@@ -39,16 +35,12 @@ Action
 
 **Specify database server properties to be tracked for the database server**
 
-
-
 </td>
 <td valign="top">
 
 Use the sa\_server\_option system procedure to configure property tracking for the database server. For example, execute the following statement:
 
 ***CALL sa\_server\_option\( 'PropertyHistoryList,ProcessCPUSystem,ProcessCPUUser,PropertyHistorySize,250K' \);***
-
-
 
 </td>
 </tr>
@@ -57,16 +49,12 @@ Use the sa\_server\_option system procedure to configure property tracking for t
 
 **Specify database server properties to be tracked for the database**
 
-
-
 </td>
 <td valign="top">
 
 Use the sa\_db\_option system procedure to configure property tracking of database server properties for the database. For example, execute the following statement:
 
 ***CALL sa\_db\_option\( 'PropertyHistoryList,ProcessCPUSystem,ProcessCPUUser' \);***
-
-
 
 </td>
 </tr>

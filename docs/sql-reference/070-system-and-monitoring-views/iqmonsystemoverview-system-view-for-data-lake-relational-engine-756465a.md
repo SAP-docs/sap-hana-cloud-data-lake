@@ -6,10 +6,13 @@ A server-level monitoring view for troubleshooting performance issues. iqmonSyst
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio756465a668ad4a1ba91f6c0b46b18e53__section_skb_fwg_k4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 <table>
@@ -18,21 +21,15 @@ A server-level monitoring view for troubleshooting performance issues. iqmonSyst
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -41,21 +38,15 @@ Description
 
 SystemName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(50\)
 
-
-
 </td>
 <td valign="top">
 
 The data lake Relational Engine server name.
-
-
 
 </td>
 </tr>
@@ -64,21 +55,15 @@ The data lake Relational Engine server name.
 
 DatabaseName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The data lake Relational Engine database name.
-
-
 
 </td>
 </tr>
@@ -87,21 +72,15 @@ The data lake Relational Engine database name.
 
 HostName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(64\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the data lake Relational Engine host machine.
-
-
 
 </td>
 </tr>
@@ -110,21 +89,15 @@ The name of the data lake Relational Engine host machine.
 
 IQServerVersion
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The version number of the installed data lake Relational Engine support package or patch release. This value is also available in [sp\_iqstatus Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatus-procedure-for-data-lake-relational-engine-a5b8569.md) output.
-
-
 
 </td>
 </tr>
@@ -133,21 +106,15 @@ The version number of the installed data lake Relational Engine support package 
 
 ActiveConnections
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The current number of connections to the data lake Relational Engine server. This value is also available in [sp\_iqstatistics Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatistics-procedure-for-data-lake-relational-engine-a5b7d32.md) output.
-
-
 
 </td>
 </tr>
@@ -156,21 +123,15 @@ The current number of connections to the data lake Relational Engine server. Thi
 
 ActiveTransactions
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The current number of active transactions.
-
-
 
 </td>
 </tr>
@@ -179,21 +140,15 @@ The current number of active transactions.
 
 NumberOfActiveVersions
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The current number of active versions.
-
-
 
 </td>
 </tr>
@@ -202,21 +157,15 @@ The current number of active versions.
 
 ServerMode
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(64\)
 
-
-
 </td>
 <td valign="top">
 
 The data lake Relational Engine server mode: either `IQ Server`, `IQ Multiplex Coordinator Server`, `IQ Multiplex Write Server`, or `IQ Multiplex Query Server`. This value is also available in [sp\_iqstatus Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatus-procedure-for-data-lake-relational-engine-a5b8569.md) output.
-
-
 
 </td>
 </tr>
@@ -225,21 +174,15 @@ The data lake Relational Engine server mode: either `IQ Server`, `IQ Multiplex C
 
 PageSize
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The data lake Relational Engine database page size, in KB. This value is also available in [sp\_iqstatus Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatus-procedure-for-data-lake-relational-engine-a5b8569.md) output.
-
-
 
 </td>
 </tr>
@@ -248,21 +191,15 @@ The data lake Relational Engine database page size, in KB. This value is also av
 
 HeapMemory
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The data lake Relational Engine server heap memory size, in MB. This value is also available in [sp\_iqstatus Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatus-procedure-for-data-lake-relational-engine-a5b8569.md) output.
-
-
 
 </td>
 </tr>
@@ -271,21 +208,15 @@ The data lake Relational Engine server heap memory size, in MB. This value is al
 
 DynamicMemory
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The data lake Relational Engine dynamic memory size, in MB. This value is also available in [sp\_iqstatus Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatus-procedure-for-data-lake-relational-engine-a5b8569.md) output.
-
-
 
 </td>
 </tr>
@@ -294,21 +225,15 @@ The data lake Relational Engine dynamic memory size, in MB. This value is also a
 
 LastFullBackupTime
 
-
-
 </td>
 <td valign="top">
 
 DATETIME
 
-
-
 </td>
 <td valign="top">
 
 The time of the last full data lake Relational Engine database backup. This value is also available in [sp\_iqstatus Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatus-procedure-for-data-lake-relational-engine-a5b8569.md) output.
-
-
 
 </td>
 </tr>
@@ -317,21 +242,15 @@ The time of the last full data lake Relational Engine database backup. This valu
 
 LastBackupTime
 
-
-
 </td>
 <td valign="top">
 
 DATETIME
 
-
-
 </td>
 <td valign="top">
 
 The time of the last data lake Relational Engine database backup.
-
-
 
 </td>
 </tr>
@@ -340,21 +259,15 @@ The time of the last data lake Relational Engine database backup.
 
 StartTime
 
-
-
 </td>
 <td valign="top">
 
 DATETIME
 
-
-
 </td>
 <td valign="top">
 
 The start time of the data lake Relational Engine server.
-
-
 
 </td>
 </tr>
@@ -363,21 +276,15 @@ The start time of the data lake Relational Engine server.
 
 UserCPUTime
 
-
-
 </td>
 <td valign="top">
 
 FLOAT
 
-
-
 </td>
 <td valign="top">
 
 The amount of system mode CPU time used by the data lake Relational Engine server, in seconds. This value is also available in [sp\_iqstatistics Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatistics-procedure-for-data-lake-relational-engine-a5b7d32.md) output.
-
-
 
 </td>
 </tr>
@@ -386,21 +293,15 @@ The amount of system mode CPU time used by the data lake Relational Engine serve
 
 SystemCPUTime
 
-
-
 </td>
 <td valign="top">
 
 FLOAT
 
-
-
 </td>
 <td valign="top">
 
 The total CPU time used by the data lake Relational Engine server in seconds. This value is also available in [sp\_iqstatistics Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatistics-procedure-for-data-lake-relational-engine-a5b7d32.md) output.
-
-
 
 </td>
 </tr>
@@ -409,21 +310,15 @@ The total CPU time used by the data lake Relational Engine server in seconds. Th
 
 TotalCPUTime
 
-
-
 </td>
 <td valign="top">
 
 FLOAT
 
-
-
 </td>
 <td valign="top">
 
 The amount of user mode CPU time used by the data lake Relational Engine server, in seconds. This value is also available in [sp\_iqstatistics Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatistics-procedure-for-data-lake-relational-engine-a5b7d32.md) output.
-
-
 
 </td>
 </tr>
@@ -432,21 +327,15 @@ The amount of user mode CPU time used by the data lake Relational Engine server,
 
 MainFinds
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The number of finds of the main cache. This value is also available in [sp\_iqstatistics Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatistics-procedure-for-data-lake-relational-engine-a5b7d32.md) output.
-
-
 
 </td>
 </tr>
@@ -455,21 +344,15 @@ The number of finds of the main cache. This value is also available in [sp\_iqst
 
 MainHitRatio
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The ratio of buffers found in the main cache to the total number of finds. This value is also available in [sp\_iqstatistics Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatistics-procedure-for-data-lake-relational-engine-a5b7d32.md) output.
-
-
 
 </td>
 </tr>
@@ -478,21 +361,15 @@ The ratio of buffers found in the main cache to the total number of finds. This 
 
 MainReads
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The number of read operations for the main cache. This value is also available in [sp\_iqstatistics Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatistics-procedure-for-data-lake-relational-engine-a5b7d32.md) output.
-
-
 
 </td>
 </tr>
@@ -501,21 +378,15 @@ The number of read operations for the main cache. This value is also available i
 
 MainWrites
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The number of pages written from the main cache. This value is also available in [sp\_iqstatistics Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatistics-procedure-for-data-lake-relational-engine-a5b7d32.md) output.
-
-
 
 </td>
 </tr>
@@ -524,21 +395,15 @@ The number of pages written from the main cache. This value is also available in
 
 TempFinds
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The number of finds of the temporary cache. This value is also available in [sp\_iqstatistics Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatistics-procedure-for-data-lake-relational-engine-a5b7d32.md) output.
-
-
 
 </td>
 </tr>
@@ -547,21 +412,15 @@ The number of finds of the temporary cache. This value is also available in [sp\
 
 TempHitRatio
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The ratio of buffers found in the temp cache to the total number of finds.
-
-
 
 </td>
 </tr>
@@ -570,21 +429,15 @@ The ratio of buffers found in the temp cache to the total number of finds.
 
 TempReads
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The number of read operations for the temporary cache. This value is also available in [sp\_iqstatistics Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatistics-procedure-for-data-lake-relational-engine-a5b7d32.md) output.
-
-
 
 </td>
 </tr>
@@ -593,21 +446,15 @@ The number of read operations for the temporary cache. This value is also availa
 
 TempWrites
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The number of pages written from the temporary cache. This value is also available in [sp\_iqstatistics Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatistics-procedure-for-data-lake-relational-engine-a5b7d32.md) output.
-
-
 
 </td>
 </tr>
@@ -619,7 +466,7 @@ The number of pages written from the temporary cache. This value is also availab
 
 ## Privileges
 
-You must have the MONITOR system privilege to access this view. DBAs can consult [Granting a System Privilege to a User](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_2_QRC/en-US/a43bcb8284f210158039b1793a92a4fc.html "Allow the granting of specific system privileges to specific users, with or without administrative rights.") :arrow_upper_right: and [Alphabetical List of System Privileges for Data Lake Relational Engine](../080-sql-statements/alphabetical-list-of-system-privileges-for-data-lake-relational-engine-a449325.md) for information on granting the MONITOR system privilege to a user.
+You must have the MONITOR system privilege to access this view. DBAs can consult [Granting a System Privilege to a User](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/a43bcb8284f210158039b1793a92a4fc.html "Allow the granting of specific system privileges to specific users, with or without administrative rights.") :arrow_upper_right: and [Alphabetical List of System Privileges for Data Lake Relational Engine](../080-sql-statements/alphabetical-list-of-system-privileges-for-data-lake-relational-engine-a449325.md) for information on granting the MONITOR system privilege to a user.
 
 
 
@@ -638,5 +485,5 @@ Use iqmonSystemOverview for diagnostic use-cases including:
 -   Verifying if CPU utilization is outside of the normal range.
 
 
-iqmonSystemOverview, in conjunction with the other monitoring views, can help you troubleshoot common data lake Relational Engine performance problems. For diagnostic use-case information, see the [SAP HANA Cloud, Data Lake Performance and Tuning for Data Lake Relational Engine (Monitoring Views)](https://help.sap.com/viewer/028be133f34c4d2d998c6fbc258659c5/2023_2_QRC/en-US/56032dd760ca4790a55d069d4475b441.html "This document shows you how to use the monitoring views to monitor data lake Relational Engine system health, and to help you troubleshoot performance issues.") :arrow_upper_right: manual.
+iqmonSystemOverview, in conjunction with the other monitoring views, can help you troubleshoot common data lake Relational Engine performance problems. For diagnostic use-case information, see the [SAP HANA Cloud, Data Lake Performance and Tuning for Data Lake Relational Engine (Monitoring Views)](https://help.sap.com/viewer/028be133f34c4d2d998c6fbc258659c5/2023_4_QRC/en-US/56032dd760ca4790a55d069d4475b441.html "This document shows you how to use the monitoring views to monitor data lake Relational Engine system health, and to help you troubleshoot performance issues.") :arrow_upper_right: manual.
 

@@ -6,10 +6,13 @@ Each row describes a subscription from one user ID \(which must have the REMOTE 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bea46346c5f1014b224ad518bdb7f6e__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -21,6 +24,6 @@ ALTER VIEW "SYS"."SYSSUBSCRIPTIONS"
     s.started
     from SYS.ISYSSUBSCRIPTION as s
       join SYS.ISYSPUBLICATION as p on(p.publication_id = s.publication_id)
-      join SYS.ISYSUSER as u on u.user_id = s.user_id
+      join SYS.ISYSUSER as u on u.user_id = s.user_id;
 ```
 

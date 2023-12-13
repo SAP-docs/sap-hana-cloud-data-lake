@@ -7,7 +7,7 @@ Converts an expression into a timestamp.
 
 
 ```
-DATETIME ( <expression> )
+DATETIME ( <expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The expression to be converted. The expression is usually a string. Conversion e
 
 <a name="loio87c2ebfc15364ff0b9b4e7dc0fa66207__section_hp5_3cm_srb"/>
 
-## Returns
+## Result Set
 
 TIMESTAMP
 
@@ -57,11 +57,11 @@ TIMESTAMP
 The following statement returns a timestamp with value 1998-09-09 12:12:12.000:
 
 ```
-SELECT DATETIME( '1998-09-09 12:12:12.000' ) FROM iq_dummy
+SELECT DATETIME( '1998-09-09 12:12:12.000' ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[DATETIME Function [Date and Time] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a548c21f84f210158350cf2fab822610.html "Converts an expression into a timestamp.") :arrow_upper_right:
+[DATETIME Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a548c21f84f210158350cf2fab822610.html "Converts an expression into a timestamp.") :arrow_upper_right:
 

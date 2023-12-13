@@ -7,7 +7,7 @@ Returns the length of the expression in bytes.
 
 
 ```
-DATALENGTH ( <expression> )
+DATALENGTH ( <expression> );
 ```
 
 
@@ -34,7 +34,7 @@ The expression is usually a column name. If the expression is a string constant,
 
 
 
-## Returns
+## Result Set
 
 UNSIGNED INT
 
@@ -51,14 +51,10 @@ UNSIGNED INT
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 DATALENGTH
-
-
 
 </th>
 </tr>
@@ -67,14 +63,10 @@ DATALENGTH
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 2
-
-
 
 </td>
 </tr>
@@ -83,14 +75,10 @@ SMALLINT
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 4
-
-
 
 </td>
 </tr>
@@ -99,14 +87,10 @@ INTEGER
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 8
-
-
 
 </td>
 </tr>
@@ -115,14 +99,10 @@ DOUBLE
 
 CHAR
 
-
-
 </td>
 <td valign="top">
 
 Length of the data
-
-
 
 </td>
 </tr>
@@ -131,14 +111,10 @@ Length of the data
 
 BINARY
 
-
-
 </td>
 <td valign="top">
 
 Length of the data
-
-
 
 </td>
 </tr>
@@ -162,7 +138,7 @@ Returns the value 35, the longest string in the company\_name column:
 
 ```
 SELECT MAX( DATALENGTH( company_name ) )
-                    FROM Customers
+                    FROM Customers;
 ```
 
 **Related Information**  

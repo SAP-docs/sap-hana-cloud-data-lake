@@ -6,19 +6,19 @@ Breaks a CHAR string into terms and returns each term as a row along with its po
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio81741e316ce21014a988e4845b1f1a41__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_char_terms( 
-<text>
-[, <config_name>
-[, <owner> ] ] 
-)
+<text>[, <config_name>[, <owner> ] ] )sa_char_terms(; 
+   
 ```
 
 
@@ -29,7 +29,7 @@ sa_char_terms(
 <dl>
 <dt><b>
 
- *<text\>* 
+*<text\>* 
 
 </b></dt>
 <dd>
@@ -40,7 +40,7 @@ The LONG VARCHAR string you are parsing.
 
 </dd><dt><b>
 
- *<config\_name\>* 
+*<config\_name\>* 
 
 </b></dt>
 <dd>
@@ -51,17 +51,63 @@ Use this optional CHAR\(128\) parameter to specify the text configuration object
 
 </dd><dt><b>
 
- *<owner\>* 
+*<owner\>* 
 
 </b></dt>
 <dd>
 
-Use this optional CHAR\(128\) parameter to specify the owner of the text configuration object. The default value is NULL. The current user is assumed if the owner is not specified or if NULL is specified.
+Use this optional CHAR\(128\) parameter to specify the owner of the text configuration object. The default value is NULL. The current user is assumed if the owner is not specified or if NULL is specified. The default value is 'SYS'.
 
 
 
 </dd>
 </dl>
+
+
+
+<a name="loio81741e316ce21014a988e4845b1f1a41__section_j2p_3w5_xyb"/>
+
+## Result Set
+
+
+<table>
+<tr>
+<th valign="top">
+
+Column Name
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Term
+
+</td>
+<td valign="top">
+
+sa\_char\_terms\( The specified term in the *<char-string\>*.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Position
+
+</td>
+<td valign="top">
+
+The position of the term in the *<char-string\>*.
+
+</td>
+</tr>
+</table>
 
 
 
@@ -85,10 +131,14 @@ None
 
 
 
-The following statement returns the terms in the CHAR string "It's a work-at-home day!" using the default CHAR text configuration object, default\_char:
+<a name="loio81741e316ce21014a988e4845b1f1a41__section_sdp_jnf_zyb"/>
+
+## Examples
+
+This example uses the sa\_char\_terms system procedure to return the terms in the CHAR string "It's a work-at-home day!" using the default CHAR text configuration object, default\_char:
 
 ```
-CALL dbo.sa_char_terms ('It's a work-at-home day!', 'default_char', 'sys');
+CALL sa_char_terms ('It''s a work-at-home day!', 'default_char', 'sys');
 ```
 
 
@@ -98,14 +148,10 @@ CALL dbo.sa_char_terms ('It's a work-at-home day!', 'default_char', 'sys');
 
 term
 
-
-
 </th>
 <th valign="top">
 
 position
-
-
 
 </th>
 </tr>
@@ -114,14 +160,10 @@ position
 
 It
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 </tr>
@@ -130,14 +172,10 @@ It
 
 s
 
-
-
 </td>
 <td valign="top">
 
 2
-
-
 
 </td>
 </tr>
@@ -146,14 +184,10 @@ s
 
 a
 
-
-
 </td>
 <td valign="top">
 
 3
-
-
 
 </td>
 </tr>
@@ -162,14 +196,10 @@ a
 
 work
 
-
-
 </td>
 <td valign="top">
 
 4
-
-
 
 </td>
 </tr>
@@ -178,14 +208,10 @@ work
 
 at
 
-
-
 </td>
 <td valign="top">
 
 5
-
-
 
 </td>
 </tr>
@@ -194,14 +220,10 @@ at
 
 home
 
-
-
 </td>
 <td valign="top">
 
 6
-
-
 
 </td>
 </tr>
@@ -210,14 +232,10 @@ home
 
 day
 
-
-
 </td>
 <td valign="top">
 
 7
-
-
 
 </td>
 </tr>

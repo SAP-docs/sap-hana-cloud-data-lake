@@ -180,6 +180,8 @@ The WINDOW clause and window aggregate functions comprise optional SQL Language 
 
 
 
+## Example
+
 The following example returns an employee's salary and the average salary for all employees in the selected state. The results are ordered by state and then by surname.
 
 ```

@@ -15,14 +15,10 @@ A list of available data types when using the CREATE TABLE statement in data lak
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -31,15 +27,13 @@ Description
 
 BINARY
 
-
-
 </td>
 <td valign="top">
 
 Binary data of a specified maximum *<length\>* in bytes.
 
 ```
-BINARY [ ( <length> ) ]
+BINARY [ ( <length> ) ];
 ```
 
 If *<length\>* is omitted, then the default is 1 byte. The maximum size allowed is 32,767 bytes.
@@ -59,8 +53,6 @@ Use the fixed-length binary type BINARY for data in which all entries are expect
 
 All BINARY columns are padded with zeros to the full width of the column. Trailing zeros are truncated in all VARBINARY columns.
 
-
-
 </td>
 </tr>
 <tr>
@@ -68,14 +60,10 @@ All BINARY columns are padded with zeros to the full width of the column. Traili
 
 BLOB
 
-
-
 </td>
 <td valign="top">
 
 BLOB \(binary large object\) data is supported with a length ranging from zero \(0\) to 2 PB \(petabytes\). BLOB is an alias for LONG BINARY data type. The maximum length is equal to 4 GB multiplied by the database page size \(512 KB\).
-
-
 
 </td>
 </tr>
@@ -83,8 +71,6 @@ BLOB \(binary large object\) data is supported with a length ranging from zero \
 <td valign="top">
 
 IMAGE
-
-
 
 </td>
 <td valign="top">
@@ -95,16 +81,12 @@ IMAGE is a domain, implemented as LONG BINARY.
 
 You can’t use the aggregate functions SUM, AVG, STDDEV, or VARIANCE with binary data types.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 LONG BINARY
-
-
 
 </td>
 <td valign="top">
@@ -117,16 +99,12 @@ The maximum size in bytes is 2 GB minus 1 byte or 2147483647.
 
 You can’t use the SUM, AVG, STDDEV, or VARIANCE aggregate functions with binary data types.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 UNIQUEIDENTIFIER
-
-
 
 </td>
 <td valign="top">
@@ -169,15 +147,13 @@ UPDATE MYTAB
 
 VARBINARY
 
-
-
 </td>
 <td valign="top">
 
 Binary data up to a specified *<max-length\>* in bytes.
 
 ```
-VARBINARY [ ( <length> ) ]
+VARBINARY [ ( <length> ) ];
 ```
 
 If *<length\>* is omitted, then the default is 1 byte. The maximum size allowed is \(32 K – 1\) bytes. Use the variable-length binary type VARBINARY for data that is expected to vary greatly in length.
@@ -195,8 +171,6 @@ Use the variable-length binary type VARBINARY for data that is expected to vary 
 
 All BINARY columns are padded with zeros to the full width of the column. Trailing zeros are truncated in all VARBINARY columns.
 
-
-
 </td>
 </tr>
 </table>
@@ -210,14 +184,10 @@ All BINARY columns are padded with zeros to the full width of the column. Traili
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -225,8 +195,6 @@ Description
 <td valign="top">
 
 BIT
-
-
 
 </td>
 <td valign="top">
@@ -241,8 +209,6 @@ When converting a string to a BIT, leading and trailing spaces are removed. If t
 
 Only the default index type is supported for BIT data.
 
-
-
 </td>
 </tr>
 <tr>
@@ -250,16 +216,12 @@ Only the default index type is supported for BIT data.
 
 BOOLEAN
 
-
-
 </td>
 <td valign="top">
 
 BOOLEAN is a synonym of BIT, not a native data type.
 
 The underlying data type is BIT and the default nullability is NULL.
-
-
 
 </td>
 </tr>
@@ -274,14 +236,10 @@ The underlying data type is BIT and the default nullability is NULL.
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -290,16 +248,12 @@ Description
 
 BOOLEAN
 
-
-
 </td>
 <td valign="top">
 
 Boolean values are TRUE, FALSE, and UNKNOWN, where UNKNOWN is a synonym of NULL.
 
 If a remote source does not support the BOOLEAN data type, it returns 1 for TRUE and 0 for FALSE.
-
-
 
 </td>
 </tr>
@@ -314,14 +268,10 @@ If a remote source does not support the BOOLEAN data type, it returns 1 for TRUE
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -330,8 +280,6 @@ Description
 
 CLOB
 
-
-
 </td>
 <td valign="top">
 
@@ -339,16 +287,12 @@ Supports character large object \(CLOB\) data with a length ranging from zero \(
 
 The maximum length is equal to 4 GB multiplied by the database page size \(512 KB\).
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 LONG VARCHAR
-
-
 
 </td>
 <td valign="top">
@@ -359,8 +303,6 @@ Multibyte characters can be stored as LONG VARCHAR, but the length is in bytes, 
 
 VARCHARhas no blank padding is added to the storage of these strings.
 
-
-
 </td>
 </tr>
 <tr>
@@ -368,14 +310,10 @@ VARCHARhas no blank padding is added to the storage of these strings.
 
 TEXT
 
-
-
 </td>
 <td valign="top">
 
 Stores character data of arbitrary length. TEXT is a domain, implemented as a LONG VARCHAR.
-
-
 
 </td>
 </tr>
@@ -384,15 +322,13 @@ Stores character data of arbitrary length. TEXT is a domain, implemented as a LO
 
 VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 Stores arbitrary length character data.
 
 ```
-VARCHAR [ ( <max-length> [ BYTE | CHAR | CHARACTER ] ) ]
+VARCHAR [ ( <max-length> [ BYTE | CHAR | CHARACTER ] ) ];
 ```
 
 
@@ -417,8 +353,6 @@ VARCHARhas no blank padding added to the storage of these strings.
 
 All index types, except DATE, TIME, and DATETIME/TIMESTAMP are supported for VARCHAR data to a maximum of to 255 bytes in length. For VARCHAR using character-length semantic, the maximum byte length depends on the number of bytes used per character. The limit becomes 255 divided by the number of bytes per character.
 
-
-
 </td>
 </tr>
 </table>
@@ -432,14 +366,10 @@ All index types, except DATE, TIME, and DATETIME/TIMESTAMP are supported for VAR
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -448,14 +378,10 @@ Description
 
 DATE
 
-
-
 </td>
 <td valign="top">
 
 A calendar date, such as a year, month, and day. The year can be from 0001 to 9999. The day must be a nonzero value, so that the minimum date is 0001-01-01. A DATE value requires 4 bytes of storage.
-
-
 
 </td>
 </tr>
@@ -464,14 +390,10 @@ A calendar date, such as a year, month, and day. The year can be from 0001 to 99
 
 DATETIME
 
-
-
 </td>
 <td valign="top">
 
 A domain, implemented as TIMESTAMP. The fraction is stored to 6 decimal places \(not 7\). A DATETIME value requires 8 bytes of storage.
-
-
 
 </td>
 </tr>
@@ -480,14 +402,10 @@ A domain, implemented as TIMESTAMP. The fraction is stored to 6 decimal places \
 
 DATETIMEX
 
-
-
 </td>
 <td valign="top">
 
 Point in time, containing year, month, day, hour, minute, second, and fraction of a second. The fraction is stored to 7 decimal places, regardless of the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option. The day must be a nonzero value. A DATETIMEX value requires 8 bytes of storage.
-
-
 
 </td>
 </tr>
@@ -496,14 +414,10 @@ Point in time, containing year, month, day, hour, minute, second, and fraction o
 
 SMALLDATETIME
 
-
-
 </td>
 <td valign="top">
 
 A domain, implemented as TIMESTAMP. A SMALLDATETIME value requires 8 bytes of storage.
-
-
 
 </td>
 </tr>
@@ -512,14 +426,10 @@ A domain, implemented as TIMESTAMP. A SMALLDATETIME value requires 8 bytes of st
 
 TIME
 
-
-
 </td>
 <td valign="top">
 
 Time of day, containing hour, minute, second, and fraction of a second. The fraction is stored to 6 decimal places. A TIME value requires 8 bytes of storage. \(ODBC standards restrict TIME data type to an accuracy of seconds. For this reason, do not use TIME data types in WHERE clause comparisons that rely on a higher accuracy than seconds.\)
-
-
 
 </td>
 </tr>
@@ -528,14 +438,10 @@ Time of day, containing hour, minute, second, and fraction of a second. The frac
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Point in time, containing year, month, day, hour, minute, second, and fraction of a second. The fraction is stored to 6 or 7 decimal precision, depending on the value of the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option. For more information, see [Decimal Precision of the TIMESTAMP Data Type in Data Lake Relational Engine](../020-sql-data-types/decimal-precision-of-the-timestamp-data-type-in-data-lake-relational-engine-520ce6c.md). The day must be a nonzero value. A TIMESTAMP value requires 8 bytes of storage.
-
-
 
 </td>
 </tr>
@@ -550,14 +456,10 @@ Point in time, containing year, month, day, hour, minute, second, and fraction o
 
 Data Type
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Description
-
-
 
 </th>
 </tr>
@@ -566,20 +468,16 @@ Description
 
 BIGINT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 A signed 64-bit integer, requiring 8 bytes of storage.
 
 ```
-[ UNSIGNED ] BIGINT
+[ UNSIGNED ] BIGINT;
 ```
 
 You can specify integers as UNSIGNED. By default the data type is signed. Its range is between -9223372036854775808 and 9223372036854775807 \(signed\) or from 0 to 18446744073709551615 \(unsigned\).
-
-
 
 </td>
 </tr>
@@ -588,20 +486,16 @@ You can specify integers as UNSIGNED. By default the data type is signed. Its ra
 
 DECIMAL
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 A signed decimal number with *<precision\>* total digits and with *<scale\>* of the digits after the decimal point.
 
 ```
-DECIMAL [ ( <precision> [ , <scale> ] ) ]
+DECIMAL [ ( <precision> [ , <scale> ] ) ];
 ```
 
 *<precision\>* can equal 1 to 126, inclusive, specifying the number of digits in the expression. *<scale\>* can equal 0 up to precision value, specifying the number of digits after the decimal point. The defaults are scale = 38 and precision = 126. Results are calculated based on the actual data type of the column to ensure accuracy, but you can set the maximum scale of the result returned to the application using the MAX\_CLIENT\_NUMERIC\_SCALE option.
-
-
 
 </td>
 </tr>
@@ -610,16 +504,12 @@ DECIMAL [ ( <precision> [ , <scale> ] ) ]
 
 DOUBLE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 A signed double-precision floating-point number stored in 8 bytes. The range of absolute, nonzero values is between 2.2250738585072014e-308 and 1.797693134862315708e+308. Values held as DOUBLE are accurate to 15 significant digits, but might be subject to rounding errors beyond the 15th digit.
 
 The DOUBLE data type is an approximate numeric data type; it is subject to rounding errors after arithmetic operations.
-
-
 
 </td>
 </tr>
@@ -628,15 +518,13 @@ The DOUBLE data type is an approximate numeric data type; it is subject to round
 
 FLOAT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Stores a floating-point number, which can be single or double precision.
 
 ```
-FLOAT [ ( <precision> ) ]
+FLOAT [ ( <precision> ) ];
 ```
 
 If *<precision\>* supplied, then the FLOAT data type is the same as the REAL or DOUBLE data type, depending on the value of the precision. The cutoff between REAL and DOUBLE is platform-dependent, and it is the number of bits used in the mantissa of single-precision floating point number on the platform. If not supplied, then the FLOAT data type is the same as the REAL data type.
@@ -645,8 +533,6 @@ When a column is created using the FLOAT data type, columns on all platforms are
 
 The FLOAT data type is an approximate numeric data type; it is subject to rounding errors after arithmetic operations.
 
-
-
 </td>
 </tr>
 <tr>
@@ -654,15 +540,13 @@ The FLOAT data type is an approximate numeric data type; it is subject to roundi
 
 INT or INTEGER
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Stores integers that require 4 bytes of storage.
 
 ```
-[ UNSIGNED ] INT[EGER]
+[ UNSIGNED ] INT[EGER];
 ```
 
 A signed 32-bit integer with a range of values between -2147483648 and 2147483647 requiring 4 bytes of storage.
@@ -671,8 +555,6 @@ The INTEGER data type is an exact numeric data type; its accuracy is preserved a
 
 You can specify integers as UNSIGNED; by default the data type is signed. The range of values for an unsigned integer is between 0 and 4294967295.
 
-
-
 </td>
 </tr>
 <tr>
@@ -680,14 +562,10 @@ You can specify integers as UNSIGNED; by default the data type is signed. The ra
 
 MONEY
 
-
-
 </td>
 <td valign="top">
 
 Stores monetary data. MONEY is a domain, implemented as NUMERIC\(19,4\).
-
-
 
 </td>
 </tr>
@@ -696,15 +574,13 @@ Stores monetary data. MONEY is a domain, implemented as NUMERIC\(19,4\).
 
 NUMERIC
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Same as DECIMAL.
 
 ```
-NUMERIC [ ( <precision> [ , <scale> ] ) ]
+NUMERIC [ ( <precision> [ , <scale> ] ) ];
 ```
 
 
@@ -716,16 +592,12 @@ NUMERIC [ ( <precision> [ , <scale> ] ) ]
 
 REAL
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 A signed single-precision floating-point number stored in 4 bytes. The range of absolute, nonzero values is 1.175494351e-38 to 3.402823466e+38. Values held as REAL are accurate to 6 significant digits, but might be subject to rounding errors beyond the sixth digit.
 
 The REAL data type is an approximate numeric data type; it is subject to rounding errors after arithmetic operations.
-
-
 
 </td>
 </tr>
@@ -734,16 +606,12 @@ The REAL data type is an approximate numeric data type; it is subject to roundin
 
 SMALLINT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 A signed 16-bit integer with a range between -32768 and 32767, requiring 2 bytes of storage.
 
 The SMALLINT data type is an exact numeric data type; its accuracy is preserved after arithmetic operations.
-
-
 
 </td>
 </tr>
@@ -752,14 +620,10 @@ The SMALLINT data type is an exact numeric data type; its accuracy is preserved 
 
 SMALLMONEY
 
-
-
 </td>
 <td valign="top">
 
 Stores monetary data that is less than one million currency units. SMALLMONEY is a domain, implemented as NUMERIC\(10,4\).
-
-
 
 </td>
 </tr>
@@ -768,16 +632,12 @@ Stores monetary data that is less than one million currency units. SMALLMONEY is
 
 TINYINT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 An unsigned 8-bit integer with a range between 0 and 255, requiring 1 byte of storage.
 
 The TINYINT data type is an exact numeric data type; its accuracy is preserved after arithmetic operations.
-
-
 
 </td>
 </tr>

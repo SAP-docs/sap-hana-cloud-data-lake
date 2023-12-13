@@ -6,8 +6,11 @@ Sets the maximum size of the point-in-time recovery archive in megabytes.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa887e1f884f21015ab61e3f24f8a219c__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

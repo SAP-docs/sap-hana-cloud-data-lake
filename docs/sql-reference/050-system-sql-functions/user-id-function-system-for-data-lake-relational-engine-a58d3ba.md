@@ -7,7 +7,7 @@ Returns an integer user identification number.
 
 
 ```
-USER_ID ( [ <user-name> ] )
+USER_ID ( [ <user-name> ] );
 ```
 
 
@@ -34,7 +34,7 @@ The user name.
 
 
 
-## Returns
+## Result Set
 
 INT
 
@@ -56,13 +56,13 @@ INT
 -   The following statement returns the user identification number 1:
 
     ```
-    SELECT USER_ID ('HDLADMIN') FROM iq_dummy
+    SELECT USER_ID ('HDLADMIN') FROM iq_dummy;
     ```
 
 -   The following statement returns the user identification number 0:
 
     ```
-    SELECT USER_ID ('SYS') FROM iq_dummy
+    SELECT USER_ID ('SYS') FROM iq_dummy;
     ```
 
 

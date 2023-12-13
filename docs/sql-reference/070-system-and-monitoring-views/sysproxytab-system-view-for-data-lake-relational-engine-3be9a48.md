@@ -6,10 +6,13 @@ Each row of the SYSPROXYTAB system view describes the remote parameters of one p
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be9a48b6c5f1014b2b3b9d305a13769__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row of the SYSPROXYTAB system view describes the remote parameters of one p
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 table\_object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The object ID of the proxy table.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The object ID of the proxy table.
 
 existing\_obj
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates whether the proxy table previously existed on the remote server.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ Indicates whether the proxy table previously existed on the remote server.
 
 srvid
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The unique ID for the remote server associated with the proxy table.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ The unique ID for the remote server associated with the proxy table.
 
 remote\_location
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The location of the proxy table on the remote server.
-
-
 
 </td>
 </tr>
@@ -135,21 +108,15 @@ The location of the proxy table on the remote server.
 
 location\_escape\_char
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 The escape character that is used to escape the location delimiter.
-
-
 
 </td>
 </tr>

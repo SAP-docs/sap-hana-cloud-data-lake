@@ -6,10 +6,13 @@ Inserts a row into the specified cursor.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6224c9a84f210159740e7ada0c238be__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -17,7 +20,7 @@ Inserts a row into the specified cursor.
 PUT <cursor-name> 
    [ { USING DESCRIPTOR <sqlda-name> 
      | FROM <hostvar-list> ] [ INTO { DESCRIPTOR <into-sqlda-name> 
-     | <into-hostvar-list> } ] [ ARRAY :<nnn> ] } ]
+     | <into-hostvar-list> } ] [ ARRAY :<nnn> ] } ];
 ```
 
 

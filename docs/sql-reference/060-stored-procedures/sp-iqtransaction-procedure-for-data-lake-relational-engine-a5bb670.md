@@ -6,22 +6,25 @@ Shows information about transactions and versions.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5bb670c84f21015b392b24dcf28be14__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqtransaction
+sp_iqtransaction;
 ```
 
 
 
 <a name="loioa5bb670c84f21015b392b24dcf28be14__section_ddw_xrm_nbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -30,14 +33,10 @@ sp_iqtransaction
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,14 +45,10 @@ Description
 
 Name
 
-
-
 </td>
 <td valign="top">
 
 The name of the application.
-
-
 
 </td>
 </tr>
@@ -62,14 +57,10 @@ The name of the application.
 
 Userid
 
-
-
 </td>
 <td valign="top">
 
 The user ID for the connection.
-
-
 
 </td>
 </tr>
@@ -78,14 +69,10 @@ The user ID for the connection.
 
 TxnID
 
-
-
 </td>
 <td valign="top">
 
 The transaction ID of this transaction control block. The transaction ID is assigned during `begin transaction`. It appears in the `.iqmsg` file by the BeginTxn, CmtTxn, and PostCmtTxn messages, and is the same as the Txn ID Seq that is logged when the database is opened.
-
-
 
 </td>
 </tr>
@@ -94,14 +81,10 @@ The transaction ID of this transaction control block. The transaction ID is assi
 
 CmtID
 
-
-
 </td>
 <td valign="top">
 
 The ID assigned by the transaction manager when the transaction commits. For active transactions, the CmtID is zero.
-
-
 
 </td>
 </tr>
@@ -110,8 +93,6 @@ The ID assigned by the transaction manager when the transaction commits. For act
 
 VersionID
 
-
-
 </td>
 <td valign="top">
 
@@ -119,16 +100,12 @@ A value of 0 indicates that the transaction is unversioned, and the VersionID ha
 
 For the coordinator node, the VersionID is assigned after the transaction establishes table locks. Worker nodes receive the VersionID from the coordinator. The VersionID is used internally by the data lake Relational Engine in-memory catalog and the IQ transaction manager to uniquely identify a database version to all nodes.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 State
-
-
 
 </td>
 <td valign="top">
@@ -143,8 +120,6 @@ COMMITTED indicates that the transaction has completed and is waiting to be APPL
 
 Once the transaction state is ROLLED\_BACK, COMMITTED, or APPLIED, ceases to own any locks other than those held by open cursors.
 
-
-
 </td>
 </tr>
 <tr>
@@ -152,14 +127,10 @@ Once the transaction state is ROLLED\_BACK, COMMITTED, or APPLIED, ceases to own
 
 ConnHandle
 
-
-
 </td>
 <td valign="top">
 
 The ID number of the connection.
-
-
 
 </td>
 </tr>
@@ -168,14 +139,10 @@ The ID number of the connection.
 
 IQConnID
 
-
-
 </td>
 <td valign="top">
 
 The 10-digit connection ID that is included as part of all messages in the `.iqmsg` file. This is a monotonically increasing integer unique within a server session.
-
-
 
 </td>
 </tr>
@@ -184,14 +151,10 @@ The 10-digit connection ID that is included as part of all messages in the `.iq
 
 MainTableKBCr
 
-
-
 </td>
 <td valign="top">
 
 The number of kilobytes of data lake Relational Engine store space created by this transaction.
-
-
 
 </td>
 </tr>
@@ -200,14 +163,10 @@ The number of kilobytes of data lake Relational Engine store space created by th
 
 MainTableKBDr
 
-
-
 </td>
 <td valign="top">
 
 The number of kilobytes of data lake Relational Engine store space dropped by this transaction, but that persist on disk in the store because the space is visible in other database versions or other savepoints of this transaction.
-
-
 
 </td>
 </tr>
@@ -216,14 +175,10 @@ The number of kilobytes of data lake Relational Engine store space dropped by th
 
 TempTableKBCr
 
-
-
 </td>
 <td valign="top">
 
 The number of kilobytes of data lake Relational Engine temporary store space created by this transaction for storage of data lake Relational Engine temporary table data.
-
-
 
 </td>
 </tr>
@@ -232,14 +187,10 @@ The number of kilobytes of data lake Relational Engine temporary store space cre
 
 TempTableKBDr
 
-
-
 </td>
 <td valign="top">
 
 The number of kilobytes of data lake Relational Engine temporary table space dropped by this transaction, but which persist on disk in the data lake Relational Engine temporary store because the space is visible to data lake Relational Engine cursors or is owned by other savepoints of this transaction.
-
-
 
 </td>
 </tr>
@@ -248,16 +199,12 @@ The number of kilobytes of data lake Relational Engine temporary table space dro
 
 TempWorkSpaceKB
 
-
-
 </td>
 <td valign="top">
 
 For ACTIVE transactions, a snapshot of the work space in use at this instant by this transaction, such as sorts, hashes, and temporary bitmaps. The number varies depending on when you run sp\_iqtransaction. For example, the query engine might create 60 MB in the temporary cache but release most of it quickly, even though query processing continues. If you run sp\_iqtransaction after the query finishes, this column shows a much smaller number. When the transaction is no longer active, this column is zero.
 
 For ACTIVE transactions, this column is the same as the TempWorkSpaceKB column of sp\_iqconnection.
-
-
 
 </td>
 </tr>
@@ -266,14 +213,10 @@ For ACTIVE transactions, this column is the same as the TempWorkSpaceKB column o
 
 TxnCreateTime
 
-
-
 </td>
 <td valign="top">
 
 The time the transaction began. All data lake Relational Engine transactions begin implicitly as soon as an active connection is established or when the previous transaction commits or rolls back.
-
-
 
 </td>
 </tr>
@@ -282,14 +225,10 @@ The time the transaction began. All data lake Relational Engine transactions beg
 
 CursorCount
 
-
-
 </td>
 <td valign="top">
 
 The number of open data lake Relational Engine cursors that reference this transaction control block. If the transaction is ACTIVE, it indicates the number of open cursors created within the transaction. If the transaction is COMMITTED, it indicates the number of hold cursors that reference a database version owned by this transaction control block.
-
-
 
 </td>
 </tr>
@@ -298,14 +237,10 @@ The number of open data lake Relational Engine cursors that reference this trans
 
 SpCount
 
-
-
 </td>
 <td valign="top">
 
 The number of savepoint structures that exist within the transaction control block. Savepoints may be created and released implicitly. Therefore, this number doesn't indicate the number of user-created savepoints within the transaction.
-
-
 
 </td>
 </tr>
@@ -314,14 +249,10 @@ The number of savepoint structures that exist within the transaction control blo
 
 SpNumber
 
-
-
 </td>
 <td valign="top">
 
 The active savepoint number of the transaction. This is an implementation detail and might not reflect a user-created savepoint.
-
-
 
 </td>
 </tr>
@@ -330,14 +261,10 @@ The active savepoint number of the transaction. This is an implementation detail
 
 MPXServerName
 
-
-
 </td>
 <td valign="top">
 
 Indicates if an active transaction is from an internode communication \(INC\) connection. If from INC connection, the value is the name of the node where the transaction originates. NULL if not from an INC connection. Always NULL if the transaction isn't active.
-
-
 
 </td>
 </tr>
@@ -346,14 +273,10 @@ Indicates if an active transaction is from an internode communication \(INC\) co
 
 GlobalTxnID
 
-
-
 </td>
 <td valign="top">
 
 The global transaction ID associated with the current transaction, 0 \(zero\) if none.
-
-
 
 </td>
 </tr>
@@ -362,14 +285,10 @@ The global transaction ID associated with the current transaction, 0 \(zero\) if
 
 VersioningType
 
-
-
 </td>
 <td valign="top">
 
 The snapshot versioning type of the transaction; table-level is the default.
-
-
 
 </td>
 </tr>
@@ -378,14 +297,10 @@ The snapshot versioning type of the transaction; table-level is the default.
 
 Blocking
 
-
-
 </td>
 <td valign="top">
 
 Indicates if connection blocking is enabled \(True\) or disabled \(False\). You set connection blocking using the `BLOCKING` database option. If true, the transaction blocks, meaning it waits for a conflicting lock to release before it attempts to retry the lock request.
-
-
 
 </td>
 </tr>
@@ -394,14 +309,10 @@ Indicates if connection blocking is enabled \(True\) or disabled \(False\). You 
 
 BlockingTimeout
 
-
-
 </td>
 <td valign="top">
 
 Indicates the time, in milliseconds, a transaction waits for a locking conflict to clear. You set the timeout threshold using the `BLOCKING_TIMEOUT` database option. A value of 0 \(default\) indicates that the transaction waits indefinitely.
-
-
 
 </td>
 </tr>
@@ -426,7 +337,10 @@ sp\_iqtransaction output doesn't include connections without transactions in pro
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure, along with the MONITOR system privilege.
+Requires the following:
+
+-   EXECUTE object-level privilege on the procedures sp\_iqtransaction and sp\_iqgetmpxservername
+-   MONITOR system privilege
 
 
 
@@ -438,7 +352,7 @@ None
 
 <a name="loioa5bb670c84f21015b392b24dcf28be14__iq_refbb_1819"/>
 
-## Example
+## Examples
 
 The following shows sample sp\_iqtransaction output:
 
@@ -470,5 +384,5 @@ MPXServerName  GlobalTxnID   VersioningType  Blocking  BlockingTimeout
 
 [sp\_iqstatus Procedure for Data Lake Relational Engine](sp-iqstatus-procedure-for-data-lake-relational-engine-a5b8569.md "Displays a variety of data lake Relational Engine status information about the current database.")
 
-[sp\_iqversionuse Procedure for Data Lake Relational Engine](sp-iqversionuse-procedure-for-data-lake-relational-engine-a5bd6f9.md "Displays version usage for the IQ main store.")
+[sp\_iqversionuse Procedure for Data Lake Relational Engine](sp-iqversionuse-procedure-for-data-lake-relational-engine-a5bd6f9.md "Displays version usage for the data lake Relational Engine main store.")
 

@@ -6,10 +6,13 @@ Controls the amount of time \(in seconds\) to wait before a failed refresh reque
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio054a74ba291840e7bb01d3bc9588f1a2__section_nnn_jnr_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Controls the amount of time \(in seconds\) to wait before a failed refresh reque
 ## Syntax
 
 ```
-MATERIALIZED_VIEW_AUTO_REFRESH_RETRY_INTERVAL = <value>
+MATERIALIZED_VIEW_AUTO_REFRESH_RETRY_INTERVAL = <value>;
 ```
 
 
@@ -64,28 +67,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -94,28 +89,20 @@ For Other Users
 
 Allowed to set permanently?
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -124,28 +111,20 @@ No
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -154,5 +133,5 @@ No
 **Related Information**  
 
 
-[MATERIALIZED_VIEW_AUTO_REFRESH_RETRY_INTERVAL Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/01b1d2db6b4441a2a33b49e83e17187e.html "Controls the amount of time (in seconds) to wait before a failed refresh request is requeued by the materialized view auto refresh manager.") :arrow_upper_right:
+[MATERIALIZED_VIEW_AUTO_REFRESH_RETRY_INTERVAL Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/01b1d2db6b4441a2a33b49e83e17187e.html "Controls the amount of time (in seconds) to wait before a failed refresh request is requeued by the materialized view auto refresh manager.") :arrow_upper_right:
 

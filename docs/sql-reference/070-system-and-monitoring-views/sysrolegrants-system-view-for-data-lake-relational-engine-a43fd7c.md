@@ -6,10 +6,13 @@ The SYSROLEGRANTS system view is the same as the SYSROLEGRANT system view but in
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa43fd7c284f21015a2949dd1bb7ef367__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 <table>
@@ -18,21 +21,15 @@ The SYSROLEGRANTS system view is the same as the SYSROLEGRANT system view but in
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -41,21 +38,15 @@ Description
 
 grant\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 A unique identifier for each grant statement issued.
-
-
 
 </td>
 </tr>
@@ -64,21 +55,15 @@ A unique identifier for each grant statement issued.
 
 role\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The unique identifier for the role granted to a user \(as defined in the `ISYSUSER` table\).
-
-
 
 </td>
 </tr>
@@ -87,21 +72,15 @@ The unique identifier for the role granted to a user \(as defined in the `ISYSUS
 
 role\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the role corresponding to the role\_id value.
-
-
 
 </td>
 </tr>
@@ -110,21 +89,15 @@ The name of the role corresponding to the role\_id value.
 
 grantee
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The unique identifier for the user granted the role.
-
-
 
 </td>
 </tr>
@@ -133,21 +106,15 @@ The unique identifier for the user granted the role.
 
 grantee\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the grantee corresponding to the grantee value.
-
-
 
 </td>
 </tr>
@@ -156,14 +123,10 @@ The name of the grantee corresponding to the grantee value.
 
 grant\_type
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
-
-
 
 </td>
 <td valign="top">
@@ -185,14 +148,10 @@ Identifies how the role and its underlying privileges were granted. Values:
 
 grant\_scope
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
-
-
 
 </td>
 <td valign="top">
@@ -215,21 +174,15 @@ Defines the range to which the grant applies. Values include:
 
 grantor
 
-
-
 </td>
 <td valign="top">
 
 CHAR \(128\)
 
-
-
 </td>
 <td valign="top">
 
 The unique identifier of the grantor of the role.
-
-
 
 </td>
 </tr>

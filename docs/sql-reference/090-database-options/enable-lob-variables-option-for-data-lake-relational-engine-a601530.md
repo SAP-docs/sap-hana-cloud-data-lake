@@ -6,10 +6,13 @@ Controls the data type conversion of large object variables.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa601530984f21015b564e47a01f5fe91__section_ipl_jgr_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Controls the data type conversion of large object variables.
 ## Syntax
 
 ```
-ENABLE_LOB_VARIABLES = { ON | OFF }
+ENABLE_LOB_VARIABLES = { ON | OFF };
 ```
 
 
@@ -60,28 +63,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -90,28 +85,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -120,28 +107,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -168,7 +147,7 @@ When ENABLE\_LOB\_VARIABLES is ON, large object variables of any size retain the
 Retain the data type and size of large object variables greater than 32 KB:
 
 ```
-SET TEMPORARY OPTION ENABLE_LOB_VARIABLES = ON
+SET TEMPORARY OPTION ENABLE_LOB_VARIABLES = ON;
 ```
 
 **Related Information**  

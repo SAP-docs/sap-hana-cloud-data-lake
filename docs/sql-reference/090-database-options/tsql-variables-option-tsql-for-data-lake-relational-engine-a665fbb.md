@@ -6,10 +6,13 @@ Controls whether the @ sign can be used as a prefix for Embedded SQL host variab
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa665fbbf84f21015b3499860ee45f815__section_yck_gtr_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Controls whether the @ sign can be used as a prefix for Embedded SQL host variab
 ## Syntax
 
 ```
-TSQL_VARIABLES = { ON | OFF }
+TSQL_VARIABLES = { ON | OFF };
 ```
 
 
@@ -60,28 +63,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -90,28 +85,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -120,28 +107,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>

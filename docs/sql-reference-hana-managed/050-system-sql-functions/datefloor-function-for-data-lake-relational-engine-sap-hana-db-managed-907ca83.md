@@ -7,7 +7,7 @@ Calculates a new date, time, or datetime value by reducing the provided value do
 
 
 ```
-DATEFLOOR ( <date-part>, <datetime-expression> [, <multiple-expression> ] )
+DATEFLOOR ( <date-part>, <datetime-expression> [, <multiple-expression> ] );
 ```
 
 
@@ -96,7 +96,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     <tr>
     <td valign="top">
     
-        -   1
+    -   1
     -   2
     -   4
     -   5
@@ -112,7 +112,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   40
+    -   40
     -   50
     -   64
     -   80
@@ -128,7 +128,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   400
+    -   400
     -   500
     -   625
     -   800
@@ -144,7 +144,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   4000
+    -   4000
     -   5000
     -   6250
     -   8000
@@ -160,7 +160,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   40000
+    -   40000
     -   50000
     -   62500
     -   100000
@@ -201,33 +201,33 @@ If data lake Relational Engine rounds to a multiple of the week date part, the d
 
     ```
     SELECT DATEFLOOR( MINUTE, 'August 13, 2009 10:35:22.123AM')
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 -   This statement returns the value August 13, 2009 10:32:35.456600 AM:
 
     ```
     SELECT DATEFLOOR( US, 'August 13, 2009, 10:32:35.456789AM', 200 )
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 -   This statement returns the value August 13, 2009 10:32:35.400000 AM:
 
     ```
     SELECT DATEFLOOR( US, 'August 13, 2009, 10:32:35.456789AM', 200000 )
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 -   This statement returns the value August 13, 2009 10:32:35.456789 AM:
 
     ```
     SELECT DATEFLOOR( US, 'August 13, 2009, 10:32:35.456789AM')
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[DATEFLOOR Function [Date and Time] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a5462b6184f21015a0c4efd06d244945.html "Calculates a new date, time, or datetime value by reducing the provided value down to the nearest lower value of the specified multiple with the specified granularity.") :arrow_upper_right:
+[DATEFLOOR Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5462b6184f21015a0c4efd06d244945.html "Calculates a new date, time, or datetime value by reducing the provided value down to the nearest lower value of the specified multiple with the specified granularity.") :arrow_upper_right:
 

@@ -6,22 +6,25 @@ Returns partitions and dbspace assignments of database objects and subobjects.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5b0b72884f210158266fa85e5483c9c__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqobjectinfo [ <owner_name> ]  [ , <object_name> ] [ , <object-type> ] 
+sp_iqobjectinfo [ <owner_name> ]  [ , <object_name> ] [ , <object-type> ]; 
 ```
 
 
 
 <a name="loioa5b0b72884f210158266fa85e5483c9c__iq_refbb_1681"/>
 
-## Parameter
+## Parameters
 
 
 <dl>
@@ -65,7 +68,7 @@ sp_iqobjectinfo [ <owner_name> ]  [ , <object_name> ] [ , <object-type
 
 <a name="loioa5b0b72884f210158266fa85e5483c9c__section_iwy_zlg_nbb"/>
 
-## Returns
+## Result Set
 
 Returns all the partitions and the dbspace assignments of a particular or all database objects \(of type table\) and its subobjects. The subobjects are columns, indexes, primary key, unique constraints, and foreign keys.
 
@@ -76,14 +79,10 @@ Returns all the partitions and the dbspace assignments of a particular or all da
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -92,14 +91,10 @@ Description
 
 owner
 
-
-
 </td>
 <td valign="top">
 
 Name of the owner of the object.
-
-
 
 </td>
 </tr>
@@ -108,14 +103,10 @@ Name of the owner of the object.
 
 object\_name
 
-
-
 </td>
 <td valign="top">
 
 Name of the object \(of type table\) located on the dbspace.
-
-
 
 </td>
 </tr>
@@ -124,14 +115,10 @@ Name of the object \(of type table\) located on the dbspace.
 
 sub\_object\_name
 
-
-
 </td>
 <td valign="top">
 
 Name of the object located on the dbspace.
-
-
 
 </td>
 </tr>
@@ -140,14 +127,10 @@ Name of the object located on the dbspace.
 
 object\_type
 
-
-
 </td>
 <td valign="top">
 
 Type of the object \(column, index, primary key, unique constraint, foreign key, partition, or table\).
-
-
 
 </td>
 </tr>
@@ -156,14 +139,10 @@ Type of the object \(column, index, primary key, unique constraint, foreign key,
 
 object\_id
 
-
-
 </td>
 <td valign="top">
 
 Global object ID of the object.
-
-
 
 </td>
 </tr>
@@ -172,14 +151,10 @@ Global object ID of the object.
 
 id
 
-
-
 </td>
 <td valign="top">
 
 Table ID of the object.
-
-
 
 </td>
 </tr>
@@ -188,14 +163,10 @@ Table ID of the object.
 
 dbspace\_name
 
-
-
 </td>
 <td valign="top">
 
 Name of the dbspace on which the object resides. The string "\[multiple\]" appears in a special meta row for partitioned objects. The \[multiple\] row indicates that multiple rows follow in the output to describe the table or column.
-
-
 
 </td>
 </tr>
@@ -204,14 +175,10 @@ Name of the dbspace on which the object resides. The string "\[multiple\]" appea
 
 partition\_name
 
-
-
 </td>
 <td valign="top">
 
 Name of the partition for the given object.
-
-
 
 </td>
 </tr>
@@ -276,7 +243,7 @@ None
 -   The following example displays information about partitions and dbspace assignments of a specific database object and subobjects owned by a specific user:
 
     ```
-    sp_iqobjectinfo GROUPO,Departments
+    sp_iqobjectinfo GROUPO,Departments;
     ```
 
     ```
@@ -300,7 +267,7 @@ None
 -   The following example displays information about partitions and dbspace assignments of a specific database object and subobjects owned by a specific user for *<object-type\>* table:
 
     ```
-    sp_iqobjectinfo HDLADMIN,sale,'table'
+    sp_iqobjectinfo HDLADMIN,sale,'table';
     ```
 
 
@@ -309,179 +276,131 @@ None
     <th valign="top">
 
     owner
-
-
     
     </th>
     <th valign="top">
 
     object\_name
-
-
     
     </th>
     <th valign="top">
 
     sub\_object\_name
-
-
     
     </th>
     <th valign="top">
 
     object\_type
-
-
     
     </th>
     </tr>
     <tr>
     <td valign="top">
     
-        HDLADMIN
-
-
+    HDLADMIN
     
     </td>
     <td valign="top">
     
-        sale
-
-
+    sale
     
     </td>
     <td valign="top">
     
-        \(NULL\)
-
-
+    \(NULL\)
     
     </td>
     <td valign="top">
     
-        table
-
-
+    table
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-        HDLADMIN
-
-
+    HDLADMIN
     
     </td>
     <td valign="top">
     
-        sale
-
-
+    sale
     
     </td>
     <td valign="top">
     
-        prod\_id
-
-
+    prod\_id
     
     </td>
     <td valign="top">
     
-        column
-
-
+    column
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-        HDLADMIN
-
-
+    HDLADMIN
     
     </td>
     <td valign="top">
     
-        sale
-
-
+    sale
     
     </td>
     <td valign="top">
     
-        month\_num
-
-
+    month\_num
     
     </td>
     <td valign="top">
     
-        column
-
-
+    column
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-        HDLADMIN
-
-
+    HDLADMIN
     
     </td>
     <td valign="top">
     
-        sale
-
-
+    sale
     
     </td>
     <td valign="top">
     
-        rep\_id
-
-
+    rep\_id
     
     </td>
     <td valign="top">
     
-        column
-
-
+    column
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-        HDLADMIN
-
-
+    HDLADMIN
     
     </td>
     <td valign="top">
     
-        sale
-
-
+    sale
     
     </td>
     <td valign="top">
     
-        sales
-
-
+    sales
     
     </td>
     <td valign="top">
     
-        column
-
-
+    column
     
     </td>
     </tr>
@@ -493,179 +412,131 @@ None
     <th valign="top">
 
     object\_id
-
-
     
     </th>
     <th valign="top">
 
     id
-
-
     
     </th>
     <th valign="top">
 
     dbspace\_name
-
-
     
     </th>
     <th valign="top">
 
     partition\_name
-
-
     
     </th>
     </tr>
     <tr>
     <td valign="top">
     
-        3698
-
-
+    3698
     
     </td>
     <td valign="top">
     
-        742
-
-
+    742
     
     </td>
     <td valign="top">
     
-        iq\_main
-
-
+    iq\_main
     
     </td>
     <td valign="top">
     
-        \(NULL\)
-
-
+    \(NULL\)
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-        3699
-
-
+    3699
     
     </td>
     <td valign="top">
     
-        742
-
-
+    742
     
     </td>
     <td valign="top">
     
-        iq\_main
-
-
+    iq\_main
     
     </td>
     <td valign="top">
     
-        \(NULL\)
-
-
+    \(NULL\)
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-        3700
-
-
+    3700
     
     </td>
     <td valign="top">
     
-        742
-
-
+    742
     
     </td>
     <td valign="top">
     
-        iq\_main
-
-
+    iq\_main
     
     </td>
     <td valign="top">
     
-        \(NULL\)
-
-
+    \(NULL\)
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-        3701
-
-
+    3701
     
     </td>
     <td valign="top">
     
-        742
-
-
+    742
     
     </td>
     <td valign="top">
     
-        iq\_main
-
-
+    iq\_main
     
     </td>
     <td valign="top">
     
-        \(NULL\)
-
-
+    \(NULL\)
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-        3702
-
-
+    3702
     
     </td>
     <td valign="top">
     
-        742
-
-
+    742
     
     </td>
     <td valign="top">
     
-        iq\_main
-
-
+    iq\_main
     
     </td>
     <td valign="top">
     
-        \(NULL\)
-
-
+    \(NULL\)
     
     </td>
     </tr>

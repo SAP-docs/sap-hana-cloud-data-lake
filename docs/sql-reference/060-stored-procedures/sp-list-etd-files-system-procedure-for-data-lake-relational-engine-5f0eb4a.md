@@ -6,15 +6,18 @@ Lists the event trace data \(ETD\) files logged to the file container by databas
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio5f0eb4a9f1734b6d9ef6661867578898__section_p4t_vqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_list_etd_files([ <file_name_pattern > ])
+sp_list_etd_files( [ <file_name_pattern > ] );
 ```
 
 
@@ -27,7 +30,7 @@ sp_list_etd_files([ <file_name_pattern > ])
 <dl>
 <dt><b>
 
- *<file\_name\_pattern\>* 
+*<file\_name\_pattern\>* 
 
 </b></dt>
 <dd>
@@ -45,7 +48,7 @@ If null, then lists all ETD files.
 
 <a name="loio5f0eb4a9f1734b6d9ef6661867578898__sp_list_etd_files_Output1"/>
 
-## Column Definitions for Output
+## Result Set
 
 
 <table>
@@ -54,21 +57,15 @@ If null, then lists all ETD files.
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -77,21 +74,15 @@ Description
 
 file\_name
 
-
-
 </td>
 <td valign="top">
 
 LONG NVARCHAR
 
-
-
 </td>
 <td valign="top">
 
 File name of the ETD file.
-
-
 
 </td>
 </tr>
@@ -100,21 +91,15 @@ File name of the ETD file.
 
 file\_size
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 ETD file size in bytes.
-
-
 
 </td>
 </tr>
@@ -123,21 +108,15 @@ ETD file size in bytes.
 
 modified\_date\_time
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE
 
-
-
 </td>
 <td valign="top">
 
 Time the ETD file was last modified.
-
-
 
 </td>
 </tr>
@@ -178,27 +157,88 @@ None
 
 <a name="loio5f0eb4a9f1734b6d9ef6661867578898__sp_list_etd_files_example1"/>
 
-## Example
+## Examples
 
-Assume you have a SELECT statement listing all ETD files with a file name beginning with the string '`my_session_20201126_`' :
-
-```
-SELECT * FROM dbo.sp_list_etd_files('my_session_20201126_*')
-
+Assume you have a SELECT statement listing all ETD files with a file name beginning with the string '`my_session_20201126_`'. The following statement returns the ETD files for the session:
 
 ```
-
-The example output is:
-
+SELECT * FROM sp_list_etd_files('my_session_20201126_*');
 ```
-my_session_20201126_181818.173_auditdb_eng.etd 635  2020-09-13 18:40:21.000+00:00
-my_session_20201126_184000.000_auditdb_eng.etd 710  2020-11-26 18:50:52.000+00:00
-my_session_20201126_185000.000_auditdb_eng.etd  260 2020-11-26 18:50:52.000+00:00
 
-```
+
+<table>
+<tr>
+<th valign="top">
+
+file\_name
+
+</th>
+<th valign="top">
+
+file\_size
+
+</th>
+<th valign="top">
+
+modified\_date\_time
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+my\_session\_20201126\_181818.173\_auditdb\_eng.etd
+
+</td>
+<td valign="top">
+
+635
+
+</td>
+<td valign="top">
+
+2023-08-13 18:40:21.000+00:00
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+my\_session\_20201126\_184000.000\_auditdb\_eng.etd
+
+</td>
+<td valign="top">
+
+710
+
+</td>
+<td valign="top">
+
+2023-08-26 18:50:52.000+00:00
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+my\_session\_20201126\_185000.000\_auditdb\_eng.etd
+
+</td>
+<td valign="top">
+
+260
+
+</td>
+<td valign="top">
+
+2023-09-26 18:50:52.000+00:00
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 
 
-[sp_list_etd_files System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/0f76c8361cd84a2b8b35f74382b9265f.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
+[sp_list_etd_files System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/0f76c8361cd84a2b8b35f74382b9265f.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
 

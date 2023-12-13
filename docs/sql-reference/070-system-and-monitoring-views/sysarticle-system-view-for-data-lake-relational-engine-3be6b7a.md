@@ -6,10 +6,13 @@ Each row of the SYSARTICLE system view describes an article in a publication. Th
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be6b7a46c5f1014b420d21c4b0f3634__section_s4s_qcq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row of the SYSARTICLE system view describes an article in a publication. Th
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 publication\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The publication of which the article is a part.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The publication of which the article is a part.
 
 table\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Each article consists of columns and rows from a single table. This column contains the table ID for this table.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ Each article consists of columns and rows from a single table. This column conta
 
 where\_expr
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 For articles that contain a subset of rows defined by a WHERE clause, this column contains the search condition.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ For articles that contain a subset of rows defined by a WHERE clause, this colum
 
 subscribe\_by\_expr
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 For articles that contain a subset of rows defined by a SUBSCRIBE BY expression, this column contains the expression.
-
-
 
 </td>
 </tr>
@@ -135,21 +108,15 @@ For articles that contain a subset of rows defined by a SUBSCRIBE BY expression,
 
 query
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates information about the article type to the database server.
-
-
 
 </td>
 </tr>
@@ -158,21 +125,15 @@ Indicates information about the article type to the database server.
 
 alias
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(256\)
 
-
-
 </td>
 <td valign="top">
 
 The alias for the article.
-
-
 
 </td>
 </tr>
@@ -181,21 +142,15 @@ The alias for the article.
 
 schema\_change\_active
 
-
-
 </td>
 <td valign="top">
 
 BIT
 
-
-
 </td>
 <td valign="top">
 
 1 if the table and publication are part of a synchronization schema change.
-
-
 
 </td>
 </tr>

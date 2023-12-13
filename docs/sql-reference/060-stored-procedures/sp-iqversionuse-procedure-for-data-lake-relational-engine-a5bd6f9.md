@@ -2,26 +2,37 @@
 
 # sp\_iqversionuse Procedure for Data Lake Relational Engine
 
-Displays version usage for the IQ main store.
+Displays version usage for the data lake Relational Engine main store.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5bd6f9384f21015a6c5a6fa5a764404__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqversionuse
+sp_iqversionuse;
 ```
+
+
+
+<a name="loioa5bd6f9384f21015a6c5a6fa5a764404__section_tpm_xxc_yyb"/>
+
+## Parameters
+
+None
 
 
 
 <a name="loioa5bd6f9384f21015a6c5a6fa5a764404__section_e5v_b4m_nbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -30,14 +41,10 @@ sp_iqversionuse
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,14 +53,10 @@ Description
 
 VersionID
 
-
-
 </td>
 <td valign="top">
 
-In data lake Relational Engine databases, the VersionID is displayed as zero. For the coordinator node, the VersionID is the same as the TxnID of the active transaction and VersionID is the same as the CmtID of a committed transaction. In worker nodes, the VersionID is the CmtID of the transaction that created the database version on the coordinator. It is used internally by the data lake Relational Engine in-memory catalog and the data lake Relational Engine transaction manager to uniquely identify a database version to all nodes within a database.
-
-
+In data lake Relational Engine, the VersionID is displayed as zero. For the coordinator node, the VersionID is the same as the TxnID of the active transaction and VersionID is the same as the CmtID of a committed transaction. In worker nodes, the VersionID is the CmtID of the transaction that created the database version on the coordinator. It is used internally by the data lake Relational Engine in-memory catalog and the data lake Relational Engine transaction manager to uniquely identify a database version to all nodes within a database.
 
 </td>
 </tr>
@@ -62,14 +65,10 @@ In data lake Relational Engine databases, the VersionID is displayed as zero. Fo
 
 Server
 
-
-
 </td>
 <td valign="top">
 
 The node to which users of this version are connected.
-
-
 
 </td>
 </tr>
@@ -78,14 +77,10 @@ The node to which users of this version are connected.
 
 IQConnID
 
-
-
 </td>
 <td valign="top">
 
 The connection ID using this version.
-
-
 
 </td>
 </tr>
@@ -94,14 +89,10 @@ The connection ID using this version.
 
 WasReported
 
-
-
 </td>
 <td valign="top">
 
 Indicates whether the node has received usage information for this version.
-
-
 
 </td>
 </tr>
@@ -110,14 +101,10 @@ Indicates whether the node has received usage information for this version.
 
 MinKBRelease
 
-
-
 </td>
 <td valign="top">
 
 The minimum amount of space returned once this version is no longer in use.
-
-
 
 </td>
 </tr>
@@ -126,14 +113,10 @@ The minimum amount of space returned once this version is no longer in use.
 
 MaxKBRelease
 
-
-
 </td>
 <td valign="top">
 
 The maximum amount of space returned once this version is no longer in use.
-
-
 
 </td>
 </tr>
@@ -175,441 +158,209 @@ None
 
 <a name="loioa5bd6f9384f21015a6c5a6fa5a764404__iq_refbb_1839"/>
 
-## Example
+## Examples
 
--   The following displays sample output from the sp\_iqversionuse system procedure:
+The following statement displays the version usage for the data lake Relational Engine instance:
 
-    ```
-    VersionID Server        IQConnID WasReported 
-              ========= ======        ======== =========== 
-                      0 ab2ab_iqdemo         9           0 
-              
-              MinKBRelease  MaxKBRelease
-              ============  ============
-                         0             0
-    ```
+```
+CALL sp_iqversionuse;
+```
 
 
-The oldest version 42648 is in use by connection 108 on the coordinator \(*<mpxw\>*\). Committing or rolling back the transaction on connection 108 releases 7.9 MB of space. Version 42686 is in use by worker node \(*<mpxq\>*\) according to output from the coordinator. Using the worker node output, the actual connection is connection 31. The actual amount of space returned from releasing version 42686 depends on whether 42648 is released first.
+<table>
+<tr>
+<th valign="top">
 
-WasReported is 0 for versions 42715 and 42728 on the coordinator because these are new versions that haven't yet been replicated. Since version 42728 doesn't appear on the worker node output, it hasn't yet been used by the worker node.
+VersionID
 
--   Output returned when sp\_iqversionuse executes on the coordinator mpxw:
+</th>
+<th valign="top">
 
-    ```
-    call dbo.sp_iqversionuse
-    ```
+Server
 
+</th>
+<th valign="top">
 
-    <table>
-    <tr>
-    <th valign="top">
+IQConnID
 
-    VersionID
+</th>
+<th valign="top">
 
+WasReported
 
-    
-    </th>
-    <th valign="top">
+</th>
+<th valign="top">
 
-    Server
+MinKBRelease
 
+</th>
+<th valign="top">
 
-    
-    </th>
-    <th valign="top">
+MaxKBRelease
 
-    IQConn
+</th>
+</tr>
+<tr>
+<td valign="top">
 
+5969223
 
-    
-    </th>
-    <th valign="top">
+</td>
+<td valign="top">
 
-    WasReported
+mpx-writer-0-0
 
+</td>
+<td valign="top">
 
-    
-    </th>
-    <th valign="top">
+311508
 
-    MinKBRelease
+</td>
+<td valign="top">
 
+1
 
-    
-    </th>
-    <th valign="top">
+</td>
+<td valign="top">
 
-    MaxKBRelease
+0
 
+</td>
+<td valign="top">
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        42648
+0
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        'mpxw'
+5969223
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        108
+mpx-writer-0-0
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        1
+311510
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        7920
+1
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        7920
+0
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        42686
+0
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        'mpxq'
+5969223
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        0
+mpx-writer-0-0
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        1
+311514
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        7920
+1
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        304
+0
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        42702
+0
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        'mpxq'
+5969223
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        0
+mpx-writer-0-0
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        1
+311516
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        0
+1
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        688
+0
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        42715
+0
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        ‘mpxq'
+5969605
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        0
+mpx-writer-0-0
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        0
+311704
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        0
+0
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        688
+0
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        42728
+0
 
-
-    
-    </td>
-    <td valign="top">
-    
-        'mpxq'
-
-
-    
-    </td>
-    <td valign="top">
-    
-        0
-
-
-    
-    </td>
-    <td valign="top">
-    
-        0
-
-
-    
-    </td>
-    <td valign="top">
-    
-        0
-
-
-    
-    </td>
-    <td valign="top">
-    
-        688
-
-
-    
-    </td>
-    </tr>
-    </table>
-    
--   Output returned when sp\_iqversionuse executes on the worker node mpxq:
-
-    ```
-    call dbo.sp_iqversionuse
-    ```
-
-
-    <table>
-    <tr>
-    <th valign="top">
-
-    VersionID
-
-
-    
-    </th>
-    <th valign="top">
-
-    Server
-
-
-    
-    </th>
-    <th valign="top">
-
-    IQConn
-
-
-    
-    </th>
-    <th valign="top">
-
-    WasReported
-
-
-    
-    </th>
-    <th valign="top">
-
-    MinKBRelease
-
-
-    
-    </th>
-    <th valign="top">
-
-    MaxKBRelease
-
-
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        42686
-
-
-    
-    </td>
-    <td valign="top">
-    
-        'mpxq'
-
-
-    
-    </td>
-    <td valign="top">
-    
-        31
-
-
-    
-    </td>
-    <td valign="top">
-    
-        1
-
-
-    
-    </td>
-    <td valign="top">
-    
-        0
-
-
-    
-    </td>
-    <td valign="top">
-    
-        0
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        42715
-
-
-    
-    </td>
-    <td valign="top">
-    
-        'mpxq'
-
-
-    
-    </td>
-    <td valign="top">
-    
-        00
-
-
-    
-    </td>
-    <td valign="top">
-    
-        1
-
-
-    
-    </td>
-    <td valign="top">
-    
-        0
-
-
-    
-    </td>
-    <td valign="top">
-    
-        0
-
-
-    
-    </td>
-    </tr>
-    </table>
-    
+</td>
+</tr>
+</table>
 
 **Related Information**  
 

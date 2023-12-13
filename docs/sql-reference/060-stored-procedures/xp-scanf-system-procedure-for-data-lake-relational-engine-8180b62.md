@@ -6,10 +6,13 @@ Extracts substrings from an input string using a format string.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio8180b6266ce210149e59fb0a2855a1a2__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ xp_scanf(
 <input_buffer>
 , <format>
 [ , <param1> [, <param2> ... ] ]
-)
+);
 ```
 
 
@@ -31,7 +34,7 @@ xp_scanf(
 <dl>
 <dt><b>
 
- *<input\_buffer\>* 
+*<input\_buffer\>* 
 
 </b></dt>
 <dd>
@@ -42,7 +45,7 @@ Use this CHAR\(254\) parameter to specify the input string.
 
 </dd><dt><b>
 
- *<format\>* 
+*<format\>* 
 
 </b></dt>
 <dd>
@@ -53,7 +56,7 @@ Use this CHAR\(254\) parameter to specify the format of the input string, using 
 
 </dd><dt><b>
 
- *<param1, param2, ...\>* 
+*<param1, param2, ...\>* 
 
 </b></dt>
 <dd>

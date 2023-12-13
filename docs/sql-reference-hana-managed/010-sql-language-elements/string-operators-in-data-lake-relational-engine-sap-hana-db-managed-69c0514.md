@@ -13,14 +13,10 @@ These string operators are available in data lake Relational Engine.
 
 Operator
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -29,14 +25,10 @@ Description
 
 *<expression\>* || *<expression\>*
 
-
-
 </td>
 <td valign="top">
 
 String concatenation \(two vertical bars\). If either string is the NULL value, then the string is treated as the empty string for concatenation.
-
-
 
 </td>
 </tr>
@@ -45,14 +37,10 @@ String concatenation \(two vertical bars\). If either string is the NULL value, 
 
 *<expression\>* + *<expression\>*
 
-
-
 </td>
 <td valign="top">
 
 Alternative string concatenation. When using the + concatenation operator, you must ensure the operands are explicitly set to character data types rather than relying on implicit data conversion.
-
-
 
 </td>
 </tr>

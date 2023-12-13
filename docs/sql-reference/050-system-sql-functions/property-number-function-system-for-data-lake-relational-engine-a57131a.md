@@ -7,7 +7,7 @@ Returns the property number of the property with the supplied property name.
 
 
 ```
-PROPERTY_NUMBER ( <property-name> )
+PROPERTY_NUMBER ( <property-name> );
 ```
 
 
@@ -34,7 +34,7 @@ A property name.
 
 
 
-## Returns
+## Result Set
 
 INT
 
@@ -65,7 +65,7 @@ INT
 The following statement returns an integer value:
 
 ```
-SELECT PROPERTY_NUMBER( 'PAGESIZE' ) FROM iq_dummy
+SELECT PROPERTY_NUMBER( 'PAGESIZE' ) FROM iq_dummy;
 ```
 
 The actual value changes from version to version.

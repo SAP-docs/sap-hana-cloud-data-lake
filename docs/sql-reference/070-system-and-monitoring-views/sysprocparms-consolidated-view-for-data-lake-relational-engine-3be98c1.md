@@ -6,10 +6,13 @@ Each row in the SYSPROCPARMS view describes a parameter to a procedure in the da
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be98c1f6c5f10149dafb6e806f30259__section_vwg_vhq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -29,11 +32,11 @@ ALTER VIEW "SYS"."SYSPROCPARMS"( creator,
       join SYS.ISYSPROCEDURE as p on p.proc_id = pp.proc_id
       join SYS.ISYSUSER as up on up.user_id = p.creator
       join SYS.ISYSDOMAIN as dom on dom.domain_id = pp.domain_id
-      left outer join SYS.ISYSUSERTYPE as ut on ut.type_id = pp.user_type
+      left outer join SYS.ISYSUSERTYPE as ut on ut.type_id = pp.user_type;
 ```
 
 **Related Information**  
 
 
-[SYSPROCPARMS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/2eaba61c7575405ab7b5fbee219298ad.html "Each row in the SYSPROCPARMS view describes a parameter to a procedure in the database.") :arrow_upper_right:
+[SYSPROCPARMS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/2eaba61c7575405ab7b5fbee219298ad.html "Each row in the SYSPROCPARMS view describes a parameter to a procedure in the database.") :arrow_upper_right:
 

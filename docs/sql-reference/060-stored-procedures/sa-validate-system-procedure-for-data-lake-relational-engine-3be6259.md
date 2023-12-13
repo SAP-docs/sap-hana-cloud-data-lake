@@ -6,10 +6,13 @@ Validates all or parts of a database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be625916c5f1014a0f0d4c528aa136a__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -19,7 +22,7 @@ sa_validate(
 [, <owner_name> ] ]
 [, <check_type> ] ]
 [, <isolation_type> ] ]
-)
+);
 ```
 
 
@@ -30,7 +33,7 @@ sa_validate(
 <dl>
 <dt><b>
 
- *<tbl\_name\>* 
+*<tbl\_name\>* 
 
 </b></dt>
 <dd>
@@ -41,7 +44,7 @@ Use this optional CHAR\(128\) parameter to specify the name of a table or materi
 
 </dd><dt><b>
 
- *<owner\_name\>* 
+*<owner\_name\>* 
 
 </b></dt>
 <dd>
@@ -52,7 +55,7 @@ Use this optional CHAR\(128\) parameter to specify an owner. When specified by i
 
 </dd><dt><b>
 
- *<check\_type\>* 
+*<check\_type\>* 
 
 </b></dt>
 <dd>
@@ -90,7 +93,7 @@ If this parameter is NULL \(the default\), each table is checked using a VALIDAT
 
 </dd><dt><b>
 
- *<isolation\_type\>* 
+*<isolation\_type\>* 
 
 </b></dt>
 <dd>
@@ -140,21 +143,15 @@ Ensures that only committed data is checked by applying snapshot isolation. Tran
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -163,21 +160,15 @@ Description
 
 Messages
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 If validation succeeds without error, then the column contains `No error detected`.
-
-
 
 </td>
 </tr>
@@ -186,21 +177,15 @@ If validation succeeds without error, then the column contains `No error detecte
 
 IsValid
 
-
-
 </td>
 <td valign="top">
 
 BIT
 
-
-
 </td>
 <td valign="top">
 
 1 if valid; 0 if validation errors are detected
-
-
 
 </td>
 </tr>
@@ -209,14 +194,10 @@ BIT
 
 ObjectName
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(261\)
-
-
 
 </td>
 <td valign="top">
@@ -245,14 +226,10 @@ CHAR\(261\)
 
 Argument specified
 
-
-
 </th>
 <th valign="top">
 
 Type of validation
-
-
 
 </th>
 </tr>
@@ -261,94 +238,70 @@ Type of validation
 
 None
 
-
-
 </td>
 <td valign="top">
 
 All tables, materialized views, and indexes in the database are validated \(equivalent to a VALIDATE TABLE on every table\). The database itself is also validated \(equivalent to a VALIDATE DATABASE statement\), including checksum validation.
-
-
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- *<tbl\_name\>* 
-
-
+*<tbl\_name\>* 
 
 </td>
 <td valign="top">
 
 If *<owner\_name\>* is NULL, then all tables matching *<tbl\_name\>*, their materialized views, and their indexes are validated.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- *<owner\_name\>* 
-
-
+*<owner\_name\>* 
 
 </td>
 <td valign="top">
 
 All tables, materialized views, and indexes owned by the specified user are validated.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- *<tbl\_name\>* and *<owner\_name\>* 
-
-
+*<tbl\_name\>* and *<owner\_name\>* 
 
 </td>
 <td valign="top">
 
 The specified table or materialized view owned by the specified user, and all of its indexes, are validated.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- *<check\_type\>* 
-
-
+*<check\_type\>* 
 
 </td>
 <td valign="top">
 
 The specified table\(s\), materialized view\(s\), or index\(es\) is validated using WITH EXPRESS CHECK. The database itself is also validated, including checksum validation.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- *<isolation\_type\>* 
-
-
+*<isolation\_type\>* 
 
 </td>
 <td valign="top">
 
 The specified table\(s\), materialized view\(s\), or index\(es\) is validated. Tables either have exclusive data locks applied to them, or only committed data is evaluated. The database itself is also validated, including checksum validation.
-
-
 
 </td>
 </tr>
@@ -380,9 +333,95 @@ Automatic commit for both *<isolation\_type\>* options.
 
 
 
-The following statement performs a validation of tables and materialized views owned by user pjones:
+## Examples
+
+This example uses the sa\_validate system procedure to validate the database
 
 ```
-CALL sa_validate( owner_name = 'pjones' );
+CALL sa_validate( );
+
 ```
+
+
+<table>
+<tr>
+<th valign="top">
+
+Messages
+
+</th>
+<th valign="top">
+
+IsValid
+
+</th>
+<th valign="top">
+
+ObjectName
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+No error detected
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+</table>
+
+This example uses the sa\_validate system procedure to validate the tables and materialized views owned by user USER1:
+
+```
+CALL sa_validate('user1');
+
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+Messages
+
+</th>
+<th valign="top">
+
+IsValid
+
+</th>
+<th valign="top">
+
+ObjectName
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+No error detected
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+user1."A1"
+
+</td>
+</tr>
+</table>
 

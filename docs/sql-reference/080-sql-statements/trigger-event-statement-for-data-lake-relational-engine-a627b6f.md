@@ -6,15 +6,18 @@ Triggers a named event. The event may be defined for event triggers or be a sche
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa627b6ff84f210158a35beaf09a1f5de__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-TRIGGER EVENT <event-name> [ ( <parm> = <value>, ... ) ]
+TRIGGER EVENT <event-name> [ ( <parm> = <value>, ... ) ];
 ```
 
 
@@ -35,7 +38,7 @@ When a triggering condition causes an event handler to execute, the database ser
 When you trigger an event, specify the event name. You can list event names by querying the system table `SYSEVENT`. For example:
 
 ```
-SELECT event_id, event_name FROM SYS.SYSEVENT
+SELECT event_id, event_name FROM SYS.SYSEVENT;
 ```
 
 

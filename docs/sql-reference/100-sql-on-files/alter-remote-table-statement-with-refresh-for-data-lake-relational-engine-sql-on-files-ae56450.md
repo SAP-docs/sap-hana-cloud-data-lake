@@ -6,10 +6,12 @@ Alter the refresh mode of a table.
 
 
 
-> ### Restriction:  
-> This topic is limited to SQL on Files use cases.
-> 
-> This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioae5645003caf4d14bcd05ca4d8f3219e__section_fry_b3b_nqb"/>
+
+## Usage
+
+-   This topic is limited to SQL on Files use cases.
+-   This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -143,5 +145,5 @@ ALTER TABLE ExternalSchema1.ExternalTable1 IN FILES_SERVICE
 
 [DROP \(Remote\) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](drop-remote-table-statement-for-data-lake-relational-engine-sql-on-files-f81d073.md "Drop a remote table from a SQL on Files external catalog.")
 
-[ALTER (Remote) TABLE Statement with REFRESH for Data Lake Relational Engine (SAP HANA DB-Managed) [SQL on Files]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ff7b384154d0499594c61f49329dce04.html "Alter the refresh mode of a table.") :arrow_upper_right:
+[ALTER (Remote) TABLE Statement with REFRESH for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ff7b384154d0499594c61f49329dce04.html "Alter the refresh mode of a table.") :arrow_upper_right:
 

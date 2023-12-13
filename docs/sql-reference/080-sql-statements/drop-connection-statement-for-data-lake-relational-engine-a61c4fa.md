@@ -6,15 +6,18 @@ Drops any user connection to the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61c4fa184f21015b43ac105d9d73fe2__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-DROP CONNECTION <connection-id>
+DROP CONNECTION <connection-id>;
 ```
 
 
@@ -40,7 +43,7 @@ DROP CONNECTION <connection-id>
 Obtained using the `CONNECTION_PROPERTY` function to request the connection number. This statement returns the connection ID of the current connection:
 
 ```
-SELECT connection_property( 'number' )
+SELECT connection_property( 'number' );
 ```
 
 
@@ -84,7 +87,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 The following example drops the connection with ID number 4:You cannot drop your current connection; you must first create another connection, then drop your first connection.
 
 ```
-DROP CONNECTION 4
+DROP CONNECTION 4;
 ```
 
 **Related Information**  

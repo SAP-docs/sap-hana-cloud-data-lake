@@ -21,14 +21,10 @@ This table lists the comparison operators available in data lake Relational Engi
 
 Operator
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -37,14 +33,10 @@ Description
 
 `=`
 
-
-
 </td>
 <td valign="top">
 
 Equal to
-
-
 
 </td>
 </tr>
@@ -53,14 +45,10 @@ Equal to
 
 `>`
 
-
-
 </td>
 <td valign="top">
 
 Greater than
-
-
 
 </td>
 </tr>
@@ -69,14 +57,10 @@ Greater than
 
 `<`
 
-
-
 </td>
 <td valign="top">
 
 Less than
-
-
 
 </td>
 </tr>
@@ -85,14 +69,10 @@ Less than
 
 `>=`
 
-
-
 </td>
 <td valign="top">
 
 Greater than or equal to
-
-
 
 </td>
 </tr>
@@ -101,14 +81,10 @@ Greater than or equal to
 
 `<=`
 
-
-
 </td>
 <td valign="top">
 
 Less than or equal to
-
-
 
 </td>
 </tr>
@@ -117,14 +93,10 @@ Less than or equal to
 
 `!=`
 
-
-
 </td>
 <td valign="top">
 
 Not equal to
-
-
 
 </td>
 </tr>
@@ -133,14 +105,10 @@ Not equal to
 
 `<>`
 
-
-
 </td>
 <td valign="top">
 
 Not equal to
-
-
 
 </td>
 </tr>
@@ -149,14 +117,10 @@ Not equal to
 
 `!>`
 
-
-
 </td>
 <td valign="top">
 
 Not greater than
-
-
 
 </td>
 </tr>
@@ -165,14 +129,10 @@ Not greater than
 
 `!<`
 
-
-
 </td>
 <td valign="top">
 
 Not less than
-
-
 
 </td>
 </tr>

@@ -2,26 +2,37 @@
 
 # sp\_iqunusedcolumn Procedure for Data Lake Relational Engine
 
-Reports IQ columns that were not referenced by the workload.
+Reports columns that were not referenced by the workload.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5bbef3f84f21015937df763d796616f__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqunusedcolumn
+sp_iqunusedcolumn;
 ```
+
+
+
+<a name="loioa5bbef3f84f21015937df763d796616f__section_sqr_qr3_yyb"/>
+
+## Parameters
+
+None
 
 
 
 <a name="loioa5bbef3f84f21015937df763d796616f__section_dbs_rrm_nbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -30,14 +41,10 @@ sp_iqunusedcolumn
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,14 +53,10 @@ Description
 
 TableName
 
-
-
 </td>
 <td valign="top">
 
 Table name
-
-
 
 </td>
 </tr>
@@ -62,14 +65,10 @@ Table name
 
 ColumnName
 
-
-
 </td>
 <td valign="top">
 
 Column name
-
-
 
 </td>
 </tr>
@@ -78,14 +77,10 @@ Column name
 
 Owner
 
-
-
 </td>
 <td valign="top">
 
 User name of column owner
-
-
 
 </td>
 </tr>
@@ -117,20 +112,136 @@ None
 
 <a name="loioa5bbef3f84f21015937df763d796616f__iq_refbb_1824"/>
 
-## Example
+## Examples
 
-The following shows sample output from sp\_iqunusedcolumn:
+The following statement displays a list of the columns that are not referenced by the workload.
 
 ```
-TableName        ColumnName           Owner SalesOrders        ID           GROUPO
-SalesOrders      CustomerID           GROUPO SalesOrders       OrderDate    GROUPO
-SalesOrders      FinancialCode        GROUPO SalesOrders       Region       GROUPO
-SalesOrders      SalesRepresentative  GROUPO SalesOrderItems   ID           GROUPO
-SalesOrderItems  LineID               GROUPO SalesOrderItems   ProductID    GROUPO
-SalesOrderItems  Quantity             GROUPO SalesOrderItems   ShipDate     GROUPO
-Contacts         ID                   GROUPO Contacts          Surname      GROUPO
-Contacts         GivenName            GROUPO ...
+CALL sp_iqunusedcolumn;
 ```
+
+
+<table>
+<tr>
+<th valign="top">
+
+TableName
+
+</th>
+<th valign="top">
+
+ColumnName
+
+</th>
+<th valign="top">
+
+Owner
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+SalesOrders
+
+</td>
+<td valign="top">
+
+CustomerID
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SalesOrders
+
+</td>
+<td valign="top">
+
+FinancialCode
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SalesOrders
+
+</td>
+<td valign="top">
+
+SalesRepresentative
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SalesOrderItems
+
+</td>
+<td valign="top">
+
+LineID
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SalesOrderItems
+
+</td>
+<td valign="top">
+
+Quantity
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Contacts
+
+</td>
+<td valign="top">
+
+ID
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 
@@ -143,9 +254,9 @@ Contacts         GivenName            GROUPO ...
 
 [sp\_iqtableuse Procedure for Data Lake Relational Engine](sp-iqtableuse-procedure-for-data-lake-relational-engine-a5bae03.md "Reports detailed usage information for tables accessed by the workload.")
 
-[sp\_iqunusedindex Procedure for Data Lake Relational Engine](sp-iqunusedindex-procedure-for-data-lake-relational-engine-a5bc6ce.md "Reports IQ secondary (non-FP) indexes that were not referenced by the workload.")
+[sp\_iqunusedindex Procedure for Data Lake Relational Engine](sp-iqunusedindex-procedure-for-data-lake-relational-engine-a5bc6ce.md "Reports secondary (non-FP) indexes that were not referenced by the workload.")
 
-[sp\_iqunusedtable Procedure for Data Lake Relational Engine](sp-iqunusedtable-procedure-for-data-lake-relational-engine-a5bced3.md "Reports IQ tables that were not referenced by the workload.")
+[sp\_iqunusedtable Procedure for Data Lake Relational Engine](sp-iqunusedtable-procedure-for-data-lake-relational-engine-a5bced3.md "Reports tables that were not referenced by the workload.")
 
 [sp\_iqworkmon Procedure for Data Lake Relational Engine](sp-iqworkmon-procedure-for-data-lake-relational-engine-a5c13d2.md "Controls collection of workload monitor usage information, and reports monitoring collection status. sp_iqworkmon collects information only for queries (SQL statements containing a FROM clause). You cannot use sp_iqworkmon for INSERT or LOAD statements.")
 

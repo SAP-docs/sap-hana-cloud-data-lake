@@ -6,17 +6,20 @@ Locks a resource such as a file or system procedure using a predefined mutex.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio8171b78c6ce2101489eac0eed03b6321__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 LOCK MUTEX [ <owner>.]<mutex-name> 
    [ IN { SHARE | EXCLUSIVE } MODE ] 
-   [ TIMEOUT <in-milliseconds> ]
+   [ TIMEOUT <in-milliseconds> ];
 
 ```
 
@@ -132,6 +135,8 @@ Not in the standard.
 </dl>
 
 
+
+## Example
 
 The following statement locks the protect\_my\_cr\_section mutex in exclusive mode:
 

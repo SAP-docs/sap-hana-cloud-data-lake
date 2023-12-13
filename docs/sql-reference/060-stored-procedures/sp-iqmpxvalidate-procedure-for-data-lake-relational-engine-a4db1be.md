@@ -6,22 +6,25 @@ Checks the multiplex cluster configuration for inconsistencies.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa4db1be484f21015bfe3fc26275f8447__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-call dbo.sp_iqmpxvalidate( 'Y' )
+call dbo.sp_iqmpxvalidate( 'Y' );
 ```
 
 
 
 <a name="loioa4db1be484f21015bfe3fc26275f8447__section_fqg_g4g_nbb"/>
 
-## Returns
+## Result Set
 
 Returns a severity result to the caller; values are:
 

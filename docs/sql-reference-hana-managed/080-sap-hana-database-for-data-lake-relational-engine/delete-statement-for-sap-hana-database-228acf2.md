@@ -11,7 +11,7 @@ Deletes records from a table where a specified condition is met.
 ## Syntax
 
 ```
-DELETE FROM <hana_relational_container_schema_name>.<virtual_table_name> 
+DELETE FROM <hana_relational_container_schema>.<virtual_table_name> 
    [ WHERE <condition> ] [ <hint_clause> ]
 ```
 
@@ -25,7 +25,7 @@ DELETE FROM <hana_relational_container_schema_name>.<virtual_table_name>
 <dl>
 <dt><b>
 
-*<hana\_relational\_container\_schema\_name\>*
+*<hana\_relational\_container\_schema\>*
 
 </b></dt>
 <dd>
@@ -122,15 +122,11 @@ After executing the previous query, the contents of table V\_T1 are as follows, 
 
 KEY
 
-
-
 </td>
 <td valign="top">
 
 VAL
 
-
-
 </td>
 </tr>
 <tr>
@@ -138,14 +134,10 @@ VAL
 
 2
 
-
-
 </td>
 <td valign="top">
 
 2
-
-
 
 </td>
 </tr>
@@ -154,14 +146,10 @@ VAL
 
 3
 
-
-
 </td>
 <td valign="top">
 
 3
-
-
 
 </td>
 </tr>

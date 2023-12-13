@@ -6,10 +6,13 @@ Each row in the SYSPUBLICATION system view describes a publication. The underlyi
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be9ad586c5f1014a798e29c04d783ac__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYSPUBLICATION system view describes a publication. The underlyi
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 publication\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 A number uniquely identifying the publication.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ A number uniquely identifying the publication.
 
 object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The internal ID for the publication, uniquely identifying it in the database.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ The internal ID for the publication, uniquely identifying it in the database.
 
 creator
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The owner of the publication.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ The owner of the publication.
 
 publication\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the publication.
-
-
 
 </td>
 </tr>
@@ -135,21 +108,15 @@ The name of the publication.
 
 remarks
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 Remarks about the publication. This value is stored in the ISYSREMARK system table.
-
-
 
 </td>
 </tr>
@@ -158,21 +125,15 @@ Remarks about the publication. This value is stored in the ISYSREMARK system tab
 
 type
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 This column is deprecated.
-
-
 
 </td>
 </tr>
@@ -181,14 +142,10 @@ This column is deprecated.
 
 sync\_type
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
-
-
 
 </td>
 <td valign="top">

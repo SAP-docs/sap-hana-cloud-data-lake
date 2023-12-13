@@ -7,7 +7,7 @@ Returns the position of one BYTE string within another.
 
 
 ```
-BYTE_LOCATE( <source_string> , <search_string> [ , <start_position> ] )
+BYTE_LOCATE( <source_string> , <search_string> [ , <start_position> ] );
 ```
 
 
@@ -20,7 +20,7 @@ BYTE_LOCATE( <source_string> , <search_string> [ , <start_position> ] )
 <dl>
 <dt><b>
 
- *<source\_string\>* 
+*<source\_string\>* 
 
 </b></dt>
 <dd>
@@ -31,7 +31,7 @@ The string to be searched.
 
 </dd><dt><b>
 
- *<search\_string\>* 
+*<search\_string\>* 
 
 </b></dt>
 <dd>
@@ -42,7 +42,7 @@ The string to be searched for within *<source\_string\>*.
 
 </dd><dt><b>
 
- *<start\_position\>* 
+*<start\_position\>* 
 
 </b></dt>
 <dd>
@@ -60,11 +60,13 @@ Although *<start\_position\>* acts as an offset for where the search is started,
 
 <a name="loio6b6d91ad148841f781fb65d0a68a8b82__BYTE_LOCATE_returns1"/>
 
-## Returns
+## Result Set
 
 INTEGER
 
 
+
+## Example
 
 When *<start\_position\>* is any positive number from 0 to 8 inclusive, the following statement returns 8, indicating that the first matching byte in the string is at position 8. If *<start\_position\>* is greater than 8, then the example returns 0 because the string 'party' isn’t found after position 8.
 
@@ -87,5 +89,5 @@ SELECT BYTE_LOCATE(
 **Related Information**  
 
 
-[BYTE_LOCATE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/65d438896f2948c4afb37190924dbf7e.html "Returns the position of one BYTE string within another.") :arrow_upper_right:
+[BYTE_LOCATE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/65d438896f2948c4afb37190924dbf7e.html "Returns the position of one BYTE string within another.") :arrow_upper_right:
 

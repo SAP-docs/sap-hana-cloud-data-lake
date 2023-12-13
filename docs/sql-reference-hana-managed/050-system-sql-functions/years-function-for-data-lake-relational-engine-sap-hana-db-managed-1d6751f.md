@@ -16,7 +16,7 @@ Syntax 1: Return the number of years between year 0000 and a TIMESTAMP value
 <dd>
 
 ```
-YEARS( <timestamp-expression> )
+YEARS( <timestamp-expression> );
 ```
 
 
@@ -29,7 +29,7 @@ Syntax 2: Return the number of years between two TIMESTAMP values
 <dd>
 
 ```
-YEARS( <timestamp-expression>, <timestamp-expression> )
+YEARS( <timestamp-expression>, <timestamp-expression> );
 ```
 
 
@@ -42,7 +42,7 @@ Syntax 3: Add years to a TIMESTAMP value
 <dd>
 
 ```
-YEARS( <timestamp-expression>, <integer-expression> )
+YEARS( <timestamp-expression>, <integer-expression> );
 ```
 
 
@@ -60,7 +60,7 @@ YEARS( <timestamp-expression>, <integer-expression> )
 <dl>
 <dt><b>
 
- *<timestamp-expression\>* 
+*<timestamp-expression\>* 
 
 </b></dt>
 <dd>
@@ -87,7 +87,7 @@ The number of years \(as a SMALLINT value\) to be added to *<timestamp-expressio
 
 <a name="loio1d6751f84bf14c8ca120407566bb798f__section_aj2_lcv_vrb"/>
 
-## Returns
+## Result Set
 
 INTEGER \(SMALLINT\) when comparing two TIMESTAMP values.
 
@@ -146,5 +146,5 @@ Syntax 3 adds an *<integer-expression\>* number of years to the given date. If t
 **Related Information**  
 
 
-[YEARS Function [Date and Time] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a5926bf484f210159b3980226202882f.html "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.") :arrow_upper_right:
+[YEARS Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5926bf484f210159b3980226202882f.html "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.") :arrow_upper_right:
 

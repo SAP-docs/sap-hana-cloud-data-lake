@@ -6,16 +6,12 @@ Each row in the SYS.SYSUSERTYPE system view holds a description of a user-define
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system view can be used when connected as follows:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Viewing System Views](remote-execute-usage-examples-for-viewing-system-views-8b235c7.md).
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE\_QUERY procedure.
-> 
->     -   See [REMOTE\_EXECUTE\_QUERY Usage Examples for Viewing System Views](remote-execute-query-usage-examples-for-viewing-system-views-ada51c0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system view can be used when connected as follows:
+
+-   Connected to SAP HANA database as a SAP HANA database user, and using SAP HANA database REMOTE\_EXECUTE\_QUERY.
+
 
 
 
@@ -26,21 +22,15 @@ Each row in the SYS.SYSUSERTYPE system view holds a description of a user-define
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -49,21 +39,15 @@ Description
 
 type\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 A unique identifying number for the user-defined data type.
-
-
 
 </td>
 </tr>
@@ -72,21 +56,15 @@ A unique identifying number for the user-defined data type.
 
 creator
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The user number of the owner of the data type.
-
-
 
 </td>
 </tr>
@@ -95,21 +73,15 @@ The user number of the owner of the data type.
 
 domain\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 The data type on which this user-defined data type is based, indicated by a data type number listed in the SYS.SYSDOMAIN system view.
-
-
 
 </td>
 </tr>
@@ -118,21 +90,15 @@ The data type on which this user-defined data type is based, indicated by a data
 
 nulls
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Whether the user-defined data type allows nulls. Possible values are Y, N, or U. A value of U indicates that nullability is unspecified.
-
-
 
 </td>
 </tr>
@@ -141,21 +107,15 @@ Whether the user-defined data type allows nulls. Possible values are Y, N, or U.
 
 width
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The length of a string column, the precision of a numeric column, or the number of bytes of storage for any other data type.
-
-
 
 </td>
 </tr>
@@ -164,21 +124,15 @@ The length of a string column, the precision of a numeric column, or the number 
 
 scale
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 The number of digits after the decimal point for numeric data type columns, and zero for all other data types.
-
-
 
 </td>
 </tr>
@@ -187,21 +141,15 @@ The number of digits after the decimal point for numeric data type columns, and 
 
 type\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name for the data type.
-
-
 
 </td>
 </tr>
@@ -210,21 +158,15 @@ The name for the data type.
 
 "default"
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The default value for the data type.
-
-
 
 </td>
 </tr>
@@ -233,21 +175,15 @@ The default value for the data type.
 
 "check"
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The CHECK condition for the data type.
-
-
 
 </td>
 </tr>
@@ -256,28 +192,32 @@ The CHECK condition for the data type.
 
 base\_type\_str
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(32767\)
-
-
 
 </td>
 <td valign="top">
 
 The annotated type string representing the physical type of the user type.
 
-
-
 </td>
 </tr>
 </table>
 
+
+
+<a name="loio164b9020b45548209db5cb851a82589d__section_gj1_wy1_4yb"/>
+
+## Privileges
+
+To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE privilege on the remote source <hana\_relational\_container\_schema\>\_SOURCE.
+
+-   See [REMOTE\_EXECUTE\_QUERY Usage Examples for Viewing System Views](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/a898e08b84f21015969fa437e89860c8/ada51c0074354a5f99b60c14cffb653c.html).
+
 **Related Information**  
 
 
-[SYSUSERTYPE System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/3beb2d206c5f1014967ef84ffbb10968.html "Each row in the SYS.SYSUSERTYPE system view holds a description of a user-defined data type.") :arrow_upper_right:
+[SYSUSERTYPE System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3beb2d206c5f1014967ef84ffbb10968.html "Each row in the SYS.SYSUSERTYPE system view holds a description of a user-defined data type.") :arrow_upper_right:
 

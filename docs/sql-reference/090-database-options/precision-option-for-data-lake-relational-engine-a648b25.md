@@ -6,10 +6,13 @@ Specifies the maximum number of digits in the result of any decimal arithmetic, 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa648b25a84f210159df4edd5d6158c2d__section_d3p_24q_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Specifies the maximum number of digits in the result of any decimal arithmetic, 
 ## Syntax
 
 ```
-PRECISION = <value>
+PRECISION = <value>;
 ```
 
 
@@ -60,28 +63,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -90,28 +85,20 @@ For Other Users
 
 Allowed to set permanently?
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -120,28 +107,20 @@ No
 
 Allowed to set temporarily?
 
+</td>
+<td valign="top">
 
+No
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
-
-</td>
-<td valign="top">
-
-No
-
-
 
 </td>
 </tr>

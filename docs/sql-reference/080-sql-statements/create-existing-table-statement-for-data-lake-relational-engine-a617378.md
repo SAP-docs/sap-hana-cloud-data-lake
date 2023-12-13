@@ -6,17 +6,20 @@ Creates a new proxy table that represents an existing table on a remote server.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa617378084f21015ab5f9b1b9cfa3620__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 CREATE EXISTING [ LOCAL TEMPORARY ] TABLE [ { <owner> | <schema-name> }.]<table_name> 
    [ ( <column-definition>, … ) ] 
-   AT '<location-string>'
+   AT '<location-string>';
 ```
 
 
@@ -43,7 +46,7 @@ Column definitions are required when LOCAL TEMPORARY is specified. Otherwise, co
 
 ```
 <column-definition> ::= 
-   <column-name> <data-type> [ NOT NULL ]
+   <column-name> <data-type> [ NOT NULL ];
 ```
 
 If you do not specify column definitions, data lake Relational Engine derives the column list from the metadata it obtains from the remote table. If you do specify column definitions, data lake Relational Engine verifies them. When data lake Relational Engine checks column names, data types, lengths, and null properties:
@@ -67,7 +70,7 @@ Specifies the location of the remote object.
 ```
 <location-string> ::=
    <remote-server-name>.[<db-name>].[<owner>].<object-name>
-   | <remote-server-name>;[<db-name>];[<owner>];<object-name>
+   | <remote-server-name>;[<db-name>];[<owner>];<object-name>;
 ```
 
 The AT clause supports the semicolon \(;\) as a delimiter. If a semicolon is present anywhere in the *<column-definition\>*, the semicolon is the field delimiter. If no semicolon is present, a period is the field delimiter. This behavior allows file names and extensions to be used in the database and owner fields. An ESCAPE CHARACTER clause allows applications to escape these delimiters within a location string.
@@ -213,9 +216,9 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [CREATE TABLE Statement for Data Lake Relational Engine](create-table-statement-for-data-lake-relational-engine-a619764.md "Creates a new table in the database or on a remote server.")
 
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
+[DROP TABLE Statement for Data Lake Relational Engine](drop-table-statement-for-data-lake-relational-engine-0524ea8.md "Removes a table from the database.")
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[CREATE EXISTING TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ee4c9163f3a647b3938c7b0c08a9dd44.html "Creates a new proxy table that represents an existing table on a remote server.") :arrow_upper_right:
+[CREATE EXISTING TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ee4c9163f3a647b3938c7b0c08a9dd44.html "Creates a new proxy table that represents an existing table on a remote server.") :arrow_upper_right:
 

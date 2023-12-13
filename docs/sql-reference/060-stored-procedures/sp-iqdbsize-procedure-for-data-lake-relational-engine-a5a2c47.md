@@ -6,22 +6,25 @@ Displays the size of the current database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5a2c47f84f21015ae93aa3096658803__section_p3r_xvh_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqdbsize ( [ main ] )
+sp_iqdbsize ( [ main ] );
 ```
 
 
 
 <a name="loioa5a2c47f84f21015ae93aa3096658803__iq_refbb_1501"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -30,14 +33,10 @@ sp_iqdbsize ( [ main ] )
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,14 +45,10 @@ Description
 
 Database
 
-
-
 </td>
 <td valign="top">
 
 The path name of the database file.
-
-
 
 </td>
 </tr>
@@ -62,14 +57,10 @@ The path name of the database file.
 
 PhysicalBlocks
 
-
-
 </td>
 <td valign="top">
 
 The total database size in blocks. A data lake Relational Engine database consists of one or more dbspaces. Each dbspace has a fixed size, which is originally specified in units of megabytes. This megabyte quantity is converted to blocks using the data lake Relational Engine page size and the corresponding block size for that data lake Relational Engine page size. The Physical Blocks column reflects the cumulative total of each data lake Relational Engine dbspace size, represented in blocks.
-
-
 
 </td>
 </tr>
@@ -78,14 +69,10 @@ The total database size in blocks. A data lake Relational Engine database consis
 
 KBytes
 
-
-
 </td>
 <td valign="top">
 
 The total size of the database, in kilobytes. This value is the total size of the database in blocks \(PhysicalBlocks in the previous sp\_iqdbsize column\) multiplied by the block size. The block size depends on the data lake Relational Engine page size.
-
-
 
 </td>
 </tr>
@@ -94,14 +81,10 @@ The total size of the database, in kilobytes. This value is the total size of th
 
 Pages
 
-
-
 </td>
 <td valign="top">
 
 The total number of data lake Relational Engine pages necessary to represent in memory all of the data stored in tables and the metadata for these objects. This value is always greater than or equal to the value of CompressedPages \(the next sp\_iqdbsize column\).
-
-
 
 </td>
 </tr>
@@ -110,14 +93,10 @@ The total number of data lake Relational Engine pages necessary to represent in 
 
 CompressedPages
 
-
-
 </td>
 <td valign="top">
 
 The total number of data lake Relational Engine pages necessary to store on disk the data in tables and metadata for these objects. This value is always less than or equal to the value of Pages \(the previous sp\_iqdbsize column\), because data lake Relational Engine compresses pages when the data lake Relational Engine page is written from memory to disk. The sp\_iqdbsize CompressedPages column represents the number of compressed pages.
-
-
 
 </td>
 </tr>
@@ -126,14 +105,10 @@ The total number of data lake Relational Engine pages necessary to store on disk
 
 NBlocks
 
-
-
 </td>
 <td valign="top">
 
 The total size in blocks used to store the data in tables. This value is always less than or equal to the sp\_iqdbsize PhysicalBlocks value.
-
-
 
 </td>
 </tr>
@@ -142,14 +117,10 @@ The total size in blocks used to store the data in tables. This value is always 
 
 CatalogBlocks
 
-
-
 </td>
 <td valign="top">
 
 The total size in blocks used to store the metadata for tables.
-
-
 
 </td>
 </tr>
@@ -183,12 +154,12 @@ None
 
 <a name="loioa5a2c47f84f21015ae93aa3096658803__iq_refbb_1505"/>
 
-## Example
+## Examples
 
 The following example displays size information for the database iqdemo:
 
 ```
-sp_iqdbsize
+sp_iqdbsize;
 ```
 
 
@@ -198,35 +169,25 @@ sp_iqdbsize
 
 Database
 
-
-
 </th>
 <th valign="top">
 
 PhysicalBlocks
-
-
 
 </th>
 <th valign="top">
 
 KBytes
 
-
-
 </th>
 <th valign="top">
 
 Pages
 
-
-
 </th>
 <th valign="top">
 
 CompressedPages
-
-
 
 </th>
 </tr>
@@ -235,35 +196,25 @@ CompressedPages
 
 /data\_local/mpx-writer-0-0/iqaas.db
 
-
-
 </td>
 <td valign="top">
 
 19786
-
-
 
 </td>
 <td valign="top">
 
 456
 
-
-
 </td>
 <td valign="top">
 
 15
 
-
-
 </td>
 <td valign="top">
 
 13
-
-
 
 </td>
 </tr>
@@ -276,14 +227,10 @@ CompressedPages
 
 NBlocks
 
-
-
 </th>
 <th valign="top">
 
 CatalogBlocks
-
-
 
 </th>
 </tr>
@@ -292,14 +239,10 @@ CatalogBlocks
 
 57
 
-
-
 </td>
 <td valign="top">
 
 36
-
-
 
 </td>
 </tr>

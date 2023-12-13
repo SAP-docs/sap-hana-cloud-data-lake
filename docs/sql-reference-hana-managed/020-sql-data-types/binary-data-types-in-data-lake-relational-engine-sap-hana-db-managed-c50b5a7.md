@@ -17,14 +17,10 @@ Binary data begins with the characters “0x” or “0X” and can include any 
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -33,15 +29,13 @@ Description
 
 BINARY
 
-
-
 </td>
 <td valign="top">
 
 Binary data of a specified maximum *<length\>* in bytes.
 
 ```
-BINARY [ ( <length> ) ]
+BINARY [ ( <length> ) ];
 ```
 
 If *<length\>* is omitted, then the default is 1 byte. The maximum size allowed is 32,767 bytes.
@@ -61,8 +55,6 @@ Use the fixed-length binary type BINARY for data in which all entries are expect
 
 All BINARY columns are padded with zeros to the full width of the column. Trailing zeros are truncated in all VARBINARY columns.
 
-
-
 </td>
 </tr>
 <tr>
@@ -70,14 +62,10 @@ All BINARY columns are padded with zeros to the full width of the column. Traili
 
 BLOB
 
-
-
 </td>
 <td valign="top">
 
 BLOB \(binary large object\) data is supported with a length ranging from zero \(0\) to 2 PB \(petabytes\). BLOB is an alias for LONG BINARY data type. The maximum length is equal to 4 GB multiplied by the database page size \(512 KB\).
-
-
 
 </td>
 </tr>
@@ -85,8 +73,6 @@ BLOB \(binary large object\) data is supported with a length ranging from zero \
 <td valign="top">
 
 IMAGE
-
-
 
 </td>
 <td valign="top">
@@ -97,16 +83,12 @@ IMAGE is a domain, implemented as LONG BINARY.
 
 You can’t use the aggregate functions SUM, AVG, STDDEV, or VARIANCE with binary data types.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 LONG BINARY
-
-
 
 </td>
 <td valign="top">
@@ -119,16 +101,12 @@ The maximum size in bytes is 2 GB minus 1 byte or 2147483647.
 
 You can’t use the SUM, AVG, STDDEV, or VARIANCE aggregate functions with binary data types.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 UNIQUEIDENTIFIER
-
-
 
 </td>
 <td valign="top">
@@ -171,15 +149,13 @@ UPDATE MYTAB
 
 VARBINARY
 
-
-
 </td>
 <td valign="top">
 
 Binary data up to a specified *<max-length\>* in bytes.
 
 ```
-VARBINARY [ ( <length> ) ]
+VARBINARY [ ( <length> ) ];
 ```
 
 If *<length\>* is omitted, then the default is 1 byte. The maximum size allowed is \(32 K – 1\) bytes. Use the variable-length binary type VARBINARY for data that is expected to vary greatly in length.
@@ -196,8 +172,6 @@ Use the variable-length binary type VARBINARY for data that is expected to vary 
 
 
 All BINARY columns are padded with zeros to the full width of the column. Trailing zeros are truncated in all VARBINARY columns.
-
-
 
 </td>
 </tr>
@@ -228,28 +202,20 @@ The storage size of binary data differs based on data type.
 
 Data Type
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Column Definition
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
 Input Data
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Storage
-
-
 
 </th>
 </tr>
@@ -257,29 +223,21 @@ Storage
 <td valign="top" rowspan="1">
 
 VARBINARY
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 width of \(32 K – 1\) bytes
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 \(32 K – 1\) bytes binary
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 \(32 K – 1\) bytes
-
-
 
 </td>
 </tr>
@@ -287,29 +245,21 @@ width of \(32 K – 1\) bytes
 <td valign="top" rowspan="1">
 
 VARBINARY
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 width of \(32K– 1\) bytes
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 \(64 K – 2\) bytes ASCII
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 \(32 K – 1\) bytes
-
-
 
 </td>
 </tr>
@@ -318,28 +268,20 @@ width of \(32K– 1\) bytes
 
 BINARY
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 width of \(32 K – 1\) bytes
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 \(32 K – 1\) bytes binary
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 \(32 K – 1\) bytes
-
-
 
 </td>
 </tr>
@@ -348,28 +290,20 @@ width of \(32 K – 1\) bytes
 
 BINARY
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 width of \(32 K – 1\) bytes
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 \(64 K – 2\) bytes ASCII
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 \(32 K – 1\) bytes
-
-
 
 </td>
 </tr>
@@ -382,5 +316,5 @@ The CONVERT function uses little-endian semantics in data lake Relational Engine
 **Related Information**  
 
 
-[Binary Data Types in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a517b59284f2101595fc9d23db89a857.html "Use binary data types for storing raw binary data, such as pictures, in a hexadecimal-like notation.") :arrow_upper_right:
+[Binary Data Types in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a517b59284f2101595fc9d23db89a857.html "Use binary data types for storing raw binary data, such as pictures, in a hexadecimal-like notation.") :arrow_upper_right:
 

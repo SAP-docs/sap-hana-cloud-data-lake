@@ -12,11 +12,11 @@ Revoke privileges from users and roles to remove the ability to manage and query
 
 ```
 REVOKE <system_privilege> [,...] FROM <grantee>
- | REVOKE <schema_privilege> [,...] ON SCHEMA <hana_relational_container_schema_name> FROM <grantee>
- | REVOKE <object_privilege> [,...] ON <hana_relational_container_schema_name>.<hana_object_name> FROM <grantee>
+ | REVOKE <schema_privilege> [,...] ON SCHEMA <hana_relational_container_schema> FROM <grantee>
+ | REVOKE <object_privilege> [,...] ON <hana_relational_container_schema>.<hana_object_name> FROM <grantee>
  | REVOKE <role_name> [,...] FROM <grantee>
  | REVOKE EXECUTE ON <relational_container_name>.REMOTE_EXECUTE FROM <relational_container_name>
- | REVOKE { CREATE VIRTUAL TABLE | REMOTE TABLE ADMIN } ON REMOTE SOURCE SYSHDL_<relational_container_name>_SOURCE FROM <grantee>
+ | REVOKE { CREATE VIRTUAL TABLE | REMOTE TABLE ADMIN } ON REMOTE SOURCE <hana_relational_container_schema>_SOURCE FROM <grantee>
 ```
 
 

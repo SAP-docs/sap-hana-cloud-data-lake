@@ -13,7 +13,7 @@ You can obtain a list of option settings, or the values of individual options, u
     The `sp_iqcheckoptions` stored procedure requires no parameters. In Interactive SQL, run:
 
     ```
-    sp_iqcheckoptions
+    sp_iqcheckoptions;
     ```
 
     The system table `DBA.SYSOPTIONDEFAULTS` contains all of the names and default values of the data lake Relational Engine and SAP SQL Anywhere options. You can query this table to see all option default values.
@@ -21,20 +21,20 @@ You can obtain a list of option settings, or the values of individual options, u
 -   Current option settings for your connection are available as a subset of connection properties. You can list all connection properties using the `sa_conn_properties` system procedure:
 
     ```
-    call sa_conn_properties
+    call sa_conn_properties;
     ```
 
 -   In Interactive SQL, the `SET` statement with no arguments lists the current setting of options:
 
     ```
-    SET
+    SET;
     ```
 
 -   Query the `SYSOPTIONS` system view:
 
     ```
     SELECT *
-    FROM SYSOPTIONS
+    FROM SYSOPTIONS;
     ```
 
     This shows all `PUBLIC` values, and those `USER` values that have been explicitly set.
@@ -42,7 +42,7 @@ You can obtain a list of option settings, or the values of individual options, u
 -   Use the `connection_property` system function to obtain an individual option setting. For example, this statement returns the value of the Ansinull option:
 
     ```
-    SELECT connection_property ('Ansinull')
+    SELECT connection_property ('Ansinull');
     ```
 
 

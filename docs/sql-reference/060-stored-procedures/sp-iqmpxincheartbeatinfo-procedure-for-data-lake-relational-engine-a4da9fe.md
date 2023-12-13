@@ -6,22 +6,25 @@ If run on the coordinator node, displays INC heartbeat status for every node. If
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa4da9fef84f210159b8ad9de2997c574__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqmpxincheartbeatinfo
+sp_iqmpxincheartbeatinfo;
 ```
 
 
 
 <a name="loioa4da9fef84f210159b8ad9de2997c574__iq_iqmpx_247"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -30,21 +33,15 @@ sp_iqmpxincheartbeatinfo
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -53,21 +50,15 @@ Description
 
 server\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Identifier for the node
-
-
 
 </td>
 </tr>
@@ -76,21 +67,15 @@ Identifier for the node
 
 server\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Name of the node
-
-
 
 </td>
 </tr>
@@ -99,21 +84,15 @@ Name of the node
 
 last\_positive\_hb
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Date/time of last successful heartbeat ping, in the following format: DD:MM:YYYY:HH:MM:SS
-
-
 
 </td>
 </tr>
@@ -122,21 +101,15 @@ Date/time of last successful heartbeat ping, in the following format: DD:MM:YYYY
 
 time\_not\_responding
 
-
-
 </td>
 <td valign="top">
 
 TIME
 
-
-
 </td>
 <td valign="top">
 
 Time since last successful heartbeat ping, in the following format: HH:MM:SS
-
-
 
 </td>
 </tr>
@@ -145,21 +118,15 @@ Time since last successful heartbeat ping, in the following format: HH:MM:SS
 
 time\_until\_timeout
 
-
-
 </td>
 <td valign="top">
 
 TIME
 
-
-
 </td>
 <td valign="top">
 
 If a node isn't responding, the time left until node is declared offline.
-
-
 
 </td>
 </tr>
@@ -183,7 +150,7 @@ None
 
 <a name="loioa4da9fef84f210159b8ad9de2997c574__iq_iqmpx_251"/>
 
-## Example
+## Examples
 
 -   Sample output of sp\_iqmpxincheartbeatinfo:
 

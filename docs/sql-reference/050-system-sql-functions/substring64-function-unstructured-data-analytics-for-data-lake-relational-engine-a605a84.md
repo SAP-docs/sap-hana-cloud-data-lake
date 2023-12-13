@@ -7,7 +7,7 @@ The `SUBSTRING64` function returns a variable-length character string of the lar
 
 
 ```
-SUBSTRING64 ( <large-object-column>, <start> [, <length> ] )
+SUBSTRING64 ( <large-object-column>, <start> [, <length> ] );
 ```
 
 
@@ -80,5 +80,5 @@ Values returned by `SUBSTRING64`, given a column named `col1` that contains the 
 **Related Information**  
 
 
-[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
+[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
 

@@ -6,8 +6,11 @@ Specifies the algorithm used during a delete in a WD index.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa668acaf84f21015bb88a6eb8a856991__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

@@ -6,16 +6,19 @@ Removes a users membership in a role or his or her ability to administer the rol
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa3e9de3284f21015bfd7b663b9989fe3__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 REVOKE [ { EXERCISE | ADMIN } OPTION FOR ] ROLE <user-defined-role> 
-FROM { <system-role> | <user_id> } [, ...]
+FROM { <system-role> | <user_id> } [, ...];
 ```
 
 
@@ -120,5 +123,5 @@ REVOKE ROLE role1 FROM user1;
 
 [GRANT ROLE Statement for Data Lake Relational Engine](grant-role-statement-for-data-lake-relational-engine-a3e379c.md "Grants roles to users or other roles, with or without administrative rights.")
 
-[REVOKE ROLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/189a04b4a6cb4098bebcc34f16a78afb.html "Removes a users membership in a role or his or her ability to administer the role.") :arrow_upper_right:
+[REVOKE ROLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/189a04b4a6cb4098bebcc34f16a78afb.html "Removes a users membership in a role or his or her ability to administer the role.") :arrow_upper_right:
 

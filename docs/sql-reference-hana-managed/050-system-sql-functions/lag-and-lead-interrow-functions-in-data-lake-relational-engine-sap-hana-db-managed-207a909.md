@@ -14,14 +14,14 @@ The syntax for LAG and LEAD is identical. Both functions require an OVER \(ORDER
 
     ```
     LAG ( <value_expr> [, <offset> [, <default> ] ] )
-         OVER ([PARTITION BY <window partition>] ORDER BY <window ordering>)
+         OVER ([PARTITION BY <window partition>] ORDER BY <window ordering>);
     ```
 
 -   LEAD syntax:
 
     ```
     LEAD (<value_expr>) [, <offset> [, <default>] ] )
-        OVER ([PARTITION BY <window partition>] ORDER BY <window ordering>)
+        OVER ([PARTITION BY <window partition>] ORDER BY <window ordering>);
     ```
 
 
@@ -61,7 +61,7 @@ SELECT  STOCK_SYMBOL AS 'Stock',
    * 100.0) AS NUMERIC(5, 2) )
       AS '% Price Change vs Previous Price'
 FROM STOCK_TRADES
-ORDER BY 1, 2
+ORDER BY 1, 2;
 ```
 
 The query returns these results:

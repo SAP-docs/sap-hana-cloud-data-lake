@@ -6,23 +6,26 @@ Describes the variables in a SQL descriptor area, and places data into the descr
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa625ac1c84f210158638b81051dcd9b9__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 SET DESCRIPTOR <descriptor-name>
    … { COUNT = { <integer> | <hostvar> }
-     | VALUE <n> <assignment> [, …] }
+     | VALUE <n> <assignment> [, …] };
 ```
 
 ```
 <assignment> ::=
    { { TYPE | SCALE | PRECISION | LENGTH | INDICATOR } = { <integer> | <hostvar> } 
-   | DATA = <hostvar> }
+   | DATA = <hostvar> };
 ```
 
 

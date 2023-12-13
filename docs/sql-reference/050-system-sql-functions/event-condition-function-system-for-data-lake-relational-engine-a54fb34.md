@@ -7,7 +7,7 @@ Specifies when an event handler is triggered.
 
 
 ```
-EVENT_CONDITION ( <condition-name> )
+EVENT_CONDITION ( <condition-name> );
 ```
 
 
@@ -39,28 +39,20 @@ The condition triggering the event. The possible values are preset in the databa
 
 Condition Name
 
-
-
 </th>
 <th valign="top">
 
 Units
-
-
 
 </th>
 <th valign="top">
 
 Valid for
 
-
-
 </th>
 <th valign="top">
 
 Comment
-
-
 
 </th>
 </tr>
@@ -69,28 +61,20 @@ Comment
 
 DBFreePercent
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 <td valign="top">
 
 DBDiskSpace
 
-
-
 </td>
 <td valign="top">
 
 DBDiskSpace shows free space in the system database file \(.db file\), not the IQ store.
-
-
 
 </td>
 </tr>
@@ -99,28 +83,20 @@ DBDiskSpace shows free space in the system database file \(.db file\), not the I
 
 DBFreeSpace
 
-
-
 </td>
 <td valign="top">
 
 Megabytes
-
-
 
 </td>
 <td valign="top">
 
 DBDiskSpace
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -129,28 +105,20 @@ DBDiskSpace
 
 DBSize
 
-
-
 </td>
 <td valign="top">
 
 Megabytes
-
-
 
 </td>
 <td valign="top">
 
 GrowDB
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -159,28 +127,20 @@ GrowDB
 
 ErrorNumber
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 <td valign="top">
 
 RAISERROR
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -189,28 +149,20 @@ RAISERROR
 
 IdleTime
 
-
-
 </td>
 <td valign="top">
 
 Seconds
-
-
 
 </td>
 <td valign="top">
 
 ServerIdle
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -219,28 +171,20 @@ ServerIdle
 
 Interval
 
-
-
 </td>
 <td valign="top">
 
 Seconds
-
-
 
 </td>
 <td valign="top">
 
 All
 
-
-
 </td>
 <td valign="top">
 
 Time since handler last executed.
-
-
 
 </td>
 </tr>
@@ -249,28 +193,20 @@ Time since handler last executed.
 
 LogFreePercent
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 <td valign="top">
 
 LogDiskSpace
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -279,28 +215,20 @@ LogDiskSpace
 
 LogFreeSpace
 
-
-
 </td>
 <td valign="top">
 
 Megabytes
-
-
 
 </td>
 <td valign="top">
 
 LogDiskSpace
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -309,28 +237,20 @@ LogDiskSpace
 
 LogSize
 
-
-
 </td>
 <td valign="top">
 
 Megabytes
-
-
 
 </td>
 <td valign="top">
 
 GrowLog
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -339,28 +259,20 @@ GrowLog
 
 RemainingValues
 
-
-
 </td>
 <td valign="top">
 
 Integer
-
-
 
 </td>
 <td valign="top">
 
 GlobalAutoincrement
 
-
-
 </td>
 <td valign="top">
 
 The number of remaining values.
-
-
 
 </td>
 </tr>
@@ -369,28 +281,20 @@ The number of remaining values.
 
 TempFreePercent
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 <td valign="top">
 
 TempDiskSpace
 
-
-
 </td>
 <td valign="top">
 
 TempDiskSpace shows free space in the system temporary file \(pointed to by TEMP or IQTMP16 environment variable\), not the IQ temporary store.
-
-
 
 </td>
 </tr>
@@ -399,28 +303,20 @@ TempDiskSpace shows free space in the system temporary file \(pointed to by TEMP
 
 TempFreeSpace
 
-
-
 </td>
 <td valign="top">
 
 Megabytes
-
-
 
 </td>
 <td valign="top">
 
 TempDiskSpace
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -429,28 +325,20 @@ TempDiskSpace
 
 TempSize
 
-
-
 </td>
 <td valign="top">
 
 Megabytes
-
-
 
 </td>
 <td valign="top">
 
 GrowTemp
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -460,7 +348,7 @@ GrowTemp
 
 <a name="loioa54fb34184f21015a526eae095389392__event_condition_returns1"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -498,7 +386,7 @@ create event LogNotifier
                     handler
                     begin
                     message 'LogNotifier message'
-                    end
+                    end;
 ```
 
 **Related Information**  

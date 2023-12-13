@@ -6,10 +6,13 @@ Creates data type or a connection- or database-scope variable.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa619d63284f21015b33fddf934b664e3__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -24,11 +27,11 @@ Syntax 1 – Creates a Connection-Scope Variable
 
 ```
 <identifier> <data-type> 
-   [ { = | DEFAULT } CREATE [ OR REPLACE ] VARIABLE <initial-value> ]
+   [ { = | DEFAULT } CREATE [ OR REPLACE ] VARIABLE <initial-value> ];
 ```
 
 ```
-<initial-value> ::= <expression>
+<initial-value> ::= <expression>;
 ```
 
 
@@ -69,7 +72,7 @@ CREATE [ OR REPLACE ] DATABASE VARIABLE [ IF NOT EXISTS ]
      | TIMESTAMP 
      | USER 
      | UTC TIMESTAMP }
-   | USER }
+   | USER };
 ```
 
 
@@ -205,14 +208,10 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 Scope
 
-
-
 </th>
 <th valign="top">
 
 Privilege Required
-
-
 
 </th>
 </tr>
@@ -221,14 +220,10 @@ Privilege Required
 
 Connection-scope variables
 
-
-
 </td>
 <td valign="top">
 
 No privileges are required to create or replace a connection-scope variable.
-
-
 
 </td>
 </tr>
@@ -236,8 +231,6 @@ No privileges are required to create or replace a connection-scope variable.
 <td valign="top">
 
 Database-scope variables
-
-
 
 </td>
 <td valign="top">

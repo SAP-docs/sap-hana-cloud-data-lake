@@ -6,10 +6,13 @@ The SYSROLEGRANT system view contains one row for each grant of a system or user
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa43f733b84f2101594aed5bfe3904358__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ The SYSROLEGRANT system view contains one row for each grant of a system or user
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 grant\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 ID used to identify each GRANT statement.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ ID used to identify each GRANT statement.
 
 role\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 ID of the role being granted, as per ISYSUSER.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ ID of the role being granted, as per ISYSUSER.
 
 grantee
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 ID of the user being granted the role, as per ISYSUSER.
-
-
 
 </td>
 </tr>
@@ -112,14 +91,10 @@ ID of the user being granted the role, as per ISYSUSER.
 
 grant\_type
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
-
-
 
 </td>
 <td valign="top">
@@ -141,14 +116,10 @@ Describes type of grant using three digits. The first digit is whether privilege
 
 grant\_scope
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
-
-
 
 </td>
 <td valign="top">
@@ -168,21 +139,15 @@ Used by SET USER and CHANGE PASSWORD to set the scope of the grant. Values can b
 
 grantor
 
-
-
 </td>
 <td valign="top">
 
 CHAR \(128\)
 
-
-
 </td>
 <td valign="top">
 
 The unique identifier of the grantor of the role.
-
-
 
 </td>
 </tr>
@@ -193,10 +158,10 @@ The unique identifier of the grantor of the role.
 ## Constraints on Underlying System Table
 
 ```
-PRIMARY KEY (grant_ID)
+PRIMARY KEY (grant_ID);
 ```
 
 ```
-UNIQUE Index (role_id, grantee, grant_scope)
+UNIQUE Index (role_id, grantee, grant_scope);
 ```
 

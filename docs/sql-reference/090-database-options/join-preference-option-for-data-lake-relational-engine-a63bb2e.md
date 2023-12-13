@@ -6,10 +6,13 @@ Controls the choice of algorithms when processing joins.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa63bb2e884f210158490d70844b57a75__section_yxs_mkr_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Controls the choice of algorithms when processing joins.
 ## Syntax
 
 ```
-JOIN_PREFERENCE = <value>
+JOIN_PREFERENCE = <value>;
 ```
 
 
@@ -84,28 +87,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -114,28 +109,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -144,28 +131,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -186,7 +165,7 @@ Simple equality join predicates can be tagged with a predicate hint that allows 
 This example requests a hash join:
 
 ```
-AND (T.X = 10 * R.x, 'J:4')
+AND (T.X = 10 * R.x, 'J:4');
 ```
 
 **Related Information**  

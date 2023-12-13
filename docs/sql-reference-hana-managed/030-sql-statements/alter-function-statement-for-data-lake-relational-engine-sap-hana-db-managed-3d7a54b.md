@@ -6,14 +6,14 @@ Modifies an existing function. Include the entire modified function in the ALTER
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3d7a54b993a74668b60ab048e299fbec__section_jzt_bmj_g4b"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -35,7 +35,7 @@ ALTER FUNCTION [ <schema-name>.]<function-name>
    [ [ NOT ] DETERMINISTIC ]
    { <compound-statement> 
       | AS <sql-statement> <sql-statement>... }
-
+;
 ```
 
 
@@ -49,7 +49,7 @@ Obfuscate a function definition
 
 ```
 ALTER FUNCTION [ .]<function-name> 
-SET HIDDEN
+SET HIDDEN;
 ```
 
 
@@ -63,7 +63,7 @@ Recompile a function
 
 ```
 ALTER FUNCTION [ .]<function-name>
-RECOMPILE
+RECOMPILE;
 ```
 
 
@@ -153,7 +153,7 @@ BEGIN
 END 
 INSERT INTO new_table 
 SELECT keygen(1), ... 
-FROM old_table
+FROM old_table;
 ```
 
 Functions may be declared as DETERMINISTIC if they always return the same value for given input parameters. All user-defined functions are treated as deterministic unless they are declared NOT DETERMINISTIC. Deterministic functions return a consistent result for the same parameters and are free of side effects. That is, the database server assumes that two successive calls to the same function with the same parameters will return the same result without unwanted side-effects on the semantics of the query.
@@ -221,7 +221,7 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
 
 </b></dt>
 <dd>
@@ -229,7 +229,10 @@ Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
 
 
 
@@ -247,7 +250,7 @@ Requires one of:
 -   ALTER ANY OBJECT system privilege
 -   ALTER object-level privilege on the schema containing the function if the schema is owned by another user.
 
-For information on using a function created when connected as a data lake Relational Engine user, see [User-Defined Functions in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/abea6df6284d46c8b2265c477be1f704.html "User-defined functions are a class of procedures that return a single value to the calling environment.") :arrow_upper_right:.
+For information on using a function created when connected as a data lake Relational Engine user, see [User-Defined Functions in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/abea6df6284d46c8b2265c477be1f704.html "User-defined functions are a class of procedures that return a single value to the calling environment.") :arrow_upper_right:.
 
 
 
@@ -273,5 +276,9 @@ SQL – vendor extension to ISO/ANSI SQL grammar
 **Related Information**  
 
 
-[ALTER FUNCTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a61280af84f21015a184bc25f16886f8.html "Modifies an existing function. Include the entire modified function in the ALTER FUNCTION statement.") :arrow_upper_right:
+[CREATE FUNCTION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-function-statement-for-data-lake-relational-engine-sap-hana-db-managed-abddfd6.md "Creates a user-defined function in the database. A function can be created for another user by specifying an owner name. Subject to permissions, a user-defined function can be used in exactly the same way as other non-aggregate functions.")
+
+[DROP FUNCTION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-function-statement-for-data-lake-relational-engine-sap-hana-db-managed-58c58a9.md "Removes a user-defined function from the database.")
+
+[ALTER FUNCTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a61280af84f21015a184bc25f16886f8.html "Modifies an existing function. Include the entire modified function in the ALTER FUNCTION statement.") :arrow_upper_right:
 

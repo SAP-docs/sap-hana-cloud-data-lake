@@ -16,7 +16,7 @@ Syntax 1
 <dd>
 
 ```
-REGR_SXY( <dependent-expression>, <independent-expression> )
+REGR_SXY( <dependent-expression>, <independent-expression> );
 ```
 
 
@@ -30,7 +30,7 @@ Syntax 2
 
 ```
 REGR_SXY( <dependent-expression>, <independent-expression> )
-OVER ( <window-spec> )
+OVER ( <window-spec> );
 ```
 
 
@@ -86,7 +86,7 @@ Specified when using this function as a window function.
 
 <a name="loioa57748fd84f21015bfd08e9110638b53__REGR_SXY_returns1"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -101,7 +101,7 @@ This function converts its arguments to DOUBLE, performs the computation in doub
 The function is applied to the set of \(dependent-expression and *<independent-expression\>*\) pairs after eliminating all pairs for which either dependent-expression or *<independent-expression\>* is NULL. The function is computed simultaneously during a single pass through the data. After eliminating NULL values, the following computation is made, where y represents the dependent-expression and x represents the *<independent-expression\>*:
 
 ```
-REGR_COUNT(x, y) * COVAR_POP(x, y)
+REGR_COUNT(x, y) * COVAR_POP(x, y);
 ```
 
 > ### Note:  
@@ -135,5 +135,5 @@ SELECT REGR_SXY( Salary, ( YEAR( NOW() ) - YEAR( BirthDate ) ) )FROM Employees;
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[REGR_SXY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/1af764816b5444808ebdd1d7a87d2518.html "Returns the sum of products of the dependent and independent variables. Use REGR_SXY to evaluate the statistical validity of a regression model.") :arrow_upper_right:
+[REGR_SXY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/1af764816b5444808ebdd1d7a87d2518.html "Returns the sum of products of the dependent and independent variables. Use REGR_SXY to evaluate the statistical validity of a regression model.") :arrow_upper_right:
 

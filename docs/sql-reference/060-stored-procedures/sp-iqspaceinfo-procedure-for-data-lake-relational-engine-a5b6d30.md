@@ -6,15 +6,18 @@ Displays the number of blocks\(objects\) used by each object in the current data
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5b6d30884f21015b460b72ef2bc8109__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqspaceinfo ['main | [table <table-name> | index <index-name>] [...] ']
+sp_iqspaceinfo ['main | [table <table-name> | index <index-name>] [...] '];
 ```
 
 
@@ -56,7 +59,7 @@ The name of the index.
 
 ## Remarks
 
-For the current database, displays the object name, number of blocks\(or objects, in instances using cloud dbspaces\) used by each object, and the name of the dbspace. sp\_iqspaceinfo requires no parameters.
+For the current database, displays the object name, number of objects, and the name of the dbspace. sp\_iqspaceinfo requires no parameters.
 
 The information returned by sp\_iqspaceinfo is helpful in managing dbspaces.
 
@@ -82,7 +85,7 @@ None
 
 <a name="loioa5b6d30884f21015b460b72ef2bc8109__iq_refbb_1762"/>
 
-## Example
+## Examples
 
 This output is from the sp\_iqspaceinfo stored procedure run on the iqdemo database. Output for some tables and indexes are removed from this example:
 
@@ -114,6 +117,4 @@ Customers.DBA.ASIQ_IDX_T207_I10_HG            19       IQ_SYSTEM_MAIN
 [sp\_iqdbspace Procedure for Data Lake Relational Engine](sp-iqdbspace-procedure-for-data-lake-relational-engine-a5a34b5.md "Displays detailed information about each data lake Relational Engine dbspace.")
 
 [sp\_iqdbspaceinfo Procedure for Data Lake Relational Engine](sp-iqdbspaceinfo-procedure-for-data-lake-relational-engine-a5a3ca6.md "Displays the size of each object and subobject used in the specified table.")
-
-[Cloud Dbspaces](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2023_2_QRC/en-US/493eb818429e4996b3da4153192a9efa.html "Cloud dbspace is a new offering where the database engine stores a user dbspace in object storage solutions such as Microsoft Azure Blob Storage, AWS Simple Storage Service (S3), or Google Cloud Storage. In a cloud dbspace, database pages are physically stored as objects as opposed to regular file system blocks.") :arrow_upper_right:
 

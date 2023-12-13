@@ -6,8 +6,11 @@ Allows the user to change the threshold at which the optimizer decides to transf
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa6581bf484f21015b11ee6c2d9aa56be__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

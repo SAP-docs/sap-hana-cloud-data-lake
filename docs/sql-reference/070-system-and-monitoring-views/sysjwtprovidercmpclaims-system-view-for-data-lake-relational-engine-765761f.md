@@ -6,10 +6,13 @@ Lists claims set in JWT providers. The underlying system table for this view is 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio765761f7c3034452952eff4936be94a3__section_i2m_qpq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Lists claims set in JWT providers. The underlying system table for this view is 
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 jwt\_provider\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(256\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the JWT provider.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The name of the JWT provider.
 
 claim
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(256\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the claim.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ The name of the claim.
 
 operation
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(64\)
 
-
-
 </td>
 <td valign="top">
 
 The operation used to compare the claim and value: EQUALS or HAS MEMBER.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ The operation used to compare the claim and value: EQUALS or HAS MEMBER.
 
 value
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(512\)
 
-
-
 </td>
 <td valign="top">
 
 The value of the claim.
-
-
 
 </td>
 </tr>

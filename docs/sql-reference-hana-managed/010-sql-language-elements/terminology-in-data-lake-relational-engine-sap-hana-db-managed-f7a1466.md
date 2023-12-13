@@ -13,7 +13,7 @@ Data Lake Relational Engine Container Group
 </b></dt>
 <dd>
 
-The container group is created when you provision an SAP HANA database instance with data lake Relational Engine. A data lake Relational Engine instance can only have one container group. The container group is named **SYSHDL** and cannot be renamed.
+The container group contains the managed objects within the data lake Relational Engine. It is created when you provision an SAP HANA database instance with data lake Relational Engine. A data lake Relational Engine instance can only have one container group. The container group is named **SYSHDL** and cannot be renamed.
 
 
 
@@ -24,7 +24,7 @@ Data Lake Relational Engine Relational Container
 </b></dt>
 <dd>
 
-A relational container is a repository within the container group that contains data lake Relational Engine objects. A container group can have multiple relational containers, with the data isolated between containers. Each relational container name must be unique and uses a naming convention that combines the container group name with the user defined relational container name \(**SYSHDL\_*<relational\_container\_name\>***\).
+A relational container is a repository within the container group that contains data lake Relational Engine objects. A container group can have multiple relational containers, with the data isolated between containers. Each relational container name must be unique and uses a naming convention that combines the container group name with the relational container name \(**SYSHDL\_*<relational\_container\_name\>***\).
 
 
 
@@ -46,7 +46,7 @@ SAP HANA Database Container Group Administrator Role
 </b></dt>
 <dd>
 
-This is an SAP HANA database role that is granted the privileges to create and delete relational containers. This role has no access to the data within the relational container unless privileges are explicitly granted by the administrator of a relational container. The role is named **SYSHDL\_ ROLE**.
+This is an SAP HANA database role granted the privileges to create and delete relational containers. If granted with administrative privilege on the role, members can also manage role membership. This role has no access to the data within the relational container. The role is named **SYSHDL\_ ROLE**.
 
 
 
@@ -57,7 +57,7 @@ SAP HANA Database Container Administrator Role
 </b></dt>
 <dd>
 
-This is an SAP HANA database role that is granted the privileges to manage user access to a specific relational container. A user can be a member of multiple container administrator roles. Members of each container administrator role can only manage user access to that relational container unless explicitly granted privilege by the container administrator role of another container. The role name combines the container group name and the user defined relational container name with \_ROLE \(**SYSHDL\_*<relational\_container\_name\>*\_ROLE**\).
+This is an SAP HANA database role granted the privileges to manage objects within the a specific relational container. If granted administrative privilege on the role, members can also manage role membership. A user can be a member of multiple container administrator roles. The role name combines the container group and relational container names with the sufix \_ROLE \(**SYSHDL\_*<relational\_container\_name\>*\_ROLE**\).
 
 
 
@@ -68,7 +68,7 @@ Data Lake Relational Engine Relational Container Schemas
 </b></dt>
 <dd>
 
-Relational container schemas exist within the relational container. They allow you to further isolate data within a single relational container. Each relational container has one default schema, but you can add additional schemas as needed. Schemas contain data lake Relational Engine objects. The default schema name is prefaced with the name of the container group \(SYSHDL\) and the name of the relational container \(**SYSHDL\_*<relational\_container\_name\>***\). Additional schemas created preface the specified schema name with the container group and relational container names \(**SYSHDL\_*<relational\_container\_name\>*\_*<schema\_name\>***\). Once create, schema names cannot be changed.
+Relational container schemas contain data lake Relational Engine objects within the relational container. Access to the data within a schema can be controlled at the schema level, providing data isolation within a single relational container. Each relational container has one default schema, but you can add additional schemas as needed. The default schema name combines the name of the container group with the relational container name \(**SYSHDL\_*<relational\_container\_name\>***\). Additional schemas created combine the names of the container group and relational container with the name of the schema \(**SYSHDL\_*<relational\_container\_name\>*\_*<schema\_name\>***\). Schema names must be unique and cannot be renamed.
 
 
 
@@ -79,29 +79,7 @@ SAP HANA Database Relational Container Schema
 </b></dt>
 <dd>
 
-The SAP HANA database relational container schema resides in the SAP HANA database database and contains the automatically created SAP HANA database virtual tables that point to the corresponding data lake Relational Engine objects in the data lake Relational Engine relational container schema. This schema is created when the first data lake Relational Engine object is created. You cannot add or remove objects from this schema. This schema owns the SAP HANA database remote source that connects the instance to the corresponding data lake Relational Engine relational container and the REMOTE\_EXECUTE procedure used to manage the objects in the relational container. The schema has the same naming convention as the data lake Relational Engine relational container \(**SYSHDL\_*<relational\_container\_name\>* and SYSHDL\_*<relational\_container\_name\>*\_*<schema\_name\>***\).
-
-
-
-</dd><dt><b>
-
-Data Lake Relational Engine System Views
-
-</b></dt>
-<dd>
-
-These are system-created views of the metadata in the data lake Relational Engine. System views are stored in the SYS schema in the container group, outside of all relational containers. Access to the SYS schema is automatically granted to all members with access to the data of any relational container.
-
-
-
-</dd><dt><b>
-
-Data Lake Relational Engine Objects
-
-</b></dt>
-<dd>
-
-These are user-created objects within a data lake Relational Engine relational container schema.
+The SAP HANA database relational container schema resides in the SAP HANA database database and corresponds to data lake Relational Engine relational container schema with the same name. The SAP HANA database schema has the same naming convention as the corrsponding data lake Relational Engine schemas \(**SYSHDL\_*<relational\_container\_name\>* and SYSHDL\_*<relational\_container\_name\>*\_*<schema\_name\>*** respectively\).
 
 
 
@@ -123,7 +101,7 @@ SAP HANA Database Remote Source
 </b></dt>
 <dd>
 
-The remote source is the way SAP HANA database connects to data lake Relational Engine and accesses data. Each data lake Relational Engine relational container has its own dedicated remote source. The remote source has access to data in all schemas within the same data lake Relational Engine. The naming convention for the remote source combines the container group name \(SYSHDL\) and the relational container name, with \_SOURCE \(**SYSHDL\_*<relational\_container\_name\>*\_SOURCE**\).
+The remote source is the way SAP HANA database connects to data lake Relational Engine and accesses data. Each data lake Relational Engine relational container has its own dedicated remote source. The same remote source is used to access data in any schema within a single relational container. The naming convention for the remote source combines the container group and relational container names, with the suffix \_SOURCE \(**SYSHDL\_*<relational\_container\_name\>*\_SOURCE**\).
 
 
 
@@ -134,7 +112,18 @@ SAP HANA Database REMOTE\_EXECUTE Procedure
 </b></dt>
 <dd>
 
-This is an SAP HANA database procedure that automatically redirects statements defined within the procedure to run in the specified data lake Relational Engine relational container. Each relational container has a dedicated REMOTE\_EXECUTE procedure with privileges specific to the specified relational container. The procedure is automatically created in the SAP HANA database relational container schema when the relational container is created.
+This is an SAP HANA database procedure that automatically redirects data lake Relational Engine statements defined within the procedure to run on a specified data lake Relational Engine relational container. Each relational container has a dedicated REMOTE\_EXECUTE procedure with privileges specific to a single relational container. The procedure is automatically created in the SAP HANA database relational container schema when the relational container is created. Transactions defined within the procedure run on the data lake Relational Engine worker node.
+
+
+
+</dd><dt><b>
+
+SAP HANA Database REMOTE\_EXECUTE\_DDL Procedure
+
+</b></dt>
+<dd>
+
+This procedure is the same as the REMOTE\_EXECUTE procedure except that transactions defined within the procedure run on the data lake Relational Engine coordinator node, not the worker node.
 
 
 
@@ -156,7 +145,7 @@ Data Lake Relational Engine HDLADMIN User
 </b></dt>
 <dd>
 
-HDLADMIN is the default data lake Relational Engine user \(not an SAP HANA database user\) that is created when you provision a data lake Relational Engine instance. It allows you to directly connect to data lake Relational Engine and manage the data. By default, HDLADMIN has no privilege to data within relational containers. It must be explicitly granted by the container administrator role of the relational containers. For more information, see [HDLADMIN and Relational Containers in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/8511271f325c49aa87713e815f4708c9.html "Relational containers are isolated from each other and HDLADMIN by design.") :arrow_upper_right:.
+HDLADMIN is the default data lake Relational Engine user \(not an SAP HANA database user\) that is created when you provision a data lake Relational Engine instance. It allows you to directly connect to data lake Relational Engine and manage the data. By default, HDLADMIN has no privilege to data within relational containers. It must be explicitly granted by a member of the container administrator role of the relational container. For more information, see [Relational Containers and HDLADMIN in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/8511271f325c49aa87713e815f4708c9.html "Relational containers are isolated from each other, and the HDLADMIN user, by design.") :arrow_upper_right:.
 
 
 

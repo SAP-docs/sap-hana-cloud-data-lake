@@ -6,10 +6,13 @@ Replaces a trigger definition with a modified version. You must include the enti
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be445c66c5f10148227bf899726c725__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,7 +26,7 @@ Syntax 1 - Change the definition of a trigger
 <dd>
 
 ```
-ALTER TRIGGER <trigger-name> 
+ALTER TRIGGER <trigger-name>; 
    <trigger-type>
    { <trigger-event>[, ...  ] | UPDATE OF <column-name>[, ...] }
    [ ORDER <integer> ] ON <table-name>
@@ -88,7 +91,7 @@ ALTER TRIGGER <trigger-name> ON [<owner.>] <table-name> SET HIDDEN
 <dl class="glossary">
 <dt><b>
 
- *<trigger-type\>* 
+*<trigger-type\>* 
 
 </b></dt>
 <dd>
@@ -105,7 +108,7 @@ If you are defining an INSTEAD OF trigger, then you cannot use the UPDATE OF *<c
 
 </dd><dt><b>
 
- *<trigger-event\>* 
+*<trigger-event\>* 
 
 </b></dt>
 <dd>
@@ -237,7 +240,7 @@ The trigger fires only for rows where the search-condition evaluates to true. Th
 
 </dd><dt><b>
 
- *<trigger-body\>* 
+*<trigger-body\>* 
 
 </b></dt>
 <dd>
@@ -293,14 +296,10 @@ The privilege required varies by clause.
 
 Clause
 
-
-
 </th>
 <th valign="top">
 
 Privilege Name
-
-
 
 </th>
 </tr>
@@ -308,8 +307,6 @@ Privilege Name
 <td valign="top">
 
 Alter a trigger on a view
-
-
 
 </td>
 <td valign="top">
@@ -329,8 +326,6 @@ Requires one of:
 <td valign="top">
 
 Alter a trigger on a materialized view
-
-
 
 </td>
 <td valign="top">

@@ -6,10 +6,12 @@ View a list of all the schemas on a remote server using a system procedure.
 
 
 
-> ### Restriction:  
-> This topic is limited to SQL on Files use cases.
-> 
-> This SQL on Files stored procedure can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioe9fdd659ccd646848bdf02d401046679__section_fry_b3b_nqb"/>
+
+## Usage
+
+-   This topic is limited to SQL on Files use cases.
+-   This SQL on Files stored procedure can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -21,7 +23,7 @@ View a list of all the schemas on a remote server using a system procedure.
 sp_remote_schemas(
 	<remote-server-name>, 
 	[	<remote-schema-name>	]
-)
+);
 ```
 
 
@@ -34,7 +36,7 @@ sp_remote_schemas(
 <dl>
 <dt><b>
 
- *<remote-server-name\>* 
+*<remote-server-name\>* 
 
 </b></dt>
 <dd>
@@ -87,6 +89,8 @@ The specified server must be defined with the [CREATE REMOTE SERVER Statement fo
 You have been granted the HDL\_FILES\_SERVICE\_ADMIN role.
 
 
+
+## Example
 
 The following example returns the schemas on the remote server `sof`:
 

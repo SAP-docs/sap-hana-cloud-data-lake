@@ -7,7 +7,7 @@ Returns the internal row ID value for each row of the table.
 
 
 ```
-ROWID ( <table-name> ) … FROM <table-name>
+ROWID ( <table-name> ) … FROM <table-name>;
 ```
 
 
@@ -36,7 +36,7 @@ The name of the table. Specify the name of the table within the parentheses with
 
 <a name="loio77bc1bdbb46f48368bb3398b4cabaea0__section_xjj_prt_vrb"/>
 
-## Returns
+## Result Set
 
 UNSIGNED BIGINT
 
@@ -68,7 +68,7 @@ You must specify the `FROM` *<table-name\>* clause.
 -   The following statement returns the row ID values 1 through 10:
 
     ```
-    SELECT ROWID( "PRODUCTS" ) FROM PRODUCTS
+    SELECT ROWID( "PRODUCTS" ) FROM PRODUCTS;
     ```
 
 
@@ -77,71 +77,55 @@ You must specify the `FROM` *<table-name\>* clause.
     <th valign="top" rowspan="1">
 
     rowid\(Products\)
-
-
     
     </th>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        1
-
-
+    1
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        2
-
-
+    2
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        3
-
-
+    3
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        .
-
-
+    .
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        .
-
-
+    .
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        .
-
-
+    .
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        10
-
-
+    10
     
     </td>
     </tr>
@@ -152,7 +136,7 @@ You must specify the `FROM` *<table-name\>* clause.
     ```
     SELECT PRODUCTS.ID, ROWID ( PRODUCTS )
     FROM PRODUCTS
-    WHERE PRODUCTS.ID < 400
+    WHERE PRODUCTS.ID < 400;
     ```
 
 
@@ -161,63 +145,47 @@ You must specify the `FROM` *<table-name\>* clause.
     <th valign="top" rowspan="1">
 
     ID
-
-
     
     </th>
     <th valign="top" rowspan="1">
 
     rowid \(Products\)
-
-
     
     </th>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        300
-
-
+    300
     
     </td>
     <td valign="top" rowspan="1">
     
-        1
-
-
+    1
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        301
-
-
+    301
     
     </td>
     <td valign="top" rowspan="1">
     
-        2
-
-
+    2
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        302
-
-
+    302
     
     </td>
     <td valign="top" rowspan="1">
     
-         3
-
-
+     3
     
     </td>
     </tr>
@@ -227,12 +195,12 @@ You must specify the `FROM` *<table-name\>* clause.
 
     ```
     DELETE FROM PRODUCTS
-    WHERE ROWID ( PRODUCTS ) > 50
+    WHERE ROWID ( PRODUCTS ) > 50;
     ```
 
 
 **Related Information**  
 
 
-[ROWID Function [Miscellaneous] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a57cbfb484f21015b1a6f34fe17463d2.html "Returns the internal row ID value for each row of the table.") :arrow_upper_right:
+[ROWID Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57cbfb484f21015b1a6f34fe17463d2.html "Returns the internal row ID value for each row of the table.") :arrow_upper_right:
 

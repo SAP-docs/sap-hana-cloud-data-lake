@@ -6,8 +6,11 @@ Specifies the percent of prefetch resources in queries involving hash-based algo
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loio770c29dac247442cb39b2cbc89be1f48__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

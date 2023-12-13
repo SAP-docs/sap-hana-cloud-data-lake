@@ -6,16 +6,19 @@ Displays index metadata for a given index.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5ad0e4b84f21015866c8fef1c8fee50__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-dbo.sp_iqindexmetadata '<index-name>'
-[ , '<table-name>' [ , '<owner-name>' ] ] 
+hdladmin.sp_iqindexmetadata '<index-name>'
+[ , '<table-name>' [ , '<owner-name>' ] ]; 
 ```
 
 
@@ -42,15 +45,9 @@ For all indexes except FP, use the text name defined for the index. For FP index
 
 
 
-<a name="loioa5ad0e4b84f21015866c8fef1c8fee50__iq_refbb_1614"/>
+<a name="loioa5ad0e4b84f21015866c8fef1c8fee50__section_ecl_j35_xyb"/>
 
-## Remarks
-
-You can optionally restrict the output to only those indexes on a specified table, and to only those indexes belonging to a specified owner.
-
-Specifying a table name limits output to those indexes belonging to that table. Specifying an owner name limits output to indexes owned by that owner. Omitted parameters default to NULL. You can specify only one index per procedure.
-
-User supplier IQ UNIQUE value for the column is available through sp\_iqindexmetadata. It reports exact cardinality if Unique HG are present. It reports 0 as cardinality if \(only\) non-unique HG is present.
+## Result Set
 
 The first row of output for all index types is the owner name, table name, and index name for the index. Additional output is index type specific.
 
@@ -61,14 +58,10 @@ The first row of output for all index types is the owner name, table name, and i
 
 Index Type
 
-
-
 </th>
 <th valign="top">
 
 Metadata Returned
-
-
 
 </th>
 </tr>
@@ -77,14 +70,10 @@ Metadata Returned
 
 CMP, DATE, DTTM, TIME
 
-
-
 </td>
 <td valign="top">
 
 Type, Version
-
-
 
 </td>
 </tr>
@@ -93,14 +82,10 @@ Type, Version
 
 FP
 
-
-
 </td>
 <td valign="top">
 
 Type, Style, Version, DBType, Maximum Width, EstUnique, TokenCount, NBit, CountSize, DictSize, CountLen, MaxKeyToken, MinKey Token, MinCount, MaxCount, DistinctKey, BArray Version, RidMap Version, IQ Unique
-
-
 
 </td>
 </tr>
@@ -109,30 +94,10 @@ Type, Style, Version, DBType, Maximum Width, EstUnique, TokenCount, NBit, CountS
 
 HG
 
-
-
 </td>
 <td valign="top">
 
 Type, Version, Maintains Exact Distinct, Level 0 Threshold, Force Physical Delete, Maximum Level Count, Tier ratio, Auto sizing, Average Load Size \(records\), Active Subindex count, Cardinality Range Min - Max, Estimated Cardinality, Accuracy of Cardinality
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-HNG
-
-
-
-</td>
-<td valign="top">
-
-Type, Version, BitsPerBlockmap, NumberOfBits
-
-
 
 </td>
 </tr>
@@ -141,14 +106,10 @@ Type, Version, BitsPerBlockmap, NumberOfBits
 
 LF
 
-
-
 </td>
 <td valign="top">
 
 Type, Version, IndexStatus, NumberOfBlockmaps, BitsPerBlockmap, Distinct Keys
-
-
 
 </td>
 </tr>
@@ -157,18 +118,26 @@ Type, Version, IndexStatus, NumberOfBlockmaps, BitsPerBlockmap, Distinct Keys
 
 WD
 
-
-
 </td>
 <td valign="top">
 
 Type, Version, KeySize, Delimiters, DelimiterCount, MaxKeyWordLength, PermitEmptyWord
 
-
-
 </td>
 </tr>
 </table>
+
+
+
+<a name="loioa5ad0e4b84f21015866c8fef1c8fee50__iq_refbb_1614"/>
+
+## Remarks
+
+You can optionally restrict the output to only those indexes on a specified table, and to only those indexes belonging to a specified owner.
+
+Specifying a table name limits output to those indexes belonging to that table. Specifying an owner name limits output to indexes owned by that owner. Omitted parameters default to NULL. You can specify only one index per procedure.
+
+User supplier IQ UNIQUE value for the column is available through sp\_iqindexmetadata. It reports exact cardinality if Unique HG are present. It reports 0 as cardinality if \(only\) non-unique HG is present.
 
 
 
@@ -196,12 +165,12 @@ None
 
 <a name="loioa5ad0e4b84f21015866c8fef1c8fee50__iq_refbb_1617"/>
 
-## Example
+## Examples
 
 This example determines the name of the FP index for column C1 on table table1 and then displays the metadata of the index. First, determine the iname value for the FP index.
 
 ```
-SELECT * FROM SYS.SYSINDEXES WHERE tname='table1'
+SELECT * FROM SYS.SYSINDEXES WHERE tname='table1';
 ```
 
 
@@ -211,220 +180,106 @@ SELECT * FROM SYS.SYSINDEXES WHERE tname='table1'
 
 icreator
 
-
-
 </th>
 <th valign="top">
 
 iname
-
-
 
 </th>
 <th valign="top">
 
 fname
 
-
-
 </th>
 <th valign="top">
 
 creator
-
-
 
 </th>
 <th valign="top">
 
 tname
 
-
-
 </th>
 </tr>
 <tr>
 <td valign="top">
 
-dbo
+hdladmin
 
+</td>
+<td valign="top">
 
+ASIQ\_ID\_T1759\_C1\_FP
+
+</td>
+<td valign="top">
+
+user\_object\_store
+
+</td>
+<td valign="top">
+
+hdladmin
 
 </td>
 <td valign="top">
 
 table1
-
-
-
-</td>
-<td valign="top">
-
-IQ\_SYSTEM\_MAIN
-
-
-
-</td>
-<td valign="top">
-
-dbo
-
-
-
-</td>
-<td valign="top">
-
-table1
-
-
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-dbo
-
-
+hdladmin
 
 </td>
 <td valign="top">
 
-ASIQ\_ID\_T1707\_C1\_FP
-
-
+ASIQ\_ID\_T1759\_C2\_FP
 
 </td>
 <td valign="top">
 
-IQ\_SYSTEM\_MAIN
-
-
+user\_object\_store
 
 </td>
 <td valign="top">
 
-dbo
-
-
+hdladmin
 
 </td>
 <td valign="top">
 
 table1
-
-
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-dbo
-
-
+hdladmin
 
 </td>
 <td valign="top">
 
-ASIQ\_ID\_T1707\_C2\_FP
-
-
+HG1
 
 </td>
 <td valign="top">
 
-IQ\_SYSTEM\_MAIN
-
-
+user\_object\_store
 
 </td>
 <td valign="top">
 
-dbo
-
-
+hdladmin
 
 </td>
 <td valign="top">
 
 table1
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-dbo
-
-
-
-</td>
-<td valign="top">
-
-ASIQ\_ID\_T1707\_C3\_FP
-
-
-
-</td>
-<td valign="top">
-
-IQ\_SYSTEM\_MAIN
-
-
-
-</td>
-<td valign="top">
-
-dbo
-
-
-
-</td>
-<td valign="top">
-
-table1
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-dbo
-
-
-
-</td>
-<td valign="top">
-
-ASIQ\_ID\_T1707\_I4\_HG
-
-
-
-</td>
-<td valign="top">
-
-IQ\_SYSTEM\_MAIN
-
-
-
-</td>
-<td valign="top">
-
-dbo
-
-
-
-</td>
-<td valign="top">
-
-table1
-
-
 
 </td>
 </tr>
@@ -433,7 +288,7 @@ table1
 Then, display the metadata for the FP index on the table.
 
 ```
-sp_iqindexmetadata 'ASIQ_IDX_T1707_C1_FP','table1','dbo'
+sp_iqindexmetadata 'ASIQ_IDX_T1759_C1_FP','table1','hdladmin';
 ```
 
 
@@ -443,67 +298,49 @@ sp_iqindexmetadata 'ASIQ_IDX_T1707_C1_FP','table1','dbo'
 
 Value1
 
-
-
 </th>
 <th valign="top">
 
 Value2
-
-
 
 </th>
 <th valign="top">
 
 Value3
 
+</th>
+</tr>
+<tr>
+<th valign="top">
 
+HDLADMIN
+
+</th>
+<th valign="top">
+
+table1
+
+</th>
+<th valign="top">
+
+ASIQ\_IDX\_T1759\_C1\_FP
 
 </th>
 </tr>
 <tr>
 <td valign="top">
 
-dbo
-
-
+\-------------------------------
 
 </td>
 <td valign="top">
 
-table1
-
-
+\-------------------------------
 
 </td>
 <td valign="top">
 
-ASIQ\_IDX\_T1707\_C1\_FP
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-–––––––––––––––––––--
-
-
-
-</td>
-<td valign="top">
-
-–––––––––––––––––––--
-
-
-
-</td>
-<td valign="top">
-
-–––––––––––––––––––--
-
-
+\-------------------------------
 
 </td>
 </tr>
@@ -512,21 +349,15 @@ ASIQ\_IDX\_T1707\_C1\_FP
 
 Type
 
-
-
 </td>
 <td valign="top">
 
 FP
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -535,21 +366,15 @@ FP
 
 Style
 
-
-
 </td>
 <td valign="top">
 
 NBit FP
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -558,21 +383,15 @@ NBit FP
 
 Version
 
-
-
 </td>
 <td valign="top">
 
 4
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -581,21 +400,15 @@ Version
 
 DBType
 
-
-
 </td>
 <td valign="top">
 
 11
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -604,21 +417,15 @@ DBType
 
 Maximum Width
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -627,21 +434,15 @@ Maximum Width
 
 EstUnique
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -650,21 +451,15 @@ EstUnique
 
 TokenCount
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -673,21 +468,15 @@ TokenCount
 
 NBit
 
-
-
 </td>
 <td valign="top">
 
 1
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -696,21 +485,15 @@ NBit
 
 CountSize
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -719,21 +502,15 @@ CountSize
 
 DictSize
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -742,67 +519,49 @@ DictSize
 
 CountLen
 
-
-
 </td>
 <td valign="top">
 
 4
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-MaxKey Token
-
-
+MaxKeyToken
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-MinKey Token
-
-
+MinKeyToken
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -811,21 +570,15 @@ MinKey Token
 
 MinCount
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -834,21 +587,15 @@ MinCount
 
 MaxCount
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -857,21 +604,15 @@ MaxCount
 
 DistinctKey
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -880,21 +621,15 @@ DistinctKey
 
 BArray Version
 
-
-
 </td>
 <td valign="top">
 
 2
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -903,21 +638,15 @@ BArray Version
 
 RidMap Version
 
-
-
 </td>
 <td valign="top">
 
 1
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -926,53 +655,58 @@ RidMap Version
 
 IQ Unique
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 <td valign="top">
 
  
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
+\-------------------------------
+
+</td>
+<td valign="top">
+
+\-------------------------------
+
+</td>
+<td valign="top">
+
+\-------------------------------
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-=======================...
-
-
+===================
 
 </td>
 <td valign="top">
 
-=======================...
-
-
+===================
 
 </td>
 <td valign="top">
 
-=======================...
-
-
+===================
 
 </td>
 </tr>
 </table>
 
-This example displays the metadata for the non high group index nonhg on column C1 on table table1.
+This example displays the metadata for the high group index HG1 on table table1.
 
 ```
-sp_iqindexmetadata 'nonhg','table1','dbo'
+sp_iqindexmetadata 'HG1','table1','hdladmin';
 ```
 
 
@@ -982,44 +716,49 @@ sp_iqindexmetadata 'nonhg','table1','dbo'
 
 Value1
 
-
-
 </th>
 <th valign="top">
 
 Value2
-
-
 
 </th>
 <th valign="top">
 
 Value3
 
-
-
 </th>
 </tr>
 <tr>
 <td valign="top">
 
-DBA
-
-
+HDLADMIN
 
 </td>
 <td valign="top">
 
 table1
 
+</td>
+<td valign="top">
 
+HG1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+\-------------------------------
 
 </td>
 <td valign="top">
 
-nonhg
+\-------------------------------
 
+</td>
+<td valign="top">
 
+\-------------------------------
 
 </td>
 </tr>
@@ -1028,21 +767,15 @@ nonhg
 
 Type
 
-
-
 </td>
 <td valign="top">
 
 HG
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1051,21 +784,15 @@ HG
 
 Version
 
-
-
 </td>
 <td valign="top">
 
 3
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1074,21 +801,15 @@ Version
 
 Maintains Exact Distinct
 
-
-
 </td>
 <td valign="top">
 
-No
-
-
+Yes
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1097,21 +818,15 @@ No
 
 Level 0 Threshold
 
-
-
 </td>
 <td valign="top">
 
-3000000
-
-
+No threshold
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1120,21 +835,15 @@ Level 0 Threshold
 
 Force Physical Delete
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1143,21 +852,15 @@ Yes
 
 Maximum Level Count
 
-
-
 </td>
 <td valign="top">
 
-10
-
-
+1
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1166,21 +869,15 @@ Maximum Level Count
 
 Tier ratio
 
-
-
 </td>
 <td valign="top">
 
-30
-
-
+1
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1189,44 +886,32 @@ Tier ratio
 
 Auto sizing
 
-
-
 </td>
 <td valign="top">
 
-On
-
-
+Off
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Avarage Load Size \(records\)
-
-
+Average Load Size \(records\)
 
 </td>
 <td valign="top">
 
-58622
-
-
+Not determined yet
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1235,21 +920,15 @@ Avarage Load Size \(records\)
 
 Active Subindex count
 
-
-
 </td>
 <td valign="top">
 
-3
-
-
+0
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1258,21 +937,15 @@ Active Subindex count
 
 Cardinality Range Min - Max
 
-
-
 </td>
 <td valign="top">
 
-5-5
-
-
+0-0
 
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -1281,665 +954,66 @@ Cardinality Range Min - Max
 
 Estimated Cardinality
 
-
-
 </td>
 <td valign="top">
 
-5
-
-
+0
 
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Accuracy of Cardinality
-
-
+Accuracy of Cardinality \(%\)
 
 </td>
 <td valign="top">
 
 100
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Level: 0 Main Index Total Row Count
-
-
+\-------------------------------
 
 </td>
 <td valign="top">
 
-1
-
-
+\-------------------------------
 
 </td>
 <td valign="top">
 
- 
-
-
+\-------------------------------
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Level: 0 Main Index Deleted Row Count
+===================
 
-
-
-</td>
-<td valign="top">
-
-0
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 0 Main Index \# of Btree Pages in Main btree
-
-
-
-</td>
-<td valign="top">
-
-1
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 0 Main Index \# of Garray Pages
-
-
-
-</td>
-<td valign="top">
-
-1
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 0 Main Index \# of Keys in Main Btree
-
-
-
-</td>
-<td valign="top">
-
-1
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 0 Main Index \# of Keys Probed in Btree
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 0 Main Index \# of Keys Found Duplicate in Btree
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 0 Main Index \# of Keys Possible Distinct in Btree
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Main Index Total Row Count
-
-
-
-</td>
-<td valign="top">
-
-3145747
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Main Index Deleted Row Count
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Main Index \# of Btree Pages in Main btree
-
-
-
-</td>
-<td valign="top">
-
-1
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Main Index \# of Btree Pages in Conjugate btree
-
-
-
-</td>
-<td valign="top">
-
-1
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Main Index \# of Garray Pages
-
-
-
-</td>
-<td valign="top">
-
-2
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Main Index \# of Keys in Main Btree
-
-
-
-</td>
-<td valign="top">
-
-8
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Main Index \# of Keys in Conjugate Btree
-
-
-
-</td>
-<td valign="top">
-
-3
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Main Index \# rows in Conjugate Btree
-
-
-
-</td>
-<td valign="top">
-
-2949127
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Main Index \# of Keys Probed in Btree
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Main Index \# of Keys Found Duplicate in Btree
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Main Index \# of Keys Possible Distinct in Btree
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Incremental Index Total Row Count
-
-
-
-</td>
-<td valign="top">
-
-1
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Incremental Index Deleted Row Count
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Incremental Index \# of Btree Pages
-
-
-
-</td>
-<td valign="top">
-
-1
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Incremental Index \# of Garray Pages
-
-
-
-</td>
-<td valign="top">
-
-1
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Incremental Index \#of Keys in Btree
-
-
-
-</td>
-<td valign="top">
-
-1
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Incremental Index \# of Keys Probed in Btree
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Incremental Index \# of Keys Found Duplicate in Btree
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Level: 1 Incremental Index \# of Keys Possible Distinct in Btree
-
-
-
 </td>
 <td valign="top">
 
-0
+===================
 
-
-
 </td>
 <td valign="top">
-
- 
-
 
+===================
 
 </td>
 </tr>

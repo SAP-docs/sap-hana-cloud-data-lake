@@ -6,8 +6,11 @@ Specifies the timeout, in seconds, for MIPC \(multiplex interprocess communicati
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioff979e77cda0428792890114e4ec51d4__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

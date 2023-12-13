@@ -16,7 +16,7 @@ Syntax 1
 <dd>
 
 ```
-COVAR_POP ( <dependent-expression>, <independent-expression> )
+COVAR_POP ( <dependent-expression>, <independent-expression> );
 ```
 
 
@@ -30,7 +30,7 @@ Syntax 2
 
 ```
 COVAR_POP (<dependent-expression>, <independent-expression> )
-OVER ( <window-spec> )
+OVER ( <window-spec> );
 ```
 
 
@@ -93,7 +93,7 @@ This function converts its arguments to DOUBLE, performs the computation in doub
 Both *<dependent-expression\>* and *<independent-expression\>* are numeric. The function is applied to the set of \(*<dependent-expression\>*, *<independent-expression\>*\) after eliminating the pairs for which either *<dependent-expression\>* or *<independent-expression\>* is NULL. The following computation is made, where *<x\>* represents *<dependent-expression\>* and *<y\>* represents *<independent-expression\>*:
 
 ```
-(SUM(x*y) - SUM(x) * SUM(y) / n) / n
+(SUM(x*y) - SUM(x) * SUM(y) / n) / n;
 ```
 
 > ### Note:  
@@ -124,5 +124,5 @@ SELECT COVAR_POP( Salary, ( YEAR( NOW( ) ) - YEAR( BirthDate ) ) ) FROM Employee
 **Related Information**  
 
 
-[COVAR_POP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/6d40c8333876450388dfaa9078b06644.html "Returns the population covariance of a set of number pairs.") :arrow_upper_right:
+[COVAR_POP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/6d40c8333876450388dfaa9078b06644.html "Returns the population covariance of a set of number pairs.") :arrow_upper_right:
 

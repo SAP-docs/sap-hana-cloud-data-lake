@@ -6,10 +6,13 @@ Each row in the SYSTEXTIDXTAB system view describes a generated table that is pa
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3beacafc6c5f10148800a99aa1602905__section_i2m_qpq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYSTEXTIDXTAB system view describes a generated table that is pa
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 index\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ For internal use only.
 
 sequence
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ For internal use only.
 
 table\_type
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ For internal use only.
 
 table\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>

@@ -7,7 +7,7 @@ Calculates an arithmetically \(or linearly\) weighted average.
 
 
 ```
-WEIGHTED_AVG (<expression>) OVER (<window-spec>)
+WEIGHTED_AVG (<expression>) OVER (<window-spec>);
 ```
 
 
@@ -53,7 +53,7 @@ A weighted average is an average in which each quantity to be averaged is assign
 
 Use the `WEIGHTED_AVG` function to create a weighted moving average. In a weighted moving average, weights decrease arithmetically over time. Weights decrease from the highest weight for the most recent data points, down to zero.
 
-   
+  
   
 **WEIGHTED\_AVG Calculation**
 
@@ -91,7 +91,7 @@ SELECT DepartmentID, Surname, Salary,
 WEIGHTED_AVG(Salary) OVER (PARTITION BY DepartmentID
 ORDER BY YEAR(StartDate) DESC) as "W_AVG"
 FROM Employees
-WHERE State IN ('FL') ORDER BY DepartmentID
+WHERE State IN ('FL') ORDER BY DepartmentID;
 ```
 
 The returned result set is:
@@ -103,28 +103,20 @@ The returned result set is:
 
 DepartmentID
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Surname
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
 Salary
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 W\_AVG
-
-
 
 </th>
 </tr>
@@ -132,29 +124,21 @@ W\_AVG
 <td valign="top" rowspan="1">
 
 100
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 Lull
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 87,900.000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 87,900.000000
-
-
 
 </td>
 </tr>
@@ -163,28 +147,20 @@ Lull
 
 100
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Gowda
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 59,840.000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 69,193.333333
-
-
 
 </td>
 </tr>
@@ -192,29 +168,21 @@ Gowda
 <td valign="top" rowspan="1">
 
 200
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 Sterling
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 64,900.000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 64,900.000000
-
-
 
 </td>
 </tr>
@@ -223,28 +191,20 @@ Sterling
 
 200
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Kelly
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 87,500.000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 79,966.666667
-
-
 
 </td>
 </tr>
@@ -253,28 +213,20 @@ Kelly
 
 300
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Litton
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 58,930.000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 58,930.000000
-
-
 
 </td>
 </tr>
@@ -282,59 +234,43 @@ Litton
 <td valign="top" rowspan="1">
 
 400
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 Evans
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 68,940.000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 68,940.000000
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top" rowspan="1">
 
 400
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 Charlton
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 28,300.000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 41,846.666667
-
-
 
 </td>
 </tr>
@@ -343,28 +279,20 @@ Charlton
 
 400
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Francis
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 53,870.000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 47,858.333333
-
-
 
 </td>
 </tr>
@@ -377,5 +305,5 @@ Francis
 
 [EXP\_WEIGHTED\_AVG Function \[Aggregate\] for Data Lake Relational Engine](exp-weighted-avg-function-aggregate-for-data-lake-relational-engine-a551b4f.md "Calculates an exponential weighted moving average. Weightings determine the relative importance of each quantity that makes up the average.")
 
-[WEIGHTED_AVG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7a370d0d94cb4061a4de45b28ddbac36.html "Calculates an arithmetically (or linearly) weighted average.") :arrow_upper_right:
+[WEIGHTED_AVG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7a370d0d94cb4061a4de45b28ddbac36.html "Calculates an arithmetically (or linearly) weighted average.") :arrow_upper_right:
 

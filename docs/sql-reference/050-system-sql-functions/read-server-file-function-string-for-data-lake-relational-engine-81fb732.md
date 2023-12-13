@@ -7,7 +7,7 @@ Reads data from the specified file on the server and returns the full or partial
 
 
 ```
-READ_SERVER_FILE( <filename> [ , <start> [ , <length> ] ] )
+READ_SERVER_FILE( <filename> [ , <start> [ , <length> ] ] );
 ```
 
 
@@ -20,7 +20,7 @@ READ_SERVER_FILE( <filename> [ , <start> [ , <length> ] ] )
 <dl>
 <dt><b>
 
- *<filename\>* 
+*<filename\>* 
 
 </b></dt>
 <dd>
@@ -38,7 +38,7 @@ For diagnostic files, *<filename\>* requires the common prefix:
 
 </dd><dt><b>
 
- *<start\>* 
+*<start\>* 
 
 </b></dt>
 <dd>
@@ -53,7 +53,7 @@ The start position of the file to read, in bytes. The first byte in the file is 
 
 </dd><dt><b>
 
- *<length\>* 
+*<length\>* 
 
 </b></dt>
 <dd>
@@ -73,7 +73,7 @@ The length of the file to read, in bytes.
 
 <a name="loio81fb732a6ce21014b442b1082d0be5af__read_server_file_function_returns"/>
 
-## Returns
+## Result Set
 
 LONG BINARY
 
@@ -115,12 +115,14 @@ Not in the standard.
 
 
 
+## Example
+
 ```
-SELECT read_server_file('/diag/logs/mpx-writer-0-0/iqaas_20211217_110352.331_mpx-coord-0.iqmsg')
+SELECT read_server_file('/diag/logs/mpx-writer-0-0/iqaas_20211217_110352.331_mpx-coord-0.iqmsg');
 ```
 
 **Related Information**  
 
 
-[READ_SERVER_FILE Function [String] for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/0eaddd0e507e47f397ef96f11b3d3868.html "Reads data from the specified file on the server and returns the full or partial contents of the file as a LONG BINARY value.") :arrow_upper_right:
+[READ_SERVER_FILE Function \[String\] for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/0eaddd0e507e47f397ef96f11b3d3868.html "Reads data from the specified file on the server and returns the full or partial contents of the file as a LONG BINARY value.") :arrow_upper_right:
 

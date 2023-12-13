@@ -6,12 +6,16 @@ Displays all roles granted to a user-defined role or a user, or displays the ent
 
 
 
+<a name="loio8c15112761fa4dba8aa2d0cb3a89db92__section_dh4_3db_1yb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+
 > ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Running Procedures](remote-execute-usage-examples-for-running-procedures-3e7f86d.md) for more information.
+> This syntax cannot be run when connected to SAP HANA database as a SAP HANA database user and using SAP HANA database REMOTE\_EXECUTE or REMOTE\_EXECUTE\_QUERY.
 
 
 
@@ -19,7 +23,7 @@ Displays all roles granted to a user-defined role or a user, or displays the ent
 sp_displayroles(
    [ <user_role_name> ], 
    [ <display_mode> ],
-   [ <grant_type> ] )
+   [ <grant_type> ] );
 ```
 
 
@@ -85,17 +89,6 @@ If no argument is specified, `ALL` is used.
 
 
 
-<a name="loio8c15112761fa4dba8aa2d0cb3a89db92__section_ivx_djx_s3b"/>
-
-## Privileges
-
-Requires one of:
-
--   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
-
-
-
 <a name="loio8c15112761fa4dba8aa2d0cb3a89db92__section_ik3_dc2_srb"/>
 
 ## Result Set
@@ -107,21 +100,15 @@ Requires one of:
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -130,21 +117,15 @@ Description
 
 `role_name`
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Lists role/system privilege name.
-
-
 
 </td>
 </tr>
@@ -153,21 +134,15 @@ Lists role/system privilege name.
 
 `parent_role_name`
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Lists role name of the parent.
-
-
 
 </td>
 </tr>
@@ -176,21 +151,15 @@ Lists role name of the parent.
 
 `grant_type`
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(10\)
 
-
-
 </td>
 <td valign="top">
 
 Lists grant type.
-
-
 
 </td>
 </tr>
@@ -199,21 +168,15 @@ Lists grant type.
 
 `role_level`
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 For `Expand_down` mode, 1 indicates directly granted roles; 2 indicates the next hierarchy below, and so on. For `Expand_up` mode, 0 indicates the roles to which the specified role is granted; -1 indicates the next hierarchy above, and so on.
-
-
 
 </td>
 </tr>
@@ -234,6 +197,20 @@ For:
 
 
 
+<a name="loio8c15112761fa4dba8aa2d0cb3a89db92__section_z5w_tw1_1yb"/>
+
+## Privileges
+
+
+
+### 
+
+Requires EXECUTE object-level privilege on the procedure.
+
+To return the system privileges or roles for another user ID or a role, require the MANAGE ROLES system privilege.
+
+
+
 <a name="loio8c15112761fa4dba8aa2d0cb3a89db92__section_fhr_2c2_srb"/>
 
 ## Side Effects
@@ -246,796 +223,238 @@ None
 
 ## Examples
 
-These examples assume that the following GRANT statements have been executed:
+This example uses sp\_displayroles to return all roles or system privileges granted to USER1:
 
 ```
-
-GRANT MONITOR TO r2;GRANT CHECKPOINT TO r1;
-GRANT ROLE r2 TO r1 WITH ADMIN OPTION;
-GRANT ROLE r3 TO r2 WITH NO ADMIN OPTION;
-GRANT ROLE r4 TO r3 WITH ADMIN ONLY OPTION;
-GRANT ROLE r1 TO user1;
-GRANT ROLE r1 TO r7;
-GRANT ROLE r7 TO user2 WITH ADMIN OPTION;
+CALL sp_displayroles( 'USER1', 'EXPAND_DOWN', 'ALL' );
 ```
 
--   In the following example, `sp_displayroles( 'user2', 'expand_down', 'ALL' )` produces output similar to:
 
+<table>
+<tr>
+<th valign="top">
 
-    <table>
-    <tr>
-    <th valign="top">
+role\_name
 
-    role\_name
+</th>
+<th valign="top">
 
+parent\_role\_name
 
-    
-    </th>
-    <th valign="top">
+</th>
+<th valign="top">
 
-    parent\_role\_name
+grant\_type
 
+</th>
+<th valign="top">
 
-    
-    </th>
-    <th valign="top">
+role\_level
 
-    grant\_type
+</th>
+</tr>
+<tr>
+<td valign="top">
 
+PUBLIC
 
-    
-    </th>
-    <th valign="top">
+</td>
+<td valign="top">
 
-    role\_level
+NULL
 
+</td>
+<td valign="top">
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        r7
+NO ADMIN
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        NULL
+1
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        ADMIN
+MONITOR
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        1
+NULL
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        PUBLIC
+NO ADMIN
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        NULL
+1
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
+CREATE ANY OBJECT
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        1
+NULL
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        dbo
+ADMIN ONLY
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        PUBLIC
+1
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
+NEW\_CONNECTIONS\_ROLE
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        2
+NULL
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        r1
+ADMIN
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        r7
+1
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
+SYS\_DL\_CUSTOMER\_ROLE
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        2
+NULL
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        r2
+NO ADMIN
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        r1
+1
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        ADMIN
+NEW\_USER\_COCKPIT\_ROLE
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        3
+NULL
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        CHECKPOINT
+ADMIN
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        r1
+1
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
+SET ANY CUSTOMER PUBLIC OPTION
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        3
+NULL
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        r3
+NO ADMIN
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        r2
+1
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
+READ FILE
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        4
+NEW\_CONNECTIONS\_ROLE
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        MONITOR
+NO ADMIN
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        r2
+2
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
+SET ANY CUSTOMER PUBLIC OPTION
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        4
+NEW\_CONNECTIONS\_ROLE
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        r4
+NO ADMIN
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        r3
+2
 
-
-    
-    </td>
-    <td valign="top">
-    
-        ADMIN ONLY
-
-
-    
-    </td>
-    <td valign="top">
-    
-        5
-
-
-    
-    </td>
-    </tr>
-    </table>
-    
--   In the following example, `sp_displayroles( 'user2', 'expand_down', 'NO_ADMIN' )` produces output similar to:
-
-
-    <table>
-    <tr>
-    <th valign="top">
-
-    role\_name
-
-
-    
-    </th>
-    <th valign="top">
-
-    parent\_role\_name
-
-
-    
-    </th>
-    <th valign="top">
-
-    grant\_type
-
-
-    
-    </th>
-    <th valign="top">
-
-    role\_level
-
-
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        r7
-
-
-    
-    </td>
-    <td valign="top">
-    
-        NULL
-
-
-    
-    </td>
-    <td valign="top">
-    
-        ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-    
-        1
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        PUBLIC
-
-
-    
-    </td>
-    <td valign="top">
-    
-        NULL
-
-
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-    
-        1
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        dbo
-
-
-    
-    </td>
-    <td valign="top">
-    
-        PUBLIC
-
-
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-    
-        2
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        r1
-
-
-    
-    </td>
-    <td valign="top">
-    
-        r7
-
-
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-    
-        2
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        r2
-
-
-    
-    </td>
-    <td valign="top">
-    
-        r1
-
-
-    
-    </td>
-    <td valign="top">
-    
-        ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-    
-        3
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        CHECKPOINT
-
-
-    
-    </td>
-    <td valign="top">
-    
-        r1
-
-
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-    
-        3
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        r3
-
-
-    
-    </td>
-    <td valign="top">
-    
-        r2
-
-
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-    
-        4
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        MONITOR
-
-
-    
-    </td>
-    <td valign="top">
-    
-        r2
-
-
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-    
-        4
-
-
-    
-    </td>
-    </tr>
-    </table>
-    
--   In the following example, `sp_displayroles( 'r3', 'expand_up', 'NO_ADMIN' )` produces out put similar to:
-
-
-    <table>
-    <tr>
-    <th valign="top">
-
-    role\_name
-
-
-    
-    </th>
-    <th valign="top">
-
-    parent\_role\_name
-
-
-    
-    </th>
-    <th valign="top">
-
-    grant\_type
-
-
-    
-    </th>
-    <th valign="top">
-
-    role\_level
-
-
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        r1
-
-
-    
-    </td>
-    <td valign="top">
-    
-        r7
-
-
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-    
-        \-2
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        r2
-
-
-    
-    </td>
-    <td valign="top">
-    
-        r1
-
-
-    
-    </td>
-    <td valign="top">
-    
-        ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-    
-        \-1
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        r3
-
-
-    
-    </td>
-    <td valign="top">
-    
-        r2
-
-
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-    
-        0
-
-
-    
-    </td>
-    </tr>
-    </table>
-    
--   In the following example, `sp_displayroles( 'r1', 'NO_ADMIN', 'expand_up')` produces output similar to:
-
-
-    <table>
-    <tr>
-    <th valign="top">
-
-    role\_name
-
-
-    
-    </th>
-    <th valign="top">
-
-    parent\_role\_name
-
-
-    
-    </th>
-    <th valign="top">
-
-    grant\_type
-
-
-    
-    </th>
-    <th valign="top">
-
-    role\_level
-
-
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        r1
-
-
-    
-    </td>
-    <td valign="top">
-    
-        r7
-
-
-    
-    </td>
-    <td valign="top">
-    
-        NO ADMIN
-
-
-    
-    </td>
-    <td valign="top">
-    
-        0
-
-
-    
-    </td>
-    </tr>
-    </table>
-    
+</td>
+</tr>
+</table>
 
 **Related Information**  
 
 
-[sp_displayroles System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a44ba32684f2101598cba97bb3b1b4d4.html "Displays all roles granted to a user-defined role or a user, or displays the entire hierarchical tree of roles.") :arrow_upper_right:
+[sp_displayroles System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a44ba32684f2101598cba97bb3b1b4d4.html "Displays all roles granted to a user-defined role or a user, or displays the entire hierarchical tree of roles.") :arrow_upper_right:
 

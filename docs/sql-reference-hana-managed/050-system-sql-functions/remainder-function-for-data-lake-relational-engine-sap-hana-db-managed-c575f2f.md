@@ -7,7 +7,7 @@ Returns the remainder when one whole number is divided by another.
 
 
 ```
-REMAINDER ( <dividend>, <divisor> )
+REMAINDER ( <dividend>, <divisor> );
 ```
 
 
@@ -47,7 +47,7 @@ The divisor, or denominator of the division.
 
 <a name="loioc575f2fac8f94b1eaf49f8b8797a509f__section_zv3_ln3_wrb"/>
 
-## Returns
+## Result Set
 
 -   INTEGER
 -   NUMERIC
@@ -78,11 +78,11 @@ The divisor, or denominator of the division.
 The following statement returns the value 2:
 
 ```
-SELECT REMAINDER( 5, 3 ) FROM iq_dummy
+SELECT REMAINDER( 5, 3 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[REMAINDER Function [Numeric] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a5788e7284f21015a4caecc7b2f96b10.html "Returns the remainder when one whole number is divided by another.") :arrow_upper_right:
+[REMAINDER Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5788e7284f21015a4caecc7b2f96b10.html "Returns the remainder when one whole number is divided by another.") :arrow_upper_right:
 

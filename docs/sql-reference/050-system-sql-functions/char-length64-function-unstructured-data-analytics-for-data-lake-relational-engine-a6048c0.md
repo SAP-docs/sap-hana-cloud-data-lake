@@ -7,7 +7,7 @@ The `CHAR_LENGTH64` function returns an unsigned 64-bit value containing the cha
 
 
 ```
-CHAR_LENGTH64( <long-varchar-object> )
+CHAR_LENGTH64( <long-varchar-object> );
 ```
 
 
@@ -45,5 +45,5 @@ If the argument is NULL, CHAR\_LENGTH64 returns NULL.
 **Related Information**  
 
 
-[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
+[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
 

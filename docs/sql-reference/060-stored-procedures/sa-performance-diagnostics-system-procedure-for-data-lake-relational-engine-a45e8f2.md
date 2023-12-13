@@ -6,16 +6,27 @@ Returns a summary of request timing information for all connections when the dat
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa45e8f2484f21015b094ea4ad73b88a6__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_performance_diagnostics( )
+sa_performance_diagnostics( );
 ```
+
+
+
+<a name="loioa45e8f2484f21015b094ea4ad73b88a6__section_ph1_4jl_zyb"/>
+
+## Parameters
+
+None
 
 
 
@@ -30,21 +41,15 @@ sa_performance_diagnostics( )
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -53,21 +58,15 @@ Description
 
 `Number`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the connection ID \(a number\) for the current connection.
-
-
 
 </td>
 </tr>
@@ -76,14 +75,10 @@ Returns the connection ID \(a number\) for the current connection.
 
 `Name`
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
-
-
 
 </td>
 <td valign="top">
@@ -130,21 +125,15 @@ The following names are used for temporary connections created by the database s
 
 `Userid`
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the user ID for the connection.
-
-
 
 </td>
 </tr>
@@ -153,21 +142,15 @@ Returns the user ID for the connection.
 
 `DBNumber`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the ID number of the database.
-
-
 
 </td>
 </tr>
@@ -176,21 +159,15 @@ Returns the ID number of the database.
 
 `LoginTime`
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Returns the date and time the connection was established.
-
-
 
 </td>
 </tr>
@@ -199,21 +176,15 @@ Returns the date and time the connection was established.
 
 `TransactionStartTime`
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Returns a string containing the time the database was first modified after a COMMIT or ROLLBACK, or an empty string if no modifications have been made to the database since the last COMMIT or ROLLBACK.
-
-
 
 </td>
 </tr>
@@ -222,21 +193,15 @@ Returns a string containing the time the database was first modified after a COM
 
 `LastReqTime`
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Returns the time at which the last request for the specified connection started. This property can return an empty string for internal connections, such as events.
-
-
 
 </td>
 </tr>
@@ -245,21 +210,15 @@ Returns the time at which the last request for the specified connection started.
 
 `ReqType`
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the type of the last request. If a connection has been cached by connection pooling, its ReqType value is CONNECT\_POOL\_CACHE.
-
-
 
 </td>
 </tr>
@@ -268,14 +227,10 @@ Returns the type of the last request. If a connection has been cached by connect
 
 `ReqStatus`
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
-
-
 
 </td>
 <td valign="top">
@@ -291,8 +246,6 @@ Returns the status of the request. It can be one of the following values:
 
 The values marked with an asterisk \(\*\) are only returned when logging of request timing information has been turned on for the database server using the -zt server option. If request timing information is not being logged \(the default\), the values are reported as Executing.
 
-
-
 </td>
 </tr>
 <tr>
@@ -300,21 +253,15 @@ The values marked with an asterisk \(\*\) are only returned when logging of requ
 
 `ReqTimeUnscheduled`
 
-
-
 </td>
 <td valign="top">
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 Returns the amount of unscheduled time, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -323,21 +270,15 @@ Returns the amount of unscheduled time, or NULL if the -zt option was not specif
 
 `ReqTimeActive`
 
-
-
 </td>
 <td valign="top">
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 Returns the amount of time, in seconds, spent processing requests, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -346,21 +287,15 @@ Returns the amount of time, in seconds, spent processing requests, or NULL if th
 
 `ReqTimeBlockIO`
 
-
-
 </td>
 <td valign="top">
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 Returns the amount of time, in seconds, spent waiting for I/O to complete, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -369,21 +304,15 @@ Returns the amount of time, in seconds, spent waiting for I/O to complete, or NU
 
 `ReqTimeBlockLock`
 
-
-
 </td>
 <td valign="top">
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 Returns the amount of time, in seconds, spent waiting for a lock, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -392,21 +321,15 @@ Returns the amount of time, in seconds, spent waiting for a lock, or NULL if the
 
 `ReqTimeBlockContention`
 
-
-
 </td>
 <td valign="top">
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 Returns the amount of time, in seconds, spent waiting for atomic access, or NULL if the RequestTiming server property is set to Off.
-
-
 
 </td>
 </tr>
@@ -415,21 +338,15 @@ Returns the amount of time, in seconds, spent waiting for atomic access, or NULL
 
 `ReqCountUnscheduled`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the number of times the connection waited for scheduling, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -438,21 +355,15 @@ Returns the number of times the connection waited for scheduling, or NULL if the
 
 `ReqCountActive`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the number of requests processed, or NULL if the RequestTiming server property is set to Off.
-
-
 
 </td>
 </tr>
@@ -461,21 +372,15 @@ Returns the number of requests processed, or NULL if the RequestTiming server pr
 
 `ReqCountBlockIO`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the number of times the connection waited for I/O to complete, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -484,21 +389,15 @@ Returns the number of times the connection waited for I/O to complete, or NULL i
 
 `ReqCountBlockLock`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the number of times the connection waited for a lock, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -507,21 +406,15 @@ Returns the number of times the connection waited for a lock, or NULL if the -zt
 
 `ReqCountBlockContention`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the number of times the connection waited for atomic access, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -530,21 +423,15 @@ Returns the number of times the connection waited for atomic access, or NULL if 
 
 `LastIdle`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the number of ticks between requests.
-
-
 
 </td>
 </tr>
@@ -553,21 +440,15 @@ Returns the number of ticks between requests.
 
 `BlockedOn`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns zero if the current connection isn't blocked, or if it is blocked, the connection number on which the connection is blocked because of a locking conflict.
-
-
 
 </td>
 </tr>
@@ -576,21 +457,15 @@ Returns zero if the current connection isn't blocked, or if it is blocked, the c
 
 `UncommitOp`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the number of uncommitted operations.
-
-
 
 </td>
 </tr>
@@ -599,21 +474,15 @@ Returns the number of uncommitted operations.
 
 `CurrentProcedure`
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the name of the procedure that a connection is currently executing. If the connection is executing nested procedure calls, the name is the name of the current procedure. If there is no procedure executing, an empty string is returned.
-
-
 
 </td>
 </tr>
@@ -622,21 +491,15 @@ Returns the name of the procedure that a connection is currently executing. If t
 
 `EventName`
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the name of the associated event if the connection is running an event handler. Otherwise, an empty string is returned.
-
-
 
 </td>
 </tr>
@@ -645,21 +508,15 @@ Returns the name of the associated event if the connection is running an event h
 
 `CurrentLineNumber`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the current line number of the procedure or compound statement a connection is executing. The procedure can be identified using the CurrentProcedure property. If the line is part of a compound statement from the client, an empty string is returned.
-
-
 
 </td>
 </tr>
@@ -668,14 +525,10 @@ Returns the current line number of the procedure or compound statement a connect
 
 `LastStatement`
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
-
-
 
 </td>
 <td valign="top">
@@ -688,8 +541,6 @@ If sa\_conn\_activity reports a non-empty value for a connection, it is most lik
 
 When client statement caching is enabled, and a cached statement is reused, this property returns an empty string.
 
-
-
 </td>
 </tr>
 <tr>
@@ -697,21 +548,15 @@ When client statement caching is enabled, and a cached statement is reused, this
 
 `LastPlanText`
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 Returns the long text plan of the last query executed on the connection. You control the remembering of the last plan by setting the RememberLastPlan option of the sa\_server\_option system procedure, or using the -zp server option.
-
-
 
 </td>
 </tr>
@@ -720,14 +565,10 @@ Returns the long text plan of the last query executed on the connection. You con
 
 `AppInfo`
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
-
-
 
 </td>
 <td valign="top">
@@ -736,8 +577,6 @@ Returns information about the client that made the connection. For HTTP connecti
 
 The API value can be DBLIB, ODBC, OLEDB, ADO.NET, iAnywhereJDBC, PHP, PerlDBD, or DBEXPRESS.
 
-
-
 </td>
 </tr>
 <tr>
@@ -745,21 +584,15 @@ The API value can be DBLIB, ODBC, OLEDB, ADO.NET, iAnywhereJDBC, PHP, PerlDBD, o
 
 `LockCount`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the number of locks held by the connection.
-
-
 
 </td>
 </tr>
@@ -768,21 +601,15 @@ Returns the number of locks held by the connection.
 
 `SnapshotCount`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the number of snapshots associated with the connection.
-
-
 
 </td>
 </tr>
@@ -825,22 +652,1073 @@ None
 
 ## Examples
 
--   The following query identifies connections that have spent a long time waiting for database server requests to complete.
+This example uses the sa\_performance\_diagnostics system procedure to return a summary of request timing information for all connections.
 
-    ```
-    SELECT Number, Name, 
-          CAST( DATEDIFF( second, LoginTime, CURRENT TIMESTAMP ) AS DOUBLE ) AS T, 
-          IF T <>
-    ```
+```
+CALL sa_performance_diagnostics( );
+```
 
--   The following example finds all requests that are currently executing, and have been executing for more than 60 seconds:
 
-    ```
-    SELECT Number, Name, 
-           CAST( DATEDIFF( second, LastReqTime, CURRENT TIMESTAMP ) AS DOUBLE ) AS ReqTime 
-    FROM sa_performance_diagnostics() 
-    WHERE ReqStatus <> 'IDLE' AND ReqTime > 60.0 
-    ORDER BY ReqTime DESC;
-    ```
+<table>
+<tr>
+<th valign="top">
 
+Number
+
+</th>
+<th valign="top">
+
+Name
+
+</th>
+<th valign="top">
+
+Userid
+
+</th>
+<th valign="top">
+
+DBNumber
+
+</th>
+<th valign="top">
+
+LoginTime
+
+</th>
+<th valign="top">
+
+TransactionStartTime
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+285686
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+USER3
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+26:20.1
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+285685
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+USER2
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+26:20.0
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+285684
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+26:19.9
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+285683
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+26:19.7
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+285681
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+26:19.3
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="6">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+LastReqTime
+
+</th>
+<th valign="top">
+
+ReqType
+
+</th>
+<th valign="top">
+
+ReqStatus
+
+</th>
+<th valign="top">
+
+ReqTimeUnscheduled
+
+</th>
+<th valign="top">
+
+ReqTimeActive
+
+</th>
+<th valign="top">
+
+ReqTimeBlockIO
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+26:20.3
+
+</td>
+<td valign="top">
+
+PREFETCH
+
+</td>
+<td valign="top">
+
+Idle
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+26:20.2
+
+</td>
+<td valign="top">
+
+PREFETCH
+
+</td>
+<td valign="top">
+
+Idle
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+42:34.5
+
+</td>
+<td valign="top">
+
+FETCH
+
+</td>
+<td valign="top">
+
+Executing
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0.001257
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+26:19.8
+
+</td>
+<td valign="top">
+
+PREFETCH
+
+</td>
+<td valign="top">
+
+Idle
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+26:19.4
+
+</td>
+<td valign="top">
+
+PREFETCH
+
+</td>
+<td valign="top">
+
+Idle
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="6">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+ReqTimeBlockLock
+
+</th>
+<th valign="top">
+
+ReqTimeBlockContention
+
+</th>
+<th valign="top">
+
+ReqCountUnscheduled
+
+</th>
+<th valign="top">
+
+ReqCountActive
+
+</th>
+<th valign="top">
+
+ReqCountBlockIO
+
+</th>
+<th valign="top">
+
+ReqCountBlockLock
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+3
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="7">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+ReqCountBlockContention
+
+</th>
+<th valign="top">
+
+LastIdle
+
+</th>
+<th valign="top">
+
+BlockedOn
+
+</th>
+<th valign="top">
+
+UncommitOp
+
+</th>
+<th valign="top">
+
+CurrentProcedure
+
+</th>
+<th valign="top">
+
+EventName
+
+</th>
+<th valign="top">
+
+CurrentLineNumber
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+5520
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="2">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+LastStatement
+
+</th>
+<th valign="top">
+
+LastPlanText
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+select top 1 "srvname" from "SYS"."SYSSERVER" where "srvclass" = 'files\_service'
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+select top 1 "srvname" from "SYS"."SYSSERVER" where "srvclass" = 'files\_service'
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+call "sa\_performance\_diagnostics"\(\)
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+select top 1 "srvname" from "SYS"."SYSSERVER" where "srvclass" = 'files\_service'
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+select top 1 "srvname" from "SYS"."SYSSERVER" where "srvclass" = 'files\_service'
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="1">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+AppInfo
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+IP=XXX.XX.XX.XXX;HOST=hana-XXXXXX-XXXX-svc-XXXXXX-1696253332-XXXXXXX;OSUSER=root;OS='Linux 5.15.114-gardenlinux-cloud-amd64 \#1 SMP Debian 5.15.114-0gardenlinux3 \(2023-06-01\) x86\_64';EXE=/usr/local/bin/node;PID=0x4d;THREAD=0x7f2c08797700;VERSION=17.1.6.3265;API=CAPI\_Node.js;TIMEZONEADJUSTMENT=0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+IP=XXX.XX.XX.XXX;HOST=hana-XXXXXX-XXXX-svc-XXXXXX-1696253332-XXXXXXX;OSUSER=root;OS='Linux 5.15.114-gardenlinux-cloud-amd64 \#1 SMP Debian 5.15.114-0gardenlinux3 \(2023-06-01\) x86\_64';EXE=/usr/local/bin/node;PID=0x4d;THREAD=0x7f2c127ab700;VERSION=17.1.6.3265;API=CAPI\_Node.js;TIMEZONEADJUSTMENT=0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+IP=XXX.XX.XX.XXX;HOST=hana-XXXXXX-XXXX-svc-XXXXXX-1696253332-XXXXXXX;OSUSER=root;OS='Linux 5.15.114-gardenlinux-cloud-amd64 \#1 SMP Debian 5.15.114-0gardenlinux3 \(2023-06-01\) x86\_64';EXE=/usr/local/bin/node;PID=0x4d;THREAD=0x7f2c0c79f700;VERSION=17.1.6.3265;API=CAPI\_Node.js;TIMEZONEADJUSTMENT=0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+IP=XXX.XX.XX.XXX;HOST=hana-XXXXXX-XXXX-svc-XXXXXX-1696253332-XXXXXXX;OSUSER=root;OS='Linux 5.15.114-gardenlinux-cloud-amd64 \#1 SMP Debian 5.15.114-0gardenlinux3 \(2023-06-01\) x86\_64';EXE=/usr/local/bin/node;PID=0x4d;THREAD=0x7f2c0478f700;VERSION=17.1.6.3265;API=CAPI\_Node.js;TIMEZONEADJUSTMENT=0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+IP=XXX.XX.XX.XXX;HOST=hana-XXXXXX-XXXX-svc-XXXXXX-1696253332-XXXXXXX;OSUSER=root;OS='Linux 5.15.114-gardenlinux-cloud-amd64 \#1 SMP Debian 5.15.114-0gardenlinux3 \(2023-06-01\) x86\_64';EXE=/usr/local/bin/node;PID=0x4d;THREAD=0x7f2c15fb2700;VERSION=17.1.6.3265;API=CAPI\_Node.js;TIMEZONEADJUSTMENT=0
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="2">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+SnapshotCount
+
+</th>
+<th valign="top">
+
+LockCount
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+</table>
+
+This example finds all requests that are currently executing, and have been executing for more than 60 seconds:
+
+```
+SELECT Number, Name, 
+       CAST( DATEDIFF( second, LastReqTime, CURRENT TIMESTAMP ) AS DOUBLE ) AS ReqTime 
+FROM sa_performance_diagnostics() 
+WHERE ReqStatus <> 'IDLE' AND ReqTime > 60.0 
+ORDER BY ReqTime DESC;
+```
 

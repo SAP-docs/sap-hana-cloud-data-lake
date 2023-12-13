@@ -46,7 +46,7 @@ The schema name combines the name of the relational container and the name of th
 
 ## Privileges
 
-You are a member of the container group administrator role, SYSHDL\_<relational\_container\_name\>\_ROLE, for the relational container.
+You are a member of the container administrator role, SYSHDL\_*<relational\_container\_name\>*\_ROLE, for the relational container.
 
 
 

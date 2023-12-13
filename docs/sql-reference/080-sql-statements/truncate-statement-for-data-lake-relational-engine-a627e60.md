@@ -6,10 +6,13 @@ Deletes all rows from a table ormaterialized view without deleting the table def
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa627e60884f21015aecdf8c062900097__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -17,7 +20,7 @@ Deletes all rows from a table ormaterialized view without deleting the table def
 TRUNCATE 
    { TABLE [ { <owner> | <schema-name> }.]<table-name>
       [ { PARTITION <partition-name> | SUBPARTITION <subpartition-name> } ]
-   | MATERIALIZED VIEW [ { <owner> | <schema-name> }.]<materialized-view-name> }
+   | MATERIALIZED VIEW [ { <owner> | <schema-name> }.]<materialized-view-name> };
 ```
 
 
@@ -133,7 +136,7 @@ TRUNCATE TABLE Sale
 **Related Information**  
 
 
-[TRUNCATE MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/817f97c16ce21014ba1dcdaaf046de69.html "Deletes all rows from a materialized view without deleting the table definition.") :arrow_upper_right:
+[TRUNCATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/817f97c16ce21014ba1dcdaaf046de69.html "Deletes all rows from a materialized view without deleting the table definition.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
@@ -145,7 +148,7 @@ TRUNCATE TABLE Sale
 
 [CREATE MATERIALIZED VIEW Statement for Data Lake Relational Engine](create-materialized-view-statement-for-data-lake-relational-engine-d5c757e.md "Creates a materialized view.")
 
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
-
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine](refresh-materialized-view-statement-for-data-lake-relational-engine-faab95d.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
+
+[DROP MATERIALIZED VIEW Statement for Data Lake Relational Engine](drop-materialized-view-statement-for-data-lake-relational-engine-35de0ef.md "Removes a data type from the database.")
 

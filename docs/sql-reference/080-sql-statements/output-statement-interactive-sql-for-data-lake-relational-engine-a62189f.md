@@ -6,10 +6,13 @@ Writes the information retrieved by the current query to a file.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa62189f884f21015aeec89ba6534af52__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,12 +26,12 @@ OUTPUT TO <filename>
    [ COLUMN WIDTHS ( <integer>, … ) ]
    [ HEXADECIMAL { ON | OFF | ASIS } ]
    [ ENCODING <encoding> ]
-   [ WITH COLUMN NAMES ]
+   [ WITH COLUMN NAMES ];
 ```
 
 ```
 <output-format> ::=
-   { TEXT | FIXED | HTML | SQL | XML }
+   { TEXT | FIXED | HTML | SQL | XML };
 ```
 
 
@@ -155,7 +158,7 @@ The default escape character for characters stored as hexadecimal codes and symb
 To change this default, use the ESCAPE CHARACTER clause. For example, to use the exclamation mark as the escape character, enter:
 
 ```
-... ESCAPE CHARACTER '!'
+... ESCAPE CHARACTER '!';
 ```
 
 
@@ -269,14 +272,14 @@ In Interactive SQL, the *Results* tab displays only the results of the current 
 
     ```
     SELECT * FROM Employees; 
-    OUTPUT TO employees.txt FORMAT TEXT
+    OUTPUT TO employees.txt FORMAT TEXT;
     ```
 
 -   The following example places the contents of the `Employees` table at the end of an existing file, and includes any messages about the query in this file as well:
 
     ```
     SELECT * FROM Employees; 
-    OUTPUT TO employees.txt APPEND VERBOSE
+    OUTPUT TO employees.txt APPEND VERBOSE;
     ```
 
 -   The following example exports a value that contains an embedded line feed character. A line feed character has the numeric value 10, which you can represent as the string '`\x0a`' in a SQL statement.
@@ -284,26 +287,26 @@ In Interactive SQL, the *Results* tab displays only the results of the current 
     Execute this statement with HEXADECIMAL ON:
 
     ```
-    SELECT 'line1\x0aline2'; OUTPUT TO file.txt HEXADECIMAL ON
+    SELECT 'line1\x0aline2'; OUTPUT TO file.txt HEXADECIMAL ON;
     ```
 
     The result is a file with one line in it, containing this text:
 
     ```
-    line10x0aline2
+    line10x0aline2;
     ```
 
     Execute the same statement with HEXADECIMAL OFF:
 
     ```
-    line1\x0aline2
+    line1\x0aline2;
     ```
 
     If you set `HEXADECIMAL` to ASIS, the result is a file with two lines:
 
     ```
     'line1
-    line2'
+    line2';
     ```
 
     Using ASIS generates two lines, because the embedded line feed character has been exported without being converted to a two-digit hex representation, and without a prefix.

@@ -6,16 +6,19 @@ Changes options that affect the behavior of the database and its compatibility w
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa625da7584f21015a300a0dd2457eb57__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 SET [ EXISTING ] [ TEMPORARY ] OPTION
-   … [ { <user_id> | PUBLIC }.]<option-name> = [ <option-value> ]
+   … [ { <user_id> | PUBLIC }.]<option-name> = [ <option-value> ];
 ```
 
 
@@ -92,7 +95,7 @@ The classes of options are:
 Specifying either a user ID or the PUBLIC user ID determines whether the option is set for an individual user, a role represented by *<user\_id\>*, or the PUBLIC user ID \(the role to which all users are a member\). If the option applies to a role ID, option settings are not inherited by members of the role — the change is applied only to the role ID. If no role is specified, the option change is applied to the currently logged-in user ID that issued the SET OPTION statement. For example, this statement applies an option change to the PUBLIC user ID:
 
 ```
-SET OPTION Public.login_mode = standard
+SET OPTION Public.login_mode = standard;
 ```
 
 In Embedded SQL, only database options can be set temporarily.
@@ -141,13 +144,13 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 -   The following example sets the DATE\_FORMAT option:
 
     ```
-    SET OPTION public.date_format = 'Mmm dd yyyy'
+    SET OPTION public.date_format = 'Mmm dd yyyy';
     ```
 
 -   The following example sest the WAIT\_FOR\_COMMIT option to on:
 
     ```
-    SET OPTION wait_for_commit = 'on'
+    SET OPTION wait_for_commit = 'on';
     ```
 
 -   The following example embeddes SQL examples:
@@ -161,9 +164,9 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[SET OPTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/84a37a4b73ff4ba1ae53aad6b4c94803.html "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.") :arrow_upper_right:
+[SET OPTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/84a37a4b73ff4ba1ae53aad6b4c94803.html "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[Database Options in Data Lake Relational Engine](../090-database-options/database-options-in-data-lake-relational-engine-a629349.md "Database options and Interactive SQL options customize and modify database behavior.")
+[Database Options in Data Lake Relational Engine](../090-database-options/database-options-in-data-lake-relational-engine-a629349.md "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.")
 

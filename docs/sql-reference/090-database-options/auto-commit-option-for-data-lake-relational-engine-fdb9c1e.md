@@ -6,10 +6,14 @@ Causes an automatic commit after every DML request.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loiofdb9c1e166c841f2b0a20ade151a9051__section_fc2_ncx_4zb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+-   Connected directly to data lake Relational Engine **coordinator** as a data lake Relational Engine user.
 
 
 
@@ -18,7 +22,7 @@ Causes an automatic commit after every DML request.
 ## Syntax
 
 ```
-AUTO_COMMIT = { ON | OFF }
+AUTO_COMMIT = { ON | OFF };
 ```
 
 
@@ -64,28 +68,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC role
-
-
 
 </th>
 <th valign="top">
 
 For current user
 
-
-
 </th>
 <th valign="top">
 
 For other users
-
-
 
 </th>
 </tr>
@@ -94,28 +90,20 @@ For other users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+No
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
-
-</td>
-<td valign="top">
-
-No
-
-
 
 </td>
 </tr>
@@ -124,28 +112,20 @@ No
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>

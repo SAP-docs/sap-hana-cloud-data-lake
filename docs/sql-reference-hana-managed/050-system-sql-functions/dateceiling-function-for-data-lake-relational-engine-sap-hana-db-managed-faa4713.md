@@ -7,7 +7,7 @@ Calculates a new date, time, or datetime value by increasing the provided value 
 
 
 ```
-DATECEILING ( <date-part>, <datetime-expression> [, <multiple-expression>] )
+DATECEILING ( <date-part>, <datetime-expression> [, <multiple-expression>] );
 ```
 
 
@@ -96,7 +96,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     <tr>
     <td valign="top">
     
-        -   1
+    -   1
     -   2
     -   4
     -   5
@@ -112,7 +112,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   40
+    -   40
     -   50
     -   64
     -   80
@@ -128,7 +128,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   400
+    -   400
     -   500
     -   625
     -   800
@@ -144,7 +144,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   4000
+    -   4000
     -   5000
     -   6250
     -   8000
@@ -160,7 +160,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   40000
+    -   40000
     -   50000
     -   62500
     -   100000
@@ -201,33 +201,33 @@ If data lake Relational Engine rounds to a multiple of the week date part, the d
 
     ```
     SELECT DATECEILING( MI, 'August 13, 2009, 10:32.00.132AM', 10)
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 -   This statement returns the value August 13, 2009 10:32.35.456800 AM:
 
     ```
     SELECT DATECEILING( US, 'August 13, 2009, 10:32.35.456789AM', 200 )
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 -   This statement returns the value August 13, 2009 10:32.35.600000 AM:
 
     ```
     SELECT DATECEILING( US, 'August 13, 2009, 10:32.35.456789AM', 200000 )
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 -   This statement returns the value August 13, 2009 10:32.35.456789 AM:
 
     ```
     SELECT DATECEILING( US, 'August 13, 2009, 10:32.35.456789AM')
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[DATECEILING Function [Date and Time] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a545210684f21015bfabb0f3f2ce3eae.html "Calculates a new date, time, or datetime value by increasing the provided value up to the nearest larger value of the specified granularity.") :arrow_upper_right:
+[DATECEILING Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a545210684f21015bfabb0f3f2ce3eae.html "Calculates a new date, time, or datetime value by increasing the provided value up to the nearest larger value of the specified granularity.") :arrow_upper_right:
 

@@ -6,6 +6,8 @@ Database properties are available for each connection to a database. Use the DB\
 
 
 
+## Example
+
 The following statement returns the page size of the current database:
 
 ```
@@ -29,14 +31,10 @@ CALL sa_db_properties;
 
 Property name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -45,14 +43,10 @@ Description
 
 AccentSensitive
 
-
-
 </td>
 <td valign="top">
 
 Whether the database is accent sensitive \(On\) or not \(Off\). The value is FRENCH if the database uses French sensitivity rules.
-
-
 
 </td>
 </tr>
@@ -61,14 +55,10 @@ Whether the database is accent sensitive \(On\) or not \(Off\). The value is FRE
 
 Alias
 
-
-
 </td>
 <td valign="top">
 
 The database name.
-
-
 
 </td>
 </tr>
@@ -77,14 +67,10 @@ The database name.
 
 AlternateMirrorServerName
 
-
-
 </td>
 <td valign="top">
 
 The alternate mirror server name associated with the database if one was specified.
-
-
 
 </td>
 </tr>
@@ -93,14 +79,10 @@ The alternate mirror server name associated with the database if one was specifi
 
 AlternateServerName
 
-
-
 </td>
 <td valign="top">
 
 The alternate server name associated with the database if one was specified.
-
-
 
 </td>
 </tr>
@@ -109,14 +91,10 @@ The alternate server name associated with the database if one was specified.
 
 ApproximateCPUTime
 
-
-
 </td>
 <td valign="top">
 
 An estimate of the amount of CPU time accumulated by the database, in seconds. The value may differ from the actual value by as much as 50 percent, although typical variations are in the 5 to 10 percent range. On multi-processor computers, each CPU \(or hyperthread or core\) accumulates time, so the sum of accumulated times for all connections may be greater than the elapsed time.
-
-
 
 </td>
 </tr>
@@ -125,14 +103,10 @@ An estimate of the amount of CPU time accumulated by the database, in seconds. T
 
 ArbiterState
 
-
-
 </td>
 <td valign="top">
 
 The state of the arbiter server. When the database you are connected to is not mirrored, this property is *NULL*. Otherwise this property is *connected* when the arbiter server is connected to the primary server, or *disconnected* when it is not connected to the primary server.
-
-
 
 </td>
 </tr>
@@ -141,14 +115,10 @@ The state of the arbiter server. When the database you are connected to is not m
 
 AuditingTypes
 
-
-
 </td>
 <td valign="top">
 
 The types of auditing currently enabled.
-
-
 
 </td>
 </tr>
@@ -157,14 +127,10 @@ The types of auditing currently enabled.
 
 Authenticated
 
-
-
 </td>
 <td valign="top">
 
 Whether the database has been authenticated.
-
-
 
 </td>
 </tr>
@@ -173,14 +139,10 @@ Whether the database has been authenticated.
 
 BackupInProgress
 
-
-
 </td>
 <td valign="top">
 
 Whether the database is currently being backed up.
-
-
 
 </td>
 </tr>
@@ -189,14 +151,10 @@ Whether the database is currently being backed up.
 
 BlankPadding
 
-
-
 </td>
 <td valign="top">
 
 Whether the database has blank padding enabled.
-
-
 
 </td>
 </tr>
@@ -205,14 +163,10 @@ Whether the database has blank padding enabled.
 
 BytesReceived
 
-
-
 </td>
 <td valign="top">
 
 The number of bytes received during client/server communications. This value is updated for HTTP and HTTPS connections.
-
-
 
 </td>
 </tr>
@@ -221,14 +175,10 @@ The number of bytes received during client/server communications. This value is 
 
 BytesReceivedUncomp
 
-
-
 </td>
 <td valign="top">
 
 The number of bytes that would have been received during client/server communications if compression was disabled. This value is the same as the value for BytesReceived if compression is disabled.
-
-
 
 </td>
 </tr>
@@ -237,14 +187,10 @@ The number of bytes that would have been received during client/server communica
 
 BytesSent
 
-
-
 </td>
 <td valign="top">
 
 The number of bytes sent during client/server communications. This value is updated for HTTP and HTTPS connections.
-
-
 
 </td>
 </tr>
@@ -253,14 +199,10 @@ The number of bytes sent during client/server communications. This value is upda
 
 BytesSentUncomp
 
-
-
 </td>
 <td valign="top">
 
 The number of bytes that would have been sent during client/server communications if compression was disabled. This value is the same as the value for BytesSent if compression is disabled.
-
-
 
 </td>
 </tr>
@@ -269,14 +211,10 @@ The number of bytes that would have been sent during client/server communication
 
 CacheHits
 
-
-
 </td>
 <td valign="top">
 
 The number of database page lookups satisfied by finding the page in the cache.
-
-
 
 </td>
 </tr>
@@ -285,14 +223,10 @@ The number of database page lookups satisfied by finding the page in the cache.
 
 CacheRead
 
-
-
 </td>
 <td valign="top">
 
 The number of database pages that have been looked up in the cache.
-
-
 
 </td>
 </tr>
@@ -301,14 +235,10 @@ The number of database pages that have been looked up in the cache.
 
 CacheReadIndInt
 
-
-
 </td>
 <td valign="top">
 
 The number of index internal-node pages that have been read from the cache.
-
-
 
 </td>
 </tr>
@@ -317,14 +247,10 @@ The number of index internal-node pages that have been read from the cache.
 
 CacheReadIndLeaf
 
-
-
 </td>
 <td valign="top">
 
 The number of index leaf pages that have been read from the cache.
-
-
 
 </td>
 </tr>
@@ -333,14 +259,10 @@ The number of index leaf pages that have been read from the cache.
 
 CacheReadTable
 
-
-
 </td>
 <td valign="top">
 
 The number of table pages that have been read from the cache.
-
-
 
 </td>
 </tr>
@@ -349,14 +271,10 @@ The number of table pages that have been read from the cache.
 
 CacheReadWorkTable
 
-
-
 </td>
 <td valign="top">
 
 The number of cache work table reads.
-
-
 
 </td>
 </tr>
@@ -365,14 +283,10 @@ The number of cache work table reads.
 
 Capabilities
 
-
-
 </td>
 <td valign="top">
 
 The capability bits enabled for the database. This property is primarily for use by Technical Support.
-
-
 
 </td>
 </tr>
@@ -381,14 +295,10 @@ The capability bits enabled for the database. This property is primarily for use
 
 CarverHeapPages
 
-
-
 </td>
 <td valign="top">
 
 The number of heap pages used for short-term purposes such as query optimization.
-
-
 
 </td>
 </tr>
@@ -397,14 +307,10 @@ The number of heap pages used for short-term purposes such as query optimization
 
 CaseSensitive
 
-
-
 </td>
 <td valign="top">
 
 Whether the database is case sensitive \(On\) or not \(Off\).
-
-
 
 </td>
 </tr>
@@ -413,14 +319,10 @@ Whether the database is case sensitive \(On\) or not \(Off\).
 
 CatalogCollation
 
-
-
 </td>
 <td valign="top">
 
 The identifier for the collation used for the catalog. This property has extensions that you can specify when querying the property value with the DB\_EXTENDED\_PROPERTY function.
-
-
 
 </td>
 </tr>
@@ -429,14 +331,10 @@ The identifier for the collation used for the catalog. This property has extensi
 
 CharSet
 
-
-
 </td>
 <td valign="top">
 
 The CHAR character set of the database. This property has extensions that you can specify when querying the property value with the DB\_EXTENDED\_PROPERTY function.
-
-
 
 </td>
 </tr>
@@ -445,14 +343,10 @@ The CHAR character set of the database. This property has extensions that you ca
 
 CheckpointLogCommitToDisk
 
-
-
 </td>
 <td valign="top">
 
 The number of checkpoint log commits to disk.
-
-
 
 </td>
 </tr>
@@ -461,14 +355,10 @@ The number of checkpoint log commits to disk.
 
 CheckpointLogPagesInUse
 
-
-
 </td>
 <td valign="top">
 
 The number of checkpoint log pages in use.
-
-
 
 </td>
 </tr>
@@ -477,14 +367,10 @@ The number of checkpoint log pages in use.
 
 CheckpointLogPagesRelocated
 
-
-
 </td>
 <td valign="top">
 
 The number of relocated checkpoint log pages.
-
-
 
 </td>
 </tr>
@@ -493,14 +379,10 @@ The number of relocated checkpoint log pages.
 
 CheckpointLogPagesWritten
 
-
-
 </td>
 <td valign="top">
 
 The number of checkpoint log pages that have been written.
-
-
 
 </td>
 </tr>
@@ -509,14 +391,10 @@ The number of checkpoint log pages that have been written.
 
 CheckpointLogSavePreimage
 
-
-
 </td>
 <td valign="top">
 
 The number of preimages of database pages that are being added to the checkpoint log.
-
-
 
 </td>
 </tr>
@@ -525,14 +403,10 @@ The number of preimages of database pages that are being added to the checkpoint
 
 CheckpointLogSize
 
-
-
 </td>
 <td valign="top">
 
 The size of the checkpoint log, in pages.
-
-
 
 </td>
 </tr>
@@ -541,14 +415,10 @@ The size of the checkpoint log, in pages.
 
 CheckpointLogWrites
 
-
-
 </td>
 <td valign="top">
 
 The number of writes to the checkpoint log.
-
-
 
 </td>
 </tr>
@@ -557,14 +427,10 @@ The number of writes to the checkpoint log.
 
 CheckpointUrgency
 
-
-
 </td>
 <td valign="top">
 
 The time that has elapsed since the last checkpoint, as a percentage of the checkpoint time setting of the database.
-
-
 
 </td>
 </tr>
@@ -573,14 +439,10 @@ The time that has elapsed since the last checkpoint, as a percentage of the chec
 
 Checksum
 
-
-
 </td>
 <td valign="top">
 
 Whether global checksums are enabled for the database \(a checksum is created for each database page\). Checksums are always present for critical pages.
-
-
 
 </td>
 </tr>
@@ -589,14 +451,10 @@ Whether global checksums are enabled for the database \(a checksum is created fo
 
 Chkpt
 
-
-
 </td>
 <td valign="top">
 
 The number of checkpoints that have been performed.
-
-
 
 </td>
 </tr>
@@ -605,14 +463,10 @@ The number of checkpoints that have been performed.
 
 ChkptFlush
 
-
-
 </td>
 <td valign="top">
 
 The number of ranges of adjacent pages written out during a checkpoint.
-
-
 
 </td>
 </tr>
@@ -621,14 +475,10 @@ The number of ranges of adjacent pages written out during a checkpoint.
 
 ChkptPage
 
-
-
 </td>
 <td valign="top">
 
 The number of transaction log checkpoints.
-
-
 
 </td>
 </tr>
@@ -637,14 +487,10 @@ The number of transaction log checkpoints.
 
 CleanablePagesAdded
 
-
-
 </td>
 <td valign="top">
 
 The number of pages marked to be cleaned since database server startup.
-
-
 
 </td>
 </tr>
@@ -653,14 +499,10 @@ The number of pages marked to be cleaned since database server startup.
 
 CleanablePagesCleaned
 
-
-
 </td>
 <td valign="top">
 
 The number of database pages cleaned since database server startup.
-
-
 
 </td>
 </tr>
@@ -669,14 +511,10 @@ The number of database pages cleaned since database server startup.
 
 CleanableRowsAdded
 
-
-
 </td>
 <td valign="top">
 
 The number of rows marked to be deleted since database server startup.
-
-
 
 </td>
 </tr>
@@ -685,14 +523,10 @@ The number of rows marked to be deleted since database server startup.
 
 CleanableRowsCleaned
 
-
-
 </td>
 <td valign="top">
 
 The number of shadow table rows deleted since database server startup.
-
-
 
 </td>
 </tr>
@@ -701,14 +535,10 @@ The number of shadow table rows deleted since database server startup.
 
 ClientStmtCacheHits
 
-
-
 </td>
 <td valign="top">
 
 The number of prepares that were not required for this database because of the client statement cache. This is the number of additional prepares that would be required if client statement caching was disabled.
-
-
 
 </td>
 </tr>
@@ -717,14 +547,10 @@ The number of prepares that were not required for this database because of the c
 
 ClientStmtCacheMisses
 
-
-
 </td>
 <td valign="top">
 
 The number of statements in the client statement cache for this database that were prepared again. This is the number of times a cached statement was considered for reuse, but could not be reused because of a schema change, a database option setting, or a DROP VARIABLE statement.
-
-
 
 </td>
 </tr>
@@ -733,14 +559,10 @@ The number of statements in the client statement cache for this database that we
 
 Collation
 
-
-
 </td>
 <td valign="top">
 
 The collation used by the database. This property has extensions that you can specify when querying the property value.
-
-
 
 </td>
 </tr>
@@ -749,14 +571,10 @@ The collation used by the database. This property has extensions that you can sp
 
 Commit
 
-
-
 </td>
 <td valign="top">
 
 The number of times the server has forced a flush of the disk cache.
-
-
 
 </td>
 </tr>
@@ -765,14 +583,10 @@ The number of times the server has forced a flush of the disk cache.
 
 CommitFile
 
-
-
 </td>
 <td valign="top">
 
 The number of times the server has forced a flush of the disk cache.
-
-
 
 </td>
 </tr>
@@ -781,14 +595,10 @@ The number of times the server has forced a flush of the disk cache.
 
 ConnCount
 
-
-
 </td>
 <td valign="top">
 
 The number of connections to the database. The property value does not include connections used for internal operations, but it does include connections used for events and external environment support. To obtain an accurate count of the number of connections in use, execute the following statement: `SELECT COUNT( * ) FROM sa_conn_info( ) WHERE number < 100000000;` 
-
-
 
 </td>
 </tr>
@@ -797,14 +607,10 @@ The number of connections to the database. The property value does not include c
 
 ConnectedTime
 
-
-
 </td>
 <td valign="top">
 
 The total length of time, in seconds, that all connections have been connected to the database. The value is updated only when a request completes for a connection or when a connection disconnects. As a result, the value can lag behind for connections that are idle or busy executing for a long time in the database server. The value includes time accrued by any connection, including database events and background server connections \(such as the database cleaner\).
-
-
 
 </td>
 </tr>
@@ -813,14 +619,10 @@ The total length of time, in seconds, that all connections have been connected t
 
 ConnPoolCachedCount
 
-
-
 </td>
 <td valign="top">
 
 The number of connections disconnected by the application but cached for connection pooling.
-
-
 
 </td>
 </tr>
@@ -829,14 +631,10 @@ The number of connections disconnected by the application but cached for connect
 
 ConnPoolHits
 
-
-
 </td>
 <td valign="top">
 
 The number of reused pooled connections.
-
-
 
 </td>
 </tr>
@@ -845,14 +643,10 @@ The number of reused pooled connections.
 
 ConnPoolMisses
 
-
-
 </td>
 <td valign="top">
 
 The number of pooled connections which were cached but could not be reused.
-
-
 
 </td>
 </tr>
@@ -861,14 +655,10 @@ The number of pooled connections which were cached but could not be reused.
 
 ConnsDisabled
 
-
-
 </td>
 <td valign="top">
 
 Whether connections to the current database are disabled \(On\) or not \(Off\).
-
-
 
 </td>
 </tr>
@@ -877,14 +667,10 @@ Whether connections to the current database are disabled \(On\) or not \(Off\).
 
 CopyNodeParent
 
-
-
 </td>
 <td valign="top">
 
 The name of the current parent server of a copy node in a read-only scale-out configuration.
-
-
 
 </td>
 </tr>
@@ -893,14 +679,10 @@ The name of the current parent server of a copy node in a read-only scale-out co
 
 CurrentRedoPos
 
-
-
 </td>
 <td valign="top">
 
 The current offset in the transaction log file where the next database operation is to be logged.
-
-
 
 </td>
 </tr>
@@ -909,14 +691,10 @@ The current offset in the transaction log file where the next database operation
 
 CurrentTableDefCacheSize
 
-
-
 </td>
 <td valign="top">
 
 The current amount of memory consumed by table definition objects.
-
-
 
 </td>
 </tr>
@@ -925,14 +703,10 @@ The current amount of memory consumed by table definition objects.
 
 CurrentTimelineID
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>
@@ -941,14 +715,10 @@ For internal use only.
 
 CurrentTimelineSignature
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>
@@ -957,14 +727,10 @@ For internal use only.
 
 CurrentTimezoneOffset
 
-
-
 </td>
 <td valign="top">
 
 The number of minutes that the database is ahead of Coordinated Universal Time \(UTC\).
-
-
 
 </td>
 </tr>
@@ -973,14 +739,10 @@ The number of minutes that the database is ahead of Coordinated Universal Time \
 
 CurrIO
 
-
-
 </td>
 <td valign="top">
 
 The current number of file I/Os that were issued by the server but haven't yet completed.
-
-
 
 </td>
 </tr>
@@ -989,14 +751,10 @@ The current number of file I/Os that were issued by the server but haven't yet c
 
 CurrRead
 
-
-
 </td>
 <td valign="top">
 
 The current number of file reads that were issued by the server, but haven't yet completed.
-
-
 
 </td>
 </tr>
@@ -1005,14 +763,10 @@ The current number of file reads that were issued by the server, but haven't yet
 
 CurrWrite
 
-
-
 </td>
 <td valign="top">
 
 The current number of file writes that were issued by the server, but haven't yet completed.
-
-
 
 </td>
 </tr>
@@ -1021,14 +775,10 @@ The current number of file writes that were issued by the server, but haven't ye
 
 Cursor
 
-
-
 </td>
 <td valign="top">
 
 The number of declared cursors that are currently being maintained by the database server.
-
-
 
 </td>
 </tr>
@@ -1037,14 +787,10 @@ The number of declared cursors that are currently being maintained by the databa
 
 CursorOpen
 
-
-
 </td>
 <td valign="top">
 
 The number of open cursors that are currently being maintained by the database server.
-
-
 
 </td>
 </tr>
@@ -1053,14 +799,10 @@ The number of open cursors that are currently being maintained by the database s
 
 DatabaseCleaner
 
-
-
 </td>
 <td valign="top">
 
 Whether the database cleaner is enabled.
-
-
 
 </td>
 </tr>
@@ -1069,14 +811,10 @@ Whether the database cleaner is enabled.
 
 IsBooleanSupportEnabled
 
-
-
 </td>
 <td valign="top">
 
 Whether the BOOLEAN type is supported.
-
-
 
 </td>
 </tr>
@@ -1085,14 +823,10 @@ Whether the BOOLEAN type is supported.
 
 DiskRead
 
-
-
 </td>
 <td valign="top">
 
 The number of pages that have been read from disk.
-
-
 
 </td>
 </tr>
@@ -1101,14 +835,10 @@ The number of pages that have been read from disk.
 
 DiskReadHint
 
-
-
 </td>
 <td valign="top">
 
 The number of disk read hints.
-
-
 
 </td>
 </tr>
@@ -1117,14 +847,10 @@ The number of disk read hints.
 
 DiskReadHintPages
 
-
-
 </td>
 <td valign="top">
 
 The number of disk read hint pages.
-
-
 
 </td>
 </tr>
@@ -1133,14 +859,10 @@ The number of disk read hint pages.
 
 DiskReadIndInt
 
-
-
 </td>
 <td valign="top">
 
 The number of index internal-node pages that have been read from disk.
-
-
 
 </td>
 </tr>
@@ -1149,14 +871,10 @@ The number of index internal-node pages that have been read from disk.
 
 DiskReadIndLeaf
 
-
-
 </td>
 <td valign="top">
 
 The number of index leaf pages that have been read from disk.
-
-
 
 </td>
 </tr>
@@ -1165,14 +883,10 @@ The number of index leaf pages that have been read from disk.
 
 DiskReadTable
 
-
-
 </td>
 <td valign="top">
 
 The number of table pages that have been read from disk.
-
-
 
 </td>
 </tr>
@@ -1181,14 +895,10 @@ The number of table pages that have been read from disk.
 
 DiskReadWorkTable
 
-
-
 </td>
 <td valign="top">
 
 The number of disk work table reads.
-
-
 
 </td>
 </tr>
@@ -1197,14 +907,10 @@ The number of disk work table reads.
 
 DiskRetryReadScatter
 
-
-
 </td>
 <td valign="top">
 
 The number of disk read retries for scattered reads.
-
-
 
 </td>
 </tr>
@@ -1213,14 +919,10 @@ The number of disk read retries for scattered reads.
 
 DiskSandbox
 
-
-
 </td>
 <td valign="top">
 
 Whether the read-write file operations of the database are restricted to the directory where the main database file is located.
-
-
 
 </td>
 </tr>
@@ -1229,14 +931,10 @@ Whether the read-write file operations of the database are restricted to the dir
 
 DiskSyncRead
 
-
-
 </td>
 <td valign="top">
 
 The number of disk reads issued synchronously.
-
-
 
 </td>
 </tr>
@@ -1245,14 +943,10 @@ The number of disk reads issued synchronously.
 
 DiskSyncWrite
 
-
-
 </td>
 <td valign="top">
 
 The number of writes issued synchronously.
-
-
 
 </td>
 </tr>
@@ -1261,14 +955,10 @@ The number of writes issued synchronously.
 
 DiskWaitRead
 
-
-
 </td>
 <td valign="top">
 
 The number of times the database server waited for an asynchronous read.
-
-
 
 </td>
 </tr>
@@ -1277,14 +967,10 @@ The number of times the database server waited for an asynchronous read.
 
 DiskWaitWrite
 
-
-
 </td>
 <td valign="top">
 
 The number of times the database server waited for an asynchronous write.
-
-
 
 </td>
 </tr>
@@ -1293,14 +979,10 @@ The number of times the database server waited for an asynchronous write.
 
 DiskWrite
 
-
-
 </td>
 <td valign="top">
 
 The number of modified pages that have been written to disk.
-
-
 
 </td>
 </tr>
@@ -1309,14 +991,10 @@ The number of modified pages that have been written to disk.
 
 DiskWriteHint
 
-
-
 </td>
 <td valign="top">
 
 The number of disk write hints.
-
-
 
 </td>
 </tr>
@@ -1325,14 +1003,10 @@ The number of disk write hints.
 
 DiskWriteHintPages
 
-
-
 </td>
 <td valign="top">
 
 The number of disk gather write hints.
-
-
 
 </td>
 </tr>
@@ -1341,14 +1015,10 @@ The number of disk gather write hints.
 
 DriveBus
 
-
-
 </td>
 <td valign="top">
 
 The type of bus to which the database file is connected: one of Unknown, SCSI, ATAPI, ATA, 1394, SSA, Fibre, USB, RAID, iSCSI, SAS, SATA, SD, MMC, Virtual, FileBackedVirtual. If the bus type cannot be determined, this property is NULL. The value of this property for the primary dbspace is recorded in the SYSHISTORY view.
-
-
 
 </td>
 </tr>
@@ -1357,14 +1027,10 @@ The type of bus to which the database file is connected: one of Unknown, SCSI, A
 
 DriveModel
 
-
-
 </td>
 <td valign="top">
 
 The model number of the drive on which the database is located. The value of this property for the primary dbspace is recorded in the SYSHISTORY view. If the drive model cannot be determined, this property is NULL.
-
-
 
 </td>
 </tr>
@@ -1373,14 +1039,10 @@ The model number of the drive on which the database is located. The value of thi
 
 DriveType
 
-
-
 </td>
 <td valign="top">
 
 The type of drive on which the database file is located: one of CD, FIXED, RAMDISK, REMOTE, REMOVABLE, UNKNOWN. This property has extensions that you can specify when querying the property value with the DB\_EXTENDED\_PROPERTY function. Depending on the version of Linux and the type of drive, it may not be possible to determine the drive type. In these cases the value is UNKNOWN.
-
-
 
 </td>
 </tr>
@@ -1389,14 +1051,10 @@ The type of drive on which the database file is located: one of CD, FIXED, RAMDI
 
 Encryption
 
-
-
 </td>
 <td valign="top">
 
 The type of encryption used for database encryption: AES256CTR \(AES256 for older databases\).
-
-
 
 </td>
 </tr>
@@ -1405,14 +1063,10 @@ The type of encryption used for database encryption: AES256CTR \(AES256 for olde
 
 EncryptionScope
 
-
-
 </td>
 <td valign="top">
 
 The part of the database, if any, that can be encrypted. TABLE indicates that table encryption is enabled. DATABASE indicates that the whole database is encrypted. NONE indicates that table encryption is not enabled, and the database is not encrypted.
-
-
 
 </td>
 </tr>
@@ -1421,14 +1075,10 @@ The part of the database, if any, that can be encrypted. TABLE indicates that ta
 
 ExprCacheAbandons
 
-
-
 </td>
 <td valign="top">
 
 The number of times that the expression cache was completely abandoned because the hit rate was too low.
-
-
 
 </td>
 </tr>
@@ -1437,14 +1087,10 @@ The number of times that the expression cache was completely abandoned because t
 
 ExprCacheDropsToReadOnly
 
-
-
 </td>
 <td valign="top">
 
 The number of times that the expression cache dropped to read-only status because the hit rate was low.
-
-
 
 </td>
 </tr>
@@ -1453,14 +1099,10 @@ The number of times that the expression cache dropped to read-only status becaus
 
 ExprCacheEvicts
 
-
-
 </td>
 <td valign="top">
 
 The number of evictions from the expression cache.
-
-
 
 </td>
 </tr>
@@ -1469,14 +1111,10 @@ The number of evictions from the expression cache.
 
 ExprCacheHits
 
-
-
 </td>
 <td valign="top">
 
 The number of hits in the expression cache.
-
-
 
 </td>
 </tr>
@@ -1485,14 +1123,10 @@ The number of hits in the expression cache.
 
 ExprCacheInserts
 
-
-
 </td>
 <td valign="top">
 
 The number of values inserted into the expression cache.
-
-
 
 </td>
 </tr>
@@ -1501,14 +1135,10 @@ The number of values inserted into the expression cache.
 
 ExprCacheLookups
 
-
-
 </td>
 <td valign="top">
 
 The number of lookups performed in the expression cache.
-
-
 
 </td>
 </tr>
@@ -1517,14 +1147,10 @@ The number of lookups performed in the expression cache.
 
 ExprCacheResumesOfReadWrite
 
-
-
 </td>
 <td valign="top">
 
 The number of times that the expression cache resumed read-write status because the hit rate increased.
-
-
 
 </td>
 </tr>
@@ -1533,14 +1159,10 @@ The number of times that the expression cache resumed read-write status because 
 
 ExprCacheStarts
 
-
-
 </td>
 <td valign="top">
 
 The number of times the expression cache was started.
-
-
 
 </td>
 </tr>
@@ -1549,14 +1171,10 @@ The number of times the expression cache was started.
 
 ExtendDB
 
-
-
 </td>
 <td valign="top">
 
 The number of pages by which the database file has been extended.
-
-
 
 </td>
 </tr>
@@ -1565,14 +1183,10 @@ The number of pages by which the database file has been extended.
 
 ExtendTempWrite
 
-
-
 </td>
 <td valign="top">
 
 The number of pages by which temporary files have been extended.
-
-
 
 </td>
 </tr>
@@ -1581,14 +1195,10 @@ The number of pages by which temporary files have been extended.
 
 File
 
-
-
 </td>
 <td valign="top">
 
 The file name of the database root file, including path. This property has extensions that you can specify when querying the property value with the DB\_EXTENDED\_PROPERTY function.
-
-
 
 </td>
 </tr>
@@ -1597,14 +1207,10 @@ The file name of the database root file, including path. This property has exten
 
 FileSize
 
-
-
 </td>
 <td valign="top">
 
 The file size of the system dbspace, in pages. This property has extensions that you can specify when querying the property value with the DB\_EXTENDED\_PROPERTY function.
-
-
 
 </td>
 </tr>
@@ -1613,14 +1219,10 @@ The file size of the system dbspace, in pages. This property has extensions that
 
 FreePages
 
-
-
 </td>
 <td valign="top">
 
 The number of free pages in the system dbspace. The FreePages property is only supported on databases created with version 8.0.0 or later. This property has extensions that you can specify when querying the property value with the DB\_EXTENDED\_PROPERTY function.
-
-
 
 </td>
 </tr>
@@ -1629,14 +1231,10 @@ The number of free pages in the system dbspace. The FreePages property is only s
 
 FullCompare
 
-
-
 </td>
 <td valign="top">
 
 The number of comparisons that have been performed beyond the hash value in an index.
-
-
 
 </td>
 </tr>
@@ -1645,14 +1243,10 @@ The number of comparisons that have been performed beyond the hash value in an i
 
 GetData
 
-
-
 </td>
 <td valign="top">
 
 The number of GETDATA requests.
-
-
 
 </td>
 </tr>
@@ -1661,14 +1255,10 @@ The number of GETDATA requests.
 
 GlobalDBID
 
-
-
 </td>
 <td valign="top">
 
 The value of the global\_database\_id option used to generate unique primary key values in a replication environment.
-
-
 
 </td>
 </tr>
@@ -1677,14 +1267,10 @@ The value of the global\_database\_id option used to generate unique primary key
 
 HasCollationTailoring
 
-
-
 </td>
 <td valign="top">
 
 Whether collation tailoring was specified when the database was created. Possible values are On or Off.
-
-
 
 </td>
 </tr>
@@ -1693,14 +1279,10 @@ Whether collation tailoring was specified when the database was created. Possibl
 
 HasEndianSwapFix
 
-
-
 </td>
 <td valign="top">
 
 Whether the database supports both big-endian and little endian UTF-16 encoding on all platforms, regardless of the endianness of the platform. Possible values are On or Off.
-
-
 
 </td>
 </tr>
@@ -1709,14 +1291,10 @@ Whether the database supports both big-endian and little endian UTF-16 encoding 
 
 HashForcedPartitions
 
-
-
 </td>
 <td valign="top">
 
 The number of times that a hash operator was forced to partition because of competition for memory.
-
-
 
 </td>
 </tr>
@@ -1725,14 +1303,10 @@ The number of times that a hash operator was forced to partition because of comp
 
 HashRowsFiltered
 
-
-
 </td>
 <td valign="top">
 
 The number of probe rows rejected by bit-vector filters.
-
-
 
 </td>
 </tr>
@@ -1741,14 +1315,10 @@ The number of probe rows rejected by bit-vector filters.
 
 HashRowsPartitioned
 
-
-
 </td>
 <td valign="top">
 
 The number of rows written to hash work tables.
-
-
 
 </td>
 </tr>
@@ -1757,14 +1327,10 @@ The number of rows written to hash work tables.
 
 HashWorkTables
 
-
-
 </td>
 <td valign="top">
 
 The number of work tables created for hash-based operations.
-
-
 
 </td>
 </tr>
@@ -1773,14 +1339,10 @@ The number of work tables created for hash-based operations.
 
 HasNCHARLegacyCollationFix
 
-
-
 </td>
 <td valign="top">
 
 Whether the database was created by using version 11 or later software, or by using a version 10 database server with the legacy collation fix and that uses a legacy NCHAR collation \(On\). The value is Off for databases created using a version 10 database server without the legacy collation fix, or databases created using a version 10 database server that do not use a legacy NCHAR collation.
-
-
 
 </td>
 </tr>
@@ -1789,14 +1351,10 @@ Whether the database was created by using version 11 or later software, or by us
 
 HasQDADTTFeature
 
-
-
 </td>
 <td valign="top">
 
 Whether the queue depth checking feature is available \(On\) or not \(Off\).
-
-
 
 </td>
 </tr>
@@ -1805,14 +1363,10 @@ Whether the queue depth checking feature is available \(On\) or not \(Off\).
 
 HasTornWriteFix
 
-
-
 </td>
 <td valign="top">
 
 Whether the database has a fixed file format to allow recovery from partial writes.
-
-
 
 </td>
 </tr>
@@ -1821,14 +1375,10 @@ Whether the database has a fixed file format to allow recovery from partial writ
 
 HasX509AuthenticationSupport
 
-
-
 </td>
 <td valign="top">
 
 Whether the server supports X.509 authentication..
-
-
 
 </td>
 </tr>
@@ -1837,14 +1387,10 @@ Whether the server supports X.509 authentication..
 
 HeapsCarver
 
-
-
 </td>
 <td valign="top">
 
 The number of heaps used for short-term purposes such as query optimization.
-
-
 
 </td>
 </tr>
@@ -1853,14 +1399,10 @@ The number of heaps used for short-term purposes such as query optimization.
 
 HeapsLocked
 
-
-
 </td>
 <td valign="top">
 
 The number of relocatable heaps currently locked in the cache.
-
-
 
 </td>
 </tr>
@@ -1869,14 +1411,10 @@ The number of relocatable heaps currently locked in the cache.
 
 HeapsQuery
 
-
-
 </td>
 <td valign="top">
 
 The number of heaps used for query processing \(hash and sort operations\).
-
-
 
 </td>
 </tr>
@@ -1885,14 +1423,10 @@ The number of heaps used for query processing \(hash and sort operations\).
 
 HeapsRelocatable
 
-
-
 </td>
 <td valign="top">
 
 The number of relocatable heaps.
-
-
 
 </td>
 </tr>
@@ -1901,14 +1435,10 @@ The number of relocatable heaps.
 
 HttpClientMultipleHeaders
 
-
-
 </td>
 <td valign="top">
 
 Whether the database supports multiple headers with the same name in an HTTP result set.
-
-
 
 </td>
 </tr>
@@ -1917,14 +1447,10 @@ Whether the database supports multiple headers with the same name in an HTTP res
 
 HttpConnPoolCachedCount
 
-
-
 </td>
 <td valign="top">
 
 The absolute count of cached database connections within all pools.
-
-
 
 </td>
 </tr>
@@ -1933,14 +1459,10 @@ The absolute count of cached database connections within all pools.
 
 HttpConnPoolHits
 
-
-
 </td>
 <td valign="top">
 
 The rate of connections reused by the same service.
-
-
 
 </td>
 </tr>
@@ -1949,14 +1471,10 @@ The rate of connections reused by the same service.
 
 HttpConnPoolMisses
 
-
-
 </td>
 <td valign="top">
 
 The rate of new connections that were allocated when a connection could not be accessed from a pool. This property only counts HTTP requests to services that use connection pooling. At the time of access, a connection may not have been available due to a small pool size whose oldest connection did not fit the steal criteria.
-
-
 
 </td>
 </tr>
@@ -1965,14 +1483,10 @@ The rate of new connections that were allocated when a connection could not be a
 
 HttpConnPoolSteals
 
-
-
 </td>
 <td valign="top">
 
 The rate of connections taken by services where the connection belonged to another service. The service steals a connection from another service if the criteria is met for an HTTP request for a service not having any direct reusable connections and the pool size and age of the least used connection. A connection is allocated for the service and HttpConnPoolMisses is incremented instead if the pool criteria is not met.
-
-
 
 </td>
 </tr>
@@ -1981,14 +1495,10 @@ The rate of connections taken by services where the connection belonged to anoth
 
 IdentitySignature
 
-
-
 </td>
 <td valign="top">
 
 This property is for internal use only.
-
-
 
 </td>
 </tr>
@@ -1997,14 +1507,10 @@ This property is for internal use only.
 
 IdentitySignatureUUID
 
-
-
 </td>
 <td valign="top">
 
 This property is for internal use only.
-
-
 
 </td>
 </tr>
@@ -2013,14 +1519,10 @@ This property is for internal use only.
 
 IdleCheck
 
-
-
 </td>
 <td valign="top">
 
 The number of times that the server's idle thread has become active to do idle writes, idle checkpoints, and so on.
-
-
 
 </td>
 </tr>
@@ -2029,14 +1531,10 @@ The number of times that the server's idle thread has become active to do idle w
 
 IdleChkpt
 
-
-
 </td>
 <td valign="top">
 
 The number of checkpoints completed by the server's idle thread. An idle checkpoint occurs whenever the idle thread writes out the last dirty page in the cache.
-
-
 
 </td>
 </tr>
@@ -2045,14 +1543,10 @@ The number of checkpoints completed by the server's idle thread. An idle checkpo
 
 IdleChkTime
 
-
-
 </td>
 <td valign="top">
 
 The number in hundredths of a second spent checkpointing during idle I/O.
-
-
 
 </td>
 </tr>
@@ -2061,14 +1555,10 @@ The number in hundredths of a second spent checkpointing during idle I/O.
 
 IdleWrite
 
-
-
 </td>
 <td valign="top">
 
 The number of disk writes that have been issued by the server's idle thread.
-
-
 
 </td>
 </tr>
@@ -2077,14 +1567,10 @@ The number of disk writes that have been issued by the server's idle thread.
 
 IndAdd
 
-
-
 </td>
 <td valign="top">
 
 The number of entries that have been added to indexes.
-
-
 
 </td>
 </tr>
@@ -2093,14 +1579,10 @@ The number of entries that have been added to indexes.
 
 IndLookup
 
-
-
 </td>
 <td valign="top">
 
 The number of entries that have been looked up in indexes.
-
-
 
 </td>
 </tr>
@@ -2109,14 +1591,10 @@ The number of entries that have been looked up in indexes.
 
 IOParallelism
 
-
-
 </td>
 <td valign="top">
 
 The estimated number of simultaneous I/O operations supported by the dbspace. This property has extensions that you can specify when querying the property value with the DB\_EXTENDED\_PROPERTY function.
-
-
 
 </td>
 </tr>
@@ -2125,14 +1603,10 @@ The estimated number of simultaneous I/O operations supported by the dbspace. Th
 
 IOToRecover
 
-
-
 </td>
 <td valign="top">
 
 The estimated number of I/O operations required to recover the database.
-
-
 
 </td>
 </tr>
@@ -2141,14 +1615,10 @@ The estimated number of I/O operations required to recover the database.
 
 IQStore
 
-
-
 </td>
 <td valign="top">
 
 This property is for internal use only.
-
-
 
 </td>
 </tr>
@@ -2157,14 +1627,10 @@ This property is for internal use only.
 
 IsTransactionalDDLEnabled
 
-
-
 </td>
 <td valign="top">
 
 Whether the database server supports transactional DDL. auto\_commit must be disabled \(OFF\) before enabling autocommit\_DDL.
-
-
 
 </td>
 </tr>
@@ -2173,14 +1639,10 @@ Whether the database server supports transactional DDL. auto\_commit must be dis
 
 JavaVM
 
-
-
 </td>
 <td valign="top">
 
 The Java VM the database server uses to execute Java in the database.
-
-
 
 </td>
 </tr>
@@ -2189,14 +1651,10 @@ The Java VM the database server uses to execute Java in the database.
 
 KeyDerivationIterations
 
-
-
 </td>
 <td valign="top">
 
 The number of times that the database encryption key was hashed when the database was created.
-
-
 
 </td>
 </tr>
@@ -2205,14 +1663,10 @@ The number of times that the database encryption key was hashed when the databas
 
 Language
 
-
-
 </td>
 <td valign="top">
 
 A comma-separated list of languages known to be supported by the database collation. The languages are in two-letter ISO format. If the language isn't known, the return value is NULL.
-
-
 
 </td>
 </tr>
@@ -2221,14 +1675,10 @@ A comma-separated list of languages known to be supported by the database collat
 
 LastCheckpointTime
 
-
-
 </td>
 <td valign="top">
 
 The date and time, in milliseconds, of the most recent checkpoint. If the database has the time\_zone option set, then the value is returned using the database's time zone.
-
-
 
 </td>
 </tr>
@@ -2237,14 +1687,10 @@ The date and time, in milliseconds, of the most recent checkpoint. If the databa
 
 LastCommitRedoPos
 
-
-
 </td>
 <td valign="top">
 
 The redo log position after the last COMMIT operation was written to the transaction log by the database.
-
-
 
 </td>
 </tr>
@@ -2253,14 +1699,10 @@ The redo log position after the last COMMIT operation was written to the transac
 
 LastSyncedRedoPos
 
-
-
 </td>
 <td valign="top">
 
 The last redo position for which a write was issued to disk and the data was synchronized to the physical medium. Data prior to this position is expected to be present on disk even in the event of a power failure.
-
-
 
 </td>
 </tr>
@@ -2269,14 +1711,10 @@ The last redo position for which a write was issued to disk and the data was syn
 
 LastWrittenRedoPos
 
-
-
 </td>
 <td valign="top">
 
 The last redo position for which a write was issued to disk. The write is not necessarily synchronized to the physical medium as it may still be cached by the operating system, disk controller, or disk drive.
-
-
 
 </td>
 </tr>
@@ -2285,14 +1723,10 @@ The last redo position for which a write was issued to disk. The write is not ne
 
 LockCount
 
-
-
 </td>
 <td valign="top">
 
 The number of locks held by the database.
-
-
 
 </td>
 </tr>
@@ -2301,14 +1735,10 @@ The number of locks held by the database.
 
 LockTablePages
 
-
-
 </td>
 <td valign="top">
 
 The number of pages used to store lock information.
-
-
 
 </td>
 </tr>
@@ -2317,14 +1747,10 @@ The number of pages used to store lock information.
 
 LogFreeCommit
 
-
-
 </td>
 <td valign="top">
 
 The number of redo free commits. A redo free commit occurs when a commit of the transaction log is requested but the log has already been written \(so the commit was done for free\).
-
-
 
 </td>
 </tr>
@@ -2333,14 +1759,10 @@ The number of redo free commits. A redo free commit occurs when a commit of the 
 
 LogMirrorName
 
-
-
 </td>
 <td valign="top">
 
 The file name of the transaction log mirror, including the path.
-
-
 
 </td>
 </tr>
@@ -2349,14 +1771,10 @@ The file name of the transaction log mirror, including the path.
 
 LogName
 
-
-
 </td>
 <td valign="top">
 
 The file name of the transaction log, including path.
-
-
 
 </td>
 </tr>
@@ -2365,14 +1783,10 @@ The file name of the transaction log, including path.
 
 LogWrite
 
-
-
 </td>
 <td valign="top">
 
 The number of pages that have been written to the transaction log.
-
-
 
 </td>
 </tr>
@@ -2381,14 +1795,10 @@ The number of pages that have been written to the transaction log.
 
 LTMGeneration
 
-
-
 </td>
 <td valign="top">
 
 This property is for internal use only.
-
-
 
 </td>
 </tr>
@@ -2397,14 +1807,10 @@ This property is for internal use only.
 
 LTMTrunc
 
-
-
 </td>
 <td valign="top">
 
 This property is for internal use only.
-
-
 
 </td>
 </tr>
@@ -2413,14 +1819,10 @@ This property is for internal use only.
 
 MaxConnections
 
-
-
 </td>
 <td valign="top">
 
 The maximum number of concurrent connections that are allowed to the database. This property corresponds to the max\_connections database option.
-
-
 
 </td>
 </tr>
@@ -2429,14 +1831,10 @@ The maximum number of concurrent connections that are allowed to the database. T
 
 MaxIO
 
-
-
 </td>
 <td valign="top">
 
 The maximum value that CurrIO has reached.
-
-
 
 </td>
 </tr>
@@ -2445,14 +1843,10 @@ The maximum value that CurrIO has reached.
 
 MaxRead
 
-
-
 </td>
 <td valign="top">
 
 The maximum value that CurrRead has reached.
-
-
 
 </td>
 </tr>
@@ -2461,14 +1855,10 @@ The maximum value that CurrRead has reached.
 
 MaxWrite
 
-
-
 </td>
 <td valign="top">
 
 The maximum value that CurrWrite has reached.
-
-
 
 </td>
 </tr>
@@ -2477,14 +1867,10 @@ The maximum value that CurrWrite has reached.
 
 MirrorMode
 
-
-
 </td>
 <td valign="top">
 
 Whether database mirroring is not in use \(NULL\), or if the mirroring mode specified with the -xp option is synchronous or asynchronous.
-
-
 
 </td>
 </tr>
@@ -2493,14 +1879,10 @@ Whether database mirroring is not in use \(NULL\), or if the mirroring mode spec
 
 MirrorRole
 
-
-
 </td>
 <td valign="top">
 
 The role of the database server in a mirroring configuration. The value is Primary when the database is the primary database server or the mirror server. The value is Mirror when the database server is the mirror server. The value is Copy when the database server is a read-only mirror server that obtains its log pages from the current primary server, the current mirror server, or another read-only node.
-
-
 
 </td>
 </tr>
@@ -2509,14 +1891,10 @@ The role of the database server in a mirroring configuration. The value is Prima
 
 MirrorServerState
 
-
-
 </td>
 <td valign="top">
 
 The state of the mirror server. This property has extensions that you can specify when querying the property value with the DB\_EXTENDED\_PROPERTY function.
-
-
 
 </td>
 </tr>
@@ -2525,14 +1903,10 @@ The state of the mirror server. This property has extensions that you can specif
 
 MirrorServerWaits
 
-
-
 </td>
 <td valign="top">
 
 The number of times the database server waited more than 500 milliseconds when sending log pages to copy servers.
-
-
 
 </td>
 </tr>
@@ -2541,14 +1915,10 @@ The number of times the database server waited more than 500 milliseconds when s
 
 MirrorState
 
-
-
 </td>
 <td valign="top">
 
 Information about the database's status in a mirroring configuration. This property has extensions that you can specify when querying the property value with the DB\_EXTENDED\_PROPERTY function.
-
-
 
 </td>
 </tr>
@@ -2557,14 +1927,10 @@ Information about the database's status in a mirroring configuration. This prope
 
 MultiByteCharSet
 
-
-
 </td>
 <td valign="top">
 
 Whether the database uses a multibyte character set, such as UTF-8, \(On\), or not \(Off\).
-
-
 
 </td>
 </tr>
@@ -2573,14 +1939,10 @@ Whether the database uses a multibyte character set, such as UTF-8, \(On\), or n
 
 Name
 
-
-
 </td>
 <td valign="top">
 
 The database name \(identical to Alias\).
-
-
 
 </td>
 </tr>
@@ -2589,14 +1951,10 @@ The database name \(identical to Alias\).
 
 NcharCharSet
 
-
-
 </td>
 <td valign="top">
 
 The NCHAR character set of the database.
-
-
 
 </td>
 </tr>
@@ -2605,14 +1963,10 @@ The NCHAR character set of the database.
 
 NcharCollation
 
-
-
 </td>
 <td valign="top">
 
 The name of the collation used for NCHAR data. This property has extensions that you can specify when querying the property value.
-
-
 
 </td>
 </tr>
@@ -2621,14 +1975,10 @@ The name of the collation used for NCHAR data. This property has extensions that
 
 NextScheduleTime
 
-
-
 </td>
 <td valign="top">
 
 The next scheduled execution time for a specified event.This property has extensions that you can specify when querying the property value.
-
-
 
 </td>
 </tr>
@@ -2637,14 +1987,10 @@ The next scheduled execution time for a specified event.This property has extens
 
 OptionWatchAction
 
-
-
 </td>
 <td valign="top">
 
 The action that is taken when an attempt is made to set a database option that is included in the OptionWatchList property.
-
-
 
 </td>
 </tr>
@@ -2653,14 +1999,10 @@ The action that is taken when an attempt is made to set a database option that i
 
 OptionWatchList
 
-
-
 </td>
 <td valign="top">
 
 The list of database options being monitored by the database server.
-
-
 
 </td>
 </tr>
@@ -2669,14 +2011,10 @@ The list of database options being monitored by the database server.
 
 PacketsReceived
 
-
-
 </td>
 <td valign="top">
 
 The number of client/server communication packets received. This value is not updated for HTTP or HTTPS connections.
-
-
 
 </td>
 </tr>
@@ -2685,14 +2023,10 @@ The number of client/server communication packets received. This value is not up
 
 PacketsReceivedUncomp
 
-
-
 </td>
 <td valign="top">
 
 The number of packets that would have been received during client/server communications if compression was disabled. \(This value is the same as the value for PacketsReceived if compression is disabled.\)
-
-
 
 </td>
 </tr>
@@ -2701,14 +2035,10 @@ The number of packets that would have been received during client/server communi
 
 PacketsSent
 
-
-
 </td>
 <td valign="top">
 
 The number of client/server communication packets sent. This value is not updated for HTTP or HTTPS connections.
-
-
 
 </td>
 </tr>
@@ -2717,14 +2047,10 @@ The number of client/server communication packets sent. This value is not update
 
 PacketsSentUncomp
 
-
-
 </td>
 <td valign="top">
 
 The number of packets that would have been sent during client/server communications if compression was disabled. \(This value is the same as the value for PacketsSent if compression is disabled.\)
-
-
 
 </td>
 </tr>
@@ -2733,14 +2059,10 @@ The number of packets that would have been sent during client/server communicati
 
 PageRelocations
 
-
-
 </td>
 <td valign="top">
 
 The number of relocatable heap pages that have been read from the temporary file.
-
-
 
 </td>
 </tr>
@@ -2749,14 +2071,10 @@ The number of relocatable heap pages that have been read from the temporary file
 
 PageSize
 
-
-
 </td>
 <td valign="top">
 
 The page size of the database, in bytes.
-
-
 
 </td>
 </tr>
@@ -2765,14 +2083,10 @@ The page size of the database, in bytes.
 
 ParameterizationPrepareCount
 
-
-
 </td>
 <td valign="top">
 
 The number of prepares for statements that have been automatically parameterized.
-
-
 
 </td>
 </tr>
@@ -2781,14 +2095,10 @@ The number of prepares for statements that have been automatically parameterized
 
 PartnerState
 
-
-
 </td>
 <td valign="top">
 
 Information about the database server's status in a mirroring configuration. Values include: *Connected*, when there is a connection from this server to a partner server and a connection from the partner server to this server; *Disconnected* when there are no connections between this server and the partner server; Incoming only when there is a there is a connection from the partner server to this server; and *Outgoing* only when there is a connection from this server to the partner server. The value is *NULL* when the database server is not involved in a mirroring configuration.
-
-
 
 </td>
 </tr>
@@ -2797,14 +2107,10 @@ Information about the database server's status in a mirroring configuration. Val
 
 PlanStatisticsStored
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>
@@ -2813,14 +2119,10 @@ For internal use only.
 
 Prepares
 
-
-
 </td>
 <td valign="top">
 
 The number of statement prepares performed for the database.
-
-
 
 </td>
 </tr>
@@ -2829,14 +2131,10 @@ The number of statement prepares performed for the database.
 
 PrepStmt
 
-
-
 </td>
 <td valign="top">
 
 The number of prepared statements currently being maintained by the database server for the current database.
-
-
 
 </td>
 </tr>
@@ -2845,14 +2143,10 @@ The number of prepared statements currently being maintained by the database ser
 
 PreviousTimelineID
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>
@@ -2861,14 +2155,10 @@ For internal use only.
 
 ProcedurePages
 
-
-
 </td>
 <td valign="top">
 
 The number of relocatable heap pages that have been used for procedures.
-
-
 
 </td>
 </tr>
@@ -2877,14 +2167,10 @@ The number of relocatable heap pages that have been used for procedures.
 
 ProcedureProfiling
 
-
-
 </td>
 <td valign="top">
 
 Whether procedure profiling is turned on for the database.
-
-
 
 </td>
 </tr>
@@ -2893,14 +2179,10 @@ Whether procedure profiling is turned on for the database.
 
 PropertyHistoryList
 
-
-
 </td>
 <td valign="top">
 
 The current set of properties being tracked for this database.
-
-
 
 </td>
 </tr>
@@ -2909,14 +2191,10 @@ The current set of properties being tracked for this database.
 
 QueryBypassed
 
-
-
 </td>
 <td valign="top">
 
 The number of requests reused from the plan cache.
-
-
 
 </td>
 </tr>
@@ -2925,14 +2203,10 @@ The number of requests reused from the plan cache.
 
 QueryBypassedCosted
 
-
-
 </td>
 <td valign="top">
 
 The number of requests processed by the optimizer bypass using costing.
-
-
 
 </td>
 </tr>
@@ -2941,14 +2215,10 @@ The number of requests processed by the optimizer bypass using costing.
 
 QueryBypassedHeuristic
 
-
-
 </td>
 <td valign="top">
 
 The number of requests processed by the optimizer bypass using heuristics.
-
-
 
 </td>
 </tr>
@@ -2957,14 +2227,10 @@ The number of requests processed by the optimizer bypass using heuristics.
 
 QueryBypassedOptimized
 
-
-
 </td>
 <td valign="top">
 
 The number of requests initially processed by the optimizer bypass and subsequently fully optimized by the optimizer.
-
-
 
 </td>
 </tr>
@@ -2973,14 +2239,10 @@ The number of requests initially processed by the optimizer bypass and subsequen
 
 QueryCachedPlans
 
-
-
 </td>
 <td valign="top">
 
 The number of cached execution plans across all connections.
-
-
 
 </td>
 </tr>
@@ -2989,14 +2251,10 @@ The number of cached execution plans across all connections.
 
 QueryCachePages
 
-
-
 </td>
 <td valign="top">
 
 The number of pages used to cache execution plans.
-
-
 
 </td>
 </tr>
@@ -3005,14 +2263,10 @@ The number of pages used to cache execution plans.
 
 QueryDescribedBypass
 
-
-
 </td>
 <td valign="top">
 
 The number of describe requests processed by the optimizer bypass.
-
-
 
 </td>
 </tr>
@@ -3021,14 +2275,10 @@ The number of describe requests processed by the optimizer bypass.
 
 QueryDescribedOptimizer
 
-
-
 </td>
 <td valign="top">
 
 The number of describe requests processed by the optimizer.
-
-
 
 </td>
 </tr>
@@ -3037,14 +2287,10 @@ The number of describe requests processed by the optimizer.
 
 QueryHeapPages
 
-
-
 </td>
 <td valign="top">
 
 The number of cache pages used for query processing \(hash and sort operations\).
-
-
 
 </td>
 </tr>
@@ -3053,14 +2299,10 @@ The number of cache pages used for query processing \(hash and sort operations\)
 
 QueryJHToJNLOptUsed
 
-
-
 </td>
 <td valign="top">
 
 The number of times a hash join was converted to a nested loops join.
-
-
 
 </td>
 </tr>
@@ -3069,14 +2311,10 @@ The number of times a hash join was converted to a nested loops join.
 
 QueryLowMemoryStrategy
 
-
-
 </td>
 <td valign="top">
 
 The number of times the server changed its execution plan during execution as a result of low memory conditions. The strategy can change because less memory is available than the optimizer estimated, or because the execution plan required more memory than the optimizer estimated.
-
-
 
 </td>
 </tr>
@@ -3085,14 +2323,10 @@ The number of times the server changed its execution plan during execution as a 
 
 QueryMemActiveCurr
 
-
-
 </td>
 <td valign="top">
 
 The number of requests actively using query memory.
-
-
 
 </td>
 </tr>
@@ -3101,14 +2335,10 @@ The number of requests actively using query memory.
 
 QueryMemGrantFailed
 
-
-
 </td>
 <td valign="top">
 
 The total number of times a request waited for query memory, but failed to get it.
-
-
 
 </td>
 </tr>
@@ -3117,14 +2347,10 @@ The total number of times a request waited for query memory, but failed to get i
 
 QueryMemGrantGranted
 
-
-
 </td>
 <td valign="top">
 
 The number of pages currently granted to requests.
-
-
 
 </td>
 </tr>
@@ -3133,14 +2359,10 @@ The number of pages currently granted to requests.
 
 QueryMemGrantRequested
 
-
-
 </td>
 <td valign="top">
 
 The total number of times any request attempted to acquire query memory.
-
-
 
 </td>
 </tr>
@@ -3149,14 +2371,10 @@ The total number of times any request attempted to acquire query memory.
 
 QueryMemGrantWaited
 
-
-
 </td>
 <td valign="top">
 
 The total number of times any request waited for query memory.
-
-
 
 </td>
 </tr>
@@ -3165,14 +2383,10 @@ The total number of times any request waited for query memory.
 
 QueryMemGrantWaiting
 
-
-
 </td>
 <td valign="top">
 
 The current number of requests waiting for query memory.
-
-
 
 </td>
 </tr>
@@ -3181,14 +2395,10 @@ The current number of requests waiting for query memory.
 
 QueryOpened
 
-
-
 </td>
 <td valign="top">
 
 The number of OPEN requests for execution.
-
-
 
 </td>
 </tr>
@@ -3197,14 +2407,10 @@ The number of OPEN requests for execution.
 
 QueryOptimized
 
-
-
 </td>
 <td valign="top">
 
 The number of requests fully optimized.
-
-
 
 </td>
 </tr>
@@ -3213,14 +2419,10 @@ The number of requests fully optimized.
 
 QueryReused
 
-
-
 </td>
 <td valign="top">
 
 The number of reused query plans.
-
-
 
 </td>
 </tr>
@@ -3229,14 +2431,10 @@ The number of reused query plans.
 
 QueryRowsFetched
 
-
-
 </td>
 <td valign="top">
 
 The number of rows that have been read from base tables, either by a sequential scan or an index scan, for this database.
-
-
 
 </td>
 </tr>
@@ -3245,14 +2443,10 @@ The number of rows that have been read from base tables, either by a sequential 
 
 QueryRowsMaterialized
 
-
-
 </td>
 <td valign="top">
 
 The number of rows written to work tables during query processing.
-
-
 
 </td>
 </tr>
@@ -3261,14 +2455,10 @@ The number of rows written to work tables during query processing.
 
 ReadOnly
 
-
-
 </td>
 <td valign="top">
 
 Whether the database is being run in read-only mode \(On\) or not \(Off\).
-
-
 
 </td>
 </tr>
@@ -3277,14 +2467,10 @@ Whether the database is being run in read-only mode \(On\) or not \(Off\).
 
 ReceivingTracingFrom
 
-
-
 </td>
 <td valign="top">
 
 The name of the database from which the tracing data is coming. The value is a blank string if tracing is not attached.
-
-
 
 </td>
 </tr>
@@ -3293,14 +2479,10 @@ The name of the database from which the tracing data is coming. The value is a b
 
 RecoveryUrgency
 
-
-
 </td>
 <td valign="top">
 
 An estimate of the amount of time required to recover the database as a percentage of the recovery time setting of the database.
-
-
 
 </td>
 </tr>
@@ -3309,14 +2491,10 @@ An estimate of the amount of time required to recover the database as a percenta
 
 RecursiveIterations
 
-
-
 </td>
 <td valign="top">
 
 The number of iterations for recursive unions.
-
-
 
 </td>
 </tr>
@@ -3325,14 +2503,10 @@ The number of iterations for recursive unions.
 
 RecursiveIterationsHash
 
-
-
 </td>
 <td valign="top">
 
 The number of times recursive hash join used a hash strategy.
-
-
 
 </td>
 </tr>
@@ -3341,14 +2515,10 @@ The number of times recursive hash join used a hash strategy.
 
 RecursiveIterationsNested
 
-
-
 </td>
 <td valign="top">
 
 The number of times recursive hash join used a nested loops strategy.
-
-
 
 </td>
 </tr>
@@ -3357,14 +2527,10 @@ The number of times recursive hash join used a nested loops strategy.
 
 RecursiveJNLMisses
 
-
-
 </td>
 <td valign="top">
 
 The number of index probe cache misses for recursive hash join.
-
-
 
 </td>
 </tr>
@@ -3373,14 +2539,10 @@ The number of index probe cache misses for recursive hash join.
 
 RecursiveJNLProbes
 
-
-
 </td>
 <td valign="top">
 
 The number of times recursive hash join attempted an index probe.
-
-
 
 </td>
 </tr>
@@ -3389,14 +2551,10 @@ The number of times recursive hash join attempted an index probe.
 
 RelocatableHeapPages
 
-
-
 </td>
 <td valign="top">
 
 The number of pages used for relocatable heaps \(cursors, statements, procedures, triggers, views, and so on.\).
-
-
 
 </td>
 </tr>
@@ -3405,14 +2563,10 @@ The number of pages used for relocatable heaps \(cursors, statements, procedures
 
 RemoteTrunc
 
-
-
 </td>
 <td valign="top">
 
 The minimal confirmed log offset for the SQL Remote Message Agent.
-
-
 
 </td>
 </tr>
@@ -3421,14 +2575,10 @@ The minimal confirmed log offset for the SQL Remote Message Agent.
 
 ReqCountActive
 
-
-
 </td>
 <td valign="top">
 
 The number of requests processed, or NULL if the RequestTiming server property is set to Off.
-
-
 
 </td>
 </tr>
@@ -3437,14 +2587,10 @@ The number of requests processed, or NULL if the RequestTiming server property i
 
 ReqCountBlockContention
 
-
-
 </td>
 <td valign="top">
 
 The number of times connections to the database waited for atomic access, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -3453,14 +2599,10 @@ The number of times connections to the database waited for atomic access, or NUL
 
 ReqCountBlockIO
 
-
-
 </td>
 <td valign="top">
 
 The number of times connections to the database waited for I/O to complete, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -3469,14 +2611,10 @@ The number of times connections to the database waited for I/O to complete, or N
 
 ReqCountBlockLock
 
-
-
 </td>
 <td valign="top">
 
 The number of times connections to the database waited for a lock, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -3485,14 +2623,10 @@ The number of times connections to the database waited for a lock, or NULL if th
 
 ReqCountUnscheduled
 
-
-
 </td>
 <td valign="top">
 
 The number of times connections to the database waited for scheduling, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -3501,14 +2635,10 @@ The number of times connections to the database waited for scheduling, or NULL i
 
 ReqTimeActive
 
-
-
 </td>
 <td valign="top">
 
 The amount of time spent in seconds processing requests, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -3517,14 +2647,10 @@ The amount of time spent in seconds processing requests, or NULL if the -zt opti
 
 ReqTimeBlockContention
 
-
-
 </td>
 <td valign="top">
 
 The amount of time spent in seconds waiting for atomic access, or NULL if the RequestTiming server property is set to Off.
-
-
 
 </td>
 </tr>
@@ -3533,14 +2659,10 @@ The amount of time spent in seconds waiting for atomic access, or NULL if the Re
 
 ReqTimeBlockIO
 
-
-
 </td>
 <td valign="top">
 
 The amount of time spent in seconds waiting for I/O to complete, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -3549,14 +2671,10 @@ The amount of time spent in seconds waiting for I/O to complete, or NULL if the 
 
 ReqTimeBlockLock
 
-
-
 </td>
 <td valign="top">
 
 The amount of time spent in seconds waiting for a lock, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -3565,14 +2683,10 @@ The amount of time spent in seconds waiting for a lock, or NULL if the -zt optio
 
 ReqTimeUnscheduled
 
-
-
 </td>
 <td valign="top">
 
 The amount of unscheduled time, or NULL if the -zt option was not specified.
-
-
 
 </td>
 </tr>
@@ -3581,14 +2695,10 @@ The amount of unscheduled time, or NULL if the -zt option was not specified.
 
 RequestsReceived
 
-
-
 </td>
 <td valign="top">
 
 The number of client/server communication requests or round trips. This property is different from PacketsReceived in that multi-packet requests count as one request, and liveness packets are not included.
-
-
 
 </td>
 </tr>
@@ -3597,14 +2707,10 @@ The number of client/server communication requests or round trips. This property
 
 Rlbk
 
-
-
 </td>
 <td valign="top">
 
 The number of rollback requests that have been handled.
-
-
 
 </td>
 </tr>
@@ -3613,14 +2719,10 @@ The number of rollback requests that have been handled.
 
 RollbackLogPages
 
-
-
 </td>
 <td valign="top">
 
 The number of pages in the rollback log.
-
-
 
 </td>
 </tr>
@@ -3629,14 +2731,10 @@ The number of pages in the rollback log.
 
 SendingTracingTo
 
-
-
 </td>
 <td valign="top">
 
 The connection string where the tracing data is being sent. The value is a blank string if tracing is not attached.
-
-
 
 </td>
 </tr>
@@ -3645,14 +2743,10 @@ The connection string where the tracing data is being sent. The value is a blank
 
 SnapshotCount
 
-
-
 </td>
 <td valign="top">
 
 The number of snapshots associated with the database.
-
-
 
 </td>
 </tr>
@@ -3661,14 +2755,10 @@ The number of snapshots associated with the database.
 
 SnapshotIsolationState
 
-
-
 </td>
 <td valign="top">
 
 Whether snapshot isolation is enabled for the database \(On\) or not \(Off\), or whether it will be enabled \(in\_transition\_to\_on\) or disabled \(in\_transition\_to\_off \) once the current transactions complete.
-
-
 
 </td>
 </tr>
@@ -3677,14 +2767,10 @@ Whether snapshot isolation is enabled for the database \(On\) or not \(Off\), or
 
 SortMergePasses
 
-
-
 </td>
 <td valign="top">
 
 The number of merge passes used during sorting.
-
-
 
 </td>
 </tr>
@@ -3693,14 +2779,10 @@ The number of merge passes used during sorting.
 
 SortRowsMaterialized
 
-
-
 </td>
 <td valign="top">
 
 The number of rows written to sort work tables.
-
-
 
 </td>
 </tr>
@@ -3709,14 +2791,10 @@ The number of rows written to sort work tables.
 
 SortRunsWritten
 
-
-
 </td>
 <td valign="top">
 
 The number of sorted runs written during sorting.
-
-
 
 </td>
 </tr>
@@ -3725,14 +2803,10 @@ The number of sorted runs written during sorting.
 
 SortSortedRuns
 
-
-
 </td>
 <td valign="top">
 
 The number of sorted runs created during run formation.
-
-
 
 </td>
 </tr>
@@ -3741,14 +2815,10 @@ The number of sorted runs created during run formation.
 
 SortWorkTables
 
-
-
 </td>
 <td valign="top">
 
 The number of work tables created for sorting.
-
-
 
 </td>
 </tr>
@@ -3757,14 +2827,10 @@ The number of work tables created for sorting.
 
 StatementDescribes
 
-
-
 </td>
 <td valign="top">
 
 The total number of statements processed by DESCRIBE requests.
-
-
 
 </td>
 </tr>
@@ -3773,14 +2839,10 @@ The total number of statements processed by DESCRIBE requests.
 
 StatementPostAnnotates
 
-
-
 </td>
 <td valign="top">
 
 The number of statements processed by the semantic query transformation phase.
-
-
 
 </td>
 </tr>
@@ -3789,14 +2851,10 @@ The number of statements processed by the semantic query transformation phase.
 
 StatementPostAnnotatesSimple
 
-
-
 </td>
 <td valign="top">
 
 The number of statements processed by the semantic query transformation phase, but which skipped some of the semantic transformations.
-
-
 
 </td>
 </tr>
@@ -3805,14 +2863,10 @@ The number of statements processed by the semantic query transformation phase, b
 
 StatementPostAnnotatesSkipped
 
-
-
 </td>
 <td valign="top">
 
 The number of statements that have completely skipped the semantic query transformation phase.
-
-
 
 </td>
 </tr>
@@ -3821,14 +2875,10 @@ The number of statements that have completely skipped the semantic query transfo
 
 SynchronizationSchemaChangeActive
 
-
-
 </td>
 <td valign="top">
 
 Whether an active connection executed a START SYNCHRONIZATION SCHEMA CHANGE statement but has not executed a STOP SYNCHRONIZATION SCHEMA CHANGE statement \(On\) or not \(Off\).
-
-
 
 </td>
 </tr>
@@ -3837,14 +2887,10 @@ Whether an active connection executed a START SYNCHRONIZATION SCHEMA CHANGE stat
 
 TempFileName
 
-
-
 </td>
 <td valign="top">
 
 The file name of the database temporary file, including path.
-
-
 
 </td>
 </tr>
@@ -3853,14 +2899,10 @@ The file name of the database temporary file, including path.
 
 TempTablePages
 
-
-
 </td>
 <td valign="top">
 
 The number of pages in the temporary file used for temporary tables.
-
-
 
 </td>
 </tr>
@@ -3869,14 +2911,10 @@ The number of pages in the temporary file used for temporary tables.
 
 TimelineBranchOffset
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>
@@ -3885,14 +2923,10 @@ For internal use only.
 
 TimeWithoutClientConnection
 
-
-
 </td>
 <td valign="top">
 
 The time in seconds since the last command sequence or TDS client connection, or the time since the database started if no connections have been made to the database. The value is 0 if there is a current connection.
-
-
 
 </td>
 </tr>
@@ -3901,14 +2935,10 @@ The time in seconds since the last command sequence or TDS client connection, or
 
 TimeZone
 
-
-
 </td>
 <td valign="top">
 
 The time zone that the database uses for time zone calculations. The value is NULL if the Timezone database option is not set.
-
-
 
 </td>
 </tr>
@@ -3917,14 +2947,10 @@ The time zone that the database uses for time zone calculations. The value is NU
 
 TriggerPages
 
-
-
 </td>
 <td valign="top">
 
 The number of relocatable heap pages used for triggers.
-
-
 
 </td>
 </tr>
@@ -3933,14 +2959,10 @@ The number of relocatable heap pages used for triggers.
 
 UTCTimestampCatalog
 
-
-
 </td>
 <td valign="top">
 
 Whether the database is storing UTC timestamps in the system tables \(On\) or not \(Off\).
-
-
 
 </td>
 </tr>
@@ -3949,14 +2971,10 @@ Whether the database is storing UTC timestamps in the system tables \(On\) or no
 
 VersionStorePages
 
-
-
 </td>
 <td valign="top">
 
 The number of pages in the temporary file that are being used for the row version store when snapshot isolation is enabled.
-
-
 
 </td>
 </tr>
@@ -3965,14 +2983,10 @@ The number of pages in the temporary file that are being used for the row versio
 
 ViewPages
 
-
-
 </td>
 <td valign="top">
 
 The number of relocatable heap pages used for views.
-
-
 
 </td>
 </tr>
@@ -3981,14 +2995,10 @@ The number of relocatable heap pages used for views.
 
 WriteChecksum
 
-
-
 </td>
 <td valign="top">
 
 Whether the database server adds checksums to pages before they are written out \(On\) or not \(Off\).
-
-
 
 </td>
 </tr>
@@ -3997,14 +3007,10 @@ Whether the database server adds checksums to pages before they are written out 
 
 XPathCompiles
 
-
-
 </td>
 <td valign="top">
 
 The number of times any XPath query \(using the OPENXML operator\) was compiled by the database server since database server startup.
-
-
 
 </td>
 </tr>

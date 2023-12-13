@@ -7,7 +7,7 @@ Tests whether a string argument can be converted to a numeric.
 
 
 ```
-ISNUMERIC ( <string> )
+ISNUMERIC ( <string> );
 ```
 
 
@@ -36,7 +36,7 @@ The string to be analyzed to determine whether the string represents a valid num
 
 <a name="loiof82be4309ee34e0dab5a3148c3d56fc6__section_i3p_fkh_trb"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -79,11 +79,11 @@ select case
    then NULL
    else cast(height_in_cms as int) 
    end
-from MyData
+from MyData;
 ```
 
 **Related Information**  
 
 
-[ISNUMERIC Function [Miscellaneous] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a55af5d284f21015867a9c978b63f5c1.html "Tests whether a string argument can be converted to a numeric.") :arrow_upper_right:
+[ISNUMERIC Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a55af5d284f21015867a9c978b63f5c1.html "Tests whether a string argument can be converted to a numeric.") :arrow_upper_right:
 

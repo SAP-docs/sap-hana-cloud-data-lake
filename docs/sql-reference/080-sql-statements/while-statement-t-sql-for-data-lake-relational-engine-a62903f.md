@@ -6,16 +6,19 @@ Provides repeated execution of a statement or compound statement.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa62903f784f2101580008b8c6fbdb47c__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 WHILE <expression>
-   ... <statement>
+   ... <statement>;
 ```
 
 
@@ -65,7 +68,7 @@ BEGIN
 	WHERE UnitPrice = MAX(UnitPrice)
 	IF ( SELECT MAX(UnitPrice) FROM Products ) < 50 
 		BREAK
-END
+END;
 ```
 
 **Related Information**  

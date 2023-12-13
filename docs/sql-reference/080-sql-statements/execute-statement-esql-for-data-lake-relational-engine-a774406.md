@@ -6,10 +6,13 @@ Executes a SQL statement.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa774406384f21015b6b5b37c393396c9__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -26,7 +29,7 @@ Syntax 1 – Executes a Previously Prepared Named Dynamic Statement
 EXECUTE <statement-name>
    ... [ { USING DESCRIPTOR <sqlda-name> | USING <host-variable-list> } ]
    ... [ { INTO DESCRIPTOR <into-sqlda-name> | INTO <into-host-variable-list> } ]
-   ... [ ARRAY :<nnn> ]
+   ... [ ARRAY :<nnn> ];
 ```
 
 
@@ -39,7 +42,7 @@ Syntax 2 – Short Form to PREPARE and EXECUTE a Statement Not Containing Bind V
 <dd>
 
 ```
-EXECUTE IMMEDIATE <statement>
+EXECUTE IMMEDIATE <statement>;
 ```
 
 

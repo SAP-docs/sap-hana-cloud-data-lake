@@ -72,5 +72,5 @@ For compatibility with SAP Adaptive Server Enterprise, you can set the `QUOTED_I
 
 [Three-Valued Logic](three-valued-logic-a501bc6.md "The AND, OR, NOT, and IS logical operators of SQL work in three-valued logic.")
 
-[Strings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/b5f28c46b0ba4ba1915249c2ad0cf44a.html "Strings are either literal strings, or expressions with CHAR or VARCHAR data types.") :arrow_upper_right:
+[Strings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/b5f28c46b0ba4ba1915249c2ad0cf44a.html "Strings are either literal strings, or expressions with CHAR or VARCHAR data types.") :arrow_upper_right:
 

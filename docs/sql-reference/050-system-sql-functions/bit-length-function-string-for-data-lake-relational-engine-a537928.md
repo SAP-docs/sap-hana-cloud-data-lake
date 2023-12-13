@@ -7,7 +7,7 @@ Returns an unsigned 64-bit value containing the bit length of the column paramet
 
 
 ```
-BIT_LENGTH( <column-name> )
+BIT_LENGTH( <column-name> );
 ```
 
 
@@ -36,7 +36,7 @@ The name of a column
 
 <a name="loioa537928a84f210158191ea44ca58ee8e__BIT_LENGTH_returns1"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -54,10 +54,10 @@ The `BIT_LENGTH` function supports all data lake Relational Engine data types.
 
 ### Unstructured Data Analytics
 
- `BIT_LENGTH` returns an unsigned 64-bit value containing the bit length of the large object column or variable parameter. Use the following syntax, where *<large-object-column\>* is the name of a `LONG VARCHAR` or `LONG BINARY` column or variable:
+`BIT_LENGTH` returns an unsigned 64-bit value containing the bit length of the large object column or variable parameter. Use the following syntax, where *<large-object-column\>* is the name of a `LONG VARCHAR` or `LONG BINARY` column or variable:
 
 ```
-BIT_LENGTH( <large-object-column> )
+BIT_LENGTH( <large-object-column> );
 ```
 
 The `BIT_LENGTH` function supports all data lake Relational Engine data types and `LONG BINARY` and `LONG VARCHAR` variables of any size of data, and returns an unsigned 64-bit value containing the bit length of the large object column or variable parameter.
@@ -75,5 +75,5 @@ The `BIT_LENGTH` function supports all data lake Relational Engine data types an
 
 [String Functions in Data Lake Relational Engine](string-functions-in-data-lake-relational-engine-a52d1d9.md "String functions perform conversion, extraction, or manipulation operations on strings, or return information about strings.")
 
-[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
+[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
 

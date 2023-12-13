@@ -6,10 +6,13 @@ Specifies the algorithm used during a delete in a TEXT index.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa663868b84f21015a23cbc124262f0e9__section_d3p_24q_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Specifies the algorithm used during a delete in a TEXT index.
 ## Syntax
 
 ```
-TEXT_DELETE_METHOD = <value>
+TEXT_DELETE_METHOD = <value>;
 ```
 
 

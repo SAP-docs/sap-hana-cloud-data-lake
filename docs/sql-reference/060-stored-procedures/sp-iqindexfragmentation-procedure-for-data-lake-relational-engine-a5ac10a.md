@@ -6,27 +6,30 @@ Reports information about the percentage of page space taken up within the B-tre
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5ac10a084f210158b30b3fa5c350b40__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-dbo.sp_iqindexfragmentation ( '<target>' )
+dbo.sp_iqindexfragmentation ( '<target>' );
 ```
 
 ```
 '<target>' ::=
-   table <table-name> | index <index-name> [...]
+   table <table-name> | index <index-name> [...];
 ```
 
 
 
 <a name="loioa5ac10a084f210158b30b3fa5c350b40__iq_refbb_1603"/>
 
-## Parameter
+## Parameters
 
 
 <dl>
@@ -83,7 +86,7 @@ None
 
 <a name="loioa5ac10a084f210158b30b3fa5c350b40__iq_refbb_1605"/>
 
-## Example
+## Examples
 
 Reports the internal index fragmentation for the unique HG index DBA.prop\_nu.prop\_nu\_a table:
 
@@ -94,28 +97,20 @@ Reports the internal index fragmentation for the unique HG index DBA.prop\_nu.pr
 
 Index
 
-
-
 </th>
 <th valign="top">
 
 IndexType
-
-
 
 </th>
 <th valign="top">
 
 Btree\_Node\_pages
 
-
-
 </th>
 <th valign="top">
 
 GARRAY\_FILL\_FACTOR\_PERCENT
-
-
 
 </th>
 </tr>
@@ -124,28 +119,20 @@ GARRAY\_FILL\_FACTOR\_PERCENT
 
 DBA.prop\_nu.prop\_nu\_a
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 <td valign="top">
 
 8
 
-
-
 </td>
 <td valign="top">
 
 25
-
-
 
 </td>
 </tr>
@@ -154,14 +141,10 @@ HG
 
 SQLCODE:
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 <td valign="top">
@@ -180,28 +163,20 @@ SQLCODE:
 
 Fill Percent
 
-
-
 </td>
 <td valign="top">
 
 btree pages
-
-
 
 </td>
 <td valign="top">
 
 garray pages
 
-
-
 </td>
 <td valign="top">
 
 bitmap pages
-
-
 
 </td>
 </tr>
@@ -210,28 +185,20 @@ bitmap pages
 
 0-10%
 
-
-
 </td>
 <td valign="top">
 
 13
-
-
 
 </td>
 <td valign="top">
 
 2
 
-
-
 </td>
 <td valign="top">
 
 8
-
-
 
 </td>
 </tr>
@@ -240,28 +207,20 @@ bitmap pages
 
 11-20%
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 <td valign="top">
 
 8
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -270,28 +229,20 @@ bitmap pages
 
 21-30%
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 <td valign="top">
 
 4
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -300,28 +251,20 @@ bitmap pages
 
 31-40%
 
-
-
 </td>
 <td valign="top">
 
 3
-
-
 
 </td>
 <td valign="top">
 
 20
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -330,28 +273,20 @@ bitmap pages
 
 41-50%
 
-
-
 </td>
 <td valign="top">
 
 4
-
-
 
 </td>
 <td valign="top">
 
 116
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -360,28 +295,20 @@ bitmap pages
 
 51-60%
 
-
-
 </td>
 <td valign="top">
 
 6
-
-
 
 </td>
 <td valign="top">
 
 4
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -390,28 +317,20 @@ bitmap pages
 
 61-70%
 
-
-
 </td>
 <td valign="top">
 
 3
 
-
-
 </td>
 <td valign="top">
 
 3
-
-
 
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -420,28 +339,20 @@ bitmap pages
 
 71-80%
 
-
-
 </td>
 <td valign="top">
 
 4
-
-
 
 </td>
 <td valign="top">
 
 1
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -450,28 +361,20 @@ bitmap pages
 
 81-90%
 
-
-
 </td>
 <td valign="top">
 
 1
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -480,28 +383,20 @@ bitmap pages
 
 91-100%
 
-
-
 </td>
 <td valign="top">
 
 192
-
-
 
 </td>
 <td valign="top">
 
 276
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>

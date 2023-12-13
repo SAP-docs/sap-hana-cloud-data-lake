@@ -7,7 +7,7 @@ Returns a date value corresponding to the given year, month, and day of the mont
 
 
 ```
-YMD ( <integer-expression1>, <integer-expression2>, <integer-expression3> )
+YMD ( <integer-expression1>, <integer-expression2>, <integer-expression3> );
 ```
 
 
@@ -58,7 +58,7 @@ The day number. The day is allowed to be any integer, the date is adjusted accor
 
 <a name="loioa592fc9184f21015bfa68c6078363fae__YMD_returns1"/>
 
-## Returns
+## Result Set
 
 DATE
 
@@ -80,30 +80,30 @@ DATE
 -   The following statement returns the value 1998-06-12:
 
     ```
-    SELECT YMD( 1998, 06, 12 ) FROM iq_dummy
+    SELECT YMD( 1998, 06, 12 ) FROM iq_dummy;
     ```
 
 -   If the values are outside their normal range, the date adjusts accordingly. For example, the following statement returns the value 1993-03-01:
 
     ```
-    SELECT YMD( 1992, 15, 1 ) FROM iq_dummy
+    SELECT YMD( 1992, 15, 1 ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 1993-02-28:
 
     ```
-    SELECT YMD ( 1992, 15, 1-1 ) FROM iq_dummy
+    SELECT YMD ( 1992, 15, 1-1 ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 1992-02-29:
 
     ```
-    SELECT YMD ( 1992, 3, 1-1 ) FROM iq_dummy
+    SELECT YMD ( 1992, 3, 1-1 ) FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[YMD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/0cf8ed274a1d4591baedd1691a352a48.html "Returns a date value corresponding to the given year, month, and day of the month.") :arrow_upper_right:
+[YMD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/0cf8ed274a1d4591baedd1691a352a48.html "Returns a date value corresponding to the given year, month, and day of the month.") :arrow_upper_right:
 

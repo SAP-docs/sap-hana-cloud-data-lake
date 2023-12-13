@@ -6,10 +6,13 @@ Modifies an existing function. Include the entire modified function in the ALTER
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61280af84f21015a184bc25f16886f8__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -31,7 +34,7 @@ ALTER FUNCTION [ { <owner> | <schema-name> }.]<function-name>
    [ [ NOT ] DETERMINISTIC ]
    { <compound-statement> 
       | AS <sql-statement> <sql-statement>... }
-
+;
 ```
 
 
@@ -45,7 +48,7 @@ Obfuscate a function definition
 
 ```
 ALTER FUNCTION [ { <owner> | <schema-name> }.]<function-name> 
-SET HIDDEN
+SET HIDDEN;
 ```
 
 
@@ -59,7 +62,7 @@ Recompile a function
 
 ```
 ALTER FUNCTION [ { <owner> | <schema-name> }.]<function-name>
-RECOMPILE
+RECOMPILE;
 ```
 
 
@@ -149,7 +152,7 @@ BEGIN
 END 
 INSERT INTO new_table 
 SELECT keygen(1), ... 
-FROM old_table
+FROM old_table;
 ```
 
 Functions may be declared as DETERMINISTIC if they always return the same value for given input parameters. All user-defined functions are treated as deterministic unless they are declared NOT DETERMINISTIC. Deterministic functions return a consistent result for the same parameters and are free of side effects. That is, the database server assumes that two successive calls to the same function with the same parameters will return the same result without unwanted side-effects on the semantics of the query.
@@ -241,9 +244,9 @@ SQL – vendor extension to ISO/ANSI SQL grammar
 
 [CREATE FUNCTION Statement for Data Lake Relational Engine](create-function-statement-for-data-lake-relational-engine-a61796c.md "Creates a user-defined function in the database. A function can be created for another user by specifying an owner name. Subject to permissions, a user-defined function can be used in exactly the same way as other non-aggregate functions.")
 
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
+[DROP FUNCTION Statement for Data Lake Relational Engine](drop-function-statement-for-data-lake-relational-engine-d42de2d.md "Removes a user-defined function from the database.")
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[ALTER FUNCTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3d7a54b993a74668b60ab048e299fbec.html "Modifies an existing function. Include the entire modified function in the ALTER FUNCTION statement.") :arrow_upper_right:
+[ALTER FUNCTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3d7a54b993a74668b60ab048e299fbec.html "Modifies an existing function. Include the entire modified function in the ALTER FUNCTION statement.") :arrow_upper_right:
 

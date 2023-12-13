@@ -6,15 +6,18 @@ Specifies which events to include in auditing.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be5b83e6c5f1014876dd3101b181f8a__section_rpg_3dw_f4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_enable_auditing_type( <types> )
+sa_enable_auditing_type( <types> );
 ```
 
 
@@ -27,7 +30,7 @@ sa_enable_auditing_type( <types> )
 <dl>
 <dt><b>
 
- *<types\>* 
+*<types\>* 
 
 </b></dt>
 <dd>
@@ -145,6 +148,14 @@ enables auditing of xp\_cmdshell invocations.
 
 
 
+<a name="loio3be5b83e6c5f1014876dd3101b181f8a__sa_enable_auditing_type_result1"/>
+
+## Result Set
+
+None
+
+
+
 <a name="loio3be5b83e6c5f1014876dd3101b181f8a__sa_enable_auditing_type_remarks1"/>
 
 ## Remarks
@@ -153,7 +164,7 @@ Use sa\_enable\_auditing\_type to specify which types of auditing to include. Th
 
 Set the PUBLIC auditing database option to On or Off to enable or disable auditing.
 
-By default, all events are audited \(types='all'\). If you want a smaller set, use the sa\_disable\_auditing\_type system procedure to clear the events you aren’t interested in; or use the sa\_disable\_auditing\_type system procedure to clear all events and then use the sa\_enable\_auditing\_type system procedure to specify which types of auditing you want.
+By default, all events are audited \(types='all'\). If you want a smaller set, use the sa\_disable\_auditing\_type system procedure to clear the events you're not interested in; or use the sa\_disable\_auditing\_type system procedure to clear all events and then use the sa\_enable\_auditing\_type system procedure to specify which types of auditing you want.
 
 If the set of events is empty and you set the PUBLIC auditing database option to On, no auditing information is recorded. To re-establish auditing, you use the sa\_enable\_auditing\_type system procedure to specify which types of information you want to audit.
 
@@ -186,20 +197,24 @@ None
 
 
 
-The following example enables all auditing:
+<a name="loio3be5b83e6c5f1014876dd3101b181f8a__sa_enable_auditing_type_examples1"/>
+
+## Examples
+
+This example uses the sa\_enable\_auditing\_type system procedure to enable all auditing:
 
 ```
 CALL sa_enable_auditing_type( 'all' );
 ```
 
-The following example enables only DDL and triggers auditing:
+This example enables only DDL and triggers auditing:
 
 ```
 CALL sa_disable_auditing_type( 'all' );
 CALL sa_enable_auditing_type( 'DDL,triggers' );
 ```
 
-The following example illustrates another way to enable only DDL and triggers auditing:
+This example illustrates another way to enable only DDL and triggers auditing:
 
 ```
 CALL sa_disable_auditing_type( 'all' );
@@ -212,5 +227,5 @@ CALL sa_enable_auditing_type( 'DDL' );
 
 [sa\_disable\_auditing\_type System Procedure for Data Lake Relational Engine](sa-disable-auditing-type-system-procedure-for-data-lake-relational-engine-3be5a6b.md "Disables auditing of specific events.")
 
-[sa_enable_auditing_type System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7bde72cc9e33425088c9b0d6a361d380.html "Specifies which events to include in auditing.") :arrow_upper_right:
+[sa_enable_auditing_type System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7bde72cc9e33425088c9b0d6a361d380.html "Specifies which events to include in auditing.") :arrow_upper_right:
 

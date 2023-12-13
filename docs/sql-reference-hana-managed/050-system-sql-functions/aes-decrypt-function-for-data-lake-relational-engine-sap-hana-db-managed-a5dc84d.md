@@ -61,7 +61,7 @@ FROM user_info;
 **Related Information**  
 
 
-[AES_DECRYPT Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a4c35f4384f21015b35996b31b9cb1e5.html "Decrypts the string using the supplied key, and returns, by default, a VARBINARY or LONG BINARY, or the original plaintext type.") :arrow_upper_right:
+[AES_DECRYPT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a4c35f4384f21015b35996b31b9cb1e5.html "Decrypts the string using the supplied key, and returns, by default, a VARBINARY or LONG BINARY, or the original plaintext type.") :arrow_upper_right:
 
 [REPLACE Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](replace-function-for-data-lake-relational-engine-sap-hana-db-managed-b8f3ed4.md "Replaces all occurrences of a substring with another substring.")
 

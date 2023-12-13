@@ -6,10 +6,13 @@ Specifies that the display of data lake Relational Engine binary columns is cons
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa62d7c2684f21015b7059b9e46ca0c56__section_d3p_24q_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Specifies that the display of data lake Relational Engine binary columns is cons
 ## Syntax
 
 ```
-ASE_BINARY_DISPLAY = { ON | OFF }
+ASE_BINARY_DISPLAY = { ON | OFF };
 ```
 
 
@@ -60,28 +63,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -90,28 +85,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -120,28 +107,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -164,7 +143,7 @@ Set ASE\_BINARY\_DISPLAY OFF to support bulk copy operations on binary data type
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[LOAD TABLE Statement for Data Lake Relational Engine \(Non-Parquet Formats\)](../080-sql-statements/load-table-statement-for-data-lake-relational-engine-non-parquet-formats-7ca3f60.md "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or Google Cloud Storage) or from data lake Files containers (the managed object store).")
+[LOAD TABLE Statement \(Non-Parquet Formats\) for Data Lake Relational Engine](../080-sql-statements/load-table-statement-non-parquet-formats-for-data-lake-relational-engine-7ca3f60.md "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or Google Cloud Storage) or from data lake Files containers (the managed object store).")
 
 [Set a Database Option](set-a-database-option-0dcb893.md "You set options with the SET OPTION statement.")
 

@@ -6,10 +6,13 @@ Each row in the SYSOBJECT system view describes a database object. The underlyin
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be9496b6c5f101497cee97c4f7404f5__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYSOBJECT system view describes a database object. The underlyin
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The internal ID for the object, uniquely identifying it in the database.
-
-
 
 </td>
 </tr>
@@ -66,14 +57,10 @@ The internal ID for the object, uniquely identifying it in the database.
 
 status
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
-
-
 
 </td>
 <td valign="top">
@@ -127,21 +114,15 @@ The object has been explicitly disabled by the user, for example using an ALTER 
 
 object\_type
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
 
-
-
 </td>
 <td valign="top">
 
 Type of object.
-
-
 
 </td>
 </tr>
@@ -150,21 +131,15 @@ Type of object.
 
 creation\_time
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 The local date and time when the object was created.
-
-
 
 </td>
 </tr>
@@ -173,21 +148,15 @@ The local date and time when the object was created.
 
 object\_type\_str
 
-
-
 </td>
 <td valign="top">
 
 CHAR \(128\)
 
-
-
 </td>
 <td valign="top">
 
 Type of object.
-
-
 
 </td>
 </tr>
@@ -196,21 +165,15 @@ Type of object.
 
 creation\_time\_utc
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE
 
-
-
 </td>
 <td valign="top">
 
 The UTC date and time when the object was created.
-
-
 
 </td>
 </tr>

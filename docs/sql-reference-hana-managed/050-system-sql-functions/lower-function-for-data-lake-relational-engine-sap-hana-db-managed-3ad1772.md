@@ -7,7 +7,7 @@ Converts all characters in a string to lowercase.
 
 
 ```
-LOWER ( <string-expression> )
+LOWER ( <string-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The string to be converted.
 
 <a name="loio3ad17721e94b4a24a12a07986c829123__section_hlk_dwg_trb"/>
 
-## Returns
+## Result Set
 
 -   CHAR
 -   NCHAR
@@ -73,11 +73,11 @@ The result data type is a LONG VARCHAR. If you use LOWER in a SELECT INTO statem
 The following statement returns the value "lower case":
 
 ```
-SELECT LOWER( 'LOWER CasE' ) FROM iq_dummy
+SELECT LOWER( 'LOWER CasE' ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[LOWER Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a561324784f2101582439eaf6377b80b.html "Converts all characters in a string to lowercase.") :arrow_upper_right:
+[LOWER Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a561324784f2101582439eaf6377b80b.html "Converts all characters in a string to lowercase.") :arrow_upper_right:
 

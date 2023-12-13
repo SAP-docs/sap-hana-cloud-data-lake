@@ -6,10 +6,13 @@ Modifies a table definition.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio39f1ec0fd2c9451c8b64df54efe48a03__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,7 +23,7 @@ Modifies a table definition.
 ```
 ALTER TABLE [ { <owner> | <schema-name> }.]<table-name> ALTER OWNER TO { <new-owner> | <new-schema-name> }
    [ { PRESERVE | DROP } PERMISSIONS ] 
-   [ { PRESERVE | DROP } FOREIGN KEYS ]
+   [ { PRESERVE | DROP } FOREIGN KEYS ];
 ```
 
 
@@ -41,7 +44,7 @@ ALTER TABLE [ { <owner> | <schema-name> }.]<table-name>
             | <hash-range-partitioning-scheme>
    | SUBPARTITION BY RANGE <range-partition-decl>
    | ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>
-   | UNPARTITION
+   | UNPARTITION;
 ```
 
 
@@ -98,7 +101,7 @@ Changes the owner of a table.
 <dl>
 <dt><b>
 
- 
+
 
 </b></dt>
 <dd>
@@ -108,7 +111,7 @@ Adds a new column or column constraint to the table object.
 ```
 <create-column> ::= 
    <column-name> <column-definition> [ <column-constraint> ]
-   | <table-constraint>
+   | <table-constraint>;
 ```
 
 
@@ -126,7 +129,7 @@ Defines a table column. Two columns in the same table cannot have the same name.
 <column definition> ::= 
    <column-name> <data-type> [ NOT NULL | NULL  ] 
     [ IN <dbspace-name> ] 
-    [ DEFAULT <default-value> | IDENTITY ]
+    [ DEFAULT <default-value> | IDENTITY ];
 ```
 
 
@@ -163,7 +166,7 @@ Specifies a default value to be assigned to the column if an INSERT statement do
    | NULL 
    | TIMESTAMP 
    | LAST USER 
-   | USER
+   | USER;
 ```
 
 
@@ -222,7 +225,7 @@ Changes the column definition.
 <column-alteration> ::= 
    { <column-data-type> | <alterable-column-attribute> } [ <alterable-column-attribute> … ]  
     | ADD [ CONSTRAINT[ <constraint-name> ] CHECK ( <condition> )  
-    | DROP { DEFAULT | CHECK | CONSTRAINT <constraint-name> }
+    | DROP { DEFAULT | CHECK | CONSTRAINT <constraint-name> };
 ```
 
 ```
@@ -230,7 +233,7 @@ Changes the column definition.
    [ NOT ] NULL 
    | DEFAULT <default-value>  
    | [ CONSTRAINT <constraint-name> ] CHECK { NULL | ( <condition> ) 
-     }
+     };
 ```
 
 
@@ -321,7 +324,7 @@ Drops a table object.
    | UNIQUE ( <index-columns-list> )  
    | PRIMARY KEY 
    | FOREIGN KEY <fkey-name>
-   | { PARTITION | SUBPARTITION } <range-partition-name>
+   | { PARTITION | SUBPARTITION } <range-partition-name>;
 ```
 
 
@@ -431,7 +434,7 @@ Renames an object in the table.
    <new-table-name>  
    | <column-name> TO <new-column-name>   
    | CONSTRAINT <constraint-name> TO <new-constraint-name> 
-   | { PARTITION | SUBPARTITION } <range-partition-name> TO <new-range-partition-name>
+   | { PARTITION | SUBPARTITION } <range-partition-name> TO <new-range-partition-name>;
 ```
 
 
@@ -505,7 +508,7 @@ Splits an existing range partition or subpartition.
 
 ```
 <split-object> ::= <range-partition-decl> 
-        INTO ( <range-partition-decl>, <range-partition-decl> )
+        INTO ( <range-partition-decl>, <range-partition-decl> );
 ```
 
 When splitting a partition or subpartition, the names of the new partitions must be unique and cannot include the name of the original partition. All data from the original partition must fit into only one of the resulting partitions. Data cannot move between partitions.
@@ -592,7 +595,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 
 ```
 <range-partitioning-scheme> ::=
-   RANGE ( <column_name> ) ( <range-partition-decl> [,...] )
+   RANGE ( <column_name> ) ( <range-partition-decl> [,...] );
 ```
 
 
@@ -606,7 +609,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 
 ```
 <range-partition-decl> ::=
-   <partition-name> VALUES <= ( { <constant-expression> | MAX } [,...] )
+   <partition-name> VALUES <= ( { <constant-expression> | MAX } [,...] );
 ```
 
 
@@ -705,14 +708,14 @@ Maps data to partitions based on partition-key values processed by an internal h
 
 ```
 <hash-partitioning-scheme> ::=
-   HASH ( <column_name> [,... ] )
+   HASH ( <column_name> [,... ] );
 ```
 
 In a hash-partitioning declaration, the partition-key is a column or group of columns, whose composite value determines the partition where each row of data is stored:
 
 ```
 hash-partitioning-scheme: 
-  HASH  ( <partition-key> [ , <partition-key>, … ] )
+  HASH  ( <partition-key> [ , <partition-key>, … ] );
 ```
 
 Restrictions:
@@ -735,7 +738,7 @@ Maps data to partitions based on partition-key values processed by an internal h
 ```
 <hash-range-partitioning-scheme> ::=
    PARTITION BY HASH  ( <column_name> [,... ] )
-    SUBPARTITION BY <range-partition-scheme>
+    SUBPARTITION BY <range-partition-scheme>;
 ```
 
 The hash partition specifies how the data is logically distributed and colocated; the range subpartition specifies how the data is physically placed. The new range subpartition is logically partitioned by hash with the same hash partition keys as the existing hash-range partitioned table. The range subpartition key is restricted to one column.
@@ -778,7 +781,7 @@ Subpartitions an existing hash-partition table.
 <dd>
 
 ```
-SUBPARTITION BY <range-partition-decl>
+SUBPARTITION BY <range-partition-decl>;
 ```
 
 Subpartitions on a range-partitioned table are not supported.
@@ -804,7 +807,7 @@ Subpartitions on a range-partitioned table are not supported.
 Adds a new partition to an existing range-partition table or a new subpartition to an existing hash range-partition table.
 
 ```
-ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>
+ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>;
 ```
 
 The value of the *<range-partition-decl\>* must exceed the existing partition boundary. Only one partition or subpartition can be added per ADD clause. Use SPLIT PARTITION to add a range within the existing boundary.
@@ -881,14 +884,10 @@ The system privileges required for Syntax 2 vary depending on the clause.
 
 Clause
 
-
-
 </th>
 <th valign="top">
 
 Privilege Name
-
-
 
 </th>
 </tr>
@@ -896,8 +895,6 @@ Privilege Name
 <td valign="top">
 
 ADD Column
-
-
 
 </td>
 <td valign="top">
@@ -918,8 +915,6 @@ Requires one of:
 <td valign="top">
 
 ADD a UNIQUE, PRIMARY KEY, or IQ UNIQUE column constraint
-
-
 
 </td>
 <td valign="top">
@@ -945,8 +940,6 @@ Additionally, you require one of:
 <td valign="top">
 
 ADD FOREIGN KEY column constraint
-
-
 
 </td>
 <td valign="top">
@@ -975,8 +968,6 @@ Additionally, you require one of:
 
 ALTER column
 
-
-
 </td>
 <td valign="top">
 
@@ -996,8 +987,6 @@ Requires one of:
 <td valign="top">
 
 ALTER a PRIMARY KEY or UNIQUE CONTRAINT
-
-
 
 </td>
 <td valign="top">
@@ -1024,8 +1013,6 @@ Additionally, you require one of:
 
 DROP Column with no constraints
 
-
-
 </td>
 <td valign="top">
 
@@ -1045,8 +1032,6 @@ Requires one of:
 <td valign="top">
 
 DROP Column or table with constraints
-
-
 
 </td>
 <td valign="top">
@@ -1068,8 +1053,6 @@ Requires one of:
 
 DROP a partition on a table
 
-
-
 </td>
 <td valign="top">
 
@@ -1090,8 +1073,6 @@ Requires one of:
 
 RENAME
 
-
-
 </td>
 <td valign="top">
 
@@ -1111,8 +1092,6 @@ Requires one of:
 <td valign="top">
 
 SPLIT PARTITION or SUBPARTITION
-
-
 
 </td>
 <td valign="top">
@@ -1140,8 +1119,6 @@ Additionally, you require one of:
 
 MERGE PARTITION, SUBPARTITION or UNPARTITION
 
-
-
 </td>
 <td valign="top">
 
@@ -1161,8 +1138,6 @@ Requires one of:
 <td valign="top">
 
 PARTITION BY
-
-
 
 </td>
 <td valign="top">
@@ -1224,7 +1199,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
     ```
     ALTER TABLE CUSTOMERS ADD SALESCONTACT INTEGER
-       REFERENCES EMPLOYEE(EMPLOYEEID)
+       REFERENCES EMPLOYEE(EMPLOYEEID);
     ```
 
 -   The following example adds a new column CUSTOMERNUM to the Customers table and assigns a default value of 88:
@@ -1346,7 +1321,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [CREATE TABLE Statement for Data Lake Relational Engine](create-table-statement-for-data-lake-relational-engine-a619764.md "Creates a new table in the database or on a remote server.")
 
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
+[DROP TABLE Statement for Data Lake Relational Engine](drop-table-statement-for-data-lake-relational-engine-0524ea8.md "Removes a table from the database.")
 
 [IDENTITY\_INSERT Option for Data Lake Relational Engine](../090-database-options/identity-insert-option-for-data-lake-relational-engine-a63914e.md "Enables users to insert values into or to update an IDENTITY or AUTOINCREMENT column.")
 
@@ -1358,17 +1333,17 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [FP\_NBIT\_ROLLOVER\_MAX\_MB Option for Data Lake Relational Engine](../090-database-options/fp-nbit-rollover-max-mb-option-for-data-lake-relational-engine-a873d4b.md "Sets a threshold for the total dictionary size for implicit NBit rollovers to Flat FP.")
 
-[ALTER TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/593f8b1caaaf4d31abc4a5a095d86254.html "Modifies a table definition.") :arrow_upper_right:
+[Restrictions on Table Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a872506a84f21015aa20de6d7665a803.html "Some restrictions apply to table partitions.") :arrow_upper_right:
 
-[Restrictions on Table Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a872506a84f21015aa20de6d7665a803.html "Some restrictions apply to table partitions.") :arrow_upper_right:
+[Hash-Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a871ecd884f21015b8f5876892d31447.html "Hash-range partitioning is a composite partitioning scheme that subpartitions a hash-partitioned table by range.") :arrow_upper_right:
 
-[Hash-Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a871ecd884f21015b8f5876892d31447.html "Hash-range partitioning is a composite partitioning scheme that subpartitions a hash-partitioned table by range.") :arrow_upper_right:
+[Hash Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a871bc0984f210159faaedf3f3eb5b29.html "Hash partitioning maps data to partitions based on partition-key values processed by an internal hashing function.") :arrow_upper_right:
 
-[Hash Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a871bc0984f210159faaedf3f3eb5b29.html "Hash partitioning maps data to partitions based on partition-key values processed by an internal hashing function.") :arrow_upper_right:
-
-[Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a8721b7584f21015a062c99a1c19e6cb.html "Range partitioning divides large tables by a range of partition-key values established for each partition.") :arrow_upper_right:
+[Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a8721b7584f21015a062c99a1c19e6cb.html "Range partitioning divides large tables by a range of partition-key values established for each partition.") :arrow_upper_right:
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
+
+[ALTER TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/593f8b1caaaf4d31abc4a5a095d86254.html "Modifies a table definition.") :arrow_upper_right:
 

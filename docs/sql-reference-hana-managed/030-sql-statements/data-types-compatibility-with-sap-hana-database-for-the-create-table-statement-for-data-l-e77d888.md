@@ -21,28 +21,20 @@ Use this table to understand the data type mappings between data lake Relational
 
 Data Type Classification
 
-
-
 </th>
 <th valign="top">
 
 Data Lake Relational Engine Data Type
-
-
 
 </th>
 <th valign="top">
 
 Supports a Matching Data Type in SAP HANA Database Virtual Tables?
 
-
-
 </th>
 <th valign="top">
 
 If No, Then What Data Type Is Substituted in SAP HANA Database Virtual Tables?
-
-
 
 </th>
 </tr>
@@ -51,28 +43,20 @@ If No, Then What Data Type Is Substituted in SAP HANA Database Virtual Tables?
 
 Binary
 
-
-
 </td>
 <td valign="top">
 
 BINARY
-
-
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 VARBINARY
-
-
 
 </td>
 </tr>
@@ -81,21 +65,15 @@ VARBINARY
 
 BLOB
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -104,21 +82,15 @@ N/A
 
 IMAGE
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 BLOB
-
-
 
 </td>
 </tr>
@@ -127,21 +99,15 @@ BLOB
 
 LONG BINARY
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 BLOB
-
-
 
 </td>
 </tr>
@@ -150,21 +116,15 @@ BLOB
 
 UNIQUEIDENTIFIER
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 Not supported
-
-
 
 </td>
 </tr>
@@ -173,21 +133,15 @@ Not supported
 
 VARBINARY
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -196,14 +150,10 @@ N/A
 
 BIT
 
-
-
 </td>
 <td valign="top">
 
 BIT and its synonym BOOLEAN
-
-
 
 </td>
 <td valign="top">
@@ -212,14 +162,10 @@ BIT - No
 
 BOOLEAN - Yes
 
-
-
 </td>
 <td valign="top">
 
 BIT is converted to BOOLEAN
-
-
 
 </td>
 </tr>
@@ -228,28 +174,20 @@ BIT is converted to BOOLEAN
 
 Character
 
-
-
 </td>
 <td valign="top">
 
 CLOB
-
-
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 NCLOB
-
-
 
 </td>
 </tr>
@@ -258,21 +196,15 @@ NCLOB
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 BLOB
-
-
 
 </td>
 </tr>
@@ -281,21 +213,15 @@ BLOB
 
 TEXT
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 NCLOB
-
-
 
 </td>
 </tr>
@@ -304,21 +230,15 @@ NCLOB
 
 VARCHAR \(n CHAR\)
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -327,28 +247,20 @@ N/A
 
 Datetime
 
-
-
 </td>
 <td valign="top">
 
 DATE
-
-
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -357,21 +269,32 @@ N/A
 
 DATETIME
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 <td valign="top">
 
 TIMESTAMP
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
+DATETIMEX
+
+</td>
+<td valign="top">
+
+No
+
+</td>
+<td valign="top">
+
+TIMESTAMP
 
 </td>
 </tr>
@@ -380,21 +303,15 @@ TIMESTAMP
 
 SMALLDATETIME
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
-
-
 
 </td>
 </tr>
@@ -403,21 +320,15 @@ TIMESTAMP
 
 TIME
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -426,21 +337,15 @@ N/A
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -449,28 +354,20 @@ N/A
 
 Numeric
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
-
-
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -479,8 +376,6 @@ N/A
 
 DECIMAL and its alias NUMERIC \(*<p\>*,*<s\>*\) where precision <= 38
 
-
-
 </td>
 <td valign="top">
 
@@ -488,14 +383,10 @@ DECIMAL - Yes
 
 NUMERIC - No
 
-
-
 </td>
 <td valign="top">
 
 NUMERIC is converted to DECIMAL in SAP HANA database
-
-
 
 </td>
 </tr>
@@ -504,21 +395,15 @@ NUMERIC is converted to DECIMAL in SAP HANA database
 
 DECIMAL and its alias NUMERIC \(*<p\>*,*<s\>*\) where precision not specified or is \> 38
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 Not supported
-
-
 
 </td>
 </tr>
@@ -527,21 +412,15 @@ Not supported
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -550,21 +429,15 @@ N/A
 
 FLOAT
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 REAL
-
-
 
 </td>
 </tr>
@@ -573,21 +446,15 @@ REAL
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -596,21 +463,15 @@ N/A
 
 MONEY
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 DECIMAL <= a precision of 4
-
-
 
 </td>
 </tr>
@@ -619,21 +480,15 @@ DECIMAL <= a precision of 4
 
 REAL
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -642,21 +497,15 @@ N/A
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -665,21 +514,15 @@ N/A
 
 SMALLMONEY
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 DECIMAL <= a precision of 4
-
-
 
 </td>
 </tr>
@@ -688,21 +531,15 @@ DECIMAL <= a precision of 4
 
 TINYINT
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>

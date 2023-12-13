@@ -6,15 +6,18 @@ Renames user-created tables, columns, indexes, constraints \(unique, primary key
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5b3c32384f210159da494759a709b3c__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqrename <object-name>, <new-name> [, <object-type> ]
+sp_iqrename <object-name>, <new-name> [, <object-type> ];
 ```
 
 
@@ -107,14 +110,10 @@ For objects owned by others, additional privileges are required, depending on th
 
 Task Allowed
 
-
-
 </th>
 <th valign="top">
 
 Privilege Name
-
-
 
 </th>
 </tr>
@@ -123,14 +122,10 @@ Privilege Name
 
 Rename any object.
 
-
-
 </td>
 <td valign="top">
 
 ALTER ANY OBJECT system privilege
-
-
 
 </td>
 </tr>
@@ -139,14 +134,10 @@ ALTER ANY OBJECT system privilege
 
 Rename any table, column or constraint.
 
-
-
 </td>
 <td valign="top">
 
 ALTER ANY TABLE system privilege
-
-
 
 </td>
 </tr>
@@ -155,14 +146,10 @@ ALTER ANY TABLE system privilege
 
 Rename any index, but not tables or columns.
 
-
-
 </td>
 <td valign="top">
 
 ALTER ANY INDEX system privilege
-
-
 
 </td>
 </tr>
@@ -171,14 +158,10 @@ ALTER ANY INDEX system privilege
 
 Rename indexes of that table only.
 
-
-
 </td>
 <td valign="top">
 
 REFERENCES object-level privilege on the table
-
-
 
 </td>
 </tr>
@@ -187,14 +170,10 @@ REFERENCES object-level privilege on the table
 
 Rename that table, its columns, and constraints only.
 
-
-
 </td>
 <td valign="top">
 
 ALTER object-level privilege on the table
-
-
 
 </td>
 </tr>
@@ -215,25 +194,25 @@ None
 -   The following example renames the table titles owned by user shweta to books:
 
     ```
-    sp_iqrename shweta.titles, books
+    call sp_iqrename ('shweta.titles', 'books');
     ```
 
 -   The following example renames the column id of the table books to isbn:
 
     ```
-    sp_iqrename shweta.books.id, isbn, column
+    call sp_iqrename ('shweta.books.id', 'isbn', 'column');
     ```
 
 -   The following example renames the index idindex on the table books to isbnindex:
 
     ```
-    sp_iqrename books.idindex, isbnindex, index
+    call sp_iqrename ('books.idindex', 'isbnindex', 'index');
     ```
 
 -   The following example renames the primary key constraint prim\_id on the table books to prim\_isbn:
 
     ```
-    sp_iqrename books.prim_id, prim_isbn, constraint
+    call sp_iqrename ('books.prim_id', 'prim_isbn', 'constraint');
     ```
 
 

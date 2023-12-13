@@ -17,14 +17,10 @@ System privileges control the rights of users to perform authorized database tas
 
 System Privilege
 
-
-
 </th>
 <th valign="top">
 
 Allows a User To...
-
-
 
 </th>
 </tr>
@@ -33,14 +29,10 @@ Allows a User To...
 
 ALTER ANY INDEX
 
-
-
 </td>
 <td valign="top">
 
 Alter and comment on indexes on tables and views owned by any user.
-
-
 
 </td>
 </tr>
@@ -49,14 +41,10 @@ Alter and comment on indexes on tables and views owned by any user.
 
 ALTER ANY MATERIALIZED VIEW
 
-
-
 </td>
 <td valign="top">
 
 Alter and comment on materialized views owned by any user.
-
-
 
 </td>
 </tr>
@@ -64,8 +52,6 @@ Alter and comment on materialized views owned by any user.
 <td valign="top">
 
 ALTER ANY OBJECT
-
-
 
 </td>
 <td valign="top">
@@ -95,14 +81,10 @@ Alter and comment on the following types of objects owned by any user:
 
 ALTER ANY PROCEDURE
 
-
-
 </td>
 <td valign="top">
 
 Alter and comment on procedures and functions owned by any user.
-
-
 
 </td>
 </tr>
@@ -111,14 +93,10 @@ Alter and comment on procedures and functions owned by any user.
 
 ALTER ANY SEQUENCE
 
-
-
 </td>
 <td valign="top">
 
 Alter sequence generators owned by any user.
-
-
 
 </td>
 </tr>
@@ -126,8 +104,6 @@ Alter sequence generators owned by any user.
 <td valign="top">
 
 ALTER ANY TABLE
-
-
 
 </td>
 <td valign="top">
@@ -145,14 +121,10 @@ ALTER ANY TABLE
 
 ALTER ANY TEXT CONFIGURATION
 
-
-
 </td>
 <td valign="top">
 
 Alter and comment on text configuration objects owned by any user.
-
-
 
 </td>
 </tr>
@@ -160,8 +132,6 @@ Alter and comment on text configuration objects owned by any user.
 <td valign="top">
 
 ALTER ANY TRIGGER
-
-
 
 </td>
 <td valign="top">
@@ -178,14 +148,10 @@ ALTER ANY TRIGGER
 
 ALTER ANY VIEW
 
-
-
 </td>
 <td valign="top">
 
 Alter and comment on views owned by any user.
-
-
 
 </td>
 </tr>
@@ -194,14 +160,10 @@ Alter and comment on views owned by any user.
 
 ALTER DATATYPE
 
-
-
 </td>
 <td valign="top">
 
 Alter data types.
-
-
 
 </td>
 </tr>
@@ -210,14 +172,10 @@ Alter data types.
 
 ALTER TABLE FILES SERVICE
 
-
-
 </td>
 <td valign="top">
 
 Ater an external catalog table and add or drop a datasource in SQL on Files.
-
-
 
 </td>
 </tr>
@@ -226,14 +184,10 @@ Ater an external catalog table and add or drop a datasource in SQL on Files.
 
 BACKUP ANY TABLE
 
-
-
 </td>
 <td valign="top">
 
 Back up a table.
-
-
 
 </td>
 </tr>
@@ -242,14 +196,10 @@ Back up a table.
 
 BACKUP OWNER TABLE
 
-
-
 </td>
 <td valign="top">
 
 Back up self-owned tables.
-
-
 
 </td>
 </tr>
@@ -257,8 +207,6 @@ Back up self-owned tables.
 <td valign="top">
 
 CHANGE PASSWORD
-
-
 
 </td>
 <td valign="top">
@@ -269,8 +217,6 @@ This system privilege can apply to all users, or it can be limited to a set of s
 
 This system privilege is not required to change a user's own password.
 
-
-
 </td>
 </tr>
 <tr>
@@ -278,14 +224,10 @@ This system privilege is not required to change a user's own password.
 
 CHECKPOINT
 
-
-
 </td>
 <td valign="top">
 
 Force the database server to execute a checkpoint.
-
-
 
 </td>
 </tr>
@@ -294,14 +236,10 @@ Force the database server to execute a checkpoint.
 
 CREATE ANY INDEX
 
-
-
 </td>
 <td valign="top">
 
 Create and comment on indexes and text indexes on tables and views owned by any user.
-
-
 
 </td>
 </tr>
@@ -310,14 +248,10 @@ Create and comment on indexes and text indexes on tables and views owned by any 
 
 CREATE ANY MATERIALIZED VIEW
 
-
-
 </td>
 <td valign="top">
 
 Create and comment on materialized views owned by any user.
-
-
 
 </td>
 </tr>
@@ -326,14 +260,10 @@ Create and comment on materialized views owned by any user.
 
 CREATE ANY MUTEX SEMAPHORE
 
-
-
 </td>
 <td valign="top">
 
 Create a mutex or semaphore owned by any user.
-
-
 
 </td>
 </tr>
@@ -341,8 +271,6 @@ Create a mutex or semaphore owned by any user.
 <td valign="top">
 
 CREATE ANY OBJECT
-
-
 
 </td>
 <td valign="top">
@@ -373,14 +301,10 @@ Create and comment on the following types of objects owned by any user:
 
 CREATE ANY PROCEDURE
 
-
-
 </td>
 <td valign="top">
 
 Create and comment on procedures and functions owned by any user.
-
-
 
 </td>
 </tr>
@@ -389,14 +313,10 @@ Create and comment on procedures and functions owned by any user.
 
 CREATE ANY DATABASE SCHEMA
 
-
-
 </td>
 <td valign="top">
 
 Create any schema.
-
-
 
 </td>
 </tr>
@@ -405,14 +325,10 @@ Create any schema.
 
 CREATE ANY SEQUENCE
 
-
-
 </td>
 <td valign="top">
 
 Create sequence generators, regardless of owner.
-
-
 
 </td>
 </tr>
@@ -421,14 +337,10 @@ Create sequence generators, regardless of owner.
 
 CREATE ANY TABLE
 
-
-
 </td>
 <td valign="top">
 
 Create and comment on tables \(including proxy tables\) owned by any user.
-
-
 
 </td>
 </tr>
@@ -437,14 +349,10 @@ Create and comment on tables \(including proxy tables\) owned by any user.
 
 CREATE ANY TEXT CONFIGURATION
 
-
-
 </td>
 <td valign="top">
 
 Alter and comment on text configuration objects owned by any user.
-
-
 
 </td>
 </tr>
@@ -453,14 +361,10 @@ Alter and comment on text configuration objects owned by any user.
 
 CREATE ANY TRIGGER
 
-
-
 </td>
 <td valign="top">
 
 Create and comment \(also requires the ALTER object level privilege on the table\) on tables and views.
-
-
 
 </td>
 </tr>
@@ -469,14 +373,10 @@ Create and comment \(also requires the ALTER object level privilege on the table
 
 CREATE ANY VIEW
 
-
-
 </td>
 <td valign="top">
 
 Create and comment on views owned by any user.
-
-
 
 </td>
 </tr>
@@ -485,14 +385,10 @@ Create and comment on views owned by any user.
 
 CREATE DATABASE SCHEMA
 
-
-
 </td>
 <td valign="top">
 
 Create self-owned schemas.
-
-
 
 </td>
 </tr>
@@ -501,14 +397,10 @@ Create self-owned schemas.
 
 CREATE DATABASE VARIABLE
 
-
-
 </td>
 <td valign="top">
 
 Create, select from, and update self-owned database-scope variables.
-
-
 
 </td>
 </tr>
@@ -517,14 +409,10 @@ Create, select from, and update self-owned database-scope variables.
 
 CREATE DATATYPE
 
-
-
 </td>
 <td valign="top">
 
 Create data types.
-
-
 
 </td>
 </tr>
@@ -532,8 +420,6 @@ Create data types.
 <td valign="top">
 
 CREATE EXTERNAL REFERENCE
-
-
 
 </td>
 <td valign="top">
@@ -544,8 +430,6 @@ You need the system privileges required to create specific database objects befo
 
 For example, creating a self-owned text configuration object that uses an external term breaker requires both the CREATE TEXT CONFIGURATION and CREATE EXTERNAL REFERENCE system privileges.
 
-
-
 </td>
 </tr>
 <tr>
@@ -553,14 +437,10 @@ For example, creating a self-owned text configuration object that uses an extern
 
 CREATE MATERIALIZED VIEW
 
-
-
 </td>
 <td valign="top">
 
 Create and comment on self-owned materialized views.
-
-
 
 </td>
 </tr>
@@ -569,14 +449,10 @@ Create and comment on self-owned materialized views.
 
 CREATE MESSAGE
 
-
-
 </td>
 <td valign="top">
 
 Create messages.
-
-
 
 </td>
 </tr>
@@ -585,14 +461,10 @@ Create messages.
 
 CREATE PROCEDURE
 
-
-
 </td>
 <td valign="top">
 
 Create and comment on self-owned procedures and functions.
-
-
 
 </td>
 </tr>
@@ -601,14 +473,10 @@ Create and comment on self-owned procedures and functions.
 
 CREATE PROXY TABLE
 
-
-
 </td>
 <td valign="top">
 
 Create self-owned proxy tables.
-
-
 
 </td>
 </tr>
@@ -617,14 +485,10 @@ Create self-owned proxy tables.
 
 CREATE SCHEMA FILES SERVICE
 
-
-
 </td>
 <td valign="top">
 
 Create an external catalog schema in SQL on Files.
-
-
 
 </td>
 </tr>
@@ -632,8 +496,6 @@ Create an external catalog schema in SQL on Files.
 <td valign="top">
 
 CREATE TABLE
-
-
 
 </td>
 <td valign="top">
@@ -650,14 +512,10 @@ CREATE TABLE
 
 CREATE TABLE FILES SERVICE
 
-
-
 </td>
 <td valign="top">
 
 Create an external catalog table in SQL on Files.
-
-
 
 </td>
 </tr>
@@ -666,14 +524,10 @@ Create an external catalog table in SQL on Files.
 
 CREATE TEXT CONFIGURATION
 
-
-
 </td>
 <td valign="top">
 
 Create and comment on self-owned text configuration objects.
-
-
 
 </td>
 </tr>
@@ -682,14 +536,10 @@ Create and comment on self-owned text configuration objects.
 
 CREATE VIEW
 
-
-
 </td>
 <td valign="top">
 
 Create and comment on self-owned views. Required to create self-owned views.
-
-
 
 </td>
 </tr>
@@ -698,14 +548,10 @@ Create and comment on self-owned views. Required to create self-owned views.
 
 DEBUG ANY PROCEDURE
 
-
-
 </td>
 <td valign="top">
 
 Debug any database object.
-
-
 
 </td>
 </tr>
@@ -714,14 +560,10 @@ Debug any database object.
 
 DELETE ANY TABLE
 
-
-
 </td>
 <td valign="top">
 
 Delete rows in tables and views owned by any user.
-
-
 
 </td>
 </tr>
@@ -730,14 +572,10 @@ Delete rows in tables and views owned by any user.
 
 DROP ANY DATABASE SCHEMA
 
-
-
 </td>
 <td valign="top">
 
 Drop any schema.
-
-
 
 </td>
 </tr>
@@ -746,14 +584,10 @@ Drop any schema.
 
 DROP ANY INDEX
 
-
-
 </td>
 <td valign="top">
 
 Drop indexes and text indexes on tables and views owned by any user.
-
-
 
 </td>
 </tr>
@@ -762,14 +596,10 @@ Drop indexes and text indexes on tables and views owned by any user.
 
 DROP ANY MATERIALIZED VIEW
 
-
-
 </td>
 <td valign="top">
 
 Drop materialized views owned by any user.
-
-
 
 </td>
 </tr>
@@ -778,14 +608,10 @@ Drop materialized views owned by any user.
 
 DROP ANY MUTEX SEMAPHORE
 
-
-
 </td>
 <td valign="top">
 
 Drop a mutex or semaphore owned by any user.
-
-
 
 </td>
 </tr>
@@ -793,8 +619,6 @@ Drop a mutex or semaphore owned by any user.
 <td valign="top">
 
 DROP ANY OBJECT
-
-
 
 </td>
 <td valign="top">
@@ -824,14 +648,10 @@ Drop the following types of objects owned by any user:
 
 DROP ANY PROCEDURE
 
-
-
 </td>
 <td valign="top">
 
 Drop procedures and functions owned by any user.
-
-
 
 </td>
 </tr>
@@ -840,14 +660,10 @@ Drop procedures and functions owned by any user.
 
 DROP ANY SEQUENCE
 
-
-
 </td>
 <td valign="top">
 
 Drop sequence generators owned by any user.
-
-
 
 </td>
 </tr>
@@ -856,14 +672,10 @@ Drop sequence generators owned by any user.
 
 DROP ANY TABLE
 
-
-
 </td>
 <td valign="top">
 
 Drop tables \(including proxy tables\) owned by any user.
-
-
 
 </td>
 </tr>
@@ -872,14 +684,10 @@ Drop tables \(including proxy tables\) owned by any user.
 
 DROP ANY TEXT CONFIGURATION
 
-
-
 </td>
 <td valign="top">
 
 Drop text configuration objects owned by any user.
-
-
 
 </td>
 </tr>
@@ -888,14 +696,10 @@ Drop text configuration objects owned by any user.
 
 DROP ANY VIEW
 
-
-
 </td>
 <td valign="top">
 
 Drop views owned by any user.
-
-
 
 </td>
 </tr>
@@ -904,14 +708,10 @@ Drop views owned by any user.
 
 DROP ANY CONNECTION
 
-
-
 </td>
 <td valign="top">
 
 Drop any connections to the database.
-
-
 
 </td>
 </tr>
@@ -920,14 +720,10 @@ Drop any connections to the database.
 
 DROP DATATYPE
 
-
-
 </td>
 <td valign="top">
 
 Drop data types.
-
-
 
 </td>
 </tr>
@@ -936,14 +732,10 @@ Drop data types.
 
 DROP MESSAGE
 
-
-
 </td>
 <td valign="top">
 
 Drop messages.
-
-
 
 </td>
 </tr>
@@ -952,14 +744,10 @@ Drop messages.
 
 DROP SCHEMA FILES SERVICE
 
-
-
 </td>
 <td valign="top">
 
 Drop an external catalog schema in SQL on Files.
-
-
 
 </td>
 </tr>
@@ -968,14 +756,10 @@ Drop an external catalog schema in SQL on Files.
 
 DROP TABLE FILES SERVICE
 
-
-
 </td>
 <td valign="top">
 
 Drop an external catalog table in SQL on Files.
-
-
 
 </td>
 </tr>
@@ -984,14 +768,10 @@ Drop an external catalog table in SQL on Files.
 
 EXECUTE ANY PROCEDURE
 
-
-
 </td>
 <td valign="top">
 
 Execute procedures and functions owned by any user.
-
-
 
 </td>
 </tr>
@@ -1000,14 +780,10 @@ Execute procedures and functions owned by any user.
 
 INSERT ANY TABLE
 
-
-
 </td>
 <td valign="top">
 
 Insert rows into tables and views owned by any user.
-
-
 
 </td>
 </tr>
@@ -1016,14 +792,10 @@ Insert rows into tables and views owned by any user.
 
 LOAD ANY TABLE
 
-
-
 </td>
 <td valign="top">
 
 Load data into tables owned by any user.
-
-
 
 </td>
 </tr>
@@ -1032,14 +804,10 @@ Load data into tables owned by any user.
 
 MANAGE ANY DATABASE VARIABLE
 
-
-
 </td>
 <td valign="top">
 
 Create database-scope variables owned by yourself or by PUBLIC.
-
-
 
 </td>
 </tr>
@@ -1048,14 +816,10 @@ Create database-scope variables owned by yourself or by PUBLIC.
 
 MANAGE ANY DBSPACE
 
-
-
 </td>
 <td valign="top">
 
 Run select system stored procedures to manage the instance.
-
-
 
 </td>
 </tr>
@@ -1064,14 +828,10 @@ Run select system stored procedures to manage the instance.
 
 MANAGE ANY EVENT
 
-
-
 </td>
 <td valign="top">
 
 Create, alter, drop, trigger, and comment on any event in the database.
-
-
 
 </td>
 </tr>
@@ -1080,14 +840,10 @@ Create, alter, drop, trigger, and comment on any event in the database.
 
 MANAGE ANY EXTERNAL OBJECT
 
-
-
 </td>
 <td valign="top">
 
 Install, comment on, and remove external environment objects.
-
-
 
 </td>
 </tr>
@@ -1096,14 +852,10 @@ Install, comment on, and remove external environment objects.
 
 MANAGE ANY LDAP SERVER
 
-
-
 </td>
 <td valign="top">
 
 Create, alter, drop, validate, and comment on LDAP servers.
-
-
 
 </td>
 </tr>
@@ -1112,14 +864,10 @@ Create, alter, drop, validate, and comment on LDAP servers.
 
 MANAGE ANY LOGIN POLICY
 
-
-
 </td>
 <td valign="top">
 
 Create, alter, drop, and comment on login policies.
-
-
 
 </td>
 </tr>
@@ -1127,8 +875,6 @@ Create, alter, drop, and comment on login policies.
 <td valign="top">
 
 MANAGE ANY OBJECT PRIVILEGE
-
-
 
 </td>
 <td valign="top">
@@ -1147,14 +893,10 @@ MANAGE ANY OBJECT PRIVILEGE
 
 MANAGE ANY REMOTE SERVER
 
-
-
 </td>
 <td valign="top">
 
 Create, alter, and drop SERVER objects.
-
-
 
 </td>
 </tr>
@@ -1163,14 +905,10 @@ Create, alter, and drop SERVER objects.
 
 MANAGE ANY STATISTICS
 
-
-
 </td>
 <td valign="top">
 
 Create, alter, drop, and update database statistics for any table.
-
-
 
 </td>
 </tr>
@@ -1179,14 +917,10 @@ Create, alter, drop, and update database statistics for any table.
 
 MANAGE ANY TRACE SESSION
 
-
-
 </td>
 <td valign="top">
 
 Create a trace session.
-
-
 
 </td>
 </tr>
@@ -1194,8 +928,6 @@ Create a trace session.
 <td valign="top">
 
 MANAGE ANY USER
-
-
 
 </td>
 <td valign="top">
@@ -1213,14 +945,10 @@ MANAGE ANY USER
 
 MANAGE AUDITING
 
-
-
 </td>
 <td valign="top">
 
 Run the sa\_audit\_string stored procedure.
-
-
 
 </td>
 </tr>
@@ -1229,14 +957,22 @@ Run the sa\_audit\_string stored procedure.
 
 MANAGE CERTIFICATES
 
-
-
 </td>
 <td valign="top">
 
 Manage audit and database sessions.
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
+MANAGE CREDENTIAL
+
+</td>
+<td valign="top">
+
+Create and drop credentials for any credential user.
 
 </td>
 </tr>
@@ -1245,14 +981,22 @@ Manage audit and database sessions.
 
 MANAGE EVENT
 
-
-
 </td>
 <td valign="top">
 
 Create, alter, drop, trigger, and comment on events owned by self.
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
+MANAGE OWNER CERTIFICATES
+
+</td>
+<td valign="top">
+
+Manage self-owned certificates.
 
 </td>
 </tr>
@@ -1261,14 +1005,10 @@ Create, alter, drop, trigger, and comment on events owned by self.
 
 MANAGE PROFILING
 
-
-
 </td>
 <td valign="top">
 
 Manage database server tracing. The DIAGNOSTICS system role is also required to fully utilize diagnostics functionality for user information.
-
-
 
 </td>
 </tr>
@@ -1276,8 +1016,6 @@ Manage database server tracing. The DIAGNOSTICS system role is also required to 
 <td valign="top">
 
 MANAGE ROLES
-
-
 
 </td>
 <td valign="top">
@@ -1288,7 +1026,17 @@ You can grant users administration of a role while or after you create that role
 
 If you do not specify a role administrator during role creation, the MANAGE ROLES system privilege is automatically granted to the role with the ADMIN ONLY OPTION clause, allowing the global role administrator to administer the role. If at least one role administrator is specified during creation, the MANAGE ROLES system privilege is not granted to the role, and global role administrators cannot manage the role.
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
+MANAGE TRUST
+
+</td>
+<td valign="top">
+
+Authorizes a user to create and drop a PSE.
 
 </td>
 </tr>
@@ -1297,14 +1045,10 @@ If you do not specify a role administrator during role creation, the MANAGE ROLE
 
 MONITOR
 
-
-
 </td>
 <td valign="top">
 
 Monitor a database, including accessing privileged statistics, connected users, and locks.
-
-
 
 </td>
 </tr>
@@ -1313,14 +1057,10 @@ Monitor a database, including accessing privileged statistics, connected users, 
 
 NOTIFY TRACE EVENT
 
-
-
 </td>
 <td valign="top">
 
 Notify an event.
-
-
 
 </td>
 </tr>
@@ -1329,14 +1069,10 @@ Notify an event.
 
 READ CLIENT FILE
 
-
-
 </td>
 <td valign="top">
 
 Read files on the client computer.
-
-
 
 </td>
 </tr>
@@ -1345,14 +1081,10 @@ Read files on the client computer.
 
 READ FILE
 
-
-
 </td>
 <td valign="top">
 
 Read files on the database server computer.
-
-
 
 </td>
 </tr>
@@ -1361,14 +1093,10 @@ Read files on the database server computer.
 
 REORGANIZE ANY OBJECT
 
-
-
 </td>
 <td valign="top">
 
 Reorganize tables and materialized views owned by any user.
-
-
 
 </td>
 </tr>
@@ -1377,14 +1105,10 @@ Reorganize tables and materialized views owned by any user.
 
 RESTORE ANY TABLE
 
-
-
 </td>
 <td valign="top">
 
 Restore any table.
-
-
 
 </td>
 </tr>
@@ -1393,14 +1117,10 @@ Restore any table.
 
 RESTORE OWNER TABLE
 
-
-
 </td>
 <td valign="top">
 
 Restore self-owned tables.
-
-
 
 </td>
 </tr>
@@ -1409,14 +1129,10 @@ Restore self-owned tables.
 
 SELECT ANY TABLE
 
-
-
 </td>
 <td valign="top">
 
 Query tables and views owned by any user.
-
-
 
 </td>
 </tr>
@@ -1425,14 +1141,10 @@ Query tables and views owned by any user.
 
 SELECT PUBLIC DATABASE VARIABLE
 
-
-
 </td>
 <td valign="top">
 
 Select the value of a database-scope variable owned by PUBLIC.
-
-
 
 </td>
 </tr>
@@ -1441,14 +1153,10 @@ Select the value of a database-scope variable owned by PUBLIC.
 
 SET ANY CUSTOMER PUBLIC OPTION
 
-
-
 </td>
 <td valign="top">
 
 Set PUBLIC database options that have the customer bit set and that do not require the SET ANY SECURITY CUSTOMER OPTION or the SET ANY CUSTOMER SYSTEM OPTION system privileges.
-
-
 
 </td>
 </tr>
@@ -1457,14 +1165,10 @@ Set PUBLIC database options that have the customer bit set and that do not requi
 
 SET ANY CUSTOMER SECURITY OPTION
 
-
-
 </td>
 <td valign="top">
 
 Set any CUSTOMER PUBLIC security database options that have the customer bit set.
-
-
 
 </td>
 </tr>
@@ -1473,14 +1177,10 @@ Set any CUSTOMER PUBLIC security database options that have the customer bit set
 
 SET ANY CUSTOMER SYSTEM OPTION
 
-
-
 </td>
 <td valign="top">
 
 Set CUSTOMER PUBLIC system database options that have the customer bit set.
-
-
 
 </td>
 </tr>
@@ -1489,14 +1189,10 @@ Set CUSTOMER PUBLIC system database options that have the customer bit set.
 
 SET ANY USER DEFINED OPTION
 
-
-
 </td>
 <td valign="top">
 
 Set user-defined database options.
-
-
 
 </td>
 </tr>
@@ -1505,16 +1201,12 @@ Set user-defined database options.
 
 SET USER
 
-
-
 </td>
 <td valign="top">
 
 Temporarily assume the roles and privileges of another user.
 
 This system privilege can apply to all users, or can be limited to a set of specified users, or users who are granted one or more specified roles.
-
-
 
 </td>
 </tr>
@@ -1523,14 +1215,10 @@ This system privilege can apply to all users, or can be limited to a set of spec
 
 TRUNCATE ANY TABLE
 
-
-
 </td>
 <td valign="top">
 
 Truncate data for tables and materialized views owned by any user.
-
-
 
 </td>
 </tr>
@@ -1539,14 +1227,10 @@ Truncate data for tables and materialized views owned by any user.
 
 UPDATE ANY MUTEX SEMAPHORE
 
-
-
 </td>
 <td valign="top">
 
 Update a mutex or semaphore owned by any user.
-
-
 
 </td>
 </tr>
@@ -1555,14 +1239,10 @@ Update a mutex or semaphore owned by any user.
 
 UPDATE ANY TABLE
 
-
-
 </td>
 <td valign="top">
 
 Update rows in tables and views owned by any user.
-
-
 
 </td>
 </tr>
@@ -1571,14 +1251,10 @@ Update rows in tables and views owned by any user.
 
 UPDATE PUBLIC DATABASE VARIABLE
 
-
-
 </td>
 <td valign="top">
 
 Update database-scope variables owned by PUBLIC.
-
-
 
 </td>
 </tr>
@@ -1587,14 +1263,10 @@ Update database-scope variables owned by PUBLIC.
 
 USE ANY SEQUENCE
 
-
-
 </td>
 <td valign="top">
 
 Use sequence generators owned by any user.
-
-
 
 </td>
 </tr>
@@ -1603,14 +1275,10 @@ Use sequence generators owned by any user.
 
 VALIDATE ANY OBJECT
 
-
-
 </td>
 <td valign="top">
 
 Validate tables, materialized views, and indexes owned by any user.
-
-
 
 </td>
 </tr>
@@ -1619,14 +1287,10 @@ Validate tables, materialized views, and indexes owned by any user.
 
 WRITE CLIENT FILE
 
-
-
 </td>
 <td valign="top">
 
 Write files to the client computer.
-
-
 
 </td>
 </tr>
@@ -1635,14 +1299,10 @@ Write files to the client computer.
 
 WRITE FILE
 
-
-
 </td>
 <td valign="top">
 
 Write files on the database server computer.
-
-
 
 </td>
 </tr>

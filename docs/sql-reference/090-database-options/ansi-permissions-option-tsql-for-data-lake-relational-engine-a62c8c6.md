@@ -6,10 +6,13 @@ Controls permissions checking for DELETE and UPDATE statements.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa62c8c6584f210159b5f93f8f482b38f__section_d3p_24q_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Controls permissions checking for DELETE and UPDATE statements.
 ## Syntax
 
 ```
-ANSI_PERMISSIONS = { ON | OFF }
+ANSI_PERMISSIONS = { ON | OFF };
 ```
 
 
@@ -58,28 +61,20 @@ Requires the SET ANY CUSTOMER SYSTEM OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -88,28 +83,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+No
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
-
-</td>
-<td valign="top">
-
-No
-
-
 
 </td>
 </tr>
@@ -118,28 +105,20 @@ No
 
 Allowed to set temporarily?
 
+</td>
+<td valign="top">
 
+No
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
-
-</td>
-<td valign="top">
-
-No
-
-
 
 </td>
 </tr>
@@ -160,21 +139,15 @@ With ANSI\_PERMISSIONS ON, SQL92 permission requirements for DELETE and UPDATE s
 
 SQL Statement
 
-
-
 </th>
 <th valign="top">
 
 Permissions Required with ANSI\_PERMISSIONS OFF
 
-
-
 </th>
 <th valign="top">
 
 Permissions Required with ANSI\_PERMISSIONS ON
-
-
 
 </th>
 </tr>
@@ -183,14 +156,10 @@ Permissions Required with ANSI\_PERMISSIONS ON
 
 UPDATE
 
-
-
 </td>
 <td valign="top">
 
 UPDATE permission on the columns where values are being set
-
-
 
 </td>
 <td valign="top">
@@ -211,14 +180,10 @@ UPDATE permission on the columns where values are being set
 
 DELETE
 
-
-
 </td>
 <td valign="top">
 
 DELETE permission on table
-
-
 
 </td>
 <td valign="top">

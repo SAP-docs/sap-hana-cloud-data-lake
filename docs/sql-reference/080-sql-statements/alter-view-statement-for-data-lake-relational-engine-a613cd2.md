@@ -6,10 +6,13 @@ Replaces a view definition with a modified version.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa613cd2484f2101580a1c565befd8049__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -21,7 +24,7 @@ Replaces a view definition with a modified version.
 ALTER VIEW
    ...[ { <owner> | <schema-name> }.]<view-name> [ ( <column-name> [ , … ] ) ]
    ...AS <select-statement>
-   ...[ WITH CHECK OPTION ]
+   ...[ WITH CHECK OPTION ];
 ```
 
 
@@ -31,7 +34,7 @@ ALTER VIEW
 ```
 ALTER VIEW
    ...[ { <owner> | <schema-name> }.]<view-name> 
-   ...{ SET HIDDEN | RECOMPILE | DISABLE | ENABLE }
+   ...{ SET HIDDEN | RECOMPILE | DISABLE | ENABLE };
 ```
 
 
@@ -157,14 +160,10 @@ The privilege required varies by clause.
 
 Clause
 
-
-
 </th>
 <th valign="top">
 
 Privilege Required
-
-
 
 </th>
 </tr>
@@ -172,8 +171,6 @@ Privilege Required
 <td valign="top">
 
 Alter the SELECT clause of the view
-
-
 
 </td>
 <td valign="top">
@@ -200,14 +197,10 @@ If you don't own the underlying objects referenced by the view, then you also ne
 
 ENABLE clause
 
-
-
 </td>
 <td valign="top">
 
 No privilege required.
-
-
 
 </td>
 </tr>
@@ -215,8 +208,6 @@ No privilege required.
 <td valign="top">
 
 DISABLE clause or SET HIDDEN clause
-
-
 
 </td>
 <td valign="top">
@@ -236,8 +227,6 @@ Requires one of:
 <td valign="top">
 
 RECOMPILE clause
-
-
 
 </td>
 <td valign="top">
@@ -283,17 +272,17 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[CREATE TRIGGER Statement for Data Lake Relational Engine](create-trigger-statement-for-data-lake-relational-engine-3be4860.md "Creates a trigger on a table. This statement applies to data lake Relational Engine catalog store tables only.")
+[CREATE VIEW Statement for Data Lake Relational Engine](create-view-statement-for-data-lake-relational-engine-a61a051.md "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.")
 
-[DROP TRIGGER Statement for Data Lake Relational Engine](drop-trigger-statement-for-data-lake-relational-engine-3be4974.md "Removes a trigger from the database. This statement applies to data lake Relational Engine catalog store tables only.")
+[DROP VIEW Statement for Data Lake Relational Engine](drop-view-statement-for-data-lake-relational-engine-10a78b1.md "Removes a view from the database.")
 
 [DISCONNECT Statement \[Interactive SQL\] for Data Lake Relational Engine](disconnect-statement-interactive-sql-for-data-lake-relational-engine-a61bf2a.md "Drops a connection with the database.")
 
 [Identifying and Fixing Invalid Dependent Views for Data Lake Relational Engine](identifying-and-fixing-invalid-dependent-views-for-data-lake-relational-engine-a38963a.md "Check for, and correct, any dependent views that become invalid because of changes to their underlying tables.")
 
-[ALTER VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/6ef54831fa96405b83c2a82cf9a88b9a.html "Replaces a view definition with a modified version.") :arrow_upper_right:
-
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
+
+[ALTER VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/6ef54831fa96405b83c2a82cf9a88b9a.html "Replaces a view definition with a modified version.") :arrow_upper_right:
 

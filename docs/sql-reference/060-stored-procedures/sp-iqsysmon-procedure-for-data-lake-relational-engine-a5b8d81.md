@@ -6,10 +6,13 @@ Monitors multiple components of data lake Relational Engine, including the manag
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5b8d81e84f21015b1338b8e36993f14__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,7 +26,7 @@ Batch Mode Syntax 1
 <dd>
 
 ```
-sp_iqsysmon start_monitor
+sp_iqsysmon start_monitor;
 ```
 
 
@@ -36,7 +39,7 @@ Batch Mode Syntax 2
 <dd>
 
 ```
-sp_iqsysmon stop_monitor [, 'section(s)' ]
+sp_iqsysmon stop_monitor [, 'section(s)' ];
 ```
 
 
@@ -49,7 +52,7 @@ Syntax 3
 <dd>
 
 ```
-sp_iqsysmon '<time-period>' [, 'section(s)' ]
+sp_iqsysmon '<time-period>' [, 'section(s)' ];
 ```
 
 
@@ -61,7 +64,7 @@ sp_iqsysmon '<time-period>' [, 'section(s)' ]
 
 <a name="loioa5b8d81e84f21015b1338b8e36993f14__iq_refbb_1784"/>
 
-## Batch Mode Parameters
+## Parameters
 
 
 <dl>
@@ -136,14 +139,10 @@ sp\_iqsysmon collects the monitor statistics for the period between starting and
 
 Report Sections or Data Lake Relational Engine Components to be Reported On
 
-
-
 </th>
 <th valign="top">
 
 Abbreviation to Type
-
-
 
 </th>
 </tr>
@@ -152,16 +151,12 @@ Abbreviation to Type
 
 Buffer allocation
 
-
-
 </td>
 <td valign="top">
 
 \(main\) – mbufalloc
 
 \(temporary\) – tbufalloc
-
-
 
 </td>
 </tr>
@@ -170,16 +165,12 @@ Buffer allocation
 
 Buffer manager
 
-
-
 </td>
 <td valign="top">
 
 \(main\) – mbufman
 
 \(temporary\) – tbufman
-
-
 
 </td>
 </tr>
@@ -188,16 +179,12 @@ Buffer manager
 
 Buffer pool
 
-
-
 </td>
 <td valign="top">
 
 \(main\) – mbufpool
 
 \(temporary\) – tbufpool
-
-
 
 </td>
 </tr>
@@ -206,14 +193,10 @@ Buffer pool
 
 Catalog statistics
 
-
-
 </td>
 <td valign="top">
 
 catalog
-
-
 
 </td>
 </tr>
@@ -222,14 +205,10 @@ catalog
 
 CPU utilization
 
-
-
 </td>
 <td valign="top">
 
 cpu
-
-
 
 </td>
 </tr>
@@ -238,16 +217,12 @@ cpu
 
 Free list management
 
-
-
 </td>
 <td valign="top">
 
 \(main\) – mfreelist
 
 \(temporary\) – tfreelist
-
-
 
 </td>
 </tr>
@@ -256,14 +231,10 @@ Free list management
 
 Memory management
 
-
-
 </td>
 <td valign="top">
 
 memory
-
-
 
 </td>
 </tr>
@@ -272,16 +243,12 @@ memory
 
 Prefetch management
 
-
-
 </td>
 <td valign="top">
 
 \(main\) – mprefetch
 
 \(temporary\) – tprefetch
-
-
 
 </td>
 </tr>
@@ -290,14 +257,10 @@ Prefetch management
 
 Large Memory Allocator \(LMA\) statistics
 
-
-
 </td>
 <td valign="top">
 
 lma
-
-
 
 </td>
 </tr>
@@ -306,14 +269,10 @@ lma
 
 Server context statistics
 
-
-
 </td>
 <td valign="top">
 
 server
-
-
 
 </td>
 </tr>
@@ -322,14 +281,10 @@ server
 
 Thread management
 
-
-
 </td>
 <td valign="top">
 
 threads
-
-
 
 </td>
 </tr>
@@ -338,14 +293,10 @@ threads
 
 Transaction management
 
-
-
 </td>
 <td valign="top">
 
 txn
-
-
 
 </td>
 </tr>
@@ -366,14 +317,10 @@ Definitions for the STATS-NAME abbreviations displayed in sp\_iqsysmon output fo
 
 STATS-NAME
 
-
-
 </th>
 <th valign="top">
 
 Definition
-
-
 
 </th>
 </tr>
@@ -382,14 +329,10 @@ Definition
 
 Large Memory Space
 
-
-
 </td>
 <td valign="top">
 
 Maximum Large Memory configured size \(-iqlm value from params.cfg\).
-
-
 
 </td>
 </tr>
@@ -398,14 +341,10 @@ Maximum Large Memory configured size \(-iqlm value from params.cfg\).
 
 Large Memory Max Flexible
 
-
-
 </td>
 <td valign="top">
 
 Maximum memory granted for flexible operators. Example: Load Engine \(hash sort merge for hash or hash-range partitioned table and hash sort merge cursor\).
-
-
 
 </td>
 </tr>
@@ -414,14 +353,10 @@ Maximum memory granted for flexible operators. Example: Load Engine \(hash sort 
 
 Large Memory Num Flex Allocations
 
-
-
 </td>
 <td valign="top">
 
 The count of memory chunks allocated as flex memory.
-
-
 
 </td>
 </tr>
@@ -430,14 +365,10 @@ The count of memory chunks allocated as flex memory.
 
 Large Memory Flexible %
 
-
-
 </td>
 <td valign="top">
 
 Percentage of large memory used for flexible operators.
-
-
 
 </td>
 </tr>
@@ -446,14 +377,10 @@ Percentage of large memory used for flexible operators.
 
 Large Memory Flexible used
 
-
-
 </td>
 <td valign="top">
 
 This is the total amount of memory allocated to flex users.
-
-
 
 </td>
 </tr>
@@ -462,14 +389,10 @@ This is the total amount of memory allocated to flex users.
 
 Large Memory Inflexible %
 
-
-
 </td>
 <td valign="top">
 
 Percentage of large memory used for inflexible operators \(N-bit metadata structures, data buffer of column vector in load \).
-
-
 
 </td>
 </tr>
@@ -478,14 +401,10 @@ Percentage of large memory used for inflexible operators \(N-bit metadata struct
 
 Large Memory Inflexible used
 
-
-
 </td>
 <td valign="top">
 
 Large memory used by inflexible operators.
-
-
 
 </td>
 </tr>
@@ -494,14 +413,10 @@ Large memory used by inflexible operators.
 
 Large Memory Anti-Starvation %
 
-
-
 </td>
 <td valign="top">
 
 Applies only to flexible operators.
-
-
 
 </td>
 </tr>
@@ -510,14 +425,10 @@ Applies only to flexible operators.
 
 Large Memory Num Connections
 
-
-
 </td>
 <td valign="top">
 
 \(Internal use only\)
-
-
 
 </td>
 </tr>
@@ -549,26 +460,26 @@ None
 
     ```
     sp_iqsysmon start_monitor
-    sp_iqsysmon stop_monitor
+    sp_iqsysmon stop_monitor;
     ```
 
 -   Starts the monitor in batch mode and displays the Buffer Manager and Buffer Pool statistics for the main store:
 
     ```
     sp_iqsysmon start_monitor
-    sp_iqsysmon stop_monitor 'mbufman mbufpool'
+    sp_iqsysmon stop_monitor 'mbufman mbufpool';
     ```
 
 -   Prints monitor information after 10 minutes:
 
     ```
-    sp_iqsysmon '00:10:00'
+    sp_iqsysmon '00:10:00';
     ```
 
 -   Prints only the Memory Manager section of the sp\_iqsysmon report after 5 minutes:
 
     ```
-    sp_iqsysmon '00:05:00', memory
+    sp_iqsysmon '00:05:00', memory;
     ```
 
 -   Starts the monitor, executes two procedures and a query, stops the monitor, then prints only the Buffer Manager section of the report:
@@ -589,19 +500,19 @@ None
 -   Prints only the Main Buffer Manager and Main Buffer Pool sections of the report after 2 minutes:
 
     ```
-    sp_iqsysmon '00:02:00', 'mbufman mbufpool'
+    sp_iqsysmon '00:02:00', 'mbufman mbufpool';
     ```
 
 -   Prints only the LMA sections of the report after 5 seconds:
 
     ```
-    sp_iqsysmon '00:00:05', 'lma'
+    sp_iqsysmon '00:00:05', 'lma';
     ```
 
 -   Runs the monitor in batch mode for 10 seconds and displays the consolidated statistics at the end of the time period:
 
     ```
-    sp_iqsysmon '00:00:10', 'mbufpool memory'
+    sp_iqsysmon '00:00:10', 'mbufpool memory';
     ```
 
 

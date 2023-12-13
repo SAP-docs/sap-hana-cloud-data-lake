@@ -6,15 +6,18 @@ Displays detailed information about each data lake Relational Engine dbspace.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5a34b5f84f21015909de16d66c96e8b__section_g1g_zvh_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqdbspace [ <dbspace-name> ]
+sp_iqdbspace [ <dbspace-name> ];
 ```
 
 
@@ -43,7 +46,7 @@ sp_iqdbspace [ <dbspace-name> ]
 
 <a name="loioa5a34b5f84f21015909de16d66c96e8b__section_sdb_1rz_mbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -52,14 +55,10 @@ sp_iqdbspace [ <dbspace-name> ]
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -68,14 +67,10 @@ Description
 
 DBSpaceName
 
-
-
 </td>
 <td valign="top">
 
 The name of the dbspace as defined when the database is created. Dbspace names are always case-insensitive, regardless of the CASE IGNORE or CASE RESPECT specification.
-
-
 
 </td>
 </tr>
@@ -84,14 +79,10 @@ The name of the dbspace as defined when the database is created. Dbspace names a
 
 DBSpaceType
 
-
-
 </td>
 <td valign="top">
 
 The type of the dbspace \(MAIN, SHARED\_TEMP, TEMPORARY, or CACHE\).
-
-
 
 </td>
 </tr>
@@ -100,14 +91,10 @@ The type of the dbspace \(MAIN, SHARED\_TEMP, TEMPORARY, or CACHE\).
 
 Writable
 
-
-
 </td>
 <td valign="top">
 
 T \(writable\) or F \(not writable\).
-
-
 
 </td>
 </tr>
@@ -116,14 +103,10 @@ T \(writable\) or F \(not writable\).
 
 Online
 
-
-
 </td>
 <td valign="top">
 
 T \(online\) or F \(offline\).
-
-
 
 </td>
 </tr>
@@ -132,16 +115,10 @@ T \(online\) or F \(offline\).
 
 Usage
 
-
-
 </td>
 <td valign="top">
 
-The percent of dbspace currently in use by all files in the dbspace.
-
-Instances that use cloud dbspaces have no size restriction and show "NA" for this value.
-
-
+Not used. Dbspaces show "NA" for this value.
 
 </td>
 </tr>
@@ -149,8 +126,6 @@ Instances that use cloud dbspaces have no size restriction and show "NA" for thi
 <td valign="top">
 
 TotalSize
-
-
 
 </td>
 <td valign="top">
@@ -164,9 +139,7 @@ The total size of all files in the dbspace in the units:
 -   T \(terabytes\)
 -   P \(petabytes\)
 
-Instances that use cloud dbspaces have no size restriction and show "NA" for this value.
-
-
+The user\_object\_store dbspace has no size restriction and shows "NA" for this value.
 
 </td>
 </tr>
@@ -175,14 +148,10 @@ Instances that use cloud dbspaces have no size restriction and show "NA" for thi
 
 Reserve
 
-
-
 </td>
 <td valign="top">
 
 The total reserved space that can be added to all files in the dbspace.
-
-
 
 </td>
 </tr>
@@ -191,14 +160,10 @@ The total reserved space that can be added to all files in the dbspace.
 
 NumFiles
 
-
-
 </td>
 <td valign="top">
 
 The number of files in the dbspace.
-
-
 
 </td>
 </tr>
@@ -207,14 +172,10 @@ The number of files in the dbspace.
 
 NumRWFiles
 
-
-
 </td>
 <td valign="top">
 
 The number of read-write files in the dbspace.
-
-
 
 </td>
 </tr>
@@ -223,14 +184,10 @@ The number of read-write files in the dbspace.
 
 StripeSize
 
-
-
 </td>
 <td valign="top">
 
 Always 1, if disk striping is on.
-
-
 
 </td>
 </tr>
@@ -239,14 +196,10 @@ Always 1, if disk striping is on.
 
 BlkTypes
 
-
-
 </td>
 <td valign="top">
 
 The space used by both user data and internal system structures.
-
-
 
 </td>
 </tr>
@@ -255,14 +208,10 @@ The space used by both user data and internal system structures.
 
 OkToDrop
 
-
-
 </td>
 <td valign="top">
 
 "Y" indicates the dbspace can be dropped; otherwise "N".
-
-
 
 </td>
 </tr>
@@ -271,14 +220,10 @@ OkToDrop
 
 is\_dbspace\_preallocated
 
-
-
 </td>
 <td valign="top">
 
 "F" indicates that the NOPREALLOCATE keyword was used in the CREATE DBSPACE statement when creating the dbspace on a cooked \(not raw\) filesystem; otherwise "T" \(the default\).
-
-
 
 </td>
 </tr>
@@ -333,7 +278,7 @@ None
 
 <a name="loioa5a34b5f84f21015909de16d66c96e8b__iq_refbb_1510"/>
 
-## Example
+## Examples
 
 Displays information about dbspaces:
 
@@ -344,35 +289,25 @@ Displays information about dbspaces:
 
 DBSpaceName
 
-
-
 </th>
 <th valign="top">
 
 DBSpaceType
-
-
 
 </th>
 <th valign="top">
 
 Writable
 
-
-
 </th>
 <th valign="top">
 
 Online
 
-
-
 </th>
 <th valign="top">
 
 Usage
-
-
 
 </th>
 </tr>
@@ -381,35 +316,25 @@ Usage
 
 iq\_main
 
-
-
 </td>
 <td valign="top">
 
 MAIN
 
-
-
 </td>
 <td valign="top">
 
 T
 
-
-
 </td>
 <td valign="top">
 
 T
-
-
 
 </td>
 <td valign="top">
 
 26
-
-
 
 </td>
 </tr>
@@ -418,72 +343,52 @@ T
 
 IQ\_SYSTEM\_LOG
 
-
-
 </td>
 <td valign="top">
 
 PITR
 
-
-
 </td>
 <td valign="top">
 
 T
 
-
-
 </td>
 <td valign="top">
 
 T
-
-
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 IQ\_SYSTEM\_MAIN
-
-
 
 </td>
 <td valign="top">
 
 MAIN
 
-
-
 </td>
 <td valign="top">
 
 T
 
-
-
 </td>
 <td valign="top">
 
 T
-
-
 
 </td>
 <td valign="top">
 
 22
-
-
 
 </td>
 </tr>
@@ -492,35 +397,25 @@ T
 
 IQ\_SYSTEM\_MAIN
 
-
-
 </td>
 <td valign="top">
 
 TEMPORARY
 
-
-
 </td>
 <td valign="top">
 
 T
 
-
-
 </td>
 <td valign="top">
 
 T
-
-
 
 </td>
 <td valign="top">
 
 23
-
-
 
 </td>
 </tr>
@@ -533,36 +428,26 @@ T
 
 TotalSize
 
-
-
 </th>
 <th valign="top">
 
 Reserve
-
-
 
 </th>
 <th valign="top">
 
 NumRWFiles
 
-
-
 </th>
 <th valign="top">
 
 NumFiles
-
-
 
 </th>
 <th valign="top">
 
 Stripingon
 
-
-
 </th>
 </tr>
 <tr>
@@ -570,35 +455,25 @@ Stripingon
 
 100 M
 
-
-
 </td>
 <td valign="top">
 
 200 M
 
-
-
 </td>
 <td valign="top">
 
 1
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 <td valign="top">
 
 T
-
-
 
 </td>
 </tr>
@@ -607,35 +482,25 @@ T
 
 0 B
 
-
-
 </td>
 <td valign="top">
 
 0 B
 
-
-
 </td>
 <td valign="top">
 
 1
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 <td valign="top">
 
 F
-
-
 
 </td>
 </tr>
@@ -644,35 +509,25 @@ F
 
 100 M
 
-
-
 </td>
 <td valign="top">
 
 200 M
 
-
-
 </td>
 <td valign="top">
 
 1
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 <td valign="top">
 
 T
-
-
 
 </td>
 </tr>
@@ -681,35 +536,25 @@ T
 
 25 M
 
-
-
 </td>
 <td valign="top">
 
 200 M
 
-
-
 </td>
 <td valign="top">
 
 1
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 <td valign="top">
 
 T
-
-
 
 </td>
 </tr>
@@ -718,35 +563,25 @@ T
 
 1000 M
 
-
-
 </td>
 <td valign="top">
 
 0 B
 
-
-
 </td>
 <td valign="top">
 
 1
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 <td valign="top">
 
 F
-
-
 
 </td>
 </tr>
@@ -759,35 +594,25 @@ F
 
 StripSize
 
-
-
 </th>
 <th valign="top">
 
 BlkTypes
-
-
 
 </th>
 <th valign="top">
 
 OkToDrop
 
-
-
 </th>
 <th valign="top">
 
 lsname
 
-
-
 </th>
 <th valign="top">
 
 is\_dbspace\_preallocated
-
-
 
 </th>
 </tr>
@@ -796,35 +621,25 @@ is\_dbspace\_preallocated
 
 1 K
 
-
-
 </td>
 <td valign="top">
 
 1H,3254A
-
-
 
 </td>
 <td valign="top">
 
 N
 
-
-
 </td>
 <td valign="top">
 
 \(NULL\)
 
-
-
 </td>
 <td valign="top">
 
 T
-
-
 
 </td>
 </tr>
@@ -833,35 +648,25 @@ T
 
 0 B
 
-
-
 </td>
 <td valign="top">
 
 1H
-
-
 
 </td>
 <td valign="top">
 
 N
 
-
-
 </td>
 <td valign="top">
 
 \(NULL\)
 
-
-
 </td>
 <td valign="top">
 
 T
-
-
 
 </td>
 </tr>
@@ -869,36 +674,26 @@ T
 <td valign="top">
 
 1 K
-
-
 
 </td>
 <td valign="top">
 
 1H,2528F,32D,128M
 
-
-
 </td>
 <td valign="top">
 
 N
-
-
 
 </td>
 <td valign="top">
 
 \(NULL\)
 
-
-
 </td>
 <td valign="top">
 
 T
-
-
 
 </td>
 </tr>
@@ -906,36 +701,26 @@ T
 <td valign="top">
 
 1 K
-
-
 
 </td>
 <td valign="top">
 
 1H,64F,16A
 
-
-
 </td>
 <td valign="top">
 
 N
-
-
 
 </td>
 <td valign="top">
 
 \(NULL\)
 
-
-
 </td>
 <td valign="top">
 
 T
-
-
 
 </td>
 </tr>
@@ -944,35 +729,25 @@ T
 
 1 K
 
-
-
 </td>
 <td valign="top">
 
 1H,20480R,2096RU,1040RC
-
-
 
 </td>
 <td valign="top">
 
 N
 
-
-
 </td>
 <td valign="top">
 
 lsname
 
-
-
 </td>
 <td valign="top">
 
 T
-
-
 
 </td>
 </tr>
@@ -986,6 +761,4 @@ T
 [sp\_iqdbspaceinfo Procedure for Data Lake Relational Engine](sp-iqdbspaceinfo-procedure-for-data-lake-relational-engine-a5a3ca6.md "Displays the size of each object and subobject used in the specified table.")
 
 [sp\_iqspaceinfo Procedure for Data Lake Relational Engine](sp-iqspaceinfo-procedure-for-data-lake-relational-engine-a5b6d30.md "Displays the number of blocks (objects) used by each object in the current database and the name of the dbspace in which the object is located.")
-
-[Cloud Dbspaces](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/a896c6a184f21015b5bcf4c7a967df07/493eb818429e4996b3da4153192a9efa.html)
 

@@ -6,10 +6,13 @@ Specifies the code page used by READ and OUTPUT statements.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa63407dc84f210158c18c91e4587106b__section_d3p_24q_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Specifies the code page used by READ and OUTPUT statements.
 ## Syntax
 
 ```
-DEFAULT_ISQL_ENCODING = <value>
+DEFAULT_ISQL_ENCODING = <value>;
 ```
 
 
@@ -76,7 +79,7 @@ Interactive SQL determines the code page that is used for a particular OUTPUT or
 Set the encoding to UTF-16 \(for reading Unicode files\):
 
 ```
-SET TEMPORARY OPTION DEFAULT_ISQL_ENCODING = 'UTF-16'
+SET TEMPORARY OPTION DEFAULT_ISQL_ENCODING = 'UTF-16';
 ```
 
 **Related Information**  

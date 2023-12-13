@@ -6,8 +6,11 @@ Specifies a login procedure whose result set contains messages that are displaye
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa64833fa84f21015aaffdb1a825e33cd__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

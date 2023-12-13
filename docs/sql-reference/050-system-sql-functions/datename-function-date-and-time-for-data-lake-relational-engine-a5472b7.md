@@ -7,7 +7,7 @@ Returns the name of the specified part \(such as the month “June”\) of a dat
 
 
 ```
-DATEMNAME ( <date-part>, <date-expression> )
+DATEMNAME ( <date-part>, <date-expression> );
 ```
 
 
@@ -47,7 +47,7 @@ The date for which the date part name is to be returned. The date must contain t
 
 <a name="loioa5472b7084f21015892b91f8f67b6ef9__DATENAME_returns1"/>
 
-## Returns
+## Result Set
 
 VARCHAR
 
@@ -77,28 +77,28 @@ VARCHAR
 
     ```
     SELECT DATENAME( MONTH , '1987/05/02' )
-    FROM iq_dummy
+    FROM iq_dummy;
     ```
 
 -   The following statement returns the value 722,001:
 
     ```
     SELECT DATENAME(MICROSECOND, '2009-11-10
-    14:57:52.722001') FROM iq_dummy
+    14:57:52.722001') FROM iq_dummy;
     ```
 
 -   The following statement returns the value 777,777:
 
     ```
     SELECT DATENAME(MICROSECOND, '2000/07/07
-    07:07:07.777777') FROM iq_dummy
+    07:07:07.777777') FROM iq_dummy;
     ```
 
 -   The following statement returns the value 33,189:
 
     ```
     SELECT DATENAME(MCS, '2009-11-03 11:10:42.033189')
-    FROM iq_dummy
+    FROM iq_dummy;
     ```
 
 
@@ -119,5 +119,5 @@ VARCHAR
 
 [Date Parts in Data Lake Relational Engine](date-parts-in-data-lake-relational-engine-a52b8dd.md "Many of the date functions use dates built from date parts.")
 
-[DATENAME Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/b6977f358a8549aab30b4f2c48dd3c83.html "Returns the name of the specified part (such as the month “June”) of a date/time value, as a character string.") :arrow_upper_right:
+[DATENAME Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/b6977f358a8549aab30b4f2c48dd3c83.html "Returns the name of the specified part (such as the month “June”) of a date/time value, as a character string.") :arrow_upper_right:
 

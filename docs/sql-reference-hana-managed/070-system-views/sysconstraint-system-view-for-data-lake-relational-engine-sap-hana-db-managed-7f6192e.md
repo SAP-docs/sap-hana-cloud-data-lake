@@ -6,16 +6,12 @@ Each row in the SYS.SYSCONSTRAINT system view describes a named constraint in th
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system view can be used when connected as follows:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Viewing System Views](remote-execute-usage-examples-for-viewing-system-views-8b235c7.md).
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE\_QUERY procedure.
-> 
->     -   See [REMOTE\_EXECUTE\_QUERY Usage Examples for Viewing System Views](remote-execute-query-usage-examples-for-viewing-system-views-ada51c0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system view can be used when connected as follows:
+
+-   Connected to SAP HANA database as a SAP HANA database user, and using SAP HANA database REMOTE\_EXECUTE\_QUERY.
+
 
 
 
@@ -26,21 +22,15 @@ Each row in the SYS.SYSCONSTRAINT system view describes a named constraint in th
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -49,21 +39,15 @@ Description
 
 constraint\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The unique ID for the constraint.
-
-
 
 </td>
 </tr>
@@ -72,14 +56,10 @@ The unique ID for the constraint.
 
 constraint\_type
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -155,21 +135,15 @@ unique constraint
 
 ref\_object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The object ID of the column, table, or index to which the constraint applies.
-
-
 
 </td>
 </tr>
@@ -178,21 +152,15 @@ The object ID of the column, table, or index to which the constraint applies.
 
 table\_object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The object ID of the table to which the constraint applies.
-
-
 
 </td>
 </tr>
@@ -201,28 +169,32 @@ The object ID of the table to which the constraint applies.
 
 constraint\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
-
-
 
 </td>
 <td valign="top">
 
 The name of the constraint.
 
-
-
 </td>
 </tr>
 </table>
 
+
+
+<a name="loio7f6192e6d8db4a6da37fb888e0afcd62__section_gj1_wy1_4yb"/>
+
+## Privileges
+
+To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE privilege on the remote source <hana\_relational\_container\_schema\>\_SOURCE.
+
+-   See [REMOTE\_EXECUTE\_QUERY Usage Examples for Viewing System Views](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/a898e08b84f21015969fa437e89860c8/ada51c0074354a5f99b60c14cffb653c.html).
+
 **Related Information**  
 
 
-[SYSCONSTRAINT System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/3be757ac6c5f1014ace0e4235b05fb2d.html "Each row in the SYS.SYSCONSTRAINT system view describes a named constraint in the database. The underlying system table for this view is ISYSCONSTRAINT.") :arrow_upper_right:
+[SYSCONSTRAINT System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3be757ac6c5f1014ace0e4235b05fb2d.html "Each row in the SYS.SYSCONSTRAINT system view describes a named constraint in the database. The underlying system table for this view is ISYSCONSTRAINT.") :arrow_upper_right:
 

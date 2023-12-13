@@ -7,7 +7,7 @@ Left-pads a string with spaces, or a specified pattern, to make a string of a sp
 
 
 ```
-LPAD ( <str>, <n> [, <pattern> ] )
+LPAD ( <str>, <n> [, <pattern> ] );
 ```
 
 
@@ -103,5 +103,5 @@ LPAD returns an empty string value if *<n\>* is less than 1.
 **Related Information**  
 
 
-[LPAD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/64302f89b4d04a0fae9e59e8530f27fe.html "Left-pads a string with spaces, or a specified pattern, to make a string of a specified number of characters in length.") :arrow_upper_right:
+[LPAD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/64302f89b4d04a0fae9e59e8530f27fe.html "Left-pads a string with spaces, or a specified pattern, to make a string of a specified number of characters in length.") :arrow_upper_right:
 

@@ -6,8 +6,11 @@ Checks for catalog store temporary space on a per connection basis.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa663018d84f210159ebca747f3b93a2a__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

@@ -6,10 +6,13 @@ Each row in the SYSCATALOG view describes a system table.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be6f1786c5f1014829bcd3dd9622335__section_ljj_pcq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -30,6 +33,6 @@ ALTER VIEW "SYS"."SYSCATALOG"( creator,
       join SYS.ISYSDBSPACE as dbs on(tab.dbspace_id = dbs.dbspace_id)
       join SYS.ISYSUSER as u on u.user_id = tab.creator
       left outer join SYS.ISYSIDX as ix on(tab.table_id = ix.table_id and ix.index_id = 0)
-      left outer join SYS.ISYSREMARK as rmk on(tab.object_id = rmk.object_id)
+      left outer join SYS.ISYSREMARK as rmk on(tab.object_id = rmk.object_id);
 ```
 

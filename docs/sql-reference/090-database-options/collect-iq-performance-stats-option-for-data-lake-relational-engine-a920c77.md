@@ -6,8 +6,11 @@ Enables statement performance monitoring for data lake Relational Engine queries
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa920c77d22574357b8426dd3b69ff32f__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 
@@ -28,7 +31,7 @@ To control statistics collection based on query execution time, you can use the 
 **Related Information**  
 
 
-[Monitoring Statement Performance in Data Lake Relational Engine](https://help.sap.com/viewer/a8982cc084f21015a7b4b7fcdeb0953d/2023_2_QRC/en-US/a50746e62c2248c2a66f34c8e34fb722.html "The statement performance monitoring feature is not an exhaustive, complete audit of slow SQL statements (queries), but it is a useful tool for providing an approximation, or high-level summary, of query workload. Statement performance monitoring flags certain outlier statements with execution times exceeding an established baseline.") :arrow_upper_right:
+[Monitoring Statement Performance in Data Lake Relational Engine](https://help.sap.com/viewer/a8982cc084f21015a7b4b7fcdeb0953d/2023_4_QRC/en-US/a50746e62c2248c2a66f34c8e34fb722.html "The statement performance monitoring feature is not an exhaustive, complete audit of slow SQL statements (queries), but it is a useful tool for providing an approximation, or high-level summary, of query workload. Statement performance monitoring flags certain outlier statements with execution times exceeding an established baseline.") :arrow_upper_right:
 
 [QUERY\_PLAN\_MIN\_TIME Option for Data Lake Relational Engine](query-plan-min-time-option-for-data-lake-relational-engine-a31267e.md "Specifies a threshold for query execution. The post-query plan is generated only if the query execution time exceeds the threshold.")
 

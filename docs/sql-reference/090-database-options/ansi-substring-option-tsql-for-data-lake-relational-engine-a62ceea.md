@@ -6,10 +6,13 @@ Controls the behavior of the SUBSTRING \(SUBSTR\) function when negative values 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa62ceea984f210159d1a91e2823fa668__section_d3p_24q_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Controls the behavior of the SUBSTRING \(SUBSTR\) function when negative values 
 ## Syntax
 
 ```
-ANSI_SUBSTRING = { ON | OFF }
+ANSI_SUBSTRING = { ON | OFF };
 ```
 
 
@@ -60,28 +63,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -90,28 +85,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -120,28 +107,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -173,20 +152,20 @@ SUBSTRING( 'abcdefgh',-2,4 );
 	// substring starts at second-last character
 	ansi_substring = On  ==> 'gh'
 	// takes the first 4 characters of 
-	// ???abcdefgh and discards all ?
+	// ???abcdefgh and discards all ?;
 ```
 
 ```
 SUBSTRING( 'abcdefgh',4,-2 );
 	ansi_substring = Off ==> 'cd'
 	ansi_substring = On  ==> value -2 out of range 
-	for destination
+	for destination;
 ```
 
 ```
 SUBSTRING( 'abcdefgh',0,4 );
 	ansi_substring = Off ==> 'abcd'
-	ansi_substring = On  ==> 'abcd'
+	ansi_substring = On  ==>; 'abcd'
 ```
 
 **Related Information**  

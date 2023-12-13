@@ -12,9 +12,9 @@ Grant privileges to users and roles to manage and query data lake Relational Eng
 
 ```
 GRANT <system_privilege> [,...] TO <grantee> [ WITH ADMIN OPTION ]
- | GRANT <source_privilege>[{, <source_privilege>}...] ON REMOTE SOURCE SYSHDL_<relational_container_name>_SOURCE TO <grantee> [ WITH GRANT OPTION ]
- | GRANT <schema_privilege> [,...] ON SCHEMA <hana_relational_container_schema_name> TO <grantee> [ WITH GRANT OPTION ]
- | GRANT <object_privilege> [,...] ON <hana_relational_container_schema_name>.<hana_object_name> TO <grantee> [ WITH GRANT OPTION ]
+ | GRANT <source_privilege>[{, <source_privilege>}...] ON REMOTE SOURCE <hana_relational_container_schema>_SOURCE TO <grantee> [ WITH GRANT OPTION ]
+ | GRANT <schema_privilege> [,...] ON SCHEMA <hana_relational_container_schema> TO <grantee> [ WITH GRANT OPTION ]
+ | GRANT <object_privilege> [,...] ON <hana_relational_container_schema>.<hana_object_name> TO <grantee> [ WITH GRANT OPTION ]
  | GRANT <role_name> [,...] TO <grantee> [ WITH ADMIN OPTION ]
 ```
 
@@ -44,7 +44,7 @@ Specifies the user or role that the privilege is being granted to. A role is a n
 ```
 
 ```
-<role_name> ::= [ <hana_relational_container_schema_name>].<identifier>
+<role_name> ::= [ <hana_relational_container_schema>].<identifier>
 ```
 
 If a privilege or role is granted to a role, then all users granted that role have the specified privilege or role.
@@ -57,7 +57,7 @@ When granting roles to roles, a tree of roles can be built. When granting a role
 
 *<role\_name\>* specifies the grantee's role name with optional schema name.
 
-A reference to a schema-local role \(that is, a role for which a schema\_name was specified at creation time\), must always be preceded by its *<hana\_relational\_container\_schema\_name\>* wherever it is referenced \(for example, <code>GRANT <b><i class="varname">&lt;hana_relational_container_schema_name&gt;</i></b>.<i class="varname">&lt;role_name&gt;</i> TO...)</code>.
+A reference to a schema-local role \(that is, a role for which a schema\_name was specified at creation time\), must always be preceded by its *<hana\_relational\_container\_schema\>* wherever it is referenced \(for example, <code>GRANT <b><i class="varname">&lt;hana_relational_container_schema&gt;</i></b>.<i class="varname">&lt;role_name&gt;</i> TO...)</code>.
 
 
 
@@ -121,8 +121,6 @@ ADAPTER ADMIN
 
 | INIFILE ADMIN
 
-
-
 </td>
 <td valign="top">
 
@@ -164,8 +162,6 @@ ADAPTER ADMIN
 
 *<identifier\>*.*<identifier\>*
 
-
-
 </td>
 </tr>
 </table>
@@ -179,14 +175,10 @@ System privileges restrict administrative tasks. The following table describes t
 
 System Privilege
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -195,14 +187,10 @@ Description
 
 ADAPTER ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Controls the execution of the following adapter-related statements: CREATE ADAPTER, DROP ADAPTER, and ALTER ADAPTER. It also allows access to the ADAPTERS and ADAPTER\_LOCATIONS system views.
-
-
 
 </td>
 </tr>
@@ -211,14 +199,10 @@ Controls the execution of the following adapter-related statements: CREATE ADAPT
 
 AGENT ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Controls the execution of the following agent-related statements: CREATE AGENT, DROP AGENT, and ALTER AGENT. It also allows access to the AGENTS and ADAPTER\_LOCATIONS system views.
-
-
 
 </td>
 </tr>
@@ -227,14 +211,10 @@ Controls the execution of the following agent-related statements: CREATE AGENT, 
 
 ATTACH DEBUGGER
 
-
-
 </td>
 <td valign="top">
 
 Authorizes debugging across different user sessions. For example, userA can grant ATTACH DEBUGGER to userB to allow userB to debug a procedure in userA’s session \(userB still needs DEBUG privilege on the procedure, however\).
-
-
 
 </td>
 </tr>
@@ -243,14 +223,10 @@ Authorizes debugging across different user sessions. For example, userA can gran
 
 AUDIT ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Controls the execution of the following auditing-related statements: CREATE AUDIT POLICY, DROP AUDIT POLICY, and ALTER AUDIT POLICY, as well as changes to the auditing configuration. It also allows access to the AUDIT\_LOG and ALL\_AUDIT\_LOG system views.
-
-
 
 </td>
 </tr>
@@ -259,14 +235,10 @@ Controls the execution of the following auditing-related statements: CREATE AUDI
 
 AUDIT OPERATOR
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the execution of the following statement: ALTER SYSTEM CLEAR AUDIT LOG. It also allows access to the AUDIT\_LOG system view.
-
-
 
 </td>
 </tr>
@@ -275,14 +247,10 @@ Authorizes the execution of the following statement: ALTER SYSTEM CLEAR AUDIT LO
 
 AUDIT READ
 
-
-
 </td>
 <td valign="top">
 
 Authorizes read-only access to the rows of the AUDIT\_LOG, and ALL\_AUDIT\_LOG system views.
-
-
 
 </td>
 </tr>
@@ -291,14 +259,10 @@ Authorizes read-only access to the rows of the AUDIT\_LOG, and ALL\_AUDIT\_LOG s
 
 CATALOG READ
 
-
-
 </td>
 <td valign="top">
 
 Authorizes unfiltered access to the data in the system views that a user has already been granted the SELECT privilege on. Normally, the content of these views is filtered based on the privileges of the user. CATALOG READ does not allow a user to view system views on which they have not been granted the SELECT privilege.
-
-
 
 </td>
 </tr>
@@ -307,14 +271,10 @@ Authorizes unfiltered access to the data in the system views that a user has alr
 
 CERTIFICATE ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the changing of certificates and certificate collections that are stored in the database.
-
-
 
 </td>
 </tr>
@@ -323,14 +283,10 @@ Authorizes the changing of certificates and certificate collections that are sto
 
 CLIENT PARAMETER ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes a user to override the value of the CLIENT parameter for a database connection or to overwrite the value of the $$client$$ parameter in an SQL query.
-
-
 
 </td>
 </tr>
@@ -339,14 +295,10 @@ Authorizes a user to override the value of the CLIENT parameter for a database c
 
 CREATE JWT PROVIDER
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the creation of JWT providers by using the CREATE JWT PROVIDER statemen.
-
-
 
 </td>
 </tr>
@@ -355,14 +307,10 @@ Authorizes the creation of JWT providers by using the CREATE JWT PROVIDER statem
 
 CREATE SAML PROVIDER
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the creation of SAML providers by using the CREATE SAML PROVIDER statement.
-
-
 
 </td>
 </tr>
@@ -371,14 +319,10 @@ Authorizes the creation of SAML providers by using the CREATE SAML PROVIDER stat
 
 CREATE REMOTE SOURCE
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the creation of remote data sources by using the CREATE REMOTE SOURCE statement. It also allows you to set the purpose of a certificate collection to REMOTE SOURCE.
-
-
 
 </td>
 </tr>
@@ -387,14 +331,10 @@ Authorizes the creation of remote data sources by using the CREATE REMOTE SOURCE
 
 CREATE SCENARIO
 
-
-
 </td>
 <td valign="top">
 
 Controls the creation of calculation scenarios and cubes \(calculation database\).
-
-
 
 </td>
 </tr>
@@ -403,14 +343,10 @@ Controls the creation of calculation scenarios and cubes \(calculation database\
 
 CREATE SCHEMA
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the creation of database schemas using the CREATE SCHEMA statement.
-
-
 
 </td>
 </tr>
@@ -419,14 +355,10 @@ Authorizes the creation of database schemas using the CREATE SCHEMA statement.
 
 CREATE USERGROUP
 
-
-
 </td>
 <td valign="top">
 
 Authorizes a user to create and drop a usergroup.
-
-
 
 </td>
 </tr>
@@ -435,14 +367,10 @@ Authorizes a user to create and drop a usergroup.
 
 CREATE X509 PROVIDER
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the creation of X.509 providers by using the CREATE X509 PROVIDER statement.
-
-
 
 </td>
 </tr>
@@ -451,14 +379,10 @@ Authorizes the creation of X.509 providers by using the CREATE X509 PROVIDER sta
 
 CREDENTIAL ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the use of the statements CREATE CREDENTIAL, ALTER CREDENTIAL, and DROP CREDENTIAL.
-
-
 
 </td>
 </tr>
@@ -467,16 +391,12 @@ Authorizes the use of the statements CREATE CREDENTIAL, ALTER CREDENTIAL, and DR
 
 ENCRYPTION ROOT KEY ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes all statements related to management of root keys:
 
 Allows access to the system views pertaining to encryption \(for example, ENCRYPTION\_ROOT\_KEYS, M\_ENCRYPTION\_OVERVIEW, M\_PERSISTENCE\_ENCRYPTION\_STATUS, M\_PERSISTENCE\_ENCRYPTION\_KEYS, and so on\).
-
-
 
 </td>
 </tr>
@@ -485,14 +405,10 @@ Allows access to the system views pertaining to encryption \(for example, ENCRYP
 
 EXPORT
 
-
-
 </td>
 <td valign="top">
 
 The user must also have the SELECT privilege on the source tables to be exported. See the EXPORT statement for more information.
-
-
 
 </td>
 </tr>
@@ -501,14 +417,10 @@ The user must also have the SELECT privilege on the source tables to be exported
 
 IMPORT
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the import activity in the database using the IMPORT statements. Additional privileges may also be required to be able to execute an IMPORT. See the IMPORT statement for more information.
-
-
 
 </td>
 </tr>
@@ -517,14 +429,10 @@ Authorizes the import activity in the database using the IMPORT statements. Addi
 
 INIFILE ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes making changes to system settings.
-
-
 
 </td>
 </tr>
@@ -533,14 +441,10 @@ Authorizes making changes to system settings.
 
 LDAP ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the use of the CREATE | ALTER | DROP | VALIDATE LDAP PROVIDER statements.
-
-
 
 </td>
 </tr>
@@ -549,14 +453,10 @@ Authorizes the use of the CREATE | ALTER | DROP | VALIDATE LDAP PROVIDER stateme
 
 LOG ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the use of the ALTER SYSTEM LOGGING \[ON | OFF\] statements to enable or disable the log flush mechanism.
-
-
 
 </td>
 </tr>
@@ -565,14 +465,10 @@ Authorizes the use of the ALTER SYSTEM LOGGING \[ON | OFF\] statements to enable
 
 MONITOR ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the use of the ALTER SYSTEM statements for events.
-
-
 
 </td>
 </tr>
@@ -581,14 +477,10 @@ Authorizes the use of the ALTER SYSTEM statements for events.
 
 OPTIMIZER ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the use of the ALTER SYSTEM statements concerning SQL PLAN CACHE and ALTER SYSTEM UPDATE STATISTICS statements, which influence the behavior of the query optimizer.
-
-
 
 </td>
 </tr>
@@ -597,14 +489,10 @@ Authorizes the use of the ALTER SYSTEM statements concerning SQL PLAN CACHE and 
 
 RESOURCE ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes statements concerning system resources \(for example, the ALTER SYSTEM RECLAIM DATAVOLUME and ALTER SYSTEM RESET MONITORING VIEW statements\). It also authorizes use of the Kernel Profiler statements, and many of the statements available in the Management Console.
-
-
 
 </td>
 </tr>
@@ -613,14 +501,10 @@ Authorizes statements concerning system resources \(for example, the ALTER SYSTE
 
 SAVEPOINT ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the execution of a savepoint using the ALTER SYSTEM SAVEPOINT statement.
-
-
 
 </td>
 </tr>
@@ -629,14 +513,10 @@ Authorizes the execution of a savepoint using the ALTER SYSTEM SAVEPOINT stateme
 
 SCENARIO ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes all calculation scenario-related activities \(including creation\).
-
-
 
 </td>
 </tr>
@@ -645,14 +525,10 @@ Authorizes all calculation scenario-related activities \(including creation\).
 
 SERVICE ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the ALTER SYSTEM \[START|CANCEL|RECONFIGURE\] statements for administering system services of the database.
-
-
 
 </td>
 </tr>
@@ -661,14 +537,10 @@ Authorizes the ALTER SYSTEM \[START|CANCEL|RECONFIGURE\] statements for administ
 
 SESSION ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the ALTER SYSTEM commands concerning sessions to stop or disconnect a user session or to change session variables.
-
-
 
 </td>
 </tr>
@@ -677,14 +549,10 @@ Authorizes the ALTER SYSTEM commands concerning sessions to stop or disconnect a
 
 SSL ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the use of the SET...PURPOSE SSL statement. It also allows access to the PSES system view.
-
-
 
 </td>
 </tr>
@@ -693,14 +561,10 @@ Authorizes the use of the SET...PURPOSE SSL statement. It also allows access to 
 
 TABLE ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes LOAD, UNLOAD and MERGE of tables and table placement.
-
-
 
 </td>
 </tr>
@@ -709,14 +573,10 @@ Authorizes LOAD, UNLOAD and MERGE of tables and table placement.
 
 TRACE ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the use of the ALTER SYSTEM statements related to database tracing \(including the Kernel Profiler feature\) and the changing of trace system settings.
-
-
 
 </td>
 </tr>
@@ -725,14 +585,10 @@ Authorizes the use of the ALTER SYSTEM statements related to database tracing \(
 
 TRUST ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes the use of statements to update the trust store.
-
-
 
 </td>
 </tr>
@@ -741,14 +597,10 @@ Authorizes the use of statements to update the trust store.
 
 WORKLOAD ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes execution of the workload class and mapping statements \(for example, CREATE | ALTER | DROP WORKLOAD CLASS, and CREATE | ALTER | DROP WORKLOAD MAPPING\).
-
-
 
 </td>
 </tr>
@@ -757,14 +609,10 @@ Authorizes execution of the workload class and mapping statements \(for example,
 
 WORKLOAD ANALYZE ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Used by the Analyze Workload, Capture Workload, and Replay Workload applications when performing workload analysis.
-
-
 
 </td>
 </tr>
@@ -773,14 +621,10 @@ Used by the Analyze Workload, Capture Workload, and Replay Workload applications
 
 WORKLOAD CAPTURE ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes access to the monitoring view M\_WORKLOAD\_CAPTURES to see the current status of capturing and captured workloads, as well of execution of actions with the WORKLOAD\_CAPTURE procedure.
-
-
 
 </td>
 </tr>
@@ -789,30 +633,22 @@ Authorizes access to the monitoring view M\_WORKLOAD\_CAPTURES to see the curren
 
 WORKLOAD REPLAY ADMIN
 
-
-
 </td>
 <td valign="top">
 
 Authorizes access to the monitoring views M\_WORKLOAD\_REPLAY\_PREPROCESSES and M\_WORKLOAD\_REPLAYS to see current status of preprocessing, preprocessed, replaying, and replayed workloads, as well as the execution of actions with the WORKLOAD\_REPLAY procedure.
-
-
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- *<identifier\>*.*<identifier\>* 
-
-
+*<identifier\>*.*<identifier\>* 
 
 </td>
 <td valign="top">
 
 Components of the SAP HANA database can create new system privileges. These privileges use the component-name as the first identifier of the system privilege and the component-privilege-name as the second identifier.
-
-
 
 </td>
 </tr>
@@ -858,7 +694,7 @@ REMOTE EXECUTE
 </b></dt>
 <dd>
 
-Authorizes the use of the REMOTE\_EXECUTE\_QUERY procedure on the specified remote sources.
+Authorizes the use of REMOTE\_EXECUTE\_QUERY on the specified remote sources.
 
 
 
@@ -1087,28 +923,20 @@ The following table describes the supported object privileges in an SAP HANA dat
 
 Object Privilege
 
-
-
 </th>
 <th valign="top">
 
 Command Types
-
-
 
 </th>
 <th valign="top">
 
 Applies to
 
-
-
 </th>
 <th valign="top">
 
 Privilege Description
-
-
 
 </th>
 </tr>
@@ -1117,14 +945,10 @@ Privilege Description
 
 ALL PRIVILEGES
 
-
-
 </td>
 <td valign="top">
 
 DDL & DML
-
-
 
 </td>
 <td valign="top">
@@ -1142,8 +966,6 @@ This privilege is a collection of all Data Definition Language \(DDL\) and Data 
 
 This privilege collection is dynamically evaluated for the given grantor and object.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1151,14 +973,10 @@ This privilege collection is dynamically evaluated for the given grantor and obj
 
 ALTER
 
-
-
 </td>
 <td valign="top">
 
 DDL
-
-
 
 </td>
 <td valign="top">
@@ -1181,8 +999,6 @@ When granting ALTER on a JWT, SAML, or X509 provider, you must include the keywo
 
 When granting ALTER on a PSE, you must include the keyword PSE before the name of the PSE \(for example: <code>GRANT ALTER ON <b>PSE</b> <i class="varname">&lt;pse_name&gt;</i> TO <i class="varname">&lt;grantee&gt;</i></code>\).
 
-
-
 </td>
 </tr>
 <tr>
@@ -1190,14 +1006,10 @@ When granting ALTER on a PSE, you must include the keyword PSE before the name o
 
 CREATE ANY
 
-
-
 </td>
 <td valign="top">
 
 DDL
-
-
 
 </td>
 <td valign="top">
@@ -1218,8 +1030,6 @@ DDL
 
 Authorizes all CREATE statements for the object.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1227,14 +1037,10 @@ Authorizes all CREATE statements for the object.
 
 CREATE VIRTUAL FUNCTION
 
-
-
 </td>
 <td valign="top">
 
 DDL
-
-
 
 </td>
 <td valign="top">
@@ -1248,8 +1054,6 @@ DDL
 
 Authorizes creation of virtual functions \(the REFERENCES privilege is also required\).
 
-
-
 </td>
 </tr>
 <tr>
@@ -1257,14 +1061,10 @@ Authorizes creation of virtual functions \(the REFERENCES privilege is also requ
 
 CREATE VIRTUAL PROCEDURE
 
-
-
 </td>
 <td valign="top">
 
 DDL
-
-
 
 </td>
 <td valign="top">
@@ -1278,8 +1078,6 @@ DDL
 
 Authorizes creation of virtual procedure to create and run procedures on a remote source.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1287,14 +1085,10 @@ Authorizes creation of virtual procedure to create and run procedures on a remot
 
 CREATE VIRTUAL PACKAGE
 
-
-
 </td>
 <td valign="top">
 
 DDL
-
-
 
 </td>
 <td valign="top">
@@ -1308,8 +1102,6 @@ DDL
 
 Authorizes creation of virtual packages that can be run on remote sources.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1317,14 +1109,10 @@ Authorizes creation of virtual packages that can be run on remote sources.
 
 CREATE VIRTUAL TABLE
 
-
-
 </td>
 <td valign="top">
 
 DDL
-
-
 
 </td>
 <td valign="top">
@@ -1338,8 +1126,6 @@ DDL
 
 Authorizes the creation of proxy tables pointing to remote tables from the source entry.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1347,14 +1133,10 @@ Authorizes the creation of proxy tables pointing to remote tables from the sourc
 
 CREATE TEMPORARY TABLE
 
-
-
 </td>
 <td valign="top">
 
 DDL
-
-
 
 </td>
 <td valign="top">
@@ -1368,8 +1150,6 @@ DDL
 
 Authorizes the creation of a temporary local table, which can be used as input for procedures, even if the user does not have the CREATE ANY privilege for the schema.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1377,14 +1157,10 @@ Authorizes the creation of a temporary local table, which can be used as input f
 
 DEBUG
 
-
-
 </td>
 <td valign="top">
 
 DML
-
-
 
 </td>
 <td valign="top">
@@ -1400,8 +1176,6 @@ DML
 
 Authorizes debug functionality for the procedure or calculation view or for the procedures and calculation views of a schema.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1409,14 +1183,10 @@ Authorizes debug functionality for the procedure or calculation view or for the 
 
 DEBUG MODIFY
 
-
-
 </td>
 <td valign="top">
 
 DDL
-
-
 
 </td>
 <td valign="top">
@@ -1430,8 +1200,6 @@ DDL
 
 For internal use only.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1439,14 +1207,10 @@ For internal use only.
 
 DELETE
 
-
-
 </td>
 <td valign="top">
 
 DML
-
-
 
 </td>
 <td valign="top">
@@ -1465,8 +1229,6 @@ Authorizes the DELETE and TRUNCATE statements for the object.
 
 While DELETE applies to views, it only applies to updatable views \(that is, views that do not use a join, do not contain a UNION, and do not use aggregation\).
 
-
-
 </td>
 </tr>
 <tr>
@@ -1474,14 +1236,10 @@ While DELETE applies to views, it only applies to updatable views \(that is, vie
 
 DROP
 
-
-
 </td>
 <td valign="top">
 
 DDL
-
-
 
 </td>
 <td valign="top">
@@ -1507,8 +1265,6 @@ When granting DROP on a JWT, SAML, or X509 provider, you must include the keywor
 
 When granting DROP on a PSE, you must include the keyword PSE before the name of the PSE \(for example: <code>GRANT DROP ON <b>PSE</b> <i class="varname">&lt;pse_name&gt;</i> TO <i class="varname">&lt;grantee&gt;</i></code>\).
 
-
-
 </td>
 </tr>
 <tr>
@@ -1516,14 +1272,10 @@ When granting DROP on a PSE, you must include the keyword PSE before the name of
 
 EXECUTE
 
-
-
 </td>
 <td valign="top">
 
 DML
-
-
 
 </td>
 <td valign="top">
@@ -1538,8 +1290,6 @@ DML
 
 Authorizes the execution of a SQLScript function or a database procedure by using the CALLS or CALL statement respectively. It also allows a user to execute a virtual function.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1547,14 +1297,10 @@ Authorizes the execution of a SQLScript function or a database procedure by usin
 
 INDEX
 
-
-
 </td>
 <td valign="top">
 
 DDL
-
-
 
 </td>
 <td valign="top">
@@ -1569,8 +1315,6 @@ DDL
 
 Authorizes the creation, modification, or dropping of indexes for the object.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1578,14 +1322,10 @@ Authorizes the creation, modification, or dropping of indexes for the object.
 
 INSERT
 
-
-
 </td>
 <td valign="top">
 
 DML
-
-
 
 </td>
 <td valign="top">
@@ -1601,11 +1341,9 @@ DML
 
 Authorizes the INSERT statement for the object.
 
-The INSERT and UPDATE privilege are both required on the object to allow the REPLACE and UPSERT statements to be used.
+The INSERT and UPDATE privilege are both required on the object to allow the REPLACE statement to be used.
 
 While INSERT applies to views, it only applies to updatable views \(views that do not use a join, do not contain a UNION, and do not use aggregation\).
-
-
 
 </td>
 </tr>
@@ -1614,14 +1352,10 @@ While INSERT applies to views, it only applies to updatable views \(views that d
 
 REFERENCES
 
-
-
 </td>
 <td valign="top">
 
 DDL
-
-
 
 </td>
 <td valign="top">
@@ -1642,8 +1376,6 @@ When granting REFERENCES on a JWT, SAML, or X509 provider, you must include the 
 
 When granting REFERENCES on a PSE, you must include the keyword PSE before the name of the PSE \(for example: <code>GRANT REFERENCES ON <b>PSE</b> <i class="varname">&lt;pse_name&gt;</i> TO <i class="varname">&lt;grantee&gt;</i></code>\).
 
-
-
 </td>
 </tr>
 <tr>
@@ -1651,14 +1383,10 @@ When granting REFERENCES on a PSE, you must include the keyword PSE before the n
 
 REMOTE TABLE ADMIN
 
-
-
 </td>
 <td valign="top">
 
 DDL
-
-
 
 </td>
 <td valign="top">
@@ -1672,8 +1400,6 @@ DDL
 
 Authorizes the creation of tables on a remote source object.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1681,14 +1407,10 @@ Authorizes the creation of tables on a remote source object.
 
 SELECT
 
-
-
 </td>
 <td valign="top">
 
 DML
-
-
 
 </td>
 <td valign="top">
@@ -1706,8 +1428,6 @@ DML
 
 Authorizes the SELECT statement for the object or the usage of a sequence. When selection from system-versioned tables, users must have SELECT on both the table and its associated history table.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1715,14 +1435,10 @@ Authorizes the SELECT statement for the object or the usage of a sequence. When 
 
 SELECT METADATA
 
-
-
 </td>
 <td valign="top">
 
 DML
-
-
 
 </td>
 <td valign="top">
@@ -1737,8 +1453,6 @@ DML
 
 Authorizes access to the complete metadata of all objects in a schema \(including procedure and view definitions\), including objects that may be located in other schemas.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1746,14 +1460,10 @@ Authorizes access to the complete metadata of all objects in a schema \(includin
 
 TRIGGER
 
-
-
 </td>
 <td valign="top">
 
 DDL
-
-
 
 </td>
 <td valign="top">
@@ -1768,8 +1478,6 @@ DDL
 
 Authorizes the CREATE/ALTER/DROP/ENABLE and DISABLE TRIGGER statements for the specified table or the tables in the specified schema.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1777,14 +1485,10 @@ Authorizes the CREATE/ALTER/DROP/ENABLE and DISABLE TRIGGER statements for the s
 
 UNMASKED
 
-
-
 </td>
 <td valign="top">
 
 DML
-
-
 
 </td>
 <td valign="top">
@@ -1800,8 +1504,6 @@ DML
 
 Authorizes access to masked and anonymized data in user-defined views and tables. This privilege is required to view the original data in views and tables that are defined by using the WITH MASK clause or the original data in views that have been anonymized.
 
-
-
 </td>
 </tr>
 <tr>
@@ -1809,14 +1511,10 @@ Authorizes access to masked and anonymized data in user-defined views and tables
 
 UPDATE
 
-
-
 </td>
 <td valign="top">
 
 DML
-
-
 
 </td>
 <td valign="top">
@@ -1832,8 +1530,6 @@ DML
 
 While UPDATE applies to views, it only applies to updatable views \(views that do not use a join, do not contain a UNION, and do not use aggregation\).
 
-
-
 </td>
 </tr>
 <tr>
@@ -1841,14 +1537,10 @@ While UPDATE applies to views, it only applies to updatable views \(views that d
 
 USERGROUP OPERATOR
 
-
-
 </td>
 <td valign="top">
 
 DML
-
-
 
 </td>
 <td valign="top">
@@ -1868,37 +1560,27 @@ A user can have the USERGROUP OPERATOR privilege on more than one usergroup, and
 
 When granting USERGROUP OPERATOR, you must include the keyword USERGROUP before the name of the usergroup \(for example: <code>GRANT USERGROUP OPERATOR ON <b>USERGROUP</b> <i class="varname">&lt;usergroup_name&gt;</i> TO <i class="varname">&lt;grantee&gt;</i></code>\). This is slightly different syntax than granting other object privileges.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- *<identifier\>*.*<identifier\>* 
-
-
+*<identifier\>*.*<identifier\>* 
 
 </td>
 <td valign="top">
 
 DDL
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 Components of the SAP HANA database can create new object privileges. These privileges use the component-name as first identifier of the system privilege and the component-privilege-name as the second identifier.
-
-
 
 </td>
 </tr>

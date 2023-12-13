@@ -6,8 +6,11 @@ Specifies the maximum percentage of currently available buffers a sort object tr
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa655979284f21015921582161fa7303b__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

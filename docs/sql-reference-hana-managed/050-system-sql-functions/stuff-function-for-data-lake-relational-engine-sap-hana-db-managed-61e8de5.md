@@ -7,7 +7,7 @@ Deletes a number of characters from one string and replaces them with another st
 
 
 ```
-STUFF ( <string-expression1>, <start>, <length>, <string-expression2> )
+STUFF ( <string-expression1>, <start>, <length>, <string-expression2> );
 ```
 
 
@@ -69,7 +69,7 @@ The string to be inserted. To delete a portion of a string using the `STUFF` fun
 
 <a name="loio61e8de5f839d426fb531c723d03acddb__section_uw1_yr5_vrb"/>
 
-## Returns
+## Result Set
 
 LONG VARCHAR or LONG BINARY, depending on the data type of the input expressions.
 
@@ -106,11 +106,11 @@ The following statement returns the value “chocolate pie”:
 
 ```
 SELECT STUFF( 'chocolate cake', 11, 4, 'pie' )
-FROM iq_dummy
+FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[STUFF Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a58705b984f21015b314be7887f1392a.html "Deletes a number of characters from one string and replaces them with another string.") :arrow_upper_right:
+[STUFF Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a58705b984f21015b314be7887f1392a.html "Deletes a number of characters from one string and replaces them with another string.") :arrow_upper_right:
 

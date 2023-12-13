@@ -6,10 +6,13 @@ Returns information about the trace events in the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio8179d2976ce210148418a9a15900e7e2__section_p4t_vqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -17,7 +20,7 @@ Returns information about the trace events in the database.
 sp_trace_events(
    [ <event_name> 
    [, <include_audit_events> ] ]
-)
+);
 ```
 
 
@@ -30,7 +33,7 @@ sp_trace_events(
 <dl>
 <dt><b>
 
- *<event\_name\>* 
+*<event\_name\>* 
 
 </b></dt>
 <dd>
@@ -41,7 +44,7 @@ Use this optional CHAR\(256\) parameter to specify the trace event name. The def
 
 </dd><dt><b>
 
- *<include\_audit\_events\>* 
+*<include\_audit\_events\>* 
 
 </b></dt>
 <dd>
@@ -66,21 +69,15 @@ Use this optional BIT parameter to specify whether or not audit events are retur
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -89,21 +86,15 @@ Description
 
 event\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(256\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the name of the trace event. System trace event names have the prefix SYS\_.
-
-
 
 </td>
 </tr>
@@ -112,21 +103,15 @@ Returns the name of the trace event. System trace event names have the prefix SY
 
 description
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 Returns a description of what the trace event captures.
-
-
 
 </td>
 </tr>
@@ -135,21 +120,15 @@ Returns a description of what the trace event captures.
 
 severity
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
 
-
-
 </td>
 <td valign="top">
 
 Returns the severity level of the trace event.
-
-
 
 </td>
 </tr>
@@ -158,21 +137,15 @@ Returns the severity level of the trace event.
 
 is\_system
 
-
-
 </td>
 <td valign="top">
 
 BIT
 
-
-
 </td>
 <td valign="top">
 
 Returns 1 for system trace events and 0 otherwise.
-
-
 
 </td>
 </tr>
@@ -181,21 +154,15 @@ Returns 1 for system trace events and 0 otherwise.
 
 is\_temporary
 
-
-
 </td>
 <td valign="top">
 
 BIT
 
-
-
 </td>
 <td valign="top">
 
 Returns 1 for temporary trace events and 0 otherwise.
-
-
 
 </td>
 </tr>
@@ -216,14 +183,10 @@ This procedure returns information about both system-defined and user-defined tr
 
 Level
 
-
-
 </th>
 <th valign="top">
 
 Severity value range
-
-
 
 </th>
 </tr>
@@ -232,14 +195,10 @@ Severity value range
 
 ALWAYS
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -248,14 +207,10 @@ ALWAYS
 
 CRITICAL
 
-
-
 </td>
 <td valign="top">
 
 1–50
-
-
 
 </td>
 </tr>
@@ -264,14 +219,10 @@ CRITICAL
 
 ERROR
 
-
-
 </td>
 <td valign="top">
 
 51–100
-
-
 
 </td>
 </tr>
@@ -280,14 +231,10 @@ ERROR
 
 WARNING
 
-
-
 </td>
 <td valign="top">
 
 101–150
-
-
 
 </td>
 </tr>
@@ -296,14 +243,10 @@ WARNING
 
 INFORMATION
 
-
-
 </td>
 <td valign="top">
 
 151–200
-
-
 
 </td>
 </tr>
@@ -312,14 +255,10 @@ INFORMATION
 
 DEBUG
 
-
-
 </td>
 <td valign="top">
 
 201–255
-
-
 
 </td>
 </tr>
@@ -351,15 +290,422 @@ None.
 
 
 
-The following statement returns a list of user-defined trace events in the database:
+<a name="loio8179d2976ce210148418a9a15900e7e2__sp_trace_events_examples1"/>
+
+## Examples
+
+This statement returns a list of all trace events:
 
 ```
-SELECT * FROM dbo.sp_trace_events( )
-WHERE is_system = 0;
+CALL sp_trace_events( );
 ```
+
+
+<table>
+<tr>
+<th valign="top">
+
+event\_name
+
+</th>
+<th valign="top">
+
+description
+
+</th>
+<th valign="top">
+
+severity
+
+</th>
+<th valign="top">
+
+is\_system
+
+</th>
+<th valign="top">
+
+is\_temporary
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+SYS\_HTTP\_Log
+
+</td>
+<td valign="top">
+
+event for current http logging
+
+</td>
+<td valign="top">
+
+250
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SYS\_ConsoleLog\_Error
+
+</td>
+<td valign="top">
+
+Error Console Log messages
+
+</td>
+<td valign="top">
+
+100
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SYS\_ConsoleLog\_Warning
+
+</td>
+<td valign="top">
+
+Warning Console Log messages
+
+</td>
+<td valign="top">
+
+150
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SYS\_ConsoleLog\_Information
+
+</td>
+<td valign="top">
+
+Informational Console Log messages
+
+</td>
+<td valign="top">
+
+200
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SYS\_Mirroring\_Log
+
+</td>
+<td valign="top">
+
+event for current mirror logging
+
+</td>
+<td valign="top">
+
+250
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SYS\_RLL\_ReqConnect
+
+</td>
+<td valign="top">
+
+Request of CONNECT
+
+</td>
+<td valign="top">
+
+200
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SYS\_RLL\_ResConnect
+
+</td>
+<td valign="top">
+
+Response of CONNECT
+
+</td>
+<td valign="top">
+
+200
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+</tr>
+</table>
+
+This example returns all trace events with a severity level of 100:
+
+```
+SELECT * FROM sp_trace_events( ) WHERE SEVERITY=100;
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+event\_name
+
+</th>
+<th valign="top">
+
+description
+
+</th>
+<th valign="top">
+
+severity
+
+</th>
+<th valign="top">
+
+is\_system
+
+</th>
+<th valign="top">
+
+is\_temporary
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+SYS\_ConsoleLog\_Error
+
+</td>
+<td valign="top">
+
+Error Console Log messages
+
+</td>
+<td valign="top">
+
+100
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SYS\_RLL\_ConnectionError
+
+</td>
+<td valign="top">
+
+Event for Connection Error
+
+</td>
+<td valign="top">
+
+100
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+</table>
+
+This example returns information on the trace event SYS\_HTTP\_LOG:
+
+```
+Call sp_trace_events('SYS_HTTP_LOG');
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+event\_name
+
+</th>
+<th valign="top">
+
+description
+
+</th>
+<th valign="top">
+
+severity
+
+</th>
+<th valign="top">
+
+is\_system
+
+</th>
+<th valign="top">
+
+is\_temporary
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+SYS\_HTTP\_Log
+
+</td>
+<td valign="top">
+
+event for current http logging
+
+</td>
+<td valign="top">
+
+250
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 
 
-[sp_trace_events System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/9897bebbf9314d72a926d9adae52ead8.html "Returns information about the trace events in the database.") :arrow_upper_right:
+[sp_trace_events System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/9897bebbf9314d72a926d9adae52ead8.html "Returns information about the trace events in the database.") :arrow_upper_right:
+
+[CREATE TEMPORARY TRACE EVENT SESSION Statement for Data Lake Relational Engine](../080-sql-statements/create-temporary-trace-event-session-statement-for-data-lake-relational-engine-816cf4d.md "Creates a user trace event session.")
 

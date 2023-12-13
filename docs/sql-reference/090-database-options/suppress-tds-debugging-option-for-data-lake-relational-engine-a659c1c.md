@@ -6,8 +6,11 @@ Determines whether TDS debugging information appears in the server window.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa659c1ca84f21015bbf4facae3b8cc17__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

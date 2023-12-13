@@ -6,10 +6,13 @@ Defines an event and its associated handler for automating predefined actions. A
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa617091784f210158db2e43f0733ae5d__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -21,7 +24,7 @@ CREATE [ OR REPLACE ] EVENT <event-name>
    [ HANDLER
        BEGIN
        ...
-       END ]
+       END ];
 ```
 
 ```
@@ -41,7 +44,7 @@ CREATE [ OR REPLACE ] EVENT <event-name>
    |  LogDiskSpace 
    |  "RAISERROR" 
    |  ServerIdle 
-   |  TempDiskSpace }
+   |  TempDiskSpace };
 ```
 
 ```
@@ -52,7 +55,7 @@ CREATE [ OR REPLACE ] EVENT <event-name>
    | > 
    | != 
    | <= 
-   | >= } <value>
+   | >= } <value>;
 ```
 
 ```
@@ -63,7 +66,7 @@ CREATE [ OR REPLACE ] EVENT <event-name>
    [ EVERY <period> { HOURS | MINUTES | SECONDS } ] 
    [ ON { ( <day-of-week>, … ) 
       | ( <day-of-month>, … ) } ] 
-   [ START DATE <start-date> ]
+   [ START DATE <start-date> ];
 ```
 
 
@@ -270,7 +273,7 @@ Specifies when scheduled actions are to take place. The sequence of times acts a
 You can list schedule names by querying the system table `SYSSCHEDULE`. For example:
 
 ```
-SELECT event_id, sched_name FROM SYS.SYSSCHEDULE
+SELECT event_id, sched_name FROM SYS.SYSSCHEDULE;
 ```
 
 Each event has a unique event ID. Use the `event_id` columns of `SYSEVENT` and `SYSSCHEDULE` to match the event to the associated schedule.
@@ -474,7 +477,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [COMMENT Statement for Data Lake Relational Engine](comment-statement-for-data-lake-relational-engine-a615ad2.md "Stores a comment, in the system tables, about a database object.")
 
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
+[DROP EVENT Statement for Data Lake Relational Engine](drop-event-statement-for-data-lake-relational-engine-6dca296.md "Removes an event from the database.")
 
 [TRIGGER EVENT Statement for Data Lake Relational Engine](trigger-event-statement-for-data-lake-relational-engine-a627b6f.md "Triggers a named event. The event may be defined for event triggers or be a scheduled event.")
 

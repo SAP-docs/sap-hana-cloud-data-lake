@@ -2,14 +2,17 @@
 
 # sp\_objectpermission System Procedure for Data Lake Relational Engine
 
-Generates a report on object privileges granted to the specified role, user name,schema, or object.
+Generates a report on object privileges granted to the specified role, user name, schema, or object.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa44b6f9284f21015ab3cd665b7588080__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -17,7 +20,7 @@ Generates a report on object privileges granted to the specified role, user name
 sp_objectpermission ( 
    [ <object_name> ], 
    [ <object_owner> ], 
-   [ <object_type> ] )
+   [ <object_type> ] );
 ```
 
 
@@ -33,7 +36,7 @@ sp_objectpermission (
 </b></dt>
 <dd>
 
-The name of an object,schema, user, or role. If not specified, object privileges of the current user are reported. Default value is NULL.
+The name of an object, schema, user, or role. If not specified, object privileges of the current user are reported. Default value is NULL.
 
 
 
@@ -84,21 +87,15 @@ If no value is specified, privileges on all object types are returned. Default v
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -107,21 +104,15 @@ Description
 
 grantor
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The user ID of the grantor
-
-
 
 </td>
 </tr>
@@ -130,21 +121,15 @@ The user ID of the grantor
 
 grantee
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The user ID of the grantee
-
-
 
 </td>
 </tr>
@@ -153,21 +138,15 @@ The user ID of the grantee
 
 object\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the object
-
-
 
 </td>
 </tr>
@@ -176,21 +155,15 @@ The name of the object
 
 owner
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the object owner
-
-
 
 </td>
 </tr>
@@ -199,21 +172,15 @@ The name of the object owner
 
 object\_type
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(20\)
 
-
-
 </td>
 <td valign="top">
 
 The type of object
-
-
 
 </td>
 </tr>
@@ -222,21 +189,15 @@ The type of object
 
 column\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the column
-
-
 
 </td>
 </tr>
@@ -245,21 +206,15 @@ The name of the column
 
 permission
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(20\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the privilege
-
-
 
 </td>
 </tr>
@@ -268,21 +223,15 @@ The name of the privilege
 
 grantable
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Whether or not the privilege is grantable
-
-
 
 </td>
 </tr>
@@ -297,7 +246,7 @@ Whether or not the privilege is grantable
 All arguments are optional and can generate these reports:
 
 -   If the object type is not specified, then the object privileges for all existing object types matching the specified object name appear.
--   If the input is an object \(table, view, procedure, function,schema, sequence, and so on\), then the procedure displays a list of all users and roles that have object-level privileges on the object.
+-   If the input is an object \(table, view, procedure, function, schema, sequence, and so on\), then the procedure displays a list of all users and roles that have object-level privileges on the object.
 -   If the input is a user, role, or schema, then the procedure displays a list of all object-level privileges granted to the user, role, or schema. The list includes any object-level privileges that are inherited through role grants.
 
 
@@ -359,21 +308,15 @@ Executing sp\_objectpermission\( 'r1' \) produces output similar to:
 
 grantor
 
-
-
 </th>
 <th valign="top">
 
 grantee
 
-
-
 </th>
 <th valign="top">
 
 object\_name
-
-
 
 </th>
 </tr>
@@ -382,21 +325,15 @@ object\_name
 
 u5
 
-
-
 </td>
 <td valign="top">
 
 r2
 
-
-
 </td>
 <td valign="top">
 
 test\_tab
-
-
 
 </td>
 </tr>
@@ -405,21 +342,15 @@ test\_tab
 
 u6
 
-
-
 </td>
 <td valign="top">
 
 r3
 
-
-
 </td>
 <td valign="top">
 
 test\_tab
-
-
 
 </td>
 </tr>
@@ -428,21 +359,15 @@ test\_tab
 
 u6
 
-
-
 </td>
 <td valign="top">
 
 r3
 
-
-
 </td>
 <td valign="top">
 
 test\_tab
-
-
 
 </td>
 </tr>
@@ -451,21 +376,15 @@ test\_tab
 
 u6
 
-
-
 </td>
 <td valign="top">
 
 r3
-
-
 
 </td>
 <td valign="top">
 
 test\_proc
-
-
 
 </td>
 </tr>
@@ -480,22 +399,16 @@ test\_proc
 
 owner
 
-
-
 </th>
 <th valign="top">
 
 object\_type
-
-
 
 </th>
 <th valign="top">
 
 grantor
 
-
-
 </th>
 </tr>
 <tr>
@@ -503,44 +416,32 @@ grantor
 
 r5
 
-
-
 </td>
 <td valign="top">
 
 TABLE
-
-
 
 </td>
 <td valign="top">
 
 u5
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 r5
-
-
 
 </td>
 <td valign="top">
 
 COLUMN
 
-
-
 </td>
 <td valign="top">
 
 u6
-
-
 
 </td>
 </tr>
@@ -548,22 +449,16 @@ u6
 <td valign="top">
 
 r5
-
-
 
 </td>
 <td valign="top">
 
 COLUMN
 
-
-
 </td>
 <td valign="top">
 
 u6
-
-
 
 </td>
 </tr>
@@ -571,22 +466,16 @@ u6
 <td valign="top">
 
 r5
-
-
 
 </td>
 <td valign="top">
 
 PROCEDURE
 
-
-
 </td>
 <td valign="top">
 
 u6
-
-
 
 </td>
 </tr>
@@ -601,22 +490,16 @@ u6
 
 grantable
 
-
-
 </th>
 <th valign="top">
 
 column\_name
-
-
 
 </th>
 <th valign="top">
 
 privilege
 
-
-
 </th>
 </tr>
 <tr>
@@ -624,21 +507,15 @@ privilege
 
 Y
 
-
-
 </td>
 <td valign="top">
 
 NULL
 
-
-
 </td>
 <td valign="top">
 
 SELECT
-
-
 
 </td>
 </tr>
@@ -647,21 +524,15 @@ SELECT
 
 N
 
-
-
 </td>
 <td valign="top">
 
 c1
 
-
-
 </td>
 <td valign="top">
 
 SELECT
-
-
 
 </td>
 </tr>
@@ -670,21 +541,15 @@ SELECT
 
 Y
 
-
-
 </td>
 <td valign="top">
 
 c1
 
-
-
 </td>
 <td valign="top">
 
 REFERENCES
-
-
 
 </td>
 </tr>
@@ -693,21 +558,15 @@ REFERENCES
 
 N
 
-
-
 </td>
 <td valign="top">
 
 NULL
 
-
-
 </td>
 <td valign="top">
 
 EXECUTE
-
-
 
 </td>
 </tr>
@@ -722,22 +581,16 @@ Executing sp\_objectpermission\( 'test\_tab', 'r5', 'table' \) produces output s
 
 grantor
 
-
-
 </th>
 <th valign="top">
 
 grantee
-
-
 
 </th>
 <th valign="top">
 
 object\_name
 
-
-
 </th>
 </tr>
 <tr>
@@ -745,21 +598,15 @@ object\_name
 
 u5
 
-
-
 </td>
 <td valign="top">
 
 r2
 
-
-
 </td>
 <td valign="top">
 
 test\_tab
-
-
 
 </td>
 </tr>
@@ -768,21 +615,15 @@ test\_tab
 
 u5
 
-
-
 </td>
 <td valign="top">
 
 r6
 
-
-
 </td>
 <td valign="top">
 
 test\_tab
-
-
 
 </td>
 </tr>
@@ -791,21 +632,15 @@ test\_tab
 
 u5
 
-
-
 </td>
 <td valign="top">
 
 r6
 
-
-
 </td>
 <td valign="top">
 
 test\_tab
-
-
 
 </td>
 </tr>
@@ -814,21 +649,15 @@ test\_tab
 
 u6
 
-
-
 </td>
 <td valign="top">
 
 r3
 
-
-
 </td>
 <td valign="top">
 
 test\_tab
-
-
 
 </td>
 </tr>
@@ -837,21 +666,15 @@ test\_tab
 
 u6
 
-
-
 </td>
 <td valign="top">
 
 r3
 
-
-
 </td>
 <td valign="top">
 
 test\_tab
-
-
 
 </td>
 </tr>
@@ -866,22 +689,16 @@ test\_tab
 
 owner
 
-
-
 </th>
 <th valign="top">
 
 object\_type
-
-
 
 </th>
 <th valign="top">
 
 grantor
 
-
-
 </th>
 </tr>
 <tr>
@@ -889,21 +706,15 @@ grantor
 
 r5
 
-
-
 </td>
 <td valign="top">
 
 TABLE
 
-
-
 </td>
 <td valign="top">
 
 u5
-
-
 
 </td>
 </tr>
@@ -912,21 +723,15 @@ u5
 
 r5
 
-
-
 </td>
 <td valign="top">
 
 COLUMN
 
-
-
 </td>
 <td valign="top">
 
 u5
-
-
 
 </td>
 </tr>
@@ -935,21 +740,15 @@ u5
 
 r5
 
-
-
 </td>
 <td valign="top">
 
 COLUMN
 
-
-
 </td>
 <td valign="top">
 
 u5
-
-
 
 </td>
 </tr>
@@ -958,22 +757,16 @@ u5
 
 r5
 
-
-
 </td>
 <td valign="top">
 
 COLUMN
-
-
 
 </td>
 <td valign="top">
 
 u6
 
-
-
 </td>
 </tr>
 <tr>
@@ -981,21 +774,15 @@ u6
 
 r5
 
-
-
 </td>
 <td valign="top">
 
 COLUMN
 
-
-
 </td>
 <td valign="top">
 
 u6
-
-
 
 </td>
 </tr>
@@ -1010,21 +797,15 @@ u6
 
 column\_name
 
-
-
 </th>
 <th valign="top">
 
 privilege
 
-
-
 </th>
 <th valign="top">
 
 grantable
-
-
 
 </th>
 </tr>
@@ -1033,21 +814,15 @@ grantable
 
 NULL
 
-
-
 </td>
 <td valign="top">
 
 SELECT
 
-
-
 </td>
 <td valign="top">
 
 Y
-
-
 
 </td>
 </tr>
@@ -1056,21 +831,15 @@ Y
 
 c1
 
-
-
 </td>
 <td valign="top">
 
 SELECT
 
-
-
 </td>
 <td valign="top">
 
 Y
-
-
 
 </td>
 </tr>
@@ -1078,22 +847,16 @@ Y
 <td valign="top">
 
 c1
-
-
 
 </td>
 <td valign="top">
 
 UPDATE
 
-
-
 </td>
 <td valign="top">
 
 Y
-
-
 
 </td>
 </tr>
@@ -1101,22 +864,16 @@ Y
 <td valign="top">
 
 c1
-
-
 
 </td>
 <td valign="top">
 
 SELECT
 
-
-
 </td>
 <td valign="top">
 
 N
-
-
 
 </td>
 </tr>
@@ -1125,21 +882,15 @@ N
 
 c1
 
-
-
 </td>
 <td valign="top">
 
 REFERENCES
 
-
-
 </td>
 <td valign="top">
 
 N
-
-
 
 </td>
 </tr>

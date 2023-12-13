@@ -7,7 +7,7 @@ Computes the \(fractional\) position of one row returned from a query with respe
 
 
 ```
-PERCENT_RANK () OVER ( ORDER BY <expression> [ ASC | DESC ] )
+PERCENT_RANK () OVER ( ORDER BY <expression> [ ASC | DESC ] );
 ```
 
 
@@ -58,7 +58,7 @@ The ASC or DESC parameter specifies the ordering sequence ascending or descendin
 
 <a name="loiofc8f0fd4618e4a47b712f7cc235fe437__section_z2t_kln_vrb"/>
 
-## Returns
+## Result Set
 
 The `PERCENT_RANK` function returns a DOUBLE value between 0 and 1.
 
@@ -75,7 +75,7 @@ Returns a decimal value between 0 and 1.
 The `PERCENT_RANK` of a row is calculated as follows, where *<Rx\>* is the rank position of a row in the group and *<NtotalRow\>* is the total number of rows in the group specified by the `OVER` clause:
 
 ```
-(Rx - 1) / (NtotalRow - 1)
+(Rx - 1) / (NtotalRow - 1);
 ```
 
 `PERCENT_RANK` requires an `OVER (ORDER BY)` clause. The `ORDER BY` clause specifies the parameter on which ranking is performed and the order in which the rows are sorted in each group. This `ORDER BY` clause is used only within the `OVER` clause and is not an `ORDER BY` for the `SELECT`. No aggregation functions in the rank query are allowed to specify `DISTINCT`.
@@ -119,5 +119,5 @@ supplier#021     10000             1
 **Related Information**  
 
 
-[PERCENT_RANK Function [Analytical] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a56d183584f21015881bb3f46bb765ee.html "Computes the (fractional) position of one row returned from a query with respect to the other rows returned by the query, as defined by the ORDER BY clause.") :arrow_upper_right:
+[PERCENT_RANK Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a56d183584f21015881bb3f46bb765ee.html "Computes the (fractional) position of one row returned from a query with respect to the other rows returned by the query, as defined by the ORDER BY clause.") :arrow_upper_right:
 

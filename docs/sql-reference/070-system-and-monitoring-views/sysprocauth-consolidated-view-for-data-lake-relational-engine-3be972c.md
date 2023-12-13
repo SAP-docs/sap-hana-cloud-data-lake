@@ -6,10 +6,13 @@ Each row in the SYSPROCAUTH view describes a set of privileges granted on a proc
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be972cf6c5f1014b2b3fe29f5c1097b__section_vwg_vhq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -22,11 +25,11 @@ ALTER VIEW "SYS"."SYSPROCAUTH"( grantee,
     from SYS.ISYSPROCEDURE as p
       join SYS.ISYSPROCPERM as pp on(p.proc_id = pp.proc_id)
       join SYS.ISYSUSER as u1 on u1.user_id = pp.grantee
-      join SYS.ISYSUSER as u2 on u2.user_id = p.creator
+      join SYS.ISYSUSER as u2 on u2.user_id = p.creator;
 ```
 
 **Related Information**  
 
 
-[SYSPROCAUTH System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/864e74005ce74c6b809f4914f4aecd14.html "Each row in the SYSPROCAUTH view describes a set of privileges granted on a procedure. As an alternative, you can also use the SYSPROCPERM system view.") :arrow_upper_right:
+[SYSPROCAUTH System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/864e74005ce74c6b809f4914f4aecd14.html "Each row in the SYSPROCAUTH view describes a set of privileges granted on a procedure. As an alternative, you can also use the SYSPROCPERM system view.") :arrow_upper_right:
 

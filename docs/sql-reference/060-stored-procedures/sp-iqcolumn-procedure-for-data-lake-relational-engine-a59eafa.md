@@ -6,10 +6,13 @@ Displays information about columns in a database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa59eafaf84f21015b9cffa01dc3a9639__section_dfy_yvh_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,7 +26,7 @@ Syntax 1
 <dd>
 
 ```
-sp_iqcolumn ( [ <table_name> ],[ <table_owner> ], [ <table_loc> ] )
+sp_iqcolumn ( [ <table_name> ],[ <table_owner> ], [ <table_loc> ] );
 ```
 
 
@@ -37,7 +40,7 @@ Syntax 2
 
 ```
 sp_iqcolumn [ table_name='<table_name>' ],
-   [ table_owner='<tableowner>' ],[ table_loc='<table_loc>' ]
+   [ table_owner='<tableowner>' ],[ table_loc='<table_loc>' ];
 ```
 
 
@@ -93,7 +96,7 @@ A parameter that specifies the location of the table.
 
 <a name="loioa59eafaf84f21015b9cffa01dc3a9639__section_tbj_5wz_mbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -102,14 +105,10 @@ A parameter that specifies the location of the table.
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -118,14 +117,10 @@ Description
 
 table\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the table.
-
-
 
 </td>
 </tr>
@@ -134,14 +129,10 @@ The name of the table.
 
 table\_owner
 
-
-
 </td>
 <td valign="top">
 
 The owner of the table.
-
-
 
 </td>
 </tr>
@@ -150,14 +141,10 @@ The owner of the table.
 
 column\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the column.
-
-
 
 </td>
 </tr>
@@ -166,14 +153,10 @@ The name of the column.
 
 domain\_name
 
-
-
 </td>
 <td valign="top">
 
 The data type.
-
-
 
 </td>
 </tr>
@@ -182,14 +165,10 @@ The data type.
 
 width
 
-
-
 </td>
 <td valign="top">
 
 The precision of numeric data types that have precision and scale or the storage width of numeric data types without scale; the width of character data types.
-
-
 
 </td>
 </tr>
@@ -198,14 +177,10 @@ The precision of numeric data types that have precision and scale or the storage
 
 scale
 
-
-
 </td>
 <td valign="top">
 
 The scale of numeric data types.
-
-
 
 </td>
 </tr>
@@ -213,8 +188,6 @@ The scale of numeric data types.
 <td valign="top">
 
 nulls
-
-
 
 </td>
 <td valign="top">
@@ -233,14 +206,10 @@ Values are:
 
 default
 
-
-
 </td>
 <td valign="top">
 
 'Identity/Autoincrement' if the column is an identity/autoincrement column; null if not.
-
-
 
 </td>
 </tr>
@@ -249,14 +218,10 @@ default
 
 cardinality
 
-
-
 </td>
 <td valign="top">
 
 The distinct count, if known, by indexes.
-
-
 
 </td>
 </tr>
@@ -264,8 +229,6 @@ The distinct count, if known, by indexes.
 <td valign="top">
 
 location
-
-
 
 </td>
 <td valign="top">
@@ -285,8 +248,6 @@ Values are:
 
 isPartitioned
 
-
-
 </td>
 <td valign="top">
 
@@ -304,14 +265,10 @@ Values are:
 
 remarks
 
-
-
 </td>
 <td valign="top">
 
 User comments added with the `COMMENT` statement.
-
-
 
 </td>
 </tr>
@@ -320,14 +277,10 @@ User comments added with the `COMMENT` statement.
 
 check
 
-
-
 </td>
 <td valign="top">
 
 The check constraint expression.
-
-
 
 </td>
 </tr>
@@ -376,11 +329,11 @@ None
 -   The following variations in syntax both return all of the columns in the table Departments:
 
     ```
-    sp_iqcolumn Departments
+    sp_iqcolumn Departments;
     ```
 
     ```
-    call sp_iqcolumn (table_name='Departments')
+    call sp_iqcolumn (table_name='Departments');
     ```
 
     ```
@@ -398,7 +351,7 @@ None
 -   The following variation in syntax returns all of the columns in all of the tables owned by table owner DBA:
 
     ```
-    sp_iqcolumn table_owner='DBA'
+    sp_iqcolumn table_owner='DBA';
     ```
 
 

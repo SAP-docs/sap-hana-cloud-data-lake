@@ -6,10 +6,13 @@ Each row in the SYSCOLUMNS view describes one column of each table and view in t
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be74eee6c5f1014a3def3d1f8953400__section_bg3_c2q_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -27,11 +30,11 @@ ALTER VIEW "SYS"."SYSCOLUMNS"( creator,cname,tname,coltype,nulls,length,
       join SYS.ISYSTAB as tab on(tab.table_id = col.table_id)
       join SYS.ISYSDOMAIN as dom on(dom.domain_id = col.domain_id)
       join SYS.ISYSUSER as u on u.user_id = tab.creator
-      left outer join SYS.ISYSREMARK as rmk on(col.object_id = rmk.object_id)
+      left outer join SYS.ISYSREMARK as rmk on(col.object_id = rmk.object_id);
 ```
 
 **Related Information**  
 
 
-[SYSCOLUMNS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/f263dc28f1b949218ef7ba6c4b0f82dc.html "Each row in the SYSCOLUMNS view describes one column of each table and view in the catalog.") :arrow_upper_right:
+[SYSCOLUMNS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/f263dc28f1b949218ef7ba6c4b0f82dc.html "Each row in the SYSCOLUMNS view describes one column of each table and view in the catalog.") :arrow_upper_right:
 

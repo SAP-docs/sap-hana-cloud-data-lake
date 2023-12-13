@@ -6,16 +6,19 @@ Estimates the number and size of dbspaces needed for a given total index size.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5a65d4e84f21015a001ad34c7f759fe__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 sp_iqestdbspaces ( <db_size_in_bytes>, <iq_page_size>,
-<min_#_of_bytes>, <max_#_of_bytes> )
+<min_#_of_bytes>, <max_#_of_bytes> );
 ```
 
 
@@ -106,12 +109,12 @@ None
 
 <a name="loioa5a65d4e84f21015a001ad34c7f759fe__section_yh2_12f_nbb"/>
 
-## Example
+## Examples
 
 This following example estimates the size and number of dbspace segments needed for a 12 GB database:
 
 ```
-sp_iqestdbspaces 12000000000, 65536, 500000000, 2146304000
+sp_iqestdbspaces 12000000000, 65536, 500000000, 2146304000;
 ```
 
 
@@ -121,28 +124,20 @@ sp_iqestdbspaces 12000000000, 65536, 500000000, 2146304000
 
 dbspace files
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Type
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
             Size
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Msg
-
-
 
 </th>
 </tr>
@@ -151,21 +146,15 @@ Msg
 
                  1
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 min
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2146304000
-
-
 
 </td>
 <td valign="top" rowspan="1">
@@ -179,21 +168,15 @@ min
 
                  2
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 min
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2146304000
-
-
 
 </td>
 <td valign="top" rowspan="1">
@@ -207,21 +190,15 @@ min
 
                  3
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 min
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
   507392000
-
-
 
 </td>
 <td valign="top" rowspan="1">
@@ -235,21 +212,15 @@ min
 
                  4
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 avg
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2146304000
-
-
 
 </td>
 <td valign="top" rowspan="1">
@@ -263,21 +234,15 @@ avg
 
                  5
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 max
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2053697536
-
-
 
 </td>
 <td valign="top" rowspan="1">
@@ -291,21 +256,15 @@ max
 
                  6
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 spare
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 1200001024
-
-
 
 </td>
 <td valign="top" rowspan="1">

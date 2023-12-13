@@ -6,8 +6,11 @@ Specifies the trust relationship for outbound Transport Layer Security \(TLS\) c
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa3de3db284f2101596c9ceaf73ee5aaa__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

@@ -6,10 +6,13 @@ Replaces an existing procedure with a modified version. Include the entire modif
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa612e25a84f210158dbcdec111da3e96__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ ALTER PROCEDURE [ { <owner> | <schema-name> }.]<procedure-name>
    { <procedure-definition>
    | REPLICATE { ON | OFF }
    | SET HIDDEN
-   | RECOMPILE }
+   | RECOMPILE };
 ```
 
 
@@ -149,9 +152,9 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [CREATE PROCEDURE Statement for Data Lake Relational Engine](create-procedure-statement-for-data-lake-relational-engine-a6185b2.md "Creates a new user-defined SQL procedure in the database.")
 
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
-
-[ALTER PROCEDURE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/96adbf340029431f89eac847e1068eac.html "Replaces an existing procedure with a modified version. Include the entire modified procedure in the ALTER PROCEDURE statement, and reassign user permissions on the procedure.") :arrow_upper_right:
+[DROP PROCEDURE Statement for Data Lake Relational Engine](drop-procedure-statement-for-data-lake-relational-engine-bf9d790.md "Removes a user-defined procedure from the database.")
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
+
+[ALTER PROCEDURE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/96adbf340029431f89eac847e1068eac.html "Replaces an existing procedure with a modified version. Include the entire modified procedure in the ALTER PROCEDURE statement, and reassign user permissions on the procedure.") :arrow_upper_right:
 

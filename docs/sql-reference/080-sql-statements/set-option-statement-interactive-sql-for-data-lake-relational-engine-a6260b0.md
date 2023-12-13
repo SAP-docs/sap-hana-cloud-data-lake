@@ -6,10 +6,13 @@ Changes Interactive SQL \(`dbisql`\) options.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6260b0f84f21015a64f8842c769c30f__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -24,7 +27,7 @@ Syntax 1
 
 ```
 SET [ TEMPORARY ] OPTION
-   … [ { <userid> | PUBLIC }.]<option-name> = [ <option-value> ]
+   … [ { <userid> | PUBLIC }.]<option-name> = [ <option-value> ];
 ```
 
 
@@ -37,7 +40,7 @@ Syntax 2
 <dd>
 
 ```
-SET PERMANENT
+SET PERMANENT;
 ```
 
 
@@ -50,7 +53,7 @@ Syntax 3
 <dd>
 
 ```
-SET
+SET;
 ```
 
 
@@ -100,5 +103,5 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[Database Options in Data Lake Relational Engine](../090-database-options/database-options-in-data-lake-relational-engine-a629349.md "Database options and Interactive SQL options customize and modify database behavior.")
+[Database Options in Data Lake Relational Engine](../090-database-options/database-options-in-data-lake-relational-engine-a629349.md "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.")
 

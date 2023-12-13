@@ -6,18 +6,17 @@ Groups `CREATE INDEX` statements together for execution at the same time.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
 
 
 
 ```
 ... BEGIN PARALLEL IQ <statement-list>
-... END PARALLEL IQ
+... END PARALLEL IQ;
 ```
 
 
@@ -68,10 +67,27 @@ The `BEGIN PARALLEL IQ … END PARALLEL IQ` statement lets you execute a group o
 
 ### 
 
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
+
+
+</dd>
+</dl>
 
 
 
@@ -109,9 +125,9 @@ END PARALLEL IQ
 **Related Information**  
 
 
-[Concurrent Column Indexing](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_1_QRC/en-US/a7233eb384f21015a814a783690486c0.html "In some cases, you can create more than one column index simultaneously.") :arrow_upper_right:
+[Concurrent Column Indexing](https://help.sap.com/viewer/73fdfc5f80f6433681c19b2b5a2cda6b/2023_4_QRC/en-US/a7233eb384f21015a814a783690486c0.html "In some cases, you can create more than one column index simultaneously.") :arrow_upper_right:
 
 [CREATE INDEX Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-index-statement-for-data-lake-relational-engine-sap-hana-db-managed-afc9ba6.md "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.")
 
-[BEGIN PARALLEL IQ … END PARALLEL IQ Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a614601884f21015b474d353173fad17.html "Groups CREATE INDEX statements together for execution at the same time.") :arrow_upper_right:
+[BEGIN PARALLEL IQ … END PARALLEL IQ Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a614601884f21015b474d353173fad17.html "Groups CREATE INDEX statements together for execution at the same time.") :arrow_upper_right:
 

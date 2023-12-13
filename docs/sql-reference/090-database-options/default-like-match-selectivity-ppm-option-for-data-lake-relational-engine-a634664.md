@@ -6,8 +6,11 @@ Provides default selectivity estimates \(in parts per million\) to the optimizer
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa634664c84f2101583ecdbfe31ed14ef__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

@@ -8,7 +8,7 @@ Returns the position of one string within another.
 
 ```
 LOCATE ( <string-expression1>, <string-expression2>
-[ , <numeric-expression> ] )
+[ , <numeric-expression> ] );
 ```
 
 
@@ -65,7 +65,7 @@ If *<numeric-expression\>* is not specified, LOCATE returns only the position of
 
 <a name="loioa55fae8484f2101591b6b7d46dca7cc4__LOCATE_returns1"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -104,7 +104,7 @@ If arguments *<string-expression-1\>* and *<string-expression-2\>* are of binary
 -   The following statement returns the value 8:
 
     ```
-    SELECT LOCATE( 'office party this week – rsvp as soon as possible', 'party', 2 ) FROM iq_dummy
+    SELECT LOCATE( 'office party this week – rsvp as soon as possible', 'party', 2 ) FROM iq_dummy;
     ```
 
 -   In the second example, the *<numeric-expression\>* starting offset for the search is a negative number:
@@ -133,5 +133,5 @@ If arguments *<string-expression-1\>* and *<string-expression-2\>* are of binary
 
 [PATINDEX Function \[String\] for Data Lake Relational Engine](patindex-function-string-for-data-lake-relational-engine-a56c8f8.md "Returns the starting position of the first occurrence of a specified pattern.")
 
-[LOCATE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ea53f0bcd5e34cc8a53d2c6ea32d5b5c.html "Returns the position of one string within another.") :arrow_upper_right:
+[LOCATE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ea53f0bcd5e34cc8a53d2c6ea32d5b5c.html "Returns the position of one string within another.") :arrow_upper_right:
 

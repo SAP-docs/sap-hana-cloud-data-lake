@@ -6,16 +6,12 @@ Presents group information from `ISYSIQTABCOL` in a readable format. Each row in
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system view can be used when connected as follows:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Viewing System Views](remote-execute-usage-examples-for-viewing-system-views-8b235c7.md).
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE\_QUERY procedure.
-> 
->     -   See [REMOTE\_EXECUTE\_QUERY Usage Examples for Viewing System Views](remote-execute-query-usage-examples-for-viewing-system-views-ada51c0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system view can be used when connected as follows:
+
+-   Connected to SAP HANA database as a SAP HANA database user, and using SAP HANA database REMOTE\_EXECUTE\_QUERY.
+
 
 
 
@@ -29,21 +25,15 @@ Presents group information from `ISYSIQTABCOL` in a readable format. Each row in
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Column Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -52,21 +42,15 @@ Description
 
 link\_table\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For internal use.
-
-
 
 </td>
 </tr>
@@ -75,21 +59,15 @@ For internal use.
 
 link\_column\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For internal use.
-
-
 
 </td>
 </tr>
@@ -98,21 +76,15 @@ For internal use.
 
 max\_length
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Indicates the maximum length allowed by the column.
-
-
 
 </td>
 </tr>
@@ -121,21 +93,15 @@ Indicates the maximum length allowed by the column.
 
 approx\_unique\_count
 
-
-
 </td>
 <td valign="top">
 
 ROWID
 
-
-
 </td>
 <td valign="top">
 
 Approximate number of unique values \(cardinality\) of this column.
-
-
 
 </td>
 </tr>
@@ -144,21 +110,15 @@ Approximate number of unique values \(cardinality\) of this column.
 
 cardinality
 
-
-
 </td>
 <td valign="top">
 
 ROWID
 
-
-
 </td>
 <td valign="top">
 
 The actual number of unique values \(cardinality\) of this column.
-
-
 
 </td>
 </tr>
@@ -167,21 +127,15 @@ The actual number of unique values \(cardinality\) of this column.
 
 has\_data
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates that the column contains data \(T/F\).
-
-
 
 </td>
 </tr>
@@ -190,21 +144,15 @@ Indicates that the column contains data \(T/F\).
 
 is\_nbit
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates whether the column is NBit \(T\) or Flat FP \(F\).
-
-
 
 </td>
 </tr>
@@ -218,7 +166,7 @@ Indicates whether the column is NBit \(T\) or Flat FP \(F\).
 
 ```
 ALTER VIEW "SYS"."SYSIQTABCOL"
-                    as select * from SYS.ISYSIQTABCOL
+                    as select * from SYS.ISYSIQTABCOL;
 ```
 
 
@@ -228,11 +176,21 @@ ALTER VIEW "SYS"."SYSIQTABCOL"
 ## Constraints on Underlying System Table
 
 ```
-Primary key (table_id)
+Primary key (table_id);
 ```
+
+
+
+<a name="loio8387df93bb6c4a87acd9138dbaa18ba9__section_gj1_wy1_4yb"/>
+
+## Privileges
+
+To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE privilege on the remote source <hana\_relational\_container\_schema\>\_SOURCE.
+
+-   See [REMOTE\_EXECUTE\_QUERY Usage Examples for Viewing System Views](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/a898e08b84f21015969fa437e89860c8/ada51c0074354a5f99b60c14cffb653c.html).
 
 **Related Information**  
 
 
-[SYSIQTABCOL System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a5d1bd5684f2101581e2c9c8b4c4669b.html "Presents group information from ISYSIQTABCOL in a readable format. Each row in the SYSIQTABCOL view describes a column in an IQ table.") :arrow_upper_right:
+[SYSIQTABCOL System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5d1bd5684f2101581e2c9c8b4c4669b.html "Presents group information from ISYSIQTABCOL in a readable format. Each row in the SYSIQTABCOL view describes a column in an IQ table.") :arrow_upper_right:
 

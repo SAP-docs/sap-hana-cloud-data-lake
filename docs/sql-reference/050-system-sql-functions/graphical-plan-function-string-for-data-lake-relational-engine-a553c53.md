@@ -10,7 +10,7 @@ Returns the graphical query plan to Interactive SQL in an XML format string.
 GRAPHICAL_PLAN ( <string-expression> 
 [, <statistics-level>
 [, <cursor-type>
-[, <update-status> ]]])
+[, <update-status> ]]]);
 ```
 
 
@@ -77,7 +77,7 @@ A string parameter accepting one of the following values indicating how the opti
 
 
 
-## Returns
+## Result Set
 
 LONG VARCHAR
 

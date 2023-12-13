@@ -6,8 +6,11 @@ Limits temporary store space used per connection.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loio713e6c2a4c594b22ae18a449e8ecd9dc__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

@@ -6,15 +6,18 @@ Changes the active database connection.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6257ba384f2101591acda39e1122d9f__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-SET CONNECTION [<connection-name>]
+SET CONNECTION [<connection-name>];
 ```
 
 
@@ -59,7 +62,7 @@ None
 The following example sets the current connection to the connection named "conn1" from `dbisql`:
 
 ```
-SET CONNECTION conn1
+SET CONNECTION conn1;
 ```
 
 **Related Information**  

@@ -7,14 +7,14 @@ Returns the current date. This is the historical syntax for `CURRENT DATE`.
 
 
 ```
-TODAY ( * )
+TODAY ( * );
 ```
 
 
 
 <a name="loioa58aae9284f21015a550a97595a91cc9__TODAY_returns1"/>
 
-## Returns
+## Result Set
 
 DATE
 
@@ -44,11 +44,11 @@ Each instance of the TODAY function in a request is evaluated at most once. Mult
 The following statement returns the current day according to the system clock:
 
 ```
-SELECT TODAY( * ) FROM iq_dummy
+SELECT TODAY( * ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[TODAY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/1f010045110b4fbfaebefa285ec75b87.html "Returns the current date. This is the historical syntax for CURRENT DATE.") :arrow_upper_right:
+[TODAY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/1f010045110b4fbfaebefa285ec75b87.html "Returns the current date. This is the historical syntax for CURRENT DATE.") :arrow_upper_right:
 

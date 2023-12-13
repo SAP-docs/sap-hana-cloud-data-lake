@@ -6,15 +6,18 @@ Closes any open result sets in Interactive SQL \(`dbisql`\).
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6154e4a84f2101588f6ff4601edb6d6__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-CLEAR
+CLEAR;
 ```
 
 

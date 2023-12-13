@@ -6,22 +6,25 @@ Displays information about primary keys and primary key constraints by table, co
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5b1c11384f210159aebaa53583740fc__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqpkeys { [ <table-name> ], [ <column-name> ], [ <table-owner> ] }
+sp_iqpkeys { [ <table-name> ], [ <column-name> ], [ <table-owner> ] };
 ```
 
 
 
 <a name="loioa5b1c11384f210159aebaa53583740fc__iq_refbb_1696"/>
 
-## Parameter
+## Parameters
 
 
 <dl>
@@ -65,7 +68,7 @@ sp_iqpkeys { [ <table-name> ], [ <column-name> ], [ <table-owner> ] }
 
 <a name="loioa5b1c11384f210159aebaa53583740fc__section_gkl_3t4_nbb"/>
 
-## Returns
+## Result Set
 
 The sp\_iqpkeys stored procedure displays the following information about primary keys on base and global temporary tables in a database:
 
@@ -76,14 +79,10 @@ The sp\_iqpkeys stored procedure displays the following information about primar
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -92,14 +91,10 @@ Description
 
 table\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the table.
-
-
 
 </td>
 </tr>
@@ -108,14 +103,10 @@ The name of the table.
 
 table\_owner
 
-
-
 </td>
 <td valign="top">
 
 The owner of the table.
-
-
 
 </td>
 </tr>
@@ -124,14 +115,10 @@ The owner of the table.
 
 column\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the column\(s\) on which the primary key is defined.
-
-
 
 </td>
 </tr>
@@ -140,14 +127,10 @@ The name of the column\(s\) on which the primary key is defined.
 
 column\_id
 
-
-
 </td>
 <td valign="top">
 
 The column ID.
-
-
 
 </td>
 </tr>
@@ -156,14 +139,10 @@ The column ID.
 
 constraint\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the primary key constraint.
-
-
 
 </td>
 </tr>
@@ -172,14 +151,10 @@ The name of the primary key constraint.
 
 constraint\_id
 
-
-
 </td>
 <td valign="top">
 
 The primary key constraint ID.
-
-
 
 </td>
 </tr>
@@ -200,14 +175,10 @@ One or more of the parameters can be specified. If you do not specify either of 
 
 Syntax
 
-
-
 </th>
 <th valign="top">
 
 Output
-
-
 
 </th>
 </tr>
@@ -216,14 +187,10 @@ Output
 
 sp\_iqpkeys sales
 
-
-
 </td>
 <td valign="top">
 
 Displays information about primary keys defined on table sales.
-
-
 
 </td>
 </tr>
@@ -232,14 +199,10 @@ Displays information about primary keys defined on table sales.
 
 sp\_iqpkeys sales, NULL, DBA
 
-
-
 </td>
 <td valign="top">
 
 Displays information about primary keys defined on table sales owned by DBA.
-
-
 
 </td>
 </tr>
@@ -248,14 +211,10 @@ Displays information about primary keys defined on table sales owned by DBA.
 
 sp\_iqpkeys sales, store\_id, DBA
 
-
-
 </td>
 <td valign="top">
 
 Displays information about primary key defined on column store\_id of table sales owned by DBA.
-
-
 
 </td>
 </tr>
@@ -264,14 +223,10 @@ Displays information about primary key defined on column store\_id of table sale
 
 sp\_iqpkeys NULL, NULL, DBA
 
-
-
 </td>
 <td valign="top">
 
 Displays information about primary keys defined on all tables owned by DBA.
-
-
 
 </td>
 </tr>
@@ -300,7 +255,7 @@ None
 -   The following example displays the primary keys defined on columns of table sales1:
 
     ```
-    sp_iqpkeys sales1
+    sp_iqpkeys sales1;
     
     table_name table_owner column_name column_id constraint_name constraint_id
     sales1         DBA        store_id     1         MA114           114
@@ -309,7 +264,7 @@ None
 -   The following example displays the primary keys defined on columns of table sales2:
 
     ```
-    sp_iqpkeys sales2
+    sp_iqpkeys sales2;
     
     table_name table_owner column_name column_id constraint_name constraint_id
     sales2         DBA      store_id,     1,2        MA115           115
@@ -319,7 +274,7 @@ None
 -   The following example displays the primary keys defined on the column store\_id of table sales2:
 
     ```
-    sp_iqpkeys sales2, store_id
+    sp_iqpkeys sales2, store_id;
     
     table_name table_owner column_name column_id constraint_name constraint_id
     sales2         DBA      store_id       1         MA115           115

@@ -6,8 +6,11 @@ Allows a user to override the decisions of the optimizer when transforming \(fla
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa658c06a84f210158cf7e178e9518c2f__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

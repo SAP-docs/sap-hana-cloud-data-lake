@@ -6,10 +6,13 @@ The SYSTYPEMAP system view contains the compatibility mapping values for entries
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3beae1036c5f1014bf17fc2cb4c22fed__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ The SYSTYPEMAP system view contains the compatibility mapping values for entries
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 ss\_user\_type
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 Contains the Adaptive Server Enterprise user type.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ Contains the Adaptive Server Enterprise user type.
 
 sa\_domain\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 Contains the corresponding data lake Relational Engine domain\_id.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ Contains the corresponding data lake Relational Engine domain\_id.
 
 sa\_user\_type
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 Contains the corresponding data lake Relational Engine user type.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ Contains the corresponding data lake Relational Engine user type.
 
 nullable
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Whether the type allows NULL values.
-
-
 
 </td>
 </tr>

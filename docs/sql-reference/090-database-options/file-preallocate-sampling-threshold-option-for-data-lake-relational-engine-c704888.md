@@ -6,8 +6,11 @@ Speeds up dbfile creation time if the underlying cloud storage is slow.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioc704888fb2bf47e99908498ed1d9f042__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

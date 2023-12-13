@@ -7,7 +7,7 @@ Replaces all occurrences of a substring with another substring.
 
 
 ```
-REPLACE ( <original-string>, <search-string>, <replace-string> )
+REPLACE ( <original-string>, <search-string>, <replace-string> );
 ```
 
 
@@ -60,7 +60,7 @@ The replacement string, which replaces *<search-string\>*. This can be any lengt
 
 <a name="loiob8f3ed4beb9645e98dee8a2c50011263__section_uqr_jd5_vrb"/>
 
-## Returns
+## Result Set
 
 -   LONG BINARY
 
@@ -126,7 +126,7 @@ SELECT a, CAST(REPLACE(a,'C','ZZ') AS CHAR(5)) FROM aa;
 -   The following statement returns the value "xx.def.xx.ghi":
 
     ```
-    SELECT REPLACE( 'abc.def.abc.ghi', 'abc', 'xx' ) FROM iq_dummy
+    SELECT REPLACE( 'abc.def.abc.ghi', 'abc', 'xx' ) FROM iq_dummy;
     ```
 
 -   The following statement generates a result set containing `ALTER PROCEDURE` statements, which when executed, repair stored procedures that reference a table that has been renamed \(to be useful, the table name must be unique\):
@@ -137,7 +137,7 @@ SELECT a, CAST(REPLACE(a,'C','ZZ') AS CHAR(5)) FROM aa;
       'create procedure',
       'alter procedure')
     FROM SYS.SYSPROCEDURE
-    WHERE proc_defn LIKE '%OldTableName%'
+    WHERE proc_defn LIKE '%OldTableName%';
     ```
 
 -   Use a separator other than the comma for the `LIST` function:
@@ -145,12 +145,12 @@ SELECT a, CAST(REPLACE(a,'C','ZZ') AS CHAR(5)) FROM aa;
     ```
     SELECT REPLACE( list( table_id ), ',', '--')
     FROM  SYS.ISYSTAB
-    WHERE table_id <= 5
+    WHERE table_id <= 5;
     ```
 
 
 **Related Information**  
 
 
-[REPLACE Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a579952184f210159e17940c17a6d8f7.html "Replaces all occurrences of a substring with another substring.") :arrow_upper_right:
+[REPLACE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a579952184f210159e17940c17a6d8f7.html "Replaces all occurrences of a substring with another substring.") :arrow_upper_right:
 

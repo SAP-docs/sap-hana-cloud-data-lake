@@ -6,16 +6,27 @@ Returns the list of statements in use by the current connection.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio2bfcb827a1234d0381e210cf6bd52c93__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_list_statements( )
+sa_list_statements( );
 ```
+
+
+
+<a name="loio2bfcb827a1234d0381e210cf6bd52c93__section_z4b_pbg_zyb"/>
+
+## Parameters
+
+None
 
 
 
@@ -28,21 +39,15 @@ sa_list_statements( )
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -51,21 +56,15 @@ Description
 
 handle
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INTEGER
 
-
-
 </td>
 <td valign="top">
 
 A unique handle identifying the statement.
-
-
 
 </td>
 </tr>
@@ -74,21 +73,15 @@ A unique handle identifying the statement.
 
 statement\_number
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -97,21 +90,15 @@ INTEGER
 
 num\_client\_prepares
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The number of times the client has prepared the identical statement text.The number of the statement within the connection.
-
-
 
 </td>
 </tr>
@@ -120,21 +107,15 @@ The number of times the client has prepared the identical statement text.The num
 
 num\_opens
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The number of times the statement has been opened.
-
-
 
 </td>
 </tr>
@@ -143,21 +124,15 @@ The number of times the statement has been opened.
 
 schema\_version\_on\_create
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INTEGER
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>
@@ -166,21 +141,15 @@ For internal use only.
 
 dropped\_by\_app
 
-
-
 </td>
 <td valign="top">
 
 BIT
 
-
-
 </td>
 <td valign="top">
 
 The number of the statement within theIf the statement has been dropped by the client but retained for caching the value is 1; otherwise, the value is 0.
-
-
 
 </td>
 </tr>
@@ -189,21 +158,15 @@ The number of the statement within theIf the statement has been dropped by the c
 
 invalid\_cached\_statement
 
-
-
 </td>
 <td valign="top">
 
 BIT
 
-
-
 </td>
 <td valign="top">
 
 If this is a cached statement that is no longer valid \(for example, due to schema changes\) the value is 1; otherwise the value is 0.
-
-
 
 </td>
 </tr>
@@ -212,21 +175,15 @@ If this is a cached statement that is no longer valid \(for example, due to sche
 
 SQLStatement
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The text of the statement.
-
-
 
 </td>
 </tr>
@@ -254,13 +211,206 @@ None
 
 
 
-The following example returns the list of statements for the connection:
+## Examples
+
+This example uses the sa\_list\_statements system procedure to return the list of statements for the connection:
 
 ```
 CALL sa_list_statements();
 ```
 
-The following example returns the list of statements that contribute to the max\_statement\_count resource governor:
+
+<table>
+<tr>
+<th valign="top">
+
+handle
+
+</th>
+<th valign="top">
+
+statement\_number
+
+</th>
+<th valign="top">
+
+num\_client\_prepares
+
+</th>
+<th valign="top">
+
+num\_opens
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+196723
+
+</td>
+<td valign="top">
+
+3
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+131098
+
+</td>
+<td valign="top">
+
+2
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+65552
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="4">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+schema\_version\_on\_create
+
+</th>
+<th valign="top">
+
+dropped\_by\_app
+
+</th>
+<th valign="top">
+
+invalid\_cached\_statement
+
+</th>
+<th valign="top">
+
+SQLStatement
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+1629
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+call sa\_list\_statements\(\)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1568
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+call sa\_ansi\_standard\_packages\('SQL:2003' 'SELECT \* \\x0D\\x0A FROM t1'\)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1552
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+call sp\_iqsysmon\('00:00:10'\)
+
+</td>
+</tr>
+</table>
+
+This example returns the list of statements that contribute to the max\_statement\_count resource governor:
 
 ```
 SELECT *

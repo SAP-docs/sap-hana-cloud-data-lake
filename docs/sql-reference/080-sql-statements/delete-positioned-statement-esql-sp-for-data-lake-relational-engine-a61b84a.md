@@ -6,16 +6,19 @@ Deletes the data at the current location of a cursor.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61b84ab84f21015a60dd050d25ceb67__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 DELETE [ FROM [ <owner>.]<correlation-name> ]
-   WHERE CURRENT OF { <identifier> | <hostvar> }
+   WHERE CURRENT OF { <identifier> | <hostvar> };
 ```
 
 
@@ -93,7 +96,7 @@ See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](gra
 The following example removes the current row from the database:
 
 ```
-DELETE WHERE CURRENT OF cur_employee
+DELETE WHERE CURRENT OF cur_employee;
 ```
 
 **Related Information**  

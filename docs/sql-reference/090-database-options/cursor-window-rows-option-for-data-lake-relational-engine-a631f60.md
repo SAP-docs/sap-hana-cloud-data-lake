@@ -6,8 +6,11 @@ Defines the number of cursor rows to buffer.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa631f60784f21015a8978b86bc70d6ff__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

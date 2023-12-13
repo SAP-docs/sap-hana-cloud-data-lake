@@ -6,16 +6,12 @@ Privileges on tables and views are stored in the SYS.SYSTABLEPERM system view. E
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system view can be used when connected as follows:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Viewing System Views](remote-execute-usage-examples-for-viewing-system-views-8b235c7.md).
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE\_QUERY procedure.
-> 
->     -   See [REMOTE\_EXECUTE\_QUERY Usage Examples for Viewing System Views](remote-execute-query-usage-examples-for-viewing-system-views-ada51c0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system view can be used when connected as follows:
+
+-   Connected to SAP HANA database as a SAP HANA database user, and using SAP HANA database REMOTE\_EXECUTE\_QUERY.
+
 
 
 
@@ -26,21 +22,15 @@ Privileges on tables and views are stored in the SYS.SYSTABLEPERM system view. E
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -49,21 +39,15 @@ Description
 
 stable\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The table number of the table or view to which the privileges apply.
-
-
 
 </td>
 </tr>
@@ -72,21 +56,15 @@ The table number of the table or view to which the privileges apply.
 
 grantee
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The user number of the user ID receiving the privilege.
-
-
 
 </td>
 </tr>
@@ -95,21 +73,15 @@ The user number of the user ID receiving the privilege.
 
 grantor
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The user number of the user ID granting the privilege.
-
-
 
 </td>
 </tr>
@@ -118,14 +90,10 @@ The user number of the user ID granting the privilege.
 
 selectauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -145,14 +113,10 @@ Indicates the grantee's permissions on the SELECT privilege.
 
 insertauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -172,14 +136,10 @@ Indicates the grantee's permissions on the INSERT privilege.
 
 deleteauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -199,14 +159,10 @@ Indicates the grantee's permissions on the DELETE privilege.
 
 updateauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -226,21 +182,15 @@ Indicates the grantee's permissions on the UPDATE privilege.
 
 updatecols
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates whether UPDATE privileges have only been granted for some of the columns in the underlying table. If updatecols has the value Y, there’s one or more rows in the SYS.SYSCOLPERM system view granting update privileges for the columns.
-
-
 
 </td>
 </tr>
@@ -249,14 +199,10 @@ Indicates whether UPDATE privileges have only been granted for some of the colum
 
 alterauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -276,14 +222,10 @@ Indicates the grantee's permissions on the ALTER privilege.
 
 referenceauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -303,14 +245,10 @@ Indicates the grantee's permissions on the RERERENCES privilege.
 
 loadauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -330,14 +268,10 @@ Indicates the grantee's permissions on the LOAD privilege.
 
 truncateauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -357,21 +291,15 @@ Indicates the grantee's permissions on the TRUNCATE privilege.
 
 backuptableauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates whether BACKUP TABLE privileges have been granted. Possible values are Y, N, or G. See the following Remarks area for more information about what these values mean.
-
-
 
 </td>
 </tr>
@@ -380,21 +308,15 @@ Indicates whether BACKUP TABLE privileges have been granted. Possible values are
 
 restoretableauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates whether RESTORE TABLE privileges have been granted. Possible values are Y, N, or G. See the following Remarks area for more information about what these values mean.
-
-
 
 </td>
 </tr>
@@ -453,23 +375,33 @@ The grantee has been given this privilege and can grant the same privilege to an
 ## Constraints on Underlying System Table
 
 ```
-PRIMARY KEY (stable_id, grantee, grantor)
+PRIMARY KEY (stable_id, grantee, grantor);
 ```
 
 ```
-FOREIGN KEY (stable_id) REFERENCES SYS.ISYSTAB (table_id)
+FOREIGN KEY (stable_id) REFERENCES SYS.ISYSTAB (table_id);
 ```
 
 ```
-FOREIGN KEY (grantor) REFERENCES SYS.ISYSUSER (user_id)
+FOREIGN KEY (grantor) REFERENCES SYS.ISYSUSER (user_id);
 ```
 
 ```
-FOREIGN KEY (grantee) REFERENCES SYS.ISYSUSER (user_id)
+FOREIGN KEY (grantee) REFERENCES SYS.ISYSUSER (user_id);
 ```
+
+
+
+<a name="loio7808ea6465984320b56b55cebdb45ae1__section_gj1_wy1_4yb"/>
+
+## Privileges
+
+To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE privilege on the remote source <hana\_relational\_container\_schema\>\_SOURCE.
+
+-   See [REMOTE\_EXECUTE\_QUERY Usage Examples for Viewing System Views](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/a898e08b84f21015969fa437e89860c8/ada51c0074354a5f99b60c14cffb653c.html).
 
 **Related Information**  
 
 
-[SYSTABLEPERM System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/3beab25c6c5f1014b1f7d85f1fe9e90a.html "Privileges on tables and views are stored in the SYS.SYSTABLEPERM system view. Each row in this view corresponds to one table, one user ID granting the privilege (grantor) and one user ID granted the privilege (grantee).") :arrow_upper_right:
+[SYSTABLEPERM System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3beab25c6c5f1014b1f7d85f1fe9e90a.html "Privileges on tables and views are stored in the SYS.SYSTABLEPERM system view. Each row in this view corresponds to one table, one user ID granting the privilege (grantor) and one user ID granted the privilege (grantee).") :arrow_upper_right:
 

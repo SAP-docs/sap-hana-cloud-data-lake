@@ -7,7 +7,7 @@ Returns a substring of a string. The substring is determined using bytes, not ch
 
 
 ```
-BYTE_SUBSTR( <source_string> , <start_position> [ , <length> ] )
+BYTE_SUBSTR( <source_string> , <start_position> [ , <length> ] );
 ```
 
 
@@ -20,7 +20,7 @@ BYTE_SUBSTR( <source_string> , <start_position> [ , <length> ] )
 <dl>
 <dt><b>
 
- *<source\_string\>* 
+*<source\_string\>* 
 
 </b></dt>
 <dd>
@@ -31,7 +31,7 @@ The data from which the binary substring is taken.
 
 </dd><dt><b>
 
- *<start\_position\>* 
+*<start\_position\>* 
 
 </b></dt>
 <dd>
@@ -42,7 +42,7 @@ An integer expression indicating the start of the substring. A positive integer 
 
 </dd><dt><b>
 
- *<length\>* 
+*<length\>* 
 
 </b></dt>
 <dd>
@@ -58,7 +58,7 @@ An integer expression indicating the length of the substring. A positive *<lengt
 
 <a name="loioe7559cd08946434ba594a85bc232958e__section_fph_lcl_srb"/>
 
-## Returns
+## Result Set
 
 BINARY or LONG BINARY, depending on the length of the result.
 
@@ -76,6 +76,8 @@ The argument *<source\_string\>* can be any data type that can be converted to a
 
 
 
+## Example
+
 The following statement returns the binary value `0x54657374`, which is the hexadecimal representation of `Test`:
 
 ```
@@ -85,5 +87,5 @@ SELECT BYTE_SUBSTR( 'Test Message', 1, 4 );
 **Related Information**  
 
 
-[BYTE_SUBSTR Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/81f42f4e6ce21014ab50bd987169f496.html "Returns a substring of a string. The substring is determined using bytes, not characters.") :arrow_upper_right:
+[BYTE_SUBSTR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/81f42f4e6ce21014ab50bd987169f496.html "Returns a substring of a string. The substring is determined using bytes, not characters.") :arrow_upper_right:
 

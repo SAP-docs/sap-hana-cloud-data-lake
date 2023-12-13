@@ -17,7 +17,7 @@ Syntax 1: Windowed aggregate syntax
 
 ```
 FIRST_VALUE (<expression> [IGNORE NULLS | RESPECT NULLS])
-OVER (<window-spec>)
+OVER (<window-spec>);
 ```
 
 
@@ -31,7 +31,7 @@ Syntax 2: Simple aggregate syntax
 
 ```
 FIRST_VALUE (<input expression> [IGNORE NULLS | RESPECT NULLS] 
-ORDER BY <ordering expression>)
+ORDER BY <ordering expression>);
 ```
 
 
@@ -52,14 +52,10 @@ ORDER BY <ordering expression>)
 
 Parameter
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Description
-
-
 
 </th>
 </tr>
@@ -68,14 +64,10 @@ Description
 
 expression
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 The expression on which to determine the first value in an ordered set.
-
-
 
 </td>
 </tr>
@@ -84,14 +76,10 @@ The expression on which to determine the first value in an ordered set.
 
 input expression
 
-
-
 </td>
 <td valign="top">
 
 Any scalar expression that results to a single column.
-
-
 
 </td>
 </tr>
@@ -100,14 +88,10 @@ Any scalar expression that results to a single column.
 
 ordering expression
 
-
-
 </td>
 <td valign="top">
 
 List of column names.
-
-
 
 </td>
 </tr>
@@ -117,7 +101,7 @@ List of column names.
 
 <a name="loio9994e0a4b12c4073a74b5a37d5e25f2e__section_zf4_2rg_trb"/>
 
-## Returns
+## Result Set
 
 \(Syntax 1\) Data type of the values from the first row of a window.
 
@@ -176,367 +160,271 @@ You can specify elements of *<window-spec\>* either in the function syntax \(inl
     <th valign="top" rowspan="1">
 
     DepartmentID
-
-
     
     </th>
     <th valign="top" rowspan="1">
 
     EmployeeID
-
-
     
     </th>
     <th valign="top" rowspan="1">
 
     Percentage
-
-
     
     </th>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        500
-
-
+    500
     
     </td>
     <td valign="top" rowspan="1">
     
-        1,658
-
-
+    1,658
     
     </td>
     <td valign="top" rowspan="1">
     
-        100.000000000000000000000
-
-
+    100.000000000000000000000
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        500
-
-
+    500
     
     </td>
     <td valign="top" rowspan="1">
     
-        1,570
-
-
+    1,570
     
     </td>
     <td valign="top" rowspan="1">
     
-        138.842709713689113761394
-
-
+    138.842709713689113761394
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        500
-
-
+    500
     
     </td>
     <td valign="top" rowspan="1">
     
-        1,615
-
-
+    1,615
     
     </td>
     <td valign="top" rowspan="1">
     
-        110.428462434244870095972
-
-
+    110.428462434244870095972
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        500
-
-
+    500
     
     </td>
     <td valign="top" rowspan="1">
     
-        1,013
-
-
+    1,013
     
     </td>
     <td valign="top" rowspan="1">
     
-        109.585190539292454724330
-
-
+    109.585190539292454724330
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        500
-
-
+    500
     
     </td>
     <td valign="top" rowspan="1">
     
-        750
-
-
+    750
     
     </td>
     <td valign="top" rowspan="1">
     
-        137.734409508894510701521
-
-
+    137.734409508894510701521
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        500
-
-
+    500
     
     </td>
     <td valign="top" rowspan="1">
     
-        921
-
-
+    921
     
     </td>
     <td valign="top" rowspan="1">
     
-        167.449704854836766654619
-
-
+    167.449704854836766654619
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        500
-
-
+    500
     
     </td>
     <td valign="top" rowspan="1">
     
-        868
-
-
+    868
     
     </td>
     <td valign="top" rowspan="1">
     
-        113.239368750752921334778
-
-
+    113.239368750752921334778
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        500
-
-
+    500
     
     </td>
     <td valign="top" rowspan="1">
     
-        703
-
-
+    703
     
     </td>
     <td valign="top" rowspan="1">
     
-        222.867927558928643135365
-
-
+    222.867927558928643135365
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        500
-
-
+    500
     
     </td>
     <td valign="top" rowspan="1">
     
-        191
-
-
+    191
     
     </td>
     <td valign="top" rowspan="1">
     
-        119.664297474199895594908
-
-
+    119.664297474199895594908
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        400
-
-
+    400
     
     </td>
     <td valign="top" rowspan="1">
     
-        1,684
-
-
+    1,684
     
     </td>
     <td valign="top" rowspan="1">
     
-        100.000000000000000000000
-
-
+    100.000000000000000000000
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        400
-
-
+    400
     
     </td>
     <td valign="top" rowspan="1">
     
-        1,740
-
-
+    1,740
     
     </td>
     <td valign="top" rowspan="1">
     
-        76.128652163477274215016
-
-
+    76.128652163477274215016
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        400
-
-
+    400
     
     </td>
     <td valign="top" rowspan="1">
     
-        1,751
-
-
+    1,751
     
     </td>
     <td valign="top" rowspan="1">
     
-        76.353400685155687446813
-
-
+    76.353400685155687446813
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        400
-
-
+    400
     
     </td>
     <td valign="top" rowspan="1">
     
-        1,607
-
-
+    1,607
     
     </td>
     <td valign="top" rowspan="1">
     
-        133.758100765890593292456
-
-
+    133.758100765890593292456
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        400
-
-
+    400
     
     </td>
     <td valign="top" rowspan="1">
     
-        1,507
-
-
+    1,507
     
     </td>
     <td valign="top" rowspan="1">
     
-        77.996465120338650199655
-
-
+    77.996465120338650199655
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        400
-
-
+    400
     
     </td>
     <td valign="top" rowspan="1">
     
-        1,576
-
-
+    1,576
     
     </td>
     <td valign="top" rowspan="1">
     
-        150.428767810774836893669
-
-
+    150.428767810774836893669
     
     </td>
     </tr>
@@ -558,5 +446,5 @@ You can specify elements of *<window-spec\>* either in the function syntax \(inl
 
 [WINDOW Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/window-clause-for-data-lake-relational-engine-sap-hana-db-managed-c83b61b.md "Defines all or part of a window for use with window functions such as AVG and RANK in a SELECT statement.")
 
-[FIRST_VALUE Function [Aggregate] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a5523f3c84f21015aa0092a61fcc2714.html "Returns the first value from a set of values.") :arrow_upper_right:
+[FIRST_VALUE Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5523f3c84f21015aa0092a61fcc2714.html "Returns the first value from a set of values.") :arrow_upper_right:
 

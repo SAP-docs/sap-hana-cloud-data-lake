@@ -6,15 +6,18 @@ Drops a user-defined trace event.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio816f81ae6ce210149309e843cf27de9d__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-DROP TRACE EVENT [ IF EXISTS ] <trace-event-name>
+DROP TRACE EVENT [ IF EXISTS ] <trace-event-name>;
 ```
 
 
@@ -72,6 +75,8 @@ Not in the standard.
 
 
 
+## Example
+
 Drop the trace event named my\_event:
 
 ```
@@ -83,7 +88,7 @@ DROP TRACE EVENT my_event;
 
 [CREATE TEMPORARY TRACE EVENT Statement for Data Lake Relational Engine](create-temporary-trace-event-statement-for-data-lake-relational-engine-816cfdb.md "Creates a user trace event that persists until the database is stopped.")
 
-[DROP TRACE EVENT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/63579584baca4c78a6b2f830a2dfcc36.html "Drops a user-defined trace event.") :arrow_upper_right:
+[DROP TRACE EVENT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/63579584baca4c78a6b2f830a2dfcc36.html "Drops a user-defined trace event.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

@@ -16,7 +16,7 @@ Syntax 1
 <dd>
 
 ```
-REGR_AVGY( <dependent-expression>, <independent-expression> )
+REGR_AVGY( <dependent-expression>, <independent-expression> );
 ```
 
 
@@ -30,7 +30,7 @@ Syntax 2
 
 ```
 REGR_AVGY( <dependent-expression>, <independent-expression> )
-OVER ( <window-spec> )
+OVER ( <window-spec> );
 ```
 
 
@@ -86,7 +86,7 @@ Specified when using this function as a window function.
 
 <a name="loioa574426e84f210159d5d8adecd1f70f2__REGR_AVGY_returns1"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -101,7 +101,7 @@ This function converts its arguments to DOUBLE, performs the computation in doub
 The function is applied to the set of \(*<dependent-expression\>* and *<dependent-expression\>*\) pairs after eliminating all pairs for which either *<dependent-expression\>* or *<dependent-expression\>* is NULL. The function is computed simultaneously during a single pass through the data. After eliminating NULL values, the following computation is then made, where *<y\>* represents the *<dependent-expression\>*:
 
 ```
-AVG(y)
+AVG(y);
 ```
 
 > ### Note:  
@@ -135,5 +135,5 @@ This function returns the value 49988.6232.
 **Related Information**  
 
 
-[REGR_AVGY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/a54d2f0bde2f44d6bb973767b6fc47f4.html "Computes the average of the dependent variable of the regression line.") :arrow_upper_right:
+[REGR_AVGY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/a54d2f0bde2f44d6bb973767b6fc47f4.html "Computes the average of the dependent variable of the regression line.") :arrow_upper_right:
 

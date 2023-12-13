@@ -13,22 +13,16 @@ The AND operator compares 2 bits. If they are both 1, then the result is 1.
 
 Bit 1
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Bit 2
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
 Bit 1 & Bit 2
 
-
-
 </th>
 </tr>
 <tr>
@@ -36,21 +30,15 @@ Bit 1 & Bit 2
 
 0
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 0
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 0
-
-
 
 </td>
 </tr>
@@ -59,21 +47,15 @@ Bit 1 & Bit 2
 
 0
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 1
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 0
-
-
 
 </td>
 </tr>
@@ -82,21 +64,15 @@ Bit 1 & Bit 2
 
 1
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 0
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 0
-
-
 
 </td>
 </tr>
@@ -105,21 +81,15 @@ Bit 1 & Bit 2
 
 1
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 1
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 1
-
-
 
 </td>
 </tr>

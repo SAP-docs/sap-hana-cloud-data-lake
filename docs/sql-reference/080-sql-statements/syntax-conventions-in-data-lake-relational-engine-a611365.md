@@ -49,7 +49,7 @@ Optional portions
 Optional portions of a statement are enclosed by square brackets. For example:
 
 ```
-RELEASE SAVEPOINT [ savepoint-name ]
+RELEASE SAVEPOINT [ savepoint-name ];
 ```
 
 This example indicates that the *<savepoint-name\>* is optional. Do not type the square brackets.
@@ -66,7 +66,7 @@ Repeating items
 Lists of repeating items are shown with an element of the list followed by an ellipsis. One or more list elements are allowed. When more than one is specified, they must be separated by commas if indicated as such. For example:
 
 ```
-UNIQUE ( column-name [ , ... ] )
+UNIQUE ( column-name [ , ... ] );
 ```
 
 The example indicates that you can specify *<column-name\>* more than once, separated by commas. Do not type the square brackets.
@@ -88,7 +88,7 @@ Alternatives
 When one option must be chosen, the alternatives are enclosed in curly braces. For example:
 
 ```
-[ QUOTES { ON | OFF } ] 
+[ QUOTES { ON | OFF } ]; 
 ```
 
 The example indicates that if you choose the QUOTES option, you must provide one of ON or OFF. Do not type the braces.
@@ -105,7 +105,7 @@ One or more options
 If you choose more than one, separate your choices by commas. For example:
 
 ```
-{ CONNECT, DBA, RESOURCE }
+{ CONNECT, DBA, RESOURCE };
 ```
 
 

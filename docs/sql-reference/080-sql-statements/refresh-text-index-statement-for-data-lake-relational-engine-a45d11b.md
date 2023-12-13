@@ -6,10 +6,13 @@ Refreshes a text index.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa45d11b684f210159fffb17b6e829901__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ REFRESH TEXT INDEX <text-index-name> ON [ { <owner> | <schema-name> }.]<table-na
    [ WITH { ISOLATION LEVEL <isolation-level> 
           | EXCLUSIVE MODE 
           | SHARE MODE } ]
-   [ FORCE { BUILD | INCREMENTAL } ]
+   [ FORCE { BUILD | INCREMENTAL } ];
 ```
 
 

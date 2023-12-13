@@ -6,10 +6,13 @@ Presents a readable version of the table `ISYSIQMPXSERVER`. The ISYSIQMPXSERVER 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa4d9bcb384f210159b78b33d0561fa5c__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Presents a readable version of the table `ISYSIQMPXSERVER`. The ISYSIQMPXSERVER 
 
 Column Name
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Column Type
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 server\_id
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNSIGNED INT NOT NULL
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 The ID number of the server.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The ID number of the server.
 
 server\_name
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 CHAR\(128\) NOT NULL
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 The server name; case-insensitive unique.
-
-
 
 </td>
 </tr>
@@ -89,14 +74,10 @@ The server name; case-insensitive unique.
 
 role
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 TINYINT NOT NULL
-
-
 
 </td>
 <td valign="top" rowspan="1">
@@ -114,14 +95,10 @@ TINYINT NOT NULL
 
 status
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 TINYINT NOT NULL
-
-
 
 </td>
 <td valign="top" rowspan="1">
@@ -138,21 +115,15 @@ TINYINT NOT NULL
 
 current\_version
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNSIGNED BIGINT NULL
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Current version ID of the server.
-
-
 
 </td>
 </tr>
@@ -161,21 +132,15 @@ Current version ID of the server.
 
 active\_version
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 LONG BINARY NULL
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 The list of active versions on the server \(encoded\).
-
-
 
 </td>
 </tr>
@@ -184,21 +149,15 @@ The list of active versions on the server \(encoded\).
 
 connection\_info
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 LONG VARCHAR NULL
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 String containing host name and port pairs for public domain connections, delimited by semicolons.
-
-
 
 </td>
 </tr>
@@ -207,21 +166,15 @@ String containing host name and port pairs for public domain connections, delimi
 
 db\_path
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 LONG VARCHAR NOT NULL
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Full path to the database file for the server.
-
-
 
 </td>
 </tr>
@@ -230,21 +183,15 @@ Full path to the database file for the server.
 
 private\_connection\_info
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR NULL
 
-
-
 </td>
 <td valign="top">
 
 String containing host name and port pairs for private network connections, delimited by semicolons.
-
-
 
 </td>
 </tr>
@@ -257,6 +204,6 @@ String containing host name and port pairs for private network connections, deli
 ## Constraints on Underlying System Table
 
 ```
-Primary key(server_id)
+Primary key(server_id);
 ```
 

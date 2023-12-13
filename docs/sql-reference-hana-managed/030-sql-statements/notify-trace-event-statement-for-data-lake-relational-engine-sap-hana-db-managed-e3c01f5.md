@@ -6,15 +6,16 @@ Logs a user-defined trace event to a trace session.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user. It cannot be run using the REMOTE\_EXECUTE procedure.
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected directly to data lake Relational Engine **coordinator** as a data lake Relational Engine user. This syntax cannot be run using the REMOTE\_EXECUTE procedure.
 
 
 
 ```
-NOTIFY TRACE EVENT <trace-event-name> ( [ <param1> [ ,... ] ] )
+NOTIFY TRACE EVENT <trace-event-name> ( [ <param1> [ ,... ] ] );
 ```
 
 
@@ -32,7 +33,7 @@ NOTIFY TRACE EVENT <trace-event-name> ( [ <param1> [ ,... ] ] )
 <dl class="glossary">
 <dt><b>
 
- *<trace-event-name\>* 
+*<trace-event-name\>* 
 
 </b></dt>
 <dd>
@@ -43,7 +44,7 @@ The trace event name must be the name of a user-defined trace event. It cannot b
 
 </dd><dt><b>
 
- *<param1\>* 
+*<param1\>* 
 
 </b></dt>
 <dd>
@@ -103,6 +104,8 @@ Not in the standard.
 
 
 
+## Example
+
 The following statements log events to the current \(fictitious\) event trace session, my\_event.
 
 ```
@@ -114,5 +117,5 @@ NOTIFY TRACE EVENT my_event( 3, 'Hello world 3' );
 **Related Information**  
 
 
-[NOTIFY TRACE EVENT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/8171e4fe6ce21014b5a9e34baa895aac.html "Logs a user-defined trace event to a trace session.") :arrow_upper_right:
+[NOTIFY TRACE EVENT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/8171e4fe6ce21014b5a9e34baa895aac.html "Logs a user-defined trace event to a trace session.") :arrow_upper_right:
 

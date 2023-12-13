@@ -8,7 +8,7 @@ Returns the value of the given property.
 
 ```
 DB_PROPERTY ( { <property-id> | <property-name> }
-[ , { <database-id> | <database-name> } ] )
+[ , { <database-id> | <database-name> } ] );
 ```
 
 
@@ -68,7 +68,7 @@ The name of the database, as returned by DB\_NAME.
 
 
 
-## Returns
+## Result Set
 
 VARCHAR
 
@@ -100,7 +100,7 @@ Returns a string. The current database is used if the second argument is omitted
 The following statement returns the page size of the current database, in bytes:
 
 ```
-SELECT DB_PROPERTY( 'PAGESIZE' ) FROM iq_dummy
+SELECT DB_PROPERTY( 'PAGESIZE' ) FROM iq_dummy;
 ```
 
 **Related Information**  

@@ -6,10 +6,13 @@ Extends the range of statements that can be executed from within procedures. It 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61dfe2b84f210159a53c67a84c3c01b__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -27,7 +30,7 @@ EXECUTE IMMEDIATE
    [ { WITH QUOTES { ON | OFF }
      | WITH ESCAPES { ON | OFF } 
      | WITH RESULT SET { ON | OFF } }
-   ] <string-expression>
+   ] <string-expression>;
 ```
 
 
@@ -40,7 +43,7 @@ Syntax 2
 <dd>
 
 ```
-EXECUTE ( <string-expression> )
+EXECUTE ( <string-expression> );
 ```
 
 
@@ -189,7 +192,7 @@ END;
 Call the procedure and create table `mytable`:
 
 ```
-CALL CreateTableProc( 'mytable' )
+CALL CreateTableProc( 'mytable' );
 ```
 
 **Related Information**  

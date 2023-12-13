@@ -6,15 +6,18 @@ Disables auditing of specific events.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be5a6b16c5f1014ac1ca96bb9a4ce15__section_rpg_3dw_f4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-dbo.sa_disable_auditing_type( <types> )
+sa_disable_auditing_type( <types> );
 ```
 
 
@@ -27,7 +30,7 @@ dbo.sa_disable_auditing_type( <types> )
 <dl>
 <dt><b>
 
- *<types\>* 
+*<types\>* 
 
 </b></dt>
 <dd>
@@ -145,17 +148,25 @@ disables auditing for xp\_cmdshell.
 
 
 
+<a name="loio3be5a6b16c5f1014ac1ca96bb9a4ce15__sa_disable_auditing_type_result1"/>
+
+## Result Set
+
+None
+
+
+
 <a name="loio3be5a6b16c5f1014ac1ca96bb9a4ce15__sa_disable_auditing_type_remarks1"/>
 
 ## Remarks
 
-Use dbo.sa\_disable\_auditing\_type to specify which types of auditing to exclude. This system procedure removes the specified events from the current set of audit events. Use dbo.sa\_enable\_auditing\_type to add events to the current set of audit events. These system procedures set the PUBLIC auditing\_options database option so the setting is permanent.
+Use sa\_disable\_auditing\_type to specify which types of auditing to exclude. This system procedure removes the specified events from the current set of audit events. Use sa\_enable\_auditing\_type to add events to the current set of audit events. These system procedures set the PUBLIC auditing\_options database option so the setting is permanent.
 
 Set the PUBLIC auditing database option to On or Off to enable or disable auditing.
 
-By default, all events are audited \(types='all'\). If you want a smaller set, use the dbo.sa\_disable\_auditing\_type system procedure to clear the events you aren’t interested in; or use the dbo.sa\_disable\_auditing\_type system procedure to clear all events and then use the dbo.sa\_enable\_auditing\_type system procedure to specify which types of auditing you want.
+By default, all events are audited \(types='all'\). If you want a smaller set, use the sa\_disable\_auditing\_type system procedure to clear the events you aren’t interested in; or use the sa\_disable\_auditing\_type system procedure to clear all events and then use the sa\_enable\_auditing\_type system procedure to specify which types of auditing you want.
 
-If the set of events is empty and you set the PUBLIC auditing database option to On, no auditing information is recorded. To re-establish auditing, you use the dbo.sa\_enable\_auditing\_type system procedure to specify which types of information you want to audit.
+If the set of events is empty and you set the PUBLIC auditing database option to On, no auditing information is recorded. To re-establish auditing, you use the sa\_enable\_auditing\_type system procedure to specify which types of information you want to audit.
 
 If you set the PUBLIC auditing database option to Off, then no auditing information is recorded.
 
@@ -175,6 +186,7 @@ Requires all of the following:
 
 -   EXECUTE object-level privilege on the procedure
 -   SET ANY CUSTOMER SECURITY OPTION system privilege
+-   MANAGE AUDITING system privilege
 
 
 
@@ -186,24 +198,28 @@ None
 
 
 
-The following example disables all auditing:
+<a name="loio3be5a6b16c5f1014ac1ca96bb9a4ce15__sa_disable_auditing_type_example1"/>
+
+## Examples
+
+This example uses the sa\_disable\_auditing\_type system procedure to disable all auditing:
 
 ```
-CALL dbo.sa_disable_auditing_type( 'all' );
+CALL sa_disable_auditing_type( 'all' );
 ```
 
-The following example enables only DDL and triggers auditing:
+This example enables only DDL and triggers auditing:
 
 ```
-CALL dbo.sa_disable_auditing_type( 'all' );
-CALL dbo.sa_enable_auditing_type( 'DDL,triggers' );
+CALL sa_disable_auditing_type( 'all' );
+CALL sa_enable_auditing_type( 'DDL,triggers' );
 ```
 
-The following example enables all auditing except for DDL and options auditing:
+This example enables all auditing except for DDL and options auditing:
 
 ```
-CALL dbo.sa_enable_auditing_type( 'all' );
-CALL dbo.sa_disable_auditing_type( 'DDL,options' );
+CALL sa_enable_auditing_type( 'all' );
+CALL sa_disable_auditing_type( 'DDL,options' );
 ```
 
 **Related Information**  
@@ -211,5 +227,5 @@ CALL dbo.sa_disable_auditing_type( 'DDL,options' );
 
 [sa\_enable\_auditing\_type System Procedure for Data Lake Relational Engine](sa-enable-auditing-type-system-procedure-for-data-lake-relational-engine-3be5b83.md "Specifies which events to include in auditing.")
 
-[sa_disable_auditing_type System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/fd63ea1f8fb64064aee60207c5efbecb.html "Disables auditing of specific events.") :arrow_upper_right:
+[sa_disable_auditing_type System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/fd63ea1f8fb64064aee60207c5efbecb.html "Disables auditing of specific events.") :arrow_upper_right:
 

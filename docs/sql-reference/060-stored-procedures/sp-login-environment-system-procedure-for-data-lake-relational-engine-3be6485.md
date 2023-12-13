@@ -6,16 +6,35 @@ Sets connection options when users log in.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be648506c5f1014a4bf98ee992b6027__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_login_environment( )
+sp_login_environment( );
 ```
+
+
+
+<a name="loio3be648506c5f1014a4bf98ee992b6027__section_ywx_nbj_yyb"/>
+
+## Parameters
+
+None
+
+
+
+<a name="loio3be648506c5f1014a4bf98ee992b6027__section_ppv_55v_xyb"/>
+
+## Result Set
+
+None
 
 
 

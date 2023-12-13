@@ -197,6 +197,8 @@ Extensions to the GROUP BY clause that aren’t in the standard include:
 
 
 
+## Example
+
 The following example returns a result set showing the total number of orders, and then provides subtotals for the number of orders in each year \(2000 and 2001\).
 
 ```

@@ -6,10 +6,13 @@ Each row in the SYSSYNCSCRIPTS view identifies a stored procedure for scripted u
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bea783d6c5f10148e15a1a78afbbffb__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -27,6 +30,6 @@ ALTER VIEW "SYS"."SYSSYNCSCRIPTS"
     from SYS.ISYSSYNCSCRIPT as s
       join SYS.ISYSPUBLICATION as p on p.object_id = s.pub_object_id
       join SYS.ISYSTAB as t on t.object_id = s.table_object_id
-      join SYS.ISYSPROCEDURE as c on c.object_id = s.proc_object_id
+      join SYS.ISYSPROCEDURE as c on c.object_id = s.proc_object_id;
 ```
 

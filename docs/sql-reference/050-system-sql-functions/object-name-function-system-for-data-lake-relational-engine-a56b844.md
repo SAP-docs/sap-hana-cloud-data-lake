@@ -7,7 +7,7 @@ Returns the object name.
 
 
 ```
-OBJECT_NAME ( <object-id> [ , <database-id> ] )
+OBJECT_NAME ( <object-id> [ , <database-id> ] );
 ```
 
 
@@ -61,7 +61,7 @@ The database ID.
 The following statement returns the name "customer":
 
 ```
-SELECT OBJECT_NAME ( 100209 ) FROM iq_dummy
+SELECT OBJECT_NAME ( 100209 ) FROM iq_dummy;
 ```
 
 **Related Information**  

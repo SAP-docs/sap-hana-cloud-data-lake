@@ -6,15 +6,18 @@ Releases the specified connection-scope mutex, if it is locked by the current co
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio8172a3926ce210148b4dcdf5a3f1c546__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-RELEASE MUTEX [ <owner>.]<mutex-name>
+RELEASE MUTEX [ <owner>.]<mutex-name>;
 
 ```
 
@@ -104,6 +107,8 @@ Not in the standard.
 </dl>
 
 
+
+## Example
 
 The following statement releases the protect\_my\_cr\_section mutex:
 

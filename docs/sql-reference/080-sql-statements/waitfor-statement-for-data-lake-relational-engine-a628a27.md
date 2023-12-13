@@ -6,17 +6,20 @@ Delays processing for the current connection for a specified amount of time or u
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa628a27784f210159b71d2c8007a65f9__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 WAITFOR { DELAY <time_value> | TIME <time_value> }
    [ CHECK EVERY <integer> }
-   [ AFTER MESSAGE BREAK ]
+   [ AFTER MESSAGE BREAK ];
 ```
 
 
@@ -103,7 +106,7 @@ If the current server time is greater than the time specified, processing is sus
 `WAITFOR` provides an alternative to the following statement, and might be useful for customers who choose not to enable Java in the database:
 
 ```
-call java.lang.Thread.sleep( <time_to_wait_in_millisecs> )
+call java.lang.Thread.sleep( <time_to_wait_in_millisecs> );
 ```
 
 In many cases, scheduled events are a better choice than using `WAITFOR TIME`, because scheduled events execute on their own connection.
@@ -142,19 +145,19 @@ The implementation of this statement uses a worker thread while it is waiting. T
 -   The following example waits for three seconds:
 
     ```
-    WAITFOR DELAY '00:00:03'
+    WAITFOR DELAY '00:00:03';
     ```
 
 -   The following example waits for 0.5 seconds \(500 milliseconds\):
 
     ```
-    WAITFOR DELAY '00:00:00:500'
+    WAITFOR DELAY '00:00:00:500';
     ```
 
 -   The following example waits until 8 p.m.:
 
     ```
-    WAITFOR TIME '20:00'
+    WAITFOR TIME '20:00';
     ```
 
 

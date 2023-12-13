@@ -7,7 +7,7 @@ Returns a number from 0 to 59 corresponding to the second component of the given
 
 
 ```
-SECOND ( <datetime-expression> )
+SECOND ( <datetime-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The date and time value.
 
 <a name="loioa57dc03b84f210158836c9258c67e700__SECOND_returns1"/>
 
-## Returns
+## Result Set
 
 SMALLINT
 
@@ -58,7 +58,7 @@ SMALLINT
 The following statement returns the value 5:
 
 ```
-SELECT SECOND( '1998-07-13 08:21:05' ) FROM iq_dummy
+SELECT SECOND( '1998-07-13 08:21:05' ) FROM iq_dummy;
 ```
 
 **Related Information**  
@@ -82,5 +82,5 @@ SELECT SECOND( '1998-07-13 08:21:05' ) FROM iq_dummy
 
 [YEARS Function \[Date and Time\] for Data Lake Relational Engine](years-function-date-and-time-for-data-lake-relational-engine-a5926bf.md "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.")
 
-[SECOND Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ff2ca422e5af48f58bd55ec839860dd4.html "Returns a number from 0 to 59 corresponding to the second component of the given date/time value.") :arrow_upper_right:
+[SECOND Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ff2ca422e5af48f58bd55ec839860dd4.html "Returns a number from 0 to 59 corresponding to the second component of the given date/time value.") :arrow_upper_right:
 

@@ -6,6 +6,13 @@ To display the information from the system view, you create a data lake Relation
 
 
 
+To use REMOTE\_EXECUTE requires one of the following:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+
+
 The system view SYSTAB returns information on tables and views in data lake Relational Engine. This example show how to display this information.
 
 Create a data lake Relational Engine view named VIEW\_SYSTAB that performs a SELECT query against the stem view.

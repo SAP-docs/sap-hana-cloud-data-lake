@@ -6,10 +6,13 @@ The SYSSYNCS view contains information relating to synchronization.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bea68736c5f1014a03ed8aa39cf1884__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -29,6 +32,6 @@ ALTER VIEW "SYS"."SYSSYNCS"
     "s"."extended_state"
     from "SYS"."SYSSYNC2" as "s"
       left outer join "SYS"."SYSPUBLICATION" as "p"
-      on "p"."publication_id" = "s"."publication_id"
+      on "p"."publication_id" = "s"."publication_id";
 ```
 

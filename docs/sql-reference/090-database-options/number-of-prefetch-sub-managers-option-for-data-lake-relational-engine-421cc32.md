@@ -6,8 +6,11 @@ Use this option to assign the number of sub-managers to assist with performance 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loio421cc329e0ca4f078f79696e9c23e6bf__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

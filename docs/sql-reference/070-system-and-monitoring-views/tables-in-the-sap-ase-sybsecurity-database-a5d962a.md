@@ -11,28 +11,20 @@ No SAP Adaptive Server Enterprise sybsecurity database tables are implemented in
 
 Table Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 <th valign="top">
 
 Data?
 
-
-
 </th>
 <th valign="top">
 
 Supported by Data Lake Relational Engine?
-
-
 
 </th>
 </tr>
@@ -41,28 +33,20 @@ Supported by Data Lake Relational Engine?
 
 `sysaudits`
 
-
-
 </td>
 <td valign="top">
 
 One row for each audit record
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -71,28 +55,20 @@ No
 
 `sysauditoptions`
 
-
-
 </td>
 <td valign="top">
 
 One row for each global audit option
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>

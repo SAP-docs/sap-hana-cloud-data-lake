@@ -6,12 +6,11 @@ Creates a view on the database. Views are used to give a different perspective o
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
 
 
 
@@ -19,7 +18,7 @@ Creates a view on the database. Views are used to give a different perspective o
 CREATE [ OR REPLACE ] VIEW
    [ <schema-name>.]<view-name> [ ( <column-name> [ , … ] ) ]
    AS <select-statement>
-   [ WITH CHECK OPTION ]
+   [ WITH CHECK OPTION ];
 ```
 
 
@@ -102,10 +101,27 @@ Views can be updated unless the SELECT statement defining the view contains a GR
 
 ### 
 
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
+
+
+</dd>
+</dl>
 
 
 
@@ -136,7 +152,7 @@ Automatic commit
     CREATE VIEW male_employee
     AS SELECT *
     FROM Employees
-    WHERE Sex = 'M'
+    WHERE Sex = 'M';
     ```
 
 -   The following example creates a view showing employees and the departments to which they belong:
@@ -145,7 +161,7 @@ Automatic commit
     CREATE VIEW emp_dept
     AS SELECT Surname, GivenName, DepartmentName
     FROM Employees JOIN Departments
-    ON Employees.DepartmentID = Departments.DepartmentID
+    ON Employees.DepartmentID = Departments.DepartmentID;
     ```
 
 
@@ -154,9 +170,9 @@ Automatic commit
 
 [ALTER VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](alter-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-6ef5483.md "Replaces a view definition with a modified version.")
 
+[DROP VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-3c389d9.md "Removes a view from the database.")
+
 [System Views in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../070-system-views/system-views-in-data-lake-relational-engine-sap-hana-db-managed-92e2e6c.md "System views allow you to query for information about the system state using SELECT statements. The results appear as tables.")
 
-[DROP Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-statement-for-data-lake-relational-engine-sap-hana-db-managed-367d71d.md "Removes objects from the database.")
-
-[CREATE VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a61a051684f210158cced2d83231bd8a.html "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.") :arrow_upper_right:
+[CREATE VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a61a051684f210158cced2d83231bd8a.html "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.") :arrow_upper_right:
 

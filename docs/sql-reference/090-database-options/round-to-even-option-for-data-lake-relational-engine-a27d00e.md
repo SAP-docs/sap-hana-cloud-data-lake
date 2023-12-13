@@ -6,10 +6,13 @@ Controls behavior of the SQL function ROUND when querying data lake Relational E
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa27d00e384f210158811cdeec5401d23__section_fq2_gpq_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Controls behavior of the SQL function ROUND when querying data lake Relational E
 ## Syntax
 
 ```
-ROUND_TO_EVEN = { ON | OFF }
+ROUND_TO_EVEN = { ON | OFF };
 ```
 
 
@@ -64,28 +67,20 @@ Requires the SET ANY CUSTOMER SYSTEM OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -94,28 +89,20 @@ For Other Users
 
 Allowed to set permanently?
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -124,28 +111,20 @@ No
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -174,16 +153,12 @@ Table MyTable contains DOUBLE\(10,2\) values:
 
 c1
 
-
-
 </th>
 </tr>
 <tr>
 <td valign="top">
 
 \-0.35
-
-
 
 </td>
 </tr>
@@ -192,8 +167,6 @@ c1
 
 \-0.25
 
-
-
 </td>
 </tr>
 <tr>
@@ -201,16 +174,12 @@ c1
 
 0.25
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 0.35
-
-
 
 </td>
 </tr>
@@ -231,14 +200,10 @@ When ROUND\_TO\_EVEN is OFF, the query returns:
 
 c1
 
-
-
 </th>
 <th valign="top">
 
 round\(MyTable,c1,1\)
-
-
 
 </th>
 </tr>
@@ -247,14 +212,10 @@ round\(MyTable,c1,1\)
 
 \-0.35
 
-
-
 </td>
 <td valign="top">
 
 \-0.4
-
-
 
 </td>
 </tr>
@@ -263,14 +224,10 @@ round\(MyTable,c1,1\)
 
 \-0.25
 
-
-
 </td>
 <td valign="top">
 
 \-0.3
-
-
 
 </td>
 </tr>
@@ -279,14 +236,10 @@ round\(MyTable,c1,1\)
 
 0.25
 
-
-
 </td>
 <td valign="top">
 
 0.3
-
-
 
 </td>
 </tr>
@@ -295,14 +248,10 @@ round\(MyTable,c1,1\)
 
 0.35
 
-
-
 </td>
 <td valign="top">
 
 0.4
-
-
 
 </td>
 </tr>
@@ -317,14 +266,10 @@ When ROUND\_TO\_EVEN is ON, the query returns:
 
 c1
 
-
-
 </th>
 <th valign="top">
 
 round\(MyTable,c1,1\)
-
-
 
 </th>
 </tr>
@@ -333,14 +278,10 @@ round\(MyTable,c1,1\)
 
 \-0.35
 
-
-
 </td>
 <td valign="top">
 
 \-0.4
-
-
 
 </td>
 </tr>
@@ -349,14 +290,10 @@ round\(MyTable,c1,1\)
 
 \-0.25
 
-
-
 </td>
 <td valign="top">
 
 \-0.2
-
-
 
 </td>
 </tr>
@@ -365,14 +302,10 @@ round\(MyTable,c1,1\)
 
 0.25
 
-
-
 </td>
 <td valign="top">
 
 0.2
-
-
 
 </td>
 </tr>
@@ -381,14 +314,10 @@ round\(MyTable,c1,1\)
 
 0.35
 
-
-
 </td>
 <td valign="top">
 
 0.4
-
-
 
 </td>
 </tr>
@@ -405,5 +334,5 @@ round\(MyTable,c1,1\)
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[ROUND_TO_EVEN Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/a9bc41c21e7a44b39e48a3bed69742e5.html "Controls behavior of the SQL function ROUND when querying data lake Relational Engine tables.") :arrow_upper_right:
+[ROUND_TO_EVEN Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/a9bc41c21e7a44b39e48a3bed69742e5.html "Controls behavior of the SQL function ROUND when querying data lake Relational Engine tables.") :arrow_upper_right:
 

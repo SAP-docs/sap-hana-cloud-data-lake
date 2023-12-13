@@ -7,7 +7,7 @@ Left-pads a string with spaces, or a specified pattern, to make a string of a sp
 
 
 ```
-LPAD ( <str>, <n> [, <pattern> ] )
+LPAD ( <str>, <n> [, <pattern> ] );
 ```
 
 
@@ -81,7 +81,7 @@ LPAD returns an empty string value if *<n\>* is less than 1.
 
 ## Examples
 
--   The following example left-pads the start of string ***end*** with the pattern ***12345*** to make a string of ***15*** characters in length, and returns the value ***1234512345hello***:
+-   The following example left-pads the start of string `end` with the pattern `12345` to make a string of `15` characters in length, and returns the value ***1234512345hello***:
 
     ```
     SELECT LPAD ('hello', 15, '12345') "left pad" FROM DUMMY;
@@ -93,7 +93,7 @@ LPAD returns an empty string value if *<n\>* is less than 1.
     SELECT LPAD ('hello', 2, '12345') "left pad" FROM DUMMY;
     ```
 
--   By not specifying *<pattern\>*, this example left-pads the start of string ***hello*** with a single blank character \(that is, "***hello***"\):
+-   By not specifying *<pattern\>*, this example left-pads the start of string `hello` with a single blank character \(that is, "***hello***"\):
 
     ```
     SELECT LPAD ('hello', 6) "left pad" FROM DUMMY;
@@ -103,5 +103,5 @@ LPAD returns an empty string value if *<n\>* is less than 1.
 **Related Information**  
 
 
-[LPAD Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/7bf4b4293b56487bbabf9c2f3d01b364.html "Left-pads a string with spaces, or a specified pattern, to make a string of a specified number of characters in length.") :arrow_upper_right:
+[LPAD Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/7bf4b4293b56487bbabf9c2f3d01b364.html "Left-pads a string with spaces, or a specified pattern, to make a string of a specified number of characters in length.") :arrow_upper_right:
 

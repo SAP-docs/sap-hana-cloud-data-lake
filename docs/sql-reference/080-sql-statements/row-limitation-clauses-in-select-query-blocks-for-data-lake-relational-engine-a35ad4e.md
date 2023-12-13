@@ -32,7 +32,7 @@ offset-expression ::= <simple-expression>
 ```
 
 ```
-<simple-expression>
+<simple-expression>;
 ```
 
 Only one row limitation clause can be specified for a SELECT clause. When specifying these clauses, an ORDER BY clause is required to order the rows in a meaningful manner.

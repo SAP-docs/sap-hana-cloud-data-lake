@@ -6,8 +6,11 @@ Specifies the percentage of data lake Relational Engine threads used to sweep ou
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa65a401984f21015921f928c403787e3__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

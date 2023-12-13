@@ -6,12 +6,11 @@ Modifies existing rows of a single table, or a view that contains only one table
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
 
 
 
@@ -38,7 +37,7 @@ UPDATE [ <schema-name>.]{ <table-name> | <view-name> } [ [ AS ] <correlation-nam
 <table-expression> ::=
    <table-spec> 
    | <table-expression> <join-type> <table-spec> [ ON <condition> ] 
-   | <table-expression>, ...
+   | <table-expression>, ...;
 ```
 
 
@@ -66,7 +65,7 @@ Use the SET clause to set column names or variables to the specified expression.
 Use the SET clause to set the column to a computed column value by using this format:
 
 ```
-SET <column-name> = <expression>, ...
+SET <column-name> = <expression>, ...;
 ```
 
 Each specified column is set to the value of the expression. There are no restrictions on *<expression\>*. If *<expression\>* is a *<column-name\>*, then the previous value from that column is used.
@@ -76,7 +75,7 @@ If a column has a default defined, then use the SET clause to set a column to it
 You can also use the SET clause to assign a variable by using the following format:
 
 ```
-SET @<variable-name> = <expression>, ...
+SET @<variable-name> = <expression>, ...;
 ```
 
 The *<owner\>* specification is only for use with database-scope variables.
@@ -100,7 +99,7 @@ This statement illustrates a potential ambiguity in table names in UPDATE statem
 UPDATE table_1
 SET column_1 = ...
 FROM table_1 AS alias_1, table_2 AS alias_2
-WHERE ...
+WHERE ...;
 ```
 
 Each instance of table\_1 in the FROM clause has a correlation name, denoting a self-join of table\_1 to itself. However, the UPDATE statement fails to specify which of the rows that make up the self-join are to be updated. This can be corrected by specifying the correlation name in the UPDATE statement as follows:
@@ -109,7 +108,7 @@ Each instance of table\_1 in the FROM clause has a correlation name, denoting a 
 UPDATE table_1
 SET column_1 = ...
 FROM table_1 AS alias_1, table_1 AS alias_2
-WHERE ...
+WHERE ...;
 ```
 
 If the same table name in which you are updating rows is used in the FROM clause, they are considered to reference the same table if one of the following is true:
@@ -173,7 +172,7 @@ Using the wrong join condition in a FROM clause causes unpredictable results. If
 UPDATE T1 
 SET T1.c2 = T2.c2
 FROM T1 JOIN TO T2
-ON T1.c1 = T2.c1
+ON T1.c1 = T2.c1;
 ```
 
 If table T2 has more than one row per T2.c1, results might be as follows:
@@ -202,7 +201,7 @@ For example, in this statement, table T1 is on the left side of a left outer joi
 UPDATE T1 
 SET T1.c2 = T2.c4
 FROM T1 LEFT OUTER JOIN T2
-ON T1.rowid = T2.rowid
+ON T1.rowid = T2.rowid;
 ```
 
 Normally, the order in which rows are updated does not matter. However, in conjunction with the NUMBER\(\*\) function, an ordering can be useful to get increasing numbers added to the rows in some specified order. If you are not using the NUMBER\(\*\) function, avoid using the ORDER BY clause, because the UPDATE statement performs better without it.
@@ -230,7 +229,7 @@ FROM t ... WHERE t.y = r.y),
 r.s= (SELECT SUM(x.s) 
 FROM x ... 
 WHERE x.x = r.x)
-WHERE r.a = 10
+WHERE r.a = 10;
 ```
 
 Data lake Relational Engine supports DEFAULT column values in UPDATE statements. If a column has a DEFAULT value, this DEFAULT value is used as the value of the column in any UPDATE statement that does not explicitly modify the value for the column.
@@ -251,10 +250,27 @@ You cannot update a database-scope variable owned by another user.
 
 ### 
 
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
+
+
+</dd>
+</dl>
 
 
 
@@ -313,5 +329,5 @@ Requires one of:
 **Related Information**  
 
 
-[UPDATE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a628441e84f21015a952a4b8bd52ee72.html "Modifies existing rows of a single table, or a view that contains only one table.") :arrow_upper_right:
+[UPDATE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a628441e84f21015a952a4b8bd52ee72.html "Modifies existing rows of a single table, or a view that contains only one table.") :arrow_upper_right:
 

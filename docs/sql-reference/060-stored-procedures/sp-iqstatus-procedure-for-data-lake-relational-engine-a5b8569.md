@@ -6,15 +6,18 @@ Displays a variety of data lake Relational Engine status information about the c
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5b8569b84f210159be8f2c13b8ea3fb__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqstatus
+sp_iqstatus;
 ```
 
 
@@ -58,7 +61,6 @@ Requires EXECUTE object-level privilege on the procedure along with one of the f
 
 -   MANAGE ANY DBSPACE system privilege
 -   MONITOR system privilege
--   SERVER OPERATOR system privilege
 
 
 
@@ -70,7 +72,7 @@ None
 
 <a name="loioa5b8569b84f210159be8f2c13b8ea3fb__iq_refbb_1780"/>
 
-## Example
+## Examples
 
 > ### Note:  
 > This example includes a sample user dbspace named iq\_main, which may not be present in your own databases.
@@ -84,14 +86,10 @@ The following output is from the sp\_iqstatus stored procedure:
 
 SAP IQ \(TM\)
 
-
-
 </td>
 <td valign="top">
 
 Copyright \(c\) 1992–2016 by SAP AG or an SAP affiliate company. All rights reserved.
-
-
 
 </td>
 </tr>
@@ -100,14 +98,10 @@ Copyright \(c\) 1992–2016 by SAP AG or an SAP affiliate company. All rights re
 
 Version:
 
-
-
 </td>
 <td valign="top">
 
 16.1.010.844/10172/P/Mainline/Enterprise Linux64 - x86\_64 - 2.6.18-194.el5/64bit/2016-12-22 02:31:33
-
-
 
 </td>
 </tr>
@@ -116,14 +110,10 @@ Version:
 
 Time Now:
 
-
-
 </td>
 <td valign="top">
 
 2017-01-18 20:14:57.664
-
-
 
 </td>
 </tr>
@@ -132,14 +122,10 @@ Time Now:
 
 Build Time:
 
-
-
 </td>
 <td valign="top">
 
 2016-12-22 02:31:33
-
-
 
 </td>
 </tr>
@@ -148,14 +134,10 @@ Build Time:
 
 File Format:
 
-
-
 </td>
 <td valign="top">
 
 23 on 03/18/1999
-
-
 
 </td>
 </tr>
@@ -164,14 +146,10 @@ File Format:
 
 Server mode:
 
-
-
 </td>
 <td valign="top">
 
 IQ Server
-
-
 
 </td>
 </tr>
@@ -180,14 +158,10 @@ IQ Server
 
 Catalog Format:
 
-
-
 </td>
 <td valign="top">
 
 2
-
-
 
 </td>
 </tr>
@@ -196,14 +170,10 @@ Catalog Format:
 
 Stored Procedure Revision:
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 </tr>
@@ -212,14 +182,10 @@ Stored Procedure Revision:
 
 Page Size:
 
-
-
 </td>
 <td valign="top">
 
 131072/8192blksz/16bpp
-
-
 
 </td>
 </tr>
@@ -228,14 +194,10 @@ Page Size:
 
 Number of Main DB Files:
 
-
-
 </td>
 <td valign="top">
 
 2
-
-
 
 </td>
 </tr>
@@ -244,14 +206,10 @@ Number of Main DB Files:
 
 Main Store Out Of Space:
 
-
-
 </td>
 <td valign="top">
 
 N
-
-
 
 </td>
 </tr>
@@ -260,14 +218,10 @@ N
 
 Number of Shared Temp DB Files:
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -276,14 +230,10 @@ Number of Shared Temp DB Files:
 
 Shared Temp Store Out Of Space:
 
-
-
 </td>
 <td valign="top">
 
 N
-
-
 
 </td>
 </tr>
@@ -292,14 +242,10 @@ N
 
 Number of Local Temp DB Files:
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 </tr>
@@ -308,14 +254,10 @@ Number of Local Temp DB Files:
 
 Local Temp Store Out Of Space:
 
-
-
 </td>
 <td valign="top">
 
 N
-
-
 
 </td>
 </tr>
@@ -324,14 +266,10 @@ N
 
 DB Blocks: 1–12800
 
-
-
 </td>
 <td valign="top">
 
 IQ\_SYSTEM\_MAIN
-
-
 
 </td>
 </tr>
@@ -340,14 +278,10 @@ IQ\_SYSTEM\_MAIN
 
 DB Blocks: 1045440–1058239
 
-
-
 </td>
 <td valign="top">
 
 iq\_main
-
-
 
 </td>
 </tr>
@@ -356,14 +290,10 @@ iq\_main
 
 Local Temp Blocks: 1–3200
 
-
-
 </td>
 <td valign="top">
 
 IQ\_SYSTEM\_TEMP
-
-
 
 </td>
 </tr>
@@ -372,14 +302,10 @@ IQ\_SYSTEM\_TEMP
 
 Create Time:
 
-
-
 </td>
 <td valign="top">
 
 2017-01-18 19:09:30.231
-
-
 
 </td>
 </tr>
@@ -388,14 +314,10 @@ Create Time:
 
 Update Time:
 
-
-
 </td>
 <td valign="top">
 
 2017-01-18 19:09:34.000
-
-
 
 </td>
 </tr>
@@ -404,14 +326,10 @@ Update Time:
 
 Main IQ Buffers:
 
-
-
 </td>
 <td valign="top">
 
 509
-
-
 
 </td>
 </tr>
@@ -420,14 +338,10 @@ Main IQ Buffers:
 
 Temporary IQ Buffers:
 
-
-
 </td>
 <td valign="top">
 
 509
-
-
 
 </td>
 </tr>
@@ -436,14 +350,10 @@ Temporary IQ Buffers:
 
 Main IQ Blocks Used:
 
-
-
 </td>
 <td valign="top">
 
 5944 of 19200
-
-
 
 </td>
 </tr>
@@ -452,14 +362,10 @@ Main IQ Blocks Used:
 
 Shared Temporary IQ Blocks Used:
 
-
-
 </td>
 <td valign="top">
 
 0 of 0
-
-
 
 </td>
 </tr>
@@ -468,14 +374,10 @@ Shared Temporary IQ Blocks Used:
 
 Local Temporary IQ Blocks Used:
 
-
-
 </td>
 <td valign="top">
 
 65 of 1600
-
-
 
 </td>
 </tr>
@@ -484,14 +386,10 @@ Local Temporary IQ Blocks Used:
 
 Main Reserved Blocks Available:
 
-
-
 </td>
 <td valign="top">
 
 6400 of 6400
-
-
 
 </td>
 </tr>
@@ -500,14 +398,10 @@ Main Reserved Blocks Available:
 
 Shared Temporary Reserved Blocks Available:
 
-
-
 </td>
 <td valign="top">
 
 0 of 0
-
-
 
 </td>
 </tr>
@@ -516,14 +410,10 @@ Shared Temporary Reserved Blocks Available:
 
 Local Temporary Reserved Blocks Available:
 
-
-
 </td>
 <td valign="top">
 
 1600 of 1600
-
-
 
 </td>
 </tr>
@@ -532,14 +422,10 @@ Local Temporary Reserved Blocks Available:
 
 IQ Dynamic Memory:
 
-
-
 </td>
 <td valign="top">
 
 Current: 288mb
-
-
 
 </td>
 </tr>
@@ -548,14 +434,10 @@ Current: 288mb
 
 IQ Heap Memory:
 
-
-
 </td>
 <td valign="top">
 
 Current: 150mb
-
-
 
 </td>
 </tr>
@@ -564,14 +446,10 @@ Current: 150mb
 
 Main IQ Buffers:
 
-
-
 </td>
 <td valign="top">
 
 Used: 6
-
-
 
 </td>
 </tr>
@@ -580,14 +458,10 @@ Used: 6
 
 Temporary IQ Buffers:
 
-
-
 </td>
 <td valign="top">
 
 Used: 4
-
-
 
 </td>
 </tr>
@@ -596,14 +470,10 @@ Used: 4
 
 Main IQ I/O:
 
-
-
 </td>
 <td valign="top">
 
 I: L200/P6 O: C0/D22/P20 D:0 C:100.0
-
-
 
 </td>
 </tr>
@@ -612,14 +482,10 @@ I: L200/P6 O: C0/D22/P20 D:0 C:100.0
 
 Temporary IQ I/O:
 
-
-
 </td>
 <td valign="top">
 
 I: L710/P0 O: C124/D134/P13 D:120 C:100.0
-
-
 
 </td>
 </tr>
@@ -628,14 +494,10 @@ I: L710/P0 O: C124/D134/P13 D:120 C:100.0
 
 Other Versions:
 
-
-
 </td>
 <td valign="top">
 
 0 = 0Mb
-
-
 
 </td>
 </tr>
@@ -644,14 +506,10 @@ Other Versions:
 
 Active Txn Versions:
 
-
-
 </td>
 <td valign="top">
 
 0 = C:0Mb/D:0Mb
-
-
 
 </td>
 </tr>
@@ -660,14 +518,10 @@ Active Txn Versions:
 
 Last Full Backup ID:
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -676,14 +530,10 @@ Last Full Backup ID:
 
 Last Full Backup Time:
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -692,14 +542,10 @@ Last Full Backup Time:
 
 Last Backup ID:
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -708,14 +554,10 @@ Last Backup ID:
 
 Last Backup Type:
 
-
-
 </td>
 <td valign="top">
 
 None
-
-
 
 </td>
 </tr>
@@ -724,14 +566,10 @@ None
 
 Last Backup Time:
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -740,14 +578,10 @@ Last Backup Time:
 
 DB Updated:
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 </tr>
@@ -756,14 +590,10 @@ DB Updated:
 
 Blocks in next ISF Backup:
 
-
-
 </td>
 <td valign="top">
 
 0 Blocks: =0Mb
-
-
 
 </td>
 </tr>
@@ -772,14 +602,10 @@ Blocks in next ISF Backup:
 
 Blocks in next ISI Backup:
 
-
-
 </td>
 <td valign="top">
 
 0 Blocks: =0Mb
-
-
 
 </td>
 </tr>
@@ -788,14 +614,10 @@ Blocks in next ISI Backup:
 
 IQ large memory space:
 
-
-
 </td>
 <td valign="top">
 
 2048 Mb
-
-
 
 </td>
 </tr>
@@ -804,14 +626,10 @@ IQ large memory space:
 
 IQ large memory flexible percentage:
 
-
-
 </td>
 <td valign="top">
 
 50
-
-
 
 </td>
 </tr>
@@ -820,14 +638,10 @@ IQ large memory flexible percentage:
 
 IQ large memory flexible used:
 
-
-
 </td>
 <td valign="top">
 
 0Mb
-
-
 
 </td>
 </tr>
@@ -836,14 +650,10 @@ IQ large memory flexible used:
 
 IQ large memory inflexible percentage:
 
-
-
 </td>
 <td valign="top">
 
 90
-
-
 
 </td>
 </tr>
@@ -852,14 +662,10 @@ IQ large memory inflexible percentage:
 
 IQ large memory inflexible used:
 
-
-
 </td>
 <td valign="top">
 
 0Mb
-
-
 
 </td>
 </tr>
@@ -868,14 +674,10 @@ IQ large memory inflexible used:
 
 IQ large memory anti-starvation percentage:
 
-
-
 </td>
 <td valign="top">
 
 50
-
-
 
 </td>
 </tr>
@@ -884,14 +686,10 @@ IQ large memory anti-starvation percentage:
 
 DB File Encryption Status:
 
-
-
 </td>
 <td valign="top">
 
 OFF
-
-
 
 </td>
 </tr>
@@ -914,5 +712,5 @@ The following is a key to understanding the Main IQ I/O and Temporary IQ I/O out
 
 [sp\_iqtransaction Procedure for Data Lake Relational Engine](sp-iqtransaction-procedure-for-data-lake-relational-engine-a5bb670.md "Shows information about transactions and versions.")
 
-[sp\_iqversionuse Procedure for Data Lake Relational Engine](sp-iqversionuse-procedure-for-data-lake-relational-engine-a5bd6f9.md "Displays version usage for the IQ main store.")
+[sp\_iqversionuse Procedure for Data Lake Relational Engine](sp-iqversionuse-procedure-for-data-lake-relational-engine-a5bd6f9.md "Displays version usage for the data lake Relational Engine main store.")
 

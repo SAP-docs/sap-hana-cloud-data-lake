@@ -6,22 +6,25 @@ Modifies the data at the current location of a cursor.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa628749684f21015958edc0cde107b63__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 UPDATE <table-list> 
    SET <set-item> [, ...]
-   WHERE CURRENT OF <cursor-name>
+   WHERE CURRENT OF <cursor-name>;
 ```
 
 ```
 <set-item> ::=
-   <column-name> [.<field-name>…] = <scalar-value>
+   <column-name> [.<field-name>…] = <scalar-value>;
 ```
 
 
@@ -90,7 +93,7 @@ This example shows an `UPDATE` statement using WHERE CURRENT OF cursor:
 
 ```
 UPDATE Employees SET surname = 'Jones'
-WHERE CURRENT OF emp_cursor
+WHERE CURRENT OF emp_cursor;
 ```
 
 

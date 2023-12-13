@@ -6,20 +6,23 @@ Shows the current shared temp space usage distribution. If run from the coordina
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa23b73a584f2101597cbaf0fec393cb7__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqsharedtempdistrib
+sp_iqsharedtempdistrib;
 ```
 
 
 
-## Returns
+## Result Set
 
 
 <table>
@@ -28,21 +31,15 @@ sp_iqsharedtempdistrib
 
 Column
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -51,21 +48,15 @@ Description
 
 Server\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 ID of the multiplex node, from SYSIQMPXINFO.
-
-
 
 </td>
 </tr>
@@ -74,21 +65,15 @@ ID of the multiplex node, from SYSIQMPXINFO.
 
 DBSpace\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Name of the dbspace from which space is reserved.
-
-
 
 </td>
 </tr>
@@ -97,14 +82,10 @@ Name of the dbspace from which space is reserved.
 
 Unit\_type
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(10\)
-
-
 
 </td>
 <td valign="top">
@@ -124,21 +105,15 @@ Type of allocation unit. Valid values are:
 
 VersionID
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Version ID of the unit. For active units, the version when the unit was reserved for the node. For expired units, the version when the unit was expired. For quarantined units, the version when the unit was quarantined.
-
-
 
 </td>
 </tr>
@@ -147,21 +122,15 @@ Version ID of the unit. For active units, the version when the unit was reserved
 
 NBlocks
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Number of outstanding blocks in the unit.
-
-
 
 </td>
 </tr>

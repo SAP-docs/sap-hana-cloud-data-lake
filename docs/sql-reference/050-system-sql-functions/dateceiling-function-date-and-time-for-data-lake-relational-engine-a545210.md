@@ -7,7 +7,7 @@ Calculates a new date, time, or datetime value by increasing the provided value 
 
 
 ```
-DATECEILING ( <date-part>, <datetime-expression> [, <multiple-expression>] )
+DATECEILING ( <date-part>, <datetime-expression> [, <multiple-expression>] );
 ```
 
 
@@ -96,7 +96,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     <tr>
     <td valign="top">
     
-        -   1
+    -   1
     -   2
     -   4
     -   5
@@ -112,7 +112,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   40
+    -   40
     -   50
     -   64
     -   80
@@ -128,7 +128,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   400
+    -   400
     -   500
     -   625
     -   800
@@ -144,7 +144,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   4000
+    -   4000
     -   5000
     -   6250
     -   8000
@@ -160,7 +160,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   40000
+    -   40000
     -   50000
     -   62500
     -   100000
@@ -201,28 +201,28 @@ If data lake Relational Engine rounds to a multiple of the week date part, the d
 
     ```
     SELECT DATECEILING( MI, 'August 13, 2009, 10:32.00.132AM', 10)
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 -   This statement returns the value August 13, 2009 10:32.35.456800 AM:
 
     ```
     SELECT DATECEILING( US, 'August 13, 2009, 10:32.35.456789AM', 200 )
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 -   This statement returns the value August 13, 2009 10:32.35.600000 AM:
 
     ```
     SELECT DATECEILING( US, 'August 13, 2009, 10:32.35.456789AM', 200000 )
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 -   This statement returns the value August 13, 2009 10:32.35.456789 AM:
 
     ```
     SELECT DATECEILING( US, 'August 13, 2009, 10:32.35.456789AM')
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 
@@ -243,5 +243,5 @@ If data lake Relational Engine rounds to a multiple of the week date part, the d
 
 [Date Parts in Data Lake Relational Engine](date-parts-in-data-lake-relational-engine-a52b8dd.md "Many of the date functions use dates built from date parts.")
 
-[DATECEILING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/faa4713372c84096b66b27ab6204aa4f.html "Calculates a new date, time, or datetime value by increasing the provided value up to the nearest larger value of the specified granularity.") :arrow_upper_right:
+[DATECEILING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/faa4713372c84096b66b27ab6204aa4f.html "Calculates a new date, time, or datetime value by increasing the provided value up to the nearest larger value of the specified granularity.") :arrow_upper_right:
 

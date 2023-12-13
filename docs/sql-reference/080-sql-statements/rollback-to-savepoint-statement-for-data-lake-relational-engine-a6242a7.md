@@ -6,15 +6,18 @@ Cancels any changes made since a savepoint was established. Changes made prior t
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6242a7684f210158944f38f0146ea62__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-ROLLBACK TO SAVEPOINT [ <savepoint-name> ]
+ROLLBACK TO SAVEPOINT [ <savepoint-name> ];
 ```
 
 

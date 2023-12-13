@@ -6,12 +6,14 @@ Enables and disables auditing in the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Setting Database Options](remote-execute-usage-examples-for-setting-database-options-0023bea.md).
+<a name="loio05093562ca224fc2a9bbd3d9d587362c__section_dzz_4jj_kyb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,7 +22,7 @@ Enables and disables auditing in the database.
 ## Syntax
 
 ```
-AUDITING = { ON | OFF }
+AUDITING = { ON | OFF };
 ```
 
 
@@ -51,10 +53,46 @@ Privilege Category: SECURITY
 
 ### 
 
-Requires one of:
+The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
 
--   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user:
+
+</b></dt>
+<dd>
+
+-   To set a database option permanently, use REMOTE\_EXECUTE.
+
+    Requires one of:
+
+    -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+    -   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+    -   See [REMOTE\_EXECUTE Guidance and Examples for Setting Permanent Database Options](remote-execute-guidance-and-examples-for-setting-permanent-database-options-0023bea.md).
+
+
+
+
+
+</dd><dt><b>
+
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+Requires all of:
+
+-   MANAGE AUDITING system privilege
+-   SET ANY CUSTOMER SECURITY OPTION system privilege
+
+
+
+</dd>
+</dl>
 
 
 
@@ -69,28 +107,20 @@ Requires one of:
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -99,28 +129,20 @@ For Other Users
 
 Allowed to set permanently?
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -129,28 +151,20 @@ No
 
 Allowed to set temporarily?
 
+</td>
+<td valign="top">
 
+No
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
-
-</td>
-<td valign="top">
-
-No
-
-
 
 </td>
 </tr>
@@ -173,6 +187,8 @@ If you set the AUDITING option to ON, and don’t specify auditing options, all 
 
 
 
+## Example
+
 The following statement turns on auditing for the database.
 
 ```
@@ -182,11 +198,11 @@ SET OPTION PUBLIC.auditing = 'On';
 **Related Information**  
 
 
-[AUDITING Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/812cc49c6ce21014a5f195897313e166.html "Enables and disables auditing in the database.") :arrow_upper_right:
+[AUDITING Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/812cc49c6ce21014a5f195897313e166.html "Enables and disables auditing in the database.") :arrow_upper_right:
 
 [SET OPTION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/set-option-statement-for-data-lake-relational-engine-sap-hana-db-managed-84a37a4.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
 [sa\_enable\_auditing\_type System Procedure for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../060-system-procedures/sa-enable-auditing-type-system-procedure-for-data-lake-relational-engine-sap-hana-db-mana-7bde72c.md "Specifies which events to include in auditing.")
 
-[Auditing Database Events](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2023_1_QRC/en-US/4c20fb59d0e848e09ffb191c9d2c0b16.html "Auditing tracks all of the activity performed on a data lake Relational Engine database.") :arrow_upper_right:
+[Auditing Database Events](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2023_4_QRC/en-US/4c20fb59d0e848e09ffb191c9d2c0b16.html "Auditing tracks all of the activity performed on a data lake Relational Engine database.") :arrow_upper_right:
 

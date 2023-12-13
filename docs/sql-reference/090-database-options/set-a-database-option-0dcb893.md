@@ -14,7 +14,7 @@ Issue the `SET OPTION` statement, which has this general syntax:
 
 ```
 SET [ EXISTING ] [ TEMPORARY ] OPTION
-... [ <userid>. | PUBLIC. ]<option-name> = [ <option-value> ]
+... [ <userid>. | PUBLIC. ]<option-name> = [ <option-value> ];
 ```
 
 **Related Information**  

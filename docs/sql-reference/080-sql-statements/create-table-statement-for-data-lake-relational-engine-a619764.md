@@ -6,10 +6,13 @@ Creates a new table in the database or on a remote server.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa619764084f21015b8039a8346dc622c__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -24,7 +27,7 @@ CREATE [ { GLOBAL | LOCAL } TEMPORARY ] TABLE
    [PARTITION BY 
      { <range-partitioning-scheme>
      | <hash-partitioning-scheme> 
-     | <hash-range-partitioning-scheme> ] }
+     | <hash-range-partitioning-scheme> ] };
 ```
 
 
@@ -77,7 +80,7 @@ Defines a table column. Allowable data types are described in *Data Types*. Two 
 <column-definition> ::=
    <column-name> <data-type> 
     [ [ NOT ] NULL ] 
-    [ { DEFAULT <default-value> | IDENTITY } ]
+    [ { DEFAULT <default-value> | IDENTITY } ];
 ```
 
 
@@ -133,7 +136,7 @@ Specifies a default value to be assigned to the column if an INSERT statement do
 <special-value> ::=
    CURRENT 
    { DATE | TIME | TIMESTAMP | USER | PUBLISHER }
-   | USER
+   | USER;
 ```
 
 
@@ -198,11 +201,11 @@ Helps ensure the integrity of data in the database. There are four types of inte
     Column identifiers in column check constraints that start with the symbol ‘@’ are placeholders for the actual column name. The following two statements are exactly the same:
 
     ```
-    CREATE TABLE t1(c1 INTEGER CHECK (@foo < 5))
+    CREATE TABLE t1(c1 INTEGER CHECK (@foo < 5));
     ```
 
     ```
-    CREATE TABLE t1(c1 INTEGER CHECK (c1 < 5))
+    CREATE TABLE t1(c1 INTEGER CHECK (c1 < 5));
     ```
 
     Column identifiers appearing in table check constraints that start with the symbol ‘@’are not placeholders.
@@ -222,13 +225,13 @@ Data lake Relational Engine enforces single-column UNIQUE constraints by creatin
 
 
 
-### 
+### *<column-constraint\>*
 
 
 <dl>
 <dt><b>
 
-*<column-constraint\>*
+
 
 </b></dt>
 <dd>
@@ -238,14 +241,14 @@ Restricts the values the column can hold. Column and table constraints help ensu
 ```
 CREATE TABLE Products (
 	product_num integer UNIQUE
-)
+);
 ```
 
 ```
 CREATE TABLE Products (
 	product_num integer,
 	UNIQUE ( product_num )
-)
+);
 ```
 
 Column constraints are normally used unless the constraint references more than one column in the table. In these cases, use a table constraint.
@@ -278,7 +281,7 @@ Column and table constraints help ensure the integrity of data in the database.
         | PRIMARY KEY  
         | REFERENCES <table-name> [ ( <column-name> ) ] [ ON { UPDATE | DELETE } RESTRICT ] }
       | CHECK ( <condition> )
-   }
+   };
 ```
 
 > ### Note:  
@@ -307,7 +310,7 @@ Column and table constraints help ensure the integrity of data in the database.
      [ IN <dbspace-name> ]
      | <foreign-key-constraint>
      | CHECK ( <condition> )
-   }
+   };
 ```
 
 
@@ -381,7 +384,7 @@ Defines foreign-key references to a primary key or a unique constraint in anothe
 <foreign-key-constraint> ::=
    FOREIGN KEY [ <role-name> ] [ ( <column-name> [ , <column-name> ] … ) ] 
    …REFERENCES <table-name> [ ( <column-name> [ , <column-name> ] … ) ]
-   [ ON { UPDATE | DELETE } RESTRICT ]
+   [ ON { UPDATE | DELETE } RESTRICT ];
 ```
 
 If the primary table column names are not specified, the primary table columns are the columns in the table's primary key. If foreign key column names are not specified, the foreign-key columns have the same names as the columns in the primary table. If foreign-key column names are specified, then the primary key column names must be specified, and the column names are paired according to position in the lists.
@@ -512,7 +515,7 @@ Creates a proxy table that maps to a remote location specified by the location-s
 ```
 <location-string> ::=
    { <remote-server-name>. [ <db-name> ].[ <owner> ].<object-name>
-      | <remote-server-name>; [ <db-name> ]; [ <owner> ];<object-name> }
+      | <remote-server-name>; [ <db-name> ]; [ <owner> ];<object-name> };
 ```
 
 Proxy table names must be 30 characters or less. The AT clause supports semicolon \(;\) delimiters. If a semicolon is present anywhere in the location-string clause, the semicolon is the field delimiter. If no semicolon is present, a period is the field delimiter. This allows file names and extensions to be used in the database and owner fields.
@@ -521,7 +524,7 @@ Semicolon field delimiters are used primarily with server classes not currently 
 
 ```
 CREATE TABLE proxy_a1
-AT 'myasa;mydb;;a1'
+AT 'myasa;mydb;;a1';
 ```
 
 Foreign-key definitions are ignored on remote tables. Foreign-key definitions on local tables that refer to remote tables are also ignored. Primary key definitions are sent to the remote server if the server supports primary keys.
@@ -573,7 +576,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 
 ```
 <range-partitioning-scheme> ::=
-   RANGE ( <column_name> ) ( <range-partition-decl> [,...] )
+   RANGE ( <column_name> ) ( <range-partition-decl> [,...] );
 ```
 
 
@@ -587,8 +590,8 @@ Partitions rows by a range of values in the partitioning column. Range partition
 
 ```
 range-partition-decl:
-  <partition-name> VALUES <= ( {<constant-expression> |  MAX } [ , { <constant-expression> |  MAX }]... ) 
-
+  <partition-name> VALUES <= ( {<constant-expression> |  MAX } ) 
+;
 ```
 
 
@@ -652,13 +655,13 @@ Restrictions:
         CREATE TABLE Employees(emp_name VARCHAR(20)) 
         PARTITION BY RANGE(emp_name)
         (p1 VALUES <=(CAST (1 AS VARCHAR(20))), 
-        p2 VALUES <= (CAST (10 AS VARCHAR(20)))
+        p2 VALUES <= (CAST (10 AS VARCHAR(20)));
         ```
 
     -   Implicit conversions that result in data loss are not allowed. In this example, the partition bounds are not compatible with the partition key type. Rounding assumptions may lead to data loss and an error is generated:
 
         ```
-        CREATE TABLE emp_id (id INT) PARTITION BY RANGE(id) (p1 VALUES <= (10.5), p2 VALUES <= (100.5))
+        CREATE TABLE emp_id (id INT) PARTITION BY RANGE(id) (p1 VALUES <= (10.5), p2 VALUES <= (100.5));
         ```
 
 
@@ -667,7 +670,7 @@ Restrictions:
     ```
     CREATE TABLE id_emp (id FLOAT)
     PARTITION BY RANGE(id) (p1 VALUES <= (10), 
-    p2 VALUES <= (100))
+    p2 VALUES <= (100));
     ```
 
 -   Conversions from non-binary data types to binary data types are not allowed. For example, this conversion is not allowed and returns an error:
@@ -676,7 +679,7 @@ Restrictions:
     CREATE TABLE newemp (name BINARY)
     PARTITION BY RANGE(name) 
     (p1 VALUES <= ('Maarten'), 
-    p2 VALUES <= ('Zymmerman')
+    p2 VALUES <= ('Zymmerman');
     ```
 
 -   NULL cannot be used as a boundary in a range-partitioned table.
@@ -696,7 +699,7 @@ Maps data to partitions based on partition-key values processed by an internal h
 
 ```
 <hash-partitioning-scheme> ::=
-   HASH ( <column_name> [,... ] )
+   HASH ( <column_name> [,... ] );
 ```
 
 Restrictions:
@@ -718,8 +721,8 @@ Maps data to partitions based on partition-key values processed by an internal h
 
 ```
 <hash-range-partitioning-scheme> ::=
-   PARTITION BY HASH  ( <column_name> [,... ] )
-    SUBPARTITION BY <range-partition-scheme>
+   PARTITION BY HASH  ( <column_name> [,... ] );
+    SUBPARTITION BY <range-partition-scheme>;
 ```
 
 The hash partition specifies how the data is logically distributed and colocated; the range subpartition specifies how the data is physically placed. The new range subpartition is logically partitioned by hash with the same hash partition keys as the existing hash-range partitioned table. The range subpartition key is restricted to one column.
@@ -750,7 +753,7 @@ You can create a table for another user by specifying an owner name. If GLOBAL T
 
 A created global temporary table exists in the database like a base table and remains in the database until it is explicitly removed by a DROP TABLE statement. The rows in a temporary table are visible only to the connection that inserted the rows. Multiple connections from the same or different applications can use the same temporary table at the same time and each connection sees only its own rows. A given connection inherits the schema of a global temporary table as it exists when the connection first refers to the table. The rows of a temporary table are deleted when the connection ends.
 
-When you create a local temporary table, omit the owner specification. If you specify an owner when creating a temporary table, for example, CREATE TABLE dbo.\#temp\(col1 int\), a base table is incorrectly created.
+When you create a local temporary table, omit the owner specification. If you specify an owner when creating a temporary table, for example, CREATE TABLE \#temp\(col1 int\), a base table is incorrectly created.
 
 An attempt to create a base table or a global temporary table will fail, if a local temporary table of the same name exists on that connection, as the new table cannot be uniquely identified by owner.table.
 
@@ -795,14 +798,10 @@ The privileges required depend on type of table being created.
 
 Table Type
 
-
-
 </th>
 <th valign="top">
 
 Privileges Required
-
-
 
 </th>
 </tr>
@@ -810,8 +809,6 @@ Privileges Required
 <td valign="top">
 
 Base table and global temporary table
-
-
 
 </td>
 <td valign="top">
@@ -834,8 +831,6 @@ Base table and global temporary table
 
 Proxy table
 
-
-
 </td>
 <td valign="top">
 
@@ -856,8 +851,6 @@ Proxy table
 <td valign="top">
 
 FOREIGN KEY
-
-
 
 </td>
 <td valign="top">
@@ -936,17 +929,17 @@ Automatic commit
 **Related Information**  
 
 
+[ALTER TABLE Statement for Data Lake Relational Engine](alter-table-statement-for-data-lake-relational-engine-39f1ec0.md "Modifies a table definition.")
+
+[DROP TABLE Statement for Data Lake Relational Engine](drop-table-statement-for-data-lake-relational-engine-0524ea8.md "Removes a table from the database.")
+
+[CREATE INDEX Statement for Data Lake Relational Engine](create-index-statement-for-data-lake-relational-engine-a617ca4.md "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.")
+
 [SQL Data Types in Data Lake Relational Engine](../020-sql-data-types/sql-data-types-in-data-lake-relational-engine-2fe779f.md "SQL data types define the type of data to be stored, such as character strings, numbers, and dates.")
 
 [ALLOW\_NULLS\_BY\_DEFAULT Option \[TSQL\] for Data Lake Relational Engine](../090-database-options/allow-nulls-by-default-option-tsql-for-data-lake-relational-engine-a62c2ca.md "Controls whether new columns created without specifying either NULL or NOT NULL are allowed to contain NULL values.")
 
-[ALTER TABLE Statement for Data Lake Relational Engine](alter-table-statement-for-data-lake-relational-engine-39f1ec0.md "Modifies a table definition.")
-
-[CREATE INDEX Statement for Data Lake Relational Engine](create-index-statement-for-data-lake-relational-engine-a617ca4.md "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.")
-
 [DECLARE LOCAL TEMPORARY TABLE Statement for Data Lake Relational Engine](declare-local-temporary-table-statement-for-data-lake-relational-engine-a61b247.md "Declares a local temporary table.")
-
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
 
 [FP\_NBIT\_AUTOSIZE\_LIMIT Option for Data Lake Relational Engine](../090-database-options/fp-nbit-autosize-limit-option-for-data-lake-relational-engine-a873755.md "Limits the number of distinct values in columns that implicitly load as NBit FP.")
 
@@ -958,15 +951,15 @@ Automatic commit
 
 [IDENTITY\_INSERT Option for Data Lake Relational Engine](../090-database-options/identity-insert-option-for-data-lake-relational-engine-a63914e.md "Enables users to insert values into or to update an IDENTITY or AUTOINCREMENT column.")
 
-[CREATE TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/6c3afae6093f4327a6aa7fb91c1caafe.html "Creates a new table in the database or on a remote server.") :arrow_upper_right:
+[Restrictions on Table Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a872506a84f21015aa20de6d7665a803.html "Some restrictions apply to table partitions.") :arrow_upper_right:
 
-[Restrictions on Table Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a872506a84f21015aa20de6d7665a803.html "Some restrictions apply to table partitions.") :arrow_upper_right:
+[Hash-Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a871ecd884f21015b8f5876892d31447.html "Hash-range partitioning is a composite partitioning scheme that subpartitions a hash-partitioned table by range.") :arrow_upper_right:
 
-[Hash-Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a871ecd884f21015b8f5876892d31447.html "Hash-range partitioning is a composite partitioning scheme that subpartitions a hash-partitioned table by range.") :arrow_upper_right:
+[Hash Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a871bc0984f210159faaedf3f3eb5b29.html "Hash partitioning maps data to partitions based on partition-key values processed by an internal hashing function.") :arrow_upper_right:
 
-[Hash Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a871bc0984f210159faaedf3f3eb5b29.html "Hash partitioning maps data to partitions based on partition-key values processed by an internal hashing function.") :arrow_upper_right:
-
-[Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a8721b7584f21015a062c99a1c19e6cb.html "Range partitioning divides large tables by a range of partition-key values established for each partition.") :arrow_upper_right:
+[Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a8721b7584f21015a062c99a1c19e6cb.html "Range partitioning divides large tables by a range of partition-key values established for each partition.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
+
+[CREATE TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/6c3afae6093f4327a6aa7fb91c1caafe.html "Creates a new table in the database or on a remote server.") :arrow_upper_right:
 

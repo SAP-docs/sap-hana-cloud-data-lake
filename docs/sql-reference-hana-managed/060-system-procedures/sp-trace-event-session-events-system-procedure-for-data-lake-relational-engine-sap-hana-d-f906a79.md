@@ -6,10 +6,16 @@ Lists the trace events that are part of a specific trace event session.
 
 
 
+<a name="loiof906a7948fa14abcadfd72ef71b410f7__section_tv3_scb_1yb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+
 > ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user. It cannot be run using the REMOTE\_EXECUTE procedure.
+> This syntax cannot be run when connected to SAP HANA database as a SAP HANA database user and using SAP HANA database REMOTE\_EXECUTE or REMOTE\_EXECUTE\_QUERY.
 
 
 
@@ -18,7 +24,7 @@ sp_trace_event_session_events(
    [ <event_name> 
    [, <include_server_sessions>
    [, <include_audit_events> ] ] ]
-  )
+  );
 ```
 
 
@@ -31,7 +37,7 @@ sp_trace_event_session_events(
 <dl>
 <dt><b>
 
- *<session\_name\>* 
+*<session\_name\>* 
 
 </b></dt>
 <dd>
@@ -42,7 +48,7 @@ Use this optional CHAR\(256\) parameter to specify the name of the trace event s
 
 </dd><dt><b>
 
- *<include\_server\_sessions\>* 
+*<include\_server\_sessions\>* 
 
 </b></dt>
 <dd>
@@ -53,7 +59,7 @@ Use this optional BIT parameter to specify whether or not engine-level trace eve
 
 </dd><dt><b>
 
- *<include\_audit\_events\>* 
+*<include\_audit\_events\>* 
 
 </b></dt>
 <dd>
@@ -78,21 +84,15 @@ Use this optional BIT parameter to specify whether or not audit events are retur
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -101,21 +101,15 @@ Description
 
 session\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(256\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the name of the trace event session.
-
-
 
 </td>
 </tr>
@@ -124,21 +118,15 @@ Returns the name of the trace event session.
 
 event\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(256\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the trace event name.
-
-
 
 </td>
 </tr>
@@ -154,12 +142,33 @@ Use this system procedure to determine which trace events \(both system defined 
 
 
 
+<a name="loiof906a7948fa14abcadfd72ef71b410f7__section_frd_xcb_1yb"/>
+
 ## Privileges
 
-Requires one of:
 
--   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+### 
+
+
+<dl>
+<dt><b>
+
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure
+-   MANAGE ANY TRACE SESSION system privilege
+-   MANAGE AUDITING system privilege
+
+
+
+</dd>
+</dl>
 
 
 
@@ -171,14 +180,16 @@ None.
 
 
 
+## Example
+
 This statement returns information about the events that are part of all the event tracing sessions for the current database:
 
 ```
-SELECT * FROM dbo.sp_trace_event_session_events( );
+CALL sp_trace_event_session_events( );
 ```
 
 **Related Information**  
 
 
-[sp_trace_event_session_events System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/8179ac5d6ce210149cfcd3fb6d77cbca.html "Lists the trace events that are part of a specific trace event session.") :arrow_upper_right:
+[sp_trace_event_session_events System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/8179ac5d6ce210149cfcd3fb6d77cbca.html "Lists the trace events that are part of a specific trace event session.") :arrow_upper_right:
 

@@ -6,10 +6,13 @@ Displays information about views in a database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5bdee7a84f21015a8e0f09a5accc45a__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,7 +26,7 @@ Syntax 1
 <dd>
 
 ```
-sp_iqview ( [ <view_name> ] , [ <view_owner> ] , [ view_type ] )
+sp_iqview ( [ <view_name> ] , [ <view_owner> ] , [ view_type ] );
 ```
 
 
@@ -37,7 +40,7 @@ Syntax 2
 
 ```
 sp_iqview [ view_name='<viewname>' ],
-[ view_owner='<viewowner>' ] , [ view_type='<viewtype>' ]
+[ view_owner='<viewowner>' ] , [ view_type='<viewtype>' ];
 ```
 
 
@@ -97,7 +100,7 @@ sp_iqview [ view_name='<viewname>' ],
 
 <a name="loioa5bdee7a84f21015a8e0f09a5accc45a__section_lgk_jmm_nbb"/>
 
-## Returns
+## Result Set
 
 Specifying one of the parameters returns only the views with the specified view name or views that are owned by the specified user. Specifying more than one parameter filters the results by all of the parameters specified. Specifying no parameters returns all user views in a database.
 
@@ -108,14 +111,10 @@ Specifying one of the parameters returns only the views with the specified view 
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -124,14 +123,10 @@ Description
 
 view\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the view
-
-
 
 </td>
 </tr>
@@ -140,14 +135,10 @@ The name of the view
 
 view\_owner
 
-
-
 </td>
 <td valign="top">
 
 The owner of the view
-
-
 
 </td>
 </tr>
@@ -156,14 +147,10 @@ The owner of the view
 
 view\_def
 
-
-
 </td>
 <td valign="top">
 
 The view definition as specified in the CREATE VIEW statement
-
-
 
 </td>
 </tr>
@@ -172,14 +159,10 @@ The view definition as specified in the CREATE VIEW statement
 
 remarks
 
-
-
 </td>
 <td valign="top">
 
 User comments added with the COMMENT statement
-
-
 
 </td>
 </tr>
@@ -230,90 +213,143 @@ None
 
 ## Examples
 
--   The following variations in syntax both return information about the view deptview:
+The following variations in syntax both return information about the view V\_table:
 
-    ```
-    call sp_iqview('ViewSalesOrders')
-    ```
+```
+call sp_iqview('V_table1');
+```
 
-    ```
-    sp_iqview view_name='ViewSalesOrders'
-    ```
-
--   The following variations in syntax both return all views that are owned by view owner GROUPO:
-
-    ```
-    sp_iqview NULL,GROUPO
-    ```
-
-    ```
-    sp_iqview view_owner='GROUPO'
-    ```
+```
+sp_iqview view_name='V_table1';
+```
 
 
-    <table>
-    <tr>
-    <th valign="top" rowspan="1">
+<table>
+<tr>
+<th valign="top">
 
-    view\_name
+view\_name
+
+</th>
+<th valign="top">
+
+view\_owner
+
+</th>
+<th valign="top">
+
+view\_def
+
+</th>
+<th valign="top">
+
+remarks
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+V\_table1
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+create view "HDLADMIN"."V\_table1" as select \* from "HDLADMIN"."table1"
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+</table>
+
+The following variations in syntax both return all views that are owned by view owner USER2:
+
+```
+CALL sp_iqview (NULL,'USER2');
+```
+
+```
+sp_iqview view_owner='USER2';
+```
 
 
-    
-    </th>
-    <th valign="top" rowspan="1">
+<table>
+<tr>
+<th valign="top">
 
-    view\_owner
+view\_name
 
+</th>
+<th valign="top">
 
-    
-    </th>
-    <th valign="top" rowspan="1">
+view\_owner
 
-    view\_def
+</th>
+<th valign="top">
 
+view\_def
 
-    
-    </th>
-    <th valign="top" rowspan="1">
+</th>
+<th valign="top">
 
-    remarks
+remarks
 
+</th>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="1">
-    
-        ViewSalesOrders
+View\_t1
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top" rowspan="1">
-    
-        GROUPO
+USER2
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top" rowspan="1">
-    
-        Create views GROUPO , ViewSalesOrders\( ID, LineID, ProductID, Quantity, OrderDate, ShipDate, Region, SalesRepresentativeName
+create view "USER2"."View\_t1" as select \* from "SYS"."dummy"
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top" rowspan="1">
-    
-        \(NULL\)
+NULL
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    </table>
-    
+View\_table1
+
+</td>
+<td valign="top">
+
+USER2
+
+</td>
+<td valign="top">
+
+create view "USER2"."View\_table1" as select \* from "hdladmin"."table1"
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 

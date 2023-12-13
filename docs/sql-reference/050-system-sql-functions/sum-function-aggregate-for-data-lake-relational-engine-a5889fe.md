@@ -7,7 +7,7 @@ Returns the total of the specified expression for each group of rows.
 
 
 ```
-SUM ( <expression> | DISTINCT <column-name> )
+SUM ( <expression> | DISTINCT <column-name> );
 ```
 
 
@@ -47,7 +47,7 @@ Computes the sum of the unique values in *<column-name\>* for each group of rows
 
 <a name="loioa5889fe484f21015b024abf6dcede473__SUM_returns1"/>
 
-## Returns
+## Result Set
 
 -   INTEGER
 -   DOUBLE
@@ -83,7 +83,7 @@ The following statement returns the value 3749146.740:
 
 ```
 SELECT SUM( salary )
-FROM Employees
+FROM Employees;
 ```
 
 **Related Information**  
@@ -95,5 +95,5 @@ FROM Employees
 
 [COUNT Function \[Aggregate\] for Data Lake Relational Engine](count-function-aggregate-for-data-lake-relational-engine-a54290f.md "Counts the number of rows in a group, depending on the specified parameters.")
 
-[SUM Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/d656f224db9a4567a7ba604993702e94.html "Returns the total of the specified expression for each group of rows.") :arrow_upper_right:
+[SUM Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/d656f224db9a4567a7ba604993702e94.html "Returns the total of the specified expression for each group of rows.") :arrow_upper_right:
 

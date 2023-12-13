@@ -6,16 +6,12 @@ Presents group information from `ISYSIQTAB` in a readable format. Each row in th
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system view can be used when connected as follows:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Viewing System Views](remote-execute-usage-examples-for-viewing-system-views-8b235c7.md).
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE\_QUERY procedure.
-> 
->     -   See [REMOTE\_EXECUTE\_QUERY Usage Examples for Viewing System Views](remote-execute-query-usage-examples-for-viewing-system-views-ada51c0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system view can be used when connected as follows:
+
+-   Connected to SAP HANA database as a SAP HANA database user, and using SAP HANA database REMOTE\_EXECUTE\_QUERY.
+
 
 
 
@@ -29,21 +25,15 @@ Presents group information from `ISYSIQTAB` in a readable format. Each row in th
 
 Column Name
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Column Type
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Description
-
-
 
 </th>
 </tr>
@@ -52,21 +42,15 @@ Description
 
 table\_id
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Each table is assigned a unique number \(the table number\) that is the primary key.
-
-
 
 </td>
 </tr>
@@ -75,21 +59,15 @@ Each table is assigned a unique number \(the table number\) that is the primary 
 
 block\_map
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 HS\_BLOCKMAPIDENTITY
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 For internal use.
-
-
 
 </td>
 </tr>
@@ -98,21 +76,15 @@ For internal use.
 
 block\_map\_size
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 For internal use.
-
-
 
 </td>
 </tr>
@@ -121,21 +93,15 @@ For internal use.
 
 vdo
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 HS\_VDOIDENTITY
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 For internal use.
-
-
 
 </td>
 </tr>
@@ -144,21 +110,15 @@ For internal use.
 
 vdoid\_size
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 For internal use.
-
-
 
 </td>
 </tr>
@@ -167,21 +127,15 @@ For internal use.
 
 info\_location
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 hs\_vdorecid
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Not used. Always zero.
-
-
 
 </td>
 </tr>
@@ -190,21 +144,15 @@ Not used. Always zero.
 
 info\_recid\_size
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Not used. Always zero.
-
-
 
 </td>
 </tr>
@@ -213,21 +161,15 @@ Not used. Always zero.
 
 info\_location\_size
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Not used. Always zero.
-
-
 
 </td>
 </tr>
@@ -236,21 +178,15 @@ Not used. Always zero.
 
 commit\_txn\_id
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 For internal use.
-
-
 
 </td>
 </tr>
@@ -259,21 +195,15 @@ For internal use.
 
 txn\_id
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 For internal use.
-
-
 
 </td>
 </tr>
@@ -282,21 +212,15 @@ For internal use.
 
 update\_time
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Last date and time the IQ table was modified.
-
-
 
 </td>
 </tr>
@@ -305,21 +229,15 @@ Last date and time the IQ table was modified.
 
 affinity\_map
 
-
-
 </td>
 <td valign="top">
 
 LONG BINARY
 
-
-
 </td>
 <td valign="top">
 
 Affinity map ID.
-
-
 
 </td>
 </tr>
@@ -328,21 +246,15 @@ Affinity map ID.
 
 affinity\_map\_size
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Size of the affinity map.
-
-
 
 </td>
 </tr>
@@ -356,7 +268,7 @@ Size of the affinity map.
 
 ```
 ALTER VIEW "SYS"."SYSIQTAB"
-as select * from SYS.ISYSIQTAB
+as select * from SYS.ISYSIQTAB;
 ```
 
 
@@ -366,11 +278,21 @@ as select * from SYS.ISYSIQTAB
 ## Constraints on Underlying System Table
 
 ```
-Primary key (table_id)
+Primary key (table_id);
 ```
+
+
+
+<a name="loioa36fd876b1164cdb8100fe41c2b8fd61__section_gj1_wy1_4yb"/>
+
+## Privileges
+
+To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE privilege on the remote source <hana\_relational\_container\_schema\>\_SOURCE.
+
+-   See [REMOTE\_EXECUTE\_QUERY Usage Examples for Viewing System Views](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/a898e08b84f21015969fa437e89860c8/ada51c0074354a5f99b60c14cffb653c.html).
 
 **Related Information**  
 
 
-[SYSIQTAB System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a5d13c7c84f21015b250b3f01079ca24.html "Presents group information from ISYSIQTAB in a readable format. Each row in the SYSIQTAB view describes an IQ table.") :arrow_upper_right:
+[SYSIQTAB System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5d13c7c84f21015b250b3f01079ca24.html "Presents group information from ISYSIQTAB in a readable format. Each row in the SYSIQTAB view describes an IQ table.") :arrow_upper_right:
 

@@ -6,10 +6,13 @@ Prevents other concurrent transactions from accessing or modifying a table withi
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa620cc1c84f21015bb14de905cb82ea7__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -24,7 +27,7 @@ Syntax 1 - Exclusively for multiplex coordinator nodes:
 
 ```
 LOCK TABLE <table-list> [ WITH HOLD ] 
-   IN { SHARE | WRITE | EXCLUSIVE } MODE [  WAIT <time> ]
+   IN { SHARE | WRITE | EXCLUSIVE } MODE [  WAIT <time> ];
 ```
 
 
@@ -38,7 +41,7 @@ LOCK TABLE <table-list> [ WITH HOLD ]
 
 ```
 LOCK TABLE <table-name>
-   IN WRITE MODE [ WAIT <time> ]
+   IN WRITE MODE [ WAIT <time> ];
 ```
 
 
@@ -70,7 +73,7 @@ Must be a base table, not a view.
 
 ```
 <table-list> ::=
-   [ <owner>.]<table-name> [,...]
+   [ <owner>.]<table-name> [,...];
 ```
 
 
@@ -171,13 +174,13 @@ Specifies maximum blocking time for all lock types. This clause is mandatory whe
 
     ```
     LOCK TABLE Employees IN WRITE MODE WAIT
-    LOCK TABLE Customers IN WRITE MODE WAIT
+    LOCK TABLE Customers IN WRITE MODE WAIT;
     ```
 
 -   `LOCK TABLE` statements run on tables in the data lake data lake Relational Engine main store on the coordinator do not affect access to those tables from connections on secondary servers. For example, on a coordinator connection, issue the command:
 
     ```
-    LOCK TABLE coord1 WITH HOLD IN EXCLUSIVE MODE
+    LOCK TABLE coord1 WITH HOLD IN EXCLUSIVE MODE;
     ```
 
     Note that when the command above runs on table `coord1` from the coordinator, you can access it from secondary nodes, that is, the `select` query works fine. However, you cannot modify `coord1`, and running an `insert` query returns the error: `table 'coord1' not found`. To sum it up, you can access `coord1` but modifying it throws an error.
@@ -200,7 +203,7 @@ Specifies maximum blocking time for all lock types. This clause is mandatory whe
     COMMIT;
     LOCK TABLE t1 IN SHARE MODE
     INSERT INTO t1 VALUES(30)
-    END
+    END;
     ```
 
 -   The Watcom-SQL stored procedure dialect supports `LOCK TABLE`. The default command delimiter is a semicolon \(;\). For example:
@@ -212,7 +215,7 @@ Specifies maximum blocking time for all lock types. This clause is mandatory whe
     COMMIT;
     LOCK TABLE t1 IN SHARE MODE
     INSERT INTO t1 VALUES(30)
-    END
+    END;
     ```
 
 
@@ -231,14 +234,10 @@ The privilege varies by lock mode.
 
 Mode
 
-
-
 </th>
 <th valign="top">
 
 Privilege Required
-
-
 
 </th>
 </tr>
@@ -246,8 +245,6 @@ Privilege Required
 <td valign="top">
 
 Share mode
-
-
 
 </td>
 <td valign="top">
@@ -266,8 +263,6 @@ Requires one of:
 <td valign="top">
 
 Exclusive mode
-
-
 
 </td>
 <td valign="top">
@@ -305,20 +300,20 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
     ```
     LOCK TABLE Customers, Employees IN WRITE MODE WAIT
-    '00:05:03'
+    '00:05:03';
     ```
 
 -   This example waits indefinitely until the WRITE lock on the `Customers` and `Employees` tables is available, or an interrupt occurs:
 
     ```
-    LOCK TABLE Customers, Employees IN WRITE MODE WAIT
+    LOCK TABLE Customers, Employees IN WRITE MODE WAIT;
     ```
 
 -   This example holds a WRITE lock on the `Customers` table and automatically releases the table lock acquired earlier on the `Employees` table:
 
     ```
     LOCK TABLE Employees IN WRITE MODE WAIT
-    LOCK TABLE Customers IN WRITE MODE WAIT
+    LOCK TABLE Customers IN WRITE MODE WAIT;
     ```
 
 

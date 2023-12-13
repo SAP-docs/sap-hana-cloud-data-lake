@@ -6,10 +6,13 @@ Displays all locks \(including mutexes\) in the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa45ebe7284f210158f47fd12eed9b3b5__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -19,7 +22,7 @@ sa_locks(
     [, <creator> 
     [, <table_name> 
     [, <max_locks>
-    [, <object_type> ] ] ] ] )
+    [, <object_type> ] ] ] ] );
 ```
 
 
@@ -102,21 +105,15 @@ sa_locks(
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -125,21 +122,15 @@ Description
 
 `conn_name`
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the current connection.
-
-
 
 </td>
 </tr>
@@ -148,21 +139,15 @@ The name of the current connection.
 
 `conn_id`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The connection ID number.
-
-
 
 </td>
 </tr>
@@ -171,21 +156,15 @@ The connection ID number.
 
 `user_id`
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The user ID for the connection.
-
-
 
 </td>
 </tr>
@@ -194,21 +173,15 @@ The user ID for the connection.
 
 `table_type`
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(6\)
 
-
-
 </td>
 <td valign="top">
 
 The type of table. This type is either BASE for a table, GLBTMP for global temporary table, or MVIEW for a materialized view.
-
-
 
 </td>
 </tr>
@@ -217,21 +190,15 @@ The type of table. This type is either BASE for a table, GLBTMP for global tempo
 
 `creator`
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The owner of the table.
-
-
 
 </td>
 </tr>
@@ -240,21 +207,15 @@ The owner of the table.
 
 `table_name`
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The table on which the lock is held.
-
-
 
 </td>
 </tr>
@@ -263,21 +224,15 @@ The table on which the lock is held.
 
 `index_id`
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The index ID or NULL.
-
-
 
 </td>
 </tr>
@@ -286,21 +241,15 @@ The index ID or NULL.
 
 `lock_class`
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(8\)
 
-
-
 </td>
 <td valign="top">
 
 The lock class. One of Schema, Row, Table, or Position.
-
-
 
 </td>
 </tr>
@@ -309,21 +258,15 @@ The lock class. One of Schema, Row, Table, or Position.
 
 `lock_duration`
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(11\)
 
-
-
 </td>
 <td valign="top">
 
 The duration of the lock. One of Transaction, Position, or Connection.
-
-
 
 </td>
 </tr>
@@ -332,21 +275,15 @@ The duration of the lock. One of Transaction, Position, or Connection.
 
 `lock_type`
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(9\)
 
-
-
 </td>
 <td valign="top">
 
 The lock type \(this is dependent on the lock class\).
-
-
 
 </td>
 </tr>
@@ -355,21 +292,15 @@ The lock type \(this is dependent on the lock class\).
 
 `row_identifier`
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The identifier for the row. This is either an 8-byte row identifier or NULL.
-
-
 
 </td>
 </tr>
@@ -390,21 +321,15 @@ The `sa_locks` procedure returns a result set containing information about all t
 
 Lock Class
 
-
-
 </th>
 <th valign="top">
 
 Lock Types
 
-
-
 </th>
 <th valign="top">
 
 Comments
-
-
 
 </th>
 </tr>
@@ -412,8 +337,6 @@ Comments
 <td valign="top">
 
 Schema
-
-
 
 </td>
 <td valign="top">
@@ -428,16 +351,12 @@ Schema
 
 For schema locks, the row\_identifier and index ID values are NULL.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Row
-
-
 
 </td>
 <td valign="top">
@@ -460,16 +379,12 @@ A surrogate lock is a special case of a row lock. Surrogate locks are held on su
 
 If required, key and non-key portions of a row can be locked independently. A connection can obtain a read lock on the key portion of a row for shared \(read\) access so that other connections can still obtain write locks on other non-key columns of a row. Updating non-key columns of a row does not interfere with the insertion and deletion of foreign rows referencing that row.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Table
-
-
 
 </td>
 <td valign="top">
@@ -485,16 +400,12 @@ Table
 
 None
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Position
-
-
 
 </td>
 <td valign="top">
@@ -509,13 +420,13 @@ Position
 
 Usually a position lock is also held on a specific row, and that row's 64-bit row identifier appears in the row\_identifier column in the result set. However, Position locks can be held on entire scans \(index or sequential\), in which case the row\_identifier column is NULL.
 
-
-
 </td>
 </tr>
 </table>
 
 A position lock can be associated with a sequential table scan, or an index scan. The index\_id column indicates whether the position lock is associated with a sequential scan. If the position lock is held because of a sequential scan, the index\_id column is NULL. If the position lock is held as the result of a specific index scan, the index identifier of that index is listed in the index\_id column. The index identifier corresponds to the primary key of the ISYSIDX system table, which can be viewed using the SYSIDX view. If the position lock is held for scans over all indexes, the index ID value is -1.
+
+The result set of the sa\_locks system procedure contains the row\_identifier column that allows you to identify the row in a table the lock refers to. It may not be necessary to specify the WITH NOLOCK clause; however, if the query is issued at isolation levels other than 0, the query may block until the locks are released, which reduces the usefulness of this method of checking.
 
 
 
@@ -536,15 +447,15 @@ None
 
 
 
-## Example
+## Examples
 
-You can execute the following query to identify locks:
+This example uses the sa\_locks system procedure to return the locks that are currently held in the database, including information about the connection holding the lock, the lock duration, and the lock type.
 
 ```
 CALL sa_locks( ); 
 ```
 
-Use the sa\_locks system procedure to view the locks that are currently held in the database, including information about the connection holding the lock, the lock duration, and the lock type. Execute a query that joins the results of the sa\_locks system procedure to a particular table by using the ROWID of the table in the join predicate.
+This example executes a query that joins the results of the sa\_locks system procedure to a particular table by using the ROWID of the table in the join predicate.
 
 ```
 SELECT S.conn_id, S.user_id, S.lock_class, S.lock_type, E.* 
@@ -552,6 +463,4 @@ SELECT S.conn_id, S.user_id, S.lock_class, S.lock_type, E.*
      ON ROWID(E) = S.row_identifier 
   WHERE S.table_name = 'Employees';
 ```
-
-The result set of the sa\_locks system procedure contains the row\_identifier column that allows you to identify the row in a table the lock refers to. It may not be necessary to specify the WITH NOLOCK clause; however, if the query is issued at isolation levels other than 0, the query may block until the locks are released, which reduces the usefulness of this method of checking.
 

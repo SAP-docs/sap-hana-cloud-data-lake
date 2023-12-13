@@ -6,10 +6,13 @@ Validates the current database, or a single table, materialized view, or index i
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa452656484f210159476db66cbecc73a__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -28,7 +31,7 @@ Syntax 1 – Validates a Database
 <dd>
 
 ```
-VALIDATE { CHECKSUM | DATABASE }
+VALIDATE { CHECKSUM | DATABASE };
 ```
 
 
@@ -44,7 +47,7 @@ Syntax 2 – Validates Tables and Materialized Views
 VALIDATE 
    { TABLE [ <owner>.]<table-name>
    | MATERIALIZED VIEW [ { <owner> | <schema-name> }.]<materialized-view-name> }
-   [ WITH EXPRESS CHECK ]
+   [ WITH EXPRESS CHECK ];
 ```
 
 
@@ -61,7 +64,7 @@ VALIDATE
    { INDEX <index-name> 
    | [ INDEX ] FOREIGN KEY <role-name> 
    | [ INDEX ] PRIMARY KEY  }
-   ON [ { <owner> | <schema-name> }.]{ <table-name> | <materialized-view-name> }
+   ON [ { <owner> | <schema-name> }.]{ <table-name> | <materialized-view-name> };
 ```
 
 
@@ -75,7 +78,7 @@ Syntax 4 – Validates Text Indexes
 
 ```
 VALIDATE TEXT INDEX <index-name> 
-   ON [ { <owner> | <schema-name> }.]<table-name>
+   ON [ { <owner> | <schema-name> }.]<table-name>;
 ```
 
 

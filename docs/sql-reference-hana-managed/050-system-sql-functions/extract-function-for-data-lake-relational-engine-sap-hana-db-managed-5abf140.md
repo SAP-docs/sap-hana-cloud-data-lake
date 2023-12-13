@@ -7,7 +7,7 @@ Returns a date part from a DATE, TIME, or TIMESTAMP expression.
 
 
 ```
-EXTRACT( <date-part> FROM <timestamp-expression> )
+EXTRACT( <date-part> FROM <timestamp-expression> );
 ```
 
 
@@ -20,7 +20,7 @@ EXTRACT( <date-part> FROM <timestamp-expression> )
 <dl>
 <dt><b>
 
- *<date-part\>* 
+*<date-part\>* 
 
 </b></dt>
 <dd>
@@ -31,7 +31,7 @@ The date part to be returned. The valid values are YEAR, MONTH, DAY, HOUR, MINUT
 
 </dd><dt><b>
 
- *<timestamp-expression\>* 
+*<timestamp-expression\>* 
 
 </b></dt>
 <dd>
@@ -47,7 +47,7 @@ The DATE, TIME, or TIMESTAMP value.
 
 <a name="loio5abf14024b6949cd9539ee8467acfb10__section_qn4_ypd_gsb"/>
 
-## Returns
+## Result Set
 
 If *<date-part\>* is SECOND, then the function returns a string that includes a 7-digit fractional second \(and up to 100-nanosecond accuracy if the date/time datatype supports it\). For all other *<date-part\>* values, the function returns an INTEGER value.
 
@@ -62,6 +62,8 @@ The EXTRACT function is similar to the DATEPART function but not completely. The
 Date parts YY, MM, DD, HH, MI, SS, TZH, and TZM may also be used but do not conform to the SQL Standard.
 
 
+
+## Example
 
 The following statement returns 56:
 
@@ -86,5 +88,5 @@ It does so since 21-07-01 represents July 1, 2021.
 **Related Information**  
 
 
-[EXTRACT Function [Date and Time] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/c3565b1366b448828db3cc916507f15b.html "Returns a date part from a DATE, TIME, or TIMESTAMP expression.") :arrow_upper_right:
+[EXTRACT Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/c3565b1366b448828db3cc916507f15b.html "Returns a date part from a DATE, TIME, or TIMESTAMP expression.") :arrow_upper_right:
 

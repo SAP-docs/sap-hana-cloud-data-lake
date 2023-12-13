@@ -17,14 +17,10 @@ The NULL value is a special value that is different from any valid value for any
 
 Situation
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Description
-
-
 
 </th>
 </tr>
@@ -33,14 +29,10 @@ Description
 
 missing
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 The field does have a value, but that value is unknown.
-
-
 
 </td>
 </tr>
@@ -49,14 +41,10 @@ The field does have a value, but that value is unknown.
 
 inapplicable
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 The field does not apply for this particular row.
-
-
 
 </td>
 </tr>
@@ -77,21 +65,15 @@ In the following examples, the column Salary contains the NULL value.
 
 Condition
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Truth Value
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Selected?
-
-
 
 </th>
 </tr>
@@ -100,21 +82,15 @@ Selected?
 
 Salary = NULL
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNKNOWN
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 NO
-
-
 
 </td>
 </tr>
@@ -123,21 +99,15 @@ NO
 
 Salary <\> NULL
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNKNOWN
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 NO
-
-
 
 </td>
 </tr>
@@ -146,21 +116,15 @@ NO
 
 NOT \(Salary = NULL\)
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNKNOWN
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 NO
-
-
 
 </td>
 </tr>
@@ -169,21 +133,15 @@ NO
 
 NOT \(Salary <\> NULL\)
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNKNOWN
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 NO
-
-
 
 </td>
 </tr>
@@ -192,21 +150,15 @@ NO
 
 Salary = 1000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNKNOWN
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 NO
-
-
 
 </td>
 </tr>
@@ -215,21 +167,15 @@ NO
 
 Salary IS NULL
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 TRUE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 YES
-
-
 
 </td>
 </tr>
@@ -238,21 +184,15 @@ YES
 
 Salary IS NOT NULL
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 FALSE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 NO
-
-
 
 </td>
 </tr>
@@ -261,21 +201,15 @@ NO
 
 Salary = 1000 IS UNKNOWN
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 TRUE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 YES
-
-
 
 </td>
 </tr>

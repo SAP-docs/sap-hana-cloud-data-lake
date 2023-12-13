@@ -250,7 +250,7 @@ Identifies a table in the data lake Relational Engine. When the WITH REMOTE clau
 
 ```
 <remote_location_clause> ::= 
-   AT "SYSHDL_<relational_container_name>_SOURCE"."NULL"."<relational_container_schema_name>"."<data_lake_table_name>"
+   AT "<hana_relational_container_schema>_SOURCE"."NULL"."<relational_container_schema_name>"."<data_lake_table_name>"
 ```
 
 

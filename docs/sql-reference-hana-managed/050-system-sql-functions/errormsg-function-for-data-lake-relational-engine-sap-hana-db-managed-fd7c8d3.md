@@ -7,7 +7,7 @@ Provides the error message for the current error, or for a specified SQLSTATE or
 
 
 ```
-ERRORMSG ( [ <sqlstate> | <sqlcode> ] )
+ERRORMSG ( [ <sqlstate> | <sqlcode> ] );
 ```
 
 
@@ -47,7 +47,7 @@ Integer representing the SQLCODE for which the error message is to be returned.
 
 <a name="loiofd7c8d326bf546a7a367bfca738c4357__section_k12_qsg_trb"/>
 
-## Returns
+## Result Set
 
 A string containing the error message.
 
@@ -83,11 +83,11 @@ The `ERRORMSG` function returns SAP SQL Anywhere and data lake Relational Engine
 The following statement returns the error message for SQLCODE -813:
 
 ```
-select errormsg( -813 )
+select errormsg( -813 );
 ```
 
 **Related Information**  
 
 
-[ERRORMSG Function [Miscellaneous] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a54f2ead84f210158668ce108de25460.html "Provides the error message for the current error, or for a specified SQLSTATE or SQLCODE value.") :arrow_upper_right:
+[ERRORMSG Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a54f2ead84f210158668ce108de25460.html "Provides the error message for the current error, or for a specified SQLSTATE or SQLCODE value.") :arrow_upper_right:
 

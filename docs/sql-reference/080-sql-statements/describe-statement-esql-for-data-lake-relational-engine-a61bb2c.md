@@ -6,10 +6,13 @@ Gets information about the host variables required to store data retrieved from 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61bb2cb84f21015923297bc8b650772__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -26,7 +29,7 @@ DESCRIBE
 <long-name-spec> ::=
    { OWNER.TABLE.COLUMN 
    | TABLE.COLUMN 
-   | COLUMN }
+   | COLUMN };
 ```
 
 
@@ -226,7 +229,7 @@ The following applies to some clauses:
       EXEC SQL DESCRIBE OUTPUT 
         FOR employee_statement 
         INTO sqlda;
-    }
+    };
     ```
 
 

@@ -6,10 +6,13 @@ Creates a new procedure that is compatible with SAP Adaptive Server Enterprise.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa618891584f210158ae1b5a5cdce0a34__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -22,7 +25,7 @@ CREATE [ OR REPLACE ] PROCEDURE { <owner> | <schema-name> }.]<procedure-name>
    … [ [ ( ] <@parameter_name> <data-type> [ = <default> ] [ OUTPUT ] [ , … ] [ ) ] ]
    … [ WITH RECOMPILE ]
    … AS
-   … <statement-list>
+   … <statement-list>;
 ```
 
 
@@ -125,8 +128,6 @@ Groups of procedures are not supported.
 
 ### 
 
-Requires one of:
-
 -   To create a self owned procedures requires the CREATE PROCEDURE system privilege.
 -   To create a procedure owned by another user requires one of:
     -   CREATE ANY PROCEDURE system privilege
@@ -164,5 +165,5 @@ Automatic commit
 **Related Information**  
 
 
-[CREATE PROCEDURE Statement [T-SQL] for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/873f31b35574493f8d3a7974681eccb3.html "Creates a new procedure that is compatible with SAP Adaptive Server Enterprise.") :arrow_upper_right:
+[CREATE PROCEDURE Statement \[T-SQL\] for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/873f31b35574493f8d3a7974681eccb3.html "Creates a new procedure that is compatible with SAP Adaptive Server Enterprise.") :arrow_upper_right:
 

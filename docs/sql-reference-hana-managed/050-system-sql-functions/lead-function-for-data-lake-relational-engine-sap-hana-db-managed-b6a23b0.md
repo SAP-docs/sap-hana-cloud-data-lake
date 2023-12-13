@@ -8,7 +8,7 @@ An interrow function that returns the value of an attribute in a subsequent row 
 
 ```
 LEAD ( <value_expr>[, <offset>[, <default> ] ] ) 
-    OVER ( [ PARTITION BY <window_partition> ] ORDER BY <window_ordering> )
+    OVER ( [ PARTITION BY <window_partition> ] ORDER BY <window_ordering> );
 ```
 
 
@@ -87,7 +87,7 @@ The LEAD function requires an OVER \(ORDER\_BY\) window specification. The windo
 
 You cannot define an analytic expression in *<value\_expr\>*. That is, you cannot nest analytic functions, but you can use other built-in function expressions for *<value\_expr\>*.
 
-You must enter a non-negative numeric data type for *<offset\>*. Entering ***0*** returns the current row. Entering a negative number generates an error.
+You must enter a non-negative numeric data type for *<offset\>*. Entering `0` returns the current row. Entering a negative number generates an error.
 
 The default value of *<default\>* is NULL. The data type of *<default\>* must be implicitly convertible to the data type of the *<value\_expr\>* value or else data lake Relational Engine generates a conversion error.
 
@@ -135,5 +135,5 @@ dID        StartDate    Salary      Lead(Salary)
 **Related Information**  
 
 
-[LEAD Function [Analytical] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a55d051484f21015b82fe3d1795a7a94.html "An interrow function that returns the value of an attribute in a subsequent row in the table or table partition.") :arrow_upper_right:
+[LEAD Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a55d051484f21015b82fe3d1795a7a94.html "An interrow function that returns the value of an attribute in a subsequent row in the table or table partition.") :arrow_upper_right:
 

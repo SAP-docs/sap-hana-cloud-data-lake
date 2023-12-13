@@ -6,10 +6,13 @@ Controls whether queries with an ambiguous syntax for multi-table joins are allo
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa635b3b984f21015a616cf8663a164c7__section_ggq_kgr_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Controls whether queries with an ambiguous syntax for multi-table joins are allo
 ## Syntax
 
 ```
-EXTENDED_JOIN_SYNTAX = { ON | OFF }
+EXTENDED_JOIN_SYNTAX = { ON | OFF };
 ```
 
 
@@ -60,28 +63,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -90,28 +85,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -120,28 +107,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -158,13 +137,13 @@ This option reports a syntax error for those queries containing outer joins that
 This join clause illustrates the kind of query that is reported where C1 is a condition:
 
 ```
-( R left outer join T , T  join S on ( C1 ) )
+( R left outer join T , T  join S on ( C1 ) );
 ```
 
 If EXTENDED\_JOIN\_SYNTAX is set to ON, this query is interpreted as follows, where C1 and C2 are conditions:
 
 ```
-( R left outer join T on ( C1 ) ) join S on ( C2 )
+( R left outer join T on ( C1 ) ) join S on ( C2 );
 ```
 
 **Related Information**  

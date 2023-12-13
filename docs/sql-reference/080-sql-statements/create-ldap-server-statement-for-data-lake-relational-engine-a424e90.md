@@ -6,10 +6,13 @@ Creates a new LDAP server configuration object for LDAP user authentication. Par
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa424e90384f21015bd3286d6da351964__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,7 +26,7 @@ CREATE LDAP SERVER <ldapua-server-name>
       | CONNECTION TIMEOUT <timeout_value> 
       | CONNECTION RETRIES <retry_value> 
       | TLS OFF }  } ]
-   [ WITH ACTIVATE ]
+   [ WITH ACTIVATE ];
 ```
 
 
@@ -161,7 +164,7 @@ ANSI SQL – compliance level: Transact-SQL extension.
     CREATE LDAP SERVER apps_primary
     AUTHENTICATION URL 'ldaps://my_LDAPserver:389/' 
     CONNECTION TIMEOUT 3000 
-    WITH ACTIVATE
+    WITH ACTIVATE;
     ```
 
 -   The following example uses the same search parameters as example 1, but specifies “ldaps” so that a Secure LDAP connection is established with the LDAP server on host my\_LDAPserver, port 636. Only LDAP clients using the Secure LDAP protocol may now connect on this port. The database security option TRUSTED\_CERTIFICATE\_FILE must be set with a file name containing the certificate of the certificate authority \(CA\) that signed the certificate used by the LDAP server at "ldaps://my\_LDAPserver:636". During the handshake with the LDAP server, the certificate presented by the LDAP server is checked by the data lake Relational Engine server \(the LDAP client\) to ensure that it is signed by one of the certificates listed in the file. This establishes trust by the client that the server is who it says it is. The ACCESS ACCOUNT and IDENTIFIED BY parameters establish trust by the LDAP server that the client is who it says it is.
@@ -173,7 +176,7 @@ ANSI SQL – compliance level: Transact-SQL extension.
     AUTHENTICATION URL 'ldaps://my_LDAPserver:636/'
     CONNECTION TIMEOUT 3000
     TLS OFF
-    WITH ACTIVATE
+    WITH ACTIVATE;
     
     ```
 

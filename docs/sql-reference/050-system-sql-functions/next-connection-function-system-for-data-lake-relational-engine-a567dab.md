@@ -7,7 +7,7 @@ Returns the next connection number, or the first connection if the parameter is 
 
 
 ```
-NEXT_CONNECTION ( { <connection-id> }, { <database-id> } )
+NEXT_CONNECTION ( { <connection-id> }, { <database-id> } );
 ```
 
 
@@ -45,7 +45,7 @@ An integer representing one of the databases on the current server. If you suppl
 
 
 
-## Returns
+## Result Set
 
 INT
 

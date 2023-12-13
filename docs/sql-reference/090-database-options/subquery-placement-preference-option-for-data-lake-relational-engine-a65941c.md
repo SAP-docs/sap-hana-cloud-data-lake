@@ -6,8 +6,11 @@ Controls the placement of correlated subquery predicate operators within a query
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa65941ca84f210159194c9d97b112a8c__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

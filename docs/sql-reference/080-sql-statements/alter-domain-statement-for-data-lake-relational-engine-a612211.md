@@ -6,16 +6,19 @@ Renames a user-defined domain or data type.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa612211384f21015886fc13f57b0def2__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 ALTER { DOMAIN | DATATYPE } <user-type>
-   RENAME <new-name>
+   RENAME <new-name>;
 ```
 
 
@@ -86,7 +89,7 @@ Automatic commit
 The following example renames the `Address` domain to `MailingAddress`:
 
 ```
-ALTER DOMAIN Address RENAME MailingAddress
+ALTER DOMAIN Address RENAME MailingAddress;
 ```
 
 **Related Information**  
@@ -94,7 +97,7 @@ ALTER DOMAIN Address RENAME MailingAddress
 
 [CREATE DOMAIN Statementfor Data Lake Relational Engine](create-domain-statementfor-data-lake-relational-engine-a616d8e.md "Creates a user-defined data type in the database.")
 
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
+[DROP DOMAIN Statement for Data Lake Relational Engine](drop-domain-statement-for-data-lake-relational-engine-b9516c8.md "Removes a domain (data type) from the database.")
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

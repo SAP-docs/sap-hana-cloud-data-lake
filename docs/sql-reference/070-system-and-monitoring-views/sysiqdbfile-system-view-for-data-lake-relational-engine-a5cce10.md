@@ -6,10 +6,13 @@ Presents group information from `ISYSIQDBFILE` in a readable format.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5cce10f84f210159e2cec3b04dbc86a__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,21 +26,15 @@ Presents group information from `ISYSIQDBFILE` in a readable format.
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Column Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,21 +43,15 @@ Description
 
 dbfile\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALL INT
 
-
-
 </td>
 <td valign="top">
 
 Unique ID for the dbfile.
-
-
 
 </td>
 </tr>
@@ -69,21 +60,15 @@ Unique ID for the dbfile.
 
 start\_block
 
-
-
 </td>
 <td valign="top">
 
 ROWID
 
-
-
 </td>
 <td valign="top">
 
 Number of the first block.
-
-
 
 </td>
 </tr>
@@ -92,21 +77,15 @@ Number of the first block.
 
 block\_count
 
-
-
 </td>
 <td valign="top">
 
 ROWID
 
-
-
 </td>
 <td valign="top">
 
 Number of blocks for this file \(dbspace\).
-
-
 
 </td>
 </tr>
@@ -115,21 +94,15 @@ Number of blocks for this file \(dbspace\).
 
 reserve\_size
 
-
-
 </td>
 <td valign="top">
 
 ROWID
 
-
-
 </td>
 <td valign="top">
 
 Pre-allocated storage space for the dbspace.
-
-
 
 </td>
 </tr>
@@ -138,21 +111,15 @@ Pre-allocated storage space for the dbspace.
 
 allocated
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Defines whether the segment is pre-allocated \(T\) or auto-allocated \(F\).
-
-
 
 </td>
 </tr>
@@ -161,21 +128,15 @@ Defines whether the segment is pre-allocated \(T\) or auto-allocated \(F\).
 
 data\_offset
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Identifies the byte location of where the data lake Relational Engine data starts, relative to the beginning of the raw partition.
-
-
 
 </td>
 </tr>
@@ -184,21 +145,15 @@ Identifies the byte location of where the data lake Relational Engine data start
 
 create\_time
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Date and time the file was created.
-
-
 
 </td>
 </tr>
@@ -207,21 +162,15 @@ Date and time the file was created.
 
 last\_modified
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Date and time the file was last modified.
-
-
 
 </td>
 </tr>
@@ -230,21 +179,15 @@ Date and time the file was last modified.
 
 read\_write
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 T indicates read-write.
-
-
 
 </td>
 </tr>
@@ -253,21 +196,15 @@ T indicates read-write.
 
 online
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 T indicates online.
-
-
 
 </td>
 </tr>
@@ -276,21 +213,15 @@ T indicates online.
 
 create\_txn\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Transaction ID that created the dbfile.
-
-
 
 </td>
 </tr>
@@ -299,21 +230,15 @@ Transaction ID that created the dbfile.
 
 alter\_txn\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Transaction ID that last modified read\_write status.
-
-
 
 </td>
 </tr>
@@ -322,21 +247,15 @@ Transaction ID that last modified read\_write status.
 
 server\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Multiplex server name.
-
-
 
 </td>
 </tr>
@@ -347,10 +266,10 @@ Multiplex server name.
 ## Constraints on Underlying System Table
 
 ```
-Foreign key (server_id) references SYS.ISYSIQMPXSERVER
+Foreign key (server_id) references SYS.ISYSIQMPXSERVER;
 ```
 
 ```
-Unique (server_id, file_name) 
+Unique (server_id, file_name); 
 ```
 

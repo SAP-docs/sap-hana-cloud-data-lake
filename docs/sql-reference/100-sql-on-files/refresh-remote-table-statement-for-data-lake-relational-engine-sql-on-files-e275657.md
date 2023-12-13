@@ -6,10 +6,12 @@ Update the current list of data source files for a SQL on Files remote table by 
 
 
 
-> ### Restriction:  
-> This topic is limited to SQL on Files use cases.
-> 
-> This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioe2756579d6354112a5e5e0f9fe0c2ccb__section_fry_b3b_nqb"/>
+
+## Usage
+
+-   This topic is limited to SQL on Files use cases.
+-   This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,7 +25,7 @@ Update the current list of data source files for a SQL on Files remote table by 
 ## Syntax
 
 ```
-REFRESH TABLE [ <owner> .]<virtual-table-name>[,... ] IN FILES_SERVICE
+REFRESH TABLE [ <owner> .]<virtual-table-name>[,... ] IN FILES_SERVICE;
 ```
 
 
@@ -117,5 +119,5 @@ REFRESH TABLE ExternalSchema1.ExternalTable1 IN FILES_SERVICE;
 
 [CREATE \(Remote\) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](create-remote-table-statement-for-data-lake-relational-engine-sql-on-files-beffc07.md "Create a remote table managed by SQL on Files.")
 
-[REFRESH (Remote) TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) [SQL on Files]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/054b15028fcc43dba2b047f8dbe6b42b.html "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.") :arrow_upper_right:
+[REFRESH (Remote) TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/054b15028fcc43dba2b047f8dbe6b42b.html "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.") :arrow_upper_right:
 

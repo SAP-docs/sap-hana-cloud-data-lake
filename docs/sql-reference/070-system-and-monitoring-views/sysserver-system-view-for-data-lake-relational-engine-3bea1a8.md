@@ -6,10 +6,13 @@ Each row in the SYSSERVER system view describes a remote server. The underlying 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bea1a826c5f1014a08c927368ee86e5__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,21 +26,15 @@ Each row in the SYSSERVER system view describes a remote server. The underlying 
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,21 +43,15 @@ Description
 
 srvid
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 An identifier for the remote server.
-
-
 
 </td>
 </tr>
@@ -69,21 +60,15 @@ An identifier for the remote server.
 
 srvname
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the remote server.
-
-
 
 </td>
 </tr>
@@ -92,21 +77,15 @@ The name of the remote server.
 
 srvclass
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The server class, as specified in the CREATE SERVER statement.
-
-
 
 </td>
 </tr>
@@ -115,21 +94,15 @@ The server class, as specified in the CREATE SERVER statement.
 
 srvinfo
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 Server information.
-
-
 
 </td>
 </tr>
@@ -138,21 +111,15 @@ Server information.
 
 srvreadonly
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Whether the server is read-only.
-
-
 
 </td>
 </tr>

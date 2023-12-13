@@ -6,8 +6,11 @@ Determines when the server returns control to an application following a COMMIT.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa634f55784f21015aa139fb52558ad7a__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

@@ -11,7 +11,7 @@ CSCONVERT(
 <string-expression> ,
 <target-charset-string> 
 [ , <source-charset-string> [ , <options> ] ] 
-)
+);
 ```
 
 
@@ -187,7 +187,7 @@ Specify `read_bom=on` or `read_bom=off` to turn on or off reading byte order mar
 
 <a name="loio81f552706ce21014b4d1b57dec4dfd29__CSCONVERT_returns1"/>
 
-## Returns
+## Result Set
 
 LONG BINARY
 
@@ -280,7 +280,7 @@ FROM mytable;
 **Related Information**  
 
 
-[CSCONVERT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/418e39de3c0f4540aef5839871b4d08c.html "Converts strings between character sets.") :arrow_upper_right:
+[CSCONVERT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/418e39de3c0f4540aef5839871b4d08c.html "Converts strings between character sets.") :arrow_upper_right:
 
-[Character Set Encodings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/8a8f277561e547b8a4a0fdfc7f7db7f7.html "A complete list of supported character set encodings for SAP HANA Cloud, data lake and their aliases.") :arrow_upper_right:
+[Character Set Encodings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/8a8f277561e547b8a4a0fdfc7f7db7f7.html "A complete list of supported character set encodings for SAP HANA Cloud, data lake and their aliases.") :arrow_upper_right:
 

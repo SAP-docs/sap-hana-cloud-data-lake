@@ -6,10 +6,13 @@ The SYSSCHEMA system view that displays a list of schemas.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio28bd6e7af3a74d36bd39680341f1b5f5__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ The SYSSCHEMA system view that displays a list of schemas.
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 schema\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Displays the name of the schema.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ Displays the name of the schema.
 
 schema\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Displays the unique identifier for the schema.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ Displays the unique identifier for the schema.
 
 owner\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Displays the owner of the schema.
-
-
 
 </td>
 </tr>

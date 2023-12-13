@@ -6,15 +6,18 @@ Reports information about space available for a transaction log, transaction log
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be5b0046c5f10148d0cfa4686fbb0ce__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_disk_free_space( [ <p_dbspace_name> ] )
+sa_disk_free_space( [ <p_dbspace_name> ] );
 ```
 
 
@@ -25,7 +28,7 @@ sa_disk_free_space( [ <p_dbspace_name> ] )
 <dl>
 <dt><b>
 
- *<p\_dbspace\_name\>* 
+*<p\_dbspace\_name\>* 
 
 </b></dt>
 <dd>
@@ -50,21 +53,15 @@ Specify SYSTEM to get information about the main database file, TEMPORARY or TEM
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -73,21 +70,15 @@ Description
 
 dbspace\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 This is the transaction log file, transaction log mirror file, or temporary file.
-
-
 
 </td>
 </tr>
@@ -96,21 +87,15 @@ This is the transaction log file, transaction log mirror file, or temporary file
 
 free\_space
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The number of free bytes on the volume.
-
-
 
 </td>
 </tr>
@@ -119,21 +104,15 @@ The number of free bytes on the volume.
 
 total\_space
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The total amount of space available on the drive.
-
-
 
 </td>
 </tr>
@@ -162,7 +141,9 @@ None
 
 
 
-The following example uses the sa\_disk\_free\_space system procedure to return a result set containing information about available space.
+## Examples
+
+This example uses the sa\_disk\_free\_space system procedure to return a result set containing information about available space.
 
 ```
 CALL sa_disk_free_space( );
@@ -175,21 +156,15 @@ CALL sa_disk_free_space( );
 
 dbspace\_name
 
-
-
 </th>
 <th valign="top">
 
 free\_space
 
-
-
 </th>
 <th valign="top">
 
 total\_space
-
-
 
 </th>
 </tr>
@@ -198,21 +173,15 @@ total\_space
 
 system
 
+</td>
+<td valign="top">
 
+513628426240
 
 </td>
 <td valign="top">
 
-10952101888
-
-
-
-</td>
-<td valign="top">
-
-21410402304
-
-
+517290852352
 
 </td>
 </tr>
@@ -221,21 +190,15 @@ system
 
 translog
 
+</td>
+<td valign="top">
 
+513628426240
 
 </td>
 <td valign="top">
 
-10952101888
-
-
-
-</td>
-<td valign="top">
-
-21410402304
-
-
+517290852352
 
 </td>
 </tr>
@@ -244,21 +207,15 @@ translog
 
 temporary
 
+</td>
+<td valign="top">
 
+11332939776
 
 </td>
 <td valign="top">
 
-10952101888
-
-
-
-</td>
-<td valign="top">
-
-21410402304
-
-
+21440212992
 
 </td>
 </tr>

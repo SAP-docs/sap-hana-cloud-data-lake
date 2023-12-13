@@ -6,17 +6,20 @@ Create a new user, and can also be used to change a password. However, it is rec
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa3e04cc984f2101598aba78be9f2b17d__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 GRANT CONNECT 
-   TO <userID> [, …]
-   IDENTIFIED BY <password> [, …]
+   TO <userID> [, …];
+   IDENTIFIED BY <password> [, …];
 ```
 
 
@@ -101,19 +104,19 @@ Invalid names for database user IDs and passwords include those that:
 
     ```
     GRANT CONNECT TO Laurel, Hardy
-    IDENTIFIED BY Stan, Ollie
+    IDENTIFIED BY Stan, Ollie;
     ```
 
 -   The following example creates user `Jane` with no password:
 
     ```
-    GRANT CONNECT TO Jane
+    GRANT CONNECT TO Jane;
     ```
 
 -   The following example changes the password for `Bob` to `newpassword`:
 
     ```
-    GRANT CONNECT TO Bob IDENTIFIED BY <newpassword>
+    GRANT CONNECT TO Bob IDENTIFIED BY <newpassword>;
     ```
 
 

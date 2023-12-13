@@ -11,7 +11,7 @@ Removes an SAP HANA database virtual table that points to a data lake Relational
 ## Syntax
 
 ```
-DROP TABLE <hana_relational_container_schema_name>.<virtual_table_name> [ <drop_option> ] [ WITH REMOTE ]
+DROP TABLE <hana_relational_container_schema>.<virtual_table_name> [ <drop_option> ] [ WITH REMOTE ]
 ```
 
 

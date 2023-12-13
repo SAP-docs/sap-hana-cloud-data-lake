@@ -6,12 +6,11 @@ Alters a materialized view.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
 
 
 
@@ -28,7 +27,7 @@ ALTER MATERIALIZED VIEW [ <schema-name>.]<mat-view-name>
    | SUBPARTITION BY RANGE <range-partition-decl>
    | ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>
    | UNPARTITION
-   | [ { AUTO | MANUAL } { FULL | INCREMENTAL } REFRESH ] }
+   | { AUTO | MANUAL } { FULL | INCREMENTAL } REFRESH }
 ```
 
 
@@ -88,50 +87,44 @@ FULL | INCREMENTAL
 
 Specifies the refresh build method. FULL \(default\) truncates the materialized view and then populates the view by fully recomputing its content. INCREMENTAL attempts to refresh the materialized view using a delta computed since the last refresh. If an appropriate delta cannot be computed efficiently, then full refresh is performed. To perform an INCREMENTAL refresh on a materialized view, the view must:
 
-1.  Satisfy the following criteria:
-    -   The view must be uninitialized.
-    -   If the view does not contain outer joins, then the view must have a unique index on non nullable columns. If the view contains outer joins, then the view must have a unique index on non nullable columns, or a unique index declared as WITH NULLS NOT DISTINCT on nullable columns.
-    -   If the view definition is a grouped query, then the unique index columns must correspond to SELECT list items that are not aggregate functions. The view definition cannot contain:
-        -   GROUPING SETS clauses
-        -   CUBE clauses
-        -   ROLLUP clauses
-        -   DISTINCT clauses
-        -   row limit clauses
-        -   non-deterministic expressions
-        -   self and recursive joins
-        -   LATERAL, CROSS APPLY, or APPLY clauses
+1.  The materialized view must be uninitialized.
+2.  If the materialized view does not contain outer joins, then the materialized view must have a unique HG index on non nullable columns.
+3.  If the materialized view contains outer joins, then the materialized view must have a unique HG index on non nullable columns, or a unique HG index declared as WITH NULLS NOT DISTINCT on nullable columns.
+4.  If the view definition is a grouped query, then the unique index columns must correspond to SELECT list items that are not aggregate functions. The view definition cannot contain:
+    -   GROUPING SETS clauses
+    -   CUBE clauses
+    -   ROLLUP clauses
+    -   DISTINCT clauses
+    -   row limit clauses
+    -   non-deterministic expressions
+    -   self and recursive joins
+    -   LATERAL, CROSS APPLY, or APPLY clauses
 
-    -   The view definition must be a single select-project-join or grouped-select-project-join query block, and the grouped-select-project-join query block cannot contain a HAVING clause.
-    -   The grouped-select-project-join query block must contain COUNT \( \* \) in the SELECT list, and is allowed only with the SUM and COUNT aggregate functions.
-    -   An aggregate function in the SELECT list cannot be referenced in a complex expression. For example, SUM\( expression \) + 1 is not allowed in the SELECT list.
-    -   If the SELECT list contains the SUM\(*<expression\>*\) aggregate function and *<expression\>* is a nullable expression, then the SELECT list must include a COUNT\(*<expression\>*\) aggregate function.
-    -   If the view definition contains outer joins \(LEFT OUTER JOIN, RIGHT OUTER JOIN, FULL OUTER JOIN\), then the view definition must satisfy the following extra conditions:
-        1.  If a table, T, is referenced in an ON condition of an OUTER JOIN as a preserved side, then T must have a primary key and the primary key columns must be present in the SELECT list of the view. For example, the incremental materialized view V defined as SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON T1.Y = R.Y has the preserved table, T1, referenced in the ON clause and its primary key column, T1.pk, is in the SELECT list of the incremental materialized view, V.
-        2.  For each NULL-supplying side of an outer join, there must be at least one base table such that one of its non-nullable columns is present in the SELECT list of the incremental materialized view. For example, for the incremental materialized view, V, defined as SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON T1.Y = R1.Y, the NULL-supplying side of the left outer join is the table expression \( R1 KEY JOIN R2 \). The column R1.X is in the SELECT list of the V and R1.X is a non nullable column of the table R1.
-        3.  If the view is a grouped view and the previous condition does not hold, then for each NULL-supplying side of an outer join, there must be at least one base table, T, such that one of its non-nullable columns, T.C, is used in the aggregate function COUNT\( T.C \) in the SELECT list of the incremental materialized view. For example, for the incremental materialized view, V, defined as SELECT T1.pk, COUNT\( R1.X \) FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON T1.Y = R1.Y GROUP BY T1.pk, the NULL-supplying side of the left outer join is the table expression \( R1 KEY JOIN R2 \). The aggregate function COUNT\( R1.X \) is in the SELECT list of the V and R1.X is a non-nullable column of the table R1.
-        4.  The following conditions must be satisfied by the predicates of the views with outer joins:
-            -   The ON clause predicates for LEFT, RIGHT, and FULL OUTER JOINs must refer to both preserved and NULL-supplying table expression. For example, T LEFT OUTER JOIN R ON R.X = 1 does not satisfy this condition as the predicate R.X=1 references only the NULL-supplying side R.
-            -   Any predicate must reject NULL-supplied rows produced by a nested outer join. In other words, if a predicate refers to a table expression which is NULL-supplied by a nested outer join, then it must reject all rows which have nulls generated by that outer join.
+5.  The view definition must be a single select-project-join or grouped-select-project-join query block, and the grouped-select-project-join query block cannot contain a HAVING clause.
+6.  The grouped-select-project-join query block must contain COUNT \( \* \) in the SELECT list, and is allowed only with the SUM and COUNT aggregate functions.
+7.  An aggregate function in the SELECT list cannot be referenced in a complex expression. For example, SUM\( expression \) + 1 is not allowed in the SELECT list.
+8.  If the SELECT list contains the SUM\(*<expression\>*\) aggregate function and *<expression\>* is a nullable expression, then the SELECT list must include a COUNT\(*<expression\>*\) aggregate function.
+9.  If the view definition contains outer joins \(LEFT OUTER JOIN, RIGHT OUTER JOIN, FULL OUTER JOIN\), then the view definition must satisfy the following extra conditions:
+    -   If a table, T, is referenced in an ON condition of an OUTER JOIN as a preserved side, then T must have a primary key and the primary key columns must be present in the SELECT list of the view. For example, the incremental materialized view V defined as SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON T1.Y = R.Y has the preserved table, T1, referenced in the ON clause and its primary key column, T1.pk, is in the SELECT list of the incremental materialized view, V.
+    -   For each NULL-supplying side of an outer join, there must be at least one base table such that one of its non-nullable columns is present in the SELECT list of the incremental materialized view. For example, for the incremental materialized view, V, defined as SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON T1.Y = R1.Y, the NULL-supplying side of the left outer join is the table expression \( R1 KEY JOIN R2 \). The column R1.X is in the SELECT list of the V and R1.X is a non nullable column of the table R1.
+    -   If the view is a grouped view and the previous condition does not hold, then for each NULL-supplying side of an outer join, there must be at least one base table, T, such that one of its non-nullable columns, T.C, is used in the aggregate function COUNT\( T.C \) in the SELECT list of the incremental materialized view. For example, for the incremental materialized view, V, defined as SELECT T1.pk, COUNT\( R1.X \) FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON T1.Y = R1.Y GROUP BY T1.pk, the NULL-supplying side of the left outer join is the table expression \( R1 KEY JOIN R2 \). The aggregate function COUNT\( R1.X \) is in the SELECT list of the V and R1.X is a non-nullable column of the table R1.
+    -   Any expression in the GROUP BY list must be present in the SELECT list.
+    -   The following conditions must be satisfied by the predicates of the views with outer joins:
+        -   The ON clause predicates for LEFT, RIGHT, and FULL OUTER JOINs must refer to both preserved and NULL-supplying table expression. For example, T LEFT OUTER JOIN R ON R.X = 1 does not satisfy this condition as the predicate R.X=1 references only the NULL-supplying side R.
+        -   Any predicate must reject NULL-supplied rows produced by a nested outer join. In other words, if a predicate refers to a table expression which is NULL-supplied by a nested outer join, then it must reject all rows which have nulls generated by that outer join.
 
-                For example, the view V1 SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON \( T1.Y = R1.Y \) WHERE R1.Z = 10 has the predicate R1.Z=10 referencing the table R1 which can be NULL-supplied by the T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \), hence it must reject any NULL-supplied rows. This is true because the predicate evaluates to UNKNOWN when the column R1.Z is NULL.
+            For example, the view V1 SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON \( T1.Y = R1.Y \) WHERE R1.Z = 10 has the predicate R1.Z=10 referencing the table R1 which can be NULL-supplied by the T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \), hence it must reject any NULL-supplied rows. This is true because the predicate evaluates to UNKNOWN when the column R1.Z is NULL.
 
-                However, the view V2 SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON \( T1.Y = R1.Y \) WHERE R1.Z IS NULL does not have this property. The predicate R1.Z IS NULL references the NULL-supplying side R1 but it evaluates to TRUE when the table R1 is NULL-supplied \(that is, the R1.Z column is null\). The method of rejecting NULL-supplied rows is not as restrictive as a NULL-intolerant property. For example, the predicate R.X IS NOT DISTINCT FROM T.X and rowid\( T \) IS NOT NULL is not NULL-intolerant on the table T as it evaluates to TRUE when T.X is NULL. However, the predicate rejects all the rows which are NULL-supplied on the base table T.
-
-
-        5.  A unique HG index defined for the materialized view must exist. If the materialized view contains outer joins, then the materialized view must have a unique HG index on non nullable columns or a unique HG index with at least one column non-nullable. If the materialized view does not contain outer joins, then the materialized view must have a unique index on non nullable columns.
-        6.  Any expression in the GROUP BY list must be present in the SELECT list.
+            However, the view V2 SELECT T1.pk, R1.X FROM T1, T2 LEFT OUTER JOIN \( R1 KEY JOIN R2 \) ON \( T1.Y = R1.Y \) WHERE R1.Z IS NULL does not have this property. The predicate R1.Z IS NULL references the NULL-supplying side R1 but it evaluates to TRUE when the table R1 is NULL-supplied \(that is, the R1.Z column is null\). The method of rejecting NULL-supplied rows is not as restrictive as a NULL-intolerant property. For example, the predicate R.X IS NOT DISTINCT FROM T.X and rowid\( T \) IS NOT NULL is not NULL-intolerant on the table T as it evaluates to TRUE when T.X is NULL. However, the predicate rejects all the rows which are NULL-supplied on the base table T.
 
 
-2.  Have a unique HG index defined for the materialized view.
-    -   If the materialized view does not contain outer joins, then the materialized view must have a unique index on non nullable columns.
-    -   If the materialized view does contain outer joins, then the materialized view must have a unique HG index on non nullable columns or a unique HG index with at least one column non-nullable.
 
 
 
 
 </dd><dt><b>
 
-SPLIT \{ PARTITION | SUBPARTITION \} *<split-object\>*
+
 
 </b></dt>
 <dd>
@@ -140,7 +133,7 @@ Splits an existing range partition or subpartition.
 
 ```
 <split-object> ::= <range-partition-decl> 
-        INTO ( <range-partition-decl>, <range-partition-decl> )
+        INTO ( <range-partition-decl>, <range-partition-decl> );
 ```
 
 When splitting a partition or subpartition, the names of the new partitions must be unique and cannot include the name of the original partition. All data from the original partition must fit into only one of the resulting partitions. Data cannot move between partitions.
@@ -151,7 +144,7 @@ When splitting a partition or subpartition, the upper boundary of the new partit
 
 </dd><dt><b>
 
-MERGE \{ PARTITION | SUBPARTITION \}
+
 
 </b></dt>
 <dd>
@@ -211,7 +204,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 
 ```
 <range-partitioning-scheme> ::=
-   RANGE ( <column-name> ) ( <range-partition-decl> [,...] )
+   RANGE ( <column-name> ) ( <range-partition-decl> [,...] );
 ```
 
 
@@ -225,7 +218,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 
 ```
 <range-partition-decl> ::=
-   <partition-name> VALUES <= ( { <constant-expression> | MAX } [,...] )
+   <partition-name> VALUES <= ( { <constant-expression> | MAX } [,...] );
 ```
 
 
@@ -324,7 +317,7 @@ Maps data to partitions based on partition-key values processed by an internal h
 
 ```
 <hash-partitioning-scheme> ::=
-   HASH ( <column-name> [,... ] )
+   HASH ( <column-name> [,... ] );
 ```
 
 Restrictions:
@@ -346,7 +339,7 @@ Maps data to partitions based on partition-key values processed by an internal h
 ```
 <hash-range-partitioning-scheme> ::=
    PARTITION BY HASH  ( <column-name> [,... ] )
-    SUBPARTITION BY <range-partition-scheme>
+    SUBPARTITION BY <range-partition-scheme>;
 ```
 
 The hash partition specifies how the data is logically distributed and colocated; the range subpartition specifies how the data is physically placed. The new range subpartition is logically partitioned by hash with the same hash partition keys as the existing hash-range partitioned table. The range subpartition key is restricted to one column.
@@ -365,7 +358,7 @@ Restrictions:
 
 </dd><dt><b>
 
-SUBPARTITION BY RANGE
+
 
 </b></dt>
 <dd>
@@ -378,7 +371,7 @@ Subpartitions an existing hash-partition table.
 <dd>
 
 ```
-SUBPARTITION BY <range-partition-decl>
+SUBPARTITION BY <range-partition-decl>;
 ```
 
 Subpartitions on a range-partitioned table are not supported.
@@ -387,7 +380,7 @@ Subpartitions on a range-partitioned table are not supported.
 
 </dd><dt><b>
 
-ADD \{PARTITION|SUBPARTITION\} BY RANGE
+
 
 </b></dt>
 <dd>
@@ -395,7 +388,7 @@ ADD \{PARTITION|SUBPARTITION\} BY RANGE
 Adds a new partition to an existing range-partition table or a new subpartition to an existing hash range-partition table.
 
 ```
-ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>
+ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>;
 ```
 
 The value of the *<range-partition-decl\>* must exceed the existing partition boundary. Only one partition or subpartition can be added per ADD clause. Use SPLIT PARTITION to add a range within the existing boundary.
@@ -404,7 +397,7 @@ The value of the *<range-partition-decl\>* must exceed the existing partition bo
 
 </dd><dt><b>
 
-UNPARTITION
+
 
 </b></dt>
 <dd>
@@ -450,10 +443,27 @@ Failure to truncate before executing DDL statements generates a message indicati
 
 ### 
 
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
+
+
+</dd>
+</dl>
 
 
 
@@ -652,9 +662,9 @@ Not in the standard.
 
 [CREATE MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-816c0ee.md "Creates a materialized view.")
 
-[ALTER MATERIALIZED VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/d958953e260d44209300f5454e01029f.html "Alters a materialized view.") :arrow_upper_right:
+[DROP MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-50e7633.md "Removes a data type from the database.")
 
-[DROP Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-statement-for-data-lake-relational-engine-sap-hana-db-managed-367d71d.md "Removes objects from the database.")
+[Refresh and Build Types for Materialized Views in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/30ca3ca6ffbc4e6e804959f02571e62c.html "You can control when (refresh type): MANUAL or AUTO and how (build type): FULL or INCREMENTAL a materialized view is refreshed.") :arrow_upper_right:
 
-[Refresh and Build Types for Materialized Views in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/30ca3ca6ffbc4e6e804959f02571e62c.html "You can control when (refresh type): MANUAL or AUTO and how (build type): FULL or INCREMENTAL a materialized view is refreshed.") :arrow_upper_right:
+[ALTER MATERIALIZED VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/d958953e260d44209300f5454e01029f.html "Alters a materialized view.") :arrow_upper_right:
 

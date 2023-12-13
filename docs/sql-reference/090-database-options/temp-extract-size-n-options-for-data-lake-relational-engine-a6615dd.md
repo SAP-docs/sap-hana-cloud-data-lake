@@ -6,10 +6,13 @@ Specifies the maximum sizes of the corresponding output files used by the data e
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6615dd384f21015ae14fe398b6f6188__section_fq2_gpq_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Specifies the maximum sizes of the corresponding output files used by the data e
 ## Syntax
 
 ```
-TEMP_EXTRACT_SIZEn = <value>
+TEMP_EXTRACT_SIZEn = <value>;
 ```
 
 
@@ -36,14 +39,10 @@ There are eight options: TEMP\_EXTRACT\_SIZE1 through TEMP\_EXTRACT\_SIZE8.
 
 Device Type
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Size
-
-
 
 </th>
 </tr>
@@ -52,14 +51,10 @@ Size
 
 Storage file
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 0 – 512 GB
-
-
 
 </td>
 </tr>
@@ -68,14 +63,10 @@ Storage file
 
 Other
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 9007199254740992 KB \(8192 petabytes “unlimited”\)
-
-
 
 </td>
 </tr>
@@ -116,28 +107,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -146,28 +129,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -176,28 +151,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -214,7 +181,7 @@ TEMP\_EXTRACT\_SIZE1 through TEMP\_EXTRACT\_SIZE8 are used to specify the maximu
 With large cloud storage, such as JFS2, support file size larger than the default value, set TEMP\_EXTRACT\_SIZEn to the value that cloud storage allows. For example, to support l TB set option:
 
 ```
-TEMP_EXTRACT_SIZE1 = 1073741824 KB
+TEMP_EXTRACT_SIZE1 = 1073741824 KB;
 ```
 
 If you are extracting to a single file or a single named pipe, leave the options TEMP\_EXTRACT\_NAME2 through TEMP\_EXTRACT\_NAME8 and TEMP\_EXTRACT\_SIZE1 through TEMP\_EXTRACT\_SIZE8 at their default values.
@@ -232,7 +199,7 @@ The TEMP\_EXTRACT\_SIZE*<n\>* options are not compatible with TEMP\_EXTRACT\_APP
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[TEMP_EXTRACT_SIZE&lt;N&gt; Options for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/c475f53096e540a9840e2f2e4c584ad4.html "Specifies the maximum sizes of the corresponding output files used by the data extraction facility.") :arrow_upper_right:
+[TEMP_EXTRACT_SIZE<N> Options for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/c475f53096e540a9840e2f2e4c584ad4.html "Specifies the maximum sizes of the corresponding output files used by the data extraction facility.") :arrow_upper_right:
 
 [TEMP\_EXTRACT\_NAME<N\> Option for Data Lake Relational Engine](temp-extract-name-n-option-for-data-lake-relational-engine-a65dd19.md "Specifies the data lake Filescontainer object file name, or theAzure block blob name, or the Amazon S3 bucket object name you’re extracting to. You must specify the name when extracting data from data lake Relational Engine to cloud storage.")
 

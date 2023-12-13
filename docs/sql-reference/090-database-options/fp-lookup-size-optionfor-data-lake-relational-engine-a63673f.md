@@ -6,8 +6,11 @@ Specifies the number of lookup pages and cache memory allocated for Lookup FP in
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63673f584f21015b6dca719ae8410ab__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

@@ -49,10 +49,10 @@ Escape all strings **inside** the data lake Relational Engine DML or DDL *<state
 
 ## Privileges
 
-Requires one of:
+To use REMOTE\_EXECUTE requires one of the following:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 

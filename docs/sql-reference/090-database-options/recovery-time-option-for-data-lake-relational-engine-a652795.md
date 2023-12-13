@@ -6,8 +6,11 @@ Sets the maximum length of time, in minutes, that the database server takes to r
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa652795c84f21015a4a2842f5c4c4265__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

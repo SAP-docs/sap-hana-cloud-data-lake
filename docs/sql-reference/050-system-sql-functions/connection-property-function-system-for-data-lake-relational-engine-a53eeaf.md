@@ -8,7 +8,7 @@ Returns the value of a given connection property as a string.
 
 ```
 CONNECTION_PROPERTY ( { <integer-expression1> | <string-expression> }
-… [ , <integer-expression2> ] )
+… [ , <integer-expression2> ] );
 ```
 
 
@@ -57,7 +57,7 @@ The connection ID of the current database connection. The current connection is 
 
 
 
-## Returns
+## Result Set
 
 VARCHAR
 
@@ -89,7 +89,7 @@ The current connection is used if the second argument is omitted.
 The following statement returns 4, the number of prepared statements being maintained:
 
 ```
-SELECT connection_property( 'PrepStmt' )FROM iq_dummy
+SELECT connection_property( 'PrepStmt' )FROM iq_dummy;
 ```
 
 **Related Information**  

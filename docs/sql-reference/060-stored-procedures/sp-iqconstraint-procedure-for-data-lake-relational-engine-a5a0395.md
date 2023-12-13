@@ -6,15 +6,18 @@ Lists referential integrity constraints defined using CREATE TABLE or ALTER TABL
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5a0395484f210158c8090a617a7aab6__section_q4v_yvh_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqconstraint [ '<table-name>', '<column-name>', '<table-owner>' ]
+sp_iqconstraint [ '<table-name>', '<column-name>', '<table-owner>' ];
 ```
 
 
@@ -87,12 +90,12 @@ None
 
 <a name="loioa5a0395484f210158c8090a617a7aab6__iq_refbb_1469"/>
 
-## Example
+## Examples
 
 This is sample output that displays all primary key/foreign key pairs where either the candidate key or foreign key contains column ck1 for owner bob in all tables:
 
 ```
-call sp_iqconstraint('','ck1','bob')
+call sp_iqconstraint('','ck1','bob');
 ```
 
 ```

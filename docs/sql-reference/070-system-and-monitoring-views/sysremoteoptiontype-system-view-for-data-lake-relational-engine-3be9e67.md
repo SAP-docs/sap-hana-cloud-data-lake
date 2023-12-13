@@ -6,10 +6,13 @@ Each row in the SYSREMOTEOPTIONTYPE system view describes one of the message lin
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be9e67e6c5f10148d62c6cd2ae10104__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYSREMOTEOPTIONTYPE system view describes one of the message lin
 
 Column
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 option\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 An identification number for the message link parameter.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ An identification number for the message link parameter.
 
 type\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 An identification number for the message type that uses the parameter.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ An identification number for the message type that uses the parameter.
 
 option
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the message link parameter.
-
-
 
 </td>
 </tr>
@@ -114,10 +93,10 @@ The name of the message link parameter.
 ## Constraints on Underlying System Table
 
 ```
-PRIMARY KEY (option_id)
+PRIMARY KEY (option_id);
 ```
 
 ```
-FOREIGN KEY (type_id) REFERENCES SYS.ISYSREMOTETYPE (type_id)
+FOREIGN KEY (type_id) REFERENCES SYS.ISYSREMOTETYPE (type_id);
 ```
 

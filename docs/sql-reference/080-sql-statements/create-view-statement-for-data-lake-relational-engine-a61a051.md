@@ -6,10 +6,13 @@ Creates a view on the database. Views are used to give a different perspective o
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61a051684f210158cced2d83231bd8a__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -17,7 +20,7 @@ Creates a view on the database. Views are used to give a different perspective o
 CREATE [ OR REPLACE ] VIEW
    [ { <owner> | <schema-name> }.]<view-name> [ ( <column-name> [ , … ] ) ]
    AS <select-statement>
-   [ WITH CHECK OPTION ]
+   [ WITH CHECK OPTION ];
 ```
 
 
@@ -155,7 +158,7 @@ Automatic commit
     CREATE VIEW male_employee
     AS SELECT *
     FROM Employees
-    WHERE Sex = 'M'
+    WHERE Sex = 'M';
     ```
 
 -   The following example creates a view showing employees and the departments to which they belong:
@@ -164,7 +167,7 @@ Automatic commit
     CREATE VIEW emp_dept
     AS SELECT Surname, GivenName, DepartmentName
     FROM Employees JOIN Departments
-    ON Employees.DepartmentID = Departments.DepartmentID
+    ON Employees.DepartmentID = Departments.DepartmentID;
     ```
 
 
@@ -173,15 +176,15 @@ Automatic commit
 
 [ALTER VIEW Statement for Data Lake Relational Engine](alter-view-statement-for-data-lake-relational-engine-a613cd2.md "Replaces a view definition with a modified version.")
 
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
+[DROP VIEW Statement for Data Lake Relational Engine](drop-view-statement-for-data-lake-relational-engine-10a78b1.md "Removes a view from the database.")
 
 [CREATE TABLE Statement for Data Lake Relational Engine](create-table-statement-for-data-lake-relational-engine-a619764.md "Creates a new table in the database or on a remote server.")
 
 [SELECT Statement for Data Lake Relational Engine](select-statement-for-data-lake-relational-engine-a624e72.md "Retrieves information from the database.")
 
-[CREATE VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/4d411288dcae4da3a64d44865a0574e9.html "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.") :arrow_upper_right:
-
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
+
+[CREATE VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/4d411288dcae4da3a64d44865a0574e9.html "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.") :arrow_upper_right:
 

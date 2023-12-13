@@ -6,15 +6,18 @@ Sets compression of data in columns of LONG BINARY \(BLOB\) and LONG VARCHAR \(C
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5fcfb3684f21015831aa4be64bd5962__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqsetcompression ( <owner>, <table>, <column>, <on_off_flag> )
+sp_iqsetcompression ( <owner>, <table>, <column>, <on_off_flag> );
 ```
 
 
@@ -107,7 +110,7 @@ A side effect of sp\_iqsetcompression is that a COMMIT occurs after you change t
 
 <a name="loioa5fcfb3684f21015831aa4be64bd5962__iq_iquda_119"/>
 
-## Example
+## Examples
 
 Assume this table definition:
 

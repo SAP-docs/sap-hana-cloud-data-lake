@@ -6,10 +6,13 @@ Each row in the SYSTRIGGERS view describes one trigger in the database. This vie
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bead9b16c5f1014b271fa947ff403ff__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -43,6 +46,6 @@ ALTER VIEW "SYS"."SYSTRIGGERS"( owner,
     from SYS.ISYSTRIGGER as trig
       join SYS.ISYSTAB as tab on(tab.table_id = trig.table_id)
       join SYS.ISYSUSER as u on u.user_id = tab.creator where
-    trig.foreign_table_id is null
+    trig.foreign_table_id is null;
 ```
 

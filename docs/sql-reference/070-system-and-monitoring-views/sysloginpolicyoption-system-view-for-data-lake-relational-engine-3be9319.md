@@ -6,10 +6,13 @@ Specifies the non-default option values defined in login policies.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be9319a6c5f1014923186f27403a030__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Specifies the non-default option values defined in login policies.
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 login\_policy\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 A unique identifier for the login policy.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ A unique identifier for the login policy.
 
 login\_option\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
-The name of the login policy.
-
-
+The name of the login policy option.
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ The name of the login policy.
 
 login\_option\_value
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
-The value of the login policy at the time it was created.
-
-
+The value of the login policy option at the time it was created.
 
 </td>
 </tr>

@@ -6,10 +6,13 @@ Controls whether DATETIMEX data type columns are automatically created when TIME
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio082fdf9f04bc43acbc014a0842c43ea9__section_ajq_xqq_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Controls whether DATETIMEX data type columns are automatically created when TIME
 ## Syntax
 
 ```
-TIMESTAMP_COLUMNS_AS_DATETIMEX = { ON | OFF }
+TIMESTAMP_COLUMNS_AS_DATETIMEX = { ON | OFF };
 ```
 
 
@@ -44,14 +47,10 @@ The default value of the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option depen
 
 Default
 
-
-
 </th>
 <th valign="top">
 
 Configuration
-
-
 
 </th>
 </tr>
@@ -59,8 +58,6 @@ Configuration
 <td valign="top">
 
 ON
-
-
 
 </td>
 <td valign="top">
@@ -75,8 +72,6 @@ ON
 <td valign="top">
 
 OFF
-
-
 
 </td>
 <td valign="top">
@@ -117,28 +112,20 @@ Requires the SET ANY CUSTOMER SYSTEM OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -147,28 +134,20 @@ For Other Users
 
 Allowed to set permanently?
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -177,28 +156,20 @@ No
 
 Allowed to set temporarily?
 
+</td>
+<td valign="top">
 
+No
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
-
-</td>
-<td valign="top">
-
-No
-
-
 
 </td>
 </tr>
@@ -233,7 +204,7 @@ SET OPTION PUBLIC.TIMESTAMP_COLUMNS_AS_DATETIMEX = { ON | OFF };
 
 [GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md "Grants specific system privileges to users or roles, with or without administrative rights.")
 
-[TIMESTAMP_COLUMNS_AS_DATETIMEX Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/34e354059097469d9864ff18b541f343.html "Controls whether DATETIMEX data type columns are automatically created when TIMESTAMPS data type columns are requested.") :arrow_upper_right:
+[TIMESTAMP_COLUMNS_AS_DATETIMEX Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/34e354059097469d9864ff18b541f343.html "Controls whether DATETIMEX data type columns are automatically created when TIMESTAMPS data type columns are requested.") :arrow_upper_right:
 
 [Date and Time Data Types in Data Lake Relational Engine](../020-sql-data-types/date-and-time-data-types-in-data-lake-relational-engine-a51e8fb.md "Use date and time data types for storing dates and times.")
 

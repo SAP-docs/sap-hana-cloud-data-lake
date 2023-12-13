@@ -7,7 +7,7 @@ Returns the string equivalent of a number.
 
 
 ```
-STR ( <numeric-expression> [ , <length>[ , <decimal> ] ] )
+STR ( <numeric-expression> [ , <length>[ , <decimal> ] ] );
 ```
 
 
@@ -58,7 +58,7 @@ The number of digits to the right of the decimal point to be returned. The defau
 
 <a name="loio6152b1608e3e4c5e898c592f645366b7__section_nbc_yt5_vrb"/>
 
-## Returns
+## Result Set
 
 VARCHAR
 
@@ -88,24 +88,24 @@ If the integer portion of the number cannot fit in the length specified, then th
 -   The following statement returns a string of six spaces followed by 1234, for a total of 10 characters:
 
     ```
-    SELECT STR( 1234.56 ) FROM iq_dummy
+    SELECT STR( 1234.56 ) FROM iq_dummy;
     ```
 
 -   The following statement returns the result 1234.5:
 
     ```
-    SELECT STR( 1234.56, 6, 1 ) FROM iq_dummy
+    SELECT STR( 1234.56, 6, 1 ) FROM iq_dummy;
     ```
 
 -   The following statement returns NULL because the integer portion of the number cannot fit in the specified length:
 
     ```
-    SELECT STR( 1234.56, 3 ) FROM iq_dummy
+    SELECT STR( 1234.56, 3 ) FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[STR Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a584f54284f21015bb43e961aa835036.html "Returns the string equivalent of a number.") :arrow_upper_right:
+[STR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a584f54284f21015bb43e961aa835036.html "Returns the string equivalent of a number.") :arrow_upper_right:
 

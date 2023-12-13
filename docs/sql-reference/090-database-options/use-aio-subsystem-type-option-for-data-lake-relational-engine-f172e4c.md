@@ -6,8 +6,11 @@ Enables you to select the underlying subsystem for use with the asynchronous IO 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loiof172e4cc5f134c98ad2cfcb6ecda3b6c__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

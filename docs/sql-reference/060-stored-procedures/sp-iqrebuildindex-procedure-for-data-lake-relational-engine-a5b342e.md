@@ -6,22 +6,25 @@ Rebuilds column indexes.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5b342e484f21015b652c2f5c7685bca__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqrebuildindex <table_name>, <index_clause>
+sp_iqrebuildindex <table_name>, <index_clause>;
 ```
 
 
 
 <a name="loioa5b342e484f21015b652c2f5c7685bca__iq_refbb_1720"/>
 
-## Parameter
+## Parameters
 
 
 <dl>
@@ -46,11 +49,11 @@ Partial or fully qualified table name on which the index rebuild process takes p
 One or more of the following strings, separated by spaces:
 
 ```
-column <column_name>[<count>]
+column <column_name>[<count>];
 ```
 
 ```
-index <index_name>
+index <index_name>;
 ```
 
 You need to specify the keywords column and index. These keywords are not case-sensitive.
@@ -59,7 +62,7 @@ You need to specify the keywords column and index. These keywords are not case-s
 > A third-party reference document describes an unsupported sp\_iqrebuildindex syntax. Specifying the table name in the index clause, such as in the following example, results in an error:
 > 
 > ```
-> sp_iqrebuildindex tb1, 'column tb1.c1'
+> sp_iqrebuildindex tb1, 'column tb1.c1';
 > ```
 
 
@@ -83,7 +86,7 @@ The *<count\>* is a non-negative number that represents the IQ UNIQUE value. In 
 MERGEALL and RETIER are keywords specific to HG index operations:
 
 ```
-sp_iqrebuildindex ('<table name>', 'index <index name> [ MERGEALL | RETIER ]')
+sp_iqrebuildindex ('<table name>', 'index <index name> [ MERGEALL | RETIER ]');
 ```
 
 If MERGEALL or RETIER are omitted from an operation from an HG index , sp\_iqrebuildindex truncates and reconstructs the entire HG index from the column data.
@@ -91,7 +94,7 @@ If MERGEALL or RETIER are omitted from an operation from an HG index , sp\_iqreb
 MERGEALL merges all tiers of a tiered HG index and moves the contents into an appropriate tier:
 
 ```
-sp_iqrebuildindex ('<table name>', 'index <index name> MERGEALL')
+sp_iqrebuildindex ('<table name>', 'index <index name> MERGEALL');
 ```
 
 The merge ensures that there is only one active sub-index in a tiered HG index. MERGEALL operations may improve query access time for a tiered index in cases where there are too many deleted records \(as shown by sp\_iqindexmetadata\). MERGEALL will only be supported with an index clause and only if the index specified is an HG index.
@@ -99,7 +102,7 @@ The merge ensures that there is only one active sub-index in a tiered HG index. 
 RETIER is a keyword specific to HG indexes that changes the format of an HG index from non-tiered HG to tiered HG, or tiered HG to non-tiered HG:
 
 ```
-sp_iqrebuildindex ('<table name>', 'index <index name> RETIER')
+sp_iqrebuildindex ('<table name>', 'index <index name> RETIER');
 ```
 
 `RETIER` toggles the format of an HG index:
@@ -150,13 +153,13 @@ None
     ```
     sp_iqrebuildindex 'emp1', 'column dept_id'
     
-    call sp_iqrebuildindex ('empl1', 'column dept_id')
+    call sp_iqrebuildindex ('empl1', 'column dept_id');
     ```
 
 -   This creates a flat FP index on column c1:
 
     ```
-    CREATE TABLE mytable (c1 int IQ UNIQUE (0))
+    CREATE TABLE mytable (c1 int IQ UNIQUE (0));
     ```
 
 -   The following two converts the default Flat FP index to an Nbit index with an estimated distinct count of 1024:
@@ -164,7 +167,7 @@ None
     ```
     sp_iqrebuildindex 'mytable', 'column c1 1024'
     
-    call sp_iqrebuildindex ('mytable', 'column c1 1024')
+    call sp_iqrebuildindex ('mytable', 'column c1 1024');
     ```
 
     > ### Note:  

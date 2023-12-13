@@ -6,10 +6,13 @@ Presents group information from the `ISYSPARTITIONS` system table in a readable 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa87f12ff84f210158071ec615c24a7c0__section_vwg_vhq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Presents group information from the `ISYSPARTITIONS` system table in a readable 
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 table\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The object ID of the table to which the index corresponds.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The object ID of the table to which the index corresponds.
 
 partition\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Identifies a partition in a partitioned table.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ Identifies a partition in a partitioned table.
 
 partition\_object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Each table partition is an object itself and is assigned a unique number from the table object or index object.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ Each table partition is an object itself and is assigned a unique number from th
 
 partition\_dbspace\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 Object ID of the dbspace where the partition is located.
-
-
 
 </td>
 </tr>
@@ -135,21 +108,15 @@ Object ID of the dbspace where the partition is located.
 
 partition\_values
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 Contains the upper bound for this range partition.
-
-
 
 </td>
 </tr>
@@ -158,21 +125,15 @@ Contains the upper bound for this range partition.
 
 position
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Ordinal number of partition.
-
-
 
 </td>
 </tr>
@@ -181,21 +142,15 @@ Ordinal number of partition.
 
 partition\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Name of partition
-
-
 
 </td>
 </tr>
@@ -211,7 +166,7 @@ Each row in the `SYSPARTITIONS` view describes a partitioned object \(table or i
 
 ```
 ALTER VIEW "SYS"."SYSPARTITIONS"
-  as select * from SYS.ISYSPARTITIONS
+  as select * from SYS.ISYSPARTITIONS;
 ```
 
 
@@ -221,19 +176,19 @@ ALTER VIEW "SYS"."SYSPARTITIONS"
 ## Constraints on Underlying System Table
 
 ```
-primary key (partitioned_object_id, partition_id)
+primary key (partitioned_object_id, partition_id);
 ```
 
 ```
-foreign key (partitioned_object_id) references SYS.ISYSOBJECT
+foreign key (partitioned_object_id) references SYS.ISYSOBJECT;
 ```
 
 ```
-foreign key (partition_object_id) references SYS.ISYSOBJECT
+foreign key (partition_object_id) references SYS.ISYSOBJECT;
 ```
 
 **Related Information**  
 
 
-[SYSPARTITIONS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/1c2e04fba3b943e2b6ae23522aad5b5c.html "Presents group information from the ISYSPARTITIONS system table in a readable format") :arrow_upper_right:
+[SYSPARTITIONS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/1c2e04fba3b943e2b6ae23522aad5b5c.html "Presents group information from the ISYSPARTITIONS system table in a readable format") :arrow_upper_right:
 

@@ -9,7 +9,7 @@ Refresh the metadata of an SAP HANA database virtual table that points to a data
 ## Syntax
 
 ```
-ALTER VIRTUAL TABLE <hana_relational_container_schema_name>.<virtual_table_name> REFRESH DEFINITION
+ALTER VIRTUAL TABLE <hana_relational_container_schema>.<virtual_table_name> REFRESH DEFINITION
 ```
 
 

@@ -6,15 +6,18 @@ Sets database options in an SAP Adaptive Server Enterprise-compatible manner.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa62546b384f2101588d3bfd494dfc800__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-SET <option-name> <option-value>
+SET <option-name> <option-value>;
 ```
 
 ```
@@ -25,7 +28,7 @@ SET <option-name> <option-value>
    | QUOTED_IDENTIFIER [ { ON | OFF } ]
    | ROWCOUNT <integer>
    | STRING_RTRUNCATION [ { ON | OFF } ]
-   | TRANSACTION ISOLATION LEVEL [ { 0 | 1 | 2 | 3 } ] }
+   | TRANSACTION ISOLATION LEVEL [ { 0 | 1 | 2 | 3 } ] };
 ```
 
 

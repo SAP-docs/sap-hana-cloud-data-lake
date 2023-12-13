@@ -7,7 +7,7 @@ Provides context information for event handlers.
 
 
 ```
-EVENT_PARAMETER ( <context-name> )
+EVENT_PARAMETER ( <context-name> );
 ```
 
 
@@ -45,7 +45,7 @@ One of the preset strings. The strings are case-insensitive, and carry the follo
 
 <a name="loioa550b30084f2101589a4e542f28d5e1e__event_parameter_returns1"/>
 
-## Returns
+## Result Set
 
 VARCHAR
 

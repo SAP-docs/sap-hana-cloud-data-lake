@@ -6,8 +6,11 @@ Specifies a resource governor to limit the maximum number of cursors that a conn
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63e2b9784f21015983992c1d7a76694__section_uks_z43_ywb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

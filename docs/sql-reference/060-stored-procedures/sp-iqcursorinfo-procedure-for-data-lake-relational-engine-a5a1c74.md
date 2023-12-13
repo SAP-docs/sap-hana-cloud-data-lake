@@ -6,15 +6,18 @@ Displays detailed information about cursors currently open on the server.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5a1c74e84f21015bdc9be59b4d91a1f__section_blk_cwh_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqcursorinfo [ <cursor-name> ] [, <conn-handle> ]
+sp_iqcursorinfo [ <cursor-name> ] [, <conn-handle> ];
 ```
 
 
@@ -54,7 +57,7 @@ An integer representing the connection ID. If only this parameter is specified, 
 
 <a name="loioa5a1c74e84f21015bdc9be59b4d91a1f__section_hdj_hsz_mbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -63,14 +66,10 @@ An integer representing the connection ID. If only this parameter is specified, 
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -79,14 +78,10 @@ Description
 
 Name
 
-
-
 </td>
 <td valign="top">
 
 The name of the cursor.
-
-
 
 </td>
 </tr>
@@ -95,14 +90,10 @@ The name of the cursor.
 
 ConnHandle
 
-
-
 </td>
 <td valign="top">
 
 The ID number of the connection.
-
-
 
 </td>
 </tr>
@@ -111,14 +102,10 @@ The ID number of the connection.
 
 IsUpd
 
-
-
 </td>
 <td valign="top">
 
 Y: the cursor is updatable; N otherwise.
-
-
 
 </td>
 </tr>
@@ -127,14 +114,10 @@ Y: the cursor is updatable; N otherwise.
 
 IsHold
 
-
-
 </td>
 <td valign="top">
 
 Y: the cursor is a hold cursor; N otherwise.
-
-
 
 </td>
 </tr>
@@ -143,14 +126,10 @@ Y: the cursor is a hold cursor; N otherwise.
 
 IQConnID
 
-
-
 </td>
 <td valign="top">
 
 The 10-digit connection ID displayed as part of all messages in the `.iqmsg` file. This number is a monotonically increasing integer that is unique within a server session.
-
-
 
 </td>
 </tr>
@@ -159,14 +138,10 @@ The 10-digit connection ID displayed as part of all messages in the `.iqmsg` fi
 
 UserID
 
-
-
 </td>
 <td valign="top">
 
 User ID \(or user name\) for the user who created and ran the cursor.
-
-
 
 </td>
 </tr>
@@ -175,14 +150,10 @@ User ID \(or user name\) for the user who created and ran the cursor.
 
 CreateTime
 
-
-
 </td>
 <td valign="top">
 
 The time of cursor creation.
-
-
 
 </td>
 </tr>
@@ -191,14 +162,10 @@ The time of cursor creation.
 
 CurrentRow
 
-
-
 </td>
 <td valign="top">
 
 The current position of the cursor in the result set.
-
-
 
 </td>
 </tr>
@@ -207,14 +174,10 @@ The current position of the cursor in the result set.
 
 NumFetch
 
-
-
 </td>
 <td valign="top">
 
 The number of times the cursor fetches a row. The same row can be fetched more than once.
-
-
 
 </td>
 </tr>
@@ -223,14 +186,10 @@ The number of times the cursor fetches a row. The same row can be fetched more t
 
 NumUpdate
 
-
-
 </td>
 <td valign="top">
 
 The number of times the cursor updates a row, if the cursor is updatable. The same row can be updated more than once.
-
-
 
 </td>
 </tr>
@@ -239,14 +198,10 @@ The number of times the cursor updates a row, if the cursor is updatable. The sa
 
 NumDelete
 
-
-
 </td>
 <td valign="top">
 
 The number of times the cursor deletes a row, if the cursor is updatable.
-
-
 
 </td>
 </tr>
@@ -255,14 +210,10 @@ The number of times the cursor deletes a row, if the cursor is updatable.
 
 NumInsert
 
-
-
 </td>
 <td valign="top">
 
 The number of times the cursor inserts a row, if the cursor is updatable.
-
-
 
 </td>
 </tr>
@@ -271,14 +222,10 @@ The number of times the cursor inserts a row, if the cursor is updatable.
 
 RWTabOwner
 
-
-
 </td>
 <td valign="top">
 
 The owner of the table that is opened in RW mode by the cursor.
-
-
 
 </td>
 </tr>
@@ -287,14 +234,10 @@ The owner of the table that is opened in RW mode by the cursor.
 
 RWTabName
 
-
-
 </td>
 <td valign="top">
 
 The name of the table that is opened in RW mode by the cursor.
-
-
 
 </td>
 </tr>
@@ -303,14 +246,10 @@ The name of the table that is opened in RW mode by the cursor.
 
 CmdLine
 
-
-
 </td>
 <td valign="top">
 
 The first 4096 characters of the command the user executed.
-
-
 
 </td>
 </tr>
@@ -377,25 +316,25 @@ None
 -   The following example displays information about all cursors currently open on the server:
 
     ```
-    sp_iqcursorinfo
+    sp_iqcursorinfo;
     ```
 
 -   The following example displays information about the all cursors named `cursor1` in all connections:
 
     ```
-    sp_iqcursorinfo 'cursor1'
+    sp_iqcursorinfo 'cursor1';
     ```
 
 -   The following example displays information about all cursors in connection 3:
 
     ```
-    sp_iqcursorinfo NULL, 3
+    sp_iqcursorinfo NULL, 3;
     ```
 
 -   The following example displays information about all the cursors named `cursor2` in connection 4:
 
     ```
-    sp_iqcursorinfo 'cursor2', 4
+    sp_iqcursorinfo 'cursor2', 4;
     ```
 
 

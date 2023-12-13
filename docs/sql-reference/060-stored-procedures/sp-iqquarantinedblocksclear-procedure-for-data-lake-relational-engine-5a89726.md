@@ -6,10 +6,13 @@ Clears the system quarantine map, removing all physical block numbers for any qu
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio5a89726e9e2f46c69e33cf6e59749826__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,7 +26,7 @@ None.
 
 <a name="loio5a89726e9e2f46c69e33cf6e59749826__section_gsn_jkd_4fb"/>
 
-## Returns
+## Result Set
 
 None.
 

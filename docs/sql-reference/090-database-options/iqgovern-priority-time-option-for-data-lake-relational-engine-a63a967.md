@@ -6,8 +6,11 @@ Limits the time a high priority query waits in the queue before starting.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63a967f84f21015ba7fc9407ef812d1__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

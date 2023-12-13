@@ -13,83 +13,61 @@ Some variations are permitted because the product supports both data lake Relati
 
 Syntax
 
-
-
 </th>
 <th valign="top">
 
 Syntax Type
-
-
 
 </th>
 <th valign="top">
 
 Explanation
 
-
-
 </th>
 </tr>
 <tr>
 <td valign="top">
 
- <code><i class="varname">&lt;procedure_name&gt;</i> ('<i class="varname">&lt;param&gt;</i>')</code> 
-
-
+<code><i class="varname">&lt;procedure_name&gt;</i> ('<i class="varname">&lt;param&gt;</i>')</code> 
 
 </td>
 <td valign="top">
 
- Data lake Relational Engine 
-
-
+Data lake Relational Engine 
 
 </td>
 <td valign="top">
 
 Quotes are required if you enclose parameters in parentheses.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- <code><i class="varname">&lt;procedure_name&gt;</i> '<i class="varname">&lt;param&gt;</i>'</code> 
-
-
+<code><i class="varname">&lt;procedure_name&gt;</i> '<i class="varname">&lt;param&gt;</i>'</code> 
 
 </td>
 <td valign="top">
 
- Data lake Relational Engine 
-
-
+Data lake Relational Engine 
 
 </td>
 <td valign="top">
 
 Parentheses are optional if you enclose parameters in quotes.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- <code><i class="varname">&lt;procedure_name&gt;</i> <i class="varname">&lt;param&gt;</i></code> 
-
-
+<code><i class="varname">&lt;procedure_name&gt;</i> <i class="varname">&lt;param&gt;</i></code> 
 
 </td>
 <td valign="top">
 
 Transact-SQL
-
-
 
 </td>
 <td valign="top">
@@ -106,46 +84,34 @@ If you omit quotes around parameters, you must also omit parentheses.
 <tr>
 <td valign="top">
 
- <code><i class="varname">&lt;procedure_name&gt;</i></code> 
-
-
+<code><i class="varname">&lt;procedure_name&gt;</i></code> 
 
 </td>
 <td valign="top">
 
- Data lake Relational Engine or Transact-SQL
-
-
+Data lake Relational Engine or Transact-SQL
 
 </td>
 <td valign="top">
 
 Use this syntax if you run a procedure with no parameters directly in Interactive SQL, and the procedure has no parameters.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
- <code>call <i class="varname">&lt;procedure_name&gt;</i> (<i class="varname">&lt;param&gt;</i>='<i class="varname">&lt;value&gt;</i>')</code> 
-
-
+<code>call <i class="varname">&lt;procedure_name&gt;</i> (<i class="varname">&lt;param&gt;</i>='<i class="varname">&lt;value&gt;</i>')</code> 
 
 </td>
 <td valign="top">
 
- Data lake Relational Engine 
-
-
+Data lake Relational Engine 
 
 </td>
 <td valign="top">
 
 Use this syntax to call a procedure that passes a parameter value.
-
-
 
 </td>
 </tr>

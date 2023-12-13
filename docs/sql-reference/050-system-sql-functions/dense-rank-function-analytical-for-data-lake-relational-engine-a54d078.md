@@ -7,7 +7,7 @@ Ranks items in a group.
 
 
 ```
-DENSE_RANK () OVER ( ORDER BY <expression> [ ASC | DESC ] )
+DENSE_RANK () OVER ( ORDER BY <expression> [ ASC | DESC ] );
 ```
 
 
@@ -36,7 +36,7 @@ A sort specification that can be any valid expression involving a column referen
 
 <a name="loioa54d078b84f21015b96984e51c0cb74a__DENSE_RANK_returns1"/>
 
-## Returns
+## Result Set
 
 INTEGER
 
@@ -92,5 +92,5 @@ supplier#021     10,000             5
 
 [RANK Function \[Analytical\] for Data Lake Relational Engine](rank-function-analytical-for-data-lake-relational-engine-a57337e.md "Ranks items in a group.")
 
-[DENSE_RANK Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/f68bfad26916474fba05b8e4555bf58e.html "Ranks items in a group.") :arrow_upper_right:
+[DENSE_RANK Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/f68bfad26916474fba05b8e4555bf58e.html "Ranks items in a group.") :arrow_upper_right:
 

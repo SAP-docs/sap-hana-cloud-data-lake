@@ -6,16 +6,19 @@ Adds a user-defined message to the `SYSUSERMESSAGES` system table for use by `PR
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61829d784f210158a99f4e03b39b150__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 CREATE MESSAGE <message-number>
-... AS '<message-text>'
+... AS '<message-text>';
 ```
 
 
@@ -98,11 +101,11 @@ Automatic commit
 **Related Information**  
 
 
+[DROP MESSAGE Statement for Data Lake Relational Engine](drop-message-statement-for-data-lake-relational-engine-e7d81ab.md "Removes a message from the database.")
+
 [PRINT Statement \[T-SQL\] for Data Lake Relational Engine](print-statement-t-sql-for-data-lake-relational-engine-a6221e2.md "Displays a message on the message window of the database server.")
 
 [RAISERROR Statement \[T-SQL\] for Data Lake Relational Engine](raiserror-statement-t-sql-for-data-lake-relational-engine-a6227d8.md "Allows user-defined errors to be signaled, and sends a message on the client.")
-
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

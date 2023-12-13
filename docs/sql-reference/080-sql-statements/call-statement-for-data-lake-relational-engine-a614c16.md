@@ -6,10 +6,13 @@ Invokes a procedure.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa614c16084f21015bc34dd15aeb50bde__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -19,7 +22,7 @@ Invokes a procedure.
 
 ```
 [ <variable> = ] CALL { <owner> | <schema-name> }<procedure-name> ( [ <expression> ] [ , … ] ) 
-    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ]
+    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ];
 ```
 
 
@@ -28,7 +31,7 @@ Invokes a procedure.
 
 ```
 [ <variable> = ] CALL { <owner> | <schema-name> }<procedure-name> ( [ <parameter-name> = <expression> ] [ , … ] ) 
-    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ]
+    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ];
 ```
 
 
@@ -80,7 +83,7 @@ Procedures can return an integer value \(as a status indicator, say\) using the 
 
 ```
 CREATE VARIABLE returnval INT ;
-returnval = CALL proc_integer ( arg1 = val1, ... )
+returnval = CALL proc_integer ( arg1 = val1, ... );
 ```
 
 > ### Note:  
@@ -128,7 +131,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 -   The following example calls the sp\_customer\_list procedure. This procedure has no parameters, and returns a result set:
 
     ```
-    CALL sp_customer_list()
+    CALL sp_customer_list();
     ```
 
 -   The following example creates a procedure to return the number of orders placed by the customer whose ID is supplied, creates a variable to hold the result, calls the procedure, and displays the result:
@@ -161,7 +164,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[CALL Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/04d3a41e1d0c48aaaa788980a565bbe0.html "Invokes a procedure.") :arrow_upper_right:
+[CALL Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/04d3a41e1d0c48aaaa788980a565bbe0.html "Invokes a procedure.") :arrow_upper_right:
 
 [CREATE PROCEDURE Statement for Data Lake Relational Engine](create-procedure-statement-for-data-lake-relational-engine-a6185b2.md "Creates a new user-defined SQL procedure in the database.")
 

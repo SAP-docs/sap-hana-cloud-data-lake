@@ -6,16 +6,19 @@ Increments the counter associated with a semaphore.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio8171dbe36ce21014b0d594471fc5e8a3__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 NOTIFY SEMAPHORE [<owner>.]<semaphore-name> 
-   [ INCREMENT BY <number> ]
+   [ INCREMENT BY <number> ];
 
 ```
 
@@ -118,6 +121,8 @@ Not in the standard.
 </dl>
 
 
+
+## Example
 
 The following statement creates a semaphore and sets its initial value to zero:
 

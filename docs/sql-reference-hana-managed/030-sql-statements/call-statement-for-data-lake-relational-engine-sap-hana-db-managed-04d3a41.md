@@ -6,12 +6,11 @@ Invokes a procedure.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
 
 
 
@@ -21,7 +20,7 @@ Invokes a procedure.
 
 ```
 [ <variable> = ] CALL { <owner> | <schema-name> }<procedure-name> ( [ <expression> ] [ , … ] ) 
-    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ]
+    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ];
 ```
 
 
@@ -30,7 +29,7 @@ Invokes a procedure.
 
 ```
 [ <variable> = ] CALL { <owner> | <schema-name> }<procedure-name> ( [ <parameter-name> = <expression> ] [ , … ] ) 
-    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ]
+    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ];
 ```
 
 
@@ -87,7 +86,7 @@ Procedures can return an integer value \(as a status indicator, say\) using the 
 
 ```
 CREATE VARIABLE returnval INT ;
-returnval = CALL proc_integer ( arg1 = val1, ... )
+returnval = CALL proc_integer ( arg1 = val1, ... );
 ```
 
 > ### Note:  
@@ -108,10 +107,27 @@ returnval = CALL proc_integer ( arg1 = val1, ... )
 
 ### 
 
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
+
+
+</dd>
+</dl>
 
 
 
@@ -131,7 +147,7 @@ Requires one of:
 -   The following example calls the sp\_customer\_list procedure. This procedure has no parameters, and returns a result set:
 
     ```
-    CALL sp_customer_list()
+    CALL sp_customer_list();
     ```
 
 -   The following example creates a procedure to return the number of orders placed by the customer whose ID is supplied, creates a variable to hold the result, calls the procedure, and displays the result:
@@ -164,5 +180,5 @@ Requires one of:
 **Related Information**  
 
 
-[CALL Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a614c16084f21015bc34dd15aeb50bde.html "Invokes a procedure.") :arrow_upper_right:
+[CALL Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a614c16084f21015bc34dd15aeb50bde.html "Invokes a procedure.") :arrow_upper_right:
 

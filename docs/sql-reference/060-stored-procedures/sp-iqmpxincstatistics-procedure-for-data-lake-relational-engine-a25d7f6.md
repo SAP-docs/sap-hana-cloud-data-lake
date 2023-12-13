@@ -6,22 +6,25 @@ Displays a snapshot of the aggregate statistics of internode communication \(INC
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa25d7f6e84f21015ba7fb54d8946c51c__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqmpxincstatistics
+sp_iqmpxincstatistics;
 ```
 
 
 
 <a name="loioa25d7f6e84f21015ba7fb54d8946c51c__iq_refbb_1637"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -30,21 +33,15 @@ sp_iqmpxincstatistics
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -53,14 +50,10 @@ Description
 
 stat\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
-
-
 
 </td>
 <td valign="top">
@@ -81,21 +74,15 @@ INC statistics name. Valid stat\_name values are:
 
 stat\_value
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INTEGER
 
-
-
 </td>
 <td valign="top">
 
 INC statistics value.
-
-
 
 </td>
 </tr>
@@ -119,12 +106,12 @@ None
 
 <a name="loioa25d7f6e84f21015ba7fb54d8946c51c__iq_refbb_1641"/>
 
-## Example
+## Examples
 
 The following example shows one suspended and one resumed transaction:
 
 ```
-sp_iqmpxincstatistics
+sp_iqmpxincstatistics;
 ```
 
 ```

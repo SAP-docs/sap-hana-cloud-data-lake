@@ -2,26 +2,37 @@
 
 # sp\_iqunusedindex Procedure for Data Lake Relational Engine
 
-Reports IQ secondary \(non-FP\) indexes that were not referenced by the workload.
+Reports secondary \(non-FP\) indexes that were not referenced by the workload.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5bc6ce984f21015a5b1fbca46ba89ce__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqunusedindex 
+sp_iqunusedindex; 
 ```
+
+
+
+<a name="loioa5bc6ce984f21015a5b1fbca46ba89ce__section_wnm_sxc_yyb"/>
+
+## Parameters
+
+None
 
 
 
 <a name="loioa5bc6ce984f21015a5b1fbca46ba89ce__section_mhb_l4m_nbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -30,14 +41,10 @@ sp_iqunusedindex
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,14 +53,10 @@ Description
 
 IndexName
 
-
-
 </td>
 <td valign="top">
 
 Index name
-
-
 
 </td>
 </tr>
@@ -62,14 +65,10 @@ Index name
 
 TableName
 
-
-
 </td>
 <td valign="top">
 
 Table name
-
-
 
 </td>
 </tr>
@@ -78,14 +77,10 @@ Table name
 
 Owner
 
-
-
 </td>
 <td valign="top">
 
 User name of index owner
-
-
 
 </td>
 </tr>
@@ -94,14 +89,10 @@ User name of index owner
 
 IndexType
 
-
-
 </td>
 <td valign="top">
 
 Index type
-
-
 
 </td>
 </tr>
@@ -133,21 +124,413 @@ None
 
 <a name="loioa5bc6ce984f21015a5b1fbca46ba89ce__iq_refbb_1829"/>
 
-## Example
+## Examples
 
-The following shows sample output from sp\_iqunusedindex:
+The following statement displays a list of the non-FP indexes that are not referenced by the workload.
 
 ```
-IndexName            TableName             Owner  IndexType ASIQ_IDX_T450_I7_HG  SalesOrders           GROUPO HG 
-ASIQ_IDX_T450_C6_HG  SalesOrders           GROUPO HG ASIQ_IDX_T450_C4_HG  SalesOrders           GROUPO HG 
-ASIQ_IDX_T450_C2_HG  SalesOrders           GROUPO HG ASIQ_IDX_T451_I6_HG  SalesOrderItems       GROUPO HG 
-ASIQ_IDX_T451_C3_HG  SalesOrderItems       GROUPO HG ASIQ_IDX_T451_C1_HG  SalesOrderItems       GROUPO HG 
-ASIQ_IDX_T452_I11_HG Contacts              GROUPO HG ASIQ_IDX_T453_I10_HG Contacts              GROUPO HG 
-ASIQ_IDX_T454_I4_HG  FinancialCodes        GROUPO HG ASIQ_IDX_T455_I5_HG  FinancialData         GROUPO HG 
-ASIQ_IDX_T455_C3_HG  FinancialData         GROUPO HG ASIQ_IDX_T456_I8_HG  Products              GROUPO HG 
-ASIQ_IDX_T457_I4_HG  Departments           GROUPO HG ASIQ_IDX_T457_C3_HG  Departments           GROUPO HG 
-ASIQ_IDX_T458_I21_HG Departments           GROUPO HG ASIQ_IDX_T458_C5_HG  Departments           GROUPO HG
+CALL sp_iqunusedindex;
 ```
+
+
+<table>
+<tr>
+<th valign="top">
+
+IndexName
+
+</th>
+<th valign="top">
+
+TableName
+
+</th>
+<th valign="top">
+
+Owner
+
+</th>
+<th valign="top">
+
+IndexType
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T450\_I7\_HG
+
+</td>
+<td valign="top">
+
+SalesOrders
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T450\_C6\_HG
+
+</td>
+<td valign="top">
+
+SalesOrders
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T450\_C4\_HG
+
+</td>
+<td valign="top">
+
+SalesOrders
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T450\_C2\_HG
+
+</td>
+<td valign="top">
+
+SalesOrders
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T451\_I6\_HG
+
+</td>
+<td valign="top">
+
+SalesOrderItems
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T451\_C3\_HG
+
+</td>
+<td valign="top">
+
+SalesOrderItems
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T451\_C1\_HG
+
+</td>
+<td valign="top">
+
+SalesOrderItems
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T452\_I11\_HG
+
+</td>
+<td valign="top">
+
+Contacts
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T453\_I10\_HG
+
+</td>
+<td valign="top">
+
+Contacts
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T454\_I4\_HG
+
+</td>
+<td valign="top">
+
+FinancialCodes
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T455\_I5\_HG
+
+</td>
+<td valign="top">
+
+FinancialData
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T455\_C3\_HG
+
+</td>
+<td valign="top">
+
+FinancialData
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T456\_I8\_HG
+
+</td>
+<td valign="top">
+
+Products
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T457\_I4\_HG
+
+</td>
+<td valign="top">
+
+Departments
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T457\_C3\_HG
+
+</td>
+<td valign="top">
+
+Departments
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T458\_I21\_HG
+
+</td>
+<td valign="top">
+
+Departments
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ASIQ\_IDX\_T458\_C5\_HG
+
+</td>
+<td valign="top">
+
+Departments
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+HG
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 
@@ -160,9 +543,9 @@ ASIQ_IDX_T458_I21_HG Departments           GROUPO HG ASIQ_IDX_T458_
 
 [sp\_iqtableuse Procedure for Data Lake Relational Engine](sp-iqtableuse-procedure-for-data-lake-relational-engine-a5bae03.md "Reports detailed usage information for tables accessed by the workload.")
 
-[sp\_iqunusedcolumn Procedure for Data Lake Relational Engine](sp-iqunusedcolumn-procedure-for-data-lake-relational-engine-a5bbef3.md "Reports IQ columns that were not referenced by the workload.")
+[sp\_iqunusedcolumn Procedure for Data Lake Relational Engine](sp-iqunusedcolumn-procedure-for-data-lake-relational-engine-a5bbef3.md "Reports columns that were not referenced by the workload.")
 
-[sp\_iqunusedtable Procedure for Data Lake Relational Engine](sp-iqunusedtable-procedure-for-data-lake-relational-engine-a5bced3.md "Reports IQ tables that were not referenced by the workload.")
+[sp\_iqunusedtable Procedure for Data Lake Relational Engine](sp-iqunusedtable-procedure-for-data-lake-relational-engine-a5bced3.md "Reports tables that were not referenced by the workload.")
 
 [sp\_iqworkmon Procedure for Data Lake Relational Engine](sp-iqworkmon-procedure-for-data-lake-relational-engine-a5c13d2.md "Controls collection of workload monitor usage information, and reports monitoring collection status. sp_iqworkmon collects information only for queries (SQL statements containing a FROM clause). You cannot use sp_iqworkmon for INSERT or LOAD statements.")
 

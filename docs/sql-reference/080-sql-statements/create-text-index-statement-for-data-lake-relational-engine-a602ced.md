@@ -6,10 +6,13 @@ Creates a TEXT index and specifies the text configuration object to use.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa602ced184f210158c90b4b833754412__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -17,7 +20,7 @@ Creates a TEXT index and specifies the text configuration object to use.
 CREATE TEXT INDEX <text-index-name>
    ON [ { <owner> | <schema-name> }]<table-name>( <column-name>,
    [ CONFIGURATION [ <owner>]<text-configuration-name>]
-   [ IMMEDIATE REFRESH ]
+   [ IMMEDIATE REFRESH ];
 ```
 
 

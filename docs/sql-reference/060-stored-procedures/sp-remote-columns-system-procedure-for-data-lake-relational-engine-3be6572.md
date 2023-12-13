@@ -6,16 +6,15 @@ Produce a list of the columns in a remote table, and a description of their data
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be657216c5f10148af686ed9c86d496__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
-
-<a name="loio3be657216c5f10148af686ed9c86d496__section_zh4_qmj_n4b"/>
-
-## Syntax
 
 ```
 sp_remote_columns (
@@ -23,7 +22,7 @@ sp_remote_columns (
     , <remote-table-name>
     [ , <remote-table-owner>
     [ , <table-qualifier> ] ]
-)
+);
 ```
 
 
@@ -34,7 +33,7 @@ sp_remote_columns (
 <dl>
 <dt><b>
 
- *<remote-server-name\>* 
+*<remote-server-name\>* 
 
 </b></dt>
 <dd>
@@ -45,7 +44,7 @@ sp_remote_columns (
 
 </dd><dt><b>
 
- *<remote-table-name\>* 
+*<remote-table-name\>* 
 
 </b></dt>
 <dd>
@@ -59,7 +58,7 @@ Use this optional CHAR\(128\) parameter to specify the name of the remote table.
 
 </dd><dt><b>
 
- *<remote-table-owner\>* 
+*<remote-table-owner\>* 
 
 </b></dt>
 <dd>
@@ -73,7 +72,7 @@ Use this optional CHAR\(128\) parameter to specify the remote schema name that o
 
 </dd><dt><b>
 
- *<table-qualifier\>* 
+*<table-qualifier\>* 
 
 </b></dt>
 <dd>
@@ -99,21 +98,15 @@ Use this optional CHAR\(128\) parameter to specify the remote schema name that o
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Use this optional CHAR\(128\) parameter to specify the database in whichDescription
-
-
 
 </th>
 </tr>
@@ -122,21 +115,15 @@ Use this optional CHAR\(128\) parameter to specify the database in whichDescript
 
 DATABASE
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The database name.
-
-
 
 </td>
 </tr>
@@ -145,21 +132,15 @@ The database name.
 
 OWNER
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The remote schema owning the remote table.
-
-
 
 </td>
 </tr>
@@ -168,21 +149,15 @@ The remote schema owning the remote table.
 
 TABLE\_NAME
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The table name.
-
-
 
 </td>
 </tr>
@@ -191,21 +166,15 @@ The table name.
 
 COLUMN\_NAME
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of a column.
-
-
 
 </td>
 </tr>
@@ -214,21 +183,15 @@ The name of a column.
 
 DOMAIN\_ID
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 An INTEGER that indicates the data type of the column.
-
-
 
 </td>
 </tr>
@@ -237,21 +200,15 @@ An INTEGER that indicates the data type of the column.
 
 WIDTH
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The meaning of this column depends on the data type. For character types, width represents the number of characters.
-
-
 
 </td>
 </tr>
@@ -260,21 +217,15 @@ The meaning of this column depends on the data type. For character types, width 
 
 SCALE
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 The meaning of this column depends on the data type. For NUMERIC data types, scale is the number of digits after the decimal point.
-
-
 
 </td>
 </tr>
@@ -283,21 +234,15 @@ The meaning of this column depends on the data type. For NUMERIC data types, sca
 
 NULLABLE
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 If NULL column values are allowed, the value is 1. Otherwise, the value is 0.
-
-
 
 </td>
 </tr>
@@ -306,21 +251,15 @@ If NULL column values are allowed, the value is 1. Otherwise, the value is 0.
 
 BASE\_TYPE\_STR
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(4096\)
 
-
-
 </td>
 <td valign="top">
 
 The annotated type string representing the physical type of the column.
-
-
 
 </td>
 </tr>
@@ -349,6 +288,8 @@ Requires the HDL\_FILES\_SERVICE\_ADMIN role.
 
 
 
+## Example
+
 The following example returns information about the columns in the ULProduct table on the remote SQL on Files server named `RemoteSOF` owned by the remote schema RemoteSchema.
 
 ```
@@ -360,8 +301,6 @@ The following example returns information about the columns in the SOFobjects ta
 ```
 CALL sp_remote_columns( 'RemoteSOF', 'SOFobjects', null );
 ```
-
-
 
 The following example returns information about the columns in the ULProduct table on the remote data lake Relational Engine database server named RemoteHDL. The table owner is HDLADMIN.
 

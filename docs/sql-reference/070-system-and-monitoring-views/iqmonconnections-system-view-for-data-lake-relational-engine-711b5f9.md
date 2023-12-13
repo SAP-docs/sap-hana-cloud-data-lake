@@ -6,10 +6,13 @@ A server-level monitoring view providing current connection status information s
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio711b5f9ca171400ca7efa6a48e559a78__section_skb_fwg_k4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,21 +26,15 @@ A server-level monitoring view providing current connection status information s
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,21 +43,15 @@ Description
 
 ConnectionHandle
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The connection handle for this connection.
-
-
 
 </td>
 </tr>
@@ -69,21 +60,15 @@ The connection handle for this connection.
 
 ConnectionName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the connection. This is an internal name.
-
-
 
 </td>
 </tr>
@@ -92,21 +77,15 @@ The name of the connection. This is an internal name.
 
 UserID
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The user ID.
-
-
 
 </td>
 </tr>
@@ -115,21 +94,15 @@ The user ID.
 
 LastRequestTime
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The time of the last request by this connection.
-
-
 
 </td>
 </tr>
@@ -138,21 +111,15 @@ The time of the last request by this connection.
 
 LastRequestType
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The last request type.
-
-
 
 </td>
 </tr>
@@ -161,21 +128,15 @@ The last request type.
 
 IQCommandType
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(32\)
 
-
-
 </td>
 <td valign="top">
 
 The type of command.
-
-
 
 </td>
 </tr>
@@ -184,21 +145,15 @@ The type of command.
 
 LastIQCommandTime
 
-
-
 </td>
 <td valign="top">
 
 DATETIME\(8\)
 
-
-
 </td>
 <td valign="top">
 
 The time of the last data lake Relational Engine command executed by this connection.
-
-
 
 </td>
 </tr>
@@ -207,21 +162,15 @@ The time of the last data lake Relational Engine command executed by this connec
 
 IQCursors
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The number of data lake Relational Engine cursors for this connection.
-
-
 
 </td>
 </tr>
@@ -230,21 +179,15 @@ The number of data lake Relational Engine cursors for this connection.
 
 LowestIQCursorState
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(16\)
 
-
-
 </td>
 <td valign="top">
 
 The lowest data lake Relational Engine cursor state.
-
-
 
 </td>
 </tr>
@@ -253,21 +196,15 @@ The lowest data lake Relational Engine cursor state.
 
 IQThreads
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The number of data lake Relational Engine threads in use by this connection.
-
-
 
 </td>
 </tr>
@@ -276,21 +213,15 @@ The number of data lake Relational Engine threads in use by this connection.
 
 TransactionID
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The current transaction ID for this connection.
-
-
 
 </td>
 </tr>
@@ -299,21 +230,15 @@ The current transaction ID for this connection.
 
 ConnectionCreateTime
 
-
-
 </td>
 <td valign="top">
 
 DATETIME\(8\)
 
-
-
 </td>
 <td valign="top">
 
 The creation time for this connection.
-
-
 
 </td>
 </tr>
@@ -322,21 +247,15 @@ The creation time for this connection.
 
 TempTableSpace
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The temporary table space \(in KB\) used by this connection.
-
-
 
 </td>
 </tr>
@@ -345,21 +264,15 @@ The temporary table space \(in KB\) used by this connection.
 
 TempWorkSpace
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The temporary work space \(in KB\) used by this connection.
-
-
 
 </td>
 </tr>
@@ -368,21 +281,15 @@ The temporary work space \(in KB\) used by this connection.
 
 IQConnectionID
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The data lake Relational Engine connection ID.
-
-
 
 </td>
 </tr>
@@ -391,21 +298,15 @@ The data lake Relational Engine connection ID.
 
 SAtoIQCalls
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The number of interface calls from SAP SQL Anywhere to data lake Relational Engine.
-
-
 
 </td>
 </tr>
@@ -414,21 +315,15 @@ The number of interface calls from SAP SQL Anywhere to data lake Relational Engi
 
 IQtoSACalls
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The number of interface calls from data lake Relational Engine to SAP SQL Anywhere.
-
-
 
 </td>
 </tr>
@@ -437,21 +332,15 @@ The number of interface calls from data lake Relational Engine to SAP SQL Anywhe
 
 CommunicationLink
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The communication link for this connection.
-
-
 
 </td>
 </tr>
@@ -460,21 +349,15 @@ The communication link for this connection.
 
 NodeAddress
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The multiplex node that this connection is connected to.
-
-
 
 </td>
 </tr>
@@ -483,21 +366,15 @@ The multiplex node that this connection is connected to.
 
 LastIdlePeriod
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The number of clock ticks between requests.
-
-
 
 </td>
 </tr>
@@ -506,21 +383,15 @@ The number of clock ticks between requests.
 
 MPXServerName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the originating server if this is an internode communication connection.
-
-
 
 </td>
 </tr>
@@ -529,21 +400,15 @@ The name of the originating server if this is an internode communication connect
 
 INCConnectionName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the underlying internode communication connection for this connection.
-
-
 
 </td>
 </tr>
@@ -552,21 +417,15 @@ The name of the underlying internode communication connection for this connectio
 
 INCConnectionSuspended
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(2\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates whether the internode communication connection is suspended \('Y' or 'N'\).
-
-
 
 </td>
 </tr>
@@ -578,7 +437,7 @@ Indicates whether the internode communication connection is suspended \('Y' or '
 
 ## Privileges
 
-You must have the MONITOR system privilege to access this view. DBAs can consult [Granting a System Privilege to a User](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_2_QRC/en-US/a43bcb8284f210158039b1793a92a4fc.html "Allow the granting of specific system privileges to specific users, with or without administrative rights.") :arrow_upper_right: and [Alphabetical List of System Privileges for Data Lake Relational Engine](../080-sql-statements/alphabetical-list-of-system-privileges-for-data-lake-relational-engine-a449325.md) for information on granting the MONITOR system privilege to a user.
+You must have the MONITOR system privilege to access this view. DBAs can consult [Granting a System Privilege to a User](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/a43bcb8284f210158039b1793a92a4fc.html "Allow the granting of specific system privileges to specific users, with or without administrative rights.") :arrow_upper_right: and [Alphabetical List of System Privileges for Data Lake Relational Engine](../080-sql-statements/alphabetical-list-of-system-privileges-for-data-lake-relational-engine-a449325.md) for information on granting the MONITOR system privilege to a user.
 
 
 
@@ -595,5 +454,5 @@ Use iqmonConnections for diagnostic use-cases including:
 -   Determining how much temporary cache is consumed by a connection.
 
 
-iqmonConnections, in conjunction with the other monitoring views, can help you troubleshoot common data lake Relational Engine performance problems. For diagnostic use-case information, see the [SAP HANA Cloud, Data Lake Performance and Tuning for Data Lake Relational Engine (Monitoring Views)](https://help.sap.com/viewer/028be133f34c4d2d998c6fbc258659c5/2023_2_QRC/en-US/56032dd760ca4790a55d069d4475b441.html "This document shows you how to use the monitoring views to monitor data lake Relational Engine system health, and to help you troubleshoot performance issues.") :arrow_upper_right: manual.
+iqmonConnections, in conjunction with the other monitoring views, can help you troubleshoot common data lake Relational Engine performance problems. For diagnostic use-case information, see the [SAP HANA Cloud, Data Lake Performance and Tuning for Data Lake Relational Engine (Monitoring Views)](https://help.sap.com/viewer/028be133f34c4d2d998c6fbc258659c5/2023_4_QRC/en-US/56032dd760ca4790a55d069d4475b441.html "This document shows you how to use the monitoring views to monitor data lake Relational Engine system health, and to help you troubleshoot performance issues.") :arrow_upper_right: manual.
 

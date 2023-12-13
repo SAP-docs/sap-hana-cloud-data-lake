@@ -7,7 +7,7 @@ Returns the unsigned BIGINT equivalent of a hexadecimal string.
 
 
 ```
-HEXTOINT ( <hexadecimal-string> )
+HEXTOINT ( <hexadecimal-string> );
 ```
 
 
@@ -48,7 +48,7 @@ The string to be converted to an integer. Input can be in the following forms, w
 
 <a name="loioa555d0f984f210158262871887ce5bc9__HEXTOINT_returns1"/>
 
-## Returns
+## Result Set
 
 The HEXTOINT function returns the platform-independent SQL INTEGER equivalent of the hexadecimal string. The hexadecimal value represents a negative integer if the 8th digit from the right is one of the digits 8-9 and the uppercase or lowercase letters A-F and the previous leading digits are all uppercase or lowercase letter F. The following is not a valid use of HEXTOINT since the argument represents a positive integer value that cannot be represented as a signed 32-bit integer:
 
@@ -85,15 +85,15 @@ See [CONVERSION\_ERROR Option \[TSQL\] for Data Lake Relational Engine](../090-d
 The following statements return the value 420:
 
 ```
-SELECT HEXTOINT ( '0x1A4' ) FROM iq_dummy
+SELECT HEXTOINT ( '0x1A4' ) FROM iq_dummy;
 ```
 
 ```
-SELECT HEXTOINT ( '0X1A4' ) FROM iq_dummy
+SELECT HEXTOINT ( '0X1A4' ) FROM iq_dummy;
 ```
 
 ```
-SELECT HEXTOINT ( '1A4' ) FROM iq_dummy
+SELECT HEXTOINT ( '1A4' ) FROM iq_dummy;
 ```
 
 **Related Information**  
@@ -101,5 +101,5 @@ SELECT HEXTOINT ( '1A4' ) FROM iq_dummy
 
 [CONVERSION\_ERROR Option \[TSQL\] for Data Lake Relational Engine](../090-database-options/conversion-error-option-tsql-for-data-lake-relational-engine-a63018a.md "Controls reporting of data type conversion failures on fetching information from the database.")
 
-[HEXTOINT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/79e066782ff645e8b6014d4f4d1e0d9e.html "Returns the unsigned BIGINT equivalent of a hexadecimal string.") :arrow_upper_right:
+[HEXTOINT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/79e066782ff645e8b6014d4f4d1e0d9e.html "Returns the unsigned BIGINT equivalent of a hexadecimal string.") :arrow_upper_right:
 

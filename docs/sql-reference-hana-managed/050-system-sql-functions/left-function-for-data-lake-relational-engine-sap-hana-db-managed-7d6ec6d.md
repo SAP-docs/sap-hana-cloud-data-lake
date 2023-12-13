@@ -7,7 +7,7 @@ Returns a specified number of characters from the beginning of a string.
 
 
 ```
-LEFT ( <string-expression>, <numeric-expression> )
+LEFT ( <string-expression>, <numeric-expression> );
 ```
 
 
@@ -47,7 +47,7 @@ The number of characters to return.
 
 <a name="loio7d6ec6d7cc0f4bebb844b85a3965a81a__section_cd1_bdh_trb"/>
 
-## Returns
+## Result Set
 
 -   LONG VARCHAR
 -   LONG NVARCHAR
@@ -82,11 +82,11 @@ If the string contains multibyte characters, and the proper collation is being u
 The following statement returns the value "choco":
 
 ```
-SELECT LEFT( 'chocolate', 5 ) FROM iq_dummy
+SELECT LEFT( 'chocolate', 5 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[LEFT Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a55d883284f210158c5ec15e3e69239f.html "Returns a specified number of characters from the beginning of a string.") :arrow_upper_right:
+[LEFT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a55d883284f210158c5ec15e3e69239f.html "Returns a specified number of characters from the beginning of a string.") :arrow_upper_right:
 

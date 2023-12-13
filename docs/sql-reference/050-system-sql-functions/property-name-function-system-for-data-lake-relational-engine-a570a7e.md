@@ -7,7 +7,7 @@ Returns the name of the property with the supplied property number.
 
 
 ```
-PROPERTY_NAME ( <property-id> )
+PROPERTY_NAME ( <property-id> );
 ```
 
 
@@ -34,7 +34,7 @@ The property number of the property.
 
 
 
-## Returns
+## Result Set
 
 VARCHAR
 
@@ -65,7 +65,7 @@ VARCHAR
 The following statement returns the property associated with property number 126:
 
 ```
-SELECT PROPERTY_NAME( 126 ) FROM iq_dummy
+SELECT PROPERTY_NAME( 126 ) FROM iq_dummy;
 ```
 
 The actual property to which this refers changes from version to version.

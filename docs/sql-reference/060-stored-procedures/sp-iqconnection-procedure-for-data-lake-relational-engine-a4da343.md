@@ -6,10 +6,13 @@ Shows information about connections and versions, including which users are usin
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa4da343584f210159719d7a4830c267f__section_vg4_vvh_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -19,7 +22,7 @@ Shows information about connections and versions, including which users are usin
 
 
 ```
-sp_iqconnection [ <connhandle> ]
+sp_iqconnection [ <connhandle> ];
 ```
 
 
@@ -48,7 +51,7 @@ The ID number of the connection.
 
 <a name="loioa4da343584f210159719d7a4830c267f__IQ_Returns"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -57,14 +60,10 @@ The ID number of the connection.
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -73,14 +72,10 @@ Description
 
 ConnHandle
 
-
-
 </td>
 <td valign="top">
 
 The ID number of the connection
-
-
 
 </td>
 </tr>
@@ -89,14 +84,10 @@ The ID number of the connection
 
 Name
 
-
-
 </td>
 <td valign="top">
 
 The connection name specified by the ConnectionName \(CON\) connection parameter.
-
-
 
 </td>
 </tr>
@@ -105,14 +96,10 @@ The connection name specified by the ConnectionName \(CON\) connection parameter
 
 Userid
 
-
-
 </td>
 <td valign="top">
 
 The user ID for the connection.
-
-
 
 </td>
 </tr>
@@ -121,14 +108,10 @@ The user ID for the connection.
 
 LastReqTime
 
-
-
 </td>
 <td valign="top">
 
 The time at which the last request for the specified connection started.
-
-
 
 </td>
 </tr>
@@ -137,14 +120,10 @@ The time at which the last request for the specified connection started.
 
 ReqType
 
-
-
 </td>
 <td valign="top">
 
 A string for the type of the last request.
-
-
 
 </td>
 </tr>
@@ -153,14 +132,10 @@ A string for the type of the last request.
 
 IQCmdType
 
-
-
 </td>
 <td valign="top">
 
 Data lake Relational Engine side, if any. The command type reflects commands defined at the implementation level of the engine. These commands consist of transaction commands, DDL and DML commands for data in the data lake Relational Engine store, internal data lake Relational Engine cursor commands, and special control commands such as the current command executing on the OPEN and CLOSE, and others.
-
-
 
 </td>
 </tr>
@@ -169,14 +144,10 @@ Data lake Relational Engine side, if any. The command type reflects commands def
 
 LastIQCmdTime
 
-
-
 </td>
 <td valign="top">
 
 The time the last data lake Relational Engine command started or completed on the IQ side of the data lake Relational Engine engine on this connection.
-
-
 
 </td>
 </tr>
@@ -185,14 +156,10 @@ The time the last data lake Relational Engine command started or completed on th
 
 IQCursors
 
-
-
 </td>
 <td valign="top">
 
 The number of cursors open in the data lake Relational Engine store on this connection.
-
-
 
 </td>
 </tr>
@@ -200,8 +167,6 @@ The number of cursors open in the data lake Relational Engine store on this conn
 <td valign="top">
 
 LowestIQCursorState
-
-
 
 </td>
 <td valign="top">
@@ -223,8 +188,6 @@ The data lake Relational Engine cursor state, if any. If multiple cursors exist 
 
 As suggested by the names, the cursor state changes at the end of the operation. A state of PREPARED, for example, indicates that the cursor is executing.
 
-
-
 </td>
 </tr>
 <tr>
@@ -232,14 +195,10 @@ As suggested by the names, the cursor state changes at the end of the operation.
 
 IQthreads
 
-
-
 </td>
 <td valign="top">
 
 The number of data lake Relational Engine
-
-
 
 </td>
 </tr>
@@ -248,14 +207,10 @@ The number of data lake Relational Engine
 
 TxnID
 
-
-
 </td>
 <td valign="top">
 
 The transaction ID of the current transaction on the connection. This is the same as the transaction ID in the `.iqmsg` file by the BeginTxn, CmtTxn, and PostCmtTxn messages, as well as the Txn ID Seq logged when the database is opened.
-
-
 
 </td>
 </tr>
@@ -264,14 +219,10 @@ The transaction ID of the current transaction on the connection. This is the sam
 
 ConnCreateTime
 
-
-
 </td>
 <td valign="top">
 
 The time the connection was created.
-
-
 
 </td>
 </tr>
@@ -280,14 +231,10 @@ The time the connection was created.
 
 TempTableSpaceKB
 
-
-
 </td>
 <td valign="top">
 
 The number of kilobytes of data lake Relational Engine temporary store space in use by this connection for data stored in data lake Relational Engine temp tables. threads currently assigned to the connection. Some threads may be assigned but idle. This column can help you determine which connections are using the most resources. threads currently assigned to the connection. Some threads may be assigned but idle. This column can help you determine which connections are using the most resources.nullnullnull
-
-
 
 </td>
 </tr>
@@ -296,14 +243,10 @@ The number of kilobytes of data lake Relational Engine temporary store space in 
 
 TempWorkSpaceKB
 
-
-
 </td>
 <td valign="top">
 
 nullThe number of kilobytes of data lake Relational Engine temporary store space in use by this connection for working space such as sorts, hashes, and temporary bitmaps. Space used by bitmaps or other objects that are part of indexes on data lake Relational Engine temporary tables are reflected in TempTableSpaceKB.
-
-
 
 </td>
 </tr>
@@ -312,14 +255,10 @@ nullThe number of kilobytes of data lake Relational Engine temporary store space
 
 IQConnID
 
-
-
 </td>
 <td valign="top">
 
 The 10-digit connection ID included as part of all messages in the `.iqmsg` file. This is a monotonically increasing integer unique within a server session.
-
-
 
 </td>
 </tr>
@@ -328,14 +267,10 @@ The 10-digit connection ID included as part of all messages in the `.iqmsg` fil
 
 satoiq\_count
 
-
-
 </td>
 <td valign="top">
 
 An internal counter used to display the number of crossings from the SAP SQL Anywhere side to the data lake Relational Engine side of the data lake Relational Engine engine. This might be occasionally useful in determining connection activity. Result sets are returned in buffers of rows and don't increment satoiq\_count or iqtosa\_count once per row.
-
-
 
 </td>
 </tr>
@@ -344,14 +279,10 @@ An internal counter used to display the number of crossings from the SAP SQL Any
 
 iqtosa\_count
 
-
-
 </td>
 <td valign="top">
 
 An internal counter used to display the number of crossings from the data lake Relational Engine side to the SAP SQL Anywhere side of the data lake Relational Engine engine. This might be occasionally useful in determining connection activity.
-
-
 
 </td>
 </tr>
@@ -360,14 +291,10 @@ An internal counter used to display the number of crossings from the data lake R
 
 CommLink
 
-
-
 </td>
 <td valign="top">
 
 The communication link for the connection. This is one of the network protocols supported by data lake Relational Engine, or is local for a same-machine connection.
-
-
 
 </td>
 </tr>
@@ -376,14 +303,10 @@ The communication link for the connection. This is one of the network protocols 
 
 NodeAddr
 
-
-
 </td>
 <td valign="top">
 
 The node for the client in a client/server connection.
-
-
 
 </td>
 </tr>
@@ -392,14 +315,10 @@ The node for the client in a client/server connection.
 
 LastIdle
 
-
-
 </td>
 <td valign="top">
 
 The number of ticks between requests.
-
-
 
 </td>
 </tr>
@@ -408,14 +327,10 @@ The number of ticks between requests.
 
 MPXServerName
 
-
-
 </td>
 <td valign="top">
 
 If an INC connection, the VARCHAR\(128\) value contains the name of the node where the INC connection originates. NULL if not an INC connection.
-
-
 
 </td>
 </tr>
@@ -424,14 +339,10 @@ If an INC connection, the VARCHAR\(128\) value contains the name of the node whe
 
 INCConnName
 
-
-
 </td>
 <td valign="top">
 
 The name of the underlying INC connection for a user connection. The data type for this column is VARCHAR\(255\). If sp\_iqconnection shows an INC connection name for a suspended user connection that user connection has an associated INC connection that is also suspended.
-
-
 
 </td>
 </tr>
@@ -440,14 +351,10 @@ The name of the underlying INC connection for a user connection. The data type f
 
 INCConnSuspended
 
-
-
 </td>
 <td valign="top">
 
 The value "Y" in this column indicates that the underlying INC connection for a user connection is in a suspended state. The value "N" indicates that the connection isn't suspended.
-
-
 
 </td>
 </tr>
@@ -462,7 +369,7 @@ The value "Y" in this column indicates that the underlying INC connection for a 
 *<connhandle\>* is equal to the Number connection property and is the ID number of the connection. The connection\_property system function returns the connection ID:
 
 ```
-SELECT connection_property ( 'Number' )
+SELECT connection_property ( 'Number' );
 ```
 
 When called with an input parameter of a valid *<connhandle\>*, sp\_iqconnection returns the one row for that connection only.
@@ -478,14 +385,10 @@ The column MPXServerName stores information related to internode communication \
 
 Server Where Run
 
-
-
 </th>
 <th valign="top">
 
 MPXServerName Column Content
-
-
 
 </th>
 </tr>
@@ -494,14 +397,10 @@ MPXServerName Column Content
 
 Data lake Relational Engine server
 
-
-
 </td>
 <td valign="top">
 
 NULL \(All connections are local/user connections\)
-
-
 
 </td>
 </tr>
@@ -509,8 +408,6 @@ NULL \(All connections are local/user connections\)
 <td valign="top">
 
 Coordinator node
-
-
 
 </td>
 <td valign="top">
@@ -526,8 +423,6 @@ Coordinator node
 <td valign="top">
 
 Worker node
-
-
 
 </td>
 <td valign="top">

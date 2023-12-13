@@ -6,16 +6,15 @@ Return a list of the tables on a remote server.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be677246c5f101491d2a9a435e92f1f__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
-
-<a name="loio3be677246c5f101491d2a9a435e92f1f__section_dkt_llj_n4b"/>
-
-## Syntax
 
 ```
 sp_remote_tables (
@@ -24,7 +23,7 @@ sp_remote_tables (
     [ , <remote-table-owner>
     [ , <remote-database-name>
     [ , <with-table-type> ] ] ] ]
-)
+);
 
 ```
 
@@ -36,60 +35,51 @@ sp_remote_tables (
 <dl>
 <dt><b>
 
- *<remote-server-name\>* 
+*<remote-server-name\>* 
 
 </b></dt>
 <dd>
 
-Use this CHAR\(128\) parameter to specify the remote server name. *<remote-server-name\>* must be specified.
+*<remote-server-name\>* must be specified.
 
 
 
 </dd><dt><b>
 
- *<remote-table-name\>* 
+*<remote-table-name\>* 
 
 </b></dt>
 <dd>
 
-Use this optional CHAR\(128\) parameter to specify the name of the remote table. The default is '%'. *<remote-table-name\>* can be specified as null to match any remote table.
-
-> ### Note:  
-> If *<remote-table-name\>* is specified, *<remote-table-owner\>* must also be specified.
+Use this optional CHAR\(128\) parameter to specify the name of the remote table. The default is '%'. Use this CHAR\(128\) parameter to specify the remote server name. *<remote-table-name\>* can be specified as null to match any remote table. If *<remote-table-name\>* is specified, then *<remote-table-owner\>* must also be specified.
 
 
 
 </dd><dt><b>
 
- *<remote-table-owner\>* 
+*<remote-table-owner\>* 
 
 </b></dt>
 <dd>
 
-Use this optional CHAR\(128\) parameter to specify the remote schema name that owns this remote table. The default is '%'.
-
-> ### Note:  
-> If *<remote-table-owner\>* is null, *<remote-table-name\>* must also be null, and all remote schemas are returned.
+Use this CHAR\(128\) parameter to specify the remote server name.Use this optional CHAR\(128\) parameter to specify the remote schema name that owns this remote table. The default is '%'. If *<remote-table-owner\>* is null, then *<remote-table-name\>* must also be null, and all remote schemas are returned.
 
 
 
 </dd><dt><b>
 
- *<remote-database-name\>* 
+*<remote-database-name\>* 
 
 </b></dt>
 <dd>
 
-Use this optional CHAR\(128\) parameter to specify the database in which *<table-name\>* is located.
-
-> ### Note:  
-> *<remote-database-name\>* must be unspecified or null for SQL on Files remote tables.
+Use this optional CHAR\(128\) parameter to specify the database in which *<table-name\>* is located. *<remote-database-name\>* must be unspecified or null for SQL on Files remote tables.
 
 
 
 </dd><dt><b>
 
- *<with-table-type\>* 
+*<with-table-type\>* 
 
 </b></dt>
 <dd>
@@ -112,21 +102,15 @@ Use this optional BIT parameter to specify the inclusion of remote table types. 
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -135,21 +119,15 @@ Description
 
 DATABASE
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the remote database.
-
-
 
 </td>
 </tr>
@@ -158,21 +136,15 @@ The name of the remote database.
 
 OWNER
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The remote schema owning the remote table.
-
-
 
 </td>
 </tr>
@@ -181,21 +153,15 @@ The remote schema owning the remote table.
 
 TABLE\_NAME
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the table.
-
-
 
 </td>
 </tr>
@@ -204,21 +170,15 @@ The name of the table.
 
 TABLE\_TYPE
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Specifies the table type. The values depend on the type of remote server.
-
-
 
 </td>
 </tr>
@@ -249,7 +209,7 @@ Requires EXECUTE object-level privilege on the procedure.
 
 <a name="loio3be677246c5f101491d2a9a435e92f1f__section_y4g_tys_5wb"/>
 
-## Example
+## Examples
 
 The following example returns information about the tables owned by the remote schema RemoteSchema in a SQL on Files remote server named RemoteSOF.
 

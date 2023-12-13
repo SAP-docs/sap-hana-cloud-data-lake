@@ -6,10 +6,13 @@ A server-level monitoring view providing details of both the IQ main cache and t
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loiof182cdc23a104bda842a61fd7c0e8967__section_skb_fwg_k4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 <table>
@@ -18,21 +21,15 @@ A server-level monitoring view providing details of both the IQ main cache and t
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -41,21 +38,15 @@ Description
 
 CacheName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the cache.
-
-
 
 </td>
 </tr>
@@ -64,21 +55,15 @@ The name of the cache.
 
 ObjectName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the object being reported on.
-
-
 
 </td>
 </tr>
@@ -87,21 +72,15 @@ The name of the object being reported on.
 
 ObjectOwner
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the object's owner.
-
-
 
 </td>
 </tr>
@@ -110,21 +89,15 @@ The name of the object's owner.
 
 TableName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the table.
-
-
 
 </td>
 </tr>
@@ -133,21 +106,15 @@ The name of the table.
 
 ObjectType
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The type of object.
-
-
 
 </td>
 </tr>
@@ -156,21 +123,15 @@ The type of object.
 
 NumberOfBuffers
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The number of buffers for the object holding the page type.
-
-
 
 </td>
 </tr>
@@ -179,21 +140,15 @@ The number of buffers for the object holding the page type.
 
 CachedSize
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The total size of all the buffers occupied by the object.
-
-
 
 </td>
 </tr>
@@ -202,21 +157,15 @@ The total size of all the buffers occupied by the object.
 
 UniqueID
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The unique ID of the blockmap for the object.
-
-
 
 </td>
 </tr>
@@ -225,21 +174,15 @@ The unique ID of the blockmap for the object.
 
 NumberOfVersions
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The number of versions.
-
-
 
 </td>
 </tr>
@@ -251,7 +194,7 @@ The number of versions.
 
 ## Privileges
 
-You must have the MONITOR system privilege to access this view. DBAs can consult [Granting a System Privilege to a User](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_2_QRC/en-US/a43bcb8284f210158039b1793a92a4fc.html "Allow the granting of specific system privileges to specific users, with or without administrative rights.") :arrow_upper_right: and [Alphabetical List of System Privileges for Data Lake Relational Engine](../080-sql-statements/alphabetical-list-of-system-privileges-for-data-lake-relational-engine-a449325.md) for information on granting the MONITOR system privilege to a user.
+You must have the MONITOR system privilege to access this view. DBAs can consult [Granting a System Privilege to a User](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/a43bcb8284f210158039b1793a92a4fc.html "Allow the granting of specific system privileges to specific users, with or without administrative rights.") :arrow_upper_right: and [Alphabetical List of System Privileges for Data Lake Relational Engine](../080-sql-statements/alphabetical-list-of-system-privileges-for-data-lake-relational-engine-a449325.md) for information on granting the MONITOR system privilege to a user.
 
 
 
@@ -268,5 +211,5 @@ Use iqmonCacheDetails for diagnostic use-cases including:
 -   Determining if your IQ main cache and temporary cache sizes are sufficient.
 
 
-iqmonCacheDetails, in conjunction with the other monitoring views, can help you troubleshoot common data lake Relational Engine performance problems. For diagnostic use-case information, see the [SAP HANA Cloud, Data Lake Performance and Tuning for Data Lake Relational Engine (Monitoring Views)](https://help.sap.com/viewer/028be133f34c4d2d998c6fbc258659c5/2023_2_QRC/en-US/56032dd760ca4790a55d069d4475b441.html "This document shows you how to use the monitoring views to monitor data lake Relational Engine system health, and to help you troubleshoot performance issues.") :arrow_upper_right: manual.
+iqmonCacheDetails, in conjunction with the other monitoring views, can help you troubleshoot common data lake Relational Engine performance problems. For diagnostic use-case information, see the [SAP HANA Cloud, Data Lake Performance and Tuning for Data Lake Relational Engine (Monitoring Views)](https://help.sap.com/viewer/028be133f34c4d2d998c6fbc258659c5/2023_4_QRC/en-US/56032dd760ca4790a55d069d4475b441.html "This document shows you how to use the monitoring views to monitor data lake Relational Engine system health, and to help you troubleshoot performance issues.") :arrow_upper_right: manual.
 

@@ -22,5 +22,5 @@ To avoid this from happening, do one of the following:
 **Related Information**  
 
 
-[Referencing Temporary Tables Within Procedures](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/5482d9ab347749deb3b5595a7e41bba7.html "Sharing a temporary table between procedures can cause problems if the table definitions are inconsistent.") :arrow_upper_right:
+[Referencing Temporary Tables Within Procedures](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/5482d9ab347749deb3b5595a7e41bba7.html "Sharing a temporary table between procedures can cause problems if the table definitions are inconsistent.") :arrow_upper_right:
 

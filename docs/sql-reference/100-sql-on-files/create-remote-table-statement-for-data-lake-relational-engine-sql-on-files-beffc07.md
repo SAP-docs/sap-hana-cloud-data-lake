@@ -11,10 +11,12 @@ Create a remote table managed by SQL on Files.
 
 
 
-> ### Restriction:  
-> This topic is limited to SQL on Files use cases.
-> 
-> This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loiobeffc07c515540088d372197c9eee191__section_fry_b3b_nqb"/>
+
+## Usage
+
+-   This topic is limited to SQL on Files use cases.
+-   This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -29,7 +31,7 @@ CREATE [ OR REPLACE ] TABLE [ IF NOT EXISTS ] <remote-schema-name>.<remote-table
     IN FILES_SERVICE
 
 <column-definition> ::=
-    <column-name> <data-type>[,.<column-name> <data-type>...]
+    <column-name> <data-type>[,.<column-name> <data-type>...];
 
 ```
 
@@ -184,7 +186,7 @@ CREATE TABLE IF NOT EXISTS ExternalSchema1.ExternalTable1
 	PRESSURE 	DOUBLE,
 	OIL_TEMP 	DOUBLE,
 	SMPL 		BIGINT 
-) IN FILES_SERVICE
+) IN FILES_SERVICE;
 ```
 
 **Related Information**  
@@ -196,5 +198,5 @@ CREATE TABLE IF NOT EXISTS ExternalSchema1.ExternalTable1
 
 [REFRESH \(Remote\) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](refresh-remote-table-statement-for-data-lake-relational-engine-sql-on-files-e275657.md "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.")
 
-[CREATE (Remote) TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) [SQL on Files]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/24e694b566814ad285cb32fe3e5d3928.html "Create a remote table managed by SQL on Files.") :arrow_upper_right:
+[CREATE (Remote) TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/24e694b566814ad285cb32fe3e5d3928.html "Create a remote table managed by SQL on Files.") :arrow_upper_right:
 

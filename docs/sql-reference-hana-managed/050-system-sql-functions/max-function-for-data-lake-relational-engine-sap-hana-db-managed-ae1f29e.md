@@ -8,7 +8,7 @@ Returns the maximum *<expression\>* value found in each group of rows.
 
 ```
 MAX ( <expression>
-| DISTINCT <column-name> )
+| DISTINCT <column-name> );
 ```
 
 
@@ -48,7 +48,7 @@ Returns the same as <code>MAX ( <i class="varname">&lt;expression&gt;</i> )</cod
 
 <a name="loioae1f29e228714cf085d6eb1d0ee075f8__section_h3c_p3n_vrb"/>
 
-## Returns
+## Result Set
 
 The same data type as the argument.
 
@@ -78,11 +78,11 @@ The following statement returns the value 138948.000, representing the maximum s
 
 ```
 SELECT MAX ( Salary )
-FROM Employees
+FROM Employees;
 ```
 
 **Related Information**  
 
 
-[MAX Function [Aggregate] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a5626d6684f210158cafad316e131142.html "Returns the maximum expression value found in each group of rows.") :arrow_upper_right:
+[MAX Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5626d6684f210158cafad316e131142.html "Returns the maximum expression value found in each group of rows.") :arrow_upper_right:
 

@@ -6,8 +6,11 @@ Controls the percent of the cache used by the sp\_iqcheckdb system stored proced
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa632e8ee84f210158a4486c892490f49__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

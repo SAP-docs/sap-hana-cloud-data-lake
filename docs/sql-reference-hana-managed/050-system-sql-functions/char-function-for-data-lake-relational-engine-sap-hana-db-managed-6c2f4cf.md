@@ -7,7 +7,7 @@ Returns the character with the ASCII value of a number.
 
 
 ```
-CHAR ( <integer-expression> )
+CHAR ( <integer-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The number to be converted to an ASCII character. The number must be in the rang
 
 <a name="loio6c2f4cf7004b4f2cace1afa4889a44d0__section_etk_ltl_srb"/>
 
-## Returns
+## Result Set
 
 VARCHAR
 
@@ -67,18 +67,18 @@ CHAR returns NULL for integer expressions with values greater than 255 or less t
 -   The following statement returns the value “Y”:
 
     ```
-    SELECT CHAR( 89 ) FROM iq_dummy
+    SELECT CHAR( 89 ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value “S”:
 
     ```
-    SELECT CHAR( 83 ) FROM iq_dummy
+    SELECT CHAR( 83 ) FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[CHAR function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a53b50f084f210159a74ba4e4e50f914.html "Returns the character with the ASCII value of a number.") :arrow_upper_right:
+[CHAR function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a53b50f084f210159a74ba4e4e50f914.html "Returns the character with the ASCII value of a number.") :arrow_upper_right:
 

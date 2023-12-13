@@ -6,10 +6,13 @@ The GRANT statement can give UPDATE, SELECT, or REFERENCES privileges to individ
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be726d16c5f1014a99fa1418cc708d9__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ The GRANT statement can give UPDATE, SELECT, or REFERENCES privileges to individ
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 table\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The table number for the table containing the column.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The table number for the table containing the column.
 
 grantee
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The ID of the user that has been given the privilege on the column. If the user ID is the PUBLIC role, then all users have the privilege on the column.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ The ID of the user that has been given the privilege on the column. If the user 
 
 grantor
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The ID of the user that granted the privilege.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ The ID of the user that granted the privilege.
 
 column\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 This column number, together with the table\_id, identifies the column for which privilege has been granted.
-
-
 
 </td>
 </tr>
@@ -135,21 +108,15 @@ This column number, together with the table\_id, identifies the column for which
 
 privilege\_type
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 The number in this column indicates the kind of column privilege \(16=REFERENCES, 1=SELECT, or 8=UPDATE\).
-
-
 
 </td>
 </tr>
@@ -158,21 +125,15 @@ The number in this column indicates the kind of column privilege \(16=REFERENCES
 
 is\_grantable
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates if the privilege on the column was granted WITH GRANT OPTION.
-
-
 
 </td>
 </tr>

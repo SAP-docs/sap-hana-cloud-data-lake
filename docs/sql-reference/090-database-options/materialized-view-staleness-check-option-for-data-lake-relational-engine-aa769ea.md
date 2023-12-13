@@ -6,10 +6,13 @@ Controls which materialized views are checked for staleness.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioaa769ea2e3b54c92a0b6b2fd1f7e44bc__section_nnn_jnr_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Controls which materialized views are checked for staleness.
 ## Syntax
 
 ```
-MATERIALIZED_VIEW_STALENESS_CHECK= { 0 | 1 | 2)
+MATERIALIZED_VIEW_STALENESS_CHECK= { 0 | 1 | 2);
 ```
 
 
@@ -68,28 +71,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -98,28 +93,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -128,28 +115,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -158,5 +137,5 @@ No
 **Related Information**  
 
 
-[MATERIALIZED_VIEW_STALENESS_CHECK Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7f412b6887e147db9f22903b91bba87d.html "Controls which materialized views are checked for staleness.") :arrow_upper_right:
+[MATERIALIZED_VIEW_STALENESS_CHECK Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7f412b6887e147db9f22903b91bba87d.html "Controls which materialized views are checked for staleness.") :arrow_upper_right:
 

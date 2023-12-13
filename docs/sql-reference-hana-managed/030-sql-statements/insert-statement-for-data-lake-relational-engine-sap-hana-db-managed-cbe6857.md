@@ -6,12 +6,11 @@ Inserts a single row or a selection of rows, from elsewhere in the current datab
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
 
 
 
@@ -26,7 +25,7 @@ Syntax 1
 
 ```
 INSERT [ INTO ] [ <schema-name>.]<table-name> 
-   [ ( <column-name> [, …] ) ] VALUES [ ( { <expression> | DEFAULT }[, ...] ) ]
+   [ ( <column-name> [, …] ) ] VALUES [ ( { <expression> | DEFAULT }[, ...] ) ];
 ```
 
 
@@ -40,7 +39,7 @@ Syntax 1a
 
 ```
 INSERT [ INTO ] [ <schema-name>.]<table-name> 
-   DEFAULT VALUES
+   DEFAULT VALUES;
 ```
 
 
@@ -55,7 +54,7 @@ Syntax 2
 ```
 INSERT [ INTO ] [ <schema-name>.]<table-name> [ ( <column-name> [, …] ) ]
    ... <insert-load-options> <insert-select-load-options>
-   ... <select-statement>
+   ... <select-statement>;
 ```
 
 
@@ -71,7 +70,7 @@ Syntax 3
 INSERT [ INTO ] [ <schema-name>.]<table-name>[ ( <column-name> [, …] ) ]
     ... <insert-select-load-options> <insert-select-load-options>
     ... LOCATION '<servername.dbname>' [ <location-options> ]
-   ... { <select-statement> | '<select statement>' }
+   ... { <select-statement> | '<select statement>' };
 ```
 
 
@@ -83,7 +82,7 @@ INSERT [ INTO ] [ <schema-name>.]<table-name>[ ( <column-name> [, …] )�
 <insert-load-options> ::=
    [ LIMIT <number-of-rows> ] 
    [ NOTIFY <number-of-rows> ] 
-   [ SKIP <number-of-rows> ]
+   [ SKIP <number-of-rows> ];
 ```
 
 ```
@@ -91,14 +90,14 @@ INSERT [ INTO ] [ <schema-name>.]<table-name>[ ( <column-name> [, …] )�
    [ WORD SKIP <number> ]
    [ IGNORE CONSTRAINT <constraint-type> [, …] ] 
    [ MESSAGE LOG '<string>' ROW LOG '<string>' [ ONLY LOG <logwhat> [, …] ] ] 
-   [ LOG DELIMITED BY '<string>' ]
+   [ LOG DELIMITED BY '<string>' ];
 ```
 
 ```
 <location-options> ::=
    { PACKETSIZE <interger>
    | QUOTED_IDENTIFIER { ON | OFF }
-   | ISOLATION LEVEL <integer> }
+   | ISOLATION LEVEL <integer> };
 ```
 
 ```
@@ -108,7 +107,7 @@ INSERT [ INTO ] [ <schema-name>.]<table-name>[ ( <column-name> [, …] )�
    | NULL <integer> 
    | FOREIGN KEY <integer> 
    | DATA VALUE <integer> 
-   | ALL <integer> }
+   | ALL <integer> };
 ```
 
 ```
@@ -119,7 +118,7 @@ INSERT [ INTO ] [ <schema-name>.]<table-name>[ ( <column-name> [, …] )�
    | UNIQUE
    | DATA VALUE
    | FOREIGN KEY
-   | WORD }
+   | WORD };
 ```
 
 
@@ -358,10 +357,27 @@ The result of a SELECT…FROM may be slightly different from the result of an IN
 
 ### 
 
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
+
+
+</dd>
+</dl>
 
 
 
@@ -383,7 +399,7 @@ Requires one of:
     ```
     INSERT INTO Departments
     (DepartmentID, DepartmentName, DepartmentHeadID)
-    VALUES (600, 'Eastern Sales', 501)
+    VALUES (600, 'Eastern Sales', 501);
     ```
 
 -   The following example fills the table dept\_head with the names of department heads and their departments:
@@ -395,7 +411,7 @@ Requires one of:
       AS name,
       dept_name
     FROM Employees JOIN Departments
-      ON EmployeeID= DepartmentHeadID
+      ON EmployeeID= DepartmentHeadID;
     ```
 
 -   The following example inserts data from the l\_shipdate and l\_orderkey columns of the lineitem table from the data lake Relational Engine database iqdet on the remote server detroit into the corresponding columns of the lineitem table in the current database:
@@ -406,18 +422,18 @@ Requires one of:
       LOCATION 'detroit.iqdet'
       PACKETSIZE 512
       ' SELECT l_shipdate, l_orderkey
-    FROM lineitem '
+    FROM lineitem ';
     ```
 
 -   The INSERT statement permits a list of values allowing several rows to be inserted at once:
 
     ```
-    INSERT into t1 values( 10, 20, 30 ), ( 11, 21, 31 ), ( 12, 22, 32 )
+    INSERT into t1 values( 10, 20, 30 ), ( 11, 21, 31 ), ( 12, 22, 32 );
     ```
 
 
 **Related Information**  
 
 
-[INSERT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a61fdeff84f21015aa66b9add387d7f9.html "Inserts a single row or a selection of rows, from elsewhere in the current database, into the table. This command can also insert a selection of rows from another database into the table.") :arrow_upper_right:
+[INSERT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a61fdeff84f21015aa66b9add387d7f9.html "Inserts a single row or a selection of rows, from elsewhere in the current database, into the table. This command can also insert a selection of rows from another database into the table.") :arrow_upper_right:
 

@@ -6,10 +6,13 @@ Sets the format used for dates retrieved from the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa632563684f2101581da9a102de30f81__section_fq2_gpq_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Sets the format used for dates retrieved from the database.
 ## Syntax
 
 ```
-DATE_FORMAT = <string_expression>
+DATE_FORMAT = <string_expression>;
 ```
 
 
@@ -51,11 +54,6 @@ Privilege Category: PUBLIC
 
 Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this database option.
 
-Requires one of the following:
-
--   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
-
 
 
 <a name="loioa632563684f2101581da9a102de30f81__date_format_scope1"/>
@@ -69,28 +67,20 @@ Requires one of the following:
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -99,28 +89,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -129,28 +111,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -171,14 +145,10 @@ The format is a string using these symbols:
 
 Symbol
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Description
-
-
 
 </th>
 </tr>
@@ -187,14 +157,10 @@ Description
 
 yy
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2-digit year
-
-
 
 </td>
 </tr>
@@ -203,14 +169,10 @@ yy
 
 yyyy
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 4-digit year
-
-
 
 </td>
 </tr>
@@ -219,14 +181,10 @@ yyyy
 
 mm
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2-digit month, or 2-digit minutes if following a colon \(as in 'hh:mm'\)
-
-
 
 </td>
 </tr>
@@ -235,14 +193,10 @@ mm
 
 mmm
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 3-character name of month
-
-
 
 </td>
 </tr>
@@ -251,14 +205,10 @@ mmm
 
 mmmm\[m...\]
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Character long form for months—as many characters as there are m's, until the number of m’s specified exceeds the number of characters in the month’s name
-
-
 
 </td>
 </tr>
@@ -267,14 +217,10 @@ Character long form for months—as many characters as there are m's, until the 
 
 d
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Single-digit day of week, \(0 = Sunday, 6 = Saturday\)
-
-
 
 </td>
 </tr>
@@ -283,14 +229,10 @@ Single-digit day of week, \(0 = Sunday, 6 = Saturday\)
 
 dd
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2-digit day of month
-
-
 
 </td>
 </tr>
@@ -299,14 +241,10 @@ dd
 
 ddd
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 3-character name of the day of week
-
-
 
 </td>
 </tr>
@@ -315,14 +253,10 @@ ddd
 
 dddd\[d...\]
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Character long form for day of the week—as many characters as there are d's, until the number of d’s specified exceeds the number of characters in the day’s name
-
-
 
 </td>
 </tr>
@@ -331,14 +265,10 @@ Character long form for day of the week—as many characters as there are d's, u
 
 jjj
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Day of the year, from 1 to 366
-
-
 
 </td>
 </tr>
@@ -357,13 +287,13 @@ Each symbol is substituted with the appropriate data for the date being formatte
 You can control the padding of numbers by changing the case of the symbols. Same-case values \(MM, mm, DD, or dd\) all pad number with zeros. Mixed-case \(Mm, mM, Dd, or dD\) cause the number to not be zero-padded; the value takes as much room as required. For example:
 
 ```
-SELECT dateformat ( cast ('2011/01/01' as date ), 'yyyy/Mm/Dd' )
+SELECT dateformat ( cast ('2011/01/01' as date ), 'yyyy/Mm/Dd' );
 ```
 
 returns this value:
 
 ```
-2011/1/1
+2011/1/1l
 ```
 
 
@@ -375,7 +305,7 @@ returns this value:
 This table illustrates DATE\_FORMAT settings, together with the output from this statement, executed on Saturday May 21, 2011:
 
 ```
-SELECT CURRENT DATE
+SELECT CURRENT DATE;
 ```
 
 
@@ -385,14 +315,10 @@ SELECT CURRENT DATE
 
 DATE FORMAT
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 SELECT CURRENT DATE
-
-
 
 </th>
 </tr>
@@ -401,14 +327,10 @@ SELECT CURRENT DATE
 
 yyyy/mm/dd/ddd
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2011/05/21/sat
-
-
 
 </td>
 </tr>
@@ -417,14 +339,10 @@ yyyy/mm/dd/ddd
 
 jjj
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 141
-
-
 
 </td>
 </tr>
@@ -433,14 +351,10 @@ jjj
 
 mmm yyyy
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 may 2011
-
-
 
 </td>
 </tr>
@@ -449,14 +363,10 @@ may 2011
 
 mm-yyyy
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 05-2011
-
-
 
 </td>
 </tr>
@@ -473,7 +383,7 @@ mm-yyyy
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[DATE_FORMAT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3e2ecb4848cc4a6ba20cd155322dee96.html "Sets the format used for dates retrieved from the database.") :arrow_upper_right:
+[DATE_FORMAT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3e2ecb4848cc4a6ba20cd155322dee96.html "Sets the format used for dates retrieved from the database.") :arrow_upper_right:
 
 [RETURN\_DATE\_TIME\_AS\_STRING Option for Data Lake Relational Engine](return-date-time-as-string-option-for-data-lake-relational-engine-a652ffd.md "Controls how a date, time, or timestamp value is passed to the client application when queried.")
 

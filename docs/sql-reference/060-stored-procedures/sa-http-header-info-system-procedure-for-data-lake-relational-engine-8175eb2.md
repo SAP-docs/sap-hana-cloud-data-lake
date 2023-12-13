@@ -6,15 +6,18 @@ Returns HTTP request header names and values.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio8175eb2b6ce2101490f9eaa998519272__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_http_header_info( [<header_parm>] )
+sa_http_header_info( [<header_parm>] );
 ```
 
 
@@ -25,7 +28,7 @@ sa_http_header_info( [<header_parm>] )
 <dl>
 <dt><b>
 
- *<header\_parm\>* 
+*<header\_parm\>* 
 
 </b></dt>
 <dd>
@@ -48,21 +51,15 @@ Use this optional VARCHAR\(255\) parameter to specify an HTTP header name. The d
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -71,21 +68,15 @@ Description
 
 Name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The HTTP header name.
-
-
 
 </td>
 </tr>
@@ -94,21 +85,15 @@ The HTTP header name.
 
 Value
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The HTTP header value.
-
-
 
 </td>
 </tr>
@@ -138,6 +123,8 @@ Requires EXECUTE object-level privilege on the procedure.
 None
 
 
+
+## Examples
 
 The following web service procedure which is called from a web service illustrates the use of the sa\_http\_header\_info system procedure.
 

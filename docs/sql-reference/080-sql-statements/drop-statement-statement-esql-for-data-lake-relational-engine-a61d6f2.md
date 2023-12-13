@@ -6,15 +6,18 @@ Frees resources used by the named prepared statement. These resources are alloca
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61d6f2f84f2101587fbc546b2c34e86__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-DROP STATEMENT [ <owner>.]<statement-name>
+DROP STATEMENT [ <owner>.]<statement-name>;
 ```
 
 

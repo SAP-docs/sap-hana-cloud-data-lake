@@ -19,14 +19,10 @@ The result of both implicit and explicit conversions of BIT to BINARY and BIT to
 
 Conversion of BIT Value ‘1’ to
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Result
-
-
 
 </th>
 </tr>
@@ -35,14 +31,10 @@ Result
 
 BINARY\(3\)
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 0x010000
-
-
 
 </td>
 </tr>
@@ -51,14 +43,10 @@ BINARY\(3\)
 
 VARBINARY\(3\)
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 0x01
-
-
 
 </td>
 </tr>
@@ -67,14 +55,10 @@ VARBINARY\(3\)
 
 BINARY\(8\)
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 0x0100000000000000
-
-
 
 </td>
 </tr>
@@ -83,14 +67,10 @@ BINARY\(8\)
 
 VARBINARY\(8\)
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 0x01
-
-
 
 </td>
 </tr>

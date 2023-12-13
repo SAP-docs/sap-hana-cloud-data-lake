@@ -6,10 +6,13 @@ Declares a local temporary table.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61b247c84f2101584efe462c353b5a0__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ DECLARE LOCAL TEMPORARY TABLE <table-name>
    … ( <column-definition> [ <column-constraint> ] …
    [ , <column-definition> [ <column-constraint> ] … ]
    [ , <table-constraint> ] … )
-   …[ ON COMMIT { DELETE | PRESERVE } ROWS ]
+   …[ ON COMMIT { DELETE | PRESERVE } ROWS ];
 ```
 
 
@@ -43,13 +46,13 @@ See *CREATE TABLE Statement* for definitions of *<column-definition\>*, *<column
 Once you create a local temporary table, either implicitly or explicitly, you cannot create another temporary table of that name for as long as the temporary table exists. For example, you can create a local temporary table implicitly:
 
 ```
-select * into #tmp from table1
+select * into #tmp from table1;
 ```
 
 Alternatively, you can create a local temporary table with an explicit by declaration:
 
 ```
-declare local temporary table foo
+declare local temporary table foo;
 ```
 
 Then if you try to select into `#tmp` or `foo`, or declare `#tmp` or `foo` again, you receive an error indicating that `#tmp` or `foo` already exists.
@@ -130,7 +133,7 @@ None
         number INT
       );
       ...
-    END
+    END;
     ```
 
 

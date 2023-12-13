@@ -7,7 +7,7 @@ Checks validity of the current database. Optionally corrects allocation problems
 
 
 ```
-sp_iqcheckdb '<mode> <target> [ … ] [ resources <resource-percent> ]'
+sp_iqcheckdb '<mode> <target> [ … ] [ resources <resource-percent> ]';
 ```
 
 ```
@@ -86,7 +86,7 @@ If *<owner\>* is not specified, current user and database owner \(dbo\) are subs
 > If either the table name or the index name contains spaces, enclose the *<table-name\>* or *<index-name\>* parameter in double quotation marks:
 > 
 > ```
-> sp_iqcheckdb 'check index "dbo.sstab.i2" resources 75'
+> sp_iqcheckdb 'check index "dbo.sstab.i2" resources 75';
 > ```
 
 
@@ -177,14 +177,10 @@ sp\_iqcheckdb can perform several different functions, depending on the paramete
 
 Mode
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -192,8 +188,6 @@ Description
 <td valign="top">
 
 Allocation
-
-
 
 </td>
 <td valign="top">
@@ -244,8 +238,6 @@ Run in allocation mode:
 
 Check
 
-
-
 </td>
 <td valign="top">
 
@@ -253,16 +245,12 @@ Verifies that all database pages can be read for the entire database, main cache
 
 Run in check mode if metadata, null count, or distinct count errors are returned when running a query.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Verify
-
-
 
 </td>
 <td valign="top">
@@ -307,28 +295,20 @@ This table summarizes the actions and output of the four sp\_iqcheckdb modes.
 
 Mode
 
-
-
 </th>
 <th valign="top">
 
 Errors Detected
-
-
 
 </th>
 <th valign="top">
 
 Output
 
-
-
 </th>
 <th valign="top">
 
 Speed
-
-
 
 </th>
 </tr>
@@ -337,28 +317,20 @@ Speed
 
 Allocation
 
-
-
 </td>
 <td valign="top">
 
 Allocation errors
-
-
 
 </td>
 <td valign="top">
 
 Allocation statistics only
 
-
-
 </td>
 <td valign="top">
 
 4 TB per hour
-
-
 
 </td>
 </tr>
@@ -367,8 +339,6 @@ Allocation statistics only
 
 Check
 
-
-
 </td>
 <td valign="top">
 
@@ -376,21 +346,15 @@ Allocation errors
 
 Most index errors
 
-
-
 </td>
 <td valign="top">
 
 All available statistics
 
-
-
 </td>
 <td valign="top">
 
 60 GB per hour
-
-
 
 </td>
 </tr>
@@ -399,8 +363,6 @@ All available statistics
 
 Verify
 
-
-
 </td>
 <td valign="top">
 
@@ -408,21 +370,15 @@ Allocation errors
 
 All index errors
 
-
-
 </td>
 <td valign="top">
 
 All available statistics
 
-
-
 </td>
 <td valign="top">
 
 15 GB per hour
-
-
 
 </td>
 </tr>
@@ -461,38 +417,38 @@ None
 -   Checks the allocation for the entire database:
 
     ```
-    sp_iqcheckdb 'allocation database'
+    sp_iqcheckdb 'allocation database';
     ```
 
 -   Performs a detailed check on indexes i1, i2, and dbo.t1.i3. If you do not specify a new mode, sp\_iqcheckdb applies the same mode to the remaining targets, as shown in the following command:
 
     ```
-    sp_iqcheckdb 'verify index i1 index i2 index dbo.t1.i3'
+    sp_iqcheckdb 'verify index i1 index i2 index dbo.t1.i3';
     ```
 
 -   You can combine all modes and run multiple checks on a database in a single session. Perform a quick check of partition p1 in table t2, a detailed check of index i1, and allocation checking for the entire database using half of the CPUs:
 
     ```
     sp_iqcheckdb 'check table t2 partition p1 verify index i1
-    allocation database resources 50'
+    allocation database resources 50';
     ```
 
 -   Checks all indexes of the type FP in the database:
 
     ```
-    sp_iqcheckdb 'check indextype FP database'
+    sp_iqcheckdb 'check indextype FP database';
     ```
 
 -   Verifies the FP and HG indexes in the table t1 and the HNG indexes in the table t2:
 
     ```
-    sp_iqcheckdb 'verify indextype FP indextype HG table t1 indextype HNG table t2'
+    sp_iqcheckdb 'verify indextype FP indextype HG table t1 indextype HNG table t2';
     ```
 
 -   Check for LVC cell inconsistencies:
 
     ```
-    sp_iqcheckdb 'check index EFG2JKL.ASIQ_IDX_T208_C504_FP'
+    sp_iqcheckdb 'check index EFG2JKL.ASIQ_IDX_T208_C504_FP';
     ------------------------------------
     Index Statistics:
     ** Inconsistent Index: abcd.EFG2JKL.ASIQ_IDX_T208_C504_FP ****** FP
@@ -573,6 +529,10 @@ None
        DBCC Per-Thread Buffer Quota                   255  
        Max Blockmap ID found                          200  
        Max Transaction ID found                       404
+    ```
+
+    ```
+
     ```
 
     > ### Note:  

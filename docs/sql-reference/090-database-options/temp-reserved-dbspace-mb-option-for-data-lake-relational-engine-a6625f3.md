@@ -6,8 +6,11 @@ Controls the amount of space data lake Relational Engine reserves in the tempora
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa6625f3384f21015958ed54e3af571e1__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

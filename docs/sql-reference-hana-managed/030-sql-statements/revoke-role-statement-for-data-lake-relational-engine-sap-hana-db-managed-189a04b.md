@@ -6,20 +6,20 @@ Removes a users membership in a role or his or her ability to administer the rol
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio189a04b4a6cb4098bebcc34f16a78afb__section_f2c_11g_xwb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 REVOKE [ { EXERCISE | ADMIN } OPTION FOR ] ROLE <user-defined-role> 
-FROM { <system-role> | <user_id> } [, ...]
+FROM { <system-role> | <user_id> } [, ...];
 ```
 
 
@@ -99,7 +99,7 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
 
 </b></dt>
 <dd>
@@ -107,7 +107,10 @@ Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
 
 
 
@@ -118,7 +121,7 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </b></dt>
 <dd>
 
-Requires the MANAGE ROLES system privilege.
+-   Requires the MANAGE ROLES system privilege.
 
 
 
@@ -150,5 +153,5 @@ REVOKE ROLE role1 FROM user1;
 
 [GRANT ROLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](grant-role-statement-for-data-lake-relational-engine-sap-hana-db-managed-59327e4.md "Grants roles to users or other roles, with or without administrative rights.")
 
-[REVOKE ROLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a3e9de3284f21015bfd7b663b9989fe3.html "Removes a users membership in a role or his or her ability to administer the role.") :arrow_upper_right:
+[REVOKE ROLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a3e9de3284f21015bfd7b663b9989fe3.html "Removes a users membership in a role or his or her ability to administer the role.") :arrow_upper_right:
 

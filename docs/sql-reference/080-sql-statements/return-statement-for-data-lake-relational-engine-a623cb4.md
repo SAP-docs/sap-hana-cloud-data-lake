@@ -6,15 +6,18 @@ Exits a function or procedure unconditionally, optionally providing a return val
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa623cb4484f21015bfd3efd8ac01df2f__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-RETURN [ ( <expression> ) ]
+RETURN [ ( <expression> ) ];
 ```
 
 
@@ -86,18 +89,18 @@ None
     RETURNS numeric
     BEGIN
       RETURN ( a * b * c ) ;
-    END
+    END;
     ```
 
 -   The following example calculates the product of three numbers:
 
     ```
-    SELECT product (2, 3, 4)
+    SELECT product (2, 3, 4);
     ```
 
     ```
     product (2,3,4)
-    24
+    24;
     ```
 
 -   The following example avoids executing a complex query, if it is meaningless:

@@ -6,10 +6,13 @@ The SYS.SYSUSEROPTIONS view contains the option settings that are in effect for 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3beb12fb6c5f1014801ab7c27ce3cf22__section_vwg_vhq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -26,11 +29,11 @@ ALTER VIEW "SYS"."SYSUSEROPTIONS"( user_name,
       AND s."option" = o."option"),
     o.setting)
     FROM SYS.SYSOPTIONS AS o,SYS.ISYSUSER AS u
-    WHERE o.user_name = 'PUBLIC'
+    WHERE o.user_name = 'PUBLIC';
 ```
 
 **Related Information**  
 
 
-[SYSUSERTYPE System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/164b9020b45548209db5cb851a82589d.html "Each row in the SYS.SYSUSERTYPE system view holds a description of a user-defined data type.") :arrow_upper_right:
+[SYSUSERTYPE System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/164b9020b45548209db5cb851a82589d.html "Each row in the SYS.SYSUSERTYPE system view holds a description of a user-defined data type.") :arrow_upper_right:
 

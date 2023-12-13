@@ -6,17 +6,20 @@ Provides conditional execution of a Transact-SQL statement, as an alternative to
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61f7e1784f210158874f5eb5969d8d7__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
  IF <expression>
    ... <statement>
-   ... [ ELSE [ IF <expression> <statement> ]... ] 
+   ... [ ELSE [ IF <expression> <statement> ]... ]; 
 ```
 
 
@@ -73,7 +76,7 @@ None
         SELECT name, type, id
         FROM sysobjects
         WHERE id < 100
-    END
+    END;
     ```
 
 -   The following example uses of the Transact-SQL `ELSEIF` statement:
@@ -89,7 +92,7 @@ None
        PRINT '2'
       ELSE
        PRINT 'something else'
-    END
+    END;
     ```
 
 

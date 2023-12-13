@@ -15,14 +15,10 @@ In data lake Relational Engine \(SAP HANA DB-Managed\), when you create a physic
 
 Statement Name
 
-
-
 </th>
 <th valign="top">
 
 See
-
-
 
 </th>
 </tr>
@@ -31,14 +27,10 @@ See
 
 CREATE TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)
 
-
-
 </td>
 <td valign="top">
 
 [Data Types Compatibility with SAP HANA Database for the CREATE TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/data-types-compatibility-with-sap-hana-database-for-the-create-table-statement-for-data-l-e77d888.md)
-
-
 
 </td>
 </tr>
@@ -47,14 +39,10 @@ CREATE TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)
 
 CREATE VIRTUAL TABLE Statement for SAP HANA Database
 
-
-
 </td>
 <td valign="top">
 
 [Data Type Compatibility with Data Lake Relational Engine for CREATE VIRTUAL TABLE Statement in SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/data-type-compatibility-with-data-lake-relational-engine-fo-fba2b34.md)
-
-
 
 </td>
 </tr>
@@ -63,14 +51,10 @@ CREATE VIRTUAL TABLE Statement for SAP HANA Database
 
 CREATE EXISTING TABLE Statement for Data Lake Relational Engine
 
-
-
 </td>
 <td valign="top">
 
 [Data Types Compatibility with SAP HANA Database for CREATE EXISTING TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/data-types-compatibility-with-sap-hana-database-for-create-existing-table-statement-for-d-dc89a0d.md)
-
-
 
 </td>
 </tr>

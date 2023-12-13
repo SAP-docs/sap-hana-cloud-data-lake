@@ -6,10 +6,13 @@ Creates a user-defined function in the database. A function can be created for a
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61796cb84f2101594a2b0b5a6993b95__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -21,7 +24,7 @@ CREATE [ OR REPLACE ] [ TEMPORARY ] FUNCTION [ { <owner> | <schema-name> }.]<
    [ ON EXCEPTION RESUME ]
    [ [ NOT ] DETERMINISTIC ]
    { <compound-statement> 
-      | AS <sql-statement> <sql-statement>... }
+      | AS <sql-statement> <sql-statement>... };
 ```
 
 
@@ -132,7 +135,7 @@ BEGIN
 END 
 INSERT INTO new_table 
 SELECT keygen(1), ... 
-FROM old_table
+FROM old_table;
 ```
 
 Functions may be declared as DETERMINISTIC if they always return the same value for given input parameters. All user-defined functions are treated as deterministic unless they are declared NOT DETERMINISTIC. Deterministic functions return a consistent result for the same parameters and are free of side effects. That is, the database server assumes that two successive calls to the same function with the same parameters will return the same result without unwanted side-effects on the semantics of the query.
@@ -226,7 +229,7 @@ Automatic commit
       DECLARE name CHAR(61);
       SET name = firstname || ' ' || lastname;
       RETURN (name);
-    END
+    END;
     ```
 
 -   This example illustrates the use of the `fullname` function.
@@ -234,7 +237,7 @@ Automatic commit
     -   Return a full name from two supplied strings:
 
         ```
-        SELECT fullname ('joe','smith')
+        SELECT fullname ('joe','smith');
         ```
 
 
@@ -243,17 +246,13 @@ Automatic commit
         <th valign="top">
 
         fullname\('joe', 'smith'\)
-
-
         
         </th>
         </tr>
         <tr>
         <td valign="top">
         
-                joe smith
-
-
+        joe smith
         
         </td>
         </tr>
@@ -263,7 +262,7 @@ Automatic commit
 
         ```
         SELECT fullname (givenname, surname)
-        FROM Employees
+        FROM Employees;
         ```
 
 
@@ -272,62 +271,48 @@ Automatic commit
         <th valign="top">
 
         fullname \(givenname, surname\)
-
-
         
         </th>
         </tr>
         <tr>
         <td valign="top">
         
-                Fran Whitney
-
-
+        Fran Whitney
         
         </td>
         </tr>
         <tr>
         <td valign="top">
         
-                Matthew Cobb
-
-
+        Matthew Cobb
         
         </td>
         </tr>
         <tr>
         <td valign="top">
         
-                Philip Chin
-
-
+        Philip Chin
         
         </td>
         </tr>
         <tr>
         <td valign="top">
         
-                Julie Jordan
-
-
+        Julie Jordan
         
         </td>
         </tr>
         <tr>
         <td valign="top">
         
-                Robert Breault
-
-
+        Robert Breault
         
         </td>
         </tr>
         <tr>
         <td valign="top">
         
-                ...
-
-
+        ...
         
         </td>
         </tr>
@@ -342,7 +327,7 @@ Automatic commit
     AS 
     DECLARE @Result INT  
     SELECT @Result = @Input * 2 
-    RETURN @Result
+    RETURN @Result;
     ```
 
     The statement `SELECT DoubleIt( 5 )` returns a value of `10`.
@@ -353,9 +338,9 @@ Automatic commit
 
 [ALTER FUNCTION Statement for Data Lake Relational Engine](alter-function-statement-for-data-lake-relational-engine-a61280a.md "Modifies an existing function. Include the entire modified function in the ALTER FUNCTION statement.")
 
-[BEGIN … END Statement for Data Lake Relational Engine](begin-end-statement-for-data-lake-relational-engine-a6142de.md "Groups SQL statements together.")
+[DROP FUNCTION Statement for Data Lake Relational Engine](drop-function-statement-for-data-lake-relational-engine-d42de2d.md "Removes a user-defined function from the database.")
 
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
+[BEGIN … END Statement for Data Lake Relational Engine](begin-end-statement-for-data-lake-relational-engine-a6142de.md "Groups SQL statements together.")
 
 [INSERT Statement for Data Lake Relational Engine](insert-statement-for-data-lake-relational-engine-a61fdef.md "Inserts a single row or a selection of rows, from elsewhere in the current database, into the table. This command can also insert a selection of rows from another database into the table.")
 
@@ -363,5 +348,5 @@ Automatic commit
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[CREATE FUNCTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/abddfd62461747b08416521922da3577.html "Creates a user-defined function in the database. A function can be created for another user by specifying an owner name. Subject to permissions, a user-defined function can be used in exactly the same way as other non-aggregate functions.") :arrow_upper_right:
+[CREATE FUNCTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/abddfd62461747b08416521922da3577.html "Creates a user-defined function in the database. A function can be created for another user by specifying an owner name. Subject to permissions, a user-defined function can be used in exactly the same way as other non-aggregate functions.") :arrow_upper_right:
 

@@ -15,6 +15,8 @@ Precision conflicts between TIMESTAMP data types result in data loss. For exampl
 > ### Caution:  
 > Once data is truncated during import, the truncated data cannot be recovered. Enabling the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option does **not** recover the truncated data.
 
+The default for the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option depends on when your instance was created. See [TIMESTAMP\_COLUMNS\_AS\_DATETIMEX Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/timestamp-columns-as-datetimex-option-for-data-lake-relational-engine-sap-hana-db-managed-34e3540.md).
+
 If you import 7 decimal precision data into 6 decimal precision columns in the data lake Relational Engine, then the values will be truncated to 6 decimal places and precision will be lost. To avoid losing precision, the data lake Relational Engine columns need to created as 7 decimal precision columns prior to importing the 7 decimal precision data.
 
 > ### Caution:  
@@ -59,5 +61,5 @@ If enabling the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option is not feasibl
 
 [TIMESTAMP\_COLUMNS\_AS\_DATETIMEX Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/timestamp-columns-as-datetimex-option-for-data-lake-relational-engine-sap-hana-db-managed-34e3540.md "Controls whether DATETIMEX data type columns are automatically created when TIMESTAMPS data type columns are requested.")
 
-[Decimal Precision of the TIMESTAMP Data Type in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/520ce6c6c90f47769eb2f1ddafa8bf49.html "Decimal precision for TIMESTAMP data type columns is controlled by the TIMESTAMP_COLUMNS_AS_DATETIMEX database option.") :arrow_upper_right:
+[Decimal Precision of the TIMESTAMP Data Type in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/520ce6c6c90f47769eb2f1ddafa8bf49.html "Decimal precision for TIMESTAMP data type columns is controlled by the TIMESTAMP_COLUMNS_AS_DATETIMEX database option.") :arrow_upper_right:
 

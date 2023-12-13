@@ -6,8 +6,11 @@ Limits the number of distinct values in columns that implicitly load as NBit FP.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) database option is set by the system and cannot be changed.
+<a name="loio829744c675a441899d9aa46a28873eab__section_jc5_4pn_vwb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) database option is set by the system and cannot be changed.
 
 
 
@@ -38,5 +41,5 @@ If FP\_ENFORCE\_LIMITS is set to ON and DML operations exceed the FP\_NBIT\_ROLL
 
 [FP\_NBIT\_ENFORCE\_LIMITS Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](fp-nbit-enforce-limits-option-for-data-lake-relational-engine-sap-hana-db-managed-2e6a10d.md "Enforces sizing limits for explicit and implicit NBit columns.")
 
-[FP_NBIT_AUTOSIZE_LIMIT Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a873755184f21015a76ff1329f851c5d.html "Limits the number of distinct values in columns that implicitly load as NBit FP.") :arrow_upper_right:
+[FP_NBIT_AUTOSIZE_LIMIT Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a873755184f21015a76ff1329f851c5d.html "Limits the number of distinct values in columns that implicitly load as NBit FP.") :arrow_upper_right:
 

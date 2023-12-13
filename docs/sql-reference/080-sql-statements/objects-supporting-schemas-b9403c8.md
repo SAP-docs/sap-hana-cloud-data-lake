@@ -15,14 +15,10 @@ Object types that have an owner and are considered unique using *<owner-name\>*.
 
 Object Types Supporting Schema
 
-
-
 </th>
 <th valign="top">
 
 Object Types Not Supporting Schema
-
-
 
 </th>
 </tr>

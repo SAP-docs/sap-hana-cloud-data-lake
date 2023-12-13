@@ -7,7 +7,7 @@ Returns the arc-sine, in radians, of a number.
 
 
 ```
-ASIN ( <numeric-expression> )
+ASIN ( <numeric-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The sine of the angle.
 
 <a name="loioa56e5e54ba234675b4a5c30b13e933e9__section_ovt_hjk_srb"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -57,11 +57,11 @@ DOUBLE
 The following statement returns the value 0.546850:
 
 ```
-SELECT ASIN( 0.52 ) FROM iq_dummy
+SELECT ASIN( 0.52 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[ASIN Function [Numeric] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a534668f84f2101599958685dfc4673b.html "Returns the arc-sine, in radians, of a number.") :arrow_upper_right:
+[ASIN Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a534668f84f2101599958685dfc4673b.html "Returns the arc-sine, in radians, of a number.") :arrow_upper_right:
 

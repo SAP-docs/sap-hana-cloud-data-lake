@@ -6,8 +6,11 @@ Generates messages suggesting additional column indexes that may improve perform
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63943db84f210158981e9ab54220322__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 
@@ -30,14 +33,10 @@ OFF
 
 Situation
 
-
-
 </th>
 <th valign="top">
 
 Recommendation
-
-
 
 </th>
 </tr>
@@ -46,14 +45,10 @@ Recommendation
 
 Local predicates on a single column where an HG, HNG, DATE, TIME or DATETIME index would be desirable, as appropriate.
 
-
-
 </td>
 <td valign="top">
 
 Add an *<index-type\>* index to column col.
-
-
 
 </td>
 </tr>
@@ -62,14 +57,10 @@ Add an *<index-type\>* index to column col.
 
 Single column join keys where an HG index would be useful.
 
-
-
 </td>
 <td valign="top">
 
 Add an HG index to join key col.
-
-
 
 </td>
 </tr>
@@ -78,14 +69,10 @@ Add an HG index to join key col.
 
 Single column candidate key indexes where an HG exists, but could be changed to a unique HG index.
 
-
-
 </td>
 <td valign="top">
 
 Change join key col to a unique HG index.
-
-
 
 </td>
 </tr>
@@ -94,14 +81,10 @@ Change join key col to a unique HG index.
 
 Join keys have mismatched data types, and regenerating one column with a matched data type would be beneficial.
 
-
-
 </td>
 <td valign="top">
 
 Make join keys col1 and col2 identical data types
-
-
 
 </td>
 </tr>
@@ -110,14 +93,10 @@ Make join keys col1 and col2 identical data types
 
 Subquery predicate columns where an HG index would be useful.
 
-
-
 </td>
 <td valign="top">
 
 Add an HG index to subquery column col
-
-
 
 </td>
 </tr>
@@ -126,14 +105,10 @@ Add an HG index to subquery column col
 
 Grouping columns where an HG index would be useful.
 
-
-
 </td>
 <td valign="top">
 
 Create an HG index on grouping column col
-
-
 
 </td>
 </tr>
@@ -142,14 +117,10 @@ Create an HG index on grouping column col
 
 Single-table intercolumn comparisons where the two columns are identical data types, a CMP index are recommended.
 
-
-
 </td>
 <td valign="top">
 
 Create a CMP index on col1, col2
-
-
 
 </td>
 </tr>
@@ -158,14 +129,10 @@ Create a CMP index on col1, col2
 
 Columns where an HG index exists, and the number of distinct values allows, suggest converting the FP to a 1 or 2-byte FP index.
 
-
-
 </td>
 <td valign="top">
 
 Use the sp\_iqrebuildindex stored procedure to rebuild col as Nbit.
-
-
 
 </td>
 </tr>
@@ -174,14 +141,10 @@ Use the sp\_iqrebuildindex stored procedure to rebuild col as Nbit.
 
 Very large tables joined with an expensive join algorithm.
 
-
-
 </td>
 <td valign="top">
 
 Consider either hash partitioning table *<tablename\>*, or tables *<tablename1\>* and *<tablename2\>* 
-
-
 
 </td>
 </tr>

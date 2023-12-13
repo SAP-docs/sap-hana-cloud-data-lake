@@ -7,7 +7,7 @@ Computes the standard deviation of a sample consisting of a numeric-expression, 
 
 
 ```
-STDDEV_SAMP ( [ ALL ] <expression> )
+STDDEV_SAMP ( [ ALL ] <expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The expression \(commonly a column name\) whose sample-based standard deviation 
 
 <a name="loioae8f4df1cf8d477e881f9e3360210ae0__section_uvp_j55_vrb"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -89,28 +89,20 @@ FROM SalesOrderItems GROUP BY Year, Quarter
 
 Year
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Quarter
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
 Average
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Variance
-
-
 
 </th>
 </tr>
@@ -118,29 +110,21 @@ Variance
 <td valign="top" rowspan="1">
 
 2000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 1
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 25.775148
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 14.3218
-
-
 
 </td>
 </tr>
@@ -149,28 +133,20 @@ Variance
 
 2000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 27.050847
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 15.0696
-
-
 
 </td>
 </tr>
@@ -179,28 +155,20 @@ Variance
 
 ...
 
+</td>
+<td valign="top" rowspan="1">
 
+...
 
 </td>
 <td valign="top" rowspan="1">
 
 ...
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 ...
-
-
-
-</td>
-<td valign="top" rowspan="1">
-
-...
-
-
 
 </td>
 </tr>
@@ -209,5 +177,5 @@ Variance
 **Related Information**  
 
 
-[STDDEV_SAMP Function [Aggregate] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a584728f84f210158226d1181b68d335.html "Computes the standard deviation of a sample consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
+[STDDEV_SAMP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a584728f84f210158226d1181b68d335.html "Computes the standard deviation of a sample consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
 

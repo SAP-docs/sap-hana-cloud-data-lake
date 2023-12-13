@@ -6,10 +6,13 @@ A string operator that generates a result set from an XML document.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine syntax can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio817205cf6ce21014a949c790fd6b0608__section_r1b_2nl_bwb"/>
+
+## Usage
+
+This data lake Relational Engine syntax can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -91,7 +94,7 @@ Use the USING VALUE clause to load data from any expression of CHAR, NCHAR, BINA
 <dl>
 <dt><b>
 
- *<xml-data\>* 
+*<xml-data\>* 
 
 </b></dt>
 <dd>
@@ -104,7 +107,7 @@ The *<xml-data\>* is parsed directly in the NCHAR encoding if there are any NCHA
 
 </dd><dt><b>
 
- *<xpath\>* 
+*<xpath\>* 
 
 </b></dt>
 <dd>
@@ -177,7 +180,7 @@ returns a subtree of the XML document in XML form. For example, when you match a
 
 </dd><dt><b>
 
- *<flags\>* 
+*<flags\>* 
 
 </b></dt>
 <dd>
@@ -191,14 +194,10 @@ Indicates the mapping that should be used between the XML data and the result se
 
 Value
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -207,14 +206,10 @@ Description
 
 1
 
-
-
 </td>
 <td valign="top">
 
 XML attributes are mapped to columns in the result set \(the default\).
-
-
 
 </td>
 </tr>
@@ -223,14 +218,10 @@ XML attributes are mapped to columns in the result set \(the default\).
 
 2
 
-
-
 </td>
 <td valign="top">
 
 XML elements are mapped to columns in the result set.
-
-
 
 </td>
 </tr>
@@ -240,7 +231,7 @@ XML elements are mapped to columns in the result set.
 
 </dd><dt><b>
 
- *<namespace-declaration\>* 
+*<namespace-declaration\>* 
 
 </b></dt>
 <dd>
@@ -256,7 +247,7 @@ An XML document. The in-scope namespaces for the query are taken from the root e
 
 </dd><dt><b>
 
- *<column-name\>* 
+*<column-name\>* 
 
 </b></dt>
 <dd>
@@ -267,7 +258,7 @@ The name of the column in the result set.
 
 </dd><dt><b>
 
- *<column-type\>* 
+*<column-type\>* 
 
 </b></dt>
 <dd>
@@ -398,14 +389,10 @@ This query generates the following result:
 
 ProductName
 
-
-
 </th>
 <th valign="top">
 
 ProductID
-
-
 
 </th>
 </tr>
@@ -414,14 +401,10 @@ ProductID
 
 Tee Shirt
 
-
-
 </td>
 <td valign="top">
 
 301
-
-
 
 </td>
 </tr>
@@ -430,14 +413,10 @@ Tee Shirt
 
 Baseball Cap
 
-
-
 </td>
 <td valign="top">
 
 401
-
-
 
 </td>
 </tr>
@@ -463,14 +442,10 @@ This query generates the following result:
 
 ProductName
 
-
-
 </th>
 <th valign="top">
 
 ProductID
-
-
 
 </th>
 </tr>
@@ -479,14 +454,10 @@ ProductID
 
 Tee & Sweater Set
 
-
-
 </td>
 <td valign="top">
 
 301
-
-
 
 </td>
 </tr>
@@ -495,14 +466,10 @@ Tee & Sweater Set
 
 Baseball Cap
 
-
-
 </td>
 <td valign="top">
 
 401
-
-
 
 </td>
 </tr>
@@ -568,28 +535,20 @@ This query generates the following result set:
 
 EmployeeID
 
-
-
 </th>
 <th valign="top">
 
 GivenName
-
-
 
 </th>
 <th valign="top">
 
 Surname
 
-
-
 </th>
 <th valign="top">
 
 PhoneNumber
-
-
 
 </th>
 </tr>
@@ -598,28 +557,20 @@ PhoneNumber
 
 105
 
-
-
 </td>
 <td valign="top">
 
 Matthew
-
-
 
 </td>
 <td valign="top">
 
 Cobb
 
-
-
 </td>
 <td valign="top">
 
 6175553840
-
-
 
 </td>
 </tr>
@@ -628,28 +579,20 @@ Cobb
 
 148
 
-
-
 </td>
 <td valign="top">
 
 Julie
-
-
 
 </td>
 <td valign="top">
 
 Jordan
 
-
-
 </td>
 <td valign="top">
 
 6175557835
-
-
 
 </td>
 </tr>
@@ -658,28 +601,20 @@ Jordan
 
 160
 
-
-
 </td>
 <td valign="top">
 
 Robert
-
-
 
 </td>
 <td valign="top">
 
 Breault
 
-
-
 </td>
 <td valign="top">
 
 6175553099
-
-
 
 </td>
 </tr>
@@ -688,28 +623,20 @@ Breault
 
 243
 
-
-
 </td>
 <td valign="top">
 
 Natasha
-
-
 
 </td>
 <td valign="top">
 
 Shishov
 
-
-
 </td>
 <td valign="top">
 
 6175552755
-
-
 
 </td>
 </tr>
@@ -798,14 +725,10 @@ This query generates the following result:
 
 ProductName
 
-
-
 </th>
 <th valign="top">
 
 ProductID
-
-
 
 </th>
 </tr>
@@ -814,14 +737,10 @@ ProductID
 
 Tee Shirt
 
-
-
 </td>
 <td valign="top">
 
 301
-
-
 
 </td>
 </tr>
@@ -830,14 +749,10 @@ Tee Shirt
 
 Baseball Cap
 
-
-
 </td>
 <td valign="top">
 
 401
-
-
 
 </td>
 </tr>

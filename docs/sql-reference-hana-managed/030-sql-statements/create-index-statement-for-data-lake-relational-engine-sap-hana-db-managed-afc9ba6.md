@@ -6,12 +6,11 @@ Creates an index on a specified table, or pair of tables. Once an index is creat
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
 
 
 
@@ -21,12 +20,12 @@ CREATE [ UNIQUE ] [ <index-type> ] INDEX [ IF NOT EXISTS ] <index-name>
    … ( <column-name> [ , <column-name> ] … )
    … [ NOTIFY <integer> ]
    … [ DELIMITED BY '<separators-string>' ]
-   … [ LIMIT <maxwordsize-integer> ]
+   … [ LIMIT <maxwordsize-integer> ];
 ```
 
 ```
 <index-type> ::=
-   { CMP | DATE | DTTM | HG | HNG | TEXT | TIME | WD }
+   { CMP | DATE | DTTM | HG | HNG | TEXT | TIME | WD };
 ```
 
 
@@ -156,14 +155,10 @@ For example, the clause DELIMITED BY ' :;.\\/t' specifies these seven separator
 
 Delimiter
 
-
-
 </th>
 <th valign="top">
 
 Separator String for the DELIMITED BY Clause
-
-
 
 </th>
 </tr>
@@ -171,8 +166,6 @@ Separator String for the DELIMITED BY Clause
 <td valign="top">
 
 tab
-
-
 
 </td>
 <td valign="top">
@@ -190,8 +183,6 @@ Either of the following:
 <td valign="top">
 
 newline
-
-
 
 </td>
 <td valign="top">
@@ -255,7 +246,7 @@ Gives notification messages after n records are successfully added for the index
     Suppose that a user entered this query:
 
     ```
-    SELECT COUNT(*)FROM Customers WHERE CompanyName contains ('Farms')
+    SELECT COUNT(*)FROM Customers WHERE CompanyName contains ('Farms');
     ```
 
     The parser determines that the string contains the following, instead of 'Farms', and returns 0 instead of 1:
@@ -289,7 +280,7 @@ Gives notification messages after n records are successfully added for the index
 
     ```
     SELECT abs (x) from t1
-    ORDER BY x
+    ORDER BY x;
     ```
 
     To enhance query performance, use multicolumn HG indexes to run ORDER BY operations on more than one column \(that can also include ROWID\) in the SELECT or ORDER BY clause with these conditions:
@@ -301,28 +292,28 @@ Gives notification messages after n records are successfully added for the index
 
     ```
     SELECT x,z,y FROM T 
-    ORDER BY x,y
+    ORDER BY x,y;
     ```
 
     If expressions exist on base columns in the SELECT list, and all the columns referenced in all the expressions are present in the multicolumn index, then the query will use a multicolumn index; for example:
 
     ```
     SELECT power(x,2), x+y, sin(z) FROM T 
-    ORDER BY x,y
+    ORDER BY x,y;
     ```
 
     In addition to the two previous examples, if the ROWID\(\) function is in the SELECT list expressions, multicolumn indexes will be used. For example:
 
     ```
     SELECT rowid()+x, z FROM T 
-    ORDER BY x,y,z
+    ORDER BY x,y,z;
     ```
 
     In addition to the three previous examples, if ROWID\(\) is present at the end of an ORDER BY list, and if the columns of that list — except for ROWID\(\) — use multicolumn indexes in the exact order, multicolumn indexes will be used for the query. For example:
 
     ```
     SELECT z,y FROM T 
-    ORDER BY x,y,z,ROWID()
+    ORDER BY x,y,z,ROWID();
     ```
 
     Data lake Relational Engine allows the use of NULL in data values on a user created unique multicolumn HG index, if the column definition allows for NULL values and a constraint \(primary key or unique\) is not being enforced. The rules for this feature are as follows:
@@ -378,7 +369,7 @@ Gives notification messages after n records are successfully added for the index
     This UPDATE operation is successful, as rule 3 allows multiple rows with NULL values in all columns in the multicolumn index:
 
     ```
-    UPDATE table1 SET c2=NULL WHERE c3=1
+    UPDATE table1 SET c2=NULL WHERE c3=1;
     ```
 
     When a multicolumn HG index is governed by a unique constraint, a NULL value is not allowed in any column participating in the index.
@@ -398,10 +389,27 @@ Gives notification messages after n records are successfully added for the index
 
 ### 
 
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
+
+
+</dd>
+</dl>
 
 
 
@@ -430,7 +438,7 @@ Automatic commit
     ```
     CREATE CMP INDEX proj_curr_cmp
     ON sales_data
-    ( projected_earnings, current_earnings )
+    ( projected_earnings, current_earnings );
     ```
 
 -   The following example creates a High\_Group index on the SalesOrderItems table for the ProductID column:
@@ -438,7 +446,7 @@ Automatic commit
     ```
     CREATE HG INDEX item_prod_hg
     ON Sales_OrderItems
-    ( ProductID)
+    ( ProductID);
     ```
 
 -   The following example creates a WD index on the earnings\_report table. Specify that the delimiters of strings are space, colon, semicolon, and period. Limit the length of the strings to 25:
@@ -447,7 +455,7 @@ Automatic commit
     CREATE WD INDEX earnings_wd
     ON earnings_report_table(varchar)
     DELIMITED BY ‘ :;.’
-    LIMIT 25
+    LIMIT 25;
     ```
 
 -   The following example creates a DTTM index on the SalesOrders table for the OrderDate column:
@@ -455,7 +463,7 @@ Automatic commit
     ```
     CREATE DTTM INDEX order_dttm
     ON SalesOrders
-    ( OrderDate )
+    ( OrderDate );
     ```
 
 
@@ -464,9 +472,9 @@ Automatic commit
 
 [ALTER INDEX Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](alter-index-statement-for-data-lake-relational-engine-sap-hana-db-managed-daf745a.md "Renames indexes in base or global temporary tables, foreign key role names of indexes and foreign keys explicitly created by a user, or changes the clustered nature of an index on a catalog store table. You can't rename indexes created to enforce key constraints.")
 
-[CREATE INDEX Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a617ca4484f21015b2cdfdebbf4a5eee.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
-
-[DROP Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-statement-for-data-lake-relational-engine-sap-hana-db-managed-367d71d.md "Removes objects from the database.")
+[DROP INDEX Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-index-statement-for-data-lake-relational-engine-sap-hana-db-managed-52fb1c7.md "Removes an index from the database.")
 
 [BEGIN PARALLEL IQ … END PARALLEL IQ Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](begin-parallel-iq-end-parallel-iq-statement-for-data-lake-relational-engine-sap-hana-db-m-6632c2b.md "Groups CREATE INDEX statements together for execution at the same time.")
+
+[CREATE INDEX Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a617ca4484f21015b2cdfdebbf4a5eee.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
 

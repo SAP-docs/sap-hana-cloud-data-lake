@@ -6,10 +6,13 @@ Creates a trigger on a table.This statement applies to data lake Relational Engi
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be486006c5f10148430849495d4e67e__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -75,7 +78,7 @@ Specifying OR REPLACE creates a new trigger, or replaces an existing trigger wit
 <dl class="glossary">
 <dt><b>
 
- *<trigger-type\>* 
+*<trigger-type\>* 
 
 </b></dt>
 <dd>
@@ -92,7 +95,7 @@ If you are defining an INSTEAD OF trigger, then you cannot use the UPDATE OF *<c
 
 </dd><dt><b>
 
- *<trigger-event\>* 
+*<trigger-event\>* 
 
 </b></dt>
 <dd>
@@ -224,7 +227,7 @@ The trigger fires only for rows where the search-condition evaluates to true. Th
 
 </dd><dt><b>
 
- *<trigger-body\>* 
+*<trigger-body\>* 
 
 </b></dt>
 <dd>
@@ -334,6 +337,8 @@ ROW and RESOLVE triggers are not supported by Adaptive Server Enterprise. The da
 </dl>
 
 
+
+## Example
 
 This example creates a statement-level trigger. First, create a table as shown in this CREATE TABLE statement \(requires the CREATE TABLE system privilege\):
 

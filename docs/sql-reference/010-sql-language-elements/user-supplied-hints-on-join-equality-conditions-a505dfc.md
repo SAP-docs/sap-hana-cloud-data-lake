@@ -15,14 +15,10 @@ The values and their actions are as follows:
 
 Value
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Action
-
-
 
 </th>
 </tr>
@@ -31,14 +27,10 @@ Action
 
 0
 
-
-
 </td>
 <td valign="top">
 
 Let the optimizer choose
-
-
 
 </td>
 </tr>
@@ -47,14 +39,10 @@ Let the optimizer choose
 
 1
 
-
-
 </td>
 <td valign="top">
 
 Prefer sort-merge
-
-
 
 </td>
 </tr>
@@ -63,14 +51,10 @@ Prefer sort-merge
 
 2
 
-
-
 </td>
 <td valign="top">
 
 Prefer nested-loop
-
-
 
 </td>
 </tr>
@@ -79,14 +63,10 @@ Prefer nested-loop
 
 3
 
-
-
 </td>
 <td valign="top">
 
 Prefer nested-loop push-down
-
-
 
 </td>
 </tr>
@@ -95,14 +75,10 @@ Prefer nested-loop push-down
 
 4
 
-
-
 </td>
 <td valign="top">
 
 Prefer hash
-
-
 
 </td>
 </tr>
@@ -111,14 +87,10 @@ Prefer hash
 
 5
 
-
-
 </td>
 <td valign="top">
 
 Prefer hash push-down
-
-
 
 </td>
 </tr>
@@ -127,14 +99,10 @@ Prefer hash push-down
 
 6
 
-
-
 </td>
 <td valign="top">
 
 Prefer asymmetric sort-merge join
-
-
 
 </td>
 </tr>
@@ -143,14 +111,10 @@ Prefer asymmetric sort-merge join
 
 7
 
-
-
 </td>
 <td valign="top">
 
 Prefer sort-merge push-down
-
-
 
 </td>
 </tr>
@@ -159,14 +123,10 @@ Prefer sort-merge push-down
 
 8
 
-
-
 </td>
 <td valign="top">
 
 Prefer asymmetric sort-merge push-down join
-
-
 
 </td>
 </tr>
@@ -175,14 +135,10 @@ Prefer asymmetric sort-merge push-down join
 
 9
 
-
-
 </td>
 <td valign="top">
 
 Prefer partitioned hash join if the join keys include all the partition keys of a hash partitioned table
-
-
 
 </td>
 </tr>
@@ -191,14 +147,10 @@ Prefer partitioned hash join if the join keys include all the partition keys of 
 
 10
 
-
-
 </td>
 <td valign="top">
 
 Prefer partitioned hash-push down join if the join keys include all the partition keys of a hash partitioned table
-
-
 
 </td>
 </tr>
@@ -207,14 +159,10 @@ Prefer partitioned hash-push down join if the join keys include all the partitio
 
 11
 
-
-
 </td>
 <td valign="top">
 
 Prefer partitioned sort-merge join if the join keys include all the partition keys of a hash partitioned table
-
-
 
 </td>
 </tr>
@@ -223,14 +171,10 @@ Prefer partitioned sort-merge join if the join keys include all the partition ke
 
 12
 
-
-
 </td>
 <td valign="top">
 
 Prefer partitioned sort-merge push-down join if the join keys include all the partition keys of a hash partitioned table
-
-
 
 </td>
 </tr>
@@ -239,14 +183,10 @@ Prefer partitioned sort-merge push-down join if the join keys include all the pa
 
 \-1
 
-
-
 </td>
 <td valign="top">
 
 Avoid sort-merge
-
-
 
 </td>
 </tr>
@@ -255,14 +195,10 @@ Avoid sort-merge
 
 \-2
 
-
-
 </td>
 <td valign="top">
 
 Avoid nested-loop
-
-
 
 </td>
 </tr>
@@ -271,14 +207,10 @@ Avoid nested-loop
 
 \-3
 
-
-
 </td>
 <td valign="top">
 
 Avoid nested-loop push-down
-
-
 
 </td>
 </tr>
@@ -287,14 +219,10 @@ Avoid nested-loop push-down
 
 \-4
 
-
-
 </td>
 <td valign="top">
 
 Avoid hash
-
-
 
 </td>
 </tr>
@@ -303,14 +231,10 @@ Avoid hash
 
 \-5
 
-
-
 </td>
 <td valign="top">
 
 Avoid hash push-down
-
-
 
 </td>
 </tr>
@@ -319,14 +243,10 @@ Avoid hash push-down
 
 \-6
 
-
-
 </td>
 <td valign="top">
 
 Avoid asymmetric sort-merge join
-
-
 
 </td>
 </tr>
@@ -335,14 +255,10 @@ Avoid asymmetric sort-merge join
 
 \-7
 
-
-
 </td>
 <td valign="top">
 
 Avoid sort-merge push-down
-
-
 
 </td>
 </tr>
@@ -351,14 +267,10 @@ Avoid sort-merge push-down
 
 \-8
 
-
-
 </td>
 <td valign="top">
 
 Avoid asymmetric sort-merge push-down join
-
-
 
 </td>
 </tr>
@@ -367,14 +279,10 @@ Avoid asymmetric sort-merge push-down join
 
 \-9
 
-
-
 </td>
 <td valign="top">
 
 Avoid partitioned hash join if the join keys include all the partition keys of a hash partitioned table
-
-
 
 </td>
 </tr>
@@ -383,14 +291,10 @@ Avoid partitioned hash join if the join keys include all the partition keys of a
 
 10
 
-
-
 </td>
 <td valign="top">
 
 Avoid partitioned hash-push down join if the join keys include all the partition keys of a hash partitioned table
-
-
 
 </td>
 </tr>
@@ -399,14 +303,10 @@ Avoid partitioned hash-push down join if the join keys include all the partition
 
 11
 
-
-
 </td>
 <td valign="top">
 
 Avoid partitioned sort-merge join if the join keys include all the partition keys of a hash partitioned table
-
-
 
 </td>
 </tr>
@@ -415,14 +315,10 @@ Avoid partitioned sort-merge join if the join keys include all the partition key
 
 12
 
-
-
 </td>
 <td valign="top">
 
 Avoid partitioned sort-merge push-down join if the join keys include all the partition keys of a hash partitioned table
-
-
 
 </td>
 </tr>

@@ -7,7 +7,7 @@ Reports results of the most recent sp\_iqcheckdb.
 
 
 ```
-sp_iqdbstatistics
+sp_iqdbstatistics;
 ```
 
 
@@ -36,7 +36,7 @@ None
 
 <a name="loioa5a4d30384f2101589ee88c96ba8bea6__iq_refbb_1530"/>
 
-## Example
+## Examples
 
 The following example shows the output from sp\_iqdbstatistics. For this example, the most recent execution of sp\_iqcheckdb was the command sp\_iqcheckdb 'allocation database':
 

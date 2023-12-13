@@ -6,16 +6,19 @@ Displays the number of blocks\(objects\) used per index per main dbspace for a g
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5ac909e84f210158be2ec9a4fd2e670__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 sp_iqindexinfo '{ database | [ table <table-name> | index <index-name> ] [...] } 
-   [ resources <resource-percent> ]'
+   [ resources <resource-percent> ]';
 ```
 
 
@@ -76,7 +79,7 @@ The resources percentage allows you to limit the CPU utilization of the sp\_iqin
 
 <a name="loioa5ac909e84f210158be2ec9a4fd2e670__section_xvl_gcz_mbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -85,14 +88,10 @@ The resources percentage allows you to limit the CPU utilization of the sp\_iqin
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -101,14 +100,10 @@ Description
 
 Object
 
-
-
 </td>
 <td valign="top">
 
 Table or index name.
-
-
 
 </td>
 </tr>
@@ -117,14 +112,10 @@ Table or index name.
 
 Dbspace\_name
 
-
-
 </td>
 <td valign="top">
 
 Name of the dbspace.
-
-
 
 </td>
 </tr>
@@ -133,14 +124,10 @@ Name of the dbspace.
 
 ObjSize
 
-
-
 </td>
 <td valign="top">
 
 Size of data for this object on this dbspace.
-
-
 
 </td>
 </tr>
@@ -149,14 +136,10 @@ Size of data for this object on this dbspace.
 
 DBSpPct
 
-
-
 </td>
 <td valign="top">
 
 Percent of dbspace used by this object.
-
-
 
 </td>
 </tr>
@@ -165,14 +148,10 @@ Percent of dbspace used by this object.
 
 MinBlk
 
-
-
 </td>
 <td valign="top">
 
-First block used by this object on this dbspace.For instances using cloud dbspaces, this is the minimum object ID.
-
-
+The minimum object ID.
 
 </td>
 </tr>
@@ -181,14 +160,10 @@ First block used by this object on this dbspace.For instances using cloud dbspac
 
 MaxBlk
 
-
-
 </td>
 <td valign="top">
 
-Last block used by this object on this dbspace; useful for determining which objects must be relocated before the dbspace is resized to a smaller size.For instances using cloud dbspaces, this is the maximum object ID.
-
-
+The maximum object ID.
 
 </td>
 </tr>
@@ -226,7 +201,7 @@ None
 
 <a name="loioa5ac909e84f210158be2ec9a4fd2e670__iq_refbb_1611"/>
 
-## Example
+## Examples
 
 Shows the DBA on which dbspaces a given object resides. Displays information about indexes in the Departments table:
 
@@ -241,42 +216,30 @@ sp_iqindexinfo 'table GROUPO.Departments';
 
 Object
 
-
-
 </th>
 <th valign="top">
 
 DbspaceName
-
-
 
 </th>
 <th valign="top">
 
 ObjSize
 
-
-
 </th>
 <th valign="top">
 
 DBSpPct
-
-
 
 </th>
 <th valign="top">
 
 MinBlk
 
-
-
 </th>
 <th valign="top">
 
 MaxBlk
-
-
 
 </th>
 </tr>
@@ -285,42 +248,30 @@ MaxBlk
 
 GROUPO.Departments
 
-
-
 </td>
 <td valign="top">
 
 iq\_main
-
-
 
 </td>
 <td valign="top">
 
 288 K
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 <td valign="top">
 
 1,045,496.00
 
-
-
 </td>
 <td valign="top">
 
 1,048,891.00
-
-
 
 </td>
 </tr>
@@ -329,42 +280,30 @@ iq\_main
 
 GROUPO.Departments.ASIQ\_IDX\_T779\_C1\_FP
 
-
-
 </td>
 <td valign="top">
 
 iq\_main
-
-
 
 </td>
 <td valign="top">
 
 176 K
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 <td valign="top">
 
 1,047,197.00
 
-
-
 </td>
 <td valign="top">
 
 1,047,328.00
-
-
 
 </td>
 </tr>
@@ -373,42 +312,30 @@ iq\_main
 
 GROUPO.Departments.ASIQ\_IDX\_T779\_C2\_FP
 
-
-
 </td>
 <td valign="top">
 
 iq\_main
-
-
 
 </td>
 <td valign="top">
 
 160 K
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 <td valign="top">
 
 1,047,213.00
 
-
-
 </td>
 <td valign="top">
 
 1,047,324.00
-
-
 
 </td>
 </tr>
@@ -417,42 +344,30 @@ iq\_main
 
 GROUPO.Departments.ASIQ\_IDX\_T779\_C3\_FP
 
-
-
 </td>
 <td valign="top">
 
 iq\_main
-
-
 
 </td>
 <td valign="top">
 
 184 K
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 <td valign="top">
 
 1,047,229.00
 
-
-
 </td>
 <td valign="top">
 
 1,047,317.00
-
-
 
 </td>
 </tr>
@@ -461,42 +376,30 @@ iq\_main
 
 GROUPO.Departments.ASIQ\_IDX\_T779\_C3\_HG
 
-
-
 </td>
 <td valign="top">
 
 iq\_main
-
-
 
 </td>
 <td valign="top">
 
 440 K
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 <td valign="top">
 
 1,048,421.00
 
-
-
 </td>
 <td valign="top">
 
 1,048,796.00
-
-
 
 </td>
 </tr>
@@ -505,42 +408,30 @@ iq\_main
 
 GROUPO.Departments.ASIQ\_IDX\_T779\_I4\_HG
 
-
-
 </td>
 <td valign="top">
 
 iq\_main
-
-
 
 </td>
 <td valign="top">
 
 288 K
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 <td valign="top">
 
 1,047,261.00
 
-
-
 </td>
 <td valign="top">
 
 1,047,306.00
-
-
 
 </td>
 </tr>
@@ -560,6 +451,4 @@ iq\_main
 [sp\_iqindexfragmentation Procedure for Data Lake Relational Engine](sp-iqindexfragmentation-procedure-for-data-lake-relational-engine-a5ac10a.md "Reports information about the percentage of page space taken up within the B-trees, garrays, and bitmap structures in data lake Relational Engine indexes.")
 
 [sp\_iqindexsize Procedure for Data Lake Relational Engine](sp-iqindexsize-procedure-for-data-lake-relational-engine-a5ad8fe.md "Gives the size of the specified index.")
-
-[Cloud Dbspaces](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2023_2_QRC/en-US/493eb818429e4996b3da4153192a9efa.html "Cloud dbspace is a new offering where the database engine stores a user dbspace in object storage solutions such as Microsoft Azure Blob Storage, AWS Simple Storage Service (S3), or Google Cloud Storage. In a cloud dbspace, database pages are physically stored as objects as opposed to regular file system blocks.") :arrow_upper_right:
 

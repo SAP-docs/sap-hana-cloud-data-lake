@@ -6,15 +6,18 @@ Displays information about all current users and connections, or about a particu
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5beeead84f210158043f99faa62fce2__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqwho [ { <connhandle> | <user-name> } [, <arg-type> ] ]
+sp_iqwho [ { <connhandle> | <user-name> } [, <arg-type> ] ];
 ```
 
 
@@ -65,7 +68,7 @@ Enclose the *<arg-type\>* value in double quotes.
 
 <a name="loioa5beeead84f210158043f99faa62fce2__section_cmh_kgg_nbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -74,14 +77,10 @@ Enclose the *<arg-type\>* value in double quotes.
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -90,14 +89,10 @@ Description
 
 ConnHandle
 
-
-
 </td>
 <td valign="top">
 
 The SAP SQL Anywhere connection handle
-
-
 
 </td>
 </tr>
@@ -106,14 +101,10 @@ The SAP SQL Anywhere connection handle
 
 IQConnID
 
-
-
 </td>
 <td valign="top">
 
 The data lake Relational Engine specific connection ID.
-
-
 
 </td>
 </tr>
@@ -122,14 +113,10 @@ The data lake Relational Engine specific connection ID.
 
 Userid
 
-
-
 </td>
 <td valign="top">
 
 The name of the user that opened the connection "ConnHandle".
-
-
 
 </td>
 </tr>
@@ -138,14 +125,10 @@ The name of the user that opened the connection "ConnHandle".
 
 BlockedOn
 
-
-
 </td>
 <td valign="top">
 
 The connection on which a particular connection is blocked; 0 if not blocked on any connection.
-
-
 
 </td>
 </tr>
@@ -154,14 +137,10 @@ The connection on which a particular connection is blocked; 0 if not blocked on 
 
 BlockUserid
 
-
-
 </td>
 <td valign="top">
 
 The owner of the blocking connection; NULL if there is no blocking connection.
-
-
 
 </td>
 </tr>
@@ -170,14 +149,10 @@ The owner of the blocking connection; NULL if there is no blocking connection.
 
 ReqType
 
-
-
 </td>
 <td valign="top">
 
 The type of the request made through the connection; DO\_NOTHING if no command is issued.
-
-
 
 </td>
 </tr>
@@ -186,14 +161,10 @@ The type of the request made through the connection; DO\_NOTHING if no command i
 
 IQCmdType
 
-
-
 </td>
 <td valign="top">
 
 The type of data lake Relational Engine command issued from the connection; NONE if no command is issued.
-
-
 
 </td>
 </tr>
@@ -202,14 +173,10 @@ The type of data lake Relational Engine command issued from the connection; NONE
 
 IQIdle
 
-
-
 </td>
 <td valign="top">
 
 The time in seconds since the last data lake Relational Engine command was issued through the connection; in case of no last data lake Relational Engine command, the time since '01-01-2000' is displayed.
-
-
 
 </td>
 </tr>
@@ -218,14 +185,10 @@ The time in seconds since the last data lake Relational Engine command was issue
 
 SAIdle
 
-
-
 </td>
 <td valign="top">
 
 The time in seconds since the last SA request was issued through the connection; in case of no last SA command, the time since '01-01-2000' is displayed.
-
-
 
 </td>
 </tr>
@@ -234,14 +197,10 @@ The time in seconds since the last SA request was issued through the connection;
 
 IQCursors
 
-
-
 </td>
 <td valign="top">
 
 The number of active cursors in the connection; 0 if no cursors.
-
-
 
 </td>
 </tr>
@@ -250,14 +209,10 @@ The number of active cursors in the connection; 0 if no cursors.
 
 IQThreads
 
-
-
 </td>
 <td valign="top">
 
 The number of threads with the connection. At least one thread is started as soon as the connection is opened, so the minimum value for IQThreads is 1.
-
-
 
 </td>
 </tr>
@@ -266,14 +221,10 @@ The number of threads with the connection. At least one thread is started as soo
 
 TempTableSpaceKB
 
-
-
 </td>
 <td valign="top">
 
 The size of temporary table space in kilobytes; 0 if no temporary table space is used
-
-
 
 </td>
 </tr>
@@ -282,14 +233,10 @@ The size of temporary table space in kilobytes; 0 if no temporary table space is
 
 TempWorkSpaceKB
 
-
-
 </td>
 <td valign="top">
 
 The size of temporary workspace in kilobytes; 0 if no temporary workspace is used
-
-
 
 </td>
 </tr>
@@ -312,14 +259,10 @@ The following lists a mapping of sp\_who and sp\_iqwho columns:
 
 sp\_who Column
 
-
-
 </th>
 <th valign="top">
 
 sp\_iqwho Column
-
-
 
 </th>
 </tr>
@@ -328,14 +271,10 @@ sp\_iqwho Column
 
 fid
 
-
-
 </td>
 <td valign="top">
 
 Family to which a lock belongs; omitted, as not applicable to data lake Relational Engine
-
-
 
 </td>
 </tr>
@@ -344,14 +283,10 @@ Family to which a lock belongs; omitted, as not applicable to data lake Relation
 
 spid
 
-
-
 </td>
 <td valign="top">
 
 ConnHandle, IQConnID
-
-
 
 </td>
 </tr>
@@ -360,14 +295,10 @@ ConnHandle, IQConnID
 
 status
 
-
-
 </td>
 <td valign="top">
 
 IQIdle, SAIdle
-
-
 
 </td>
 </tr>
@@ -376,14 +307,10 @@ IQIdle, SAIdle
 
 loginame
 
-
-
 </td>
 <td valign="top">
 
 Userid
-
-
 
 </td>
 </tr>
@@ -392,14 +319,10 @@ Userid
 
 origname
 
-
-
 </td>
 <td valign="top">
 
 User alias; omitted, as not applicable to data lake Relational Engine
-
-
 
 </td>
 </tr>
@@ -408,14 +331,10 @@ User alias; omitted, as not applicable to data lake Relational Engine
 
 hostname
 
-
-
 </td>
 <td valign="top">
 
 Name of the host on which the server is running; currently not supported
-
-
 
 </td>
 </tr>
@@ -424,14 +343,10 @@ Name of the host on which the server is running; currently not supported
 
 blk\_spid
 
-
-
 </td>
 <td valign="top">
 
 BlockedOn
-
-
 
 </td>
 </tr>
@@ -440,14 +355,10 @@ BlockedOn
 
 dbname
 
-
-
 </td>
 <td valign="top">
 
 Omitted, as there is one server and one database for data lake Relational Engine and they are the same for every connection
-
-
 
 </td>
 </tr>
@@ -456,14 +367,10 @@ Omitted, as there is one server and one database for data lake Relational Engine
 
 cmd
 
-
-
 </td>
 <td valign="top">
 
 ReqType, IQCmdType
-
-
 
 </td>
 </tr>
@@ -472,14 +379,10 @@ ReqType, IQCmdType
 
 block\_xloid
 
-
-
 </td>
 <td valign="top">
 
 BlockUserid
-
-
 
 </td>
 </tr>
@@ -492,7 +395,7 @@ Either a connection handle or a user name can be specified as the first sp\_iqwh
 Data lake Relational Engine allows numeric user names. The *<arg-type\>* parameter directs sp\_iqwho to interpret a numeric value in the first parameter as a user name. For example:
 
 ```
-sp_iqwho 1, "user"
+sp_iqwho 1, "user";
 ```
 
 When the *<arg-type\>* "user" is specified, sp\_iqwho interprets the first parameter 1as a user name, not as a connection ID. If a user named 1 exists in the database, sp\_iqwho displays information about connections opened by user 1.
@@ -504,14 +407,10 @@ When the *<arg-type\>* "user" is specified, sp\_iqwho interprets the first param
 
 Syntax
 
-
-
 </th>
 <th valign="top">
 
 Output
-
-
 
 </th>
 </tr>
@@ -520,14 +419,10 @@ Output
 
 sp\_iqwho
 
-
-
 </td>
 <td valign="top">
 
 Displays all active connections
-
-
 
 </td>
 </tr>
@@ -536,14 +431,10 @@ Displays all active connections
 
 sp\_iqwho 3
 
-
-
 </td>
 <td valign="top">
 
 Displays information about connection 3
-
-
 
 </td>
 </tr>
@@ -552,14 +443,10 @@ Displays information about connection 3
 
 sp\_iqwho "HDLADMIN"
 
-
-
 </td>
 <td valign="top">
 
 Displays connections opened by user HDLADMIN
-
-
 
 </td>
 </tr>
@@ -568,14 +455,10 @@ Displays connections opened by user HDLADMIN
 
 sp\_iqwho 3, "user"
 
-
-
 </td>
 <td valign="top">
 
 Interprets 3 as a user name and displays connections opened by user 3. If user 3 does not exist, returns the error "***User 3 does not exist.***"
-
-
 
 </td>
 </tr>
@@ -584,14 +467,10 @@ Interprets 3 as a user name and displays connections opened by user 3. If user 3
 
 sp\_iqwho non-existing-user
 
-
-
 </td>
 <td valign="top">
 
 Returns error "***User non-existing-user does not exist."***
-
-
 
 </td>
 </tr>
@@ -600,14 +479,10 @@ Returns error "***User non-existing-user does not exist."***
 
 sp\_iqwho 3, "xyz"
 
-
-
 </td>
 <td valign="top">
 
 Returns the error "***Invalid parameter: xyz.***"
-
-
 
 </td>
 </tr>
@@ -637,18 +512,629 @@ Some SAP ASE columns are omitted, as they are not applicable to data lake Relati
 
 
 
-## Example
+## Examples
 
-The following example displays all active connections:
+The following example displays all active connections. There are four connections.
 
 ```
-ConnHandle IQConnID Userid      ReqType      IQCmdType            BlockedOn BlockUserid IQCursors
-12         118      HDLADMIN    CURSOR_OPEN  IQUTILITYOPENCURSOR  0         (NULL)      0  
-13         119      shweta      DO_NOTHING   NONE                 0         (NULL)      0
-
-
-IQThreads IQIdle   SAIdle TempTableSpaceKB TempWorkSpaceKB
-1         1          0       0             0
-1         16238757   470     0             0
+CALL sp_iqwho();
 ```
+
+
+<table>
+<tr>
+<th valign="top">
+
+ConnHandle
+
+</th>
+<th valign="top">
+
+IQconnID
+
+</th>
+<th valign="top">
+
+Userid
+
+</th>
+<th valign="top">
+
+ReqType
+
+</th>
+<th valign="top">
+
+IQCmdType
+
+</th>
+<th valign="top">
+
+BlockedOn
+
+</th>
+<th valign="top">
+
+BlockUserid
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+193692
+
+</td>
+<td valign="top">
+
+290601
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+OPEN
+
+</td>
+<td valign="top">
+
+IQUTILITYOPENCURSOR
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+195536
+
+</td>
+<td valign="top">
+
+294422
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+PREFETCH
+
+</td>
+<td valign="top">
+
+NONE
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+195829
+
+</td>
+<td valign="top">
+
+294886
+
+</td>
+<td valign="top">
+
+USER2
+
+</td>
+<td valign="top">
+
+PREFETCH
+
+</td>
+<td valign="top">
+
+NONE
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+195835
+
+</td>
+<td valign="top">
+
+294895
+
+</td>
+<td valign="top">
+
+USER3
+
+</td>
+<td valign="top">
+
+PREFETCH
+
+</td>
+<td valign="top">
+
+NONE
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="6">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+IQCursors
+
+</th>
+<th valign="top">
+
+IQThreads
+
+</th>
+<th valign="top">
+
+IQIdle
+
+</th>
+<th valign="top">
+
+SAIdle
+
+</th>
+<th valign="top">
+
+TempTableSpaceKB
+
+</th>
+<th valign="top">
+
+TempWorkSpaceKB
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+409
+
+</td>
+<td valign="top">
+
+409
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+23
+
+</td>
+<td valign="top">
+
+23
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+17
+
+</td>
+<td valign="top">
+
+17
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+</table>
+
+The following example displays only the active connections for User1. There are two connections.
+
+```
+CALL sp_iqwho ('USER1','user');
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+ConnHandle
+
+</th>
+<th valign="top">
+
+IQconnID
+
+</th>
+<th valign="top">
+
+Userid
+
+</th>
+<th valign="top">
+
+ReqType
+
+</th>
+<th valign="top">
+
+IQCmdType
+
+</th>
+<th valign="top">
+
+BlockedOn
+
+</th>
+<th valign="top">
+
+BlockUserid
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+195536
+
+</td>
+<td valign="top">
+
+294422
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+PREFETCH
+
+</td>
+<td valign="top">
+
+NONE
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+196247
+
+</td>
+<td valign="top">
+
+295488
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+PREFETCH
+
+</td>
+<td valign="top">
+
+NONE
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="8">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+BlockedOn
+
+</th>
+<th valign="top">
+
+BlockUserid
+
+</th>
+<th valign="top">
+
+IQCursors
+
+</th>
+<th valign="top">
+
+IQThreads
+
+</th>
+<th valign="top">
+
+IQIdle
+
+</th>
+<th valign="top">
+
+SAIdle
+
+</th>
+<th valign="top">
+
+TempTableSpaceKB
+
+</th>
+<th valign="top">
+
+TempWorkSpaceKB
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+962
+
+</td>
+<td valign="top">
+
+962
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+9
+
+</td>
+<td valign="top">
+
+9
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+</table>
 

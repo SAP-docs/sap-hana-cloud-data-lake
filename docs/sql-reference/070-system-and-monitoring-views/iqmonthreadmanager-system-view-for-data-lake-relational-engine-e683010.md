@@ -6,10 +6,13 @@ A resource-level monitoring view for troubleshooting performance issues. iqmonTh
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioe68301094c2549b2822e9cdbcb84dfb6__section_skb_fwg_k4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 <table>
@@ -18,21 +21,15 @@ A resource-level monitoring view for troubleshooting performance issues. iqmonTh
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -41,21 +38,15 @@ Description
 
 ThreadPoolSize
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The number of threads in the thread pool.
-
-
 
 </td>
 </tr>
@@ -64,21 +55,15 @@ The number of threads in the thread pool.
 
 ThreadsFree
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The current number of free threads. This value is also available in [sp\_iqstatistics Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatistics-procedure-for-data-lake-relational-engine-a5b7d32.md) output.
-
-
 
 </td>
 </tr>
@@ -87,21 +72,15 @@ The current number of free threads. This value is also available in [sp\_iqstati
 
 ThreadsInUse
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The current number of active threads. This value is also available in [sp\_iqstatistics Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqstatistics-procedure-for-data-lake-relational-engine-a5b7d32.md) output.
-
-
 
 </td>
 </tr>
@@ -110,21 +89,15 @@ The current number of active threads. This value is also available in [sp\_iqsta
 
 ThreadTeamsInUse
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The current number of active thread teams.
-
-
 
 </td>
 </tr>
@@ -133,21 +106,15 @@ The current number of active thread teams.
 
 MaxThreadTeams
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The maximum number of thread teams used since data lake Relational Engine server start.
-
-
 
 </td>
 </tr>
@@ -159,7 +126,7 @@ The maximum number of thread teams used since data lake Relational Engine server
 
 ## Privileges
 
-You must have the MONITOR system privilege to access this view. DBAs can consult [Granting a System Privilege to a User](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_2_QRC/en-US/a43bcb8284f210158039b1793a92a4fc.html "Allow the granting of specific system privileges to specific users, with or without administrative rights.") :arrow_upper_right: and [Alphabetical List of System Privileges for Data Lake Relational Engine](../080-sql-statements/alphabetical-list-of-system-privileges-for-data-lake-relational-engine-a449325.md) for information on granting the MONITOR system privilege to a user.
+You must have the MONITOR system privilege to access this view. DBAs can consult [Granting a System Privilege to a User](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/a43bcb8284f210158039b1793a92a4fc.html "Allow the granting of specific system privileges to specific users, with or without administrative rights.") :arrow_upper_right: and [Alphabetical List of System Privileges for Data Lake Relational Engine](../080-sql-statements/alphabetical-list-of-system-privileges-for-data-lake-relational-engine-a449325.md) for information on granting the MONITOR system privilege to a user.
 
 
 
@@ -174,5 +141,5 @@ Use iqmonThreadManager for diagnostic use-cases including:
 -   Monitoring thread pool use by periodically checking the free threads, and threads in use.
 
 
-iqmonThreadManager, in conjunction with the other monitoring views, can help you troubleshoot common data lake Relational Engine performance problems. For diagnostic use-case information, see the [SAP HANA Cloud, Data Lake Performance and Tuning for Data Lake Relational Engine (Monitoring Views)](https://help.sap.com/viewer/028be133f34c4d2d998c6fbc258659c5/2023_2_QRC/en-US/56032dd760ca4790a55d069d4475b441.html "This document shows you how to use the monitoring views to monitor data lake Relational Engine system health, and to help you troubleshoot performance issues.") :arrow_upper_right: manual.
+iqmonThreadManager, in conjunction with the other monitoring views, can help you troubleshoot common data lake Relational Engine performance problems. For diagnostic use-case information, see the [SAP HANA Cloud, Data Lake Performance and Tuning for Data Lake Relational Engine (Monitoring Views)](https://help.sap.com/viewer/028be133f34c4d2d998c6fbc258659c5/2023_4_QRC/en-US/56032dd760ca4790a55d069d4475b441.html "This document shows you how to use the monitoring views to monitor data lake Relational Engine system health, and to help you troubleshoot performance issues.") :arrow_upper_right: manual.
 

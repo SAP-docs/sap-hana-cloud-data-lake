@@ -6,8 +6,11 @@ Specifies the percent of hard disk I/Os allowed during the execution of a statem
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa638259c84f210159846ce8b3b1237ec__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

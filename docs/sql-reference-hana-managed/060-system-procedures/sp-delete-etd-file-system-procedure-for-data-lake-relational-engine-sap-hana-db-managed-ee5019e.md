@@ -6,16 +6,22 @@ Deletes specified files from the audit directory in the file container.
 
 
 
+<a name="loioee5019e64a0247cbaf7c8cde5905b3a2__section_dh4_3db_1yb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+
 > ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Running Procedures](remote-execute-usage-examples-for-running-procedures-3e7f86d.md) for more information.
+> This syntax cannot be run when connected to SAP HANA database as a SAP HANA database user and using SAP HANA database REMOTE\_EXECUTE or REMOTE\_EXECUTE\_QUERY.
 
 
 
-sp\_delete\_etd\_file\( *<file\_name\_pattern\>*\)
+```
+sp_delete_etd_file( <file-name-pattern> );
+```
 
 
 
@@ -27,12 +33,12 @@ sp\_delete\_etd\_file\( *<file\_name\_pattern\>*\)
 <dl>
 <dt><b>
 
-*<file\_name\_pattern\>*
+*<file-name-pattern\>*
 
 </b></dt>
 <dd>
 
-Enter a file name pattern for ETD file name matching. Accepts the wildcard characters ***\**** and ***?*** .
+Enter a file name pattern for ETD file name matching. Accepts the wildcard characters `*` and `?` .
 
 If null, then deletes all ETD files.
 
@@ -45,36 +51,24 @@ If null, then deletes all ETD files.
 
 <a name="loioee5019e64a0247cbaf7c8cde5905b3a2__section_lzx_3d2_srb"/>
 
-## Parameters
+## Result Set
 
-
-<dl>
-<dt><b>
-
-*<file\_name\_pattern\>*
-
-</b></dt>
-<dd>
-
-Enter a file name pattern for ETD file name matching. Accepts the wildcard characters ***\**** and ***?*** .
-
-If null, then deletes all ETD files.
+None
 
 
 
-</dd>
-</dl>
-
-
-
-<a name="loioee5019e64a0247cbaf7c8cde5905b3a2__section_x1g_44c_zmb"/>
+<a name="loioee5019e64a0247cbaf7c8cde5905b3a2__section_bvg_mx1_1yb"/>
 
 ## Privileges
 
-Requires one of:
 
--   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+### 
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure
+-   MANAGE\_AUDITING system privilege
 
 
 
@@ -88,7 +82,7 @@ None
 
 <a name="loioee5019e64a0247cbaf7c8cde5905b3a2__section_s11_kd2_srb"/>
 
-## Example
+## Examples
 
 Assume you want to delete these three ETD files. Assume you set filename\_prefix to 'my\_session' in the CREATE TEMPORARY TRACE EVENT SESSION statement. The file names start with the string '`my_session_20201126_`':
 
@@ -101,7 +95,7 @@ my_session_20201126_185000.000_auditdb_eng.etd  260 2020-11-26 18:50:52.000+00:0
 Execute:
 
 ```
-CALL dbo.sp_delete_etd_file'my_session_20201126_*'
+CALL sp_delete_etd_file'my_session_20201126_*';
 ```
 
 **Related Information**  
@@ -109,5 +103,5 @@ CALL dbo.sp_delete_etd_file'my_session_20201126_*'
 
 [sp\_list\_etd\_files System Procedure for Data Lake Relational Engine \(SAP HANA DB-Managed\)](sp-list-etd-files-system-procedure-for-data-lake-relational-engine-sap-hana-db-managed-0f76c83.md "Lists the event trace data (ETD) files logged to the file container by database auditing.")
 
-[sp_delete_etd_file System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/d2e6eeca3f2448159215eead4f812adf.html "Deletes specified files from the audit directory in the file container.") :arrow_upper_right:
+[sp_delete_etd_file System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/d2e6eeca3f2448159215eead4f812adf.html "Deletes specified files from the audit directory in the file container.") :arrow_upper_right:
 

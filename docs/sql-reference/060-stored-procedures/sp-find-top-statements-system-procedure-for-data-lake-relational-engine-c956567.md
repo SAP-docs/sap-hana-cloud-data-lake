@@ -6,15 +6,18 @@ Reports performance statistics for each logged statement and plan combination.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioc95656706e1044c095af69e8a407420a__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_find_top_statements( <stmt_text>, <stmt_hash> )
+sp_find_top_statements( <stmt_text>, <stmt_hash> );
 ```
 
 
@@ -25,7 +28,7 @@ sp_find_top_statements( <stmt_text>, <stmt_hash> )
 <dl>
 <dt><b>
 
- *<stmt\_text\>* 
+*<stmt\_text\>* 
 
 </b></dt>
 <dd>
@@ -36,7 +39,7 @@ sp_find_top_statements( <stmt_text>, <stmt_hash> )
 
 </dd><dt><b>
 
- *<stmt\_hash\>* 
+*<stmt\_hash\>* 
 
 </b></dt>
 <dd>
@@ -59,21 +62,15 @@ sp_find_top_statements( <stmt_text>, <stmt_hash> )
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -82,21 +79,15 @@ Description
 
 *stmt\_hash*
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Returns the statement identifier.
-
-
 
 </td>
 </tr>
@@ -105,21 +96,15 @@ Returns the statement identifier.
 
 *owner\_name*
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the name of the owner of the stored procedure. The value is NULL if the statement isn't part of a stored procedure, user-defined function, trigger, or event. The value may also be NULL if the statement is executed as part of a stored procedure and the stored procedure is then dropped. A statement executed as part of a stored procedure gets a hash that is related to the procedure, not the statement text.
-
-
 
 </td>
 </tr>
@@ -128,21 +113,15 @@ Returns the name of the owner of the stored procedure. The value is NULL if the 
 
 *proc\_name*
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the name of the procedure that the statement belongs to. The value is NULL if the statement isn't part of a stored procedure, user-defined function, trigger, or event. The value may also be NULL if the statement is executed as part of a stored procedure and the stored procedure is then dropped. A statement executed as part of a stored procedure gets a hash that is related to the procedure, not the statement text.
-
-
 
 </td>
 </tr>
@@ -151,21 +130,15 @@ Returns the name of the procedure that the statement belongs to. The value is NU
 
 *reusable\_stmt\_id*
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns a unique identifier assigned to the statement within a procedure \(not necessarily a line number\). The value is NULL if the statement isn't part of a stored procedure, user-defined function, trigger, or event.
-
-
 
 </td>
 </tr>
@@ -174,21 +147,15 @@ Returns a unique identifier assigned to the statement within a procedure \(not n
 
 *plan\_hash*
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Returns the plan identifier.
-
-
 
 </td>
 </tr>
@@ -197,21 +164,15 @@ Returns the plan identifier.
 
 *max\_seconds*
 
-
-
 </td>
 <td valign="top">
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 Returns the maximum runtime observed for the statement when executed with the current plan.
-
-
 
 </td>
 </tr>
@@ -220,21 +181,15 @@ Returns the maximum runtime observed for the statement when executed with the cu
 
 *sum\_runtime*
 
-
-
 </td>
 <td valign="top">
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 Returns the total runtime for the statement with the current plan.
-
-
 
 </td>
 </tr>
@@ -243,21 +198,15 @@ Returns the total runtime for the statement with the current plan.
 
 *sum\_square\_runtime*
 
-
-
 </td>
 <td valign="top">
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 Returns the sum of the squares of the observed runtimes. This value is used for the standard deviation calculation.
-
-
 
 </td>
 </tr>
@@ -266,21 +215,15 @@ Returns the sum of the squares of the observed runtimes. This value is used for 
 
 *max\_blocking\_time*
 
-
-
 </td>
 <td valign="top">
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 Returns the maximum observed blocking time for the statement when executed with the current plan.
-
-
 
 </td>
 </tr>
@@ -289,21 +232,15 @@ Returns the maximum observed blocking time for the statement when executed with 
 
 *sum\_blocking\_time*
 
-
-
 </td>
 <td valign="top">
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 Returns the total blocking time for the statement executions using the current plan.
-
-
 
 </td>
 </tr>
@@ -312,21 +249,15 @@ Returns the total blocking time for the statement executions using the current p
 
 *num\_exec*
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Returns the number of times the statement was executed using the current plan.
-
-
 
 </td>
 </tr>
@@ -335,21 +266,15 @@ Returns the number of times the statement was executed using the current plan.
 
 *total\_num\_rows*
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Returns the total number of rows returned or modified by the statement over all executions performed with the current plan.
-
-
 
 </td>
 </tr>
@@ -358,21 +283,15 @@ Returns the total number of rows returned or modified by the statement over all 
 
 *last\_max\_time\_utc*
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Returns the date and time in Coordinated Universal Time \(UTC\) that the maximum runtime was last updated.
-
-
 
 </td>
 </tr>
@@ -381,21 +300,15 @@ Returns the date and time in Coordinated Universal Time \(UTC\) that the maximum
 
 *last\_time\_utc*
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Returns the date and time in Coordinated Universal Time \(UTC\) that the statement statistics were last updated with the current plan.
-
-
 
 </td>
 </tr>
@@ -404,21 +317,15 @@ Returns the date and time in Coordinated Universal Time \(UTC\) that the stateme
 
 *temp\_space\_used\_mb*
 
-
-
 </td>
 <td valign="top">
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 Temporary memory consumption in MB.
-
-
 
 </td>
 </tr>
@@ -427,21 +334,15 @@ Temporary memory consumption in MB.
 
 *cache\_page\_hit* 
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Number of pages found in the cache for the statement with the highest execution time.
-
-
 
 </td>
 </tr>
@@ -450,21 +351,15 @@ Number of pages found in the cache for the statement with the highest execution 
 
 *cache\_page\_miss*
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Number of pages not found in the cache for the statement with the highest execution time.
-
-
 
 </td>
 </tr>
@@ -473,21 +368,15 @@ Number of pages not found in the cache for the statement with the highest execut
 
 *max\_cpu\_usage\_perc*
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Highest CPU usage \(as percentage\) observed for the statement with the highest execution time.
-
-
 
 </td>
 </tr>
@@ -496,21 +385,15 @@ Highest CPU usage \(as percentage\) observed for the statement with the highest 
 
 *max\_num\_cpu*
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Maximum number of CPUs observed for the statement with the highest execution time.
-
-
 
 </td>
 </tr>
@@ -519,21 +402,15 @@ Maximum number of CPUs observed for the statement with the highest execution tim
 
 *max\_thread\_count*
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Maximum number of active parallel threads for the statement with the highest execution time.
-
-
 
 </td>
 </tr>
@@ -542,21 +419,15 @@ Maximum number of active parallel threads for the statement with the highest exe
 
 *max\_conn\_id*
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Connection ID of the statement with the highest execution time.
-
-
 
 </td>
 </tr>
@@ -565,21 +436,15 @@ Connection ID of the statement with the highest execution time.
 
 *max\_txn\_id*
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Transaction ID of the statement with the highest execution time.
-
-
 
 </td>
 </tr>
@@ -616,32 +481,258 @@ None.
 
 
 
-## Example
+## Examples
 
-The following query returns performance statistics for each logged statement that has both of the statements logged:
+This example uses the sp\_find\_top\_statements system procedure to return performance statistics for each logged statement and plan combination.
+
+```
+CALL sp_find_top_statements();
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+stmt\_hash
+
+</th>
+<th valign="top">
+
+owner\_name
+
+</th>
+<th valign="top">
+
+proc\_name
+
+</th>
+<th valign="top">
+
+reusable\_stmt\_id
+
+</th>
+<th valign="top">
+
+plan\_hash
+
+</th>
+<th valign="top">
+
+max\_seconds
+
+</th>
+<th valign="top">
+
+ 
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+8825406443833030000
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+13335726911838300000
+
+</td>
+<td valign="top">
+
+0.0099999997…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+9223372054034640000
+
+</td>
+<td valign="top">
+
+dbo
+
+</td>
+<td valign="top">
+
+sp\_list\_mutexes\_semaphores
+
+</td>
+<td valign="top">
+
+4
+
+</td>
+<td valign="top">
+
+16856559335332700000
+
+</td>
+<td valign="top">
+
+0.0099999997…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+9223372099131800000
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+4011848611646360000
+
+</td>
+<td valign="top">
+
+0.0199999999…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+9223372058329610000
+
+</td>
+<td valign="top">
+
+dbo
+
+</td>
+<td valign="top">
+
+sa\_materialized\_view\_info
+
+</td>
+<td valign="top">
+
+5
+
+</td>
+<td valign="top">
+
+8698197228441170000
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+</tr>
+</table>
+
+The example returns performance statistics for each logged statement that has both of the statements logged:
 
 ```
 SELECT * 
-FROM dbo.sp_find_top_statements( ) TS
+FROM sp_find_top_statements( ) TS
 INNER JOIN SYS.GTSYSPERFCACHESTMT PS ON TS.stmt_hash = PS.stmt_hash
 ORDER BY TS.stmt_hash;
 ```
 
 For all data, use OUTER JOIN.
 
-
-
-<a name="loioc95656706e1044c095af69e8a407420a__section_vrh_pky_kbb"/>
-
-## Example 2
-
 The following query returns diagnostic information related to the execution of SQL statement:
 
 ```
-select * from <table> where col1>20
+SELECT * FROM <table_name> WHERE COL1>20;
 ```
 
 ```
-sp_find_top_statements('select * from <table> where col1> 20');
+CALL sp_find_top_statements('SELECT * FROM <table_name> WHERE COL1>20');
 ```
 

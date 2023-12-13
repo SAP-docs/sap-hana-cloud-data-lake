@@ -6,10 +6,13 @@ Retrieves one row from the named cursor. The cursor must have been previously op
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61e5e2484f2101598b898b5613275f6__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,7 +26,7 @@ FETCH
        | INTO <variable-list> }
    ... [ PURGE ] [ BLOCK <n> ] [ ARRAY <fetch-count> ]
    ... INTO <variable-list>
-   ... IQ CACHE <row-count>
+   ... IQ CACHE <row-count>;
 ```
 
 
@@ -193,7 +196,7 @@ ARRAY *<fetch-count\>*
 \(Embedded SQL only\) Allows wide fetches, which retrieve more than one row at a time, and which might improve performance. To use wide fetches in Embedded SQL, include the `FETCH` statement in your code, where `ARRAY nnn` is the last item of the `FETCH` statement:
 
 ```
-EXEC SQL FETCH . . . ARRAY nnn
+EXEC SQL FETCH . . . ARRAY nnn;
 ```
 
 The fetch count nnn can be a host variable. The SQLDA must contain nnn \* \(columns per row\) variables. The first row is placed in SQLDA variables 0 to \(columns per row\) -1, and so on.
@@ -298,7 +301,7 @@ See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](gra
     		 .
     	END LOOP
     	CLOSE cur_employee;
-    END
+    END;
     ```
 
 

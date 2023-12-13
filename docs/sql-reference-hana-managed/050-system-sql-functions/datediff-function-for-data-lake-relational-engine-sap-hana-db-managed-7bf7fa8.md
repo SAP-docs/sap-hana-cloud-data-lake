@@ -7,7 +7,7 @@ Returns the interval between two dates.
 
 
 ```
-DATEDIFF ( <date-part>, <date-expression1>, <date-expression2> )
+DATEDIFF ( <date-part>, <date-expression1>, <date-expression2> );
 ```
 
 
@@ -58,7 +58,7 @@ The ending date for the interval. *<date-expression1\>* is subtracted from this 
 
 <a name="loio7bf7fa8d313a453c8bc224f2f29c65b5__section_xxx_ffm_srb"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -75,7 +75,7 @@ DATEDIFF results are truncated, not rounded, when the result is not an even mult
 When you use day as the date part, DATEDIFF returns the number of midnights between the two times specified, including the second date, but not the first. For example, the following statement returns the value 5. Midnight of the first day 2003/08/03 is not included in the result. Midnight of the second day is included, even though the time specified is before midnight:
 
 ```
-SELECT DATEDIFF( DAY, '2003/08/03 14:00', '2003/08/08 14:00' ) FROM iq_dummy
+SELECT DATEDIFF( DAY, '2003/08/03 14:00', '2003/08/08 14:00' ) FROM iq_dummy;
 ```
 
 When you use month as the date part, DATEDIFF returns the number of first-of-the-months between two dates, including the second date but not the first. For example, both of the following statements return the value 9:
@@ -111,7 +111,7 @@ If you require catalog store DATEDIFF behavior in an expression that can be exec
 ```
 DATEDIFF(MINUTE, 
              CAST(DATEFORMAT(t.col1, 'YYYY-MM-DD HH:NN’) AS TIMESTAMP), 
-             CAST(DATEFORMAT(t.col2, 'YYYY-MM-DD HH:NN’) AS TIMESTAMP))
+             CAST(DATEFORMAT(t.col2, 'YYYY-MM-DD HH:NN’) AS TIMESTAMP));
 ```
 
 
@@ -132,42 +132,42 @@ DATEDIFF(MINUTE,
 
     ```
     SELECT DATEDIFF( HOUR, '4:00AM', '5:50AM' )
-    FROM iq_dummy
+    FROM iq_dummy;
     ```
 
 -   The following statement returns 102:
 
     ```
     SELECT DATEDIFF( MONTH, '1987/05/02', '1995/11/15' )
-    FROM iq_dummy
+    FROM iq_dummy;
     ```
 
 -   The following statement returns 0:
 
     ```
     SELECT DATEDIFF( DAY, '00:00', '23:59' ) 
-    FROM iq_dummy
+    FROM iq_dummy;
     ```
 
 -   The following statement returns 4:
 
     ```
     SELECT DATEDIFF( DAY, '1999/07/19 00:00', '1999/07/23
-    23:59' ) FROM iq_dummy
+    23:59' ) FROM iq_dummy;
     ```
 
 -   The following statement returns 0:
 
     ```
     SELECT DATEDIFF( MONTH, '1999/07/19', '1999/07/23' )
-    FROM iq_dummy
+    FROM iq_dummy;
     ```
 
 -   The following statement returns 1:
 
     ```
     SELECT DATEDIFF( MONTH, '1999/07/19', '1999/08/23' )
-    FROM iq_dummy
+    FROM iq_dummy;
     ```
 
 -   The following statement returns 4:
@@ -175,7 +175,7 @@ DATEDIFF(MINUTE,
     ```
     SELECT DATEDIFF(MCS, '2009-11-03 11:10:42.033185',
     '2009-11-03 11:10:42.033189') 
-    FROM iq_dummy
+    FROM iq_dummy;
     ```
 
 -   The following statement returns 15:
@@ -183,19 +183,19 @@ DATEDIFF(MINUTE,
     ```
     SELECT DATEDIFF(MICROSECOND, '2009-11-10
     14:57:52.722001', '2009-11-10 14:57:52.722016')
-    FROM iq_dummy
+    FROM iq_dummy;
     ```
 
 -   The following statement returns 1,500,000:
 
     ```
     SELECT DATEDIFF(MCS, '2000/07/07/07 07:07:06.277777',
-    '2000/07/07/07 07:07:07.777777') FROM iq_dummy
+    '2000/07/07/07 07:07:07.777777') FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[DATEDIFF Function [Date and Time] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a545a63784f210158075c22cd6f85d3a.html "Returns the interval between two dates.") :arrow_upper_right:
+[DATEDIFF Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a545a63784f210158075c22cd6f85d3a.html "Returns the interval between two dates.") :arrow_upper_right:
 

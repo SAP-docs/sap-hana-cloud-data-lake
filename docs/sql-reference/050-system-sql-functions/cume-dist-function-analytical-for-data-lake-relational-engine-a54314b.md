@@ -7,7 +7,7 @@ The `CUME_DIST` function is a rank analytical function that calculates the relat
 
 
 ```
-CUME_DIST () OVER (<window-spec>)
+CUME_DIST () OVER (<window-spec>);
 ```
 
 
@@ -36,7 +36,7 @@ Specified when using this function as a window function.
 
 <a name="loioa54314be84f210159603ce84a892876c__CUME_DIST_returns1"/>
 
-## Returns
+## Result Set
 
 A DOUBLE value between 0 and 1.
 
@@ -87,28 +87,20 @@ The returned result set is:
 
 DepartmentID
 
-
-
 </th>
 <th valign="top">
 
 Surname
-
-
 
 </th>
 <th valign="top">
 
 Salary
 
-
-
 </th>
 <th valign="top">
 
 Rank
-
-
 
 </th>
 </tr>
@@ -116,59 +108,43 @@ Rank
 <td valign="top">
 
 200
-
-
 
 </td>
 <td valign="top">
 
 Savarino
 
-
-
 </td>
 <td valign="top">
 
 72,300.000
-
-
 
 </td>
 <td valign="top">
 
 0.333333
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 200
-
-
 
 </td>
 <td valign="top">
 
 Clark
 
-
-
 </td>
 <td valign="top">
 
 45,000.000
 
-
-
 </td>
 <td valign="top">
 
 0.666667
-
-
 
 </td>
 </tr>
@@ -177,28 +153,20 @@ Clark
 
 200
 
-
-
 </td>
 <td valign="top">
 
 Overbey
-
-
 
 </td>
 <td valign="top">
 
 39,300.000
 
-
-
 </td>
 <td valign="top">
 
 1.000000
-
-
 
 </td>
 </tr>
@@ -207,5 +175,5 @@ Overbey
 **Related Information**  
 
 
-[CUME_DIST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/65729084257448758370d2196d0f1021.html "The CUME_DIST function is a rank analytical function that calculates the relative position of one value among a group of rows. It returns a decimal value between 0 and 1.") :arrow_upper_right:
+[CUME_DIST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/65729084257448758370d2196d0f1021.html "The CUME_DIST function is a rank analytical function that calculates the relative position of one value among a group of rows. It returns a decimal value between 0 and 1.") :arrow_upper_right:
 

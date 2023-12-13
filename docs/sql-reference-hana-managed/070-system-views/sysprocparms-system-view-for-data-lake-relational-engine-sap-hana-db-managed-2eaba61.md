@@ -6,16 +6,12 @@ Each row in the SYSPROCPARMS view describes a parameter to a procedure in the da
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system view can be used when connected as follows:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Viewing System Views](remote-execute-usage-examples-for-viewing-system-views-8b235c7.md).
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE\_QUERY procedure.
-> 
->     -   See [REMOTE\_EXECUTE\_QUERY Usage Examples for Viewing System Views](remote-execute-query-usage-examples-for-viewing-system-views-ada51c0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system view can be used when connected as follows:
+
+-   Connected to SAP HANA database as a SAP HANA database user, and using SAP HANA database REMOTE\_EXECUTE\_QUERY.
+
 
 
 
@@ -35,11 +31,21 @@ ALTER VIEW "SYS"."SYSPROCPARMS"( creator,
       join SYS.ISYSPROCEDURE as p on p.proc_id = pp.proc_id
       join SYS.ISYSUSER as up on up.user_id = p.creator
       join SYS.ISYSDOMAIN as dom on dom.domain_id = pp.domain_id
-      left outer join SYS.ISYSUSERTYPE as ut on ut.type_id = pp.user_type
+      left outer join SYS.ISYSUSERTYPE as ut on ut.type_id = pp.user_type;
 ```
+
+
+
+<a name="loio2eaba61c7575405ab7b5fbee219298ad__section_gj1_wy1_4yb"/>
+
+## Privileges
+
+To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE privilege on the remote source <hana\_relational\_container\_schema\>\_SOURCE.
+
+-   See [REMOTE\_EXECUTE\_QUERY Usage Examples for Viewing System Views](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/a898e08b84f21015969fa437e89860c8/ada51c0074354a5f99b60c14cffb653c.html).
 
 **Related Information**  
 
 
-[SYSPROCPARMS Consolidated View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/3be98c1f6c5f10149dafb6e806f30259.html "Each row in the SYSPROCPARMS view describes a parameter to a procedure in the database.") :arrow_upper_right:
+[SYSPROCPARMS Consolidated View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3be98c1f6c5f10149dafb6e806f30259.html "Each row in the SYSPROCPARMS view describes a parameter to a procedure in the database.") :arrow_upper_right:
 

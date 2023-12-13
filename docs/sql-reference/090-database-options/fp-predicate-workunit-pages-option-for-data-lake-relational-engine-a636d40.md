@@ -6,8 +6,11 @@ Specifies degree of parallelism used in the default index.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa636d40284f21015b7a0a8eb955eaf8b__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

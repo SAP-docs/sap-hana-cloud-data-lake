@@ -6,15 +6,18 @@ Continues execution by leaving a compound statement or `LOOP`.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6206e0f84f210158fecfef723ec3ead__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-LEAVE <statement-label>
+LEAVE <statement-label>;
 ```
 
 
@@ -68,7 +71,7 @@ None
         LEAVE lbl ;
       END IF ;
       SET i = i + 1
-    END LOOP lbl
+    END LOOP lbl;
     ```
 
 -   The following example uses `LEAVE` in a nested loop:
@@ -85,7 +88,7 @@ None
           LEAVE outer_loop
         END IF
       END LOOP inner_loop
-    END LOOP outer_loop
+    END LOOP outer_loop;
     ```
 
 

@@ -6,15 +6,18 @@ Displays information about system data types and user-defined data types.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5a247c884f21015aec1a5aff2384bc2__section_mlx_wvh_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqdatatype [ <type-name> ], [ <type-owner> ], [ <type-type> ]
+sp_iqdatatype [ <type-name> ], [ <type-owner> ], [ <type-type> ];
 ```
 
 
@@ -69,7 +72,7 @@ The type of data type. Allowed values are:
 
 <a name="loioa5a247c884f21015aec1a5aff2384bc2__section_yyv_yrz_mbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -78,14 +81,10 @@ The type of data type. Allowed values are:
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -94,14 +93,10 @@ Description
 
 type\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the data type.
-
-
 
 </td>
 </tr>
@@ -110,14 +105,10 @@ The name of the data type.
 
 creator
 
-
-
 </td>
 <td valign="top">
 
 The owner of the data type.
-
-
 
 </td>
 </tr>
@@ -126,14 +117,10 @@ The owner of the data type.
 
 nulls
 
-
-
 </td>
 <td valign="top">
 
 Y indicates the user-defined data type allows nulls; N indicates the data type does not allow nulls and U indicates the null value for the data type is unspecified.
-
-
 
 </td>
 </tr>
@@ -142,14 +129,10 @@ Y indicates the user-defined data type allows nulls; N indicates the data type d
 
 width
 
-
-
 </td>
 <td valign="top">
 
 Displays the length of string columns, the precision of numeric columns, and the number of bytes of storage for all other data types.
-
-
 
 </td>
 </tr>
@@ -158,14 +141,10 @@ Displays the length of string columns, the precision of numeric columns, and the
 
 scale
 
-
-
 </td>
 <td valign="top">
 
 Displays the number of digits after the decimal point for numeric data type columns and zero for all other data types.
-
-
 
 </td>
 </tr>
@@ -174,14 +153,10 @@ Displays the number of digits after the decimal point for numeric data type colu
 
 "default"
 
-
-
 </td>
 <td valign="top">
 
 The default value for the data type.
-
-
 
 </td>
 </tr>
@@ -190,14 +165,10 @@ The default value for the data type.
 
 "check"
 
-
-
 </td>
 <td valign="top">
 
 The CHECK condition for the data type.
-
-
 
 </td>
 </tr>
@@ -251,61 +222,61 @@ None
 -   The following example displays information about all user-defined data types in the database:
 
     ```
-    sp_iqdatatype
+    sp_iqdatatype;
     ```
 
 -   The following example displays information about the user-defined data type named country\_t:
 
     ```
-    sp_iqdatatype country_t
+    sp_iqdatatype country_t;
     ```
 
 -   In the following example, no rows are returned, as the data type non\_existing\_type does not exist:
 
     ```
-    sp_iqdatatype non_existing_type
+    sp_iqdatatype non_existing_type;
     ```
 
 -   The following example displays information about all user-defined data types owned by DBA:
 
     ```
-    sp_iqdatatype NULL, DBA
+    sp_iqdatatype NULL, DBA;
     ```
 
 -   The following example displays information about the data type country\_t owned by DBA:
 
     ```
-    sp_iqdatatype country_t, DBA
+    sp_iqdatatype country_t, DBA;
     ```
 
 -   In the following example, rowid is a system-defined data type. If there is no user-defined data type also named rowid, no rows are returned. \(By default, only user-defined data types are returned.\):
 
     ```
-    sp_iqdatatype rowid
+    sp_iqdatatype rowid;
     ```
 
 -   In the following example, no rows are returned, as the data type `rowid` is not a user-defined data type \(by default, only user-defined data types are returned\):
 
     ```
-    sp_iqdatatype rowid, SYS
+    sp_iqdatatype rowid, SYS;
     ```
 
 -   The following example displays information about all system defined data types \(owned by dbo or SYS\):
 
     ```
-    sp_iqdatatype NULL, NULL, SYSTEM
+    sp_iqdatatype NULL, NULL, SYSTEM;
     ```
 
 -   The following example displays information about the system data type rowid:
 
     ```
-    sp_iqdatatype rowid, NULL, SYSTEM
+    sp_iqdatatype rowid, NULL, SYSTEM;
     ```
 
 -   The following example displays information about the user-defined and system data types:
 
     ```
-    sp_iqdatatype NULL, NULL, 'ALL'
+    sp_iqdatatype NULL, NULL, 'ALL';
     ```
 
 

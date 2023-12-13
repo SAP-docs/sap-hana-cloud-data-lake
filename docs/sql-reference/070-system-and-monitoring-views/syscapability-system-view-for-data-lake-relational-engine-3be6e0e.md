@@ -6,10 +6,13 @@ Each row of the SYSCAPABILITY system view specifies the status of a capability o
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be6e0ed6c5f1014aa52d6cc4bbb136a__section_fry_4cq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row of the SYSCAPABILITY system view specifies the status of a capability o
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 capid
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The ID of the capability, as listed in the SYSCAPABILITYNAME system view.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The ID of the capability, as listed in the SYSCAPABILITYNAME system view.
 
 srvid
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The server to which the capability applies, as listed in the SYSSERVER system view.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ The server to which the capability applies, as listed in the SYSSERVER system vi
 
 capvalue
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The value of the capability.
-
-
 
 </td>
 </tr>

@@ -6,17 +6,20 @@ Creates a user-defined data type in the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa616d8e584f2101588c5f0f67774d346__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 CREATE { DOMAIN | DATATYPE } <domain-name> <data-type>
    … [ NOT ] NULL ]
-   … [ DEFAULT <default-value> ]
+   … [ DEFAULT <default-value> ];
 ```
 
 ```
@@ -32,7 +35,7 @@ CREATE { DOMAIN | DATATYPE } <domain-name> <data-type>
    | CURRENT REMOTE USER 
    | NULL 
    | TIMESTAMP 
-   | LAST USER }
+   | LAST USER };
 ```
 
 ```
@@ -43,7 +46,7 @@ CREATE { DOMAIN | DATATYPE } <domain-name> <data-type>
       | TIMESTAMP 
       | USER 
       | PUBLISHER } 
-   | USER }
+   | USER };
 ```
 
 
@@ -138,13 +141,13 @@ Automatic commit
 The following example creates a data type named address, which holds a 35-character string, and which may be NULL:
 
 ```
-CREATE DOMAIN address CHAR( 35 ) NULL
+CREATE DOMAIN address CHAR( 35 ) NULL;
 ```
 
 **Related Information**  
 
 
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
-
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
+
+[DROP DOMAIN Statement for Data Lake Relational Engine](drop-domain-statement-for-data-lake-relational-engine-b9516c8.md "Removes a domain (data type) from the database.")
 

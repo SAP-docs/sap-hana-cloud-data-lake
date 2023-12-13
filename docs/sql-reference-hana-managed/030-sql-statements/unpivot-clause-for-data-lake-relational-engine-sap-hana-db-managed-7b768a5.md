@@ -126,6 +126,8 @@ Not in the standard.
 
 
 
+## Example
+
 Suppose that you have a table called MyCustomers, containing the names of your contacts and the various phone numbers they have. The following statements create such a table, populate it with fictitious data, and then query the table:
 
 ```
@@ -154,42 +156,30 @@ SELECT * FROM MyCustomers;
 
 ContactID
 
-
-
 </th>
 <th valign="top">
 
 LastName
-
-
 
 </th>
 <th valign="top">
 
 FirstName
 
-
-
 </th>
 <th valign="top">
 
 Home
-
-
 
 </th>
 <th valign="top">
 
 Mobile
 
-
-
 </th>
 <th valign="top">
 
 AltPhone
-
-
 
 </th>
 </tr>
@@ -198,42 +188,30 @@ AltPhone
 
 1
 
-
-
 </td>
 <td valign="top">
 
 Bringle
-
-
 
 </td>
 <td valign="top">
 
 Susan
 
-
-
 </td>
 <td valign="top">
 
 111-593-1451
-
-
 
 </td>
 <td valign="top">
 
 222-693-7620
 
-
-
 </td>
 <td valign="top">
 
 \(NULL\)
-
-
 
 </td>
 </tr>
@@ -242,42 +220,30 @@ Susan
 
 2
 
-
-
 </td>
 <td valign="top">
 
 Hoffsteter
-
-
 
 </td>
 <td valign="top">
 
 Garth
 
-
-
 </td>
 <td valign="top">
 
 113-249-6622
 
-
-
 </td>
 <td valign="top">
 
 \(NULL\)
 
-
-
 </td>
 <td valign="top">
 
 \(NULL\)
-
-
 
 </td>
 </tr>
@@ -286,42 +252,30 @@ Garth
 
 3
 
-
-
 </td>
 <td valign="top">
 
 Zenibar
-
-
 
 </td>
 <td valign="top">
 
 Austin
 
-
-
 </td>
 <td valign="top">
 
 \(NULL\)
-
-
 
 </td>
 <td valign="top">
 
 171-765-8730
 
-
-
 </td>
 <td valign="top">
 
 888-555-5555
-
-
 
 </td>
 </tr>
@@ -353,21 +307,15 @@ ORDER BY PhoneNumber;
 
 ContactID
 
-
-
 </th>
 <th valign="top">
 
 PhoneNumber
 
-
-
 </th>
 <th valign="top">
 
 PhoneType
-
-
 
 </th>
 </tr>
@@ -376,21 +324,15 @@ PhoneType
 
 1
 
-
-
 </td>
 <td valign="top">
 
 111-593-1451
 
-
-
 </td>
 <td valign="top">
 
 Home
-
-
 
 </td>
 </tr>
@@ -399,21 +341,15 @@ Home
 
 2
 
-
-
 </td>
 <td valign="top">
 
 113-249-6622
 
-
-
 </td>
 <td valign="top">
 
 Home
-
-
 
 </td>
 </tr>
@@ -422,21 +358,15 @@ Home
 
 3
 
-
-
 </td>
 <td valign="top">
 
 171-765-873
 
-
-
 </td>
 <td valign="top">
 
 Mobile
-
-
 
 </td>
 </tr>
@@ -445,21 +375,15 @@ Mobile
 
 1
 
-
-
 </td>
 <td valign="top">
 
 222-693-7620
 
-
-
 </td>
 <td valign="top">
 
 Mobile
-
-
 
 </td>
 </tr>
@@ -468,21 +392,15 @@ Mobile
 
 3
 
-
-
 </td>
 <td valign="top">
 
 888-536-5324
 
-
-
 </td>
 <td valign="top">
 
 AltPhone
-
-
 
 </td>
 </tr>
@@ -524,49 +442,35 @@ For example, the unpivot source table UnpivotSourceTable contains the following 
 
 CustomerID
 
-
-
 </th>
 <th valign="top">
 
 customer\_city
-
-
 
 </th>
 <th valign="top">
 
 customer\_state
 
-
-
 </th>
 <th valign="top">
 
 customer\_phone
-
-
 
 </th>
 <th valign="top">
 
 contact\_city
 
-
-
 </th>
 <th valign="top">
 
 contact\_state
 
-
-
 </th>
 <th valign="top">
 
 contact\_phone
-
-
 
 </th>
 </tr>
@@ -575,49 +479,35 @@ contact\_phone
 
 101
 
-
-
 </td>
 <td valign="top">
 
 Kingston
 
-
-
 </td>
 <td valign="top">
 
 NJ
-
-
 
 </td>
 <td valign="top">
 
 2015558966
 
-
-
 </td>
 <td valign="top">
 
 Hespeler
-
-
 
 </td>
 <td valign="top">
 
 NJ
 
-
-
 </td>
 <td valign="top">
 
 6035550988
-
-
 
 </td>
 </tr>
@@ -632,36 +522,26 @@ The query unpivots the data into new rows identified by CustomerID 101 in the fo
 
 CustomerID
 
-
-
 </th>
 <th valign="top">
 
 People
-
-
 
 </th>
 <th valign="top">
 
 City
 
-
-
 </th>
 <th valign="top">
 
 State
-
-
 
 </th>
 <th valign="top">
 
 Phone
 
-
-
 </th>
 </tr>
 <tr>
@@ -669,35 +549,25 @@ Phone
 
 101
 
-
-
 </td>
 <td valign="top">
 
 ContactPhone
-
-
 
 </td>
 <td valign="top">
 
 Hespeler
 
-
-
 </td>
 <td valign="top">
 
 NJ
 
-
-
 </td>
 <td valign="top">
 
 6035550988
-
-
 
 </td>
 </tr>
@@ -706,36 +576,26 @@ NJ
 
 101
 
-
-
 </td>
 <td valign="top">
 
 CustomerPhone
-
-
 
 </td>
 <td valign="top">
 
 Kingston
 
-
-
 </td>
 <td valign="top">
 
 NJ
-
-
 
 </td>
 <td valign="top">
 
 2015558966
 
-
-
 </td>
 </tr>
 <tr>
@@ -743,36 +603,26 @@ NJ
 
 111
 
-
-
 </td>
 <td valign="top">
 
 ContactPhone
-
-
 
 </td>
 <td valign="top">
 
 Cornwall
 
-
-
 </td>
 <td valign="top">
 
 NY
-
-
 
 </td>
 <td valign="top">
 
 6175557956
 
-
-
 </td>
 </tr>
 <tr>
@@ -780,36 +630,26 @@ NY
 
 111
 
-
-
 </td>
 <td valign="top">
 
 ContactPhone
-
-
 
 </td>
 <td valign="top">
 
 Cornwall
 
-
-
 </td>
 <td valign="top">
 
 NY
-
-
 
 </td>
 <td valign="top">
 
 6175558890
 
-
-
 </td>
 </tr>
 <tr>
@@ -817,36 +657,26 @@ NY
 
 111
 
-
-
 </td>
 <td valign="top">
 
 CustomerPhone
-
-
 
 </td>
 <td valign="top">
 
 Hastings
 
-
-
 </td>
 <td valign="top">
 
 NY
-
-
 
 </td>
 <td valign="top">
 
 3155554486
 
-
-
 </td>
 </tr>
 <tr>
@@ -854,36 +684,26 @@ NY
 
 116
 
-
-
 </td>
 <td valign="top">
 
 ContactPhone
-
-
 
 </td>
 <td valign="top">
 
 Cornwall
 
-
-
 </td>
 <td valign="top">
 
 NY
-
-
 
 </td>
 <td valign="top">
 
 6175552222
 
-
-
 </td>
 </tr>
 <tr>
@@ -891,35 +711,25 @@ NY
 
 116
 
-
-
 </td>
 <td valign="top">
 
 ContactPhone
-
-
 
 </td>
 <td valign="top">
 
 Cornwall
 
-
-
 </td>
 <td valign="top">
 
 NY
 
-
-
 </td>
 <td valign="top">
 
 6175559877
-
-
 
 </td>
 </tr>
@@ -928,72 +738,52 @@ NY
 
 116
 
-
-
 </td>
 <td valign="top">
 
 CustomerPhone
-
-
 
 </td>
 <td valign="top">
 
 Stayner
 
-
-
 </td>
 <td valign="top">
 
 NY
-
-
 
 </td>
 <td valign="top">
 
 9145553817
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 147
-
-
 
 </td>
 <td valign="top">
 
 ContactPhone
 
-
-
 </td>
 <td valign="top">
 
 Hespeler
-
-
 
 </td>
 <td valign="top">
 
 NJ
 
-
-
 </td>
 <td valign="top">
 
 6035551200
-
-
 
 </td>
 </tr>
@@ -1002,35 +792,25 @@ NJ
 
 147
 
-
-
 </td>
 <td valign="top">
 
 CustomerPhone
-
-
 
 </td>
 <td valign="top">
 
 Campbellford
 
-
-
 </td>
 <td valign="top">
 
 NJ
 
-
-
 </td>
 <td valign="top">
 
 9085556021
-
-
 
 </td>
 </tr>

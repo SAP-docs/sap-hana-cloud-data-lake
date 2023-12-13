@@ -7,7 +7,7 @@ Returns a substring of a string.
 
 
 ```
-{ SUBSTRING | SUBSTR } ( <string-expression>, <start> [ , <length> ] )
+{ SUBSTRING | SUBSTR } ( <string-expression>, <start> [ , <length> ] );
 ```
 
 
@@ -61,7 +61,7 @@ The length of the substring to return, in characters:
 
 <a name="loioa58787e784f21015acc5ecadf5b1a9a0__SUBSTRING_returns1"/>
 
-## Returns
+## Result Set
 
 -   LONG BINARY
 -   LONG NVARCHAR
@@ -101,21 +101,21 @@ When the `ansi_substring` database option is set to ON \(default\), negative val
 
     ```
     SELECT SUBSTRING ( 'back yard', 1 , 4 )
-      FROM iq_dummy
+      FROM iq_dummy;
     ```
 
 -   The following statement returns ***yard***:
 
     ```
     SELECT SUBSTR ( 'back yard', -1 , -4 )
-      FROM iq_dummy
+      FROM iq_dummy;
     ```
 
 -   The following statement returns ***0x2233***:
 
     ```
     SELECT SUBSTR ( 0x112233445566, 2, 2 )
-      FROM iq_dummy
+      FROM iq_dummy;
     ```
 
 
@@ -126,5 +126,5 @@ When the `ansi_substring` database option is set to ON \(default\), negative val
 
 [CHARINDEX Function \[String\] for Data Lake Relational Engine](charindex-function-string-for-data-lake-relational-engine-a53cde2.md "Returns the position of the first occurrence of a specified string in another string.")
 
-[SUBSTRING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/f114d3543b9c48f69b269b951d549034.html "Returns a substring of a string.") :arrow_upper_right:
+[SUBSTRING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/f114d3543b9c48f69b269b951d549034.html "Returns a substring of a string.") :arrow_upper_right:
 

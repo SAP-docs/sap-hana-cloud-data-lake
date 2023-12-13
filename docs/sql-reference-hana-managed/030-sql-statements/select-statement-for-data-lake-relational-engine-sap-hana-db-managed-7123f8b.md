@@ -6,16 +6,19 @@ Retrieves information from the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when connected as follows:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using either the REMOTE\_EXECUTE procedure or the REMOTE\_EXEUCTE\_QUERY function.
-> 
-> When using the REMOTE\_EXECUTE procedure, the SELECT statement can only be included as part of the definition within the CREATE VIEW Statement. It can't be run on its own in a REMOTE\_EXECUTE procedure.
-> 
-> See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
-> 
-> For information on using the REMOTE\_EXECUTE\_QUERY procedure, see [Query Using the REMOTE_EXECUTE_QUERY procedure in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/4192f252c2af4136aebadbd1a806b139.html "Use the REMOTE_EXECUTE_QUERY function to query data lake Relational Engine objects without having to reference an SAP HANA database virtual table in the query.") :arrow_upper_right:.
+<a name="loio7123f8b4e1f14a8f9efd257794202198__section_rl5_1cd_x4b"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when connected as follows:
+
+-   Connected to SAP HANA database as a SAP HANA database user, and using either the REMOTE\_EXECUTE procedure or the REMOTE\_EXEUCTE\_QUERY function.
+
+When using the REMOTE\_EXECUTE procedure, the SELECT statement can only be included as part of the definition within the CREATE VIEW Statement. It can't be run on its own in a REMOTE\_EXECUTE procedure.
+
+See [REMOTE EXECUTE/REMOTE\_EXECUTE\_DDL Usage Examples for Executing SQL Statements](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/a898e08b84f21015969fa437e89860c8/fd99ac0ce9914c7695488ca4b2fa70f5.html).
+
+For information on using REMOTE\_EXECUTE\_QUERY, see [Query Using REMOTE\_EXECUTE\_QUERY in Data Lake Relational Engine \(SAP HANA DB-Managed\)](https://help.sap.com/docs/SAP_HANA_DATA_LAKE/9220e7fec0fe4503b5c5a6e21d584e63/4192f252c2af4136aebadbd1a806b139.html).
 
 
 
@@ -115,7 +118,7 @@ SELECT [ { ALL | DISTINCT } ] [ <row-limitation-option1> ] <select-list>
 ```
 <materialized_view_staleness_option> ::=
    { materialized_view_staleness_check
-    | materialized_view_staleness_limit }
+    | materialized_view_staleness_limit };
 ```
 
 
@@ -246,20 +249,20 @@ Retrieves rows and views specified in the *<object-list\>*.
 
 ```
 <object-list> ::=
-   [ { <owner> | <schema-name> }.] <object-name> [,...]
+   [ { <owner> | <schema-name> }.] <object-name> [,...];
 ```
 
 Joins can be specified using join operators. For more information, see *FROM Clause*. A SELECT statement with no FROM clause can be used to display the values of expressions not derived from tables. For example, the following displays the value of the @@version global variable:
 
 ```
-SELECT @@version
+SELECT @@version;
 ```
 
 This is equivalent to:
 
 ```
 SELECT @@version
-FROM DUMMY
+FROM DUMMY;
 ```
 
 > ### Note:  
@@ -399,7 +402,7 @@ Use a global database option to override for a given statement.
 
 <materialized_view_staleness_option> ::=
    materialized_view_staleness_check = <materialized_view_staleness_check_value>
-   | materialized_view_staleness_limit = <materialized_view_staleness_limit_value>
+   | materialized_view_staleness_limit = <materialized_view_staleness_limit_value>;
 ```
 
 
@@ -556,7 +559,7 @@ ROLLUP syntax:
 ```
 SELECT … [ GROUPING ( <column-name >) …] …
 GROUP BY [ <expression> [, …]
-| ROLLUP ( <expression> [, …] ) ]
+| ROLLUP ( <expression> [, …] ) ];
 ```
 
 GROUPING takes a column name as a parameter and returns a Boolean value:
@@ -568,14 +571,10 @@ GROUPING takes a column name as a parameter and returns a Boolean value:
 
 If the Value of the Result Is
 
-
-
 </th>
 <th valign="top">
 
 GROUPING Returns
-
-
 
 </th>
 </tr>
@@ -584,14 +583,10 @@ GROUPING Returns
 
 NULL created by a ROLLUP operation
 
-
-
 </td>
 <td valign="top">
 
 1 \(TRUE\)
-
-
 
 </td>
 </tr>
@@ -600,14 +595,10 @@ NULL created by a ROLLUP operation
 
 NULL indicating the row is a subtotal
 
-
-
 </td>
 <td valign="top">
 
 1 \(TRUE\)
-
-
 
 </td>
 </tr>
@@ -616,14 +607,10 @@ NULL indicating the row is a subtotal
 
 not created by a ROLLUP operation
 
-
-
 </td>
 <td valign="top">
 
 0 \(FALSE\)
-
-
 
 </td>
 </tr>
@@ -632,14 +619,10 @@ not created by a ROLLUP operation
 
 a stored NULL
 
-
-
 </td>
 <td valign="top">
 
 0 \(FALSE\)
-
-
 
 </td>
 </tr>
@@ -664,7 +647,7 @@ CUBE syntax:
 ```
 SELECT … [ GROUPING ( <column-name> ) …] …
 GROUP BY [ <expression> [, …]
-| CUBE ( <expression> [, …] ) ]
+| CUBE ( <expression> [, …] ) ];
 ```
 
 GROUPING takes a column name as a parameter and returns a Boolean value:
@@ -676,14 +659,10 @@ GROUPING takes a column name as a parameter and returns a Boolean value:
 
 If the Value of the Result Is
 
-
-
 </th>
 <th valign="top">
 
 GROUPING Returns
-
-
 
 </th>
 </tr>
@@ -692,14 +671,10 @@ GROUPING Returns
 
 NULL created by a CUBE operation
 
-
-
 </td>
 <td valign="top">
 
 1 \(TRUE\)
-
-
 
 </td>
 </tr>
@@ -708,14 +683,10 @@ NULL created by a CUBE operation
 
 NULL indicating the row is a subtotal
 
-
-
 </td>
 <td valign="top">
 
 1 \(TRUE\)
-
-
 
 </td>
 </tr>
@@ -724,14 +695,10 @@ NULL indicating the row is a subtotal
 
 not created by a CUBE operation
 
-
-
 </td>
 <td valign="top">
 
 0 \(FALSE\)
-
-
 
 </td>
 </tr>
@@ -740,14 +707,10 @@ not created by a CUBE operation
 
 a stored NULL
 
-
-
 </td>
 <td valign="top">
 
 0 \(FALSE\)
-
-
 
 </td>
 </tr>
@@ -781,12 +744,12 @@ In these circumstances, subtle differences between the semantics of SQL Anywhere
 
 ## Privileges
 
+To SELECT from tables, views, and materialized views requires one of:
 
-
-### 
-
-> ### Restriction:  
-> This statement can't be run from the SQL console using the REMOTE\_EXECUTE procedure. It can only be included as part of the definition when creating a data lake Relational Engine view or when querying using the REMOTE\_EXECUTE\_QUERY procedure.
+-   You own the object
+-   SELECT ANY TABLE system privilege
+-   SELECT object-level privilege on the object
+-   SELECT object-level privilege on the schema containing the object if the schema is owned by another user.
 
 
 
@@ -822,7 +785,7 @@ In these circumstances, subtle differences between the semantics of SQL Anywhere
       LEFT OUTER JOIN SalesOrderItems
       LEFT OUTER JOIN Products
     GROUP BY CompanyName
-    ORDER BY VALUE DESC
+    ORDER BY VALUE DESC;
     ```
 
 -   The following example lists the number of employees:
@@ -850,7 +813,7 @@ In these circumstances, subtle differences between the semantics of SQL Anywhere
 
     ```
     SELECT * INTO #TableTemp FROM lineitem 
-    WHERE l_discount < 0.5
+    WHERE l_discount < 0.5;
     ```
 
 -   The following example returns information about the employee that appears first when employees are sorted by last name:
@@ -891,7 +854,7 @@ In these circumstances, subtle differences between the semantics of SQL Anywhere
 
 [CREATE VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-4d41128.md "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.")
 
-[LOAD TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](load-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-97f011f.md "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or a Google Cloud Storage) or from data lake Files containers (the managed object store).")
+[LOAD TABLE Statement \(Non-Parquet Formats\) for Data Lake Relational Engine \(SAP HANA DB-Managed\)](load-table-statement-non-parquet-formats-for-data-lake-relational-engine-sap-hana-db-mana-97f011f.md "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or Google Cloud Storage) or from data lake Files containers (the managed object store).")
 
-[SELECT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a624e72e84f210159276a39335acd358.html "Retrieves information from the database.") :arrow_upper_right:
+[SELECT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a624e72e84f210159276a39335acd358.html "Retrieves information from the database.") :arrow_upper_right:
 

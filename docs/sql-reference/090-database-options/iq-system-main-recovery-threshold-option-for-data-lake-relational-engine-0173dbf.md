@@ -6,8 +6,11 @@ Controls the amount of space reserved in IQ\_SYSTEM\_MAIN that is kept free for 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loio0173dbf933824016843aeab50948409d__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

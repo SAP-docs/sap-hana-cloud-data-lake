@@ -7,7 +7,7 @@ Ranks items in a group.
 
 
 ```
-RANK () OVER ( [ PARTITION BY ] ORDER BY <expression> [ ASC | DESC ] )
+RANK () OVER ( [ PARTITION BY ] ORDER BY <expression> [ ASC | DESC ] );
 ```
 
 
@@ -36,7 +36,7 @@ A sort specification that can be any valid expression involving a column referen
 
 <a name="loio36d411cb841f42c792858d7cab19b626__section_pnl_2m5_vrb"/>
 
-## Returns
+## Result Set
 
 INTEGER
 
@@ -97,5 +97,5 @@ Overbey            M        39300.000  2
 **Related Information**  
 
 
-[RANK Function [Analytical] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a57337e084f21015aa46b31299b91d70.html "Ranks items in a group.") :arrow_upper_right:
+[RANK Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57337e084f21015aa46b31299b91d70.html "Ranks items in a group.") :arrow_upper_right:
 

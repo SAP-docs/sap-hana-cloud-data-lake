@@ -6,19 +6,22 @@ Takes a string of values, separated by a delimiter, and returns a set of rows \(
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio8177739d6ce21014b82ebbcba7441f0b__section_p4t_vqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 sa_split_list( 
-<str>
- [, <delim>
- [, <maxlen> ] ]
-)
+   <str>
+   [, <delim>
+   [, <maxlen> ] ]
+   );
 ```
 
 
@@ -31,7 +34,7 @@ sa_split_list(
 <dl>
 <dt><b>
 
- *<str\>* 
+*<str\>* 
 
 </b></dt>
 <dd>
@@ -42,7 +45,7 @@ Use this LONG VARCHAR parameter to specify the string containing the values to b
 
 </dd><dt><b>
 
- *<delim\>* 
+*<delim\>* 
 
 </b></dt>
 <dd>
@@ -53,7 +56,7 @@ Use this optional CHAR\(10\) parameter to specify the delimiter used in *<str\>*
 
 </dd><dt><b>
 
- *<maxlen\>* 
+*<maxlen\>* 
 
 </b></dt>
 <dd>
@@ -69,7 +72,7 @@ Use this optional INTEGER parameter to specify the maximum length of the returne
 
 <a name="loio8177739d6ce21014b82ebbcba7441f0b__sa_split_list_resultset1"/>
 
-## Result Set
+## Results Set
 
 
 <table>
@@ -78,21 +81,15 @@ Use this optional INTEGER parameter to specify the maximum length of the returne
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -101,21 +98,15 @@ Description
 
 *line\_num*
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Sequential number for the row.
-
-
 
 </td>
 </tr>
@@ -124,21 +115,15 @@ Sequential number for the row.
 
 *row\_value*
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 Value from the string, truncated to *<maxlen\>* if required.
-
-
 
 </td>
 </tr>
@@ -180,7 +165,20 @@ None
 
 
 
-The following query returns a list of black colored products.
+<a name="loio8177739d6ce21014b82ebbcba7441f0b__sa_split_list_examples1"/>
+
+## Examples
+
+```
+-- Setup for the following examples
+CREATE TABLE PRODUCTS (NAME VARCHAR(15), COLOR VARCHAR(10));
+INSERT INTO PRODUCTS  VALUES ('Tee Shirt','Black');
+INSERT INTO PRODUCTS VALUES ('Baseball Cap', 'Black');
+INSERT INTO PRODUCTS VALUES ('Visor', 'Black');
+INSERT INTO PRODUCTS VALUES ('Shorts', 'Black');;
+```
+
+This example returns a list of black colored products.
 
 ```
 SELECT list( Name )
@@ -195,8 +193,6 @@ SELECT list( Name )
 
 list \(Products.Name\)
 
-
-
 </th>
 </tr>
 <tr>
@@ -204,17 +200,14 @@ list \(Products.Name\)
 
 Tee Shirt,Baseball Cap,Visor,Shorts
 
-
-
 </td>
 </tr>
 </table>
 
-In the following example, the sa\_split\_list procedure is used to return the original result set from the aggregated list.
+This example uses the sa\_split\_list system procedure to return the original result set from the aggregated list.
 
 ```
-SELECT * 
-  FROM sa_split_list( 'Tee Shirt,Baseball Cap,Visor,Shorts' );
+CALL sa_split_list( 'Tee Shirt,Baseball Cap,Visor,Shorts' );
 ```
 
 
@@ -224,14 +217,10 @@ SELECT *
 
 line\_num
 
-
-
 </th>
 <th valign="top">
 
 row\_value
-
-
 
 </th>
 </tr>
@@ -240,14 +229,10 @@ row\_value
 
 1
 
-
-
 </td>
 <td valign="top">
 
 Tee Shirt
-
-
 
 </td>
 </tr>
@@ -256,14 +241,10 @@ Tee Shirt
 
 2
 
-
-
 </td>
 <td valign="top">
 
 Baseball Cap
-
-
 
 </td>
 </tr>
@@ -272,14 +253,10 @@ Baseball Cap
 
 3
 
-
-
 </td>
 <td valign="top">
 
 Visor
-
-
 
 </td>
 </tr>
@@ -288,20 +265,16 @@ Visor
 
 4
 
-
-
 </td>
 <td valign="top">
 
 Shorts
 
-
-
 </td>
 </tr>
 </table>
 
-The following example returns a row for each word. To avoid returning rows where row\_value is an empty string, the WHERE clause must be specified.
+This example returns a row for each word. To avoid returning rows where row\_value is an empty string, the WHERE clause must be specified.
 
 ```
 SELECT *
@@ -316,14 +289,10 @@ SELECT *
 
 line\_num
 
-
-
 </th>
 <th valign="top">
 
 row\_value
-
-
 
 </th>
 </tr>
@@ -332,14 +301,10 @@ row\_value
 
 1
 
-
-
 </td>
 <td valign="top">
 
 one
-
-
 
 </td>
 </tr>
@@ -348,14 +313,10 @@ one
 
 3
 
-
-
 </td>
 <td valign="top">
 
 three
-
-
 
 </td>
 </tr>
@@ -364,14 +325,10 @@ three
 
 4
 
-
-
 </td>
 <td valign="top">
 
 four
-
-
 
 </td>
 </tr>
@@ -380,38 +337,19 @@ four
 
 6
 
-
-
 </td>
 <td valign="top">
 
 six
 
-
-
 </td>
 </tr>
 </table>
-
-In the following example, a procedure called ProductsWithColor is created. When called, the ProductsWithColor procedure uses sa\_split\_list to parse the color values specified by the user, looks in the Color column of the Products table, and returns the name, description, size, and color for each product that matches one of the user-specified colors.
-
-The result of the procedure call below is the name, description, size, and color of all products that are either white or black.
-
-```
-CREATE OR REPLACE PROCEDURE ProductsWithColor( IN color_list LONG VARCHAR )
-BEGIN
-  SELECT Name, Description, Size, Color
-  FROM Products
-  WHERE Color IN ( SELECT row_value FROM sa_split_list( color_list ) );
-END;
-
-SELECT * from ProductsWithColor( 'white,black' );
-```
 
 **Related Information**  
 
 
 [LIST Function \[Aggregate\] for Data Lake Relational Engine](../050-system-sql-functions/list-function-aggregate-for-data-lake-relational-engine-a2984e5.md "Returns a delimited list of values for every row in a group.")
 
-[sa_split_list System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/204a6c1cac354d788d94946c8e9dbe21.html "Takes a string of values, separated by a delimiter, and returns a set of rows (one row for each value).") :arrow_upper_right:
+[sa_split_list System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/204a6c1cac354d788d94946c8e9dbe21.html "Takes a string of values, separated by a delimiter, and returns a set of rows (one row for each value).") :arrow_upper_right:
 

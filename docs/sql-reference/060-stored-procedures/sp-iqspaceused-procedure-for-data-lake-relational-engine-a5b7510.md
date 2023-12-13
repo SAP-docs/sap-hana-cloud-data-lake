@@ -6,10 +6,13 @@ Shows information about space available and space used in the data lake Relation
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5b7510984f2101596dee9f059949bcd__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -28,7 +31,7 @@ sp_iqspaceused (out mainKB            unsigned bigint,
 
 <a name="loioa5b7510984f2101596dee9f059949bcd__section_pcj_xzn_nbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -37,14 +40,10 @@ sp_iqspaceused (out mainKB            unsigned bigint,
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -53,14 +52,10 @@ Description
 
 mainKB
 
-
-
 </td>
 <td valign="top">
 
 The total data lake Relational Engine main store space, in kilobytes.
-
-
 
 </td>
 </tr>
@@ -69,14 +64,10 @@ The total data lake Relational Engine main store space, in kilobytes.
 
 mainKBUsed
 
-
-
 </td>
 <td valign="top">
 
 The number of kilobytes of data lake Relational Engine main store space used by the database. Secondary multiplex nodes return '\(Null\)'.
-
-
 
 </td>
 </tr>
@@ -85,14 +76,10 @@ The number of kilobytes of data lake Relational Engine main store space used by 
 
 tempKB
 
-
-
 </td>
 <td valign="top">
 
 The total data lake Relational Engine temporary store space, in kilobytes.
-
-
 
 </td>
 </tr>
@@ -101,14 +88,10 @@ The total data lake Relational Engine temporary store space, in kilobytes.
 
 tempKBUsed
 
-
-
 </td>
 <td valign="top">
 
 The number of kilobytes of total data lake Relational Engine temporary store space in use by the database.
-
-
 
 </td>
 </tr>
@@ -117,14 +100,10 @@ The number of kilobytes of total data lake Relational Engine temporary store spa
 
 shTempTotalKB
 
-
-
 </td>
 <td valign="top">
 
 The total data lake Relational Engine global shared temporary store space, in kilobytes.
-
-
 
 </td>
 </tr>
@@ -133,14 +112,10 @@ The total data lake Relational Engine global shared temporary store space, in ki
 
 shTempLocalKB
 
-
-
 </td>
 <td valign="top">
 
 The total data lake Relational Engine local shared temporary store space, in kilobytes.
-
-
 
 </td>
 </tr>
@@ -149,14 +124,10 @@ The total data lake Relational Engine local shared temporary store space, in kil
 
 shTempLocalKBUsed
 
-
-
 </td>
 <td valign="top">
 
 The number of kilobytes of data lake Relational Engine local shared temporary store space in use by the database.
-
-
 
 </td>
 </tr>
@@ -195,12 +166,12 @@ None
 
 <a name="loioa5b7510984f2101596dee9f059949bcd__iq_refbb_1768"/>
 
-## Example
+## Examples
 
 sp\_iqspaceused requires seven output parameters. This example creates a user-defined stored procedure myspace that declares the seven output parameters, then calls sp\_iqspaceused:
 
 ```
-  create or replace procedure dbo.myspace()   
+  create or replace procedure dbo.myspace();   
 begin   
      declare mt unsigned bigint;   
      declare mu unsigned bigint;   
@@ -249,6 +220,6 @@ end
 To display the output of sp\_iqspaceused, execute myspace:
 
 ```
-myspace
+myspace;
 ```
 

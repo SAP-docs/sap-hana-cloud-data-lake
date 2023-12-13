@@ -6,10 +6,13 @@ Presents group information from `ISYSIQIDX` in a readable format. Each row in th
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5ced8e284f21015ab2ff0b760c385d2__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,21 +26,15 @@ Presents group information from `ISYSIQIDX` in a readable format. Each row in th
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Column Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,21 +43,15 @@ Description
 
 table\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The table number uniquely identifies the table to which this index applies.
-
-
 
 </td>
 </tr>
@@ -69,21 +60,15 @@ The table number uniquely identifies the table to which this index applies.
 
 index\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Each index for one particular table is assigned a unique index number.
-
-
 
 </td>
 </tr>
@@ -92,21 +77,15 @@ Each index for one particular table is assigned a unique index number.
 
 index\_type
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(4\)
 
-
-
 </td>
 <td valign="top">
 
 Index type.
-
-
 
 </td>
 </tr>
@@ -115,21 +94,15 @@ Index type.
 
 index\_owner
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(4\)
 
-
-
 </td>
 <td valign="top">
 
 Index owner.
-
-
 
 </td>
 </tr>
@@ -138,21 +111,15 @@ Index owner.
 
 max\_key
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For internal use.
-
-
 
 </td>
 </tr>
@@ -161,21 +128,15 @@ For internal use.
 
 identity\_location
 
-
-
 </td>
 <td valign="top">
 
 HS\_VDORECID
 
-
-
 </td>
 <td valign="top">
 
 For internal use.
-
-
 
 </td>
 </tr>
@@ -184,21 +145,15 @@ For internal use.
 
 identity\_size
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For internal use.
-
-
 
 </td>
 </tr>
@@ -207,21 +162,15 @@ For internal use.
 
 identity\_location\_size
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For internal use.
-
-
 
 </td>
 </tr>
@@ -230,21 +179,15 @@ For internal use.
 
 link\_index\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For internal use.
-
-
 
 </td>
 </tr>
@@ -253,21 +196,15 @@ For internal use.
 
 delimited\_by
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(1024\)
 
-
-
 </td>
 <td valign="top">
 
 \(WD indexes only\) List of separators used to parse a column’s string into the words to be stored in that column’s WD index.
-
-
 
 </td>
 </tr>
@@ -276,21 +213,15 @@ VARCHAR\(1024\)
 
 limit
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 \(WD indexes only\) Maximum word length for WD index.
-
-
 
 </td>
 </tr>
@@ -301,14 +232,14 @@ UNSIGNED INT
 ## Constraints on Underlying System Table
 
 ```
-Primary key (table_id, index_id)
+Primary key (table_id, index_id);
 ```
 
 ```
-Foreign key (table_id, index_id) references SYS.ISYIDX
+Foreign key (table_id, index_id) references SYS.ISYIDX;
 ```
 
 ```
-Foreign key (link_table_id, link_index_id, table_id, index_id) references SYS.ISYSIDX
+Foreign key (link_table_id, link_index_id, table_id, index_id) references SYS.ISYSIDX;
 ```
 

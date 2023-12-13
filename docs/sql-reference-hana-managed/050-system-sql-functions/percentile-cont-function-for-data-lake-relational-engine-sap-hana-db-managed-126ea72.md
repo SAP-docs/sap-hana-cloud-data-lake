@@ -13,7 +13,7 @@ Given a percentile, returns the value that corresponds to that percentile. Assum
 
 ```
 PERCENTILE_CONT ( <expression1> )
-WITHIN GROUP ( ORDER BY <expression2> [ ASC | DESC ] )
+WITHIN GROUP ( ORDER BY <expression2> [ ASC | DESC ] );
 ```
 
 
@@ -125,5 +125,5 @@ South            470
 **Related Information**  
 
 
-[PERCENTILE_CONT Function [Analytical] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a56d9fa784f21015b6c8d94588153331.html "Given a percentile, returns the value that corresponds to that percentile. Assumes a continuous distribution data model.") :arrow_upper_right:
+[PERCENTILE_CONT Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a56d9fa784f21015b6c8d94588153331.html "Given a percentile, returns the value that corresponds to that percentile. Assumes a continuous distribution data model.") :arrow_upper_right:
 

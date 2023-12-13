@@ -7,7 +7,7 @@ Returns the ceiling \(smallest integer not less than\) of a number.
 
 
 ```
-CEILING ( <numeric-expression> )
+CEILING ( <numeric-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The number that has the ceiling to be calculated.
 
 <a name="loio2201fadee98e4d80a4952cdf3e105c65__section_krc_xtl_srb"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -65,25 +65,25 @@ DOUBLE
 -   The following statement returns the value 60.00000:
 
     ```
-    SELECT CEILING( 59.84567 ) FROM iq_dummy
+    SELECT CEILING( 59.84567 ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 123:
 
     ```
-    SELECT CEILING( 123 ) FROM iq_dummy
+    SELECT CEILING( 123 ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 124.00:
 
     ```
-    SELECT CEILING( 123.45 ) FROM iq_dummy
+    SELECT CEILING( 123.45 ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value -123.00:
 
     ```
-    SELECT CEILING( -123.45 ) FROM iq_dummy
+    SELECT CEILING( -123.45 ) FROM iq_dummy;
     ```
 
 
@@ -92,5 +92,5 @@ DOUBLE
 
 [CEIL Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](ceil-function-for-data-lake-relational-engine-sap-hana-db-managed-cf884ae.md "Returns the smallest integer greater than or equal to the specified expression.")
 
-[CEILING Function [Numeric] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a53acd1c84f21015822dd5e02d6dc9cc.html "Returns the ceiling (smallest integer not less than) of a number.") :arrow_upper_right:
+[CEILING Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a53acd1c84f21015822dd5e02d6dc9cc.html "Returns the ceiling (smallest integer not less than) of a number.") :arrow_upper_right:
 

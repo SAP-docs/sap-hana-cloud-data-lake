@@ -6,8 +6,11 @@ Maximum percentage of a user’s temp memory that a persistent bit-vector object
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa62e081484f21015a351a621970a27ae__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

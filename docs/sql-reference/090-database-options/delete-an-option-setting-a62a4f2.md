@@ -32,22 +32,16 @@ SELECT * FROM SYSOPTIONS ORDER BY 2;
 
 User Name
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Option
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
 Setting
 
-
-
 </th>
 </tr>
 <tr>
@@ -55,38 +49,28 @@ Setting
 
 `PUBLIC`
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 a\_mistyped\_name
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 ON
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top" rowspan="1">
 
 `PUBLIC`
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 Abort\_On\_Error\_File
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
@@ -98,22 +82,16 @@ Abort\_On\_Error\_File
 <td valign="top" rowspan="1">
 
 `PUBLIC`
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 Abort\_On\_Error\_Line
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 0
-
-
 
 </td>
 </tr>
@@ -122,21 +100,15 @@ Abort\_On\_Error\_Line
 
 `PUBLIC`
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Abort\_On\_Error\_Number
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 0
-
-
 
 </td>
 </tr>
@@ -144,8 +116,6 @@ Abort\_On\_Error\_Number
 <td valign="top" rowspan="1">
 
 ...
-
-
 
 </td>
 <td valign="top" rowspan="1">
@@ -175,22 +145,16 @@ SELECT * FROM SYSOPTIONS ORDER BY 2;
 
 User Name
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Option
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
 Setting
 
-
-
 </th>
 </tr>
 <tr>
@@ -198,14 +162,10 @@ Setting
 
 `PUBLIC`
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Abort\_On\_Error\_File
-
-
 
 </td>
 <td valign="top" rowspan="1">
@@ -218,22 +178,16 @@ Abort\_On\_Error\_File
 <td valign="top" rowspan="1">
 
 `PUBLIC`
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 Abort\_On\_Error\_Line
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 0
-
-
 
 </td>
 </tr>
@@ -242,21 +196,15 @@ Abort\_On\_Error\_Line
 
 `PUBLIC`
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Abort\_On\_Error\_Number
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 0
-
-
 
 </td>
 </tr>
@@ -264,8 +212,6 @@ Abort\_On\_Error\_Number
 <td valign="top" rowspan="1">
 
 ...
-
-
 
 </td>
 <td valign="top" rowspan="1">

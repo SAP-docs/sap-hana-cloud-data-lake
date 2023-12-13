@@ -8,7 +8,7 @@ Distributes query results into a specified number of buckets and assigns the buc
 
 ```
 NTILE ( <expression1> )
-OVER ( ORDER BY <expression2> [ ASC | DESC ] )
+OVER ( ORDER BY <expression2> [ ASC | DESC ] );
 ```
 
 
@@ -117,5 +117,5 @@ To find the top 10% of car dealers by sales, you specify `NTILE(10)` in the exam
 
 [YEAR Function \[Date and Time\] for Data Lake Relational Engine](year-function-date-and-time-for-data-lake-relational-engine-a591eb9.md "Returns a 4-digit number corresponding to the year of the given date/time.")
 
-[NTILE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/97741f155cc24e2ea035db70a29da3b0.html "Distributes query results into a specified number of buckets and assigns the bucket number to each row in the bucket.") :arrow_upper_right:
+[NTILE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/97741f155cc24e2ea035db70a29da3b0.html "Distributes query results into a specified number of buckets and assigns the bucket number to each row in the bucket.") :arrow_upper_right:
 

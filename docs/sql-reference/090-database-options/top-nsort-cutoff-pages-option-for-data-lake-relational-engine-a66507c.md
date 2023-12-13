@@ -6,8 +6,11 @@ Sets the result size threshold for TOP N algorithm selection.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa66507c784f21015a20e99f6a38ea85c__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

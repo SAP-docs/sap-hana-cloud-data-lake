@@ -6,16 +6,19 @@ Retrieves information about variables within a descriptor area, or retrieves act
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61ef02b84f21015b3c49fa3b77706f3__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 GET DESCRIPTOR <descriptor-name>
-    { <...hostvar> = COUNT } | VALUE <n> <assignment> [,…] }
+    { <...hostvar> = COUNT } | VALUE <n> <assignment> [,…] };
 ```
 
 ```
@@ -28,7 +31,7 @@ GET DESCRIPTOR <descriptor-name>
    | INDICATOR 
    | NAME 
    | NULLABLE 
-   | RETURNED_LENGTH }
+   | RETURNED_LENGTH };
 ```
 
 

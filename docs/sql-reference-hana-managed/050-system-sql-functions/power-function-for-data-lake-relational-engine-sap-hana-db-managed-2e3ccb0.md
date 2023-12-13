@@ -7,7 +7,7 @@ Calculates one number raised to the power of another.
 
 
 ```
-POWER ( <numeric-expression1>, <numeric-expression2> )
+POWER ( <numeric-expression1>, <numeric-expression2> );
 ```
 
 
@@ -47,7 +47,7 @@ The exponent.
 
 <a name="loio2e3ccb0baaf948029be3400b9c368722__section_j4s_fpn_vrb"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -76,11 +76,11 @@ Raises *<numeric-expression1\>* to the power *<numeric-expresson2\>*.
 The following statement returns the value 64:
 
 ```
-SELECT Power( 2, 6 ) FROM iq_dummy
+SELECT Power( 2, 6 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[POWER Function [Numeric] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a56f22b284f210159c928a9db0c5907e.html "Calculates one number raised to the power of another.") :arrow_upper_right:
+[POWER Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a56f22b284f210159c928a9db0c5907e.html "Calculates one number raised to the power of another.") :arrow_upper_right:
 

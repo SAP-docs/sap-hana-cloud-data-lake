@@ -106,22 +106,16 @@ Access to, and administration of, database-scope variables requires system privi
 
 Action
 
-
-
 </th>
 <th valign="top">
 
 Owned by
-
-
 
 </th>
 <th valign="top">
 
 Privilege Required
 
-
-
 </th>
 </tr>
 <tr>
@@ -129,21 +123,15 @@ Privilege Required
 
 Create a database-scope variable
 
-
-
 </td>
 <td valign="top">
 
 self
 
-
-
 </td>
 <td valign="top">
 
 MANAGE ANY DATABASE VARIABLE
-
-
 
 </td>
 </tr>
@@ -151,22 +139,16 @@ MANAGE ANY DATABASE VARIABLE
 <td valign="top">
 
 Create a database-scope variable
-
-
 
 </td>
 <td valign="top">
 
 another user
 
-
-
 </td>
 <td valign="top">
 
 MANAGE ANY DATABASE VARIABLE
-
-
 
 </td>
 </tr>
@@ -175,21 +157,15 @@ MANAGE ANY DATABASE VARIABLE
 
 Create a database-scope variable
 
-
-
 </td>
 <td valign="top">
 
 PUBLIC
 
-
-
 </td>
 <td valign="top">
 
 MANAGE ANY DATABASE VARIABLE
-
-
 
 </td>
 </tr>
@@ -198,44 +174,32 @@ MANAGE ANY DATABASE VARIABLE
 
 Update a database-scope variable
 
-
-
 </td>
 <td valign="top">
 
 self
-
-
 
 </td>
 <td valign="top">
 
 none required
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Update a database-scope variable
-
-
 
 </td>
 <td valign="top">
 
 another user
 
-
-
 </td>
 <td valign="top">
 
 not allowed
-
-
 
 </td>
 </tr>
@@ -244,22 +208,16 @@ not allowed
 
 Update a database-scope variable
 
-
-
 </td>
 <td valign="top">
 
 PUBLIC
-
-
 
 </td>
 <td valign="top">
 
 UPDATE PUBLIC DATABASE VARIABLE
 
-
-
 </td>
 </tr>
 <tr>
@@ -267,22 +225,16 @@ UPDATE PUBLIC DATABASE VARIABLE
 
 Select from a database-scope variable
 
-
-
 </td>
 <td valign="top">
 
 self
-
-
 
 </td>
 <td valign="top">
 
 none
 
-
-
 </td>
 </tr>
 <tr>
@@ -290,22 +242,16 @@ none
 
 Select from a database-scope variable
 
-
-
 </td>
 <td valign="top">
 
 another user
-
-
 
 </td>
 <td valign="top">
 
 not allowed
 
-
-
 </td>
 </tr>
 <tr>
@@ -313,44 +259,32 @@ not allowed
 
 Select from a database-scope variable
 
-
-
 </td>
 <td valign="top">
 
 PUBLIC
-
-
 
 </td>
 <td valign="top">
 
 SELECT PUBLIC DATABASE VARIABLE
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Drop a database-scope variable
-
-
 
 </td>
 <td valign="top">
 
 self
 
-
-
 </td>
 <td valign="top">
 
 none required
-
-
 
 </td>
 </tr>
@@ -358,22 +292,16 @@ none required
 <td valign="top">
 
 Drop a database-scope variable
-
-
 
 </td>
 <td valign="top">
 
 another user
 
-
-
 </td>
 <td valign="top">
 
 MANAGE ANY DATABASE VARIABLE
-
-
 
 </td>
 </tr>
@@ -382,21 +310,15 @@ MANAGE ANY DATABASE VARIABLE
 
 Drop a database-scope variable
 
-
-
 </td>
 <td valign="top">
 
 PUBLIC
 
-
-
 </td>
 <td valign="top">
 
 MANAGE ANY DATABASE VARIABLE
-
-
 
 </td>
 </tr>

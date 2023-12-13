@@ -6,16 +6,19 @@ Drops an external login from the data lake Relational Engine system tables.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61caee684f21015b95df0220f3f0a38__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 DROP EXTERNLOGIN <login-name> 
-   TO <remote-server>
+   TO <remote-server>;
 ```
 
 
@@ -108,7 +111,7 @@ Automatic commit
 The following example drops the login `dba` from the remote database `mydb1`:
 
 ```
-DROP EXTERNLOGIN dba TO mydb1
+DROP EXTERNLOGIN dba TO mydb1;
 ```
 
 **Related Information**  

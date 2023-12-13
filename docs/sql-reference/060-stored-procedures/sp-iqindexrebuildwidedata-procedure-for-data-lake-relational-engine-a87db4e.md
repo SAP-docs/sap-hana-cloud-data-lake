@@ -6,15 +6,18 @@ Identifies wide columns in migrated databases that you need to rebuild before th
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa87db4e784f2101596f1b7355fcd2137__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqindexrebuildwidedata [<table.name>]
+sp_iqindexrebuildwidedata [<table.name>];
 ```
 
 
@@ -66,12 +69,12 @@ None
 
 
 
-## Example
+## Examples
 
 This example generates wide-column rebuild statements for table T2:
 
 ```
-sp_iqindexrebuildwidedata T2
+sp_iqindexrebuildwidedata T2;
 ```
 
 ```

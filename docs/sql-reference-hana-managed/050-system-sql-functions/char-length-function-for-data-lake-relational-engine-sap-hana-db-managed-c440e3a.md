@@ -7,7 +7,7 @@ Returns the number of characters in a string.
 
 
 ```
-CHAR_LENGTH ( <string-expression> )
+CHAR_LENGTH ( <string-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The string that has the length to be calculated.
 
 <a name="loioc440e3a7627544838259dcfab11a5bd1__section_e1f_1tl_srb"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -73,11 +73,11 @@ The CHAR\_LENGTH function supports LONG VARCHAR columns and LONG VARCHAR variabl
 The following statement returns the value 8:
 
 ```
-SELECT CHAR_LENGTH( 'Chemical' ) FROM iq_dummy
+SELECT CHAR_LENGTH( 'Chemical' ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[CHAR_LENGTH Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a53bd3d384f21015bcf88da636a1a768.html "Returns the number of characters in a string.") :arrow_upper_right:
+[CHAR_LENGTH Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a53bd3d384f21015bcf88da636a1a768.html "Returns the number of characters in a string.") :arrow_upper_right:
 

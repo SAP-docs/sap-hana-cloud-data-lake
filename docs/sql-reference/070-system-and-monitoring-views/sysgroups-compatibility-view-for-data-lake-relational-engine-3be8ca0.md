@@ -6,10 +6,13 @@ There is one row in the SYSGROUPS view for each member of each group. This view 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be8ca046c5f1014abdfdbe04c7c58ea__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -25,6 +28,6 @@ ALTER VIEW "SYS"."SYSGROUPS"( group_name,
     or u.user_id <= 2147483648) and(
     g.user_type = (0x02|0x04|0x08)
     or g.user_name in( 'SYS','PUBLIC','dbo','diagnostics',
-    'rs_systabgroup','SA_DEBUG','SYS_SPATIAL_ADMIN_ROLE' ) )
+    'rs_systabgroup','SA_DEBUG','SYS_SPATIAL_ADMIN_ROLE' ) );
 ```
 

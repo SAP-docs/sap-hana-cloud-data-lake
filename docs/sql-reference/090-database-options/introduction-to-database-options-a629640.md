@@ -13,7 +13,7 @@ You set options with the <code><code>SET OPTION</code></code> statement, which h
 
 ```
 SET [ EXISTING ] [ TEMPORARY ] OPTION
-... [ <userid>. | PUBLIC. ]<option-name> = [ <option-value> ]
+... [ <userid>. | PUBLIC. ]<option-name> = [ <option-value> ];
 ```
 
 Specify a user ID or role name to set the option only for that user or role. Every user belongs to the `PUBLIC` role. If no user ID or role is specified, the option change is applied to the currently logged on user ID that issued the `SET OPTION` statement.
@@ -21,7 +21,7 @@ Specify a user ID or role name to set the option only for that user or role. Eve
 For example, this statement applies a change to the `PUBLIC` user ID, a role to which all users belong:
 
 ```
-SET OPTION Public.login_mode = standard
+SET OPTION Public.login_mode = standard;
 ```
 
 > ### Note:  

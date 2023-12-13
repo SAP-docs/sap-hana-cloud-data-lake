@@ -6,15 +6,18 @@ Maps one or more external identities from a JWT provider to a user in the data l
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio582d22d53e994855a9c7fa7b9a3fda25__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-GRANT JWT LOGIN TO <external_identity> FOR PROVIDER <jwt_provider_name> AS USER <userid>
+GRANT JWT LOGIN TO <external_identity> FOR PROVIDER <jwt_provider_name> AS USER <userid>;
 ```
 
 
@@ -40,7 +43,7 @@ GRANT JWT LOGIN TO <external_identity> FOR PROVIDER <jwt_provider_name> AS USER 
 Specifies the external identity to map to the data lake Relational Engine user.
 
 ```
-<external_identity> ::= <simple_identifier>
+<external_identity> ::= <simple_identifier>;
 ```
 
 
@@ -55,7 +58,7 @@ Specifies the external identity to map to the data lake Relational Engine user.
 Specifies the JWT provider.
 
 ```
-<jwt_provider_name> ::= <simple_identifier>
+<jwt_provider_name> ::= <simple_identifier>;
 ```
 
 
@@ -70,7 +73,7 @@ Specifies the JWT provider.
 Specifies the data lake Relational Engine user to which the external identities are mapped.
 
 ```
-<userid> ::= <simple_identifier>
+<userid> ::= <simple_identifier>;
 ```
 
 
@@ -95,7 +98,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 ## Example
 
 ```
-GRANT JWT LOGIN TO external_user FOR PROVIDER my_jwt_provider AS USER HDLUSER
+GRANT JWT LOGIN TO external_user FOR PROVIDER my_jwt_provider AS USER HDLUSER;
 ```
 
 **Related Information**  

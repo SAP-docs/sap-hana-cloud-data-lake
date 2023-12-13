@@ -9,7 +9,7 @@ Returns the number of minutes since an arbitrary date and time, the number of wh
 ```
 MINUTES ( <datetime-expression> 
 | <datetime-expression>, <datetime-expression>
-| <datetime-expression>, <integer-expression> )
+| <datetime-expression>, <integer-expression> );
 ```
 
 
@@ -49,7 +49,7 @@ The number of minutes to be added to the *<datetime-expression\>*. If *<integer-
 
 <a name="loio488cdf45547747868ff78e55426175d9__section_nr2_3gn_vrb"/>
 
-## Returns
+## Result Set
 
 -   INT
 -   TIMESTAMP
@@ -79,26 +79,26 @@ The second syntax returns the number of whole minutes from the first date/time t
 -   Returns the value 1051125487:
 
     ```
-    SELECT MINUTES( '1998-07-13 06:07:12' ) FROM iq_dummy
+    SELECT MINUTES( '1998-07-13 06:07:12' ) FROM iq_dummy;
     ```
 
 -   Returns the value 240, to signify the difference between the two times:
 
     ```
     SELECT MINUTES( '1999-07-13 06:07:12',
-    	'1999-07-13 10:07:12' ) FROM iq_dummy
+    	'1999-07-13 10:07:12' ) FROM iq_dummy;
     ```
 
 -   Returns the datetime value 1999-05-12 21:10:07.000:
 
     ```
     SELECT MINUTES( CAST( '1999-05-12 21:05:07'
-    AS DATETIME ), 5) FROM iq_dummy
+    AS DATETIME ), 5) FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[MINUTES Function [Date and Time] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a5648d4484f21015975efebd7ac03399.html "Returns the number of minutes since an arbitrary date and time, the number of whole minutes between two specified times, or adds the specified integer-expression number of minutes to a time.") :arrow_upper_right:
+[MINUTES Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5648d4484f21015975efebd7ac03399.html "Returns the number of minutes since an arbitrary date and time, the number of whole minutes between two specified times, or adds the specified integer-expression number of minutes to a time.") :arrow_upper_right:
 

@@ -7,7 +7,7 @@ Returns a number indicating the quarter of the year from the supplied date expre
 
 
 ```
-QUARTER( <date-expression> )
+QUARTER( <date-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ A date.
 
 <a name="loioa571b27b84f21015b649cee091ad3bd6__QUARTER_returns1"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -55,14 +55,10 @@ This table lists the dates in the quarters of the year. Function assumes as star
 
 Quarter
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Period \(Inclusive\)
-
-
 
 </th>
 </tr>
@@ -71,14 +67,10 @@ Period \(Inclusive\)
 
 1
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 January 1 to March 31
-
-
 
 </td>
 </tr>
@@ -87,14 +79,10 @@ January 1 to March 31
 
 2
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 April 1 to June 30
-
-
 
 </td>
 </tr>
@@ -103,14 +91,10 @@ April 1 to June 30
 
 3
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 July 1 to September 30
-
-
 
 </td>
 </tr>
@@ -119,14 +103,10 @@ July 1 to September 30
 
 4
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 October 1 to December 31
-
-
 
 </td>
 </tr>
@@ -150,7 +130,7 @@ October 1 to December 31
 With the `DATE_ORDER` option set to the default of *<ymd\>*, the following statement returns the value 2:
 
 ```
-SELECT QUARTER ( '1987/05/02' ) FROM iq_dummy
+SELECT QUARTER ( '1987/05/02' ) FROM iq_dummy;
 ```
 
 **Related Information**  
@@ -158,5 +138,5 @@ SELECT QUARTER ( '1987/05/02' ) FROM iq_dummy
 
 [QUARTERSTR Function \[Date and Time\] for Data Lake Relational Engine](quarterstr-function-date-and-time-for-data-lake-relational-engine-8fbd6b7.md "Returns a number indicating the quarter of the year from the supplied date expression and quarter start month.")
 
-[QUARTER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/57330a53cc29480ebf71c3bc97486052.html "Returns a number indicating the quarter of the year from the supplied date expression.") :arrow_upper_right:
+[QUARTER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/57330a53cc29480ebf71c3bc97486052.html "Returns a number indicating the quarter of the year from the supplied date expression.") :arrow_upper_right:
 

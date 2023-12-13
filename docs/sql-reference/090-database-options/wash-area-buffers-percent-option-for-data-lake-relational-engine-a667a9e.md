@@ -6,8 +6,11 @@ Specifies the percentage of the buffer caches above the wash marker.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa667a9e684f21015a87fa925d061b800__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

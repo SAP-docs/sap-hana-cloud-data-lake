@@ -6,8 +6,11 @@ Controls how conservative the optimizer’s join result estimates are in unusual
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63b556984f21015b722b43d1bfa98ce__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

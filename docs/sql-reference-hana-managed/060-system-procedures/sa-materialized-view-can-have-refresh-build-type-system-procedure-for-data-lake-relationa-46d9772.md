@@ -6,19 +6,21 @@ Checks whether the materialized view supports the specified refresh and build ty
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Running Procedures](remote-execute-usage-examples-for-running-procedures-3e7f86d.md) for more information.
+<a name="loio46d97724fd354bb68d1c4081bd2576b0__section_gz5_gcf_pzb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using SAP HANA database REMOTE\_EXECUTE\_QUERY.
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 sa_materialized_view_can_have_refresh_build_type(
-   <refresh_type>, <build_type>, 
-   <view_name>, { <owner_name> | <schema_name> } )
+   '<refresh-type>', '<build-type>', 
+   '<view_name>', '<schema_name>' );
 ```
 
 
@@ -76,7 +78,7 @@ Specifies the owner of the materialized
 
 <a name="loio46d97724fd354bb68d1c4081bd2576b0__section_m1k_4hd_bwb"/>
 
-## Results Set
+## Result Set
 
 
 <table>
@@ -85,21 +87,15 @@ Specifies the owner of the materialized
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -108,21 +104,15 @@ Description
 
 SQLStateVal
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(6\)
 
-
-
 </td>
 <td valign="top">
 
 The SQLSTATE returned.
-
-
 
 </td>
 </tr>
@@ -131,21 +121,15 @@ The SQLSTATE returned.
 
 ErrorMessage
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The error message corresponding to the SQLSTATE.
-
-
 
 </td>
 </tr>
@@ -159,24 +143,96 @@ The error message corresponding to the SQLSTATE.
 
 This procedure returns a table with a list of errors that prevents the specified materialized view from being altered with the specified *<refresh\_type\>* and *<build\_type\>* values.
 
-For example, calling the procedure with the parameters A, I, MV1, HDLAMIN checks whether the materialized view MV1 owned by HDLADMIN can be altered to do an automatic \(A\), incremental \(I\) refresh.
-
-```
-sa_materialized_view_can_have_refresh_build_type('A', 'I', 'MV1', 'hdladmin')
-```
-
-If the definition does not support the refresh and build type, the procedure returns the relevant errors in a table.
 
 
-
-<a name="loio46d97724fd354bb68d1c4081bd2576b0__section_mth_lhd_bwb"/>
+<a name="loio46d97724fd354bb68d1c4081bd2576b0__section_lqh_ky1_1yb"/>
 
 ## Privileges
 
-Requires one of:
 
--   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+### 
+
+The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
+
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using REMOTE\_EXECUTE\_QUERY:
+
+</b></dt>
+<dd>
+
+Requires the REMOTE EXECUTE privilege on the remote source *<hana\_relational\_container\_schema\>*\_SOURCE.
+
+-   See [REMOTE\_EXECUTE\_QUERY Guidance and Examples for Running Stored Procedures](remote-execute-query-guidance-and-examples-for-running-stored-procedures-3e7f86d.md).
+
+
+
+
+</dd><dt><b>
+
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+Requires all of the following:
+
+-   SELECT object-level privilege on the view and its underlying tables
+-   SELECT object-level privilege on the schema of the materialized view and its underlying tables
+
+
+
+</dd>
+</dl>
+
+
+
+<a name="loio46d97724fd354bb68d1c4081bd2576b0__section_e42_1g4_jzb"/>
+
+## Examples
+
+```
+-- Setup for the following examples:
+CREATE TABLE BAR (C1 INT, C2 INT, C3 VARCHAR(10));
+CREATE MATERIALIZED VIEW MV_BAR1 AS SELECT C1, C2, C3 FROM BAR AUTO FULL REFRESH;
+```
+
+This example checks to see if materialized view MV\_BAR1 supports an automatic \(A\), incremental \(I\) refresh. Since this definition does not support this refresh and build type, the procedure returns the relevant errors in a table.
+
+```
+CALL SA_MATERIALIZED_VIEW_CAN_HAVE_REFRESH_BUILD_TYPE ('A', 'I', 'MV1', 'hdladmin');
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+SQLStateVal
+
+</th>
+<th valign="top">
+
+ErrorMessage
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+42WCA
+
+</td>
+<td valign="top">
+
+The materialized view mv1 cannot be changed to incremental or immediate because it does not have a unique index on non-nullable columns.
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 
@@ -191,5 +247,5 @@ Requires one of:
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-817277b.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_materialized_view_can_have_refresh_build_type System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/7d2d2da5be7e45eaa465aa7f13cde013.html "Checks whether the materialized view supports the specified refresh and build type properties.") :arrow_upper_right:
+[sa_materialized_view_can_have_refresh_build_type System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/7d2d2da5be7e45eaa465aa7f13cde013.html "Checks whether the materialized view supports the specified refresh and build type properties.") :arrow_upper_right:
 

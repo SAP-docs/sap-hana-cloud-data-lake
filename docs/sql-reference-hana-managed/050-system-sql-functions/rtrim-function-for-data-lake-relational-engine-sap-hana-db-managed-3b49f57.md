@@ -7,7 +7,7 @@ Returns a string, trimmed of all the trailing characters present in the trim cha
 
 
 ```
-RTRIM ( <string-expression>, [ <trim_character_set> ] )
+RTRIM ( <string-expression>, [ <trim_character_set> ] );
 ```
 
 
@@ -47,7 +47,7 @@ The set of characters to use for trim.
 
 <a name="loio3b49f57802c0438a98d16f1b572609ac__section_fyd_pqt_vrb"/>
 
-## Returns
+## Result Set
 
 Trimmed string.
 
@@ -76,11 +76,11 @@ If trim character set is not specified, all training spaces in the string expres
 The following statement removes all trailing `a` and `b` characters from the given string and returns the value `babababAabend`.
 
 ```
-SELECT RTRIM ('babababAabendbababab','ab') "rtrim" FROM iq_dummy
+SELECT RTRIM ('babababAabendbababab','ab') "rtrim" FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[RTRIM Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a57d411084f21015969acd7d63bcc34c.html "Returns a string, trimmed of all the trailing characters present in the trim character set.") :arrow_upper_right:
+[RTRIM Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57d411084f21015969acd7d63bcc34c.html "Returns a string, trimmed of all the trailing characters present in the trim character set.") :arrow_upper_right:
 

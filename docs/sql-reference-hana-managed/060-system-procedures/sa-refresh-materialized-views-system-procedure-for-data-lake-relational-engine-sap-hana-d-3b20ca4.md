@@ -6,17 +6,21 @@ Initializes all materialized views that are in an uninitialized state.
 
 
 
+<a name="loio3b20ca4caa7e4ecb9000e15b95d23644__section_dh4_3db_1yb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+
 > ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Running Procedures](remote-execute-usage-examples-for-running-procedures-3e7f86d.md) for more information.
+> This syntax cannot be run when connected to SAP HANA database as a SAP HANA database user and using SAP HANA database REMOTE\_EXECUTE or REMOTE\_EXECUTE\_QUERY.
 
 
 
 ```
-sa_refresh_materialized_views( [ <ignore_errors> ] )
+sa_refresh_materialized_views( [ <ignore_errors> ] );
 ```
 
 
@@ -29,7 +33,7 @@ sa_refresh_materialized_views( [ <ignore_errors> ] )
 <dl>
 <dt><b>
 
- *<ignore\_errors\>* 
+*<ignore\_errors\>* 
 
 </b></dt>
 <dd>
@@ -43,6 +47,14 @@ Use this optional INTEGER parameter to specify whether to return errors during t
 
 
 
+<a name="loio3b20ca4caa7e4ecb9000e15b95d23644__section_txq_vsl_zyb"/>
+
+## Results Set
+
+None
+
+
+
 <a name="loio3b20ca4caa7e4ecb9000e15b95d23644__section_gtr_2zd_srb"/>
 
 ## Remarks
@@ -53,12 +65,18 @@ You can also use the REFRESH MATERIALIZED VIEW statement to initialize a materia
 
 
 
+<a name="loio3b20ca4caa7e4ecb9000e15b95d23644__section_pcw_fy1_1yb"/>
+
 ## Privileges
 
-Requires one of:
 
--   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+### 
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure.
+-   ALTER ANY MATERIALIZED VIEW system privilege
 
 
 
@@ -70,7 +88,9 @@ None
 
 
 
-The following example uses the sa\_refresh\_materialized\_views system procedure to initialize all materialized views that are in an uninitialized state. Errors are ignored.
+## Examples
+
+This example uses the sa\_refresh\_materialized\_views system procedure to initialize all materialized views that are in an uninitialized state. Errors are ignored.
 
 ```
 CALL sa_refresh_materialized_views( 1 );
@@ -89,5 +109,5 @@ CALL sa_refresh_materialized_views( 1 );
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-817277b.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_refresh_materialized_views System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/8176eeb16ce21014bfc7bbd9e39afbab.html "Initializes all materialized views that are in an uninitialized state.") :arrow_upper_right:
+[sa_refresh_materialized_views System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/8176eeb16ce21014bfc7bbd9e39afbab.html "Initializes all materialized views that are in an uninitialized state.") :arrow_upper_right:
 

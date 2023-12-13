@@ -2,28 +2,30 @@
 
 # sp\_iqclouddbspace System Procedure for Data Lake Relational Engine \(SAP HANA DB-Managed\)
 
+Displays detailed information about the user\_object\_store dbspace.
+
+
+
+<a name="loio4240c9a98ce04c2cb85a37ada268acb4__section_gz5_gcf_pzb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using SAP HANA database REMOTE\_EXECUTE\_QUERY.
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+
 
 
 ```
-sp_iqclouddbspace
+sp_iqclouddbspace();
 ```
-
-
-
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](../030-sql-statements/remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 <a name="loio4240c9a98ce04c2cb85a37ada268acb4__section_e44_53r_pvb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -32,14 +34,10 @@ sp_iqclouddbspace
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -48,14 +46,10 @@ Description
 
 DbspaceName
 
-
-
 </td>
 <td valign="top">
 
-The name of the cloud dbspace.
-
-
+The name of the dbspace.
 
 </td>
 </tr>
@@ -64,14 +58,10 @@ The name of the cloud dbspace.
 
 DbspaceID
 
-
-
 </td>
 <td valign="top">
 
-The identifier of the cloud dbspace.
-
-
+The identifier of the dbspace.
 
 </td>
 </tr>
@@ -80,14 +70,10 @@ The identifier of the cloud dbspace.
 
 CurrSizeByte
 
-
-
 </td>
 <td valign="top">
 
-The current size of the cloud dbspace in bytes.
-
-
+The current size of the dbspace in bytes.
 
 </td>
 </tr>
@@ -96,14 +82,10 @@ The current size of the cloud dbspace in bytes.
 
 MaxSizeByte
 
-
-
 </td>
 <td valign="top">
 
-The maximum size of the cloud dbspace in bytes. A value of 0 indicates no size restriction.
-
-
+The maximum size of the dbspace in bytes. A value of 0 indicates no size restriction.
 
 </td>
 </tr>
@@ -112,14 +94,10 @@ The maximum size of the cloud dbspace in bytes. A value of 0 indicates no size r
 
 PageSizeByte
 
-
-
 </td>
 <td valign="top">
 
 The size of a database page in bytes. This is calculated based on the compression ratio and the number of pages used.
-
-
 
 </td>
 </tr>
@@ -127,9 +105,13 @@ The size of a database page in bytes. This is calculated based on the compressio
 
 
 
-<a name="loio4240c9a98ce04c2cb85a37ada268acb4__iq_refbb_1703"/>
+<a name="loio4240c9a98ce04c2cb85a37ada268acb4__section_psc_lw1_1yb"/>
 
 ## Privileges
+
+
+
+### 
 
 The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
 
@@ -137,7 +119,7 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
 
 </b></dt>
 <dd>
@@ -145,7 +127,10 @@ Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE\_QUERY Guidance and Examples for Running Stored Procedures](remote-execute-query-guidance-and-examples-for-running-stored-procedures-3e7f86d.md).
+
 
 
 
@@ -156,7 +141,7 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </b></dt>
 <dd>
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right:.
+-   Requires EXECUTE object-level privilege on the procedure.
 
 
 
@@ -167,7 +152,13 @@ To run this procedure, you need the EXECUTE privilege on the procedure. See [GRA
 
 <a name="loio4240c9a98ce04c2cb85a37ada268acb4__section_n5j_v3r_pvb"/>
 
-## Example
+## Examples
+
+This example returns information on the dbspace user\_object\_store.
+
+```
+CALL sp_iqclouddbspace();
+```
 
 
 <table>
@@ -176,35 +167,25 @@ To run this procedure, you need the EXECUTE privilege on the procedure. See [GRA
 
 DbspaceName
 
-
-
 </th>
 <th valign="top">
 
 DbspaceID
-
-
 
 </th>
 <th valign="top">
 
 CurrSizeByte
 
-
-
 </th>
 <th valign="top">
 
 MaxSizeByte
 
-
-
 </th>
 <th valign="top">
 
 PageSizeByte
-
-
 
 </th>
 </tr>
@@ -213,35 +194,25 @@ PageSizeByte
 
 user\_object\_store
 
-
-
 </td>
 <td valign="top">
 
 16388
-
-
 
 </td>
 <td valign="top">
 
 131072
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 65536
-
-
 
 </td>
 </tr>
@@ -250,7 +221,7 @@ user\_object\_store
 **Related Information**  
 
 
-[Cloud Dbspaces](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2023_1_QRC/en-US/493eb818429e4996b3da4153192a9efa.html "Cloud dbspace is a new offering where the database engine stores a user dbspace in object storage solutions such as Microsoft Azure Blob Storage, AWS Simple Storage Service (S3), or Google Cloud Storage. In a cloud dbspace, database pages are physically stored as objects as opposed to regular file system blocks.") :arrow_upper_right:
+[Cloud Dbspaces](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2023_4_QRC/en-US/493eb818429e4996b3da4153192a9efa.html "Cloud dbspace is a new offering where the database engine stores a user dbspace in object storage solutions such as Microsoft Azure Blob Storage, AWS Simple Storage Service (S3), or Google Cloud Storage. In a cloud dbspace, database pages are physically stored as objects as opposed to regular file system blocks.") :arrow_upper_right:
 
-[sp_iqclouddbspace System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/4ef0219c16ec4f578395e34785797cfe.html "Displays detailed information about the cloud dbspace in data lake Relational Engine.") :arrow_upper_right:
+[sp_iqclouddbspace System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/4ef0219c16ec4f578395e34785797cfe.html "Displays detailed information about the user_object_store dbspace.") :arrow_upper_right:
 

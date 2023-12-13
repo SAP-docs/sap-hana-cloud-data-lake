@@ -7,7 +7,7 @@ Takes one argument as an input of type `BINARY` or `STRING` and returns the spec
 
 
 ```
-REVERSE ( <expression> | <uchar_expr> )
+REVERSE ( <expression> | <uchar_expr> );
 ```
 
 
@@ -36,7 +36,7 @@ A character or binary-type column name, variable, or constant expression of `CHA
 
 <a name="loio3310f4b18b7c478f8003d97e82fdbc6a__section_stt_xn3_wrb"/>
 
-## Returns
+## Result Set
 
 LONG VARCHAR
 
@@ -72,18 +72,18 @@ SQL – Transact-SQL extension to ISO/ANSI SQL grammar
 -   The following statement returns the value "dcba":
 
     ```
-    select reverse("abcd")
+    select reverse("abcd");
     ```
 
 -   The following statement returns the value "0x00503412":
 
     ```
-    select reverse(0x12345000)
+    select reverse(0x12345000);
     ```
 
 
 **Related Information**  
 
 
-[REVERSE Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a57a972e84f2101584c3b9d17a08b0f9.html "Takes one argument as an input of type BINARY or STRING and returns the specified string with characters listed in reverse order.") :arrow_upper_right:
+[REVERSE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57a972e84f2101584c3b9d17a08b0f9.html "Takes one argument as an input of type BINARY or STRING and returns the specified string with characters listed in reverse order.") :arrow_upper_right:
 

@@ -6,17 +6,21 @@ Removes object-level privileges that were given using the `GRANT` statement.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa3e7af2384f21015a1f8b6d3c8794f47__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 REVOKE { <object-level-privilege> [,...]
-   ON { [ <owner>.]<object-name> | SCHEMA <schema-name> } 
-   FROM <user_role_shema> [,...]
+   ON { [ <owner>.]<object-name> 
+      | SCHEMA <schema-name> } 
+   FROM <user_role_shema> [,...];
 ```
 
 
@@ -57,11 +61,11 @@ Specifies the object or schema privilege being revoked.
    ALL [ PRIVILEGES ] 
    | ALTER 
    | BACKUP TABLE
-   | CREATE ANY**
+   | CREATE ANY
    | DELETE 
-   | DROP**
+   | DROP
    | EXECUTE
-   | EXECUTE PROCEDURE**
+   | EXECUTE PROCEDURE
    | INSERT
    | LOAD
    | REFERENCES [ ( <column-name> [, …] ) ] 
@@ -69,10 +73,7 @@ Specifies the object or schema privilege being revoked.
    | SELECT [ ( <column-name> [, …] ) ] 
    | TRUNCATE
    | UPDATE [ ( <column-name>, …) ]
-   | USAGE*
-
-**CREATE ANY, DROP, and EXECUTE PROCEDURE are only supported by SCHEMA <schema-name>
-*USAGE is only supported by [ <owner>.]<object-name>
+   | USAGE
 ```
 
 For an explanation of each object-level privilege, see [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md).
@@ -92,7 +93,7 @@ Specifies the type of object the privilege applies to.
 <object-name> ::=
    <table_name>
    | <view_name>
-   | {<procedure-name> | <user-defined-function-name>}
+   | { <procedure-name> | <user-defined-function-name> }
    | <sequence_name>
 ```
 
@@ -149,18 +150,17 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 ## Examples
 
--   The following example prevents user `Dave` from inserting into the `Employees` table:
+This example prevents user1 from inserting into the table Employees:
 
-    ```
-    REVOKE INSERT ON Employees FROM Dave
-    ```
+```
+REVOKE INSERT ON Employees FROM user1;
+```
 
--   The following example prevents user `Dave` from updating the `Employees` table:
+This example prevents user1 from updating any objects in schema myschema1:
 
-    ```
-    REVOKE UPDATE ON Employees FROM Dave
-    ```
-
+```
+REVOKE UPDATE ON SCHEMA myschema1 FROM user1;
+```
 
 **Related Information**  
 

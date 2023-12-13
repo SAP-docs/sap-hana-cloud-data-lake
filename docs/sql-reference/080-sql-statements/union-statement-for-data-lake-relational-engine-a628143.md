@@ -6,10 +6,13 @@ Combines the results of two or more select statements.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa628143c84f21015866a8b40c421ead0__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -17,7 +20,7 @@ Combines the results of two or more select statements.
 <select-without>-<order-by>
    … UNION [ ALL ] <select-without>-<order-by>
    … [ UNION [ ALL ] <select-without>-<order-by> ]…
-   … [ <order-by-clause> [, ...] ]
+   … [ <order-by-clause> [, ...] ];
 ```
 
 
@@ -55,7 +58,7 @@ Only integers are allowed in the order by list. These integers specify the posit
 
 ```
 <order-by-clause> ::=
-   ORDER BY <integer> [ { ASC | DESC } ]
+   ORDER BY <integer> [ { ASC | DESC } ];
 ```
 
 
@@ -110,7 +113,7 @@ SELECT Surname
 FROM Employees
 UNION
 SELECT Surname
-FROM Customers
+FROM Customers;
 ```
 
 **Related Information**  

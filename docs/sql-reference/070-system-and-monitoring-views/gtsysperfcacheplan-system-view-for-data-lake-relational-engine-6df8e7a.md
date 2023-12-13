@@ -6,10 +6,13 @@ Each row in the GTSYSPERFCACHEPLAN system view contains a graphical plan string 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio6df8e7a30fda4bca914f4c1f9b5b574e__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the GTSYSPERFCACHEPLAN system view contains a graphical plan string 
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 stmt\_hash
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Unique identifier assigned to each query.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ Unique identifier assigned to each query.
 
 plan\_hash
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 ID assigned to each plan for a given statement.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ ID assigned to each plan for a given statement.
 
 plan\_text
 
-
-
 </td>
 <td valign="top">
 
 XML NOT NULL
 
-
-
 </td>
 <td valign="top">
 
 XML representation of the query execution plan.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ XML representation of the query execution plan.
 
 update
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 The time the statement was executed. This value is Coordinated Universal Time \(UTC\) time.
-
-
 
 </td>
 </tr>
@@ -160,7 +133,7 @@ You must have the SELECT privilege on the view to use this view.
 **Related Information**  
 
 
-[Monitoring Statement Performance in Data Lake Relational Engine](https://help.sap.com/viewer/a8982cc084f21015a7b4b7fcdeb0953d/2023_2_QRC/en-US/a50746e62c2248c2a66f34c8e34fb722.html "The statement performance monitoring feature is not an exhaustive, complete audit of slow SQL statements (queries), but it is a useful tool for providing an approximation, or high-level summary, of query workload. Statement performance monitoring flags certain outlier statements with execution times exceeding an established baseline.") :arrow_upper_right:
+[Monitoring Statement Performance in Data Lake Relational Engine](https://help.sap.com/viewer/a8982cc084f21015a7b4b7fcdeb0953d/2023_4_QRC/en-US/a50746e62c2248c2a66f34c8e34fb722.html "The statement performance monitoring feature is not an exhaustive, complete audit of slow SQL statements (queries), but it is a useful tool for providing an approximation, or high-level summary, of query workload. Statement performance monitoring flags certain outlier statements with execution times exceeding an established baseline.") :arrow_upper_right:
 
 [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md "Grants database object-level privileges on individual objects and schemas to a user or role.")
 

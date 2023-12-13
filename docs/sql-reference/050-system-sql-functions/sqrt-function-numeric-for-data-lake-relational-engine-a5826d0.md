@@ -7,7 +7,7 @@ Returns the square root of a number.
 
 
 ```
-SQRT ( <numeric-expression> )
+SQRT ( <numeric-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The number for which the square root is to be calculated.
 
 <a name="loioa5826d0c84f210159ad8a785b1b1ac0b__SQRT_returns1"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -57,11 +57,11 @@ DOUBLE
 The following statement returns the value 3:
 
 ```
-SELECT SQRT( 9 ) FROM iq_dummy
+SELECT SQRT( 9 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[SQRT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/68228a301678465d9f7020fc48a58d73.html "Returns the square root of a number.") :arrow_upper_right:
+[SQRT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/68228a301678465d9f7020fc48a58d73.html "Returns the square root of a number.") :arrow_upper_right:
 

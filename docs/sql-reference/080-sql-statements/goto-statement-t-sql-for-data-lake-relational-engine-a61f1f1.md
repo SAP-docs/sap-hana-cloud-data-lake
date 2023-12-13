@@ -6,17 +6,20 @@ Branches to a labeled statement.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61f1f1084f210159daba98e65d1583f__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 <label> ::= 
     <sql-statement(s)>
-    GOTO <label_name>
+    GOTO <label_name>;
 ```
 
 
@@ -100,21 +103,15 @@ The results are:
 
 id
 
-
-
 </th>
 <th valign="top">
 
 i
 
-
-
 </th>
 <th valign="top">
 
 i2
-
-
 
 </th>
 </tr>
@@ -123,21 +120,15 @@ i2
 
 1
 
-
-
 </td>
 <td valign="top">
 
 100
 
-
-
 </td>
 <td valign="top">
 
 203
-
-
 
 </td>
 </tr>
@@ -146,21 +137,15 @@ i2
 
 2
 
-
-
 </td>
 <td valign="top">
 
 101
 
-
-
 </td>
 <td valign="top">
 
 203
-
-
 
 </td>
 </tr>
@@ -169,21 +154,15 @@ i2
 
 3
 
-
-
 </td>
 <td valign="top">
 
 102
 
-
-
 </td>
 <td valign="top">
 
 203
-
-
 
 </td>
 </tr>
@@ -192,21 +171,15 @@ i2
 
 4
 
-
-
 </td>
 <td valign="top">
 
 103
 
-
-
 </td>
 <td valign="top">
 
 203
-
-
 
 </td>
 </tr>
@@ -215,21 +188,15 @@ i2
 
 5
 
-
-
 </td>
 <td valign="top">
 
 104
 
-
-
 </td>
 <td valign="top">
 
 203
-
-
 
 </td>
 </tr>
@@ -248,6 +215,6 @@ restart:
 	print 'yes'
 	select @count = @count + 1 
 	while @count <=4 
-	 goto restart
+	 goto restart;
 ```
 

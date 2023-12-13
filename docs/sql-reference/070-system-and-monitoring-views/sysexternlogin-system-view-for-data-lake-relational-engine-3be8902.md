@@ -6,10 +6,13 @@ Each row in the SYSEXTERNLOGIN system view describes an external login for remot
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be890286c5f1014a6dca837390a9520__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYSEXTERNLOGIN system view describes an external login for remot
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 user\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The user ID on the local database.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The user ID on the local database.
 
 srvid
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The remote server, as listed in the SYSSERVER system view.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ The remote server, as listed in the SYSSERVER system view.
 
 remote\_login
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The login name for the user, for the remote server.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ The login name for the user, for the remote server.
 
 remote\_password
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(3\)
 
-
-
 </td>
 <td valign="top">
 
 Whether a password is stored. Three asterisks \(\*\*\*\) indicate that a password is stored. NULL indicates that no password is stored. You can obtain the password hash by querying the SYSEXTERNLOGINPASSWORD system view.
-
-
 
 </td>
 </tr>

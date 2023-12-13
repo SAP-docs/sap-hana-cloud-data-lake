@@ -6,16 +6,19 @@ Presents group information from `ISYSIQPARTITIONCOLUMN` in a readable format.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5d08eb684f21015a179e5b6b670cf2f__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 ALTER VIEW "SYS"."SYSIQPARTITIONCOLUMN"
-as select * from SYS.ISYSIQPARTITIONCOLUMN
+as select * from SYS.ISYSIQPARTITIONCOLUMN;
 ```
 
 Each row in the `SYSIQPARTITIONCOLUMN` view describes a column in a partition described in the `SYSIQPARTITION` view in a partitioned table described in the `SYSPARTITIONSCHEME` view. SYSIQPARTITIONCOLUMN only describes partitions of columns that are not stored on the dbspace of the partition.
@@ -27,21 +30,15 @@ Each row in the `SYSIQPARTITIONCOLUMN` view describes a column in a partition de
 
 Column Name
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Column Type
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Description
-
-
 
 </th>
 </tr>
@@ -50,21 +47,15 @@ Description
 
 partitioned\_object\_id
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Unique ID assigned to each partitioned object \(table\)
-
-
 
 </td>
 </tr>
@@ -73,21 +64,15 @@ Unique ID assigned to each partitioned object \(table\)
 
 partition\_id
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Identifies a partition in a partitioned table.
-
-
 
 </td>
 </tr>
@@ -96,21 +81,15 @@ Identifies a partition in a partitioned table.
 
 column\_id
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 The column ID of the column.
-
-
 
 </td>
 </tr>
@@ -119,21 +98,15 @@ The column ID of the column.
 
 dbspace\_id
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 The dbspace ID of the dbspace where this column of the partition is stored.
-
-
 
 </td>
 </tr>
@@ -144,14 +117,14 @@ The dbspace ID of the dbspace where this column of the partition is stored.
 ## Constraints on Underlying System Table
 
 ```
-Primary key (partitioned_object_id, partition_id, column_id)
+Primary key (partitioned_object_id, partition_id, column_id);
 ```
 
 ```
-Foreign key (partitioned_object_id, partition_id) references SYS.ISYSPARTITION
+Foreign key (partitioned_object_id, partition_id) references SYS.ISYSPARTITION;
 ```
 
 ```
-Foreign key (dbspace_id) references SYS.ISYSDBSPACE
+Foreign key (dbspace_id) references SYS.ISYSDBSPACE;
 ```
 

@@ -16,7 +16,7 @@ Syntax 1
 <dd>
 
 ```
-REGR_R2( <dependent-expression>, <independent-expression> )
+REGR_R2( <dependent-expression>, <independent-expression> );
 ```
 
 
@@ -30,7 +30,7 @@ Syntax 2
 
 ```
 REGR_R2( <dependent-expression>, <independent-expression> )
-OVER ( <window-spec> )
+OVER ( <window-spec> );
 ```
 
 
@@ -86,7 +86,7 @@ Specified when using this function as a window function.
 
 <a name="loioa575c77684f210158d23e68bbd456148__REGR_R2_returns1"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -134,5 +134,5 @@ SELECT REGR_R2( Salary, ( YEAR( NOW() ) - YEAR( BirthDate ) ) )FROM Employees;
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[REGR_R2 Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/e970c79f12d44021b872f41c9f5ce7d9.html "Computes the coefficient of determination (also referred to as R-squared or the goodness-of-fit statistic) for the regression line.") :arrow_upper_right:
+[REGR_R2 Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/e970c79f12d44021b872f41c9f5ce7d9.html "Computes the coefficient of determination (also referred to as R-squared or the goodness-of-fit statistic) for the regression line.") :arrow_upper_right:
 

@@ -6,10 +6,13 @@ This view describes all the dbfile records present in the database at backup tim
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5cb7cc084f2101597888efc1f59071c__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 <table>
@@ -18,21 +21,15 @@ This view describes all the dbfile records present in the database at backup tim
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Column Type
 
-
-
 </th>
 <th valign="top">
 
 Description.
-
-
 
 </th>
 </tr>
@@ -41,21 +38,15 @@ Description.
 
 bu\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Transaction identifier of the checkpoint of the operation. Backup ID for backup operation.
-
-
 
 </td>
 </tr>
@@ -64,21 +55,15 @@ Transaction identifier of the checkpoint of the operation. Backup ID for backup 
 
 dbspace\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 The dbspace ID of which this dbfile record is associated.
-
-
 
 </td>
 </tr>
@@ -87,21 +72,15 @@ The dbspace ID of which this dbfile record is associated.
 
 dbfile\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 The dbfile ID present in dbspace during ongoing backup operation.
-
-
 
 </td>
 </tr>
@@ -110,21 +89,15 @@ The dbfile ID present in dbspace during ongoing backup operation.
 
 dbspace\_rwstatus
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 T indicates read-write.
-
-
 
 </td>
 </tr>
@@ -133,21 +106,15 @@ T indicates read-write.
 
 dbspace\_createid
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The transaction ID of the transaction that created the dbspace.
-
-
 
 </td>
 </tr>
@@ -156,21 +123,15 @@ The transaction ID of the transaction that created the dbspace.
 
 dbspace\_alterid
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Transaction ID that marked the dbspace RO. If not marked, then the create ID.
-
-
 
 </td>
 </tr>
@@ -179,21 +140,15 @@ Transaction ID that marked the dbspace RO. If not marked, then the create ID.
 
 dbspace\_online
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 T indicates online.
-
-
 
 </td>
 </tr>
@@ -202,21 +157,15 @@ T indicates online.
 
 dbfile\_rwstatus
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 T indicates read-write.
-
-
 
 </td>
 </tr>
@@ -225,21 +174,15 @@ T indicates read-write.
 
 dbfile\_createid
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The transaction ID of the transaction that created this dbfile.
-
-
 
 </td>
 </tr>
@@ -248,21 +191,15 @@ The transaction ID of the transaction that created this dbfile.
 
 dbfile\_alterid
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The transaction ID of the transaction that last altered the read-write status of this dbfile.
-
-
 
 </td>
 </tr>
@@ -271,21 +208,15 @@ The transaction ID of the transaction that last altered the read-write status of
 
 is\_backed\_up
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates that the dbfile is backed up in this backup.
-
-
 
 </td>
 </tr>
@@ -294,21 +225,15 @@ Indicates that the dbfile is backed up in this backup.
 
 start\_block
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Start block for the dbfile.
-
-
 
 </td>
 </tr>
@@ -317,21 +242,15 @@ Start block for the dbfile.
 
 num\_blocks
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Total number of blocks in dbfile.
-
-
 
 </td>
 </tr>
@@ -340,21 +259,15 @@ Total number of blocks in dbfile.
 
 num\_blocks\_backed\_up
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Total number of blocks backed up.
-
-
 
 </td>
 </tr>
@@ -363,21 +276,15 @@ Total number of blocks backed up.
 
 dbspace\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Dbspace name.
-
-
 
 </td>
 </tr>
@@ -386,21 +293,15 @@ Dbspace name.
 
 dbfile\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Logical file name of the dbfile.
-
-
 
 </td>
 </tr>
@@ -409,21 +310,15 @@ Logical file name of the dbfile.
 
 dbfile\_path
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 Physical path of the file.
-
-
 
 </td>
 </tr>
@@ -444,10 +339,10 @@ It presents group information from `ISYSIQBACKUPHISTORYDETAIL` in a readable for
 ## Constraints on Underlying System Table
 
 ```
-Primary key (bu_id, dbfile_id)
+Primary key (bu_id, dbfile_id);
 ```
 
 ```
-Foreign key (txn_id) references SYS.ISYSBACKUPHISTORY
+Foreign key (txn_id) references SYS.ISYSBACKUPHISTORY;
 ```
 

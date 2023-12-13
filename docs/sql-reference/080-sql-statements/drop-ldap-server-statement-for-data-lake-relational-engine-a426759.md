@@ -6,16 +6,19 @@ Removes the named LDAP server configuration object from the `SYSLDAPSERVER` syst
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa426759484f2101583e1ad63a3dfc2e0__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 DROP LDAP SERVER <ldapua-server-name>
-   [ WITH DROP ALL REFERENCES ] [ WITH SUSPEND ]
+   [ WITH DROP ALL REFERENCES ] [ WITH SUSPEND ];
 ```
 
 
@@ -91,11 +94,11 @@ ANSI SQL – compliance level: Transact-SQL extension
 In the following example, assuming that references to the LDAP server configuration object have been removed from all login policies, the following two sets of commands are equivalent:
 
 ```
-DROP LDAP SERVER ldapserver1 WITH DROP ALL REFERENCES WITH SUSPEND
+DROP LDAP SERVER ldapserver1 WITH DROP ALL REFERENCES WITH SUSPEND;
 ```
 
 ```
-ALTER LDAP SERVER ldapserver1 WITH SUSPEND DROP LDAP SERVER ldapserver1 WITH DROP ALL REFERENCES
+ALTER LDAP SERVER ldapserver1 WITH SUSPEND DROP LDAP SERVER ldapserver1 WITH DROP ALL REFERENCES;
 ```
 
 Using the WITH DROP ALL REFERENCES and WITH SUSPEND parameters eliminates the need to execute an `ALTER LDAP SERVER` statement before the `DROP LDAP SERVER` statement

@@ -6,10 +6,13 @@ Modifies the attributes of a remote server. Changes made by `ALTER SERVER` do no
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa613110184f210158bab9d8f4e953fe1__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ ALTER SERVER <server-name>
    [ CLASS '{ ASEODBC | HANAODBC | ODBC | IQODBC }' ]
    [ USING '<SQL_endpoint>' ]
    [ CAPABILITY '<cap-name>' { ON | OFF } ]
-   [ CONNECTION CLOSE [ CURRENT | ALL | <connection-id> ] ]
+   [ CONNECTION CLOSE [ CURRENT | ALL | <connection-id> ] ];
 ```
 
 
@@ -72,16 +75,16 @@ When a user creates a connection to a remote server, the remote connection is no
 These SQL statements are equivalent and close the current connection to the remote server:
 
 ```
-ALTER SERVER <server-name> CONNECTION CLOSE
+ALTER SERVER <server-name> CONNECTION CLOSE;
 ```
 
 ```
-ALTER SERVER <server-name> CONNECTION CLOSE CURRENT
+ALTER SERVER <server-name> CONNECTION CLOSE CURRENT;
 ```
 
-You can close both ODBC and JDBC connections to a remote server using this syntax. You do not need the SERVER OPERATOR system privilege to execute either of these statements.
+You can close both ODBC and JDBC connections to a remote server using this syntax. You do not need the MANAGE ANY REMOTE SERVER system privilege to execute either of these statements.
 
-You can also disconnect a specific remote ODBC connection by specifying a connection ID, or disconnect all remote ODBC connections by specifying the ALL keyword. If you attempt to close a JDBC connection by specifying the connection ID or the ALL keyword, an error occurs. When the connection identified by *<connection-id\>* is not the current local connection, the user must have the SERVER OPERATOR system privilege to be able to close the connection.
+You can also disconnect a specific remote ODBC connection by specifying a connection ID, or disconnect all remote ODBC connections by specifying the ALL keyword. If you attempt to close a JDBC connection by specifying the connection ID or the ALL keyword, an error occurs. When the connection identified by *<connection-id\>* is not the current local connection, the user must have the MANAGE ANY REMOTE SERVER system privilege to be able to close the connection.
 
 
 
@@ -125,21 +128,21 @@ Automatic commit
 
     ```
     ALTER SERVER infodc
-    CAPABILITY 'insert select' OFF
+    CAPABILITY 'insert select' OFF;
     ```
 
 -   The following example closes all connections to the remote server named `rem_test`:
 
     ```
     ALTER SERVER rem_test
-    CONNECTION CLOSE ALL
+    CONNECTION CLOSE ALL;
     ```
 
 -   The following example closes the connection to the remote server named `rem_test` that has the connection ID 142536:
 
     ```
     ALTER SERVER rem_test
-    CONNECTION CLOSE 142536
+    CONNECTION CLOSE 142536;
     ```
 
 

@@ -6,10 +6,13 @@ Grants roles to users or other roles, with or without administrative rights.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa3e379cc84f21015bccfaff98164bf01__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -17,13 +20,13 @@ Grants roles to users or other roles, with or without administrative rights.
 GRANT ROLE <role_name> [, …] 
    TO <grantee> [, …]
    [ {WITH NO ADMIN | WITH ADMIN [ ONLY ] } OPTION ]
-   [ WITH NO SYSTEM PRIVILEGE INHERITANCE ]
+   [ WITH NO SYSTEM PRIVILEGE INHERITANCE ];
 ```
 
 ```
 <role_name>
    { <user-defined role name>
-   | SYS_DL_CUSTOMER_ADMIN_ROLE }
+   | SYS_DL_CUSTOMER_ADMIN_ROLE };
 ```
 
 
@@ -158,7 +161,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 The following example grants Sales\_Role to Sally, with administrative privileges, which means she can grant or revoke Sales\_Role to other users as well as perform any authorized tasks granted by the role:
 
 ```
-GRANT ROLE Sales_Role TO Sally WITH ADMIN OPTION
+GRANT ROLE Sales_Role TO Sally WITH ADMIN OPTION;
 ```
 
 **Related Information**  
@@ -168,5 +171,5 @@ GRANT ROLE Sales_Role TO Sally WITH ADMIN OPTION
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[GRANT ROLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/59327e42f46b461db8a501229bc29461.html "Grants roles to users or other roles, with or without administrative rights.") :arrow_upper_right:
+[GRANT ROLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/59327e42f46b461db8a501229bc29461.html "Grants roles to users or other roles, with or without administrative rights.") :arrow_upper_right:
 

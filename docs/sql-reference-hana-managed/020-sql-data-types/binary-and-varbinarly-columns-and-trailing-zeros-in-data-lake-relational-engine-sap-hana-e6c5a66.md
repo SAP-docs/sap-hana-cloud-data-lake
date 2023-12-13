@@ -30,29 +30,21 @@ SELECT * FROM zeros;
 
 bnot
 
-
-
 </th>
 <th valign="top">
 
 bnull
-
-
 
 </th>
 <th valign="top">
 
 vbnot
 
-
-
 </th>
 <th valign="top">
 
 vbnull
 
-
-
 </th>
 </tr>
 <tr>
@@ -60,28 +52,20 @@ vbnull
 
 0x1234500000
 
-
-
 </td>
 <td valign="top">
 
 0x1234500000
 
-
-
 </td>
 <td valign="top">
 
 0x12345000
 
-
-
 </td>
 <td valign="top">
 
 0x12345000
-
-
 
 </td>
 </tr>
@@ -90,28 +74,20 @@ vbnull
 
 0x0123000000
 
-
-
 </td>
 <td valign="top">
 
 0x0123000000
 
-
-
 </td>
 <td valign="top">
 
 0x0123
 
-
-
 </td>
 <td valign="top">
 
 0x0123
-
-
 
 </td>
 </tr>
@@ -120,28 +96,20 @@ vbnull
 
 0x0000000000
 
-
-
 </td>
 <td valign="top">
 
 0x0000000000
 
-
-
 </td>
 <td valign="top">
 
 0x00
 
-
-
 </td>
 <td valign="top">
 
 0x00
-
-
 
 </td>
 </tr>
@@ -150,28 +118,20 @@ vbnull
 
 0x3030323731
 
+</td>
+<td valign="top">
 
+0x3030323731
 
 </td>
 <td valign="top">
 
 0x3030323731
 
-
-
 </td>
 <td valign="top">
 
 0x3030323731
-
-
-
-</td>
-<td valign="top">
-
-0x3030323731
-
-
 
 </td>
 </tr>
@@ -193,28 +153,20 @@ SELECT * FROM zeros
 
 not
 
-
-
 </th>
 <th valign="top">
 
 bnull
-
-
 
 </th>
 <th valign="top">
 
 vbnot
 
-
-
 </th>
 <th valign="top">
 
 vbnull
-
-
 
 </th>
 </tr>
@@ -223,28 +175,20 @@ vbnull
 
 0x0000000000
 
-
-
 </td>
 <td valign="top">
 
 0x0000000000
 
-
-
 </td>
 <td valign="top">
 
 0x00
 
-
-
 </td>
 <td valign="top">
 
 0x00
-
-
 
 </td>
 </tr>
@@ -264,16 +208,12 @@ INSERT sample VALUES ('002710000000ae1b');SELECT * FROM sample;
 
 col\_bin
 
-
-
 </th>
 </tr>
 <tr>
 <td valign="top">
 
 0x3030323731303030
-
-
 
 </td>
 </tr>

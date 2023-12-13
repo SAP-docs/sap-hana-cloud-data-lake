@@ -7,7 +7,7 @@ Converts a TIMESTAMP WITH TIME ZONE value, or a TIMESTAMP value \(which is assum
 
 
 ```
-TOLOCALTIME( <timestamp-expression> )
+TOLOCALTIME( <timestamp-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The TIMESTAMP WITH TIME ZONE or TIMESTAMP expression to be converted. The TIMEST
 
 <a name="loiob472502b94a84aa78fd78db19b985f66__TOLOCALTIME_returns1"/>
 
-## Returns
+## Result Set
 
 TIMESTAMP
 
@@ -121,5 +121,5 @@ UT,                          TOLOCALTIME(UT)
 **Related Information**  
 
 
-[TOLOCALTIME Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/9533cea8d9b04beb9ed814b1a9ef641d.html "Converts a TIMESTAMP WITH TIME ZONE value, or a TIMESTAMP value (which is assumed to be in Coordinated Universal Time (UTC)), to a timestamp value that corresponds to the server’s local time using the standard time or daylight saving time rules for the server’s locale.") :arrow_upper_right:
+[TOLOCALTIME Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/9533cea8d9b04beb9ed814b1a9ef641d.html "Converts a TIMESTAMP WITH TIME ZONE value, or a TIMESTAMP value (which is assumed to be in Coordinated Universal Time (UTC)), to a timestamp value that corresponds to the server’s local time using the standard time or daylight saving time rules for the server’s locale.") :arrow_upper_right:
 

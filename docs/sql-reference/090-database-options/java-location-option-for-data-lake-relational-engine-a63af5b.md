@@ -6,8 +6,11 @@ Specifies the path of the Java VM for the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63af5b684f21015a052f4c49ccacc3c__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

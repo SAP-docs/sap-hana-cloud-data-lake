@@ -6,8 +6,11 @@ Sets the maximum number of unique advice messages stored by the index advisor to
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa639738c84f21015bacebb3b618ab0aa__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

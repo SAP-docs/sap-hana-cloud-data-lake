@@ -6,8 +6,11 @@ Specifies a login procedure that sets connection compatibility options at start-
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63d00eb84f21015a4a5a5d4825b9fe7__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

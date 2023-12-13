@@ -6,17 +6,20 @@ Renames, moves or alters the definition of a TEXT index.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa602711784f21015955aed036a843754__section_ffk_5vr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 ALTER TEXT INDEX [ { <owner> | <schema-name> }.]<text-index-name>
    ON [ { <owner> | <schema-name> }.]<table-name>  
-   RENAME { AS | TO } <new-name>
+   RENAME { AS | TO } <new-name>;
 ```
 
 

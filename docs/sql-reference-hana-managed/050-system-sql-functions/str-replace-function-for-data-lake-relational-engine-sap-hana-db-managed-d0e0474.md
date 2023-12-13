@@ -7,7 +7,7 @@ Takes three arguments as input of type `BINARY` or `STRING` and replaces any ins
 
 
 ```
-REPLACE ( <string_expr1>, <string_expr2>, <string_expr3> )
+REPLACE ( <string_expr1>, <string_expr2>, <string_expr3> );
 ```
 
 
@@ -76,7 +76,7 @@ The replacement string expression, expressed as VARCHAR, UNICHAR, UNIVARCHAR,VAR
       s = length of source string
       p = length of pattern string
       r = length of replacement string
-    IF (r-p) <= 0, result length = s
+    IF (r-p) <= 0, result length = s;
     ```
 
 -   If data lake Relational Engine cannot calculate the result length because the argument values are unknown when the expression is compiled, the result length used is 255.
@@ -101,7 +101,7 @@ SQL – Transact-SQL extension to ISO/ANSI SQL grammar
 -   Replaces the string *<def\>* within the string *<cdefghi\>* with *<yyy\>*:
 
     ```
-    select replace("cdefghi", "def", "yyy")
+    select replace("cdefghi", "def", "yyy");
     -------------
     cyyyghi
     (1 row(s) affected)
@@ -110,7 +110,7 @@ SQL – Transact-SQL extension to ISO/ANSI SQL grammar
 -   Replaces all spaces with “toyota”:
 
     ```
-    select str_replace ("chevy, ford, mercedes", "","toyota")
+    select str_replace ("chevy, ford, mercedes", "","toyota");
     ----------
     chevy,toyotaford,toyotamercedes
     (1 row(s) affected)
@@ -119,7 +119,7 @@ SQL – Transact-SQL extension to ISO/ANSI SQL grammar
 -   Accepts NULL in the third parameter and treats it as an attempt to replace *<string\_expr2\>* with NULL, effectively turning STR\_REPLACE into a “string cut” operation. Returns “abcghijklm”:
 
     ```
-    select str_replace("abcdefghijklm", "def", NULL)
+    select str_replace("abcdefghijklm", "def", NULL);
     ----------
     abcghijklm
     (1 row affected)
@@ -129,5 +129,5 @@ SQL – Transact-SQL extension to ISO/ANSI SQL grammar
 **Related Information**  
 
 
-[STR_REPLACE Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a5857e0a84f210158b54cac40679f568.html "Takes three arguments as input of type BINARY or STRING and replaces any instances of the second string expression (string_expr2) that occur within the first string expression (string_expr1) with a third expression (string_expr3).") :arrow_upper_right:
+[STR_REPLACE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5857e0a84f210158b54cac40679f568.html "Takes three arguments as input of type BINARY or STRING and replaces any instances of the second string expression (string_expr2) that occur within the first string expression (string_expr1) with a third expression (string_expr3).") :arrow_upper_right:
 

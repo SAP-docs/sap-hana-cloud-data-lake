@@ -6,22 +6,25 @@ Displays detailed information about each dbfile in a dbspace.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5a8f31384f21015acefe93bc2998e90__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqfile [ <dbspace-name> ]
+sp_iqfile [ <dbspace-name> ];
 ```
 
 
 
 <a name="loioa5a8f31384f21015acefe93bc2998e90__section_anr_clz_mbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -30,14 +33,10 @@ sp_iqfile [ <dbspace-name> ]
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,14 +45,10 @@ Description
 
 DBSpaceName
 
-
-
 </td>
 <td valign="top">
 
 The name of the dbspace as defined when the database is created. Dbspace names are always case-insensitive, regardless of the CASE IGNORE or CASE RESPECT specifications.
-
-
 
 </td>
 </tr>
@@ -62,14 +57,10 @@ The name of the dbspace as defined when the database is created. Dbspace names a
 
 DBFileName
 
-
-
 </td>
 <td valign="top">
 
 The logical file name.
-
-
 
 </td>
 </tr>
@@ -78,14 +69,10 @@ The logical file name.
 
 Path
 
-
-
 </td>
 <td valign="top">
 
 The location of the physical file or raw partition.
-
-
 
 </td>
 </tr>
@@ -93,8 +80,6 @@ The location of the physical file or raw partition.
 <td valign="top">
 
 SegmentType
-
-
 
 </td>
 <td valign="top">
@@ -114,14 +99,10 @@ The type of dbspace:
 
 RWMode
 
-
-
 </td>
 <td valign="top">
 
 The mode of the dbspace; always read-write \(RW\).
-
-
 
 </td>
 </tr>
@@ -129,8 +110,6 @@ The mode of the dbspace; always read-write \(RW\).
 <td valign="top">
 
 Online
-
-
 
 </td>
 <td valign="top">
@@ -147,14 +126,10 @@ Online
 
 Usage
 
-
-
 </td>
 <td valign="top">
 
 The percent of dbspace currently in use by this file in the dbspace. When run against a worker node, this column displays NA.
-
-
 
 </td>
 </tr>
@@ -163,14 +138,10 @@ The percent of dbspace currently in use by this file in the dbspace. When run ag
 
 DBFileSize
 
-
-
 </td>
 <td valign="top">
 
 The current size of the file or raw partition. For a raw partition, this size value can be less than the physical size.
-
-
 
 </td>
 </tr>
@@ -179,14 +150,10 @@ The current size of the file or raw partition. For a raw partition, this size va
 
 Reserve
 
-
-
 </td>
 <td valign="top">
 
 Reserved space that can be added to this file in the dbspace.
-
-
 
 </td>
 </tr>
@@ -195,14 +162,10 @@ Reserved space that can be added to this file in the dbspace.
 
 BlkTypes
 
-
-
 </td>
 <td valign="top">
 
 The space used by both user data and internal system structures.
-
-
 
 </td>
 </tr>
@@ -211,14 +174,10 @@ The space used by both user data and internal system structures.
 
 FirstBlk
 
-
-
 </td>
 <td valign="top">
 
-The first data lake Relational Engine block number\(object ID\) assigned to the file.In instances using cloud dbspaces, read this column as First Object ID.
-
-
+The first object ID in the dbspace.
 
 </td>
 </tr>
@@ -227,14 +186,10 @@ The first data lake Relational Engine block number\(object ID\) assigned to the 
 
 LastBlk
 
-
-
 </td>
 <td valign="top">
 
-The last data lake Relational Engine block number\(object ID\) assigned to the file.In instances using cloud dbspaces, read this column as Last Object ID.
-
-
+The last object ID in the dbspace.
 
 </td>
 </tr>
@@ -243,14 +198,10 @@ The last data lake Relational Engine block number\(object ID\) assigned to the f
 
 OkToDrop
 
-
-
 </td>
 <td valign="top">
 
 "Y" indicates the file can be dropped; otherwise "N".
-
-
 
 </td>
 </tr>
@@ -299,7 +250,7 @@ None
 
 <a name="loioa5a8f31384f21015acefe93bc2998e90__iq_refbb_1574"/>
 
-## Example
+## Examples
 
 The following example displays information about the files in the dbspaces:
 

@@ -6,10 +6,13 @@ Controls whether to allow the writing of files to a client computer.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loiod2cef385fd984a97a80a5ac5b9615fe6__section_d3p_24q_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Controls whether to allow the writing of files to a client computer.
 ## Syntax
 
 ```
-ALLOW_WRITE_CLIENT_FILE  = { ON | OFF }
+ALLOW_WRITE_CLIENT_FILE  = { ON | OFF };
 ```
 
 
@@ -60,28 +63,20 @@ Requires the SET ANY CUSTOMER SECURITY OPTION system privilege to set this datab
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC role
-
-
 
 </th>
 <th valign="top">
 
 For current user
 
-
-
 </th>
 <th valign="top">
 
 For other users
-
-
 
 </th>
 </tr>
@@ -90,28 +85,20 @@ For other users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -120,28 +107,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>

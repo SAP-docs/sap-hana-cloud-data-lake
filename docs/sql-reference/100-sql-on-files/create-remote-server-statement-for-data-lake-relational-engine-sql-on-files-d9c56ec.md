@@ -6,10 +6,12 @@ Define a remote server using SQL on Files.
 
 
 
-> ### Restriction:  
-> This topic is limited to SQL on Files use cases.
-> 
-> This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loiod9c56ecc34a3406886d429c06172573a__section_fry_b3b_nqb"/>
+
+## Usage
+
+-   This topic is limited to SQL on Files use cases.
+-   This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 

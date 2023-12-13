@@ -6,10 +6,13 @@ Enables and disables auditing in the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio812cc49c6ce21014a5f195897313e166__section_fq2_gpq_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Enables and disables auditing in the database.
 ## Syntax
 
 ```
-AUDITING = { ON | OFF }
+AUDITING = { ON | OFF };
 ```
 
 
@@ -49,7 +52,10 @@ Privilege Category: SECURITY
 
 ### 
 
-Requires the SET ANY CUSTOMER SECURITY OPTION system privilege to set this database option.
+Requires all of:
+
+-   MANAGE AUDITING system privilege
+-   SET ANY CUSTOMER SECURITY OPTION system privilege
 
 
 
@@ -64,28 +70,20 @@ Requires the SET ANY CUSTOMER SECURITY OPTION system privilege to set this datab
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -94,28 +92,20 @@ For Other Users
 
 Allowed to set permanently?
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -124,28 +114,20 @@ No
 
 Allowed to set temporarily?
 
+</td>
+<td valign="top">
 
+No
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
-
-</td>
-<td valign="top">
-
-No
-
-
 
 </td>
 </tr>
@@ -168,6 +150,8 @@ If you set the AUDITING option to ON, and don’t specify auditing options, all 
 
 
 
+## Example
+
 The following statement turns on auditing for the database.
 
 ```
@@ -179,7 +163,7 @@ SET OPTION PUBLIC.auditing = 'On';
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[AUDITING Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/05093562ca224fc2a9bbd3d9d587362c.html "Enables and disables auditing in the database.") :arrow_upper_right:
+[AUDITING Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/05093562ca224fc2a9bbd3d9d587362c.html "Enables and disables auditing in the database.") :arrow_upper_right:
 
-[Auditing Database Events](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2023_2_QRC/en-US/4c20fb59d0e848e09ffb191c9d2c0b16.html "Auditing tracks all of the activity performed on a data lake Relational Engine database.") :arrow_upper_right:
+[Auditing Database Events](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2023_4_QRC/en-US/4c20fb59d0e848e09ffb191c9d2c0b16.html "Auditing tracks all of the activity performed on a data lake Relational Engine database.") :arrow_upper_right:
 

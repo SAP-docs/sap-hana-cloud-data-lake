@@ -6,20 +6,23 @@ Shows the current version information for this node, including type and synchron
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa4db556c84f21015a798ecee7db8720b__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqmpxversioninfo
+sp_iqmpxversioninfo;
 ```
 
 
 
-## Returns
+## Result Set
 
 
 <table>
@@ -28,21 +31,15 @@ sp_iqmpxversioninfo
 
 Column
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -51,21 +48,15 @@ Description
 
 CatalogID
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Catalog version on this node.
-
-
 
 </td>
 </tr>
@@ -74,21 +65,15 @@ Catalog version on this node.
 
 VersionID
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Latest version available on this node.
-
-
 
 </td>
 </tr>
@@ -97,21 +82,15 @@ Latest version available on this node.
 
 OAVID
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Oldest active version on this node.
-
-
 
 </td>
 </tr>
@@ -120,14 +99,10 @@ Oldest active version on this node.
 
 ServerType
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -147,14 +122,10 @@ Type of node:
 
 CatalogSync
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -173,21 +144,15 @@ Catalog synchronization:
 
 WCatalogID
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Catalog version on the write node.
-
-
 
 </td>
 </tr>
@@ -196,21 +161,15 @@ Catalog version on the write node.
 
 WVersionID
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Latest version available on the write node.
-
-
 
 </td>
 </tr>

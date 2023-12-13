@@ -6,10 +6,13 @@ Presents group information from `ISYSIQDBSPACE` in a readable format.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5cd985c84f21015a1d0b5c09cd96cb1__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 <table>
@@ -18,21 +21,15 @@ Presents group information from `ISYSIQDBSPACE` in a readable format.
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Column Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -41,21 +38,15 @@ Description
 
 dbspace\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALL INT
 
-
-
 </td>
 <td valign="top">
 
 Each dbspace in a database is assigned a unique number \(dbspace ID\).
-
-
 
 </td>
 </tr>
@@ -64,21 +55,15 @@ Each dbspace in a database is assigned a unique number \(dbspace ID\).
 
 last\_modified
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Time at which the dbspace's read-write status was last modified.
-
-
 
 </td>
 </tr>
@@ -87,14 +72,10 @@ Time at which the dbspace's read-write status was last modified.
 
 segment\_type
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(8\)
-
-
 
 </td>
 <td valign="top">
@@ -114,14 +95,10 @@ Segment type:
 
 read\_write
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -140,14 +117,10 @@ Values:
 
 online
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -166,21 +139,15 @@ Values:
 
 create\_txn\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Transaction ID that create the dbspace.
-
-
 
 </td>
 </tr>
@@ -189,21 +156,15 @@ Transaction ID that create the dbspace.
 
 alter\_txn\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Transaction ID that last modified read\_write status.
-
-
 
 </td>
 </tr>
@@ -212,14 +173,10 @@ Transaction ID that last modified read\_write status.
 
 striping\_on
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -238,21 +195,15 @@ Disk striping:
 
 stripe\_size\_kb
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Number of kilobytes written to each file of the dbspace before the disk striping algorithm moves to the next dbfile.
-
-
 
 </td>
 </tr>
@@ -263,10 +214,10 @@ Number of kilobytes written to each file of the dbspace before the disk striping
 ## Constraints on Underlying System Table
 
 ```
-Primary key (dbspace_id)
+Primary key (dbspace_id);
 ```
 
 ```
-Foreign key (dbspace_id) references SYS.ISYSDBSPACE(dbspace_id)
+Foreign key (dbspace_id) references SYS.ISYSDBSPACE(dbspace_id);
 ```
 

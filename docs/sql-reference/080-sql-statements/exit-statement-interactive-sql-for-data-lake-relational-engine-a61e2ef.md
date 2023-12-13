@@ -6,15 +6,18 @@ Leaves Interactive SQL.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61e2ef284f210159988cf268a58fd69__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-{ EXIT | QUIT | BYE } [ <number> | <connection-variable> ]
+{ EXIT | QUIT | BYE } [ <number> | <connection-variable> ];
 ```
 
 

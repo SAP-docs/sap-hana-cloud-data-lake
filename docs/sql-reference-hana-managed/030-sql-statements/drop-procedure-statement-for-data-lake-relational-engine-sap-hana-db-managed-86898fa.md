@@ -2,23 +2,21 @@
 
 # DROP PROCEDURE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)
 
-Removes user-defined procedures from the database.
+Removes a user-defined procedure from the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-DROP PROCEDURE [ IF EXISTS ] [ <schema-name>.]<procedure-name>
+DROP PROCEDURE [ IF EXISTS ] [ <schema-name>.]<procedure-name>;
 ```
 
 
@@ -28,7 +26,7 @@ DROP PROCEDURE [ IF EXISTS ] [ <schema-name>.]<procedure-name>
 
 
 
-<a name="loio86898fa1ad8546c58b0dfa704077a491__IQ_Parameters"/>
+<a name="loio86898fa1ad8546c58b0dfa704077a491__section_gz3_k5q_dzb"/>
 
 ## Parameters
 
@@ -41,7 +39,7 @@ IF EXISTS
 </b></dt>
 <dd>
 
-Prevents the return of an error if the specified procedure does not exist.
+Use if you do not want an error returned when the DROP statement attempts to remove a database object that does not exist.
 
 
 
@@ -50,9 +48,21 @@ Prevents the return of an error if the specified procedure does not exist.
 
 
 
-<a name="loio86898fa1ad8546c58b0dfa704077a491__section_yn4_lgq_lnb"/>
+<a name="loio86898fa1ad8546c58b0dfa704077a491__section_nck_l5q_dzb"/>
+
+## Remarks
+
+DROP PROCEDURE is prevented when the procedure is in use by another connection.
+
+
+
+<a name="loio86898fa1ad8546c58b0dfa704077a491__section_bvk_m5q_dzb"/>
 
 ## Privileges
+
+
+
+### 
 
 The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
 
@@ -60,21 +70,21 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
 
 </b></dt>
 <dd>
 
-Requires one of:
+To use REMOTE\_EXECUTE requires one of the following:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 
 </dd><dt><b>
 
-Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+Connected directly to data lake Relational Engine **coordinator** as a data lake Relational Engine user:
 
 </b></dt>
 <dd>
@@ -92,13 +102,27 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </dd>
 </dl>
 
+See [GRANT System Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a3dfcb0284f21015b74ac3cded42ee69.html "Grants specific system privileges to users or roles, with or without administrative rights.") :arrow_upper_right: or [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right: for assistance with granting privileges.
 
 
-<a name="loio86898fa1ad8546c58b0dfa704077a491__section_cfp_5ds_4mb"/>
 
-## Remarks
+<a name="loio86898fa1ad8546c58b0dfa704077a491__section_apt_n5q_dzb"/>
 
-You cannot drop a procedure that is in use by another connection.
+## Side Effects
+
+-   Automatic commit. Clears the Data window in dbisql.
+
+
+
+<a name="loio86898fa1ad8546c58b0dfa704077a491__section_akl_45q_dzb"/>
+
+## Examples
+
+This example drops a procedure called myprocedure1.
+
+```
+DROP PROCEDURE myprocedure1;
+```
 
 **Related Information**  
 
@@ -107,5 +131,5 @@ You cannot drop a procedure that is in use by another connection.
 
 [CREATE PROCEDURE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-procedure-statement-for-data-lake-relational-engine-sap-hana-db-managed-d172ce3.md "Creates a new user-defined SQL procedure in the database.")
 
-[DROP Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a61c216b84f21015baa181c153419bbb.html "Removes objects from the database.") :arrow_upper_right:
+[DROP PROCEDURE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/bf9d79062d4b43c0aaefba8222c8421d.html "Removes a user-defined procedure from the database.") :arrow_upper_right:
 

@@ -10,6 +10,8 @@ The effect of an index preference hint is the same as that of the `INDEX_PREFERE
 
 
 
+## Example
+
 The following example specifies a 3 percent selectivity and indicates that, if possible, the condition should be evaluated using an HG index:
 
 ```
@@ -20,6 +22,8 @@ WHERE (o.SalesRepresentative > 1000.0, 'S:3.00, I:+2')
 ```
 
 
+
+## Example
 
 The next example specifies a 37.5 percent selectivity and indicates that if possible the condition should not be evaluated using an HG index:
 

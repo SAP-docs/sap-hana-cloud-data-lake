@@ -21,28 +21,20 @@ These tables show the three-valued logic.
 
 AND
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 TRUE
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
 FALSE
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 UNKNOWN
-
-
 
 </th>
 </tr>
@@ -51,28 +43,20 @@ UNKNOWN
 
 TRUE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 TRUE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 FALSE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNKNOWN
-
-
 
 </td>
 </tr>
@@ -81,28 +65,20 @@ UNKNOWN
 
 FALSE
 
+</td>
+<td valign="top" rowspan="1">
 
+FALSE
 
 </td>
 <td valign="top" rowspan="1">
 
 FALSE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 FALSE
-
-
-
-</td>
-<td valign="top" rowspan="1">
-
-FALSE
-
-
 
 </td>
 </tr>
@@ -111,28 +87,20 @@ FALSE
 
 UNKNOWN
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNKNOWN
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 FALSE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNKNOWN
-
-
 
 </td>
 </tr>
@@ -151,28 +119,20 @@ UNKNOWN
 
 OR
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 TRUE
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
 FALSE
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 UNKNOWN
-
-
 
 </th>
 </tr>
@@ -181,28 +141,20 @@ UNKNOWN
 
 TRUE
 
+</td>
+<td valign="top" rowspan="1">
 
+TRUE
 
 </td>
 <td valign="top" rowspan="1">
 
 TRUE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 TRUE
-
-
-
-</td>
-<td valign="top" rowspan="1">
-
-TRUE
-
-
 
 </td>
 </tr>
@@ -211,28 +163,20 @@ TRUE
 
 FALSE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 TRUE
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 FALSE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNKNOWN
-
-
 
 </td>
 </tr>
@@ -241,28 +185,20 @@ UNKNOWN
 
 UNKNOWN
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 TRUE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNKNOWN
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNKNOWN
-
-
 
 </td>
 </tr>
@@ -281,21 +217,15 @@ UNKNOWN
 
 TRUE
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 FALSE
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 UNKNOWN
-
-
 
 </th>
 </tr>
@@ -304,21 +234,15 @@ UNKNOWN
 
 FALSE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 TRUE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 UNKNOWN
-
-
 
 </td>
 </tr>
@@ -337,29 +261,21 @@ UNKNOWN
 
 IS
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 TRUE
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 FALSE
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
 UNKNOWN
 
-
-
 </th>
 </tr>
 <tr>
@@ -367,28 +283,20 @@ UNKNOWN
 
 TRUE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 TRUE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 FALSE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 FALSE
-
-
 
 </td>
 </tr>
@@ -397,28 +305,20 @@ FALSE
 
 FALSE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 FALSE
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 TRUE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 FALSE
-
-
 
 </td>
 </tr>
@@ -427,28 +327,20 @@ FALSE
 
 UNKNOWN
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 FALSE
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 FALSE
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 TRUE
-
-
 
 </td>
 </tr>

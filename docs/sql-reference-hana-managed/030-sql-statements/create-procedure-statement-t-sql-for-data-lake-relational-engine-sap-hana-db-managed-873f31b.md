@@ -6,14 +6,12 @@ Creates a new procedure that is compatible with SAP Adaptive Server Enterprise.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -26,7 +24,7 @@ CREATE [ OR REPLACE ] PROCEDURE <schema-name>.]<procedure-name>
    … [ [ ( ] <@parameter_name> <data-type> [ = <default> ] [ OUTPUT ] [ , … ] [ ) ] ]
    … [ WITH RECOMPILE ]
    … AS
-   … <statement-list>
+   … <statement-list>;
 ```
 
 
@@ -135,7 +133,7 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
 
 </b></dt>
 <dd>
@@ -143,7 +141,10 @@ Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
 
 
 
@@ -153,8 +154,6 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 
 </b></dt>
 <dd>
-
-Requires one of:
 
 -   To create a self owned procedures requires the CREATE PROCEDURE system privilege.
 -   To create a procedure owned by another user requires one of:
@@ -171,7 +170,7 @@ Requires one of:
 
 
 
-For information on using a procedure that is created when connected as a data lake Relational Engine user, see [User-Defined Procedures in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/44dbf05fa907437b9145f1541cdbb920.html "User-defined procedures perform one or more specific tasks in data lake Relational Engine.") :arrow_upper_right:.
+For information on using a procedure that is created when connected as a data lake Relational Engine user, see [User-Defined Procedures in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/44dbf05fa907437b9145f1541cdbb920.html "User-defined procedures perform one or more specific tasks in data lake Relational Engine.") :arrow_upper_right:.
 
 
 
@@ -198,5 +197,5 @@ Automatic commit
 **Related Information**  
 
 
-[CREATE PROCEDURE Statement [T-SQL] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a618891584f210158ae1b5a5cdce0a34.html "Creates a new procedure that is compatible with SAP Adaptive Server Enterprise.") :arrow_upper_right:
+[CREATE PROCEDURE Statement \[T-SQL\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a618891584f210158ae1b5a5cdce0a34.html "Creates a new procedure that is compatible with SAP Adaptive Server Enterprise.") :arrow_upper_right:
 

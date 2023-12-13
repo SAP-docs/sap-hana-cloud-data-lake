@@ -7,7 +7,7 @@ Converts all characters in a string to uppercase.
 
 
 ```
-UPPER ( <string-expression> )
+UPPER ( <string-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The string to be converted to uppercase.
 
 <a name="loio10843333345b407694db50383c73a083__section_k2p_tgv_vrb"/>
 
-## Returns
+## Result Set
 
 -   LONG NVARCHAR
 -   LONG VARCHAR
@@ -64,11 +64,11 @@ The string to be converted to uppercase.
 The following statement returns the value “CHOCOLATE”:
 
 ```
-SELECT UPPER( 'ChocoLate' ) FROM iq_dummy
+SELECT UPPER( 'ChocoLate' ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[UPPER Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a58cbc0284f21015ac14f5baa190b878.html "Converts all characters in a string to uppercase.") :arrow_upper_right:
+[UPPER Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a58cbc0284f21015ac14f5baa190b878.html "Converts all characters in a string to uppercase.") :arrow_upper_right:
 

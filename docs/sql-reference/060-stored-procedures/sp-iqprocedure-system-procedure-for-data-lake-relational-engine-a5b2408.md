@@ -6,15 +6,18 @@ Displays information about system and user-defined procedures.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5b2408984f21015a45eae4a5eaef8e7__section_p4t_vqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqprocedure [ <proc-name> ], [ <proc-owner> ], [ <proc-type> ]
+sp_iqprocedure [ <proc-name> ], [ <proc-owner> ], [ <proc-type> ];
 ```
 
 
@@ -69,7 +72,7 @@ sp_iqprocedure [ <proc-name> ], [ <proc-owner> ], [ <proc-type> ]
 
 <a name="loioa5b2408984f21015a45eae4a5eaef8e7__sp_iqprocedure_returns1"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -78,14 +81,10 @@ sp_iqprocedure [ <proc-name> ], [ <proc-owner> ], [ <proc-type> ]
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -94,14 +93,10 @@ Description
 
 proc\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the procedure.
-
-
 
 </td>
 </tr>
@@ -110,14 +105,10 @@ The name of the procedure.
 
 proc\_owner
 
-
-
 </td>
 <td valign="top">
 
 The owner of the procedure.
-
-
 
 </td>
 </tr>
@@ -126,14 +117,10 @@ The owner of the procedure.
 
 proc\_defn
 
-
-
 </td>
 <td valign="top">
 
 The command used to create the procedure. For hidden procedures, the keyword 'HIDDEN' is displayed.
-
-
 
 </td>
 </tr>
@@ -142,14 +129,10 @@ The command used to create the procedure. For hidden procedures, the keyword 'HI
 
 replicate
 
-
-
 </td>
 <td valign="top">
 
 Displays Y if the procedure is a primary data source in a Replication Server installation; N if not.
-
-
 
 </td>
 </tr>
@@ -158,14 +141,10 @@ Displays Y if the procedure is a primary data source in a Replication Server ins
 
 srvid
 
-
-
 </td>
 <td valign="top">
 
 Indicates the remote server, if the procedure is on a remote database server.
-
-
 
 </td>
 </tr>
@@ -174,14 +153,10 @@ Indicates the remote server, if the procedure is on a remote database server.
 
 remarks
 
-
-
 </td>
 <td valign="top">
 
 A comment string
-
-
 
 </td>
 </tr>
@@ -204,14 +179,10 @@ If you do not specify either of the first two parameters, but specify the next p
 
 Syntax
 
-
-
 </th>
 <th valign="top">
 
 Output
-
-
 
 </th>
 </tr>
@@ -220,14 +191,10 @@ Output
 
 sp\_iqprocedure
 
-
-
 </td>
 <td valign="top">
 
 Displays information about all procedures in the database not owned by dbo or SYS.
-
-
 
 </td>
 </tr>
@@ -236,14 +203,10 @@ Displays information about all procedures in the database not owned by dbo or SY
 
 sp\_iqprocedure sp\_test
 
-
-
 </td>
 <td valign="top">
 
 Displays information about the procedure sp\_test.
-
-
 
 </td>
 </tr>
@@ -252,14 +215,10 @@ Displays information about the procedure sp\_test.
 
 sp\_iqprocedure non\_existing\_proc
 
-
-
 </td>
 <td valign="top">
 
 No rows returned, as the procedure non\_existing\_proc does not exist.
-
-
 
 </td>
 </tr>
@@ -268,14 +227,10 @@ No rows returned, as the procedure non\_existing\_proc does not exist.
 
 sp\_iqprocedure NULL, HDLADMIN
 
-
-
 </td>
 <td valign="top">
 
 Displays information about all procedures owned by HDLADMIN.
-
-
 
 </td>
 </tr>
@@ -284,14 +239,10 @@ Displays information about all procedures owned by HDLADMIN.
 
 sp\_iqprocedure sp\_test, HDLADMIN
 
-
-
 </td>
 <td valign="top">
 
 Displays information about the procedure sp\_test owned by HDLADMIN.
-
-
 
 </td>
 </tr>
@@ -300,14 +251,10 @@ Displays information about the procedure sp\_test owned by HDLADMIN.
 
 sp\_iqprocedure sp\_iqtable
 
-
-
 </td>
 <td valign="top">
 
 The procedure sp\_iqtable is not a system procedure. If there is no user-defined procedure also named sp\_iqtable, no rows are returned \(by default only user-defined procedures are returned\).
-
-
 
 </td>
 </tr>
@@ -316,14 +263,10 @@ The procedure sp\_iqtable is not a system procedure. If there is no user-defined
 
 sp\_iqprocedure sp\_iqtable, dbo
 
-
-
 </td>
 <td valign="top">
 
 No rows returned, as the procedure sp\_iqtable is not a user procedure \(by default only user procedures returned\).
-
-
 
 </td>
 </tr>
@@ -332,14 +275,10 @@ No rows returned, as the procedure sp\_iqtable is not a user procedure \(by defa
 
 sp\_iqprocedure NULL, NULL, SYSTEM
 
-
-
 </td>
 <td valign="top">
 
 Displays information about all system procedures \(owned by dbo or SYS\).
-
-
 
 </td>
 </tr>
@@ -348,14 +287,10 @@ Displays information about all system procedures \(owned by dbo or SYS\).
 
 sp\_iqprocedure sp\_iqtable, NULL, SYSTEM
 
-
-
 </td>
 <td valign="top">
 
 Displays information about the system procedure sp\_iqtable.
-
-
 
 </td>
 </tr>
@@ -364,14 +299,10 @@ Displays information about the system procedure sp\_iqtable.
 
 sp\_iqprocedure sp\_iqtable, dbo, ALL
 
-
-
 </td>
 <td valign="top">
 
 Displays information about the system procedure sp\_iqtable owned by dbo.
-
-
 
 </td>
 </tr>
@@ -403,7 +334,7 @@ None
 
 <a name="loioa5b2408984f21015a45eae4a5eaef8e7__sp_iqprocedure_examples1"/>
 
-## Example
+## Examples
 
 -   Displays information about the user-defined procedure sp\_test:
 
@@ -423,7 +354,7 @@ None
 -   Displays information about all procedures owned by user HDLADMIN:
 
     ```
-    sp_iqprocedure NULL, HDLADMIN
+    sp_iqprocedure NULL, HDLADMIN;
     ```
 
     ```

@@ -7,7 +7,7 @@ Returns whether or not you can maintain historical data for the specified databa
 
 
 ```
-PROPERTY_IS_TRACKABLE( <property-ID> )
+PROPERTY_IS_TRACKABLE( <property-ID> );
 ```
 
 
@@ -18,7 +18,7 @@ PROPERTY_IS_TRACKABLE( <property-ID> )
 <dl>
 <dt><b>
 
- *<property-ID\>* 
+*<property-ID\>* 
 
 </b></dt>
 <dd>
@@ -32,7 +32,7 @@ The PropNum of the database server property. You can find the PropNum of the dat
 
 
 
-## Returns
+## Result Set
 
 1 if the database server property can be tracked; otherwise, returns 0.
 
@@ -43,6 +43,8 @@ The PropNum of the database server property. You can find the PropNum of the dat
 Only database properties that return a numeric value can be tracked.
 
 
+
+## Example
 
 The following example returns all database server properties that are trackable:
 

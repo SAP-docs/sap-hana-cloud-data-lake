@@ -11,7 +11,7 @@ Changes the values of the records of a table.
 ## Syntax
 
 ```
-UPDATE [ <top_clause> ] <hana_relational_container_schema_name>.<virtual_table_name>
+UPDATE [ <top_clause> ] <hana_relational_container_schema>.<virtual_table_name>
    <set_clause>
    [ WHERE <condition> ]
    [ <hint_clause> ]
@@ -44,7 +44,7 @@ Limits the number of updated records \(for example, for chunkwise updates\).
 
 </dd><dt><b>
 
-*<hana\_relational\_container\_schema\_name\>*
+*<hana\_relational\_container\_schema\>*
 
 </b></dt>
 <dd>
@@ -156,14 +156,10 @@ SELECT * FROM SYSHDL_CONTAINER1.V_T1;
 
 KEY
 
-
-
 </td>
 <td valign="top">
 
 VAL
-
-
 
 </td>
 </tr>
@@ -172,14 +168,10 @@ VAL
 
 1
 
-
-
 </td>
 <td valign="top">
 
 2
-
-
 
 </td>
 </tr>
@@ -188,14 +180,10 @@ VAL
 
 2
 
-
-
 </td>
 <td valign="top">
 
 2
-
-
 
 </td>
 </tr>
@@ -215,14 +203,10 @@ SELECT * FROM SYSHDL_CONTAINER1.V_T1;
 
 KEY
 
-
-
 </td>
 <td valign="top">
 
 VAL
-
-
 
 </td>
 </tr>
@@ -231,14 +215,10 @@ VAL
 
 1
 
-
-
 </td>
 <td valign="top">
 
 11
-
-
 
 </td>
 </tr>
@@ -247,14 +227,10 @@ VAL
 
 2
 
-
-
 </td>
 <td valign="top">
 
 12
-
-
 
 </td>
 </tr>

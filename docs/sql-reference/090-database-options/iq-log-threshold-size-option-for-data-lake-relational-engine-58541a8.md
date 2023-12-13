@@ -6,8 +6,11 @@ Configures the log file threshold for point-in-time recovery. This value is an i
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loio58541a8a86224f35aa307db1d9b53e69__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

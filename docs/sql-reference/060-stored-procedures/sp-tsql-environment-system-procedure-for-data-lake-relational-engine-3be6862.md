@@ -6,16 +6,35 @@ Sets connection options when users connect from jConnect or Open Client applicat
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be686266c5f1014ad21c9c116ab5a77__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_tsql_environment( )
+sp_tsql_environment( );
 ```
+
+
+
+<a name="loio3be686266c5f1014ad21c9c116ab5a77__section_p5s_lbj_yyb"/>
+
+## Parameters
+
+None
+
+
+
+<a name="loio3be686266c5f1014ad21c9c116ab5a77__section_hys_lnv_xyb"/>
+
+## Result Set
+
+None
 
 
 
@@ -63,9 +82,11 @@ None
 
 
 
+## Example
+
 The example below calls the sp\_tsql\_environment procedure:
 
 ```
-CALL dbo.sp_tsql_environment();
+CALL sp_tsql_environment();
 ```
 

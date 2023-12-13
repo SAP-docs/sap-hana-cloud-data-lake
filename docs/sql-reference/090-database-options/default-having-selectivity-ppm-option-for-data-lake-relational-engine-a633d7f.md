@@ -6,8 +6,11 @@ Provides default selectivity estimates to the optimizer for most HAVING clauses 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa633d7fb84f21015bfdcb8e97b696f63__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

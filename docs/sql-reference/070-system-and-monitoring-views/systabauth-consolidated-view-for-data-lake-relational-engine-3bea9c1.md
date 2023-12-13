@@ -6,10 +6,13 @@ The SYSTABAUTH view contains information from the SYSTABLEPERM system view, but 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bea9c196c5f1014a33693e35a35c2b1__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -31,6 +34,6 @@ ALTER VIEW "SYS"."SYSTABAUTH"( grantor,
       join SYS.ISYSTAB as tab1 on tab1.table_id = tp.stable_id
       join SYS.ISYSUSER as u3 on u3.user_id = tab1.creator
       join SYS.ISYSTAB as tab2 on tab2.table_id = tp.stable_id
-      join SYS.ISYSUSER as u4 on u4.user_id = tab2.creator
+      join SYS.ISYSUSER as u4 on u4.user_id = tab2.creator;
 ```
 

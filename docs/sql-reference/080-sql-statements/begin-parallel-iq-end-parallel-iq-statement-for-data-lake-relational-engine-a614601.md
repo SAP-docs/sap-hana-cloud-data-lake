@@ -6,16 +6,19 @@ Groups `CREATE INDEX` statements together for execution at the same time.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa614601884f21015b474d353173fad17__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 ... BEGIN PARALLEL IQ <statement-list>
-... END PARALLEL IQ
+... END PARALLEL IQ;
 ```
 
 
@@ -104,7 +107,7 @@ END PARALLEL IQ
 **Related Information**  
 
 
-[BEGIN PARALLEL IQ … END PARALLEL IQ Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/6632c2b487bf49449b7652a9e3bce605.html "Groups CREATE INDEX statements together for execution at the same time.") :arrow_upper_right:
+[BEGIN PARALLEL IQ … END PARALLEL IQ Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/6632c2b487bf49449b7652a9e3bce605.html "Groups CREATE INDEX statements together for execution at the same time.") :arrow_upper_right:
 
 [CREATE INDEX Statement for Data Lake Relational Engine](create-index-statement-for-data-lake-relational-engine-a617ca4.md "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.")
 

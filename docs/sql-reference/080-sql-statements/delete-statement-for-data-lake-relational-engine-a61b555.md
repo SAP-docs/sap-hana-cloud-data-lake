@@ -6,10 +6,13 @@ Deletes all the rows from the named table that satisfy the search condition. If 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61b555884f21015bfb8d2d61d09b74c__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -24,7 +27,7 @@ DELETE
 <table-expression> ::=
    { <table-spec> 
    | <table-expression join-type table-spec> [ ON <condition> ] 
-   | <table-expression>, ... }
+   | <table-expression>, ... };
 ```
 
 
@@ -91,7 +94,7 @@ There is a potential ambiguity in table names in DELETE statements when the FROM
 DELETE
 FROM table_1
 FROM table_1 AS alias_1, table_2 AS alias_2
-WHERE ...
+WHERE ...;
 ```
 
 table\_1 is identified without a correlation name in the first FROM clause, but with a correlation name in the second FROM clause. The use of a correlation name for table\_1 in the second FROM clause ensures that only one instance of table\_1 exists in the statement. This is an exception to the general rule that where the same table is identified with and without a correlation name in the same statement, two instances of the table are considered.
@@ -102,7 +105,7 @@ Now consider this example:
 DELETE
 FROM table_1
 FROM table_1 AS alias_1, table_1 AS alias_2
-WHERE ...
+WHERE ...;
 ```
 
 There are two instances of table\_1 in the second FROM clause. Since there is no way to identify which instance the first FROM clause should be identified with, the general rule of correlation names means that table\_1 in the first FROM clause is identified with neither instance of table\_1 in the second clause: there are three instances of table\_1 in the statement.
@@ -146,7 +149,7 @@ See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](gra
     ```
     DELETE
     FROM Employees
-    WHERE EmployeeID = 105
+    WHERE EmployeeID = 105;
     ```
 
 -   The following example removes all data prior to 1993 from the FinancialData table:
@@ -154,7 +157,7 @@ See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](gra
     ```
     DELETE
     FROM FinancialData
-    WHERE Year < 1993
+    WHERE Year < 1993;
     ```
 
 -   The following example removes all names from the Contacts table if they are already present in the Customers table:
@@ -164,7 +167,7 @@ See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](gra
     FROM Contacts
     FROM Contacts, Customers
     WHERE Contacts.Surname = Customers.Surname
-    AND Contacts.GivenName = Customers.GivenName
+    AND Contacts.GivenName = Customers.GivenName;
     ```
 
 
@@ -177,7 +180,7 @@ See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](gra
 
 [TRUNCATE Statement for Data Lake Relational Engine](truncate-statement-for-data-lake-relational-engine-a627e60.md "Deletes all rows from a table or materialized view without deleting the table definition.")
 
-[DELETE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/c2f536c346c44911be3623014bc53910.html "Deletes all the rows from the named table that satisfy the search condition. If no WHERE clause is specified, all rows from the named table are deleted.") :arrow_upper_right:
+[DELETE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/c2f536c346c44911be3623014bc53910.html "Deletes all the rows from the named table that satisfy the search condition. If no WHERE clause is specified, all rows from the named table are deleted.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

@@ -13,14 +13,10 @@ Use the BIT data type for storing Boolean values.
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -28,8 +24,6 @@ Description
 <td valign="top">
 
 BIT
-
-
 
 </td>
 <td valign="top">
@@ -44,8 +38,6 @@ When converting a string to a BIT, leading and trailing spaces are removed. If t
 
 Only the default index type is supported for BIT data.
 
-
-
 </td>
 </tr>
 <tr>
@@ -53,16 +45,12 @@ Only the default index type is supported for BIT data.
 
 BOOLEAN
 
-
-
 </td>
 <td valign="top">
 
 BOOLEAN is a synonym of BIT, not a native data type.
 
 The underlying data type is BIT and the default nullability is NULL.
-
-
 
 </td>
 </tr>

@@ -6,17 +6,18 @@ Groups SQL statements together.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+<a name="loiocfaf187bc70744e192136ee62c3b65b6__section_ahh_bpq_wwb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
 
 
 
 ```
-[ <statement-label> : ]
+[ <statement-label> : ];
         … BEGIN [ [ NOT ] ATOMIC ]
         … [ <local-declaration> ; … ]
         … <statement-list>
@@ -25,7 +26,7 @@ Groups SQL statements together.
 ```
 
 ```
-<local-declaration> ::=
+<local-declaration> ::=;
         { <variable-declaration> 
         | <cursor-declaration> 
         | <exception-declaration> 
@@ -33,13 +34,13 @@ Groups SQL statements together.
 ```
 
 ```
-<variable-declaration> ::=
+<variable-declaration> ::=;
         DECLARE <variable-name> [ , … ] <data-type> 
         [{ = | DEFAULT} <initial-value> ]
 ```
 
 ```
-<initial-value> ::=
+<initial-value> ::=;
         { <special-value> 
         | <string> 
         | [ - ] <number> 
@@ -49,7 +50,7 @@ Groups SQL statements together.
 ```
 
 ```
-<special-value> ::=
+<special-value> ::=;
    { CURRENT { DATABASE 
              | DATE 
              | PUBLISHER 
@@ -120,10 +121,27 @@ An atomic statement is a statement executed completely or not at all. For exampl
 
 ### 
 
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
+
+
+</dd>
+</dl>
 
 
 
@@ -190,5 +208,5 @@ CREATE PROCEDURE TopCustomer (OUT TopCompany CHAR(35), OUT TopValue INT)
 **Related Information**  
 
 
-[BEGIN … END Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a6142def84f2101591f2a40a1dd6cb20.html "Groups SQL statements together.") :arrow_upper_right:
+[BEGIN … END Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a6142def84f2101591f2a40a1dd6cb20.html "Groups SQL statements together.") :arrow_upper_right:
 

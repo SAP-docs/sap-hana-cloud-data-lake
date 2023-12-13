@@ -7,7 +7,7 @@ Returns the variance of a set of numbers.
 
 
 ```
-VARIANCE ( [ ALL ] <expression> )
+VARIANCE ( [ ALL ] <expression> );
 ```
 
 
@@ -38,7 +38,7 @@ The expression \(commonly a column name\) whose sample-based variance is calcula
 
 <a name="loio974f709b109d4fb1bfe049dc4b05d7de__section_rxb_52v_vrb"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -74,7 +74,7 @@ The formula used to calculate `VARIANCE` is
 -   Given this data:
 
     ```
-    SELECT Salary FROM Employees WHERE DepartmentID = 300
+    SELECT Salary FROM Employees WHERE DepartmentID = 300;
     ```
 
 
@@ -83,89 +83,69 @@ The formula used to calculate `VARIANCE` is
     <th valign="top" rowspan="1">
 
           salary
-
-
     
     </th>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-         51432.000
-
-
+     51432.000
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-         57090.000
-
-
+     57090.000
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-         42300.000
-
-
+     42300.000
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-           43700.00
-
-
+       43700.00
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-          36500.000
-
-
+      36500.000
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        138948.000
-
-
+    138948.000
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-          31200.000
-
-
+      31200.000
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-            58930.00
-
-
+        58930.00
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-            75400.00
-
-
+        75400.00
     
     </td>
     </tr>
@@ -175,13 +155,13 @@ The formula used to calculate `VARIANCE` is
 
     ```
     SELECT VARIANCE ( Salary ) FROM Employees
-    WHERE DepartmentID = 300
+    WHERE DepartmentID = 300;
     ```
 
 -   Given this data:
 
     ```
-    SELECT UnitPrice FROM Products WHERE name = 'Tee Shirt'
+    SELECT UnitPrice FROM Products WHERE name = 'Tee Shirt';
     ```
 
 
@@ -190,35 +170,27 @@ The formula used to calculate `VARIANCE` is
     <th valign="top" rowspan="1">
 
     UnitPrice
-
-
     
     </th>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-                    9.00
-
-
+                9.00
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-                  14.00
-
-
+              14.00
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-                  14.00
-
-
+              14.00
     
     </td>
     </tr>
@@ -228,12 +200,12 @@ The formula used to calculate `VARIANCE` is
 
     ```
     SELECT VARIANCE ( UnitPrice ) FROM Products
-    WHERE name = 'Tee Shirt'
+    WHERE name = 'Tee Shirt';
     ```
 
 
 **Related Information**  
 
 
-[VARIANCE Function [Aggregate] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a58fdc8684f210158b82f182e03b637a.html "Returns the variance of a set of numbers.") :arrow_upper_right:
+[VARIANCE Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a58fdc8684f210158b82f182e03b637a.html "Returns the variance of a set of numbers.") :arrow_upper_right:
 

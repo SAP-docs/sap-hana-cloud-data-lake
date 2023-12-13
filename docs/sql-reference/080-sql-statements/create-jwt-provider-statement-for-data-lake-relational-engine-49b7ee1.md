@@ -6,15 +6,18 @@ Defines a JWT provider in the data lake Relational Engine database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio49b7ee108b7b40f880f936b940e2b037__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-CREATE JWT PROVIDER <jwt_provider_name> <issuer_clause> <claims_clause> [ <priority_clause> ]
+CREATE JWT PROVIDER <jwt_provider_name> <issuer_clause> <claims_clause> [ <priority_clause> ];
 ```
 
 
@@ -40,7 +43,7 @@ CREATE JWT PROVIDER <jwt_provider_name> <issuer_clause> <claims_clause> [ <prior
 Specifies the identifier of a JWT provider to be created. The JWT provider name must not already be defined.
 
 ```
-<jwt_provider_name> ::= <simple_identifier>
+<jwt_provider_name> ::= <simple_identifier>;
 ```
 
 
@@ -55,7 +58,7 @@ Specifies the identifier of a JWT provider to be created. The JWT provider name 
 Specifies the issuer name. Tokens with an "iss" claim matching this name are mapped to this JWT provider.
 
 ```
-<issuer_clause> ::= WITH ISSUER <sting_literal>
+<issuer_clause> ::= WITH ISSUER <sting_literal>;
 ```
 
 
@@ -69,7 +72,7 @@ Specifies the issuer name. Tokens with an "iss" claim matching this name are map
 
 ```
 <claims_clause> ::= 
-   { <external_id_clause> | <claim_compare_clause> } [ <claims_clause> ]
+   { <external_id_clause> | <claim_compare_clause> } [ <claims_clause> ];
 ```
 
 
@@ -99,7 +102,7 @@ Adds a claim that must be verified in JWT token which represents external identi
 A claim can only be used for one compare operation, either = or HAS MEMBER. Claim and value comparisons are case-sensitive.
 
 ```
-<claim_compare_clause> ::= { <claim_equals_clause> | <claim_has_member_clause> }
+<claim_compare_clause> ::= { <claim_equals_clause> | <claim_has_member_clause> };
 ```
 
 
@@ -117,7 +120,7 @@ A claim can only be used for one compare operation, either = or HAS MEMBER. Clai
 <claim_equals_clause> ::= CLAIM <claim_name> = <claim_value>
 
 <claim_name> ::= <string_literal>
-<claim_value> ::= <string_literal>
+<claim_value> ::= <string_literal>;
 ```
 
 
@@ -135,7 +138,7 @@ A claim can only be used for one compare operation, either = or HAS MEMBER. Clai
 <claim_has_member_clause> ::= CLAIM <claim_name> HAS MEMBER <claim_value>
 
 <claim_name> ::= <string_literal>
-<claim_value> ::= <string_literal>
+<claim_value> ::= <string_literal>;
 ```
 
 
@@ -160,7 +163,7 @@ A claim can only be used for one compare operation, either = or HAS MEMBER. Clai
 Sets priority for a provider entry to allow existence of multiple providers with the same issuer. The default value is 100.
 
 ```
-<priority_clause> ::= PRIORITY <number>
+<priority_clause> ::= PRIORITY <number>;
 ```
 
 *<number\>* is a value between 1-250.
@@ -190,13 +193,13 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 CREATE JWT PROVIDER my_jwt_provider WITH ISSUER 'http://example.com:8080/uaa/oauth/token' 
  CLAIM 'sub' AS EXTERNAL IDENTITY
  CLAIM 'origin' = 'http://example.com/'
- CLAIM 'aud' HAS MEMBER 'app1'
+ CLAIM 'aud' HAS MEMBER 'app1';
 ```
 
 **Related Information**  
 
 
-[JSON Web Token User Authentication](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_2_QRC/en-US/90d07ffd877e4b3db69b66c2e585e2e0.html "Data lake Relational Engine supports JSON Web Tokens (JWT) for user authentication.") :arrow_upper_right:
+[JSON Web Token User Authentication](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/90d07ffd877e4b3db69b66c2e585e2e0.html "Data lake Relational Engine supports JSON Web Tokens (JWT) for user authentication.") :arrow_upper_right:
 
 [ALTER JWT PROVIDER Statement for Data Lake Relational Engine](alter-jwt-provider-statement-for-data-lake-relational-engine-f6b0a31.md "Alters a JWT provider in the data lake Relational Engine database.")
 
@@ -206,7 +209,7 @@ CREATE JWT PROVIDER my_jwt_provider WITH ISSUER 'http://example.com:8080/uaa/oau
 
 [SYSJWTPROVIDERCMPCLAIMS System View for Data Lake Relational Engine](../070-system-and-monitoring-views/sysjwtprovidercmpclaims-system-view-for-data-lake-relational-engine-765761f.md "Lists claims set in JWT providers. The underlying system table for this view is ISYSJWTPROVIDERCMPCLAIMS.")
 
-[DROP JWT PROVIDER Statement for Data Lake Relational Engine](drop-jwt-provider-statement-for-data-lake-relational-engine-c20d71c.md "Drops a JWT provider from the data lake Relational Engine database.")
+[DROP PROVIDER Statement for Data Lake Relational Engine](drop-provider-statement-for-data-lake-relational-engine-c20d71c.md "Drops a JWT or x509 provider from the data lake Relational Engine database.")
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

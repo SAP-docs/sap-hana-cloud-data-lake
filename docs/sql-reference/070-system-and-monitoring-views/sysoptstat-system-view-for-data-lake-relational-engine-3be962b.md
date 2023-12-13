@@ -6,10 +6,13 @@ The SYSOPTSTAT system view stores the cost model calibration information as comp
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be962b56c5f10148abcef42e20b1126__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ The SYSOPTSTAT system view stores the cost model calibration information as comp
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 stat\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For system use only.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ For system use only.
 
 group\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For system use only.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ For system use only.
 
 format\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 For system use only.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ For system use only.
 
 data
 
-
-
 </td>
 <td valign="top">
 
 LONG BINARY
 
-
-
 </td>
 <td valign="top">
 
 For system use only.
-
-
 
 </td>
 </tr>

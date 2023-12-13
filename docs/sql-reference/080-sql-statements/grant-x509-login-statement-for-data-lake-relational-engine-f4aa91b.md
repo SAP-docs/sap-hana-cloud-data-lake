@@ -6,15 +6,18 @@ Maps one or more mappings between external identities from user certificates and
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loiof4aa91b2fcd44656927bb92fbc2980d4__section_xv3_wvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-GRANT X509 LOGIN TO { <external_identity> | ANY } FOR PROVIDER <x509_provider_name> AS USER <userid>
+GRANT X509 LOGIN TO { <external_identity> | ANY } FOR PROVIDER <x509_provider_name> AS USER <userid>;
 ```
 
 
@@ -40,7 +43,7 @@ GRANT X509 LOGIN TO { <external_identity> | ANY } FOR PROVIDER <x509_provider_na
 Specifies the external identity to map to the data lake Relational Engine user.
 
 ```
-<external_identity> ::= <string_literal>
+<external_identity> ::= <string_literal>;
 ```
 
 
@@ -55,7 +58,7 @@ Specifies the external identity to map to the data lake Relational Engine user.
 Specifies the existing X.509 provider to use for authentication.
 
 ```
-<x509_provider_name> ::= <simple_identifier>
+<x509_provider_name> ::= <simple_identifier>;
 ```
 
 
@@ -70,7 +73,7 @@ Specifies the existing X.509 provider to use for authentication.
 Specifies the existing data lake Relational Engine user to which the external identities are mapped.
 
 ```
-<userid> ::= <simple_identifier>
+<userid> ::= <simple_identifier>;
 ```
 
 

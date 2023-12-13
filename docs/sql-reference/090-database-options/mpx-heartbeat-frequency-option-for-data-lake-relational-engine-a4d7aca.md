@@ -6,8 +6,11 @@ Interval until the heartbeat thread wakes and performs periodic operations, such
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa4d7acaa84f210159549ee418f1e895a__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

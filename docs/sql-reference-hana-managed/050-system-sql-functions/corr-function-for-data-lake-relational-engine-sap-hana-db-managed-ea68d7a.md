@@ -16,7 +16,7 @@ Syntax 1
 <dd>
 
 ```
-CORR ( <dependent-expression>, <independent-expression> )
+CORR ( <dependent-expression>, <independent-expression> );
 ```
 
 
@@ -30,7 +30,7 @@ Syntax 2
 
 ```
 CORR ( <dependent-expression>, <independent-expression> )
-OVER ( <window-spec> )
+OVER ( <window-spec> );
 ```
 
 
@@ -86,7 +86,7 @@ Specified when using this function as a window function.
 
 <a name="loioea68d7a3796040bf9adb352e0756650e__section_brv_4ql_srb"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -101,7 +101,7 @@ The `CORR` function converts its arguments to DOUBLE, performs the computation i
 Both *<dependent-expression\>* and *<independent-expression\>* are numeric. The function is applied to the set of \(*<dependent-expression\>*, *<independent-expression\>*\) after eliminating the pairs for which either *<dependent-expression\>* or *<independent-expression\>* is NULL. The following computation is made, where *<x\>* represents the *<dependent-expression\>* and *<y\>* represents the *<independent-expression\>*:
 
 ```
-COVAR_POP (y, x) / (STDDEV_POP (x) * STDDEV_POP (y))
+COVAR_POP (y, x) / (STDDEV_POP (x) * STDDEV_POP (y));
 ```
 
 > ### Note:  
@@ -134,5 +134,5 @@ SELECT CORR( Salary, ( YEAR( NOW( ) ) - YEAR( BirthDate ) ) ) FROM Employees;
 
 [WINDOW Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/window-clause-for-data-lake-relational-engine-sap-hana-db-managed-c83b61b.md "Defines all or part of a window for use with window functions such as AVG and RANK in a SELECT statement.")
 
-[CORR Function [Aggregate] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a53fefea84f21015a7ac9e118cc9795c.html "Returns the correlation coefficient of a set of number pairs.") :arrow_upper_right:
+[CORR Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a53fefea84f21015a7ac9e118cc9795c.html "Returns the correlation coefficient of a set of number pairs.") :arrow_upper_right:
 

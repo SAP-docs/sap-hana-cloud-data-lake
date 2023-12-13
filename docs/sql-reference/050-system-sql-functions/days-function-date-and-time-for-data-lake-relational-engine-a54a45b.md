@@ -9,7 +9,7 @@ Returns the number of days since an arbitrary starting date, returns the number 
 ```
 DAYS ( <datetime-expression> )
   | ( <datetime-expression>, <datetime-expression> )
-  | ( <datetime-expression>, <integer-expression> )
+  | ( <datetime-expression>, <integer-expression> );
 ```
 
 
@@ -49,7 +49,7 @@ The number of days to be added to the *<datetime-expression\>*. If the *<integer
 
 <a name="loioa54a45b584f21015a4c2ab2c117fc738__DAYS_returns1"/>
 
-## Returns
+## Result Set
 
 INT when you specify two datetime expressions.
 
@@ -80,21 +80,21 @@ TIMESTAMP when the second argument you specify is an integer.
 -   The following statement returns the integer value 729948:
 
     ```
-    SELECT DAYS( '1998-07-13 06:07:12' ) FROM iq_dummy
+    SELECT DAYS( '1998-07-13 06:07:12' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the integer value -366, which is the difference between the two dates:
 
     ```
     SELECT DAYS( '1998-07-13 06:07:12',
-    '1997-07-12 10:07:12' ) FROM iq_dummy
+    '1997-07-12 10:07:12' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 1999-07-14:
 
     ```
     SELECT DAYS( CAST('1998-07-13' AS DATE ), 366 )
-    FROM iq_dummy
+    FROM iq_dummy;
     ```
 
 
@@ -103,5 +103,5 @@ TIMESTAMP when the second argument you specify is an integer.
 
 [CAST Function \[Data Type Conversion\] for Data Lake Relational Engine](cast-function-data-type-conversion-for-data-lake-relational-engine-a53996d.md "Returns the value of an expression converted to a supplied data type.")
 
-[DAYS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/80456cf5652446c4b1279d5fb21e21dd.html "Returns the number of days since an arbitrary starting date, returns the number of days between two specified dates, or adds the specified integer-expression number of days to a given date.") :arrow_upper_right:
+[DAYS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/80456cf5652446c4b1279d5fb21e21dd.html "Returns the number of days since an arbitrary starting date, returns the number of days between two specified dates, or adds the specified integer-expression number of days to a given date.") :arrow_upper_right:
 

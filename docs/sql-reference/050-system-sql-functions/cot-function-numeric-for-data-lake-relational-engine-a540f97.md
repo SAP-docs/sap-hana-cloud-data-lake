@@ -7,7 +7,7 @@ Returns the cotangent of a number, expressed in radians.
 
 
 ```
-COT ( <numeric-expression> )
+COT ( <numeric-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The angle, in radians.
 
 <a name="loioa540f97a84f21015bfc68a88c0565f03__COT_returns1"/>
 
-## Returns
+## Result Set
 
 This function converts its argument to DOUBLE, performs the computation in double-precision floating point, and returns a DOUBLE as the result. If the parameter is NULL, the result is NULL.
 
@@ -57,7 +57,7 @@ This function converts its argument to DOUBLE, performs the computation in doubl
 The following statement returns the value 1.74653:
 
 ```
-SELECT COT( 0.52 ) FROM iq_dummy
+SELECT COT( 0.52 ) FROM iq_dummy;
 ```
 
 **Related Information**  
@@ -65,5 +65,5 @@ SELECT COT( 0.52 ) FROM iq_dummy
 
 [Trigonometry Functions in Data Lake Relational Engine](trigonometry-functions-in-data-lake-relational-engine-caafd14.md "Some numeric functions return trigonometric information.")
 
-[COT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/efe32d94c2374ba4a64f6cac2dfe2cbc.html "Returns the cotangent of a number, expressed in radians.") :arrow_upper_right:
+[COT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/efe32d94c2374ba4a64f6cac2dfe2cbc.html "Returns the cotangent of a number, expressed in radians.") :arrow_upper_right:
 

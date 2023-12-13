@@ -16,7 +16,7 @@ Syntax 1: Return the number of years between year 0000 and a TIMESTAMP value
 <dd>
 
 ```
-YEARS( <timestamp-expression> )
+YEARS( <timestamp-expression> );
 ```
 
 
@@ -29,7 +29,7 @@ Syntax 2: Return the number of years between two TIMESTAMP values
 <dd>
 
 ```
-YEARS( <timestamp-expression>, <timestamp-expression> )
+YEARS( <timestamp-expression>, <timestamp-expression> );
 ```
 
 
@@ -42,7 +42,7 @@ Syntax 3: Add years to a TIMESTAMP value
 <dd>
 
 ```
-YEARS( <timestamp-expression>, <integer-expression> )
+YEARS( <timestamp-expression>, <integer-expression> );
 ```
 
 
@@ -60,7 +60,7 @@ YEARS( <timestamp-expression>, <integer-expression> )
 <dl>
 <dt><b>
 
- *<timestamp-expression\>* 
+*<timestamp-expression\>* 
 
 </b></dt>
 <dd>
@@ -87,7 +87,7 @@ The number of years \(as a SMALLINT value\) to be added to *<timestamp-expressio
 
 <a name="loioa5926bf484f210159b3980226202882f__YEARS_returs1"/>
 
-## Returns
+## Result Set
 
 INTEGER \(SMALLINT\) when comparing two TIMESTAMP values.
 
@@ -164,5 +164,5 @@ Syntax 3 adds an *<integer-expression\>* number of years to the given date. If t
 
 [YEAR Function \[Date and Time\] for Data Lake Relational Engine](year-function-date-and-time-for-data-lake-relational-engine-a591eb9.md "Returns a 4-digit number corresponding to the year of the given date/time.")
 
-[YEARS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/1d6751f84bf14c8ca120407566bb798f.html "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.") :arrow_upper_right:
+[YEARS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/1d6751f84bf14c8ca120407566bb798f.html "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.") :arrow_upper_right:
 

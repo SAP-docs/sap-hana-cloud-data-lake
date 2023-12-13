@@ -6,15 +6,18 @@ Drop an X.509 provider in the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa3bd7356d0c1420596b03576520406fe__section_xv3_wvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-DROP X509 PROVIDER <x509_provider_name> [ CASCADE ]
+DROP X509 PROVIDER <x509_provider_name> [ CASCADE ];
 ```
 
 
@@ -40,7 +43,7 @@ DROP X509 PROVIDER <x509_provider_name> [ CASCADE ]
 Specifies an existing X.509 provider to drop.
 
 ```
-<x509_provider_name> ::= <simple_identifier>
+<x509_provider_name> ::= <simple_identifier>;
 ```
 
 
@@ -78,4 +81,11 @@ This example drops the X.509 provider MyProvider1.
 ```
 DROP X509 PROVIDER MyProvider1;
 ```
+
+**Related Information**  
+
+
+[CREATE X509 PROVIDER Statement for Data Lake Relational Engine](create-x509-provider-statement-for-data-lake-relational-engine-fe6ef48.md "Create an X.509 provider in the database.")
+
+[ALTER X509 PROVIDER Statement for Data Lake Relational Engine](alter-x509-provider-statement-for-data-lake-relational-engine-831d802.md "Alter an X.509 provider in the database.")
 

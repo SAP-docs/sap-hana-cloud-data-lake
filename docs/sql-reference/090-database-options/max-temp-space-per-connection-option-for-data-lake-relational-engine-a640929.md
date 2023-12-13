@@ -6,10 +6,13 @@ Limits temporary store space used per connection.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa640929184f210158e33c5702629c299__section_d3p_24q_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Limits temporary store space used per connection.
 ## Syntax
 
 ```
-MAX_TEMP_SPACE_PER_CONNECTION = <value>
+MAX_TEMP_SPACE_PER_CONNECTION = <value>;
 ```
 
 
@@ -60,28 +63,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -90,28 +85,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -120,28 +107,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -213,5 +192,5 @@ wilson.MAX_TEMP_SPACE_PER_CONNECTION = 5000
 
 [QUERY\_TEMP\_SPACE\_LIMIT Option for Data Lake Relational Engine](query-temp-space-limit-option-for-data-lake-relational-engine-a650c63.md "Specifies the maximum estimated amount of temp space before a query is rejected.")
 
-[MAX_TEMP_SPACE_PER_CONNECTION Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/713e6c2a4c594b22ae18a449e8ecd9dc.html "Limits temporary store space used per connection.") :arrow_upper_right:
+[MAX_TEMP_SPACE_PER_CONNECTION Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/713e6c2a4c594b22ae18a449e8ecd9dc.html "Limits temporary store space used per connection.") :arrow_upper_right:
 

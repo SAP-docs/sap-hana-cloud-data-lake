@@ -6,10 +6,13 @@ A view of synchronization settings associated with synchronization users.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bea8aa26c5f1014ba2d8965d98d284b__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -25,6 +28,6 @@ ALTER VIEW "SYS"."SYSSYNCUSERS"
     "SYSSYNC2"."server_connect",
     "SYSSYNC2"."server_conn_type"
     from "SYS"."SYSSYNC2" where
-    "SYSSYNC2"."publication_id" is null
+    "SYSSYNC2"."publication_id" is null;
 ```
 

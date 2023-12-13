@@ -7,7 +7,7 @@ Concatenates a string a specified number of times.
 
 
 ```
-REPEAT ( <string-expression>, <integer-expression> )
+REPEAT ( <string-expression>, <integer-expression> );
 ```
 
 
@@ -47,7 +47,7 @@ The number of times the string is to be repeated. If *<integer-expression\>* is 
 
 <a name="loioa579104184f2101598d4cd02edf61346__REPEAT_returs1"/>
 
-## Returns
+## Result Set
 
 -   LONG VARCHAR
 -   LONG NVARCHAR
@@ -79,7 +79,7 @@ The number of times the string is to be repeated. If *<integer-expression\>* is 
 The following statement returns the value "repeatrepeatrepeat":
 
 ```
-SELECT REPEAT( 'repeat', 3 ) FROM iq_dummy
+SELECT REPEAT( 'repeat', 3 ) FROM iq_dummy;
 ```
 
 **Related Information**  
@@ -89,5 +89,5 @@ SELECT REPEAT( 'repeat', 3 ) FROM iq_dummy
 
 [REPLICATE Function \[String\] for Data Lake Relational Engine](replicate-function-string-for-data-lake-relational-engine-a57a156.md "Concatenates a string a specified number of times.")
 
-[REPEAT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/0248da66d3bf4d7ba425f5b4f20ba6cc.html "Concatenates a string a specified number of times.") :arrow_upper_right:
+[REPEAT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/0248da66d3bf4d7ba425f5b4f20ba6cc.html "Concatenates a string a specified number of times.") :arrow_upper_right:
 

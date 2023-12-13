@@ -6,10 +6,13 @@ A server-level monitoring view providing information about locks in the database
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loiod269c4f0f1bb4e90a46fc02ed017c4ad__section_skb_fwg_k4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,21 +26,15 @@ A server-level monitoring view providing information about locks in the database
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,21 +43,15 @@ Description
 
 ConnectionName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the connection holding the lock.
-
-
 
 </td>
 </tr>
@@ -69,21 +60,15 @@ The name of the connection holding the lock.
 
 ConnectionID
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The connection ID for the connection holding the lock.
-
-
 
 </td>
 </tr>
@@ -92,21 +77,15 @@ The connection ID for the connection holding the lock.
 
 UserID
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The user ID for the connection holding the lock.
-
-
 
 </td>
 </tr>
@@ -115,21 +94,15 @@ The user ID for the connection holding the lock.
 
 TableType
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(6\)
 
-
-
 </td>
 <td valign="top">
 
 The type of table.
-
-
 
 </td>
 </tr>
@@ -138,21 +111,15 @@ The type of table.
 
 TableCreator
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The owner of the table.
-
-
 
 </td>
 </tr>
@@ -161,21 +128,15 @@ The owner of the table.
 
 TableName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the table on which the lock is held.
-
-
 
 </td>
 </tr>
@@ -184,21 +145,15 @@ The name of the table on which the lock is held.
 
 IndexID
 
-
-
 </td>
 <td valign="top">
 
 INTEGER\(4\)
 
-
-
 </td>
 <td valign="top">
 
 The index ID, or null.
-
-
 
 </td>
 </tr>
@@ -207,21 +162,15 @@ The index ID, or null.
 
 LockClass
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(8\)
 
-
-
 </td>
 <td valign="top">
 
 The lock class \(schema, table, row, or position\).
-
-
 
 </td>
 </tr>
@@ -230,21 +179,15 @@ The lock class \(schema, table, row, or position\).
 
 LockDuration
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(11\)
 
-
-
 </td>
 <td valign="top">
 
 The duration of the lock \(transaction, position, or connection\).
-
-
 
 </td>
 </tr>
@@ -253,21 +196,15 @@ The duration of the lock \(transaction, position, or connection\).
 
 LockType
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(9\)
 
-
-
 </td>
 <td valign="top">
 
 The lock type.
-
-
 
 </td>
 </tr>
@@ -276,21 +213,15 @@ The lock type.
 
 RowID
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The starting row ID for row locks.
-
-
 
 </td>
 </tr>
@@ -299,21 +230,15 @@ The starting row ID for row locks.
 
 RowRange
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The number of contiguous rows that are locked.
-
-
 
 </td>
 </tr>
@@ -325,7 +250,7 @@ The number of contiguous rows that are locked.
 
 ## Privileges
 
-You must have the MONITOR system privilege to access this view. DBAs can consult [Granting a System Privilege to a User](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_2_QRC/en-US/a43bcb8284f210158039b1793a92a4fc.html "Allow the granting of specific system privileges to specific users, with or without administrative rights.") :arrow_upper_right: and [Alphabetical List of System Privileges for Data Lake Relational Engine](../080-sql-statements/alphabetical-list-of-system-privileges-for-data-lake-relational-engine-a449325.md) for information on granting the MONITOR system privilege to a user.
+You must have the MONITOR system privilege to access this view. DBAs can consult [Granting a System Privilege to a User](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/a43bcb8284f210158039b1793a92a4fc.html "Allow the granting of specific system privileges to specific users, with or without administrative rights.") :arrow_upper_right: and [Alphabetical List of System Privileges for Data Lake Relational Engine](../080-sql-statements/alphabetical-list-of-system-privileges-for-data-lake-relational-engine-a449325.md) for information on granting the MONITOR system privilege to a user.
 
 
 
@@ -340,5 +265,5 @@ Use iqmonLocks for diagnostic use-cases including:
 -   Identifying those locks that have been open for an excessive length of time.
 
 
-iqmonLocks, in conjunction with the other monitoring views, can help you troubleshoot common data lake Relational Engine performance problems. For diagnostic use-case information, see the [SAP HANA Cloud, Data Lake Performance and Tuning for Data Lake Relational Engine (Monitoring Views)](https://help.sap.com/viewer/028be133f34c4d2d998c6fbc258659c5/2023_2_QRC/en-US/56032dd760ca4790a55d069d4475b441.html "This document shows you how to use the monitoring views to monitor data lake Relational Engine system health, and to help you troubleshoot performance issues.") :arrow_upper_right: manual.
+iqmonLocks, in conjunction with the other monitoring views, can help you troubleshoot common data lake Relational Engine performance problems. For diagnostic use-case information, see the [SAP HANA Cloud, Data Lake Performance and Tuning for Data Lake Relational Engine (Monitoring Views)](https://help.sap.com/viewer/028be133f34c4d2d998c6fbc258659c5/2023_4_QRC/en-US/56032dd760ca4790a55d069d4475b441.html "This document shows you how to use the monitoring views to monitor data lake Relational Engine system health, and to help you troubleshoot performance issues.") :arrow_upper_right: manual.
 

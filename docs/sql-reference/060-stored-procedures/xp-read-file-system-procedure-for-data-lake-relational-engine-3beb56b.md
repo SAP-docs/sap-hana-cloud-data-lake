@@ -6,18 +6,18 @@ Reads a file and returns the contents of the file as a LONG BINARY variable.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3beb56b86c5f101495dbf54443bd191d__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-xp_read_file(
-<filename>
-[, <lazy> ]
-)
+xp_read_file( <filename>[, <lazy> ] );
 ```
 
 
@@ -30,7 +30,7 @@ xp_read_file(
 <dl>
 <dt><b>
 
- *<filename\>* 
+*<filename\>* 
 
 </b></dt>
 <dd>
@@ -41,7 +41,7 @@ Use this LONG VARCHAR parameter to specify the name of the file for which to ret
 
 </dd><dt><b>
 
- *<lazy\>* 
+*<lazy\>* 
 
 </b></dt>
 <dd>
@@ -57,9 +57,37 @@ When you specify this optional INTEGER parameter and its value is not 0, the con
 
 <a name="loio3beb56b86c5f101495dbf54443bd191d__xp_read_file_returns1"/>
 
-## Returns
+## Result Set
 
 This function returns the contents of the named file as a LONG BINARY value. If the file does not exist or cannot be read, NULL is returned.
+
+
+<table>
+<tr>
+<th valign="top">
+
+Column Name
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+*<filename\>*
+
+</td>
+<td valign="top">
+
+Displays NULL if the filename does not exist or cannot be read.
+
+</td>
+</tr>
+</table>
 
 
 
@@ -95,14 +123,38 @@ Requires all of the following:
 
 
 
+<a name="loio3beb56b86c5f101495dbf54443bd191d__xp_read_file_example1"/>
+
+## Examples
+
+This example indicates that filename mpx-coord-0.iqmsg in path /diag/logs/ either does not exist or cannot be read.
+
 ```
-SELECT xp_read_file('/diag/logs/mpx-writer-0-0/mpx-writer-0-0/iqaas_20211217_110352.332_mpx-coord-0.iqmsg')
+Call xp_read_file('/diag/logs/mpx-coord-0.iqmsg');
 ```
+
+
+<table>
+<tr>
+<th valign="top">
+
+xp\_read\_file\('/diag/logs/mpx-coord-0.iqmsg'\)
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 
 
-[xp_read_file System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3802bd2d3a464336b1abe16107b12e47.html "Reads a file and returns the contents of the file as a LONG BINARY variable.") :arrow_upper_right:
+[xp_read_file System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3802bd2d3a464336b1abe16107b12e47.html "Reads a file and returns the contents of the file as a LONG BINARY variable.") :arrow_upper_right:
 
-[xp_sprintf System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/bcaf180e679e43d78733830fb7e4c2fa.html "Builds a result string from a set of input strings.") :arrow_upper_right:
+[xp_sprintf System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/bcaf180e679e43d78733830fb7e4c2fa.html "Builds a result string from a set of input strings.") :arrow_upper_right:
 

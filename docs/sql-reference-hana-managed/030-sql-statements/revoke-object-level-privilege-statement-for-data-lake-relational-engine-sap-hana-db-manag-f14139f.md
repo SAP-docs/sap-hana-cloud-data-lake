@@ -6,21 +6,22 @@ Removes object-level privileges that were given using the `GRANT` statement.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loiof14139fa124d4e5da23c1da6a5009417__section_jzt_bmj_g4b"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 REVOKE { <object-level-privilege> [,...]
-   ON { [ <owner>.]<object-name> | SCHEMA <schema-name> } 
-   FROM <user_role_shema> [,...]
+   ON { [ <owner>.]<object-name> 
+      | SCHEMA <schema-name> } 
+   FROM <user_role_shema> [,...];
 ```
 
 
@@ -61,11 +62,11 @@ Specifies the object or schema privilege being revoked.
    ALL [ PRIVILEGES ] 
    | ALTER 
    | BACKUP TABLE
-   | CREATE ANY**
+   | CREATE ANY
    | DELETE 
-   | DROP**
+   | DROP
    | EXECUTE
-   | EXECUTE PROCEDURE**
+   | EXECUTE PROCEDURE
    | INSERT
    | LOAD
    | REFERENCES [ ( <column-name> [, …] ) ] 
@@ -73,13 +74,10 @@ Specifies the object or schema privilege being revoked.
    | SELECT [ ( <column-name> [, …] ) ] 
    | TRUNCATE
    | UPDATE [ ( <column-name>, …) ]
-   | USAGE*
-
-**CREATE ANY, DROP, and EXECUTE PROCEDURE are only supported by SCHEMA <schema-name>
-*USAGE is only supported by [ <owner>.]<object-name>
+   | USAGE
 ```
 
-For an explanation of each object-level privilege, see [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right:.
+For an explanation of each object-level privilege, see [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right:.
 
 
 
@@ -96,7 +94,7 @@ Specifies the type of object the privilege applies to.
 <object-name> ::=
    <table_name>
    | <view_name>
-   | {<procedure-name> | <user-defined-function-name>}
+   | { <procedure-name> | <user-defined-function-name> }
    | <sequence_name>
 ```
 
@@ -121,7 +119,7 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
 
 </b></dt>
 <dd>
@@ -129,7 +127,10 @@ Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
 
 
 
@@ -166,18 +167,17 @@ Requires one of:
 
 ## Examples
 
--   The following example prevents user `Dave` from inserting into the `Employees` table:
+This example prevents user1 from inserting into the table Employees:
 
-    ```
-    REVOKE INSERT ON Employees FROM Dave
-    ```
+```
+REVOKE INSERT ON Employees FROM user1;
+```
 
--   The following example prevents user `Dave` from updating the `Employees` table:
+This example prevents user1 from updating any objects in schema myschema1:
 
-    ```
-    REVOKE UPDATE ON Employees FROM Dave
-    ```
-
+```
+REVOKE UPDATE ON SCHEMA myschema1 FROM user1;
+```
 
 **Related Information**  
 

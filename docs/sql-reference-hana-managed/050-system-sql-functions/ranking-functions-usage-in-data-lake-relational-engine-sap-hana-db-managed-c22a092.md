@@ -12,7 +12,7 @@ Rank analytical functions rank items in a group, compute distribution, and divid
 
 ```
 RANK() OVER ( [PARTITION BY] ORDER BY <expression> 
-                                                [ ASC | DESC ] )
+                                                [ ASC | DESC ] );
 ```
 
 The ORDER BY clause specifies the parameter on which ranking is performed and the order in which the rows are sorted in each group. This ORDER BY clause is used only within the OVER clause and is not an ORDER BY for SELECT. No aggregation functions in the rank query ROW are allowed to specify DISTINCT.

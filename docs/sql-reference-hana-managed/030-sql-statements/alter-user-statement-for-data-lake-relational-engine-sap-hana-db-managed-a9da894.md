@@ -6,10 +6,13 @@ Changes user settings.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user. It cannot be run using the REMOTE\_EXECUTE procedure.
+<a name="loioa9da89453d43402981a6e01fa8c7742d__section_kyf_nhw_ysb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected directly to data lake Relational Engine **coordinator** as a data lake Relational Engine user. This syntax cannot be run using the REMOTE\_EXECUTE procedure.
 
 
 
@@ -19,7 +22,7 @@ Changes user settings.
 ALTER USER <user-name> 
    { [ IDENTIFIED BY <password> ]
    | [ LOGIN POLICY <policy-name> ]  
-   | [ FORCE PASSWORD CHANGE { ON | OFF } ] }
+   | [ FORCE PASSWORD CHANGE { ON | OFF } ] };
 ```
 
 
@@ -143,17 +146,12 @@ Passwords are stored using secure one-way hashing with numerous security feature
 
 ## Examples
 
-The following example alters a user named SQLTester. The password is set to welcome. The SQLTester user is assigned to the Test1 login policy and the password does not expire on the next login:
-
-```
-ALTER USER SQLTester 
-IDENTIFIED BY welcome
-LOGIN POLICY Test1
-FORCE PASSWORD CHANGE OFF
-```
-
 **Related Information**  
 
 
-[ALTER USER Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a6139f4584f21015bdc3a625b5b218b5.html "Changes user settings.") :arrow_upper_right:
+[CREATE USER Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-user-statement-for-data-lake-relational-engine-sap-hana-db-managed-a21f652.md "Creates a user.")
+
+[DROP USER Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-user-statement-for-data-lake-relational-engine-sap-hana-db-managed-d94380c.md "Removes a user.")
+
+[ALTER USER Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a6139f4584f21015bdc3a625b5b218b5.html "Changes user settings.") :arrow_upper_right:
 

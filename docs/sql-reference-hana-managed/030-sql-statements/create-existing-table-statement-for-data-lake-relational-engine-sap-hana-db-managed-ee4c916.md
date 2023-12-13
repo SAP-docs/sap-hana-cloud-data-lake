@@ -6,19 +6,20 @@ Creates a new proxy table that represents an existing table on a remote server.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+<a name="loioee4c9163f3a647b3938c7b0c08a9dd44__section_kry_1dn_jsb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
 
 
 
 ```
 CREATE EXISTING [ LOCAL TEMPORARY ] TABLE [ <schema-name>.]<table_name> 
    [ ( <column-definition>, … ) ] 
-   AT '<location-string>'
+   AT '<location-string>';
 ```
 
 
@@ -45,13 +46,13 @@ Column definitions are required when LOCAL TEMPORARY is specified. Otherwise, co
 
 ```
 <column-definition> ::= 
-   <column-name> <data-type> [ NOT NULL ]
+   <column-name> <data-type> [ NOT NULL ];
 ```
 
 If you do not specify column definitions, data lake Relational Engine derives the column list from the metadata it obtains from the remote table. If you do specify column definitions, data lake Relational Engine verifies them. When data lake Relational Engine checks column names, data types, lengths, and null properties:
 
 -   Column names must match identically \(although case is ignored\).
--   For information on supported data types, see [Available Data Types For CREATE EXISTING TABLE in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/28c73ef1b8914dc0945dc42e6bc78311.html "A list of available data types when using the CREATE EXISTING TABLE statement in data lake Relational Engine.") :arrow_upper_right:. Data types in CREATE EXISTING TABLE must match or be convertible to the data types of the column on the remote location. For example, a local column data type is defined as NUMERIC, whereas the remote column data type is MONEY. You may encounter some errors, if you select from a table in which the data types do not match or other inconsistencies exist.
+-   For information on supported data types, see [Available Data Types For CREATE EXISTING TABLE in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/28c73ef1b8914dc0945dc42e6bc78311.html "A list of available data types when using the CREATE EXISTING TABLE statement in data lake Relational Engine.") :arrow_upper_right:. Data types in CREATE EXISTING TABLE must match or be convertible to the data types of the column on the remote location. For example, a local column data type is defined as NUMERIC, whereas the remote column data type is MONEY. You may encounter some errors, if you select from a table in which the data types do not match or other inconsistencies exist.
 -   Each column’s NULL property is checked. If the local column’s NULL property is not identical to the remote column’s NULL property, a warning message is issued, but the statement is not aborted.
 -   Each column’s length is checked. If the lengths of CHAR, VARCHAR, BINARY, DECIMAL, and NUMERIC columns do not match, a warning message is issued, but the command is not aborted. You might choose to include only a subset of the actual remote column list in your CREATE EXISTING statement.
 
@@ -69,7 +70,7 @@ Specifies the location of the remote object.
 ```
 <location-string> ::=
    <remote-server-name>.[<db-name>].[<owner>].<object-name>
-   | <remote-server-name>;[<db-name>];[<owner>];<object-name>
+   | <remote-server-name>;[<db-name>];[<owner>];<object-name>;
 ```
 
 The AT clause supports the semicolon \(;\) as a delimiter. If a semicolon is present anywhere in the *<column-definition\>*, the semicolon is the field delimiter. If no semicolon is present, a period is the field delimiter. This behavior allows file names and extensions to be used in the database and owner fields. An ESCAPE CHARACTER clause allows applications to escape these delimiters within a location string.
@@ -135,10 +136,27 @@ If *<column-definitions\>* are not specified, then the database server derives t
 
 ### 
 
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+
+</b></dt>
+<dd>
+
 Requires one of:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
+
+
+</dd>
+</dl>
 
 
 
@@ -209,5 +227,9 @@ Requires one of:
 
 [CREATE TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-6c3afae.md "Creates a new table in the database or on a remote server.")
 
-[CREATE EXISTING TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a617378084f21015ab5f9b1b9cfa3620.html "Creates a new proxy table that represents an existing table on a remote server.") :arrow_upper_right:
+[ALTER TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](alter-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-593f8b1.md "Modifies a table definition.")
+
+[DROP TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-1e62d19.md "Removes a table from the database.")
+
+[CREATE EXISTING TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a617378084f21015ab5f9b1b9cfa3620.html "Creates a new proxy table that represents an existing table on a remote server.") :arrow_upper_right:
 

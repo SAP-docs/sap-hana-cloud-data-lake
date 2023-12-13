@@ -7,7 +7,7 @@ The `SUBSTRING` function returns a variable-length character string of the `LONG
 
 
 ```
-{ SUBSTRING |  SUBSTR } ( <long-varchar-column>, <start> [, <length> ] )
+{ SUBSTRING |  SUBSTR } ( <long-varchar-column>, <start> [, <length> ] );
 ```
 
 
@@ -67,5 +67,5 @@ When the `ansi_substring` database option is set to ON \(default\), negative val
 **Related Information**  
 
 
-[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_2_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
+[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
 

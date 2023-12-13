@@ -6,16 +6,19 @@ Removes a user-defined role from the database or converts a user-extended role t
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa42903c984f210159ad390495d594b47__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 DROP ROLE [ FROM USER ] <role_name>
-   [ WITH REVOKE ]
+   [ WITH REVOKE ];
 ```
 
 
@@ -104,27 +107,27 @@ ANSI SQL – compliance level: Transact-SQL extension
 -   The following example converts a user-extended role named `Joe` that has not been granted to other users or roles back to a regular user:
 
     ```
-    DROP ROLE FROM USER Joe
+    DROP ROLE FROM USER Joe;
     ```
 
 -   The following example drops a user-extended role named `Jack` that has not been granted to other users or roles from the database:
 
     ```
-    DROP ROLE Jack
+    DROP ROLE Jack;
     ```
 
 -   The following example converts a user-extended role named `Sam` that has been granted to other user or roles back to a regular role:
 
     ```
     DROP ROLE FROM USER Sam
-    WITH REVOKE
+    WITH REVOKE;
     ```
 
 -   The following example drops a standalone role named `Sales2` that has been granted to other users or roles from the database:
 
     ```
     DROP ROLE Sales2
-    WITH REVOKE
+    WITH REVOKE;
     ```
 
 

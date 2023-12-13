@@ -7,7 +7,7 @@ Returns an integer value for the specified part of a date/time value.
 
 
 ```
-DATEPART ( <date-part>, <date-expression> )
+DATEPART ( <date-part>, <date-expression> );
 ```
 
 
@@ -47,7 +47,7 @@ The date for which the part is to be returned. The date must contain the date-pa
 
 <a name="loioa547b06f84f210158ab3bd499f292d99__DATEPART_returns1"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -77,28 +77,28 @@ The DATE, TIME, and DTTM indexes do not support some date parts \(Calyearofweek,
 
     ```
     SELECT DATEPART( MONTH, '1987/05/02' )
-    FROM iq_dummy
+    FROM iq_dummy;
     ```
 
 -   The following statement returns the value 722,001:
 
     ```
     SELECT DATEPART(MICROSECOND, '2009-11-10
-    14:57:52.722001') FROM iq_dummy
+    14:57:52.722001') FROM iq_dummy;
     ```
 
 -   The following statement returns the value 777,777:
 
     ```
     SELECT DATEPART(MICROSECOND, '2000/07/07
-    07:07:07.777777') FROM iq_dummy
+    07:07:07.777777') FROM iq_dummy;
     ```
 
 -   The following statement returns the value 33,189:
 
     ```
     SELECT DATEPART(MCS, '2009-11-03 11:10:42.033189')
-    FROM iq_dummy
+    FROM iq_dummy;
     ```
 
 
@@ -119,5 +119,5 @@ The DATE, TIME, and DTTM indexes do not support some date parts \(Calyearofweek,
 
 [Date Parts in Data Lake Relational Engine](date-parts-in-data-lake-relational-engine-a52b8dd.md "Many of the date functions use dates built from date parts.")
 
-[DATEPART Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/a07008d5cbc347329b60d52b3e243ed6.html "Returns an integer value for the specified part of a date/time value.") :arrow_upper_right:
+[DATEPART Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/a07008d5cbc347329b60d52b3e243ed6.html "Returns an integer value for the specified part of a date/time value.") :arrow_upper_right:
 

@@ -6,10 +6,13 @@ Instructs worker nodes to release all unused shared temporary dbspace memory blo
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioad299b0c32d94b3580bd9589cfef1dcc__section_d3p_24q_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Instructs worker nodes to release all unused shared temporary dbspace memory blo
 ## Syntax
 
 ```
-MPX_SHTEMP_INTSPACE_CLEAN = { ON | OFF }
+MPX_SHTEMP_INTSPACE_CLEAN = { ON | OFF };
 ```
 
 

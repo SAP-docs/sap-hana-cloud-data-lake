@@ -6,10 +6,13 @@ Creates a sequence that can be used to generate primary key values that are uniq
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be47d496c5f1014bf06bb7791ce7a38__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,7 +23,7 @@ CREATE [ OR REPLACE ] SEQUENCE [ <owner> .]<sequence-name>
    [ { MINVALUE <signed-integer> | NO MINVALUE } ]
    [ { MAXVALUE <signed-integer> | NO MAXVALUE } ]
    [ { CACHE <integer> | NO CACHE } ]
-   [ { CYCLE | NO CYCLE } ]
+   [ { CYCLE | NO CYCLE } ];
 ```
 
 
@@ -157,7 +160,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 ## Side Effects
 
-None
+Automatic commit.
 
 
 
@@ -187,6 +190,8 @@ In addition, the following are not in the standard:
 </dl>
 
 
+
+## Example
 
 The following example creates a sequence named Test that starts at 4, increments by 2, does not cycle, and caches 15 values at a time:
 

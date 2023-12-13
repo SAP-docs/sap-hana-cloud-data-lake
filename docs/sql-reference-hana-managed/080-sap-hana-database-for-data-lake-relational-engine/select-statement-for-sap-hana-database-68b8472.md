@@ -166,14 +166,10 @@ Sets options for the resulting JSON
 
 Option
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -182,14 +178,10 @@ Description
 
 format
 
-
-
 </td>
 <td valign="top">
 
 Whether to insert newline and tab for elements. Possible values are 'yes' or 'no' \(the default\).
-
-
 
 </td>
 </tr>
@@ -198,14 +190,10 @@ Whether to insert newline and tab for elements. Possible values are 'yes' or 'no
 
 omitnull
 
-
-
 </td>
 <td valign="top">
 
 Whether to omit NULL value records in the result JSON document. Possible values are 'yes' \(the default\), or 'no'.
-
-
 
 </td>
 </tr>
@@ -214,14 +202,10 @@ Whether to omit NULL value records in the result JSON document. Possible values 
 
 arraywrap
 
-
-
 </td>
 <td valign="top">
 
 Whether to include \[ \] at the beginning and end of the JSON document. Possible values are 'yes' \(the default\), or 'no'.
-
-
 
 </td>
 </tr>
@@ -288,14 +272,10 @@ Sets options for the resulting XML.
 
 Option
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -304,14 +284,10 @@ Description
 
 columnstyle
 
-
-
 </td>
 <td valign="top">
 
 The representation of SQL columns. Possible values are 'element' \(the default\), or 'attribute'.
-
-
 
 </td>
 </tr>
@@ -320,14 +296,10 @@ The representation of SQL columns. Possible values are 'element' \(the default\)
 
 format
 
-
-
 </td>
 <td valign="top">
 
 Whether to insert newline and tab for elements. Possible values are 'yes' \(the default\), or 'no'.
-
-
 
 </td>
 </tr>
@@ -336,14 +308,10 @@ Whether to insert newline and tab for elements. Possible values are 'yes' \(the 
 
 header
 
-
-
 </td>
 <td valign="top">
 
 Whether to include the XML declaration header \(<?xml version="1.0"?\>\). Possible values are 'yes', or 'no' \(the default\).
-
-
 
 </td>
 </tr>
@@ -352,14 +320,10 @@ Whether to include the XML declaration header \(<?xml version="1.0"?\>\). Possib
 
 incremental
 
-
-
 </td>
 <td valign="top">
 
 Whether to return a single row or multiple rows. Possible values are 'yes', or 'no' \(the default\).
-
-
 
 </td>
 </tr>
@@ -368,14 +332,10 @@ Whether to return a single row or multiple rows. Possible values are 'yes', or '
 
 nullstyle
 
-
-
 </td>
 <td valign="top">
 
 Whether to omit or present a null attribute for NULL values. Possible values are 'omit' \(the default\), or 'attribute'.
-
-
 
 </td>
 </tr>
@@ -384,14 +344,10 @@ Whether to omit or present a null attribute for NULL values. Possible values are
 
 root
 
-
-
 </td>
 <td valign="top">
 
 Whether to include a root element for the table name. Possible values are 'yes' \(the default\), or 'no'
-
-
 
 </td>
 </tr>
@@ -400,14 +356,10 @@ Whether to include a root element for the table name. Possible values are 'yes' 
 
 rowname
 
-
-
 </td>
 <td valign="top">
 
 Sets the name of the row element. The default is 'row'.
-
-
 
 </td>
 </tr>
@@ -416,14 +368,10 @@ Sets the name of the row element. The default is 'row'.
 
 schemaloc
 
-
-
 </td>
 <td valign="top">
 
 Sets the *<schemalocation\>* value in the root element. If the *<root\>* option is set to no, then this option is ignored. This value is a string with a URI.
-
-
 
 </td>
 </tr>
@@ -432,14 +380,10 @@ Sets the *<schemalocation\>* value in the root element. If the *<root\>* option 
 
 tablename
 
-
-
 </td>
 <td valign="top">
 
 Names the root element. If the root option is set to 'no', then this option is ignored. The value is a string and the default is 'resultset'.
-
-
 
 </td>
 </tr>
@@ -448,14 +392,10 @@ Names the root element. If the root option is set to 'no', then this option is i
 
 targetns
 
-
-
 </td>
 <td valign="top">
 
 Sets the *<targetnamespace\>* value in the root element. If the *<root\>* option is set to 'no', then this option is ignored.
-
-
 
 </td>
 </tr>
@@ -2302,14 +2242,10 @@ SELECT * FROM EMPLOYEES:CITY.STATE;
 
 ID
 
-
-
 </th>
 <th valign="top">
 
 Name
-
-
 
 </th>
 </tr>
@@ -2318,14 +2254,10 @@ Name
 
 1
 
-
-
 </td>
 <td valign="top">
 
 California
-
-
 
 </td>
 </tr>
@@ -2334,14 +2266,10 @@ California
 
 2
 
-
-
 </td>
 <td valign="top">
 
 Washington
-
-
 
 </td>
 </tr>
@@ -2360,14 +2288,10 @@ SELECT * FROM EMPLOYEES[ID<5]:CITY.STATE[ID<2];
 
 ID
 
-
-
 </th>
 <th valign="top">
 
 Name
-
-
 
 </th>
 </tr>
@@ -2376,14 +2300,10 @@ Name
 
 1
 
-
-
 </td>
 <td valign="top">
 
 California
-
-
 
 </td>
 </tr>
@@ -2424,21 +2344,15 @@ SELECT t1.branch, case_join.c1, case_join.c2
 
 Branch
 
-
-
 </th>
 <th valign="top">
 
 C1
 
-
-
 </th>
 <th valign="top">
 
 C2
-
-
 
 </th>
 </tr>
@@ -2447,21 +2361,15 @@ C2
 
 1
 
-
-
 </td>
 <td valign="top">
 
 100
 
-
-
 </td>
 <td valign="top">
 
 200
-
-
 
 </td>
 </tr>
@@ -2470,21 +2378,15 @@ C2
 
 2
 
-
-
 </td>
 <td valign="top">
 
 300
 
-
-
 </td>
 <td valign="top">
 
 400
-
-
 
 </td>
 </tr>

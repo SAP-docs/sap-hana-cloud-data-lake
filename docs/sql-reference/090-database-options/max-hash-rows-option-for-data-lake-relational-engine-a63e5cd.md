@@ -6,8 +6,11 @@ Sets the maximum number of rows that the IQ optimizer considers for a hash algor
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63e5cd884f21015bf7dea5122b66323__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

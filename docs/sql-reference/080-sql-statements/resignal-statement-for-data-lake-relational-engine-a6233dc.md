@@ -6,15 +6,18 @@ Resignals an exception condition.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6233dc184f21015a615f14fe71ace91__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-RESIGNAL [ <exception-name> ]
+RESIGNAL [ <exception-name> ];
 ```
 
 

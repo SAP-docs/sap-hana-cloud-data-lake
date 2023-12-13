@@ -13,14 +13,10 @@ Use date and time data types for storing dates and times.
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -29,14 +25,10 @@ Description
 
 DATE
 
-
-
 </td>
 <td valign="top">
 
 A calendar date, such as a year, month, and day. The year can be from 0001 to 9999. The day must be a nonzero value, so that the minimum date is 0001-01-01. A DATE value requires 4 bytes of storage.
-
-
 
 </td>
 </tr>
@@ -45,14 +37,10 @@ A calendar date, such as a year, month, and day. The year can be from 0001 to 99
 
 DATETIME
 
-
-
 </td>
 <td valign="top">
 
 A domain, implemented as TIMESTAMP. The fraction is stored to 6 decimal places \(not 7\). A DATETIME value requires 8 bytes of storage.
-
-
 
 </td>
 </tr>
@@ -61,14 +49,10 @@ A domain, implemented as TIMESTAMP. The fraction is stored to 6 decimal places \
 
 DATETIMEX
 
-
-
 </td>
 <td valign="top">
 
 Point in time, containing year, month, day, hour, minute, second, and fraction of a second. The fraction is stored to 7 decimal places, regardless of the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option. The day must be a nonzero value. A DATETIMEX value requires 8 bytes of storage.
-
-
 
 </td>
 </tr>
@@ -77,14 +61,10 @@ Point in time, containing year, month, day, hour, minute, second, and fraction o
 
 SMALLDATETIME
 
-
-
 </td>
 <td valign="top">
 
 A domain, implemented as TIMESTAMP. A SMALLDATETIME value requires 8 bytes of storage.
-
-
 
 </td>
 </tr>
@@ -93,14 +73,10 @@ A domain, implemented as TIMESTAMP. A SMALLDATETIME value requires 8 bytes of st
 
 TIME
 
-
-
 </td>
 <td valign="top">
 
 Time of day, containing hour, minute, second, and fraction of a second. The fraction is stored to 6 decimal places. A TIME value requires 8 bytes of storage. \(ODBC standards restrict TIME data type to an accuracy of seconds. For this reason, do not use TIME data types in WHERE clause comparisons that rely on a higher accuracy than seconds.\)
-
-
 
 </td>
 </tr>
@@ -109,14 +85,10 @@ Time of day, containing hour, minute, second, and fraction of a second. The frac
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Point in time, containing year, month, day, hour, minute, second, and fraction of a second. The fraction is stored to 6 or 7 decimal precision, depending on the value of the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option. For more information, see [Decimal Precision of the TIMESTAMP Data Type in Data Lake Relational Engine \(SAP HANA DB-Managed\)](decimal-precision-of-the-timestamp-data-type-in-data-lake-relational-engine-sap-hana-db-m-5cbca14.md). The day must be a nonzero value. A TIMESTAMP value requires 8 bytes of storage.
-
-
 
 </td>
 </tr>
@@ -256,7 +228,7 @@ If a string contains only a partial date specification, default values are used 
 **Related Information**  
 
 
-[Collations in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/665704355a5147879224d7ec0aae629f.html "Data lake Relational Engine databases use CESU8BIN (CESU-8, 8-bit multibyte encoding for Unicode, binary ordering) collation and the Unicode Collation Algorithm (UCA).") :arrow_upper_right:
+[Collations in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/665704355a5147879224d7ec0aae629f.html "Data lake Relational Engine databases use CESU8BIN (CESU-8, 8-bit multibyte encoding for Unicode, binary ordering) collation and the Unicode Collation Algorithm (UCA).") :arrow_upper_right:
 
 [TIMESTAMP Special Value in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../010-sql-language-elements/timestamp-special-value-in-data-lake-relational-engine-sap-hana-db-managed-007a831.md "Returns when each row in the table was last modified.")
 

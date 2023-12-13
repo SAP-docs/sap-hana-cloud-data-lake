@@ -34,14 +34,10 @@ The pattern might contain any number of wildcard characters. The wildcard charac
 
 Wildcard
 
-
-
 </th>
 <th valign="top">
 
 Matches
-
-
 
 </th>
 </tr>
@@ -50,14 +46,10 @@ Matches
 
 \_ \(underscore\)
 
-
-
 </td>
 <td valign="top">
 
 Any one character
-
-
 
 </td>
 </tr>
@@ -66,14 +58,10 @@ Any one character
 
 % \(percent\)
 
-
-
 </td>
 <td valign="top">
 
 Any string of zero or more characters
-
-
 
 </td>
 </tr>
@@ -82,14 +70,10 @@ Any string of zero or more characters
 
 \[\]
 
-
-
 </td>
 <td valign="top">
 
 Any single character in the specified range or set
-
-
 
 </td>
 </tr>
@@ -98,14 +82,10 @@ Any single character in the specified range or set
 
 \[^\]
 
-
-
 </td>
 <td valign="top">
 
 Any single character not in the specified range or set
-
-
 
 </td>
 </tr>
@@ -229,7 +209,7 @@ Specify a range of characters to look for by listing the ends of the range insid
 LIKE '[a-r]ough'
 ```
 
-The range of characters \[a-z\] is interpreted as “greater than or equal to a, and less than or equal to z,” where the greater than and less than operations are carried out within the collation of the database. For information on ordering of characters within a collation, see *How the Collation Sequence Sorts Characters* in SAP IQ Administration: Globalization.
+The range of characters \[a-z\] is interpreted as “greater than or equal to a, and less than or equal to z,” where the greater than and less than operations are carried out within the collation of the database. For information on ordering of characters within a collation, see *Selecting a Collation to Support a Specific Locale* in SAP HANA Cloud, Data Lake Administration Guide for Data Lake Relational Engine.
 
 The lower end of the range must precede the higher end of the range. For example, a LIKE condition containing the expression \[z-a\] returns no rows, because no character matches the \[z-a\] range.
 
@@ -294,7 +274,7 @@ Other special cases are:
 The ESCAPE clause is supported by data lake Relational Engine only.
 
 > ### Note:  
-> For information on support of the LIKE predicate with large object data and variables, see *Unstructured Data Queries* in SAP IQ Administration: Unstructured Data Analytics.
+> For information on support of the LIKE predicate with large object data and variables, see *Unstructured Data Queries* in SAP HANA Cloud, Data Lake Administration Guide for Data Lake Relational Engine.
 
 **Related Information**  
 
@@ -302,4 +282,8 @@ The ESCAPE clause is supported by data lake Relational Engine only.
 [LOCATE Function \[String\] for Data Lake Relational Engine](../050-system-sql-functions/locate-function-string-for-data-lake-relational-engine-a55fae8.md "Returns the position of one string within another.")
 
 [PATINDEX Function \[String\] for Data Lake Relational Engine](../050-system-sql-functions/patindex-function-string-for-data-lake-relational-engine-a56c8f8.md "Returns the starting position of the first occurrence of a specified pattern.")
+
+[Selecting a Collation to Support a Specific Locale](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a7552a1284f21015bc9ae70deba5bbf8.html "Address character set issues properly by using the collation, which best supports the locale.") :arrow_upper_right:
+
+[Unstructured Data Queries](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a5f84d4284f21015aa65c9ccbfed3414.html "Learn about querying large object data, including the full text search capability that handles unstructured and semistructured data.") :arrow_upper_right:
 

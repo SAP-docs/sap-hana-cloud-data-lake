@@ -13,7 +13,7 @@ Given a percentile, returns the value that corresponds to that percentile. Assum
 
 ```
 PERCENTILE_DISC ( <expression1> )
-WITHIN GROUP ( ORDER BY <expression2> [ ASC | DESC ] )
+WITHIN GROUP ( ORDER BY <expression2> [ ASC | DESC ] );
 ```
 
 
@@ -125,5 +125,5 @@ South            500
 **Related Information**  
 
 
-[PERCENTILE_DISC Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/bebc33271f5545ff9e6a7fe0bb25b608.html "Given a percentile, returns the value that corresponds to that percentile. Assumes a discrete distribution data model.") :arrow_upper_right:
+[PERCENTILE_DISC Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/bebc33271f5545ff9e6a7fe0bb25b608.html "Given a percentile, returns the value that corresponds to that percentile. Assumes a discrete distribution data model.") :arrow_upper_right:
 

@@ -6,15 +6,18 @@ Returns a result set containing connection IDs.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa86bee9684f2101580badd42aee0402d__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_conn_list ( [ <connidparm> ] [ ,<dbidparm> ] )
+sa_conn_list ( [ <connidparm> ] [ ,<dbidparm> ] );
 ```
 
 
@@ -61,21 +64,15 @@ sa_conn_list ( [ <connidparm> ] [ ,<dbidparm> ] )
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -84,21 +81,15 @@ Description
 
 Number
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The connection ID number.
-
-
 
 </td>
 </tr>
@@ -133,9 +124,9 @@ None
 
 
 
-## Example
+## Examples
 
-The following example uses the sa\_conn\_list system procedure to display a list of connection IDs:
+This example uses the sa\_conn\_list system procedure to display a list of connection IDs:
 
 ```
 CALL sa_conn_list( );
@@ -148,16 +139,12 @@ CALL sa_conn_list( );
 
 Number
 
-
-
 </th>
 </tr>
 <tr>
 <td valign="top">
 
 1,949
-
-
 
 </td>
 </tr>
@@ -166,16 +153,12 @@ Number
 
 1,948
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 ...
-
-
 
 </td>
 </tr>

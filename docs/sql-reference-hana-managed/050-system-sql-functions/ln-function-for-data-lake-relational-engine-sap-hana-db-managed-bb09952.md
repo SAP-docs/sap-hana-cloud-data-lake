@@ -7,7 +7,7 @@ Returns the natural logarithm of the specified expression.
 
 
 ```
-LN ( <numeric-expression> )
+LN ( <numeric-expression> );
 ```
 
 
@@ -55,5 +55,5 @@ The LN function is an alias of the LOG function.
 
 [LOG Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](log-function-for-data-lake-relational-engine-sap-hana-db-managed-4bedccf.md "Returns the natural logarithm of a number.")
 
-[LN Function [Numeric] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a55f245c84f21015b1f7fdabe2f902dc.html "Returns the natural logarithm of the specified expression.") :arrow_upper_right:
+[LN Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a55f245c84f21015b1f7fdabe2f902dc.html "Returns the natural logarithm of the specified expression.") :arrow_upper_right:
 

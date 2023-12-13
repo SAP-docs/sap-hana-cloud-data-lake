@@ -6,15 +6,18 @@ Activates the Interactive SQL \(`dbisql`\) configuration window.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6161aef84f210158aedf72e43917471__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-CONFIGURE
+CONFIGURE;
 ```
 
 

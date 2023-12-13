@@ -6,15 +6,18 @@ Groups SQL statements together.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6142def84f2101591f2a40a1dd6cb20__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-[ <statement-label> : ]
+[ <statement-label> : ];
         … BEGIN [ [ NOT ] ATOMIC ]
         … [ <local-declaration> ; … ]
         … <statement-list>
@@ -23,7 +26,7 @@ Groups SQL statements together.
 ```
 
 ```
-<local-declaration> ::=
+<local-declaration> ::=;
         { <variable-declaration> 
         | <cursor-declaration> 
         | <exception-declaration> 
@@ -31,13 +34,13 @@ Groups SQL statements together.
 ```
 
 ```
-<variable-declaration> ::=
+<variable-declaration> ::=;
         DECLARE <variable-name> [ , … ] <data-type> 
         [{ = | DEFAULT} <initial-value> ]
 ```
 
 ```
-<initial-value> ::=
+<initial-value> ::=;
         { <special-value> 
         | <string> 
         | [ - ] <number> 
@@ -47,7 +50,7 @@ Groups SQL statements together.
 ```
 
 ```
-<special-value> ::=
+<special-value> ::=;
    { CURRENT { DATABASE 
              | DATE 
              | PUBLISHER 
@@ -195,5 +198,5 @@ CREATE PROCEDURE TopCustomer (OUT TopCompany CHAR(35), OUT TopValue INT)
 
 [SIGNAL Statement for Data Lake Relational Engine](signal-statement-for-data-lake-relational-engine-a6266b2.md "Lets you raise an exception condition.")
 
-[BEGIN … END Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/cfaf187bc70744e192136ee62c3b65b6.html "Groups SQL statements together.") :arrow_upper_right:
+[BEGIN … END Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/cfaf187bc70744e192136ee62c3b65b6.html "Groups SQL statements together.") :arrow_upper_right:
 

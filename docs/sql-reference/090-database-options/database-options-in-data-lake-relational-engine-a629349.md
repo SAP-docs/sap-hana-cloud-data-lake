@@ -2,7 +2,7 @@
 
 # Database Options in Data Lake Relational Engine
 
-Database options and Interactive SQL options customize and modify database behavior.
+Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.
 
 Data lake Relational Engine database options are divided into three classes: general, Transact-SQL compatibility, and Interactive SQL.
 

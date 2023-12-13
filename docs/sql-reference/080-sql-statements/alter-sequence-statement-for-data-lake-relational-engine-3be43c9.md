@@ -6,10 +6,13 @@ Alters a sequence.This statement applies to data lake Relational Engine catalog 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be43c996c5f1014a512d60a08c26481__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,7 +23,7 @@ ALTER SEQUENCE [<owner>.]<sequence-name>
    [ { MINVALUE <signed-integer> | NO MINVALUE } ]
    [ { MAXVALUE <signed-integer> | NO MAXVALUE } ]
    [ { CACHE <integer> | NO CACHE } ]
-   [ { CYCLE | NO CYCLE } ]
+   [ { CYCLE | NO CYCLE } ];
 ```
 
 
@@ -128,7 +131,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 ## Side Effects
 
-None
+Automatic commit.
 
 
 
@@ -151,6 +154,8 @@ The ALTER SEQUENCE statement is part of optional ANSI/ISO SQL Language Feature T
 </dl>
 
 
+
+## Example
 
 The following example sets a new maximum value for a sequence named Test:
 

@@ -7,7 +7,7 @@ Concatenates a string a specified number of times.
 
 
 ```
-REPLICATE ( <string-expression>, <integer-expression> )
+REPLICATE ( <string-expression>, <integer-expression> );
 ```
 
 
@@ -47,7 +47,7 @@ The number of times the string is to be repeated.
 
 <a name="loio1cb52e270b6c4ce4bc6ed9a00e09af0f__section_lwn_5c5_vrb"/>
 
-## Returns
+## Result Set
 
 -   LONG VARCHAR
 -   LONG NVARCHAR
@@ -81,11 +81,11 @@ The number of times the string is to be repeated.
 The following statement returns the value "repeatrepeatrepeat":
 
 ```
-SELECT REPLICATE( 'repeat', 3 ) FROM iq_dummy
+SELECT REPLICATE( 'repeat', 3 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[REPLICATE Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a57a156384f2101597df9d785635d3b0.html "Concatenates a string a specified number of times.") :arrow_upper_right:
+[REPLICATE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57a156384f2101597df9d785635d3b0.html "Concatenates a string a specified number of times.") :arrow_upper_right:
 

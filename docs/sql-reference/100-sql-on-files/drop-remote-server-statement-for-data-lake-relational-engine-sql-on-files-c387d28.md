@@ -6,10 +6,12 @@ Drop a remote server from SQL on Files tables.
 
 
 
-> ### Restriction:  
-> This topic is limited to SQL on Files use cases.
-> 
-> This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioc387d28ef660402d99c7994cd8fee742__section_fry_b3b_nqb"/>
+
+## Usage
+
+-   This topic is limited to SQL on Files use cases.
+-   This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +20,7 @@ Drop a remote server from SQL on Files tables.
 ## Syntax
 
 ```
-DROP SERVER <server-name>
+DROP SERVER <server-name>;
 ```
 
 
@@ -46,7 +48,7 @@ You have been granted the HDL\_FILES\_SERVICE\_ADMIN role.
 The following example drops the server `SOF_server`:
 
 ```
-DROP SERVER SOF_server
+DROP SERVER SOF_server;
 ```
 
 **Related Information**  

@@ -2,14 +2,17 @@
 
 # SYSCERTIFICATE System View for Data Lake Relational Engine
 
-Each row of the SYSCERTIFICATE system view stores a certificate in text PEM-format. The underlying system table for this view is ISYSCERTIFICATE.
+Each row of the SYSCERTIFICATE system view stores a certificate in text PEM-format.This view includes certificates with and without an associated PSE.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa34ee8b984f210158899e4685d277754__section_i2m_qpq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row of the SYSCERTIFICATE system view stores a certificate in text PEM-form
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,32 @@ Description
 
 object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
+</td>
+<td valign="top">
 
+Displays the ID of the certificate.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+owner
 
 </td>
 <td valign="top">
 
-The ID of the certificate.
+UNSIGNED INT
 
+</td>
+<td valign="top">
 
+Displays the user ID of the certificate owner.
 
 </td>
 </tr>
@@ -66,21 +74,15 @@ The ID of the certificate.
 
 cert\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
-The certificate name.
-
-
+Displays the certificate name.
 
 </td>
 </tr>
@@ -89,21 +91,15 @@ The certificate name.
 
 contents
 
-
-
 </td>
 <td valign="top">
 
 LONG BINARY
 
-
-
 </td>
 <td valign="top">
 
-The certificate contents in a compressed form.
-
-
+Displays the certificate contents in a compressed form.
 
 </td>
 </tr>
@@ -112,21 +108,15 @@ The certificate contents in a compressed form.
 
 update\_time
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
-The local date and time of the last create or replace.
-
-
+Displays the local date and time of the last create or replace.
 
 </td>
 </tr>
@@ -135,21 +125,15 @@ The local date and time of the last create or replace.
 
 update\_time\_utc
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE
 
-
-
 </td>
 <td valign="top">
 
-The UTC date and time of the last create or replace.
-
-
+Displays the UTC date and time of the last create or replace.
 
 </td>
 </tr>
@@ -158,19 +142,15 @@ The UTC date and time of the last create or replace.
 
 purpose
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
 
-
-
 </td>
 <td valign="top">
 
-The purpose of the certificate. Valid values are:
+Displays the purpose of the certificate. Valid values are:
 
 -   1 - for JWT
 -   2 - for X.509
@@ -185,21 +165,15 @@ The purpose of the certificate. Valid values are:
 
 jwt\_provider\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
-The JWT provider associated with the certificate, or NULL if the purpose is not JWT.
-
-
+Displays the JWT provider associated with the certificate, or NULL if the purpose is not JWT.
 
 </td>
 </tr>
@@ -208,21 +182,15 @@ The JWT provider associated with the certificate, or NULL if the purpose is not 
 
 x509\_provider\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
-The X.509 provider associated with the certificate, or NULL if the purpose is not X.509.
-
-
+Displays the X.509 provider associated with the certificate, or NULL if the purpose is not X.509.
 
 </td>
 </tr>
@@ -231,21 +199,15 @@ The X.509 provider associated with the certificate, or NULL if the purpose is no
 
 subject\_distinguished\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(2048\)
 
-
-
 </td>
 <td valign="top">
 
 Displays the distinguished name of the X.509 certificate subject.
-
-
 
 </td>
 </tr>
@@ -254,21 +216,15 @@ Displays the distinguished name of the X.509 certificate subject.
 
 issuer\_distinguished\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(2048\)
 
-
-
 </td>
 <td valign="top">
 
 Displays the distinguished name of the X.509 certificate issuer.
-
-
 
 </td>
 </tr>
@@ -277,21 +233,15 @@ Displays the distinguished name of the X.509 certificate issuer.
 
 valid\_from
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Displays the start time of certificate's validity
-
-
 
 </td>
 </tr>
@@ -300,21 +250,15 @@ Displays the start time of certificate's validity
 
 valid\_until
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Displays the end time of certificate's validity
-
-
 
 </td>
 </tr>
@@ -322,13 +266,27 @@ Displays the end time of certificate's validity
 
 
 
+<a name="loioa34ee8b984f210158899e4685d277754__SYSCERTIFICATE_constraints1"/>
+
 ## Constraints on Underlying System Table
 
 ```
-PRIMARY KEY (object_id)
+PRIMARY KEY (object_id);
 ```
 
 ```
-UNIQUE INDEX (cert_name)
+UNIQUE INDEX (cert_name);
 ```
+
+
+
+<a name="loioa34ee8b984f210158899e4685d277754__SYSCERTIFICATE_additional1"/>
+
+## Additional Information
+
+The privileges of the current user determine the records displayed.
+
+At a minimum, all certificates owned by the current user and any certificates associated with a PSE owned by the current user are displayed.
+
+If the current user has the MANAGE TRUST or MANAGE CERTIFICATES system privileges, then certificates owned by other users and certificates associated with a PSE owned by other users are displayed.
 

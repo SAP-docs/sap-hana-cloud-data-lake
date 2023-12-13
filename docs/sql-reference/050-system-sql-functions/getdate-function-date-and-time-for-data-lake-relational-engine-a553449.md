@@ -7,14 +7,14 @@ Returns the current date and time.
 
 
 ```
-GETDATE ()
+GETDATE ();
 ```
 
 
 
 <a name="loioa553449784f21015aba2a0fc3f4ce78c__GETDATE_returns1"/>
 
-## Returns
+## Result Set
 
 TIMESTAMP
 
@@ -43,11 +43,11 @@ GETDATE is a Transact-SQL compatible data manipulation function.
 The following statement returns the system date and time:
 
 ```
-SELECT GETDATE( ) FROM iq_dummy
+SELECT GETDATE( ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[GETDATE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/a9570cefd0aa4bbab7c30441ab636856.html "Returns the current date and time.") :arrow_upper_right:
+[GETDATE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/a9570cefd0aa4bbab7c30441ab636856.html "Returns the current date and time.") :arrow_upper_right:
 

@@ -6,15 +6,18 @@ Returns the contents of the table version log in a readable format.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa248fa2184f21015ba00f6e8d43ec7f1__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqmpxdumptlvlog [main], [asc | desc]
+sp_iqmpxdumptlvlog [main], [asc | desc];
 ```
 
 
@@ -47,7 +50,7 @@ None
 
 
 
-## Example
+## Examples
 
 The following shows sample output from `sp_iqmpxdumptlvlog`:
 

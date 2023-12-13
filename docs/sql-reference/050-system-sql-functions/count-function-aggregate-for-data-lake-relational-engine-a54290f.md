@@ -7,7 +7,7 @@ Counts the number of rows in a group, depending on the specified parameters.
 
 
 ```
-COUNT ( * | <expression> | DISTINCT <column-name> )
+COUNT ( * | <expression> | DISTINCT <column-name> );
 ```
 
 
@@ -65,7 +65,7 @@ Returns the number of different values in column-name. Rows where the value is t
 
 <a name="loioa54290fd84f21015b7dddc9484de19d0__COUNT_returns1"/>
 
-## Returns
+## Result Set
 
 UNSIGNED BIGINT
 
@@ -96,7 +96,7 @@ Returns each unique city, and the number of rows with that city value:
 ```
 SELECT city , Count(*)
 FROM Employees
-GROUP BY city
+GROUP BY city;
 ```
 
 **Related Information**  
@@ -108,5 +108,5 @@ GROUP BY city
 
 [SUM Function \[Aggregate\] for Data Lake Relational Engine](sum-function-aggregate-for-data-lake-relational-engine-a5889fe.md "Returns the total of the specified expression for each group of rows.")
 
-[COUNT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/bd71ba2eab21415e8d3ce875005fc9b9.html "Counts the number of rows in a group, depending on the specified parameters.") :arrow_upper_right:
+[COUNT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/bd71ba2eab21415e8d3ce875005fc9b9.html "Counts the number of rows in a group, depending on the specified parameters.") :arrow_upper_right:
 

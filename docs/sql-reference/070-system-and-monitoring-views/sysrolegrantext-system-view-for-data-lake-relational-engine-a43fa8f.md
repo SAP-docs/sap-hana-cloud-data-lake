@@ -6,10 +6,13 @@ The SYSROLEGRANTEXT system view contains syntax extensions pertaining to the SET
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa43fa8fb84f21015a0c69a92f5590bc6__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 <table>
@@ -18,21 +21,15 @@ The SYSROLEGRANTEXT system view contains syntax extensions pertaining to the SET
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -41,21 +38,15 @@ Description
 
 grant\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 ID used to identify each GRANT statement.
-
-
 
 </td>
 </tr>
@@ -64,21 +55,15 @@ ID used to identify each GRANT statement.
 
 user\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The user\_ids specified in `user-list` or `role-list` in a particular extended grant.
-
-
 
 </td>
 </tr>
@@ -95,6 +80,6 @@ When you grant or revoke the SET USER or CHANGE PASSWORD privilege, either with 
 ## Constraints on Underlying System Table
 
 ```
-PRIMARY KEY (grant_id, user_id)
+PRIMARY KEY (grant_id, user_id);
 ```
 

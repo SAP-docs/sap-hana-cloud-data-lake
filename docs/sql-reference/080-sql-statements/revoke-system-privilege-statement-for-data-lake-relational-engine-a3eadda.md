@@ -6,16 +6,19 @@ Removes specific system privileges from specific users and the right to administ
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa3eadda384f21015afd5a736a04daab7__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 REVOKE [ ADMIN OPTION FOR ] <system_privilege_name> [,...]
-   FROM <user_id> [,...]
+   FROM <user_id> [,...];
 ```
 
 
@@ -106,7 +109,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[REVOKE Object-Level Privilege Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/f14139fa124d4e5da23c1da6a5009417.html "Removes object-level privileges that were given using the GRANT statement.") :arrow_upper_right:
+[REVOKE Object-Level Privilege Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/f14139fa124d4e5da23c1da6a5009417.html "Removes object-level privileges that were given using the GRANT statement.") :arrow_upper_right:
 
-[REVOKE System Privilege Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/2a45ac0bacf44b879b464c83767c2f48.html "Removes specific system privileges from specific users and the right to administer the privilege.") :arrow_upper_right:
+[REVOKE System Privilege Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/2a45ac0bacf44b879b464c83767c2f48.html "Removes specific system privileges from specific users and the right to administer the privilege.") :arrow_upper_right:
 

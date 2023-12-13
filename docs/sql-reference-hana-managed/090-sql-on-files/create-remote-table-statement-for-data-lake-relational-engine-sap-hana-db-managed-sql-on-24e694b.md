@@ -11,14 +11,18 @@ Create a remote table managed by SQL on Files.
 
 
 
-> ### Restriction:  
-> This topic is limited to SQL on Files use cases.
-> 
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL on Files SQL statement can be used as follows:
-> 
-> -   When connected to SAP HANA database as a SAP HANA database user.
-> 
-> -   Using the REMOTE\_EXECUTE procedure. See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](../030-sql-statements/remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+<a name="loio24e694b566814ad285cb32fe3e5d3928__section_inj_b3b_nqb"/>
+
+## Usage
+
+-   This topic is limited to SQL on Files use cases.
+
+-   This data lake Relational Engine \(SAP HANA DB-Managed\) SQL on Files SQL statement can be used as follows:
+
+    -   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+    -   Using the REMOTE\_EXECUTE procedure. See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](../030-sql-statements/remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
 
 
 
@@ -31,7 +35,7 @@ CREATE [ OR REPLACE ] TABLE [ IF NOT EXISTS ] <remote-schema-name>.<remote-table
     IN FILES_SERVICE
 
 <column-definition> ::=
-    <column-name> <data-type>[,.<column-name> <data-type>...]
+    <column-name> <data-type>[,.<column-name> <data-type>...];
 
 ```
 
@@ -166,10 +170,10 @@ Columns do not have column constraints. Tables do not have table constraints.
 
 ## Privileges
 
-Requires one of:
+To use REMOTE\_EXECUTE requires one of the following:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 
@@ -185,13 +189,13 @@ CREATE TABLE IF NOT EXISTS ExternalSchema1.ExternalTable1
 	PRESSURE 	DOUBLE,
 	OIL_TEMP 	DOUBLE,
 	SMPL 		BIGINT 
-) IN FILES_SERVICE
+) IN FILES_SERVICE;
 ```
 
 **Related Information**  
 
 
-[REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](../030-sql-statements/remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md "Execute a data lake Relational Engine SQL statement by embedding the statement in the REMOTE_EXECUTE procedure.")
+[REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](../030-sql-statements/remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md "To run data lake Relational Engine SQL statements using the SAP HANA database REMOTE_EXECUTE or REMOTE_EXECUTE_DDL procedure, you embed the SQL syntax within the procedure.")
 
 [DROP \(Remote\) TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\) \[SQL on Files\]](drop-remote-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-sql-on-fi-ca1e55d.md "Drop a remote table from a SQL on Files external catalog.")
 
@@ -199,5 +203,5 @@ CREATE TABLE IF NOT EXISTS ExternalSchema1.ExternalTable1
 
 [REFRESH \(Remote\) TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\) \[SQL on Files\]](refresh-remote-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-sql-on-054b150.md "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.")
 
-[CREATE (Remote) TABLE Statement for Data Lake Relational Engine [SQL on Files]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/beffc07c515540088d372197c9eee191.html "Create a remote table managed by SQL on Files.") :arrow_upper_right:
+[CREATE (Remote) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/beffc07c515540088d372197c9eee191.html "Create a remote table managed by SQL on Files.") :arrow_upper_right:
 

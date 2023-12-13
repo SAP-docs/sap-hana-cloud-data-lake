@@ -6,8 +6,11 @@ Sets the number of rows that are returned from remote servers for each fetch.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa62f85d684f210158283e22a4e0cc28d__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

@@ -6,16 +6,27 @@ Reports database server property information.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be5bff46c5f10149c2c85dc65723d6e__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_eng_properties( )
+sa_eng_properties( );
 ```
+
+
+
+<a name="loio3be5bff46c5f10149c2c85dc65723d6e__section_etq_kjm_zyb"/>
+
+## Parameters
+
+None
 
 
 
@@ -28,21 +39,15 @@ sa_eng_properties( )
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -51,21 +56,15 @@ Description
 
 PropNum
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The database server property number.
-
-
 
 </td>
 </tr>
@@ -74,21 +73,15 @@ The database server property number.
 
 PropName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The database server property name.
-
-
 
 </td>
 </tr>
@@ -97,21 +90,15 @@ The database server property name.
 
 PropDescription
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The database server property description.
-
-
 
 </td>
 </tr>
@@ -120,21 +107,15 @@ The database server property description.
 
 Value
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The database server property value.
-
-
 
 </td>
 </tr>
@@ -160,7 +141,9 @@ None
 
 
 
-The following statement returns a set of available server properties
+## Examples
+
+This example uses the sa\_eng\_properties system procedure to return a set of available server properties.
 
 ```
 CALL sa_eng_properties( );
@@ -173,21 +156,15 @@ CALL sa_eng_properties( );
 
 PropNum
 
-
-
 </th>
 <th valign="top">
 
 PropName
 
-
-
 </th>
 <th valign="top">
 
 ...
-
-
 
 </th>
 </tr>
@@ -196,21 +173,15 @@ PropName
 
 1
 
-
-
 </td>
 <td valign="top">
 
 IdleWrite
 
-
-
 </td>
 <td valign="top">
 
 ...
-
-
 
 </td>
 </tr>
@@ -219,21 +190,15 @@ IdleWrite
 
 2
 
-
-
 </td>
 <td valign="top">
 
 IdleChkPt
 
-
-
 </td>
 <td valign="top">
 
 ...
-
-
 
 </td>
 </tr>
@@ -242,21 +207,15 @@ IdleChkPt
 
 ...
 
-
-
 </td>
 <td valign="top">
 
 ...
 
-
-
 </td>
 <td valign="top">
 
 ...
-
-
 
 </td>
 </tr>

@@ -6,8 +6,11 @@ Sets an upper bound, expressed in megabytes, on the amount of temporary cache sp
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa877d66984f21015b5d2876b9dadb134__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

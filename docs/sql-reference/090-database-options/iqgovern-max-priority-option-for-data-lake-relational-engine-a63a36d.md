@@ -6,8 +6,11 @@ Limits the allowed IQGOVERN\_PRIORITY setting.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63a36dd84f21015b5a7cce84258e338__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

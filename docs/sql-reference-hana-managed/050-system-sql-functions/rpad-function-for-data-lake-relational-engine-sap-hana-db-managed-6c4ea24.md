@@ -7,7 +7,7 @@ Right-pads a string with spaces or a specified pattern to make a string that is 
 
 
 ```
-RPAD ( <str>, <n> [, <pattern> ] )
+RPAD ( <str>, <n> [, <pattern> ] );
 ```
 
 
@@ -94,7 +94,7 @@ Vendor extension.
 
 ## Examples
 
--   The following example right-pads the end of string ***hello*** with the pattern ***12345*** to make a string of ***15*** characters in length and returns the value "***hello1234512345***":
+-   The following example right-pads the end of string `hello` with the pattern `12345` to make a string of `15` characters in length and returns the value "***hello1234512345***":
 
     ```
     SELECT RPAD ('hello', 15, '12345') "right pad" FROM DUMMY;
@@ -106,7 +106,7 @@ Vendor extension.
     SELECT RPAD ('hello', 2, '12345') "right pad" FROM DUMMY;
     ```
 
--   By not specifying *<pattern\>*, this example right-pads the end of string ***hello*** with a single blank character \(that is, "***hello***"\):
+-   By not specifying *<pattern\>*, this example right-pads the end of string `hello` with a single blank character \(that is, "***hello***"\):
 
     ```
     SELECT RPAD ('hello', 6) "right pad" FROM DUMMY;
@@ -116,5 +116,5 @@ Vendor extension.
 **Related Information**  
 
 
-[RPAD Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/3a8714b7782a4730b091194c3b54aca0.html "Right-pads a string with spaces or a specified pattern to make a string that is a specified number of characters in length.") :arrow_upper_right:
+[RPAD Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3a8714b7782a4730b091194c3b54aca0.html "Right-pads a string with spaces or a specified pattern to make a string that is a specified number of characters in length.") :arrow_upper_right:
 

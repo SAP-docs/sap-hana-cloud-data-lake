@@ -6,10 +6,13 @@ In combination with the TEMP\_EXTRACT\_SWAP option, specifies the type of extrac
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa65bc23384f210159fb68e64b1d9ab08__section_d3p_24q_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ In combination with the TEMP\_EXTRACT\_SWAP option, specifies the type of extrac
 ## Syntax
 
 ```
-TEMP_EXTRACT_BINARY = { ON | OFF }
+TEMP_EXTRACT_BINARY = { ON | OFF };
 ```
 
 
@@ -60,28 +63,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -90,28 +85,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -120,28 +107,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -162,21 +141,15 @@ Use this option with the TEMP\_EXTRACT\_SWAP option to specify the type of extra
 
 Extraction type
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 TEMP\_EXTRACT\_BINARY
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 TEMP\_EXTRACT\_SWAP
-
-
 
 </th>
 </tr>
@@ -185,21 +158,15 @@ TEMP\_EXTRACT\_SWAP
 
 binary
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 ON
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 OFF
-
-
 
 </td>
 </tr>
@@ -208,21 +175,15 @@ OFF
 
 binary/swap
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 ON
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 ON
-
-
 
 </td>
 </tr>
@@ -231,21 +192,15 @@ ON
 
 ASCII
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 OFF
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 OFF
-
-
 
 </td>
 </tr>

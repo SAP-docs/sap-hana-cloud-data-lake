@@ -11,7 +11,7 @@ Adds a record to an SAP HANA database virtual table, that points to a data lake 
 ## Syntax
 
 ```
-INSERT INTO <hana_relational_container_schema_name>.<virtual_table_name>
+INSERT INTO <hana_relational_container_schema>.<virtual_table_name>
  [ ( <column_list_clause> ) ]
  { { <value_list_clause> | [ <overriding_clause> ] <subquery> } | <with_clause> }
  [ <hint_clause> ]
@@ -27,7 +27,7 @@ INSERT INTO <hana_relational_container_schema_name>.<virtual_table_name>
 <dl>
 <dt><b>
 
-*<hana\_relational\_container\_schema\_name\>*
+*<hana\_relational\_container\_schema\>*
 
 </b></dt>
 <dd>
@@ -60,10 +60,10 @@ Specifies a list of column identifiers, ordered in the order of values in the *<
 <column_list_clause> ::= ( <column_def> [, <column_def> [,…] ] )           
 
 <column_def> ::= 
- [ [ <hana_relational_container_schema_name>.]<virtual_table_name>.]<column_name>
+ [ [ <hana_relational_container_schema>.]<virtual_table_name>.]<column_name>
  | [ <table_alias>.]<column_name>
 
-<hana_relational_container_schema_name> ::= <identifier>
+<hana_relational_container_schema> ::= <identifier>
 <virtual_table_name> ::= <identifier>
 <column_name> ::= <identifier>
 
@@ -190,21 +190,15 @@ INSERT INTO SYSHDL_CONTAINER1.V_T1 VALUES (1, 1, 'The first');
 
 KEY
 
-
-
 </td>
 <td valign="top">
 
 VAL1
 
-
-
 </td>
 <td valign="top">
 
 VAL2
-
-
 
 </td>
 </tr>
@@ -213,21 +207,15 @@ VAL2
 
 1
 
-
-
 </td>
 <td valign="top">
 
 1
 
-
-
 </td>
 <td valign="top">
 
 The first
-
-
 
 </td>
 </tr>
@@ -246,21 +234,15 @@ INSERT INTO SYSHDL_CONTAINER1.V_T1 (KEY, VAL2) VALUES (2,3);
 
 KEY
 
-
-
 </td>
 <td valign="top">
 
 VAL1
 
-
-
 </td>
 <td valign="top">
 
 VAL2
-
-
 
 </td>
 </tr>
@@ -269,21 +251,15 @@ VAL2
 
 1
 
-
-
 </td>
 <td valign="top">
 
 1
 
-
-
 </td>
 <td valign="top">
 
 The first
-
-
 
 </td>
 </tr>
@@ -292,21 +268,15 @@ The first
 
 2
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 NULL
-
-
 
 </td>
 </tr>
@@ -325,21 +295,15 @@ INSERT INTO SYSHDL_CONTAINER1.V_T1 SELECT 3, 3, 'The third' FROM DUMMY;
 
 KEY
 
-
-
 </td>
 <td valign="top">
 
 VAL1
 
-
-
 </td>
 <td valign="top">
 
 VAL2
-
-
 
 </td>
 </tr>
@@ -348,21 +312,15 @@ VAL2
 
 1
 
-
-
 </td>
 <td valign="top">
 
 1
 
-
-
 </td>
 <td valign="top">
 
 The first
-
-
 
 </td>
 </tr>
@@ -371,21 +329,15 @@ The first
 
 2
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 3
-
-
 
 </td>
 </tr>
@@ -394,21 +346,15 @@ The first
 
 3
 
-
-
 </td>
 <td valign="top">
 
 3
 
-
-
 </td>
 <td valign="top">
 
 The third
-
-
 
 </td>
 </tr>

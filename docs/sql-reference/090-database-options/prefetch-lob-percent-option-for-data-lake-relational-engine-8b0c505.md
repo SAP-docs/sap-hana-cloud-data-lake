@@ -6,8 +6,11 @@ Specifies the percent of prefetch resources in queries involving the character l
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loio8b0c505b63414063953cefb9f32bd593__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

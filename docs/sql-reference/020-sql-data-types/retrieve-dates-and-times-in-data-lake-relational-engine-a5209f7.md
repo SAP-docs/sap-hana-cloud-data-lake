@@ -24,14 +24,10 @@ The following operators are allowed on dates:
 
 Operator
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Description
-
-
 
 </th>
 </tr>
@@ -40,14 +36,10 @@ Description
 
 timestamp + integer
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Add the specified number of days to a date or timestamp.
-
-
 
 </td>
 </tr>
@@ -56,14 +48,10 @@ Add the specified number of days to a date or timestamp.
 
 timestamp - integer
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Subtract the specified number of days from a date or timestamp.
-
-
 
 </td>
 </tr>
@@ -72,14 +60,10 @@ Subtract the specified number of days from a date or timestamp.
 
 date - date
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Compute the number of days between two dates or timestamps.
-
-
 
 </td>
 </tr>
@@ -88,14 +72,10 @@ Compute the number of days between two dates or timestamps.
 
 date + time
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Create a timestamp combining the given date and time.
-
-
 
 </td>
 </tr>

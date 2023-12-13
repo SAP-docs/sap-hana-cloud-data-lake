@@ -7,7 +7,7 @@ Returns a specified number of spaces.
 
 
 ```
-SPACE ( <integer-expression> )
+SPACE ( <integer-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The number of spaces to return.
 
 <a name="loioa5815e2c84f210158cf48f3c618df22c__SPACE_returns1"/>
 
-## Returns
+## Result Set
 
 LONG VARCHAR
 
@@ -61,11 +61,11 @@ LONG VARCHAR
 The following statement returns a string containing 10 spaces:
 
 ```
-SELECT SPACE( 10 ) FROM iq_dummy
+SELECT SPACE( 10 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[SPACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ad081410a2bf423c888257b5d0f621a3.html "Returns a specified number of spaces.") :arrow_upper_right:
+[SPACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ad081410a2bf423c888257b5d0f621a3.html "Returns a specified number of spaces.") :arrow_upper_right:
 

@@ -2,26 +2,37 @@
 
 # sp\_iqunusedtable Procedure for Data Lake Relational Engine
 
-Reports IQ tables that were not referenced by the workload.
+Reports tables that were not referenced by the workload.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5bced3184f2101594668a0e1dd0375a__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqunusedtable
+sp_iqunusedtable;
 ```
+
+
+
+<a name="loioa5bced3184f2101594668a0e1dd0375a__section_wnm_sxc_yyb"/>
+
+## Parameters
+
+None
 
 
 
 <a name="loioa5bced3184f2101594668a0e1dd0375a__section_vxr_h4m_nbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -30,14 +41,10 @@ sp_iqunusedtable
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,14 +53,10 @@ Description
 
 TableName
 
-
-
 </td>
 <td valign="top">
 
 Table name
-
-
 
 </td>
 </tr>
@@ -62,14 +65,10 @@ Table name
 
 Owner
 
-
-
 </td>
 <td valign="top">
 
-User name of table owner
-
-
+User name of index owner
 
 </td>
 </tr>
@@ -101,9 +100,13 @@ None
 
 <a name="loioa5bced3184f2101594668a0e1dd0375a__iq_refbb_1834"/>
 
-## Example
+## Examples
 
-The following table illustrates sample output from the sp\_iqunusedtable procedure:
+The following statement displays a list of the tables not referenced by the workload. In this example, there are three tables for HDLADMIN and two tables each for USER1, USER2, and USER3:
+
+```
+CALL sp_iqunusedtable;
+```
 
 
 <table>
@@ -112,206 +115,130 @@ The following table illustrates sample output from the sp\_iqunusedtable procedu
 
 TableName
 
-
-
 </th>
 <th valign="top">
 
 Owner
 
-
-
 </th>
 </tr>
 <tr>
 <td valign="top">
 
-emp1
-
-
+t1
 
 </td>
 <td valign="top">
 
 HDLADMIN
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-SalesOrderItems
-
-
-
-</td>
-<td valign="top">
-
-GROUPO
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-sale
-
-
+m\_t1
 
 </td>
 <td valign="top">
 
 HDLADMIN
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-FinancialCodes
-
-
-
-</td>
-<td valign="top">
-
-GROUPO
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-SalesOrders
-
-
-
-</td>
-<td valign="top">
-
-GROUPO
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Products
-
-
-
-</td>
-<td valign="top">
-
-GROUP
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-Contacts
-
-
-
-</td>
-<td valign="top">
-
-GROUPO
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-FinancialData
-
-
-
-</td>
-<td valign="top">
-
-GROUPO
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-iq\_dummy
-
-
+table1
 
 </td>
 <td valign="top">
 
 HDLADMIN
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
+mytable
+
+</td>
+<td valign="top">
+
+HDLADMIN
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Employees
-
-
+A1
 
 </td>
 <td valign="top">
 
-GROUPO
-
-
+USER1
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Departments
-
-
+A2
 
 </td>
 <td valign="top">
 
-GROUPO
-
-
+USER1
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-Customers
-
-
+P3
 
 </td>
 <td valign="top">
 
-GROUPO
+USER2
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
+P4
+
+</td>
+<td valign="top">
+
+USER2
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+D1
+
+</td>
+<td valign="top">
+
+USER3
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+D3
+
+</td>
+<td valign="top">
+
+USER3
 
 </td>
 </tr>
@@ -328,9 +255,9 @@ GROUPO
 
 [sp\_iqtableuse Procedure for Data Lake Relational Engine](sp-iqtableuse-procedure-for-data-lake-relational-engine-a5bae03.md "Reports detailed usage information for tables accessed by the workload.")
 
-[sp\_iqunusedcolumn Procedure for Data Lake Relational Engine](sp-iqunusedcolumn-procedure-for-data-lake-relational-engine-a5bbef3.md "Reports IQ columns that were not referenced by the workload.")
+[sp\_iqunusedcolumn Procedure for Data Lake Relational Engine](sp-iqunusedcolumn-procedure-for-data-lake-relational-engine-a5bbef3.md "Reports columns that were not referenced by the workload.")
 
-[sp\_iqunusedindex Procedure for Data Lake Relational Engine](sp-iqunusedindex-procedure-for-data-lake-relational-engine-a5bc6ce.md "Reports IQ secondary (non-FP) indexes that were not referenced by the workload.")
+[sp\_iqunusedindex Procedure for Data Lake Relational Engine](sp-iqunusedindex-procedure-for-data-lake-relational-engine-a5bc6ce.md "Reports secondary (non-FP) indexes that were not referenced by the workload.")
 
 [sp\_iqworkmon Procedure for Data Lake Relational Engine](sp-iqworkmon-procedure-for-data-lake-relational-engine-a5c13d2.md "Controls collection of workload monitor usage information, and reports monitoring collection status. sp_iqworkmon collects information only for queries (SQL statements containing a FROM clause). You cannot use sp_iqworkmon for INSERT or LOAD statements.")
 

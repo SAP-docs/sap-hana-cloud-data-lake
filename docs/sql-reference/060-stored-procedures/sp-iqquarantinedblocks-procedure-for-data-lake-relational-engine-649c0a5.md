@@ -6,15 +6,18 @@ Displays information about block numbers that cannot be reused because they hold
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio649c0a5500af44d192fc7e8ac6e3a538__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqquarantinedblocks
+sp_iqquarantinedblocks;
 ```
 
 
@@ -27,7 +30,7 @@ None.
 
 
 
-## Returns
+## Result Set
 
 A single unsigned bigint column, physicalBlockNumber, one quarantined physical block number per row.
 
@@ -64,13 +67,13 @@ None
 -   This example retrieves the block numbers in ascending order:
 
     ```
-    SELECT qm.physicalBlockNumber FROM sp_iqquarantinedblocks() AS qm ORDER BY 1
+    SELECT qm.physicalBlockNumber FROM sp_iqquarantinedblocks() AS qm ORDER BY 1;
     ```
 
 -   This example counts the number of quarantined blocks:
 
     ```
-    SELECT COUNT(*) FROM sp_iqquarantinedblocks()
+    SELECT COUNT(*) FROM sp_iqquarantinedblocks();
     ```
 
 

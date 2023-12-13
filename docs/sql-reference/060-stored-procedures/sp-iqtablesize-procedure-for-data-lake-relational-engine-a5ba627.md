@@ -6,15 +6,18 @@ Returns the size of the specified table.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5ba627c84f2101591d9cedf0830a4e0__section_p4t_vqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqtablesize ( <table_owner>.<table_name> )
+sp_iqtablesize ( <table_owner>.<table_name> );
 ```
 
 
@@ -54,7 +57,7 @@ The name of the table.
 
 <a name="loioa5ba627c84f2101591d9cedf0830a4e0__sp_iqtablesize_returns1"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -63,14 +66,10 @@ The name of the table.
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -79,14 +78,10 @@ Description
 
 Ownername
 
-
-
 </td>
 <td valign="top">
 
 The name of owner.
-
-
 
 </td>
 </tr>
@@ -95,14 +90,10 @@ The name of owner.
 
 Tablename
 
-
-
 </td>
 <td valign="top">
 
 The name of table.
-
-
 
 </td>
 </tr>
@@ -111,14 +102,10 @@ The name of table.
 
 Columns
 
-
-
 </td>
 <td valign="top">
 
 The number of columns in the table.
-
-
 
 </td>
 </tr>
@@ -127,14 +114,10 @@ The number of columns in the table.
 
 KBytes
 
-
-
 </td>
 <td valign="top">
 
-The physical table size, in kilobytes. If you divide the KBytes value by page size, you see the average on-disk page size.
-
-
+An approximation of the physical table size, in kilobytes. Data lake Relational Engine uses a 512KB page size and the size in KB reported by sp\_iqtablesize is based on a heuristic for the average page size in the cloud dbspace.
 
 </td>
 </tr>
@@ -143,14 +126,10 @@ The physical table size, in kilobytes. If you divide the KBytes value by page si
 
 Pages
 
-
-
 </td>
 <td valign="top">
 
 The number of data lake Relational Engine pages needed to hold the table in memory. Pages is the total number of data lake Relational Engine pages for the table. The unit of measurement for pages is page size. All in-memory buffers \(buffers in the data lake Relational Engine buffer cache\) are the same size.
-
-
 
 </td>
 </tr>
@@ -159,14 +138,10 @@ The number of data lake Relational Engine pages needed to hold the table in memo
 
 CompressedPages
 
-
-
 </td>
 <td valign="top">
 
 The number of data lake Relational Engine pages that are compressed, when the table is compressed \(on disk\). Pages on disk are compressed. For example, if Pages is 1000 and CompressedPages is 992, this means that 992 of the 1000 pages are compressed. CompressedPages divided by Pages is usually near 100%, because most pages compress. An empty page is not compressed, since data lake Relational Engine does not write empty pages. Data lake Relational Engine pages compress well, regardless of the fullness of the page.
-
-
 
 </td>
 </tr>
@@ -175,14 +150,34 @@ The number of data lake Relational Engine pages that are compressed, when the ta
 
 NBlocks
 
+</td>
+<td valign="top">
 
+The number of data lake Relational Engine blocks. NBlocks is Kbytes divided by block size. Each data lake Relational Engine page on disk uses 1 to 16 blocks.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+RlvLogPages
 
 </td>
 <td valign="top">
 
-The number of data lake Relational Engine blocks. NBlocks is Kbytes divided by block size. Each data lake Relational Engine page on disk uses 1 to 16 blocks. If the page size is 128 KB, then the block size is 8 KB. In this case, an individual on-disk page could be 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, or 128 KB.
+For internal use.
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
+RlvLogBytes
+
+</td>
+<td valign="top">
+
+For internal use.
 
 </td>
 </tr>
@@ -227,109 +222,67 @@ None
 
 <a name="loioa5ba627c84f2101591d9cedf0830a4e0__sp_iqtablesize_example1"/>
 
-## Example
+## Examples
+
+This example shows information on the size of table A1, owned by USER1.
 
 ```
-call sp_iqtablesize ('dba.t1')
+CALL sp_iqtablesize ('USER1.A1');
 ```
 
 
 <table>
 <tr>
-<th valign="top" rowspan="1">
+<th valign="top">
 
 Ownername
 
-
-
 </th>
-<th valign="top" rowspan="1">
+<th valign="top">
 
 Tablename
 
-
-
 </th>
-<th valign="top" rowspan="1">
+<th valign="top">
 
 Columns
 
-
-
 </th>
-</tr>
-<tr>
-<td valign="top" rowspan="1">
-
-DBA
-
-
-
-</td>
-<td valign="top" rowspan="1">
-
-t1
-
-
-
-</td>
-<td valign="top" rowspan="1">
-
-3
-
-
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" rowspan="1">
-
-\(Continued\)
+<th valign="top">
 
 KBytes
 
-
-
 </th>
-<th valign="top" rowspan="1">
+<th valign="top">
 
 Pages
 
-
-
-</th>
-<th valign="top" rowspan="1">
-
-CompressedPages
-
-
-
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="1">
+<td valign="top">
 
-192
-
-
+USER1
 
 </td>
-<td valign="top" rowspan="1">
+<td valign="top">
 
-5
-
-
+A1
 
 </td>
-<td valign="top" rowspan="1">
+<td valign="top">
 
-4
+2
 
+</td>
+<td valign="top">
 
+20480
+
+</td>
+<td valign="top">
+
+19
 
 </td>
 </tr>
@@ -338,28 +291,65 @@ CompressedPages
 
 <table>
 <tr>
-<th valign="top" rowspan="1">
+<th valign="top" colspan="5">
 
 \(Continued\)
 
-NBlocs
+</th>
+</tr>
+<tr>
+<th valign="top">
 
+Pages
 
+</th>
+<th valign="top">
+
+CompressedPages
+
+</th>
+<th valign="top">
+
+NBlocks
+
+</th>
+<th valign="top">
+
+RlvLogPages
+
+</th>
+<th valign="top">
+
+RlvLogKBytes
 
 </th>
 </tr>
 <tr>
-<td valign="top" rowspan="1">
+<td valign="top">
 
-24
+19
 
+</td>
+<td valign="top">
 
+16
+
+</td>
+<td valign="top">
+
+80
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
 
 </td>
 </tr>
-</table>
-
-
-<table>
 </table>
 

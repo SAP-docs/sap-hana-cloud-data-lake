@@ -6,10 +6,13 @@ The SYSCOLUMN view is provided for compatibility with older versions of the soft
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be742806c5f1014b6d98c181f792323__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -35,6 +38,6 @@ ALTER VIEW "SYS"."SYSCOLUMN"
     b.column_type
     from SYS.SYSTABCOL as b
       left outer join SYS.ISYSREMARK as r on(b.object_id = r.object_id)
-      left outer join SYS.ISYSIDXCOL as c on(b.table_id = c.table_id and b.column_id = c.column_id and c.index_id = 0)
+      left outer join SYS.ISYSIDXCOL as c on(b.table_id = c.table_id and b.column_id = c.column_id and c.index_id = 0);
 ```
 

@@ -2,26 +2,29 @@
 
 # sp\_iqclouddbspace System Procedure for Data Lake Relational Engine
 
-Displays detailed information about the cloud dbspace in data lake Relational Engine.
+Displays detailed information about the user\_object\_store dbspace.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio4ef0219c16ec4f578395e34785797cfe__section_rpg_3dw_f4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqclouddbspace
+sp_iqclouddbspace();
 ```
 
 
 
 <a name="loio4ef0219c16ec4f578395e34785797cfe__sp_iqclouddbspace_returns1"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -30,14 +33,10 @@ sp_iqclouddbspace
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,14 +45,10 @@ Description
 
 DbspaceName
 
-
-
 </td>
 <td valign="top">
 
-The name of the cloud dbspace.
-
-
+The name of the dbspace.
 
 </td>
 </tr>
@@ -62,14 +57,10 @@ The name of the cloud dbspace.
 
 DbspaceID
 
-
-
 </td>
 <td valign="top">
 
-The identifier of the cloud dbspace.
-
-
+The identifier of the dbspace.
 
 </td>
 </tr>
@@ -78,14 +69,10 @@ The identifier of the cloud dbspace.
 
 CurrSizeByte
 
-
-
 </td>
 <td valign="top">
 
-The current size of the cloud dbspace in bytes.
-
-
+The current size of the dbspace in bytes.
 
 </td>
 </tr>
@@ -94,14 +81,10 @@ The current size of the cloud dbspace in bytes.
 
 MaxSizeByte
 
-
-
 </td>
 <td valign="top">
 
-The maximum size of the cloud dbspace in bytes. A value of 0 indicates no size restriction.
-
-
+The maximum size of the dbspace in bytes. A value of 0 indicates no size restriction.
 
 </td>
 </tr>
@@ -110,14 +93,10 @@ The maximum size of the cloud dbspace in bytes. A value of 0 indicates no size r
 
 PageSizeByte
 
-
-
 </td>
 <td valign="top">
 
 The size of a database page in bytes. This is calculated based on the compression ratio and the number of pages used.
-
-
 
 </td>
 </tr>
@@ -139,7 +118,13 @@ Requires EXECUTE object-level privilege on the procedure.
 
 <a name="loio4ef0219c16ec4f578395e34785797cfe__sp_iqclouddbspace_example1"/>
 
-## Example
+## Examples
+
+This example returns information on the dbspace user\_object\_store.
+
+```
+CALL sp_iqclouddbspace();
+```
 
 
 <table>
@@ -148,35 +133,25 @@ Requires EXECUTE object-level privilege on the procedure.
 
 DbspaceName
 
-
-
 </th>
 <th valign="top">
 
 DbspaceID
-
-
 
 </th>
 <th valign="top">
 
 CurrSizeByte
 
-
-
 </th>
 <th valign="top">
 
 MaxSizeByte
 
-
-
 </th>
 <th valign="top">
 
 PageSizeByte
-
-
 
 </th>
 </tr>
@@ -185,35 +160,25 @@ PageSizeByte
 
 user\_object\_store
 
-
-
 </td>
 <td valign="top">
 
 16388
-
-
 
 </td>
 <td valign="top">
 
 131072
 
-
-
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 65536
-
-
 
 </td>
 </tr>
@@ -222,7 +187,5 @@ user\_object\_store
 **Related Information**  
 
 
-[Cloud Dbspaces](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2023_2_QRC/en-US/493eb818429e4996b3da4153192a9efa.html "Cloud dbspace is a new offering where the database engine stores a user dbspace in object storage solutions such as Microsoft Azure Blob Storage, AWS Simple Storage Service (S3), or Google Cloud Storage. In a cloud dbspace, database pages are physically stored as objects as opposed to regular file system blocks.") :arrow_upper_right:
-
-[sp_iqclouddbspace System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/4240c9a98ce04c2cb85a37ada268acb4.html "") :arrow_upper_right:
+[sp_iqclouddbspace System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/4240c9a98ce04c2cb85a37ada268acb4.html "Displays detailed information about the user_object_store dbspace.") :arrow_upper_right:
 

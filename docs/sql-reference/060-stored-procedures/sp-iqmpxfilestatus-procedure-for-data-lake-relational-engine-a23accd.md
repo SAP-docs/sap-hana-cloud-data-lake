@@ -6,20 +6,23 @@ If run on the coordinator node, displays file status for the coordinator, and fo
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa23accd884f210158ae2f17452390330__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqmpxfilestatus
+sp_iqmpxfilestatus;
 ```
 
 
 
-## Returns
+## Result Set
 
 
 <table>
@@ -28,21 +31,15 @@ sp_iqmpxfilestatus
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -51,21 +48,15 @@ Description
 
 server\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Identifier for the multiplex node, from SYSIQMPXINFO
-
-
 
 </td>
 </tr>
@@ -74,21 +65,15 @@ Identifier for the multiplex node, from SYSIQMPXINFO
 
 server\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Name of the multiplex node where the dbspace file resides
-
-
 
 </td>
 </tr>
@@ -97,21 +82,15 @@ Name of the multiplex node where the dbspace file resides
 
 dbspace\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Dbspace from which the space is reserved
-
-
 
 </td>
 </tr>
@@ -120,21 +99,15 @@ Dbspace from which the space is reserved
 
 dbfile\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Logical file name of the dbspace file
-
-
 
 </td>
 </tr>
@@ -143,14 +116,10 @@ Logical file name of the dbspace file
 
 FileStatus
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(2\)
-
-
 
 </td>
 <td valign="top">
@@ -181,7 +150,7 @@ None
 
 
 
-## Example
+## Examples
 
 The following shows sample output from sp\_iqmpxfilestatus:
 

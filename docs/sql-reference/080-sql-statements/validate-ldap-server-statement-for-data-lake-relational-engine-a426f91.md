@@ -6,16 +6,19 @@ Validates changes to the settings of existing LDAP server configuration objects 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa426f91384f21015b827d45ce9fce3a7__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 VALIDATE LDAP SERVER [ { <ldapua-server-name> | <ldapua-server-attributes> } ]
-   [ CHECK <userid> [ <user-dn-string> ] ]
+   [ CHECK <userid> [ <user-dn-string> ] ];
 ```
 
 ```
@@ -26,7 +29,7 @@ VALIDATE LDAP SERVER [ { <ldapua-server-name> | <ldapua-server-attributes> } ]
          | IDENTIFIED BY { '<password>' | NULL }
       | AUTHENTICATION URL { '<URL_string>' | NULL } 
       | CONNECTION TIMEOUT <timeout_value> 
-      | CONNECTION RETRIES <retry_value>  }
+      | CONNECTION RETRIES <retry_value>  };
 ```
 
 
@@ -204,14 +207,14 @@ ANSI SQL – compliance level: Transact-SQL extension
     	IDENTIFIED BY 'Secret99Password' 
     AUTHENTICATION URL 'ldaps://my_LDAPserver:389/' 
     CONNECTION TIMEOUT 3000 
-    WITH ACTIVATE
+    WITH ACTIVATE;
     ```
 
 -   This example validates the existence of a userID `myusername`This statement is useful for an administrator when setting up a new server by using the optional CHECK clause to compare the userID to the expected user distinguished name \(enclosed in quotation marks\) on the `apps_primary` LDAP server configuration object:
 
     ```
     VALIDATE LDAP SERVER apps_primary
-    CHECK myusername 'cn=myusername,cn=Users,dc=mycompany,dc=com'
+    CHECK myusername 'cn=myusername,cn=Users,dc=mycompany,dc=com';
      
     ```
 
@@ -225,7 +228,7 @@ ANSI SQL – compliance level: Transact-SQL extension
     	IDENTIFIED BY 'Secret99Password'
     AUTHENTICATION URL 'ldaps://my_LDAPserver:389/'
     CONNECTION TIMEOUT 3000
-    CHECK myusername 'cn=myusername,cn=Users,dc=mycompany,dc=com'
+    CHECK myusername 'cn=myusername,cn=Users,dc=mycompany,dc=com';
      
     ```
 

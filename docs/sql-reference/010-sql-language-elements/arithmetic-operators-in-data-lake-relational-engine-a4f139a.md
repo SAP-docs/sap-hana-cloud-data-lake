@@ -13,14 +13,10 @@ These arithmetic operators are available in data lake Relational Engine.
 
 Operator
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -29,14 +25,10 @@ Description
 
 *<expression\>* + *<expression\>*
 
-
-
 </td>
 <td valign="top">
 
 Addition. If either expression is the NULL value, then the result is the NULL value.
-
-
 
 </td>
 </tr>
@@ -45,14 +37,10 @@ Addition. If either expression is the NULL value, then the result is the NULL va
 
 *<expression\>* - *<expression\>*
 
-
-
 </td>
 <td valign="top">
 
 Subtraction. If either expression is the NULL value, then the result is the NULL value.
-
-
 
 </td>
 </tr>
@@ -61,14 +49,10 @@ Subtraction. If either expression is the NULL value, then the result is the NULL
 
 \- *<expression\>*
 
-
-
 </td>
 <td valign="top">
 
 Negation. If the expression is the NULL value, then the result is the NULL value.
-
-
 
 </td>
 </tr>
@@ -77,14 +61,10 @@ Negation. If the expression is the NULL value, then the result is the NULL value
 
 *<expression\>* \* *<expression\>*
 
-
-
 </td>
 <td valign="top">
 
 Multiplication. If either expression is the NULL value, then the result is the NULL value.
-
-
 
 </td>
 </tr>
@@ -93,14 +73,10 @@ Multiplication. If either expression is the NULL value, then the result is the N
 
 *<expression\>* / *<expression\>*
 
-
-
 </td>
 <td valign="top">
 
 Division. If either expression is the NULL value or if the second expression is 0, then the result is the NULL value.
-
-
 
 </td>
 </tr>
@@ -109,14 +85,10 @@ Division. If either expression is the NULL value or if the second expression is 
 
 *<expression\>* % *<expression\>*
 
-
-
 </td>
 <td valign="top">
 
 Modulo finds the integer remainder after a division involving two whole numbers. For example, 21 % 11 = 10 because 21 divided by 11 equals 1 with a remainder of 10.
-
-
 
 </td>
 </tr>

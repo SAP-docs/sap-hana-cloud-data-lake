@@ -6,17 +6,19 @@ Creates or replaces a semaphore and establishes the initial value for its counte
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio816c77ee6ce210148f098361bc9303f2__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 CREATE [ OR REPLACE | TEMPORARY ] SEMAPHORE [ IF NOT EXISTS ] [ <owner>.]<semaphore-name>
-   [ START WITH <initial-count> ]
-
+   [ START WITH <initial-count> ];
 ```
 
 
@@ -162,6 +164,8 @@ Not in the standard.
 </dl>
 
 
+
+## Example
 
 The following statement creates a semaphore called license\_counter and sets its counter to 3:
 

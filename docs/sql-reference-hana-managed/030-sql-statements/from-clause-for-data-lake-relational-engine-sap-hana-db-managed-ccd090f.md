@@ -387,8 +387,6 @@ SELECT * FROM PERSON HUSBAND, PERSON WIFE
 
 Join columns require like data types for optimal performance.
 
-For information on using the FROM clause with `EXT` indexes, see *SAP IQ Administration: Unstructured Data Analytics*.
-
 
 
 ### Performance Considerations

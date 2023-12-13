@@ -7,7 +7,7 @@ Encrypts the specified value using the supplied encryption key and returns a LON
 
 
 ```
-ENCRYPT( <string-expression> , <key> [ , <algorithm-format> [ , <initialization-vector> ] ] )
+ENCRYPT( <string-expression> , <key> [ , <algorithm-format> [ , <initialization-vector> ] ] );
 ```
 
 ```
@@ -55,7 +55,7 @@ PADDING= { PKCS5
 <dl>
 <dt><b>
 
- *<string-expression\>* 
+*<string-expression\>* 
 
 </b></dt>
 <dd>
@@ -66,7 +66,7 @@ The string to be encrypted. Binary values are supported. This parameter is case 
 
 </dd><dt><b>
 
- *<key\>* 
+*<key\>* 
 
 </b></dt>
 <dd>
@@ -82,7 +82,7 @@ Specify keys in PEM format for RSA.
 
 </dd><dt><b>
 
- *<algorithm-format\>* 
+*<algorithm-format\>* 
 
 </b></dt>
 <dd>
@@ -93,7 +93,7 @@ This optional string parameter specifies the type of algorithm, format, and padd
 <dl>
 <dt><b>
 
- *<algorithm\>* 
+*<algorithm\>* 
 
 </b></dt>
 <dd>
@@ -321,7 +321,7 @@ The data is not padded. The input data must be a multiple of the cipher block le
 
 </dd><dt><b>
 
- *<initialization-vector\>* 
+*<initialization-vector\>* 
 
 </b></dt>
 <dd>
@@ -337,7 +337,7 @@ Specify *<initialization-vector\>* when *<format\>* is set to RAW. The string ca
 
 <a name="loioec24782b83b94e6ebfa99014d36aa61d__section_rsx_gtg_trb"/>
 
-## Returns
+## Result Set
 
 LONG BINARY
 
@@ -380,5 +380,5 @@ Not in the standard.
 **Related Information**  
 
 
-[ENCRYPT Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/81f72ceb6ce210149256a7523672a8bb.html "Encrypts the specified value using the supplied encryption key and returns a LONG BINARY value.") :arrow_upper_right:
+[ENCRYPT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/81f72ceb6ce210149256a7523672a8bb.html "Encrypts the specified value using the supplied encryption key and returns a LONG BINARY value.") :arrow_upper_right:
 

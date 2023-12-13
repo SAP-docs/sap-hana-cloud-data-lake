@@ -13,15 +13,11 @@ The NOT operator is a unary operator that returns the inverse of its operand.
 
 Bit
 
-
-
 </th>
 <th valign="top">
 
 ~ Bit
 
-
-
 </th>
 </tr>
 <tr>
@@ -29,14 +25,10 @@ Bit
 
 1
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -45,14 +37,10 @@ Bit
 
 0
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 </tr>

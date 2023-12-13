@@ -6,15 +6,18 @@ Specifies parameters to an Interactive SQL \(`dbisql`\) command file.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa621ba2684f21015b69dc6ae412d919a__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-PARAMETERS <parameter1>, <parameter2>, …
+PARAMETERS <parameter1>, <parameter2>, …;
 ```
 
 
@@ -33,7 +36,7 @@ PARAMETERS <parameter1>, <parameter2>, …
 Parameters are referenced by putting the named parameter into the command file where you want the parameter to be substituted:
 
 ```
-{parameter1}
+{parameter1};
 ```
 
 There can be no spaces between the braces and the parameter name.

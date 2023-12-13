@@ -7,7 +7,7 @@ Inserts a string into another string at a position specified in bytes.
 
 
 ```
-BYTE_INSERTSTR( <insert_position> , <source_string> , <insert_string> )
+BYTE_INSERTSTR( <insert_position> , <source_string> , <insert_string> );
 ```
 
 
@@ -20,7 +20,7 @@ BYTE_INSERTSTR( <insert_position> , <source_string> , <insert_string> )
 <dl>
 <dt><b>
 
- *<insert\_position\>* 
+*<insert\_position\>* 
 
 </b></dt>
 <dd>
@@ -31,7 +31,7 @@ The byte position after which *<insert\_string\>* is to be inserted. The first b
 
 </dd><dt><b>
 
- *<source\_string\>* 
+*<source\_string\>* 
 
 </b></dt>
 <dd>
@@ -42,7 +42,7 @@ The string into which *<insert\_string\>* is to be inserted. *<source\_string\>*
 
 </dd><dt><b>
 
- *<insert\_string\>* 
+*<insert\_string\>* 
 
 </b></dt>
 <dd>
@@ -58,12 +58,12 @@ The string to be inserted.
 
 <a name="loio81f411c06ce21014834ca45160d818e3__BYTE_INSERTSTR_returns1"/>
 
-## Returns
+## Result Set
 
 LONG BINARY
 
 **Related Information**  
 
 
-[BYTE_INSERTSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/a8656a236f5a4afdb003988d8f040939.html "Inserts a string into another string at a position specified in bytes.") :arrow_upper_right:
+[BYTE_INSERTSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/a8656a236f5a4afdb003988d8f040939.html "Inserts a string into another string at a position specified in bytes.") :arrow_upper_right:
 

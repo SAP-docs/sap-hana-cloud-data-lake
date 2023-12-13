@@ -6,10 +6,13 @@ Sets the minimum length for new passwords in the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio814661016ce2101499ddd334930bf1ed__section_d3p_24q_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Sets the minimum length for new passwords in the database.
 ## Syntax
 
 ```
-MIN_PASSWORD_LENGTH = <value>
+MIN_PASSWORD_LENGTH = <value>;
 ```
 
 
@@ -58,28 +61,20 @@ Requires the SET ANY CUSTOMER SECURITY OPTION system privilege to set this datab
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC role
-
-
 
 </th>
 <th valign="top">
 
 For current user
 
-
-
 </th>
 <th valign="top">
 
 For other users
-
-
 
 </th>
 </tr>
@@ -88,28 +83,20 @@ For other users
 
 Allowed to set permanently?
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -118,28 +105,20 @@ No
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -152,6 +131,8 @@ No
 This option allows the database administrator to impose a minimum length on all new passwords for greater security. Existing passwords are not affected. Passwords have a maximum length of 255 bytes and are case sensitive.
 
 
+
+## Example
 
 Set the minimum length for new passwords to 6 bytes.
 

@@ -6,10 +6,13 @@ Each row in the SYS.SYSUSER system view describes a user, role, or schema in the
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3beae8f36c5f1014934e95d440287134__section_vwg_vhq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYS.SYSUSER system view describes a user, role, or schema in the
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 user\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 A unique identifier for the user assigned to the login policy.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ A unique identifier for the user assigned to the login policy.
 
 object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 A unique identifier for the user in the database.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ A unique identifier for the user in the database.
 
 user\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The login name for the user.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ The login name for the user.
 
 password
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(3\)
 
-
-
 </td>
 <td valign="top">
 
 Whether a password is stored. Three asterisks \(\*\*\*\) indicate that a password is stored. NULL indicates that no password is stored. You can return actual password hash values by querying the SYS.SYSUSERPASSWORD system view.
-
-
 
 </td>
 </tr>
@@ -135,21 +108,15 @@ Whether a password is stored. Three asterisks \(\*\*\*\) indicate that a passwor
 
 login\_policy\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 A unique identifier for the login policy.
-
-
 
 </td>
 </tr>
@@ -158,21 +125,15 @@ A unique identifier for the login policy.
 
 expire\_password\_on\_login
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
 
-
-
 </td>
 <td valign="top">
 
 A value that indicates if the password for the user expires at the next login.
-
-
 
 </td>
 </tr>
@@ -181,21 +142,15 @@ A value that indicates if the password for the user expires at the next login.
 
 password\_creation\_time
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 The local time that the password was created for the user.
-
-
 
 </td>
 </tr>
@@ -204,21 +159,15 @@ The local time that the password was created for the user.
 
 failed\_login\_attempts
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The number of times that a user can fail to log in before the account is locked.
-
-
 
 </td>
 </tr>
@@ -227,21 +176,15 @@ The number of times that a user can fail to log in before the account is locked.
 
 last\_login\_time
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 The local time that the user last logged in.
-
-
 
 </td>
 </tr>
@@ -250,14 +193,10 @@ The local time that the user last logged in.
 
 user\_type
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
-
-
 
 </td>
 <td valign="top">
@@ -344,21 +283,15 @@ Mutable and removable user extended as role.
 
 user\_dn
 
-
-
 </td>
 <td valign="top">
 
 CHAR \(1024\)
 
-
-
 </td>
 <td valign="top">
 
 An LDAP Distinguished Name \(DN\) identifier for the user that is unique within a domain and across domains. The DN is used to authenticate with an LDAP server.
-
-
 
 </td>
 </tr>
@@ -367,21 +300,15 @@ An LDAP Distinguished Name \(DN\) identifier for the user that is unique within 
 
 user\_dn\_cached\_at
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 The time that the user\_dn column was last cached. This value is used to determine whether to purge an old DN. Regardless of the database server local time zone, the value is stored in Coordinated Universal Time \(UTC\).
-
-
 
 </td>
 </tr>
@@ -390,21 +317,15 @@ The time that the user\_dn column was last cached. This value is used to determi
 
 password\_creation\_time\_utc
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE
 
-
-
 </td>
 <td valign="top">
 
 The UTC time that the password was created for the user.
-
-
 
 </td>
 </tr>
@@ -413,21 +334,15 @@ The UTC time that the password was created for the user.
 
 last\_login\_time\_utc
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE
 
-
-
 </td>
 <td valign="top">
 
 The UTC time that the user last logged in.
-
-
 
 </td>
 </tr>
@@ -436,21 +351,15 @@ The UTC time that the user last logged in.
 
 dual\_password
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(3\)
 
-
-
 </td>
 <td valign="top">
 
 Whether the second part of a dual password is stored for the user. Three asterisks \(\*\*\*\) indicate that a second part is stored. NULL indicates that there’s no second part. You can return actual password hash values by querying the SYS.SYSUSERPASSWORD system view.
-
-
 
 </td>
 </tr>
@@ -459,21 +368,15 @@ Whether the second part of a dual password is stored for the user. Three asteris
 
 lock\_time
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Timestamp at which user was locked due to failed login attempts.
-
-
 
 </td>
 </tr>
@@ -482,5 +385,5 @@ Timestamp at which user was locked due to failed login attempts.
 **Related Information**  
 
 
-[SYSUSER System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/191fd8e1a9594171a03df906f59e0a4f.html "Each row in the SYS.SYSUSER system view describes a user, role, or schema in the system.") :arrow_upper_right:
+[SYSUSER System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/191fd8e1a9594171a03df906f59e0a4f.html "Each row in the SYS.SYSUSER system view describes a user, role, or schema in the system.") :arrow_upper_right:
 

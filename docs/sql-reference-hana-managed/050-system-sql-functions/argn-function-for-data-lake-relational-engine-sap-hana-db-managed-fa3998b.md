@@ -7,7 +7,7 @@ Returns a selected argument from a list of arguments.
 
 
 ```
-ARGN ( <integer-expression>, <expression> [ , …] )
+ARGN ( <integer-expression>, <expression> [ , …] );
 ```
 
 
@@ -47,7 +47,7 @@ An expression of any data type passed into the function. All supplied expression
 
 <a name="loiofa3998bd27284db3b8f25033b4130aba__section_ivr_flk_srb"/>
 
-## Returns
+## Result Set
 
 Using the value of the *<integer-expression\>* as *<n\>*, returns the *<n\>*th argument \(starting at 1\) from the remaining list of arguments.
 
@@ -76,11 +76,11 @@ Using the value of *<integer-expression\>* as *<n\>* returns the *<n\>*th argume
 The following statement returns the value 6:
 
 ```
-SELECT ARGN( 6, 1,2,3,4,5,6 ) FROM iq_dummy
+SELECT ARGN( 6, 1,2,3,4,5,6 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[ARGN Function [Miscellaneous] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a53342da84f21015892d9495d775376f.html "Returns a selected argument from a list of arguments.") :arrow_upper_right:
+[ARGN Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a53342da84f21015892d9495d775376f.html "Returns a selected argument from a list of arguments.") :arrow_upper_right:
 

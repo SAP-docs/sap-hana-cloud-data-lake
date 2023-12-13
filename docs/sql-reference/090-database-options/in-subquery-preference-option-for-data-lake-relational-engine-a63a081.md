@@ -6,8 +6,11 @@ Controls the choice of algorithms for processing an IN subquery.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63a081184f21015bb298a8b5cf87cbe__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

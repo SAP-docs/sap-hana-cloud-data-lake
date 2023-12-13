@@ -6,8 +6,11 @@ Restricts the size of the read-ahead buffer for the High\_Group B-tree.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa62e965884f21015a56fc667d1720a8f__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

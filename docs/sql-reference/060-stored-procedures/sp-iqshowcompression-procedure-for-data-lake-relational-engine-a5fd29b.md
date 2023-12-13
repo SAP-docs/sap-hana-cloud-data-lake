@@ -6,15 +6,18 @@ Displays compression settings for columns of LONG BINARY \(BLOB\) and LONG VARCH
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5fd29ba84f210159cb498816176a030__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqshowcompression ( <owner>, <table>, <column> )
+sp_iqshowcompression ( <owner>, <table>, <column> );
 ```
 
 
@@ -65,7 +68,7 @@ The column for which you are setting compression.
 
 <a name="loioa5fd29ba84f210159cb498816176a030__iq_iquda_122"/>
 
-## Returns
+## Result Set
 
 Returns the column name and compression setting. Compression setting values are 'ON' \(compression enabled\) and 'OFF' \(compression disabled\).
 
@@ -90,7 +93,7 @@ None
 
 <a name="loioa5fd29ba84f210159cb498816176a030__iq_iquda_124"/>
 
-## Example
+## Examples
 
 Assume this table definition:
 

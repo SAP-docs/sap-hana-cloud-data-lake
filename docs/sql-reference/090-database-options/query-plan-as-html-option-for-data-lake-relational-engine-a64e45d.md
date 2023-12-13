@@ -6,10 +6,13 @@ Generates graphical query plans in HTML format for viewing in a Web browser.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa64e45dd84f21015ac0fcd5c96f8f9af__section_zw2_prq_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Generates graphical query plans in HTML format for viewing in a Web browser.
 ## Syntax
 
 ```
-QUERY_PLAN_AS_HTML = { ON | OFF }
+QUERY_PLAN_AS_HTML = { ON | OFF };
 ```
 
 
@@ -64,28 +67,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -94,28 +89,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -124,28 +111,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -183,21 +162,21 @@ Output generated from a query plan named Q101. The leader node \(L\) *<query-num
 Output generated from the leader node:
 
 ```
-HDLADMIN_L_1_Q101_20121108_083000_94.html
+HDLADMIN_L_1_Q101_20121108_083000_94.html;
 ```
 
 Output from one of the worker nodes:
 
 ```
 HDLADMIN_W_2_Q101_20121108_083000_94_2.html
-HDLADMIN_W_2_Q101_20121108_083000_94_1.html
+HDLADMIN_W_2_Q101_20121108_083000_94_1.html;
 ```
 
 Corresponding output from another worker:
 
 ```
 HDLADMIN_W_3_Q101_20121113-054928_94_2.html
-HDLADMIN_W_3_Q101_20121113-054933_94_1.html
+HDLADMIN_W_3_Q101_20121113-054933_94_1.html;
 ```
 
 **Related Information**  
@@ -211,7 +190,7 @@ HDLADMIN_W_3_Q101_20121113-054933_94_1.html
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[QUERY_PLAN_AS_HTML Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/486458ad1942418e9d70db482284c485.html "Generates graphical query plans in HTML format for viewing in a Web browser.") :arrow_upper_right:
+[QUERY_PLAN_AS_HTML Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/486458ad1942418e9d70db482284c485.html "Generates graphical query plans in HTML format for viewing in a Web browser.") :arrow_upper_right:
 
 [QUERY\_NAME Option for Data Lake Relational Engine](query-name-option-for-data-lake-relational-engine-a64cbce.md "Gives a name to an executed query in its query plan.")
 

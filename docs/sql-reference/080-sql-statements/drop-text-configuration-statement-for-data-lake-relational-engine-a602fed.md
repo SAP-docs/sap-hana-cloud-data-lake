@@ -6,15 +6,18 @@ Drops a text configuration object.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa602fed184f210158da897dd360ecfd0__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-DROP TEXT CONFIGURATION  [ { <owner> | <schema-name> }.]<text-config-name>
+DROP TEXT CONFIGURATION  [ { <owner> | <schema-name> }.]<text-config-name>;
 ```
 
 

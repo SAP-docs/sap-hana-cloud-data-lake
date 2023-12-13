@@ -8,7 +8,7 @@ Calculates an exponential weighted moving average. Weightings determine the rela
 
 ```
 EXP_WEIGHTED_AVG (<expression>, <period-expression>)
-                OVER (<window-spec>)
+                OVER (<window-spec>);
 ```
 
 
@@ -109,28 +109,20 @@ The returned result set is:
 
 DepartmentID
 
-
-
 </th>
 <th valign="top">
 
 Surname
-
-
 
 </th>
 <th valign="top">
 
 Salary
 
-
-
 </th>
 <th valign="top">
 
 W\_AVG
-
-
 
 </th>
 </tr>
@@ -139,28 +131,20 @@ W\_AVG
 
 400
 
-
-
 </td>
 <td valign="top">
 
 Evans
-
-
 
 </td>
 <td valign="top">
 
 68,940.000
 
-
-
 </td>
 <td valign="top">
 
 34,470.000000
-
-
 
 </td>
 </tr>
@@ -169,28 +153,20 @@ Evans
 
 300
 
-
-
 </td>
 <td valign="top">
 
 Litton
-
-
 
 </td>
 <td valign="top">
 
 58,930.000
 
-
-
 </td>
 <td valign="top">
 
 46,700.000000
-
-
 
 </td>
 </tr>
@@ -198,29 +174,21 @@ Litton
 <td valign="top">
 
 200
-
-
 
 </td>
 <td valign="top">
 
 Sterling
 
-
-
 </td>
 <td valign="top">
 
 64,900.000
 
-
-
 </td>
 <td valign="top">
 
 55,800.000000
-
-
 
 </td>
 </tr>
@@ -229,28 +197,20 @@ Sterling
 
 200
 
-
-
 </td>
 <td valign="top">
 
 Kelly
-
-
 
 </td>
 <td valign="top">
 
 87,500.000
 
-
-
 </td>
 <td valign="top">
 
 71,650.000000
-
-
 
 </td>
 </tr>
@@ -258,59 +218,43 @@ Kelly
 <td valign="top">
 
 400
-
-
 
 </td>
 <td valign="top">
 
 Charlton
 
-
-
 </td>
 <td valign="top">
 
 28,300.000
-
-
 
 </td>
 <td valign="top">
 
 49,975.000000
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 100
-
-
 
 </td>
 <td valign="top">
 
 Lull
 
-
-
 </td>
 <td valign="top">
 
 87,900.000
 
-
-
 </td>
 <td valign="top">
 
 68,937.500000
-
-
 
 </td>
 </tr>
@@ -319,28 +263,20 @@ Lull
 
 100
 
-
-
 </td>
 <td valign="top">
 
 Gowda
-
-
 
 </td>
 <td valign="top">
 
 59,840.000
 
-
-
 </td>
 <td valign="top">
 
 60,621.875000
-
-
 
 </td>
 </tr>
@@ -349,28 +285,20 @@ Gowda
 
 400
 
-
-
 </td>
 <td valign="top">
 
 Francis
-
-
 
 </td>
 <td valign="top">
 
 53,870.000
 
-
-
 </td>
 <td valign="top">
 
 61,403.750000
-
-
 
 </td>
 </tr>
@@ -383,5 +311,5 @@ Francis
 
 [WEIGHTED\_AVG Function \[Aggregate\] for Data Lake Relational Engine](weighted-avg-function-aggregate-for-data-lake-relational-engine-a590e30.md "Calculates an arithmetically (or linearly) weighted average.")
 
-[EXP_WEIGHTED_AVG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ac831a074ab343628271364a30d557bf.html "Calculates an exponential weighted moving average. Weightings determine the relative importance of each quantity that makes up the average.") :arrow_upper_right:
+[EXP_WEIGHTED_AVG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ac831a074ab343628271364a30d557bf.html "Calculates an exponential weighted moving average. Weightings determine the relative importance of each quantity that makes up the average.") :arrow_upper_right:
 

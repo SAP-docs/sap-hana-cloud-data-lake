@@ -6,10 +6,12 @@ Drop a remote schema, which is a collection of remote tables, in a SQL on Files 
 
 
 
-> ### Restriction:  
-> This topic is limited to SQL on Files use cases.
-> 
-> This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio9b97bf4f782643a7b197762f36623071__section_fry_b3b_nqb"/>
+
+## Usage
+
+-   This topic is limited to SQL on Files use cases.
+-   This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +20,7 @@ Drop a remote schema, which is a collection of remote tables, in a SQL on Files 
 ## Syntax
 
 ```
-DROP SCHEMA <remote-schema-name> [ CASCADE ] IN FILES_SERVICE
+DROP SCHEMA <remote-schema-name> [ CASCADE ] IN FILES_SERVICE;
 ```
 
 
@@ -89,5 +91,5 @@ DROP SCHEMA Factory CASCADE IN FILES_SERVICE;
 **Related Information**  
 
 
-[DROP SCHEMA Statement for Data Lake Relational Engine (SAP HANA DB-Managed) [SQL on Files]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/d71105d49064495ca6a2be5cf34348d7.html "Drop a remote schema, which is a collection of remote tables, in a SQL on Files external catalog.") :arrow_upper_right:
+[DROP SCHEMA Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/d71105d49064495ca6a2be5cf34348d7.html "Drop a remote schema, which is a collection of remote tables, in a SQL on Files external catalog.") :arrow_upper_right:
 

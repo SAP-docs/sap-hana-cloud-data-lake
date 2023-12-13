@@ -6,10 +6,13 @@ Returns a result set with rows between a specified start and end value.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be5fc9b6c5f1014b006cf0d1a0c90ef__section_p4t_vqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ sa_rowgenerator(
  [ <rstart>
  [, <rend>
  [, <rstep> ] ] ]
-)
+);
 ```
 
 
@@ -31,7 +34,7 @@ sa_rowgenerator(
 <dl>
 <dt><b>
 
- *<rstart\>* 
+*<rstart\>* 
 
 </b></dt>
 <dd>
@@ -42,7 +45,7 @@ Use this optional INTEGER parameter to specify the starting value. The default v
 
 </dd><dt><b>
 
- *<rend\>* 
+*<rend\>* 
 
 </b></dt>
 <dd>
@@ -53,7 +56,7 @@ Use this optional INTEGER parameter to specify the ending value that is greater 
 
 </dd><dt><b>
 
- *<rstep\>* 
+*<rstep\>* 
 
 </b></dt>
 <dd>
@@ -69,7 +72,7 @@ Use this optional INTEGER parameter to specify the increment by which the sequen
 
 <a name="loio3be5fc9b6c5f1014b006cf0d1a0c90ef__sa_rowgenerator_resultset1"/>
 
-## Result Set
+## Results Set
 
 
 <table>
@@ -78,21 +81,15 @@ Use this optional INTEGER parameter to specify the increment by which the sequen
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -101,21 +98,15 @@ Description
 
 row\_num
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Sequence number.
-
-
 
 </td>
 </tr>
@@ -166,31 +157,121 @@ None
 
 
 
-The following query returns a result set containing one row for each day of the current month.
+<a name="loio3be5fc9b6c5f1014b006cf0d1a0c90ef__sa_rowgenerator_examples1"/>
+
+## Examples
+
+This example uses the sa\_rowgenerator system procedure to return 5 rows.
+
+```
+CALL sa_rowgenerator( 1, 5, 1 );
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+row\_num
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+3
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+4
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+5
+
+</td>
+</tr>
+</table>
+
+The example returns a result set containing one row for each of the first five days of the current month.
 
 ```
 SELECT DATEADD( day, row_num-1,
         YMD( DATEPART( year, CURRENT DATE ),
             DATEPART( month, CURRENT DATE ), 1 ) ) 
     AS day_of_month
-    FROM sa_rowgenerator( 1, 31, 1 )
+    FROM sa_rowgenerator( 1, 5, 1 )
     WHERE DATEPART( month, day_of_month ) = DATEPART( month, CURRENT DATE )
     ORDER BY row_num;
 ```
 
-The following query shows how many employees live in ZIP code ranges \(0-9999\), \(10000-19999\), ..., \(90000-99999\). Some of these ranges have no employees, which causes a warning.
 
-The sa\_rowgenerator procedure can be used to generate these ranges, even though no employees have a ZIP code in the range.
+<table>
+<tr>
+<th valign="top">
 
-```
-SELECT row_num AS r1, row_num+9999 AS r2, COUNT( PostalCode ) AS zips_in_range
-    FROM sa_rowgenerator( 0, 99999, 10000 ) D LEFT JOIN Employees
-        ON PostalCode BETWEEN r1 AND r2
-    GROUP BY r1, r2
-    ORDER BY 1;
-```
+day\_of\_month
 
-The following example generates 10 rows of data and inserts them into the NewEmployees table:
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+2023-10-01 00:00:00.000
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2023-10-02 00:00:00.000
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2023-10-03 00:00:00.000
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2023-10-04 00:00:00.000
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2023-10-05 00:00:00.000
+
+</td>
+</tr>
+</table>
+
+This example generates 10 rows of data and inserts them into the NewEmployees table:
 
 ```
 INSERT INTO NewEmployees ( ID, Salary, Name )
@@ -198,7 +279,7 @@ INSERT INTO NewEmployees ( ID, Salary, Name )
     FROM sa_rowgenerator( 1, 10 );
 ```
 
-The following example uses the sa\_rowgenerator system procedure to create a view containing all integers. The value 2147483647 in this example represents the maximum signed integer that is supported.
+This example uses the sa\_rowgenerator system procedure to create a view containing all integers. The value 2147483647 in this example represents the maximum signed integer that is supported.
 
 ```
 CREATE VIEW Integers AS
@@ -214,7 +295,7 @@ CREATE VIEW Dates AS
     FROM sa_rowgenerator( 0, 3652058, 1 );
 ```
 
-The following query returns all years between 1900 and 2058 that have 54 weeks.
+This query returns all years between 1900 and 2058 that have 54 weeks.
 
 ```
 SELECT DATEADD ( day, row_num, '1900-01-01' ) AS d, DATEPART ( week, d ) w
@@ -225,5 +306,5 @@ SELECT DATEADD ( day, row_num, '1900-01-01' ) AS d, DATEPART ( week, d ) w
 **Related Information**  
 
 
-[sa_rowgenerator System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7b99d032cfbe4f80bde904bee1902662.html "Returns a result set with rows between a specified start and end value.") :arrow_upper_right:
+[sa_rowgenerator System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7b99d032cfbe4f80bde904bee1902662.html "Returns a result set with rows between a specified start and end value.") :arrow_upper_right:
 

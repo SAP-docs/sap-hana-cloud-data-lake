@@ -6,27 +6,30 @@ Reports information about the internal row fragmentation for a table at the FP i
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5b5cb9b84f2101585b8e3b5e25893af__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-dbo.sp_iqrowdensity ( '<target>' )
+dbo.sp_iqrowdensity ( '<target>' );
 ```
 
 ```
 '<target>' ::=
-   ( table <table-name> | ( column <column-name> ( … ) )
+   ( table <table-name> | ( column <column-name> ( … ) );
 ```
 
 
 
 <a name="loioa5b5cb9b84f2101585b8e3b5e25893af__iq_refbb_1747"/>
 
-## Parameter
+## Parameters
 
 
 <dl>
@@ -100,12 +103,12 @@ None
 
 <a name="loioa5b5cb9b84f2101585b8e3b5e25893af__iq_refbb_1750"/>
 
-## Example
+## Examples
 
 Reports the row density on column *<ID\>* in table SalesOrders:
 
 ```
-sp_iqrowdensity('column groupo.SalesOrders.ID')
+sp_iqrowdensity('column groupo.SalesOrders.ID');
 ```
 
 
@@ -115,28 +118,20 @@ sp_iqrowdensity('column groupo.SalesOrders.ID')
 
 Tablename
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 ColumnName
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
 IndexType
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Density
-
-
 
 </th>
 </tr>
@@ -145,28 +140,20 @@ Density
 
 GROUPO.SalesOrders
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 ID
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 NBit FP
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 1.0
-
-
 
 </td>
 </tr>

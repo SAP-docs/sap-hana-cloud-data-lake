@@ -7,7 +7,7 @@ Returns the next database ID number, or the first database if the parameter is N
 
 
 ```
-NEXT_DATABASE ( { NULL | <database-id> } )
+NEXT_DATABASE ( { NULL | <database-id> } );
 ```
 
 
@@ -34,7 +34,7 @@ An integer that specifies the ID number of the database.
 
 
 
-## Returns
+## Result Set
 
 INT
 
@@ -66,13 +66,13 @@ You can use NEXT\_DATABASE to enumerate the databases running on a database serv
 -   The following statement returns the value 0, the first database value:
 
     ```
-    SELECT NEXT_DATABASE( NULL ) FROM iq_dummy
+    SELECT NEXT_DATABASE( NULL ) FROM iq_dummy;
     ```
 
 -   The following statement returns NULL, indicating that there are no more databases on the server:
 
     ```
-    SELECT NEXT_DATABASE( 0 ) FROM iq_dummy
+    SELECT NEXT_DATABASE( 0 ) FROM iq_dummy;
     ```
 
 

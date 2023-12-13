@@ -7,7 +7,7 @@ Returns a `DOUBLE` precision, random number x, where 0 <= x <1, with an optional
 
 
 ```
-RAND ( [ <integer-expression> ] )
+RAND ( [ <integer-expression> ] );
 ```
 
 
@@ -36,7 +36,7 @@ The optional seed used to create a random number. This argument allows you to cr
 
 <a name="loioa572b2db84f210159574b044cfd9dcb6__RAND_returns1"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -79,12 +79,12 @@ When no argument is called, `RAND` is a non-deterministic function. Successive c
 -   The following statement returns a value of approximately 941392926249216914:
 
     ```
-    SELECT RAND( 4 ) FROM iq_dummy
+    SELECT RAND( 4 ) FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[RAND Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/821fcf0e2d12450185efac750f617450.html "Returns a DOUBLE precision, random number x, where 0 &lt;= x &lt;1, with an optional seed.") :arrow_upper_right:
+[RAND Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/821fcf0e2d12450185efac750f617450.html "Returns a DOUBLE precision, random number x, where 0 <= x <1, with an optional seed.") :arrow_upper_right:
 

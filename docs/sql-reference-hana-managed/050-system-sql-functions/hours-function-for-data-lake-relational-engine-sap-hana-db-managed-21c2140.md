@@ -9,7 +9,7 @@ Returns the number of hours since an arbitrary starting date and time, the numbe
 ```
 HOURS ( <datetime-expression> 
 | <datetime-expression>, <datetime-expression>
-| <datetime-expression>, <integer-expression> )
+| <datetime-expression>, <integer-expression> );
 ```
 
 
@@ -49,7 +49,7 @@ The number of hours to be added to the *<datetime-expression\>*. If *<integer-ex
 
 <a name="loio21c21405d89646019adb537e2ed90796__section_byp_h4g_trb"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -78,26 +78,26 @@ The second syntax returns the number of whole hours from the first date/time to 
 -   The following statement returns the value 17518758:
 
     ```
-    SELECT HOURS( '1998-07-13 06:07:12' ) FROM iq_dummy
+    SELECT HOURS( '1998-07-13 06:07:12' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 4, to signify the difference between the two times:
 
     ```
     SELECT HOURS( '1999-07-13 06:07:12',
-    	'1999-07-13 10:07:12' ) FROM iq_dummy
+    	'1999-07-13 10:07:12' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the datetime value 1999-05-13 02:05:07.000:
 
     ```
     SELECT HOURS( CAST( '1999-05-12 21:05:07' 
-    AS DATETIME ), 5 ) FROM iq_dummy
+    AS DATETIME ), 5 ) FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[HOURS Function [Date and Time] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a556e14084f210158443b519970bb86d.html "Returns the number of hours since an arbitrary starting date and time, the number of whole hours between two specified times, or adds the specified integer-expression number of hours to a time.") :arrow_upper_right:
+[HOURS Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a556e14084f210158443b519970bb86d.html "Returns the number of hours since an arbitrary starting date and time, the number of whole hours between two specified times, or adds the specified integer-expression number of hours to a time.") :arrow_upper_right:
 

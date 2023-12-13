@@ -6,10 +6,13 @@ The SYSSYNC2 view provides public access to the data found in the SYSSYNC system
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bea56376c5f1014a904b578fa72d551__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -36,6 +39,6 @@ ALTER VIEW "SYS"."SYSSYNC2"
     "ISYSSYNC"."script_version",
     "ISYSSYNC"."subscription_name",
     "ISYSSYNC"."server_protocol"
-    from "SYS"."ISYSSYNC"
+    from "SYS"."ISYSSYNC";
 ```
 

@@ -15,7 +15,7 @@ Windowing operations let you establish information such as the ranking of each r
 A window partition is a subset of rows returned by a query, as defined by one or more columns in a special `OVER()` clause:
 
 ```
-OVER (PARTITION BY <col1>, <col2>...)
+OVER (PARTITION BY <col1>, <col2>...);
 ```
 
 **Related Information**  

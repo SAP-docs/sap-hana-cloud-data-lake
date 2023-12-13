@@ -7,7 +7,7 @@ Identifies whether a column in a `ROLLUP` or `CUBE` operation result set is NULL
 
 
 ```
-GROUPING ( <group-by-expression> ) 
+GROUPING ( <group-by-expression> ); 
 ```
 
 
@@ -36,7 +36,7 @@ An expression appearing as a grouping column in the result set of a query that u
 
 <a name="loio259511aa310241949d6e8389561dc62c__section_ayp_bqg_trb"/>
 
-## Returns
+## Result Set
 
 -   1 – indicates that *<group-by-expression\>* is NULL because it is part of a subtotal row. The column is not a prefix column for that row.
 -   0 – indicates that *<group-by-expression\>* is a prefix column of a subtotal row.
@@ -62,5 +62,5 @@ Data lake Relational Engine does not support the PERCENTILE\_CONT or PERCENTILE\
 
 [GROUP BY Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/group-by-clause-for-data-lake-relational-engine-sap-hana-db-managed-86be6d9.md)
 
-[GROUPING Function [Aggregate] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a554461384f21015aca0af2a35f9c2a7.html "Identifies whether a column in a ROLLUP or CUBE operation result set is NULL because it is part of a subtotal row, or NULL because of the underlying data.") :arrow_upper_right:
+[GROUPING Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a554461384f21015aca0af2a35f9c2a7.html "Identifies whether a column in a ROLLUP or CUBE operation result set is NULL because it is part of a subtotal row, or NULL because of the underlying data.") :arrow_upper_right:
 

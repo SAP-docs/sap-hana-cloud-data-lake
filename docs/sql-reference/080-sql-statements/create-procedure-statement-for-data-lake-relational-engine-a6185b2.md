@@ -6,10 +6,13 @@ Creates a new user-defined SQL procedure in the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6185b2184f21015b2419a5444b55609__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,18 +21,18 @@ CREATE [ OR REPLACE ] [ TEMPORARY ] PROCEDURE [ { <owner> | <schema-name> 
    [ SQL SECURITY { INVOKER | DEFINER } ]
    [ RESULT ( <result-column>, …) | NO RESULT SET ]  
    [ ON EXCEPTION RESUME ]
-   { <compound statement> | AT <location-string> }
+   { <compound statement> | AT <location-string> };
 ```
 
 ```
 <parameter> ::=
    { { IN | OUT | INOUT } <parameter-name> <data-type> [ DEFAULT <expression> ] 
    | SQLCODE 
-   | SQLSTATE }
+   | SQLSTATE };
 ```
 
 ```
-<result-column> ::= <column-name> <data-type>
+<result-column> ::= <column-name> <data-type>;
 ```
 
 
@@ -121,7 +124,7 @@ BEGIN
 	'" dropped' to client;
 	END IF;
 END;
-CALL drop_table( 'CustRank' )
+CALL drop_table( 'CustRank' );
 ```
 
 
@@ -147,7 +150,7 @@ BEGIN
     SELECT Surname,GivenName 
     FROM Employees
   END IF
-END
+END;
 ```
 
 Procedures with variable result sets must be written without a RESULT clause, or in Transact-SQL. Their use is subject to these limitations:
@@ -270,8 +273,6 @@ For information on remote servers, see *CREATE SERVER Statement*.
 
 ### 
 
-Requires one of:
-
 -   To create a self owned procedures requires the CREATE PROCEDURE system privilege.
 -   To create a procedure owned by another user requires one of:
     -   CREATE ANY PROCEDURE system privilege
@@ -379,13 +380,15 @@ Automatic commit
 **Related Information**  
 
 
+[ALTER PROCEDURE Statement for Data Lake Relational Engine](alter-procedure-statement-for-data-lake-relational-engine-a612e25.md "Replaces an existing procedure with a modified version. Include the entire modified procedure in the ALTER PROCEDURE statement, and reassign user permissions on the procedure.")
+
+[DROP PROCEDURE Statement for Data Lake Relational Engine](drop-procedure-statement-for-data-lake-relational-engine-bf9d790.md "Removes a user-defined procedure from the database.")
+
 [BEGIN … END Statement for Data Lake Relational Engine](begin-end-statement-for-data-lake-relational-engine-a6142de.md "Groups SQL statements together.")
 
 [CALL Statement for Data Lake Relational Engine](call-statement-for-data-lake-relational-engine-a614c16.md "Invokes a procedure.")
 
 [CREATE SERVER Statement for Data Lake Relational Engine](create-server-statement-for-data-lake-relational-engine-a619187.md "Creates a remote server.")
-
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
 
 [EXECUTE IMMEDIATE Statement \[ESQL\] \[SP\] for Data Lake Relational Engine](execute-immediate-statement-esql-sp-for-data-lake-relational-engine-a61dfe2.md "Extends the range of statements that can be executed from within procedures. It lets you execute dynamically prepared statements, such as statements that are constructed using the parameters passed in to a procedure.")
 
@@ -393,7 +396,7 @@ Automatic commit
 
 [RAISERROR Statement \[T-SQL\] for Data Lake Relational Engine](raiserror-statement-t-sql-for-data-lake-relational-engine-a6227d8.md "Allows user-defined errors to be signaled, and sends a message on the client.")
 
-[CREATE PROCEDURE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/d172ce3def5648e299ecb61779eab7da.html "Creates a new user-defined SQL procedure in the database.") :arrow_upper_right:
-
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
+
+[CREATE PROCEDURE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/d172ce3def5648e299ecb61779eab7da.html "Creates a new user-defined SQL procedure in the database.") :arrow_upper_right:
 

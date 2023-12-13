@@ -6,8 +6,11 @@ Governs when a COMMIT entry in the transaction log is written to disk.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa631963f84f2101592f8f2ded17059a5__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

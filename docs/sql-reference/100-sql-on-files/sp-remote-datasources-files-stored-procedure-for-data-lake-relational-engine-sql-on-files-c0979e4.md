@@ -6,10 +6,12 @@ View a list of files that are tracked by a remote table or exist in paths refere
 
 
 
-> ### Restriction:  
-> This topic is limited to SQL on Files use cases.
-> 
-> This SQL on Files stored procedure can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioc0979e49b27f4d0d96e3a45b2fe0fe88__section_fry_b3b_nqb"/>
+
+## Usage
+
+-   This topic is limited to SQL on Files use cases.
+-   This SQL on Files stored procedure can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -26,7 +28,7 @@ CALL sp_remote_datasources_files(
 	[, <remote-datasource-name> ]
 	[, <probe> ]
 	[, <with-status> ]
-)
+);
 ```
 
 
@@ -39,7 +41,7 @@ CALL sp_remote_datasources_files(
 <dl>
 <dt><b>
 
- *<remote-server-name\>* 
+*<remote-server-name\>* 
 
 </b></dt>
 <dd>
@@ -61,7 +63,7 @@ Use this required CHAR\(128\) parameter to specify the name of the schema.
 
 </dd><dt><b>
 
- *<remote-table-name\>* 
+*<remote-table-name\>* 
 
 </b></dt>
 <dd>
@@ -121,21 +123,15 @@ Use this optional boolean flag to report more information on the file status. Th
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -144,21 +140,15 @@ Description
 
 `SCHEMA_NAME`
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Name of the schema.
-
-
 
 </td>
 </tr>
@@ -167,21 +157,15 @@ Name of the schema.
 
 `TABLE_NAME`
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Name of the table.
-
-
 
 </td>
 </tr>
@@ -190,21 +174,15 @@ Name of the table.
 
 `DATASOURCE_NAME`
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Name of the datasource.
-
-
 
 </td>
 </tr>
@@ -213,14 +191,10 @@ Name of the datasource.
 
 `DATASOURCE_IS_VALID`
 
-
-
 </td>
 <td valign="top">
 
 BOOL
-
-
 
 </td>
 <td valign="top">
@@ -231,8 +205,6 @@ When *<probe\>* is set to `1`, `DATASOURCE_IS_VALID` is set to `TRUE` for all fi
 
 If a datasource is inaccessible, `DATASOURCE_IS_VALID` is set to `FALSE`.
 
-
-
 </td>
 </tr>
 <tr>
@@ -240,21 +212,15 @@ If a datasource is inaccessible, `DATASOURCE_IS_VALID` is set to `FALSE`.
 
 `FILE_PATH`
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(256\)
 
-
-
 </td>
 <td valign="top">
 
 Internal effective path to filesystem, represented as a vflow qualified name.
-
-
 
 </td>
 </tr>
@@ -263,21 +229,15 @@ Internal effective path to filesystem, represented as a vflow qualified name.
 
 `FILE_SIZE`
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The file size is returned as the number of bytes.
-
-
 
 </td>
 </tr>
@@ -286,21 +246,15 @@ The file size is returned as the number of bytes.
 
 `FILE_ETAG`
 
-
-
 </td>
 <td valign="top">
 
 STRING
 
-
-
 </td>
 <td valign="top">
 
 The file identity tag unique to that file at that specific version.
-
-
 
 </td>
 </tr>
@@ -309,21 +263,15 @@ The file identity tag unique to that file at that specific version.
 
 `FILE_LAST_MODIFIED`
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 The timestamp of the last modification.
-
-
 
 </td>
 </tr>
@@ -332,14 +280,10 @@ The timestamp of the last modification.
 
 `FILE_STATUS`
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(256\)
-
-
 
 </td>
 <td valign="top">
@@ -429,6 +373,8 @@ The specified server must be defined with the [CREATE REMOTE SERVER Statement fo
 You have been granted the HDL\_FILES\_SERVICE\_ADMIN role.
 
 
+
+## Example
 
 To get a list of files from the datasource DS1, execute the following statement:
 

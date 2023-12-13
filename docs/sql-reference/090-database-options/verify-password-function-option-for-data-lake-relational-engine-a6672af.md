@@ -6,8 +6,11 @@ Specifies a user-supplied authentication function that can be used to implement 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa6672afb84f210158ba8b75fc48b564c__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

@@ -7,7 +7,7 @@ Returns the arc-cosine, in radians, of a numeric expression.
 
 
 ```
-ACOS ( <numeric-expression> )
+ACOS ( <numeric-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The cosine of the angle.
 
 <a name="loio0fc7b1b85c8d4b6280000fc7e92152ee__section_dcr_k1l_srb"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -57,11 +57,11 @@ DOUBLE
 The following statement returns the value 1.023945:
 
 ```
-SELECT ACOS( 0.52 ) FROM iq_dummy
+SELECT ACOS( 0.52 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[ACOS Function [Numeric] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a532c20484f21015a4a5f8c26e3af9c7.html "Returns the arc-cosine, in radians, of a numeric expression.") :arrow_upper_right:
+[ACOS Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a532c20484f21015a4a5f8c26e3af9c7.html "Returns the arc-cosine, in radians, of a numeric expression.") :arrow_upper_right:
 

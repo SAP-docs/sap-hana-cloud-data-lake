@@ -6,10 +6,13 @@ Retrieves information from the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa624e72e84f210159276a39335acd358__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -109,7 +112,7 @@ SELECT [ { ALL | DISTINCT } ] [ <row-limitation-option1> ] <select-list>
 ```
 <materialized_view_staleness_option> ::=
    { materialized_view_staleness_check
-    | materialized_view_staleness_limit }
+    | materialized_view_staleness_limit };
 ```
 
 
@@ -240,20 +243,20 @@ Retrieves rows and views specified in the *<object-list\>*.
 
 ```
 <object-list> ::=
-   [ { <owner> | <schema-name> }.] <object-name> [,...]
+   [ { <owner> | <schema-name> }.] <object-name> [,...];
 ```
 
 Joins can be specified using join operators. For more information, see *FROM Clause*. A SELECT statement with no FROM clause can be used to display the values of expressions not derived from tables. For example, the following displays the value of the @@version global variable:
 
 ```
-SELECT @@version
+SELECT @@version;
 ```
 
 This is equivalent to:
 
 ```
 SELECT @@version
-FROM DUMMY
+FROM DUMMY;
 ```
 
 > ### Note:  
@@ -393,7 +396,7 @@ Use a global database option to override for a given statement.
 
 <materialized_view_staleness_option> ::=
    materialized_view_staleness_check = <materialized_view_staleness_check_value>
-   | materialized_view_staleness_limit = <materialized_view_staleness_limit_value>
+   | materialized_view_staleness_limit = <materialized_view_staleness_limit_value>;
 ```
 
 
@@ -550,7 +553,7 @@ ROLLUP syntax:
 ```
 SELECT … [ GROUPING ( <column-name >) …] …
 GROUP BY [ <expression> [, …]
-| ROLLUP ( <expression> [, …] ) ]
+| ROLLUP ( <expression> [, …] ) ];
 ```
 
 GROUPING takes a column name as a parameter and returns a Boolean value:
@@ -562,14 +565,10 @@ GROUPING takes a column name as a parameter and returns a Boolean value:
 
 If the Value of the Result Is
 
-
-
 </th>
 <th valign="top">
 
 GROUPING Returns
-
-
 
 </th>
 </tr>
@@ -578,14 +577,10 @@ GROUPING Returns
 
 NULL created by a ROLLUP operation
 
-
-
 </td>
 <td valign="top">
 
 1 \(TRUE\)
-
-
 
 </td>
 </tr>
@@ -594,14 +589,10 @@ NULL created by a ROLLUP operation
 
 NULL indicating the row is a subtotal
 
-
-
 </td>
 <td valign="top">
 
 1 \(TRUE\)
-
-
 
 </td>
 </tr>
@@ -610,14 +601,10 @@ NULL indicating the row is a subtotal
 
 not created by a ROLLUP operation
 
-
-
 </td>
 <td valign="top">
 
 0 \(FALSE\)
-
-
 
 </td>
 </tr>
@@ -626,14 +613,10 @@ not created by a ROLLUP operation
 
 a stored NULL
 
-
-
 </td>
 <td valign="top">
 
 0 \(FALSE\)
-
-
 
 </td>
 </tr>
@@ -658,7 +641,7 @@ CUBE syntax:
 ```
 SELECT … [ GROUPING ( <column-name> ) …] …
 GROUP BY [ <expression> [, …]
-| CUBE ( <expression> [, …] ) ]
+| CUBE ( <expression> [, …] ) ];
 ```
 
 GROUPING takes a column name as a parameter and returns a Boolean value:
@@ -670,14 +653,10 @@ GROUPING takes a column name as a parameter and returns a Boolean value:
 
 If the Value of the Result Is
 
-
-
 </th>
 <th valign="top">
 
 GROUPING Returns
-
-
 
 </th>
 </tr>
@@ -686,14 +665,10 @@ GROUPING Returns
 
 NULL created by a CUBE operation
 
-
-
 </td>
 <td valign="top">
 
 1 \(TRUE\)
-
-
 
 </td>
 </tr>
@@ -702,14 +677,10 @@ NULL created by a CUBE operation
 
 NULL indicating the row is a subtotal
 
-
-
 </td>
 <td valign="top">
 
 1 \(TRUE\)
-
-
 
 </td>
 </tr>
@@ -718,14 +689,10 @@ NULL indicating the row is a subtotal
 
 not created by a CUBE operation
 
-
-
 </td>
 <td valign="top">
 
 0 \(FALSE\)
-
-
 
 </td>
 </tr>
@@ -734,14 +701,10 @@ not created by a CUBE operation
 
 a stored NULL
 
-
-
 </td>
 <td valign="top">
 
 0 \(FALSE\)
-
-
 
 </td>
 </tr>
@@ -774,10 +737,6 @@ In these circumstances, subtle differences between the semantics of SQL Anywhere
 <a name="loioa624e72e84f210159276a39335acd358__select_privileges1"/>
 
 ## Privileges
-
-
-
-### 
 
 To SELECT from tables, views, and materialized views requires one of:
 
@@ -822,7 +781,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
       LEFT OUTER JOIN SalesOrderItems
       LEFT OUTER JOIN Products
     GROUP BY CompanyName
-    ORDER BY VALUE DESC
+    ORDER BY VALUE DESC;
     ```
 
 -   The following example lists the number of employees:
@@ -850,7 +809,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
     ```
     SELECT * INTO #TableTemp FROM lineitem 
-    WHERE l_discount < 0.5
+    WHERE l_discount < 0.5;
     ```
 
 -   The following example returns information about the employee that appears first when employees are sorted by last name:
@@ -889,7 +848,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[SELECT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7123f8b4e1f14a8f9efd257794202198.html "Retrieves information from the database.") :arrow_upper_right:
+[SELECT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7123f8b4e1f14a8f9efd257794202198.html "Retrieves information from the database.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

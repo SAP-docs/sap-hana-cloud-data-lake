@@ -6,10 +6,13 @@ Adds or removes trace events or targets from a session, or starts or stops a tra
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user. It cannot be run using the REMOTE\_EXECUTE procedure.
+<a name="loio21b2b4f214224d81920ed9bcaf88d7ee__section_kyf_nhw_ysb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected directly to data lake Relational Engine **coordinator** as a data lake Relational Engine user. This syntax cannot be run using the REMOTE\_EXECUTE procedure.
 
 
 
@@ -21,14 +24,14 @@ ALTER TRACE EVENT SESSION <session-name>
   | ADD TARGET FILE [ ( SET <target-parameter-name>=<target-parameter-value> [, ...] ) ]
   | DROP TARGET <FILE> [, ...] ]
   | STATE = { START | STOP }
-}
+};
 ```
 
 ```
 <target-parameter-name> :
 { filename_prefix
  | flush_on_write
- | compressed }
+ | compressed };
 ```
 
 
@@ -57,7 +60,18 @@ Alters a trace event session that is recording trace events from all databases o
 
 </dd><dt><b>
 
- *<trace-event-name\>* 
+ADD TRACE EVENT
+
+</b></dt>
+<dd>
+
+The name of the trace event being added to the session.
+
+
+<dl>
+<dt><b>
+
+*<trace-event-name\>*
 
 </b></dt>
 <dd>
@@ -66,14 +80,8 @@ The name of the trace event in the session. System- and user-defined trace event
 
 
 
-</dd><dt><b>
-
-ADD TRACE EVENT
-
-</b></dt>
-<dd>
-
-The name of the trace event being added to the session.
+</dd>
+</dl>
 
 
 
@@ -112,10 +120,37 @@ The name of the target being removed from the session.
 
 </dd><dt><b>
 
- *<target-parameter-name\>* 
+STATE
 
 </b></dt>
 <dd>
+
+Either START or STOP. Start a trace session so that event tracing information is recorded to ETD files. Once started, the session runs until you explicitly stop the trace session, or until the instance is stopped.
+
+
+
+</dd><dt><b>
+
+ADD TARGET TILE
+
+</b></dt>
+<dd>
+
+
+<dl>
+<dt><b>
+
+*<target-parameter-name\>*
+
+</b></dt>
+<dd>
+
+```
+<target-parameter-name> :
+{ filename_prefix
+ | flush_on_write
+ | ["compressed"] };
+```
 
 The following target parameters are supported:
 
@@ -124,16 +159,12 @@ The following target parameters are supported:
 <tr>
 <th valign="top">
 
- *<target-parameter-name\>* 
-
-
+*<target-parameter-name\>* 
 
 </th>
 <th valign="top">
 
- *<target-parameter-value\>* 
-
-
+*<target-parameter-value\>* 
 
 </th>
 </tr>
@@ -142,14 +173,10 @@ The following target parameters are supported:
 
 filename\_prefix
 
-
-
 </td>
 <td valign="top">
 
 \(Required\) An ETD file name prefix with or without a path. ETD files have the extension `.etd`.
-
-
 
 </td>
 </tr>
@@ -158,14 +185,10 @@ filename\_prefix
 
 flush\_on\_write
 
-
-
 </td>
 <td valign="top">
 
 A boolean \(true or false\) value that controls whether disk buffers are flushed for each event that is logged. The default is false. When flushing is enabled, the performance of the database server may be reduced if many trace events are being logged.
-
-
 
 </td>
 </tr>
@@ -174,18 +197,19 @@ A boolean \(true or false\) value that controls whether disk buffers are flushed
 
 \[compressed\]
 
-
-
 </td>
 <td valign="top">
 
 A boolean \(true or false\) value that controls compression of the ETD file to conserve disk space. The default is false. Use brackets with this parameter name because it is a keyword in other contexts.
 
-
-
 </td>
 </tr>
 </table>
+
+
+
+</dd>
+</dl>
 
 
 
@@ -240,20 +264,29 @@ Not in the standard.
 
 
 
-The following example creates a trace event called my\_event, a trace event session called my\_session, and starts the session:
+## Example
+
+The following example creates a trace event called my\_event, a trace event session called my\_session, and then alters the session to start it:
 
 ```
-CREATE TEMPORARY TRACE EVENT my_event( id INTEGER, information LONG VARCHAR );
-CREATE TEMPORARY TRACE EVENT SESSION my_session
-    ADD TRACE EVENT my_event, -- user event
-    ADD TRACE EVENT SYS_ConsoleLog_Information -- system event
-    ADD TARGET FILE ( SET filename_prefix='my_trace_file' ); -- add a target
-ALTER TRACE EVENT SESSION my_session
-     STATE = START;
+CREATE OR REPLACE TEMPORARY TRACE EVENT my_event( id INTEGER, information LONG VARCHAR );
+
+CREATE OR REPLACE TEMPORARY TRACE EVENT SESSION my_session
+   ADD TRACE EVENT my_event,
+   ADD TRACE EVENT SYS_ConsoleLog_Information
+   ADD TARGET FILE ( SET filename_prefix='my_trace_file' );
+```
+
+```
+ALTER TRACE EVENT SESSION my_session STATE = START;
 ```
 
 **Related Information**  
 
 
-[ALTER TRACE EVENT SESSION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/8169f4176ce21014b768e5f2b0bf8951.html "Adds or removes trace events or targets from a session, or starts or stops a trace session.") :arrow_upper_right:
+[ALTER TRACE EVENT SESSION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/8169f4176ce21014b768e5f2b0bf8951.html "Adds or removes trace events or targets from a session, or starts or stops a trace session.") :arrow_upper_right:
+
+[CREATE TEMPORARY TRACE EVENT SESSION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-temporary-trace-event-session-statement-for-data-lake-relational-engine-sap-hana-d-0c1bc71.md "Creates a user trace event session.")
+
+[DROP TRACE EVENT SESSION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-trace-event-session-statement-for-data-lake-relational-engine-sap-hana-db-managed-1b596ab.md "Drops a trace event session.")
 

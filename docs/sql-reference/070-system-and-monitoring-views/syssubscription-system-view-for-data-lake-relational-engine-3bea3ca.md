@@ -6,10 +6,13 @@ Each row in the SYSSUBSCRIPTION system view describes a subscription from one us
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bea3cab6c5f1014a53cdcc2ce8af3e6__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYSSUBSCRIPTION system view describes a subscription from one us
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 publication\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The identifier for the publication to which the user ID is subscribed.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The identifier for the publication to which the user ID is subscribed.
 
 user\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The ID of the user who is subscribed to the publication.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ The ID of the user who is subscribed to the publication.
 
 subscribe\_by
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The value of the SUBSCRIBE BY expression, if any, for the subscription.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ The value of the SUBSCRIBE BY expression, if any, for the subscription.
 
 created
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The offset in the transaction log at which the subscription was created.
-
-
 
 </td>
 </tr>
@@ -135,21 +108,15 @@ The offset in the transaction log at which the subscription was created.
 
 started
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The offset in the transaction log at which the subscription was started.
-
-
 
 </td>
 </tr>

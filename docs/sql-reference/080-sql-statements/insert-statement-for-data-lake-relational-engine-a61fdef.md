@@ -6,10 +6,13 @@ Inserts a single row or a selection of rows, from elsewhere in the current datab
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61fdeff84f21015aa66b9add387d7f9__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -24,7 +27,7 @@ Syntax 1
 
 ```
 INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name> 
-   [ ( <column-name> [, …] ) ] VALUES [ ( { <expression> | DEFAULT }[, ...] ) ]
+   [ ( <column-name> [, …] ) ] VALUES [ ( { <expression> | DEFAULT }[, ...] ) ];
 ```
 
 
@@ -38,7 +41,7 @@ Syntax 1a
 
 ```
 INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name> 
-   DEFAULT VALUES
+   DEFAULT VALUES;
 ```
 
 
@@ -53,7 +56,7 @@ Syntax 2
 ```
 INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name> [ ( <column-name> [, …] ) ]
    ... <insert-load-options> <insert-select-load-options>
-   ... <select-statement>
+   ... <select-statement>;
 ```
 
 
@@ -69,7 +72,7 @@ Syntax 3
 INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name>[ ( <column-name> [, …] ) ]
     ... <insert-select-load-options> <insert-select-load-options>
     ... LOCATION '<servername.dbname>' [ <location-options> ]
-   ... { <select-statement> | '<select statement>' }
+   ... { <select-statement> | '<select statement>' };
 ```
 
 
@@ -81,7 +84,7 @@ INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name>[ ( <column-name
 <insert-load-options> ::=
    [ LIMIT <number-of-rows> ] 
    [ NOTIFY <number-of-rows> ] 
-   [ SKIP <number-of-rows> ]
+   [ SKIP <number-of-rows> ];
 ```
 
 ```
@@ -89,14 +92,14 @@ INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name>[ ( <column-name
    [ WORD SKIP <number> ]
    [ IGNORE CONSTRAINT <constraint-type> [, …] ] 
    [ MESSAGE LOG '<string>' ROW LOG '<string>' [ ONLY LOG <logwhat> [, …] ] ] 
-   [ LOG DELIMITED BY '<string>' ]
+   [ LOG DELIMITED BY '<string>' ];
 ```
 
 ```
 <location-options> ::=
    { PACKETSIZE <interger>
    | QUOTED_IDENTIFIER { ON | OFF }
-   | ISOLATION LEVEL <integer> }
+   | ISOLATION LEVEL <integer> };
 ```
 
 ```
@@ -106,7 +109,7 @@ INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name>[ ( <column-name
    | NULL <integer> 
    | FOREIGN KEY <integer> 
    | DATA VALUE <integer> 
-   | ALL <integer> }
+   | ALL <integer> };
 ```
 
 ```
@@ -117,7 +120,7 @@ INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name>[ ( <column-name
    | UNIQUE
    | DATA VALUE
    | FOREIGN KEY
-   | WORD }
+   | WORD };
 ```
 
 
@@ -385,7 +388,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
     ```
     INSERT INTO Departments
     (DepartmentID, DepartmentName, DepartmentHeadID)
-    VALUES (600, 'Eastern Sales', 501)
+    VALUES (600, 'Eastern Sales', 501);
     ```
 
 -   The following example fills the table dept\_head with the names of department heads and their departments:
@@ -397,7 +400,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
       AS name,
       dept_name
     FROM Employees JOIN Departments
-      ON EmployeeID= DepartmentHeadID
+      ON EmployeeID= DepartmentHeadID;
     ```
 
 -   The following example inserts data from the l\_shipdate and l\_orderkey columns of the lineitem table from the data lake Relational Engine database iqdet on the remote server detroit into the corresponding columns of the lineitem table in the current database:
@@ -408,22 +411,22 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
       LOCATION 'detroit.iqdet'
       PACKETSIZE 512
       ' SELECT l_shipdate, l_orderkey
-    FROM lineitem '
+    FROM lineitem ';
     ```
 
 -   The INSERT statement permits a list of values allowing several rows to be inserted at once:
 
     ```
-    INSERT into t1 values( 10, 20, 30 ), ( 11, 21, 31 ), ( 12, 22, 32 )
+    INSERT into t1 values( 10, 20, 30 ), ( 11, 21, 31 ), ( 12, 22, 32 );
     ```
 
 
 **Related Information**  
 
 
-[LOAD TABLE Statement for Data Lake Relational Engine \(Non-Parquet Formats\)](load-table-statement-for-data-lake-relational-engine-non-parquet-formats-7ca3f60.md "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or Google Cloud Storage) or from data lake Files containers (the managed object store).")
+[LOAD TABLE Statement \(Non-Parquet Formats\) for Data Lake Relational Engine](load-table-statement-non-parquet-formats-for-data-lake-relational-engine-7ca3f60.md "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or Google Cloud Storage) or from data lake Files containers (the managed object store).")
 
-[INSERT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/cbe6857cc94b4923a6ee5917651f5084.html "Inserts a single row or a selection of rows, from elsewhere in the current database, into the table. This command can also insert a selection of rows from another database into the table.") :arrow_upper_right:
+[INSERT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/cbe6857cc94b4923a6ee5917651f5084.html "Inserts a single row or a selection of rows, from elsewhere in the current database, into the table. This command can also insert a selection of rows from another database into the table.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

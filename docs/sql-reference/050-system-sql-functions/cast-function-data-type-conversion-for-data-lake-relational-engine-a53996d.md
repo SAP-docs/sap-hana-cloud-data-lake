@@ -7,7 +7,7 @@ Returns the value of an expression converted to a supplied data type.
 
 
 ```
-CAST ( <expression> AS <data type> )
+CAST ( <expression> AS <data type> );
 ```
 
 
@@ -47,7 +47,7 @@ The data type to cast the expression into. Set the data type explicitly, or spec
 
 <a name="loioa53996d784f21015a34086a244c40db1__CAST_returns1"/>
 
-## Returns
+## Result Set
 
 The specified data type.
 
@@ -63,14 +63,14 @@ Set the data type explicitly, or specify the %TYPE attribute to set the data typ
 
 ```
 SELECT CAST( NULL AS NUMERIC ) A,
-       CAST( NULL AS NUMERIC(15,2) ) B
+       CAST( NULL AS NUMERIC(15,2) ) B;
 ```
 
 is described as:
 
 ```
-A NUMERIC(1,0)
-B NUMERIC(15,2)
+A NUMERIC(1,0);
+B NUMERIC(15,2);
 ```
 
 
@@ -90,19 +90,19 @@ B NUMERIC(15,2)
 -   The following function ensures a string is used as a date:
 
     ```
-    CAST( '2000-10-31' AS DATE )
+    CAST( '2000-10-31' AS DATE );
     ```
 
 -   The following is the value of the expression `1 + 2`. The data type to cast the expression into. Set the data type is calculated, and the result cast into a single-character string, the length the data server assigns:
 
     ```
-    CAST( 1 + 2 AS CHAR )
+    CAST( 1 + 2 AS CHAR );
     ```
 
 -   You can use the `CAST` function to shorten strings:
 
     ```
-    SELECT CAST( lname AS CHAR(5) ) FROM Customers
+    SELECT CAST( lname AS CHAR(5) ) FROM Customers;
     ```
 
 
@@ -131,5 +131,5 @@ B NUMERIC(15,2)
 
 [YEARS Function \[Date and Time\] for Data Lake Relational Engine](years-function-date-and-time-for-data-lake-relational-engine-a5926bf.md "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.")
 
-[CAST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/4a2c75bbed1d4b399e51f704ee7d35dc.html "Returns the value of an expression converted to a supplied data type.") :arrow_upper_right:
+[CAST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/4a2c75bbed1d4b399e51f704ee7d35dc.html "Returns the value of an expression converted to a supplied data type.") :arrow_upper_right:
 

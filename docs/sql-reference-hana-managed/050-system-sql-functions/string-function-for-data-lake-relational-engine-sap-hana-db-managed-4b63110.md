@@ -7,13 +7,13 @@ Concatenates one or more strings into one large string.
 
 
 ```
-STRING ( <string-expression> [ , … ] )
+STRING ( <string-expression> [ , … ] );
 ```
 
 
 
 ```
-STRING ( <string-expression> [ , … ] )
+STRING ( <string-expression> [ , … ] );
 ```
 
 
@@ -42,7 +42,7 @@ A string. If only one argument is supplied, it is converted into a single expres
 
 <a name="loio4b6311065965472286c536537d380f53__section_i1g_543_wrb"/>
 
-## Returns
+## Result Set
 
 -   LONG BINARY
 -   LONG NVARCHAR
@@ -80,11 +80,11 @@ The following statement returns the value testing123:
 
 ```
 SELECT STRING( 'testing', NULL, 123 )
-FROM iq_dummy
+FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[STRING Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a586010d84f210158657b25cdb264bf0.html "Concatenates one or more strings into one large string.") :arrow_upper_right:
+[STRING Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a586010d84f210158657b25cdb264bf0.html "Concatenates one or more strings into one large string.") :arrow_upper_right:
 

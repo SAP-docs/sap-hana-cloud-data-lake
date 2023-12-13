@@ -16,7 +16,7 @@ CALL SYSHDL_<relational_container_schema_name>.RECONCILE()
 
 ## Privileges
 
-You are a member of the container group administrator role, SYSHDL\_<relational\_container\_name\>\_ROLE, for the relational container.
+You are a member of the container administrator role, SYSHDL\_*<relational\_container\_name\>*\_ROLE, for the relational container.
 
 
 

@@ -7,7 +7,7 @@ Returns the hexadecimal equivalent of a decimal integer.
 
 
 ```
-INTTOHEX ( <integer-expression> )
+INTTOHEX ( <integer-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The integer to be converted to hexadecimal.
 
 <a name="loiocbe59f6c760e49a9ba1022e7d40f8642__section_jcb_j4h_trb"/>
 
-## Returns
+## Result Set
 
 VARCHAR
 
@@ -65,18 +65,18 @@ If data conversion of input to INTTOHEX conversion fails, data lake Relational E
 -   The following statement returns the value 3B9ACA00:
 
     ```
-    SELECT INTTOHEX( 1000000000 ) FROM iq_dummy
+    SELECT INTTOHEX( 1000000000 ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 00000002540BE400:
 
     ```
-    SELECT INTTOHEX ( 10000000000) FROM iq_dummy
+    SELECT INTTOHEX ( 10000000000) FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[INTTOHEX Function [Data Type Conversion] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a55971e984f21015845192079b46b239.html "Returns the hexadecimal equivalent of a decimal integer.") :arrow_upper_right:
+[INTTOHEX Function \[Data Type Conversion\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a55971e984f21015845192079b46b239.html "Returns the hexadecimal equivalent of a decimal integer.") :arrow_upper_right:
 

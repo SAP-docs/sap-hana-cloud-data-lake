@@ -6,8 +6,11 @@ The maximum percentage of main buffer cache to use for affinity. Non-affinity da
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa449021984f210158379d2988674516d__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

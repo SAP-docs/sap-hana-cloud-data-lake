@@ -6,17 +6,18 @@ Creates a schema in the current instance.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+<a name="loio7988025f66db454aae19ae0c7a4fe042__section_gqj_hjr_btb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
 
 
 
 ```
-CREATE SCHEMA [ <owner>.]<schema_name>
+CREATE SCHEMA [ <owner>.]<schema_name>;
 ```
 
 
@@ -89,8 +90,13 @@ SELECT * FROM USER2.SCHEMA_2.T2;
 
 ### 
 
-Requires one of:
+To use REMOTE\_EXECUTE requires one of the following:
 
 -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+**Related Information**  
+
+
+[DROP SCHEMA Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-schema-statement-for-data-lake-relational-engine-sap-hana-db-managed-2529cf1.md "")
 

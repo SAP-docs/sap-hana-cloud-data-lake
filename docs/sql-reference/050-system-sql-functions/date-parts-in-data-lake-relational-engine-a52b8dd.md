@@ -15,21 +15,15 @@ This table displays allowed values of *<date-part\>*.
 
 Date Part
 
-
-
 </th>
 <th valign="top">
 
 Abbreviation
 
-
-
 </th>
 <th valign="top">
 
 Values
-
-
 
 </th>
 </tr>
@@ -38,21 +32,15 @@ Values
 
 Year
 
-
-
 </td>
 <td valign="top">
 
 yy
 
-
-
 </td>
 <td valign="top">
 
 0001 – 9999
-
-
 
 </td>
 </tr>
@@ -61,21 +49,15 @@ yy
 
 Quarter
 
-
-
 </td>
 <td valign="top">
 
 qq
 
-
-
 </td>
 <td valign="top">
 
 1 – 4
-
-
 
 </td>
 </tr>
@@ -84,21 +66,15 @@ qq
 
 Month
 
-
-
 </td>
 <td valign="top">
 
 mm
 
-
-
 </td>
 <td valign="top">
 
 1 – 12
-
-
 
 </td>
 </tr>
@@ -107,21 +83,15 @@ mm
 
 Week
 
-
-
 </td>
 <td valign="top">
 
 wk
 
-
-
 </td>
 <td valign="top">
 
 1 – 54
-
-
 
 </td>
 </tr>
@@ -130,21 +100,15 @@ wk
 
 Day
 
-
-
 </td>
 <td valign="top">
 
 dd
 
-
-
 </td>
 <td valign="top">
 
 1 – 31
-
-
 
 </td>
 </tr>
@@ -153,21 +117,15 @@ dd
 
 Dayofyear
 
-
-
 </td>
 <td valign="top">
 
 dy
 
-
-
 </td>
 <td valign="top">
 
 1 – 366
-
-
 
 </td>
 </tr>
@@ -176,21 +134,15 @@ dy
 
 Weekday
 
-
-
 </td>
 <td valign="top">
 
 dw
 
-
-
 </td>
 <td valign="top">
 
 1 – 7 \(Sun. – Sat.\)
-
-
 
 </td>
 </tr>
@@ -199,21 +151,15 @@ dw
 
 Hour
 
-
-
 </td>
 <td valign="top">
 
 hh
 
-
-
 </td>
 <td valign="top">
 
 0 – 23
-
-
 
 </td>
 </tr>
@@ -222,21 +168,15 @@ hh
 
 Minute
 
-
-
 </td>
 <td valign="top">
 
 mi
 
-
-
 </td>
 <td valign="top">
 
 0 – 59
-
-
 
 </td>
 </tr>
@@ -245,21 +185,15 @@ mi
 
 Second
 
-
-
 </td>
 <td valign="top">
 
 ss
 
-
-
 </td>
 <td valign="top">
 
 0 – 59
-
-
 
 </td>
 </tr>
@@ -268,21 +202,15 @@ ss
 
 Millisecond
 
-
-
 </td>
 <td valign="top">
 
 ms
 
-
-
 </td>
 <td valign="top">
 
 0 – 999
-
-
 
 </td>
 </tr>
@@ -291,21 +219,15 @@ ms
 
 Microsecond
 
-
-
 </td>
 <td valign="top">
 
 mcs or us
 
-
-
 </td>
 <td valign="top">
 
 0 – 999999
-
-
 
 </td>
 </tr>
@@ -314,21 +236,15 @@ mcs or us
 
 Calyearofweek
 
-
-
 </td>
 <td valign="top">
 
 cyr
 
-
-
 </td>
 <td valign="top">
 
 Integer. The year in which the week begins. The week containing the first few days of the year can be part of the last week of the previous year, depending upon which day it begins. If the new year starts on a Thursday through Saturday, its first week starts on the last Sunday of the previous year. If the new year starts on a Sunday through Wednesday, none of its days are part of the previous year.
-
-
 
 </td>
 </tr>
@@ -337,21 +253,15 @@ Integer. The year in which the week begins. The week containing the first few da
 
 Calweekofyear
 
-
-
 </td>
 <td valign="top">
 
 cwk
 
-
-
 </td>
 <td valign="top">
 
 An integer from 1 to 54 representing the week number within the year that contains the specified date.
-
-
 
 </td>
 </tr>
@@ -360,21 +270,15 @@ An integer from 1 to 54 representing the week number within the year that contai
 
 Caldayofweek
 
-
-
 </td>
 <td valign="top">
 
 cdw
 
-
-
 </td>
 <td valign="top">
 
 The day number within the week \(Sunday = 1, Saturday = 7\).
-
-
 
 </td>
 </tr>

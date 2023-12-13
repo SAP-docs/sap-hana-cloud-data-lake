@@ -6,10 +6,13 @@ Declares a cursor. Cursors are the primary means for manipulating the results of
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61ac0bc84f21015aa8bc3dddd3b73d4__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -21,7 +24,7 @@ DECLARE <cursor-name>
    CURSOR FOR
    { <select-statement> FOR { READ ONLY | UPDATE }
    | <statement-name>   
-   | USING <variable-name> }
+   | USING <variable-name> };
 ```
 
 
@@ -111,7 +114,7 @@ FOR READ ONLY;
 OPEN t1_cursor;
 INSERT t1 VALUES ( 2 );
 FETCH T1_CURSOR;
-END
+END;
 ```
 
 
@@ -155,7 +158,7 @@ begin
         set rowcnt = rowcnt + 1;
     end loop;
     return rowcnt;
-end
+end;
 ```
 
 A parameter to the procedure. For example:
@@ -178,7 +181,7 @@ begin
     fetch crsr into tabname;
     close crsr;
  end
-end
+end;
 ```
 
 
@@ -259,7 +262,7 @@ There is a limitation regarding updatable cursors and ODBC. A maximum of 65535 r
 There is an implementation-specific limitation to the maximum value in the statement attribute that controls the number of effected rows to the largest value of an `UNSIGNED SMALL INT`, which is 65535:
 
 ```
-SQLSetStmtAttr(HANDLE,SQL_ATTR_ROW_ARRAY_SIZE, VALUE,0)
+SQLSetStmtAttr(HANDLE,SQL_ATTR_ROW_ARRAY_SIZE, VALUE,0);
 ```
 
 Data lake Relational Engine updatable cursors differ from ANSI SQL3 standard behavior as follows:
@@ -324,7 +327,7 @@ None
         ...
       END LOOP;
       CLOSE cur_employee;
-    END
+    END;
     ```
 
 

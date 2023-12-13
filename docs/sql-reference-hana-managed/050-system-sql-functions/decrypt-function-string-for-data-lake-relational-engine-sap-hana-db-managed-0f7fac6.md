@@ -7,7 +7,7 @@ Decrypts the string using the supplied key and returns a LONG BINARY value.
 
 
 ```
-DECRYPT( <string-expression> , <key> [ , <algorithm-format> [ , <initialization-vector> ] ] )
+DECRYPT( <string-expression> , <key> [ , <algorithm-format> [ , <initialization-vector> ] ] );
 ```
 
 ```
@@ -53,7 +53,7 @@ PADDING= { PKCS5
 <dl>
 <dt><b>
 
- *<string-expression\>* 
+*<string-expression\>* 
 
 </b></dt>
 <dd>
@@ -64,7 +64,7 @@ The string to be decrypted. Binary values are supported. This parameter is case 
 
 </dd><dt><b>
 
- *<key\>* 
+*<key\>* 
 
 </b></dt>
 <dd>
@@ -80,7 +80,7 @@ Specify keys in PEM format for RSA.
 
 </dd><dt><b>
 
- *<algorithm-format\>* 
+*<algorithm-format\>* 
 
 </b></dt>
 <dd>
@@ -91,7 +91,7 @@ This optional string parameter specifies the type of algorithm, format, and padd
 <dl>
 <dt><b>
 
- *<algorithm\>* 
+*<algorithm\>* 
 
 </b></dt>
 <dd>
@@ -330,7 +330,7 @@ Each valid padding type is attempted to be used until one of them works.
 
 </dd><dt><b>
 
- *<initialization-vector\>* 
+*<initialization-vector\>* 
 
 </b></dt>
 <dd>
@@ -344,7 +344,7 @@ Specify *<initialization-vector\>* when *<format\>* is set to RAW. The string ca
 
 
 
-## Returns
+## Result Set
 
 LONG BINARY
 
@@ -382,6 +382,8 @@ Not in the standard.
 </dl>
 
 
+
+## Example
 
 The following example decrypts a user's password from the user\_info table. The CAST function is used to convert the password back to a CHAR data type because the DECRYPT function converts values to the LONG BINARY data type, which is unreadable.
 
@@ -421,5 +423,5 @@ FROM SensitiveData;
 **Related Information**  
 
 
-[DECRYPT Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/81f6b4a66ce21014af3abc83653e1f01.html "Decrypts the string using the supplied key and returns a LONG BINARY value.") :arrow_upper_right:
+[DECRYPT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/81f6b4a66ce21014af3abc83653e1f01.html "Decrypts the string using the supplied key and returns a LONG BINARY value.") :arrow_upper_right:
 

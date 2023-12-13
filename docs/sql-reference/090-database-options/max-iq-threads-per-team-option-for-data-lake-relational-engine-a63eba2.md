@@ -6,8 +6,11 @@ Controls the number of threads allocated to perform a single operation \(such as
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63eba2484f21015b317cbd7314206f7__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

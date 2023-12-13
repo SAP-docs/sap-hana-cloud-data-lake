@@ -6,15 +6,18 @@ Reads Interactive SQL \(`dbisql`\) statements from a file.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa622ae5f84f21015bc6ddcb8796e03c9__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-READ [ ENCODING <encoding> ] <filename> [ <parameter> ] …
+READ [ ENCODING <encoding> ] <filename> [ <parameter> ] …;
 ```
 
 
@@ -112,11 +115,11 @@ None
 -   The following example reads from the file `status.rpt` and `birthday.sql` and passes the parameter values to the variables within the file:
 
     ```
-    READ status.rpt '160'
+    READ status.rpt '160';
     ```
 
     ```
-    READ birthday.sql [>= '1988-1-1'] [<= '1988-1-30']
+    READ birthday.sql [>= '1988-1-1'] [<= '1988-1-30'];
     ```
 
 -   The following example uses the PARAMETERS clause to pass parameters to a script file:
@@ -141,7 +144,7 @@ None
     ```
     (USR1)> READ test1.sql 123 '041028'
     PAR1 Value: 123
-    PAR2 Value: 041028
+    PAR2 Value: 041028;
     ```
 
     > ### Note:  

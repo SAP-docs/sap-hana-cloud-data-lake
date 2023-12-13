@@ -6,8 +6,11 @@ Enables or disables the optimization of the join order.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63b83eb84f2101588769b704ce957b7__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 
@@ -34,6 +37,6 @@ FROM  A, B, C, D
 By default, this FROM clause creates a left deep plan of joins that could also be explicitly represented as:
 
 ```
-FROM  (((A, B), C), D)
+FROM  (((A, B), C), D);
 ```
 

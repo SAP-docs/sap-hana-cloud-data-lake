@@ -7,7 +7,7 @@ Compares two strings, evaluates the similarity between them, and returns a value
 
 
 ```
-DIFFERENCE ( <string-expression1>, <string-expression2> )
+DIFFERENCE ( <string-expression1>, <string-expression2> );
 ```
 
 
@@ -47,7 +47,7 @@ The second string to compare.
 
 <a name="loio3b8bafe468ce4160b52b7b25a5de50a0__section_rzk_bm3_wrb"/>
 
-## Returns
+## Result Set
 
 SMALLINT
 
@@ -76,42 +76,42 @@ The best match is 4.
 -   The following statement returns the value 4:
 
     ```
-    SELECT DIFFERENCE( 'Smith', 'Smith' ) FROM iq_dummy
+    SELECT DIFFERENCE( 'Smith', 'Smith' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 4:
 
     ```
-    SELECT DIFFERENCE( 'Smith', 'Smyth' ) FROM iq_dummy
+    SELECT DIFFERENCE( 'Smith', 'Smyth' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 3:
 
     ```
-    SELECT DIFFERENCE( 'Smith', 'Sweeney' ) FROM iq_dummy
+    SELECT DIFFERENCE( 'Smith', 'Sweeney' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 2:
 
     ```
-    SELECT DIFFERENCE( 'Smith', 'Jones' ) FROM iq_dummy
+    SELECT DIFFERENCE( 'Smith', 'Jones' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 1:
 
     ```
-    SELECT DIFFERENCE( 'Smith', 'Rubin' ) FROM iq_dummy
+    SELECT DIFFERENCE( 'Smith', 'Rubin' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 0:
 
     ```
-    SELECT DIFFERENCE( 'Smith', 'Wilkins' ) FROM iq_dummy
+    SELECT DIFFERENCE( 'Smith', 'Wilkins' ) FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[DIFFERENCE Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a54d8aac84f210158ef283ad984de764.html "Compares two strings, evaluates the similarity between them, and returns a value from 0 to 4.") :arrow_upper_right:
+[DIFFERENCE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a54d8aac84f210158ef283ad984de764.html "Compares two strings, evaluates the similarity between them, and returns a value from 0 to 4.") :arrow_upper_right:
 

@@ -9,7 +9,7 @@ Returns the number of seconds since an arbitrary starting date and time, the num
 ```
 SECONDS ( <datetime-expression>
 | <datetime-expression>, <datetime-expression>
-| <datetime-expression>, <integer-expression> )
+| <datetime-expression>, <integer-expression> );
 ```
 
 
@@ -49,7 +49,7 @@ The number of seconds to be added to the *<datetime-expression\>*. If *<integer-
 
 <a name="loio18801f8db2164f1ea0dfdfbe99a38520__section_esj_pz5_vrb"/>
 
-## Returns
+## Result Set
 
 -   INTEGER
 -   TIMESTAMP
@@ -81,26 +81,26 @@ The second syntax returns the number of whole seconds from the first date/time t
 
     ```
     SELECT ( SECONDS( '1998-07-13 06:07:12' ) -
-    SECONDS( '1998-07-13 05:07:12' )) FROM iq_dummy
+    SECONDS( '1998-07-13 05:07:12' )) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 14400, to signify the difference between the two times:
 
     ```
     SELECT SECONDS( '1999-07-13 06:07:12',
-    	'1999-07-13 10:07:12' ) FROM iq_dummy
+    	'1999-07-13 10:07:12' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the datetime value 1999-05-12 21:05:12.000:
 
     ```
     SELECT SECONDS( CAST( '1999-05-12 21:05:07'
-    AS TIMESTAMP ), 5) FROM iq_dummy
+    AS TIMESTAMP ), 5) FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[SECONDS Function [Date and Time] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a57e4e7d84f21015bdabf289394cd2ce.html "Returns the number of seconds since an arbitrary starting date and time, the number of seconds between two times, or adds an integer amount of seconds to a time.") :arrow_upper_right:
+[SECONDS Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57e4e7d84f21015bdabf289394cd2ce.html "Returns the number of seconds since an arbitrary starting date and time, the number of seconds between two times, or adds an integer amount of seconds to a time.") :arrow_upper_right:
 

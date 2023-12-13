@@ -6,15 +6,18 @@ Validates the password of the current user.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be62e786c5f1014a0b4f62cf1cc25f5__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_verify_password( <curr_pswd> )
+sa_verify_password( <curr_pswd> );
 ```
 
 
@@ -25,7 +28,7 @@ sa_verify_password( <curr_pswd> )
 <dl>
 <dt><b>
 
- *<curr\_pswd\>* 
+*<curr\_pswd\>* 
 
 </b></dt>
 <dd>
@@ -39,7 +42,7 @@ Use this CHAR\(128\) parameter to specify the password of the current database u
 
 
 
-## Returns
+## Result Set
 
 The function returns an INTEGER value.
 
@@ -62,6 +65,8 @@ Requires EXECUTE object-level privilege on the procedure.
 None
 
 
+
+## Example
 
 The following example attempts to validate the current connection's password when the current user is HDLADMIN or User1. An error occurs if the current password does not match.
 

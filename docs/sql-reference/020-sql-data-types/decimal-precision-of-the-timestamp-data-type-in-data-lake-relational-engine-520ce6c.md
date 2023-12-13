@@ -61,5 +61,5 @@ If enabling the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option is not feasibl
 
 [TIMESTAMP\_COLUMNS\_AS\_DATETIMEX Option for Data Lake Relational Engine](../090-database-options/timestamp-columns-as-datetimex-option-for-data-lake-relational-engine-082fdf9.md "Controls whether DATETIMEX data type columns are automatically created when TIMESTAMPS data type columns are requested.")
 
-[Decimal Precision of the TIMESTAMP Data Type in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/5cbca14157bc452c88126325667e4342.html "Decimal precision for TIMESTAMP data type columns is controlled by the TIMESTAMP_COLUMNS_AS_DATETIMEX database option.") :arrow_upper_right:
+[Decimal Precision of the TIMESTAMP Data Type in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/5cbca14157bc452c88126325667e4342.html "Decimal precision for TIMESTAMP data type columns is controlled by the TIMESTAMP_COLUMNS_AS_DATETIMEX database option.") :arrow_upper_right:
 

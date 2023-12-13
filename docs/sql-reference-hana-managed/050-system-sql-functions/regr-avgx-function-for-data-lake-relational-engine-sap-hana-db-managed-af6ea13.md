@@ -16,7 +16,7 @@ Syntax 1
 <dd>
 
 ```
-REGR_AVGX ( <dependent-expression>, <independent-expression> )
+REGR_AVGX ( <dependent-expression>, <independent-expression> );
 ```
 
 
@@ -30,7 +30,7 @@ Syntax 2
 
 ```
 REGR_AVGX ( <dependent-expression>, <independent-expression> )
-OVER ( <window-spec> )
+OVER ( <window-spec> );
 ```
 
 
@@ -86,7 +86,7 @@ Specified when using this function as a window function.
 
 <a name="loioaf6ea1317edd434a93f5bcece6597333__section_od4_lk5_vrb"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -101,7 +101,7 @@ This function converts its arguments to DOUBLE, performs the computation in doub
 The function is applied to the set of \(*<dependent-expression\>* and *<independent-expression\>*\) pairs after eliminating all pairs for which either *<dependent-expression\>* or *<independent-expression\>* is NULL. The function is computed simultaneously during a single pass through the data. After eliminating NULL values, the following computation is then made, where *<x\>* represents the *<independent-expression\>*:
 
 ```
-AVG (x)
+AVG (x);
 ```
 
 > ### Note:  
@@ -135,5 +135,5 @@ SELECT REGR_AVGX( Salary, ( YEAR( NOW() ) - YEAR( BirthDate ) ) )FROM Employees;
 
 [WINDOW Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/window-clause-for-data-lake-relational-engine-sap-hana-db-managed-c83b61b.md "Defines all or part of a window for use with window functions such as AVG and RANK in a SELECT statement.")
 
-[REGR_AVGX Function [Aggregate] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a573b70d84f21015a55f85bddd70d598.html "Computes the average of the independent variable of the regression line.") :arrow_upper_right:
+[REGR_AVGX Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a573b70d84f21015a55f85bddd70d598.html "Computes the average of the independent variable of the regression line.") :arrow_upper_right:
 

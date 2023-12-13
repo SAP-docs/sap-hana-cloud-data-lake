@@ -7,7 +7,7 @@ Returns a string representing a date expression in the specified format.
 
 
 ```
-DATEFORMAT ( <datetime-expression>, <string-expression> )
+DATEFORMAT ( <datetime-expression>, <string-expression> );
 ```
 
 
@@ -47,7 +47,7 @@ The format of the converted date.
 
 <a name="loioa546abe884f21015bc048c3994136804__DATEFORMAT_returns1"/>
 
-## Returns
+## Result Set
 
 VARCHAR
 
@@ -96,12 +96,12 @@ SELECT DATEFORMAT (start_date, 'yy') + '?' FROM Employees;
 -   The following statement returns the string “Feb 19, 1987”:
 
     ```
-    SELECT DATEFORMAT( CAST ( '1987/02/19' AS DATE ), 'Mmm Dd, yyyy' ) FROM iq_dummy
+    SELECT DATEFORMAT( CAST ( '1987/02/19' AS DATE ), 'Mmm Dd, yyyy' ) FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[DATEFORMAT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/d8071cc3053447a9bd6d90807082d61a.html "Returns a string representing a date expression in the specified format.") :arrow_upper_right:
+[DATEFORMAT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/d8071cc3053447a9bd6d90807082d61a.html "Returns a string representing a date expression in the specified format.") :arrow_upper_right:
 

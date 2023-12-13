@@ -6,16 +6,19 @@ Displays the size of each object and subobject used in the specified table.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5a3ca6f84f21015b8efef1f7e569fe6__section_pcl_wvh_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 sp_iqdbspaceinfo [ <dbspace-name> ]
- [, <owner_name> ] [, <object_name> ] [, <object-type> ]
+ [, <owner_name> ] [, <object_name> ] [, <object-type> ];
 ```
 
 
@@ -77,7 +80,7 @@ sp_iqdbspaceinfo [ <dbspace-name> ]
 
 <a name="loioa5a3ca6f84f21015b8efef1f7e569fe6__section_d5y_dqz_mbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -86,14 +89,10 @@ sp_iqdbspaceinfo [ <dbspace-name> ]
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -102,14 +101,10 @@ Description
 
 dbspace\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the dbspace.
-
-
 
 </td>
 </tr>
@@ -118,14 +113,10 @@ The name of the dbspace.
 
 object\_type
 
-
-
 </td>
 <td valign="top">
 
 The type of the object \(table or joinindex only\).
-
-
 
 </td>
 </tr>
@@ -134,14 +125,10 @@ The type of the object \(table or joinindex only\).
 
 owner
 
-
-
 </td>
 <td valign="top">
 
 The name of the owner of the object.
-
-
 
 </td>
 </tr>
@@ -150,14 +137,10 @@ The name of the owner of the object.
 
 object\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the object on the dbspace.
-
-
 
 </td>
 </tr>
@@ -166,14 +149,10 @@ The name of the object on the dbspace.
 
 object\_id
 
-
-
 </td>
 <td valign="top">
 
 The global object ID of the object.
-
-
 
 </td>
 </tr>
@@ -182,14 +161,10 @@ The global object ID of the object.
 
 id
 
-
-
 </td>
 <td valign="top">
 
 The table ID of the bject
-
-
 
 </td>
 </tr>
@@ -198,14 +173,10 @@ The table ID of the bject
 
 columns
 
-
-
 </td>
 <td valign="top">
 
 The size of column storage space on the given dbspace.
-
-
 
 </td>
 </tr>
@@ -214,14 +185,10 @@ The size of column storage space on the given dbspace.
 
 indexes
 
-
-
 </td>
 <td valign="top">
 
 The size of index storage space on the given dbspace. Does not use system-generated indexes \(for example, HG indexes in unique constraints or FP indexes\).
-
-
 
 </td>
 </tr>
@@ -230,14 +197,10 @@ The size of index storage space on the given dbspace. Does not use system-genera
 
 metadata
 
-
-
 </td>
 <td valign="top">
 
 The size of storage space for metadata objects on the given dbspace.
-
-
 
 </td>
 </tr>
@@ -246,14 +209,10 @@ The size of storage space for metadata objects on the given dbspace.
 
 primary\_key
 
-
-
 </td>
 <td valign="top">
 
 The size of storage space for primary key related objects on the given dbspace.
-
-
 
 </td>
 </tr>
@@ -262,14 +221,10 @@ The size of storage space for primary key related objects on the given dbspace.
 
 unique\_constraint
 
-
-
 </td>
 <td valign="top">
 
 The size of storage space for unique constraint-related objects on the given dbspace.
-
-
 
 </td>
 </tr>
@@ -278,14 +233,10 @@ The size of storage space for unique constraint-related objects on the given dbs
 
 foreign\_key
 
-
-
 </td>
 <td valign="top">
 
 The size of storage space for foreign-key-related objects on the given dbspace.
-
-
 
 </td>
 </tr>
@@ -294,14 +245,10 @@ The size of storage space for foreign-key-related objects on the given dbspace.
 
 dbspace\_online
 
-
-
 </td>
 <td valign="top">
 
 Indicates if the dbspace is online \(Y\) or offline \(N\).
-
-
 
 </td>
 </tr>
@@ -310,14 +257,10 @@ Indicates if the dbspace is online \(Y\) or offline \(N\).
 
 is\_dbspace\_preallocate
 
-
-
 </td>
 <td valign="top">
 
 "F" indicates that the NOPREALLOCATE keyword was used in the CREATE DBSPACE statement when creating the dbspace on a cooked \(not raw\) filesystem; otherwise "T" \(the default\).
-
-
 
 </td>
 </tr>
@@ -371,7 +314,7 @@ These examples show objects in the iqdemo database to better illustrate output. 
 -   The following example displays the size of all objects and subobjects in all tables in all dbspaces in the database:
 
     ```
-    sp_iqdbspaceinfo
+    sp_iqdbspaceinfo;
     ```
 
     ```
@@ -407,7 +350,7 @@ These examples show objects in the iqdemo database to better illustrate output. 
 -   The following example displays the size of all objects and subobjects owned by a specified user in a specified dbspace in the database:
 
     ```
-    sp_iqdbspaceinfo iq_main,GROUPO
+    sp_iqdbspaceinfo iq_main,GROUPO;
     ```
 
     ```
@@ -437,7 +380,7 @@ These examples show objects in the iqdemo database to better illustrate output. 
 -   The following example displays the size of a specified object and its subobjects owned by a specified user in a specified dbspace in the database:
 
     ```
-    sp_iqdbspaceinfo iq_main,GROUPO,Departments
+    sp_iqdbspaceinfo iq_main,GROUPO,Departments;
     ```
 
 

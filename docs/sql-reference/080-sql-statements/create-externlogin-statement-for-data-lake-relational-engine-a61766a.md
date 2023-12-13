@@ -6,10 +6,13 @@ Assigns an alternate login name and password to be used when communicating with 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61766ae84f210158170ef9548a5e449__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -17,7 +20,7 @@ Assigns an alternate login name and password to be used when communicating with 
 CREATE EXTERNLOGIN <login-name> 
    TO <remote-server> 
    REMOTE LOGIN <remote-user> 
-   [ IDENTIFIED BY <remote-password> ]
+   [ IDENTIFIED BY <remote-password> ];
 ```
 
 
@@ -142,7 +145,7 @@ The following example maps the local user named `DBA` to the user `sa` with pass
 CREATE EXTERNLOGIN dba 
 TO mydb1 
 REMOTE LOGIN sa
-IDENTIFIED BY 4TKNOX
+IDENTIFIED BY 4TKNOX;
 ```
 
 **Related Information**  

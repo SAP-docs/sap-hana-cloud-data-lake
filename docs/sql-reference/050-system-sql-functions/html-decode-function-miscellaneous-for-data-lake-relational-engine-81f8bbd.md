@@ -7,7 +7,7 @@ Decodes special character entities that appear in HTML literal strings.
 
 
 ```
-HTML_DECODE( <string> )
+HTML_DECODE( <string> );
 ```
 
 
@@ -20,7 +20,7 @@ HTML_DECODE( <string> )
 <dl>
 <dt><b>
 
- *<string\>* 
+*<string\>* 
 
 </b></dt>
 <dd>
@@ -36,7 +36,7 @@ Arbitrary literal string used in an HTML document.
 
 <a name="loio81f8bbdd6ce21014a76ca7e38126b096__HTML_DECODE_returns1"/>
 
-## Returns
+## Result Set
 
 LONG VARCHAR or LONG NVARCHAR.
 
@@ -58,14 +58,10 @@ This function returns the string argument after making the appropriate substitut
 
 Characters
 
-
-
 </th>
 <th valign="top">
 
 Substitution
-
-
 
 </th>
 </tr>
@@ -74,14 +70,10 @@ Substitution
 
 &quot;
 
-
-
 </td>
 <td valign="top">
 
 "
-
-
 
 </td>
 </tr>
@@ -90,14 +82,10 @@ Substitution
 
 &\#39;
 
-
-
 </td>
 <td valign="top">
 
 '
-
-
 
 </td>
 </tr>
@@ -106,14 +94,10 @@ Substitution
 
 &amp;
 
-
-
 </td>
 <td valign="top">
 
 &
-
-
 
 </td>
 </tr>
@@ -122,14 +106,10 @@ Substitution
 
 &lt;
 
-
-
 </td>
 <td valign="top">
 
 <
-
-
 
 </td>
 </tr>
@@ -138,14 +118,10 @@ Substitution
 
 &gt;
 
-
-
 </td>
 <td valign="top">
 
 \>
-
-
 
 </td>
 </tr>
@@ -154,14 +130,10 @@ Substitution
 
 &\#x*<hexadecimal-number\>*;
 
-
-
 </td>
 <td valign="top">
 
 Unicode codepoint, specified as a hexadecimal number. For example, &\#x27; returns a single apostrophe.
-
-
 
 </td>
 </tr>
@@ -170,14 +142,10 @@ Unicode codepoint, specified as a hexadecimal number. For example, &\#x27; retur
 
 &\#*<decimal-number\>*;
 
-
-
 </td>
 <td valign="top">
 
 Unicode codepoint, specified as a decimal number. For example, &\#8482; returns the trademark symbol.
-
-
 
 </td>
 </tr>
@@ -185,7 +153,7 @@ Unicode codepoint, specified as a decimal number. For example, &\#8482; returns 
 
 When a Unicode codepoint is specified, if the value can be converted to a character in the database character set, it is converted to a character. Otherwise, it is returned uninterpreted.
 
- Data lake Relational Engine supports all character entity references specified in the HTML 4.01 Specification.
+Data lake Relational Engine supports all character entity references specified in the HTML 4.01 Specification.
 
 
 
@@ -211,6 +179,8 @@ Not in the standard.
 
 
 
+## Example
+
 The following statement returns the string `<p>The piano was made by 'Steinway & Sons'.</p>`:
 
 ```
@@ -227,5 +197,5 @@ SELECT HTML_DECODE('&lt;p&gt;It cost &euro;85.000,000.&lt;/p&gt;');
 **Related Information**  
 
 
-[HTML_DECODE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/76ddacf92fe949c3a5deee67aae74a46.html "Decodes special character entities that appear in HTML literal strings.") :arrow_upper_right:
+[HTML_DECODE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/76ddacf92fe949c3a5deee67aae74a46.html "Decodes special character entities that appear in HTML literal strings.") :arrow_upper_right:
 

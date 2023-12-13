@@ -6,8 +6,11 @@ Enables performance tracing in the asynchronous IO \(AIO\)-based implementation 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loio2c5e01a10afe4078965db40e57eac0b0__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 
@@ -32,14 +35,10 @@ The following values are written to the `iqmsg` file at every 1-second interval:
 
 Value
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -48,14 +47,10 @@ Description
 
 AIO\_COUNT
 
-
-
 </td>
 <td valign="top">
 
 Total number of AIO requests submitted
-
-
 
 </td>
 </tr>
@@ -64,14 +59,10 @@ Total number of AIO requests submitted
 
 AIO\_SUBMISSION\_TIME\_PER\_AIO
 
-
-
 </td>
 <td valign="top">
 
 Average AIO submission time
-
-
 
 </td>
 </tr>
@@ -80,14 +71,10 @@ Average AIO submission time
 
 AIO\_INFRA\_TIME\_PER\_AIO
 
-
-
 </td>
 <td valign="top">
 
 Average overhead added by the AIO layer before the AIO request is actually submitted to OS
-
-
 
 </td>
 </tr>
@@ -96,14 +83,10 @@ Average overhead added by the AIO layer before the AIO request is actually submi
 
 AIO\_COMPLETION\_TIME\_PER\_AIO
 
-
-
 </td>
 <td valign="top">
 
 Average time taken to complete each AIO
-
-
 
 </td>
 </tr>
@@ -112,14 +95,10 @@ Average time taken to complete each AIO
 
 AIO\_TOTAL\_TIME\_PER\_AIO
 
-
-
 </td>
 <td valign="top">
 
 Average time taken to complete each AIO, including the average time taken for the post-processing of read blocks.
-
-
 
 </td>
 </tr>
@@ -128,14 +107,10 @@ Average time taken to complete each AIO, including the average time taken for th
 
 AIO\_BATCH\_SUBMIT\_COUNT
 
-
-
 </td>
 <td valign="top">
 
 Number of batched AIO requests submitted to OS.
-
-
 
 </td>
 </tr>
@@ -144,14 +119,10 @@ Number of batched AIO requests submitted to OS.
 
 AIO\_BATCH\_SUBMISSION\_TIME\_PER\_SUBMIT
 
-
-
 </td>
 <td valign="top">
 
 Average time taken for the submission of batched AIO requests per submit.
-
-
 
 </td>
 </tr>
@@ -160,14 +131,10 @@ Average time taken for the submission of batched AIO requests per submit.
 
 AIO\_ASYNC\_SUBMISSION\_TIME\_PER\_SUBMIT
 
-
-
 </td>
 <td valign="top">
 
 Average time taken for the submission of data lake Relational Engine-based AIO requests per submit.
-
-
 
 </td>
 </tr>

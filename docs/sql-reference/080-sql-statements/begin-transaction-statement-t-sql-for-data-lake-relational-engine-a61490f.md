@@ -6,17 +6,20 @@ Use this statement to begin a user-defined transaction.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61490f284f21015aa60a82fc60f9e76__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ## Syntax
 
 ```
-BEGIN TRAN[SACTION] [ <transaction-name> ]
+BEGIN TRAN[SACTION] [ <transaction-name> ];
 ```
 
 

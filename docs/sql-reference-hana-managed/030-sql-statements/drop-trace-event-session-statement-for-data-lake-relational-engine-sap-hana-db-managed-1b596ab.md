@@ -6,15 +6,18 @@ Drops a trace event session.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user. It cannot be run using the REMOTE\_EXECUTE procedure.
+<a name="loio1b596abba6ea4afeb9284194d73b4dd2__section_xy5_jhw_ysb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected directly to data lake Relational Engine **coordinator** as a data lake Relational Engine user. This syntax cannot be run using the REMOTE\_EXECUTE procedure.
 
 
 
 ```
-DROP TRACE EVENT SESSION [ IF EXISTS ] <session-name> UNCONDITIONALLY [ ON SERVER ]
+DROP TRACE EVENT SESSION [ IF EXISTS ] <session-name> UNCONDITIONALLY [ ON SERVER ];
 ```
 
 
@@ -72,6 +75,8 @@ Not in the standard.
 
 
 
+## Example
+
 The following statement drops the trace event session named my\_session:
 
 ```
@@ -81,5 +86,9 @@ DROP TRACE EVENT SESSION my_session;
 **Related Information**  
 
 
-[DROP TRACE EVENT SESSION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/816f77f16ce21014902f832b346099c2.html "Drops a trace event session.") :arrow_upper_right:
+[CREATE TEMPORARY TRACE EVENT SESSION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-temporary-trace-event-session-statement-for-data-lake-relational-engine-sap-hana-d-0c1bc71.md "Creates a user trace event session.")
+
+[ALTER TRACE EVENT SESSION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](alter-trace-event-session-statement-for-data-lake-relational-engine-sap-hana-db-managed-21b2b4f.md "Adds or removes trace events or targets from a session, or starts or stops a trace session.")
+
+[DROP TRACE EVENT SESSION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/816f77f16ce21014902f832b346099c2.html "Drops a trace event session.") :arrow_upper_right:
 

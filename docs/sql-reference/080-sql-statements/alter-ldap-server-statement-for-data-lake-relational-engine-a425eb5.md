@@ -6,10 +6,13 @@ Any changes to an LDAP server configuration object are applied on subsequent con
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa425eb5084f21015be10c7391eef4df1__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,7 +26,7 @@ ALTER LDAP SERVER <ldapua-server-name>
       | CONNECTION TIMEOUT <timeout_value> 
       | CONNECTION RETRIES <retry_value> 
       | TLS OFF }  ]
-   [ WITH ( { SUSPEND | ACTIVATE | REFRESH } ) ]
+   [ WITH ( { SUSPEND | ACTIVATE | REFRESH } ) ];
 ```
 
 
@@ -170,7 +173,7 @@ ANSI SQL – compliance level: Transact-SQL extension
 -   The following example suspends the LDAP server configuration object named `apps_primary`:
 
     ```
-    ALTER LDAP SERVER apps_primary SUSPEND
+    ALTER LDAP SERVER apps_primary SUSPEND;
     ```
 
 -   The following example changes  the  LDAP server  configuration object named `apps_primary` to use a different URL for authentication on host `fairfax`, sets the port number to `1066`, sets the number of connection retries to `10`, and finally activates the LDAP server configuration object:
@@ -179,7 +182,7 @@ ANSI SQL – compliance level: Transact-SQL extension
     ALTER LDAP SERVER apps_primary
     AUTHENTICATION URL 'ldaps://my_LDAPserver:1066/'
     CONNECTION RETRIES 10
-    WITH ACTIVATE
+    WITH ACTIVATE;
     ```
 
 

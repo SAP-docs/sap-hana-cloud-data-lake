@@ -6,10 +6,13 @@ Stores a comment, in the system tables, about a database object.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa615ad2284f21015b7ccab835341b235__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -39,7 +42,7 @@ COMMENT ON
    | TRIGGER [ [ <owner>.]<table-name>.]<trigger-name>
    | USER <userid>
    | VIEW [ <owner>.]<view-name> }
-   IS { <string> | NULL }
+   IS { <string> | NULL };
 ```
 
 ```
@@ -50,7 +53,7 @@ COMMENT ON
    | C_ESQL32 
    | C_ESQL64 
    | C_ODBC32 
-   | C_ODBC64 }
+   | C_ODBC64 };
 ```
 
 
@@ -85,14 +88,10 @@ The privilege required varies by clause.
 
 Clause
 
-
-
 </th>
 <th valign="top">
 
 Privilege Required
-
-
 
 </th>
 </tr>
@@ -100,8 +99,6 @@ Privilege Required
 <td valign="top">
 
 COLUMN
-
-
 
 </td>
 <td valign="top">
@@ -124,8 +121,6 @@ Requires one of:
 
 EVENT
 
-
-
 </td>
 <td valign="top">
 
@@ -145,14 +140,10 @@ Requires one of:
 
 EXTERNAL \[ENVIRONMENT\] OBJECT
 
-
-
 </td>
 <td valign="top">
 
 MANAGE ANY EXTERNAL OBJECT system privilege
-
-
 
 </td>
 </tr>
@@ -161,14 +152,10 @@ MANAGE ANY EXTERNAL OBJECT system privilege
 
 EXTERNAL ENVIRONMENT
 
-
-
 </td>
 <td valign="top">
 
 MANAGE ANY EXTERNAL ENVIRONMENT system privilege
-
-
 
 </td>
 </tr>
@@ -176,8 +163,6 @@ MANAGE ANY EXTERNAL ENVIRONMENT system privilege
 <td valign="top">
 
 FOREIGN KEY
-
-
 
 </td>
 <td valign="top">
@@ -200,8 +185,6 @@ Requires one of:
 
 INDEX
 
-
-
 </td>
 <td valign="top">
 
@@ -223,14 +206,10 @@ Requires one of:
 
 INTEGRATED LOGIN
 
-
-
 </td>
 <td valign="top">
 
 MANAGE ANY USER system privilege
-
-
 
 </td>
 </tr>
@@ -239,14 +218,10 @@ MANAGE ANY USER system privilege
 
 JAVA CLASS or JAVA JAR
 
-
-
 </td>
 <td valign="top">
 
 MANAGE ANY EXTERNAL OBJECT system privilege
-
-
 
 </td>
 </tr>
@@ -255,14 +230,10 @@ MANAGE ANY EXTERNAL OBJECT system privilege
 
 LDAP SERVER
 
-
-
 </td>
 <td valign="top">
 
 MANAGE ANY LDAP SERVER system privilege
-
-
 
 </td>
 </tr>
@@ -271,14 +242,10 @@ MANAGE ANY LDAP SERVER system privilege
 
 LOGIN POLICY
 
-
-
 </td>
 <td valign="top">
 
 MANAGE ANY LOGIN POLICY system privilege
-
-
 
 </td>
 </tr>
@@ -286,8 +253,6 @@ MANAGE ANY LOGIN POLICY system privilege
 <td valign="top">
 
 PRIMARY KEY ON
-
-
 
 </td>
 <td valign="top">
@@ -310,8 +275,6 @@ Requires one of:
 
 PROCEDURE
 
-
-
 </td>
 <td valign="top">
 
@@ -332,8 +295,6 @@ Requires one of:
 <td valign="top">
 
 SEQUENCE
-
-
 
 </td>
 <td valign="top">
@@ -356,14 +317,10 @@ Requires one of:
 
 SERVICE
 
-
-
 </td>
 <td valign="top">
 
 MANAGE ANY WEB SERVICE system privilege
-
-
 
 </td>
 </tr>
@@ -372,8 +329,6 @@ MANAGE ANY WEB SERVICE system privilege
 
 ROLE
 
-
-
 </td>
 <td valign="top">
 
@@ -381,16 +336,12 @@ System role – administrative privilege over the role being commented on.
 
 User-defined role – MANAGE ROLES system privilege or administrative privilege over the role being commented on.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 TABLE
-
-
 
 </td>
 <td valign="top">
@@ -413,8 +364,6 @@ Requires one of:
 
 TEXT CONFIGURATION
 
-
-
 </td>
 <td valign="top">
 
@@ -435,8 +384,6 @@ Requires one of:
 <td valign="top">
 
 TEXT INDEX
-
-
 
 </td>
 <td valign="top">
@@ -459,8 +406,6 @@ Requires one of:
 
 TRIGGER
 
-
-
 </td>
 <td valign="top">
 
@@ -482,14 +427,10 @@ Requires one of:
 
 USER
 
-
-
 </td>
 <td valign="top">
 
 MANAGE ANY USER system privilege
-
-
 
 </td>
 </tr>
@@ -497,8 +438,6 @@ MANAGE ANY USER system privilege
 <td valign="top">
 
 VIEW
-
-
 
 </td>
 <td valign="top">
@@ -540,7 +479,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
     ```
     COMMENT
     ON TABLE Employees 
-    IS "Employee information"
+    IS "Employee information";
     ```
 
 -   The following example removes the comment from the `Employees` table:
@@ -548,7 +487,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
     ```
     COMMENT
     ON TABLE Employees 
-    IS NULL
+    IS NULL;
     ```
 
 

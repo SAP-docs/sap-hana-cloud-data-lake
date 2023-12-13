@@ -6,10 +6,13 @@ Each row in the SYSARTICLES view describes an article in a publication.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be6d19c6c5f1014a65d895f21116765__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -24,6 +27,6 @@ ALTER VIEW "SYS"."SYSARTICLES"
       join SYS.ISYSPUBLICATION as p on(a.publication_id = p.publication_id)
       join SYS.ISYSTAB as t on(a.table_id = t.table_id)
       join SYS.ISYSUSER as u1 on(p.creator = u1.user_id)
-      join SYS.ISYSUSER as u2 on(t.creator = u2.user_id)
+      join SYS.ISYSUSER as u2 on(t.creator = u2.user_id);
 ```
 

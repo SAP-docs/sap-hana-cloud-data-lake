@@ -7,7 +7,7 @@ Returns 1 if a user-defined variable exists with the specified name. Returns 0 i
 
 
 ```
-VAREXISTS( <variable-name-string> [, <owner> ] )
+VAREXISTS( <variable-name-string> [, <owner> ] );
 ```
 
 
@@ -47,7 +47,7 @@ The user ID of the owner of the variable, as a string. *<owner\>* is only for us
 
 <a name="loiobf6a50154e834de2b212bb738f57143a__section_dxl_2fv_vrb"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -75,6 +75,8 @@ Not in the standard.
 
 
 
+## Example
+
 The following IF statement checks to see if a variable called start\_time exists. If it doesn't, then the database server creates a connection-scope variable with that name, and sets its value to the current time.
 
 ```
@@ -95,5 +97,5 @@ END IF;
 **Related Information**  
 
 
-[VAREXISTS Function [Miscellaneous] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/81ffd1036ce210149ae9c943fab6d1c1.html "Returns 1 if a user-defined variable exists with the specified name. Returns 0 if no such variable exists.") :arrow_upper_right:
+[VAREXISTS Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/81ffd1036ce210149ae9c943fab6d1c1.html "Returns 1 if a user-defined variable exists with the specified name. Returns 0 if no such variable exists.") :arrow_upper_right:
 

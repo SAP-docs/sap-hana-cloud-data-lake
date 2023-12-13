@@ -6,15 +6,18 @@ Displays information about system and user-defined objects and data types.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5a978bb84f21015ae55ee5c09228875__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqhelp [ <obj-name> ], [ <obj-owner> ], [ <obj-category> ], [ <obj-type> ]
+sp_iqhelp [ <obj-name> ], [ <obj-owner> ], [ <obj-category> ], [ <obj-type> ];
 ```
 
 
@@ -125,21 +128,15 @@ When a single object matches the specified sp\_iqhelp parameters, sp\_iqhelp dis
 
 Object Type
 
-
-
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Columns
-
-
 
 </th>
 </tr>
@@ -148,14 +145,10 @@ Columns
 
 Table
 
-
-
 </td>
 <td valign="top">
 
 Displays information about the specified base table, its columns, indexes, and constraints.
-
-
 
 </td>
 <td valign="top">
@@ -174,14 +167,10 @@ Displays information about the specified base table, its columns, indexes, and c
 
 View
 
-
-
 </td>
 <td valign="top">
 
 Displays information about the specified view and its columns
-
-
 
 </td>
 <td valign="top">
@@ -198,14 +187,10 @@ Displays information about the specified view and its columns
 
 Stored procedure
 
-
-
 </td>
 <td valign="top">
 
 Displays information about the specified procedure and its parameters
-
-
 
 </td>
 <td valign="top">
@@ -222,14 +207,10 @@ Displays information about the specified procedure and its parameters
 
 Function
 
-
-
 </td>
 <td valign="top">
 
 Displays information about the specified function and its parameters
-
-
 
 </td>
 <td valign="top">
@@ -246,14 +227,10 @@ Displays information about the specified function and its parameters
 
 Event
 
-
-
 </td>
 <td valign="top">
 
 Displays information about the specified event
-
-
 
 </td>
 <td valign="top">
@@ -269,14 +246,10 @@ Displays information about the specified event
 
 Data type
 
-
-
 </td>
 <td valign="top">
 
 Displays information about the specified data type
-
-
 
 </td>
 <td valign="top">
@@ -388,61 +361,61 @@ None
 -   The following example displays summary information about all user-defined tables, views, procedures, events, and data types in the database:
 
     ```
-    sp_iqhelp
+    sp_iqhelp;
     ```
 
 -   The following example displays information about table t1 owned by user u1 and the columns, indexes, and constraints associated with t1:
 
     ```
-    sp_iqhelp t1, u1, "table"
+    sp_iqhelp t1, u1, "table";
     ```
 
 -   The following example displays information about view v1u1 and the columns associated with v1:
 
     ```
-    sp_iqhelp NULL, u1, "view"
+    sp_iqhelp NULL, u1, "view";
     ```
 
 -   The following example displays information about the procedure sp2 and the parameters of owned by user sp2:
 
     ```
-    sp_iqhelp sp2
+    sp_iqhelp sp2;
     ```
 
 -   The following example displays information about the event e1:
 
     ```
-    sp_iqhelp e1
+    sp_iqhelp e1;
     ```
 
 -   The following example displays information about the data type dt1:
 
     ```
-    sp_iqhelp dt1
+    sp_iqhelp dt1;
     ```
 
 -   The following example displays summary information about all system objects \(owned by dbo or SYS\):
 
     ```
-    sp_iqhelp NULL, NULL, NULL, SYSTEM
+    sp_iqhelp NULL, NULL, NULL, SYSTEM;
     ```
 
 -   The following examples all return the error message ***owned by user"Object 'non\_existing\_obj' not found"***, as the object non\_existing\_obj does not exist:
 
     ```
-    sp_iqhelp non_existing_obj
+    sp_iqhelp non_existing_obj;
     ```
 
     ```
-    sp_iqhelp NULL, non_existing_user
+    sp_iqhelp NULL, non_existing_user;
     ```
 
     ```
-    sp_iqhelp t1, NULL, "apple"
+    sp_iqhelp t1, NULL, "apple";
     ```
 
     ```
-    sp_iqhelp t1, NULL, NULL, "USER"
+    sp_iqhelp t1, NULL, NULL, "USER";
     ```
 
 

@@ -6,8 +6,11 @@ Assigns a priority to each query waiting in the -iqgovern queue.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa63a661e84f210158ee2c8e1602d1eb4__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

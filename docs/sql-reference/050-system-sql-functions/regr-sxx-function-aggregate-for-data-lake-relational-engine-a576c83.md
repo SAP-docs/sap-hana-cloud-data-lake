@@ -16,7 +16,7 @@ Syntax 1
 <dd>
 
 ```
-REGR_SXX( <dependent-expression>, <independent-expression> )
+REGR_SXX( <dependent-expression>, <independent-expression> );
 ```
 
 
@@ -30,7 +30,7 @@ Syntax 2
 
 ```
 REGR_SXX( <dependent-expression>, <independent-expression> )
-OVER ( <window-spec> )
+OVER ( <window-spec> );
 ```
 
 
@@ -86,7 +86,7 @@ Specified when using this function as a window function.
 
 <a name="loioa576c83284f21015b9d5bbf81742e83a__REGR_SXX_returns1"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -101,7 +101,7 @@ This function converts its arguments to DOUBLE, performs the computation in doub
 The function is applied to the set of \(*<dependent-expression\>* and *<independent-expression\>*\) pairs after eliminating all pairs for which either *<dependent-expression\>* or *<independent-expression\>* is NULL. The function is computed simultaneously during a single pass through the data. After eliminating NULL values, the following computation is made, where *<y\>* represents the *<dependent-expression\>* and *<x\>* represents the *<independent-expression\>*:
 
 ```
-REGR_COUNT(y, x) * VAR_POP(x)
+REGR_COUNT(y, x) * VAR_POP(x);
 ```
 
 > ### Note:  
@@ -135,5 +135,5 @@ SELECT REGR_SXX( Salary, ( YEAR( NOW() ) - YEAR( BirthDate ) ) )FROM Employees;
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[REGR_SXX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/9bf778da26ef494686fbbecf7f2790b3.html "Computes the slope of the linear regression line, fitted to non-NULL pairs.") :arrow_upper_right:
+[REGR_SXX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/9bf778da26ef494686fbbecf7f2790b3.html "Computes the slope of the linear regression line, fitted to non-NULL pairs.") :arrow_upper_right:
 

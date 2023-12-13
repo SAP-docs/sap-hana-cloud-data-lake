@@ -6,10 +6,13 @@ The SYSSCHEMAPERM system view display the object-level permissions granted to sc
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio240e388ded1c4aeabef4c4d8752b6d2c__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ The SYSSCHEMAPERM system view display the object-level permissions granted to sc
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 schema\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Displays the id of the schema
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ Displays the id of the schema
 
 grantee
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Displays the id of the user to whom the object-level privilege is granted.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ Displays the id of the user to whom the object-level privilege is granted.
 
 grantor
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 Displays the id of the user who granted the object-level privilege.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ Displays the id of the user who granted the object-level privilege.
 
 selectauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Displays whether the SELECT object-level privilege is granted to the schema.
-
-
 
 </td>
 </tr>
@@ -135,21 +108,15 @@ Displays whether the SELECT object-level privilege is granted to the schema.
 
 insertauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Displays whether the INSERT object-level privilege is granted to the schema.
-
-
 
 </td>
 </tr>
@@ -158,21 +125,15 @@ Displays whether the INSERT object-level privilege is granted to the schema.
 
 deleteauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Displays whether the DELETE object-level privilege is granted to the schema.
-
-
 
 </td>
 </tr>
@@ -181,21 +142,15 @@ Displays whether the DELETE object-level privilege is granted to the schema.
 
 updateauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Displays whether the UPDATE object-level privilege is granted to the schema.
-
-
 
 </td>
 </tr>
@@ -204,21 +159,15 @@ Displays whether the UPDATE object-level privilege is granted to the schema.
 
 alterauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Displays whether the ALTER object-level privilege is granted to the schema.
-
-
 
 </td>
 </tr>
@@ -227,21 +176,15 @@ Displays whether the ALTER object-level privilege is granted to the schema.
 
 dropauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Displays whether the DROP object-level privilege is granted to the schema.
-
-
 
 </td>
 </tr>
@@ -250,21 +193,15 @@ Displays whether the DROP object-level privilege is granted to the schema.
 
 referenceauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Displays whether the REFERENCES object-level privilege is granted to the schema.
-
-
 
 </td>
 </tr>
@@ -273,21 +210,15 @@ Displays whether the REFERENCES object-level privilege is granted to the schema.
 
 loadauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Displays whether the LOAD object-level privilege is granted to the schema.
-
-
 
 </td>
 </tr>
@@ -296,21 +227,15 @@ Displays whether the LOAD object-level privilege is granted to the schema.
 
 truncateauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Displays whether the TRUNCATE object-level privilege is granted to the schema.
-
-
 
 </td>
 </tr>
@@ -319,21 +244,15 @@ Displays whether the TRUNCATE object-level privilege is granted to the schema.
 
 backuptableauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Displays whether the BACKUP TABLE object-level privilege is granted to the schema.
-
-
 
 </td>
 </tr>
@@ -342,21 +261,15 @@ Displays whether the BACKUP TABLE object-level privilege is granted to the schem
 
 restoretableauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Displays whether the RESTORE TABLE object-level privilege is granted to the schema.
-
-
 
 </td>
 </tr>
@@ -365,21 +278,15 @@ Displays whether the RESTORE TABLE object-level privilege is granted to the sche
 
 executeauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Displays whether the EXECUTE PROCEDURE object-level privilege is granted to the schema.
-
-
 
 </td>
 </tr>
@@ -388,21 +295,15 @@ Displays whether the EXECUTE PROCEDURE object-level privilege is granted to the 
 
 createanyauth
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 Displays whether the SELECT object-level privilege is granted to the schema.
-
-
 
 </td>
 </tr>

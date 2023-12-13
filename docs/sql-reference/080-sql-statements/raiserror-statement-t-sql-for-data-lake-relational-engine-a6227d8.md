@@ -6,15 +6,18 @@ Allows user-defined errors to be signaled, and sends a message on the client.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6227d8984f210159ad580e8826fdac0__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-RAISERROR <error-number> [ <format-string> ] [, <arg-list >]
+RAISERROR <error-number> [ <format-string> ] [, <arg-list >];
 ```
 
 
@@ -98,7 +101,7 @@ The following example raises error 99999, which is in the range for user-defined
 
 ```
 RAISERROR 99999 'Invalid entry for this 
-column: %1!', @val
+column: %1!', @val;
 ```
 
 **Related Information**  

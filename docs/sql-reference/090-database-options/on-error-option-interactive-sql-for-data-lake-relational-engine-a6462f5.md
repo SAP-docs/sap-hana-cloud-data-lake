@@ -6,10 +6,13 @@ Controls the action taken if an error is encountered while executing statements 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6462f5f84f21015a40dd5e7b750d63d__section_d3p_24q_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Controls the action taken if an error is encountered while executing statements 
 ## Syntax
 
 ```
-ON_ERROR = <value>
+ON_ERROR = <value>;
 ```
 
 

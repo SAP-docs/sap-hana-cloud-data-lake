@@ -11,7 +11,7 @@ CSCONVERT(
 <string-expression> ,
 <target-charset-string> 
 [ , <source-charset-string> [ , <options> ] ] 
-)
+);
 ```
 
 
@@ -169,7 +169,7 @@ Read or write a byte order mark \(BOM\)
 </b></dt>
 <dd>
 
-Specify ***read\_bom=on*** or ***read\_bom=off*** to turn on or off reading byte order marks. Specify ***write\_bom=on*** or ***write\_bom=off*** to turn on or off writing byte order marks. By default, the behavior is read\_bom=on and write\_bom=off.
+Specify `read_bom=on` or `read_bom=off` to turn on or off reading byte order marks. Specify `write_bom=on` or `write_bom=off` to turn on or off writing byte order marks. By default, the behavior is read\_bom=on and write\_bom=off.
 
 
 
@@ -183,7 +183,7 @@ Specify ***read\_bom=on*** or ***read\_bom=off*** to turn on or off reading byte
 
 
 
-## Returns
+## Result Set
 
 LONG BINARY
 
@@ -266,5 +266,5 @@ FROM mytable;
 **Related Information**  
 
 
-[CSCONVERT Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/81f552706ce21014b4d1b57dec4dfd29.html "Converts strings between character sets.") :arrow_upper_right:
+[CSCONVERT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/81f552706ce21014b4d1b57dec4dfd29.html "Converts strings between character sets.") :arrow_upper_right:
 

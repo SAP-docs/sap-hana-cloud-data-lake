@@ -16,7 +16,7 @@ Syntax 1
 <dd>
 
 ```
-COVAR_SAMP ( <dependent-expression>, <independent-expression> )
+COVAR_SAMP ( <dependent-expression>, <independent-expression> );
 ```
 
 
@@ -30,7 +30,7 @@ Syntax 2
 
 ```
 COVAR_SAMP ( <dependent-expression>, <independent-expression> )
-OVER ( <window-spec> )
+OVER ( <window-spec> );
 ```
 
 
@@ -93,7 +93,7 @@ This function converts its arguments to DOUBLE, performs the computation in doub
 Both *<dependent-expression\>* and *<independent-expression\>* are numeric. The function is applied to the set of \(*<dependent-expression\>*, *<independent-expression\>*\) after eliminating the pairs for which either *<dependent-expression\>* or *<independent-expression\>* is NULL, where *<x\>* represents the *<dependent-expression\>* and *<y\>* represents the *<independent-expression\>*:
 
 ```
-(SUM(x*y) - SUM(x) * SUM(y) / n) / (n-1)
+(SUM(x*y) - SUM(x) * SUM(y) / n) / (n-1);
 ```
 
 > ### Note:  
@@ -124,5 +124,5 @@ SELECT COVAR_SAMP( Salary, ( 2008 - YEAR( BirthDate ) ) ) FROM Employees;
 **Related Information**  
 
 
-[COVAR_SAMP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3a064918478c4d47ab0da64c2d61cc3e.html "Returns the sample covariance of a set of number pairs.") :arrow_upper_right:
+[COVAR_SAMP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3a064918478c4d47ab0da64c2d61cc3e.html "Returns the sample covariance of a set of number pairs.") :arrow_upper_right:
 

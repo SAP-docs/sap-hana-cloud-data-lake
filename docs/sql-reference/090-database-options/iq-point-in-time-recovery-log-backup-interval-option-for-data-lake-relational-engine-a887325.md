@@ -6,8 +6,11 @@ Sets a time interval between automatic backups of the point in time recovery log
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa887325c84f210159692be304b7d0dbc__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

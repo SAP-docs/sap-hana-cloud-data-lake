@@ -9,7 +9,7 @@ Returns the number of hours since an arbitrary starting date and time, the numbe
 ```
 HOURS ( <datetime-expression> 
 | <datetime-expression>, <datetime-expression>
-| <datetime-expression>, <integer-expression> )
+| <datetime-expression>, <integer-expression> );
 ```
 
 
@@ -49,7 +49,7 @@ The number of hours to be added to the *<datetime-expression\>*. If *<integer-ex
 
 <a name="loioa556e14084f210158443b519970bb86d__HOURS_returns1"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -78,21 +78,21 @@ The second syntax returns the number of whole hours from the first date/time to 
 -   The following statement returns the value 17518758:
 
     ```
-    SELECT HOURS( '1998-07-13 06:07:12' ) FROM iq_dummy
+    SELECT HOURS( '1998-07-13 06:07:12' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 4, to signify the difference between the two times:
 
     ```
     SELECT HOURS( '1999-07-13 06:07:12',
-    	'1999-07-13 10:07:12' ) FROM iq_dummy
+    	'1999-07-13 10:07:12' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the datetime value 1999-05-13 02:05:07.000:
 
     ```
     SELECT HOURS( CAST( '1999-05-12 21:05:07' 
-    AS DATETIME ), 5 ) FROM iq_dummy
+    AS DATETIME ), 5 ) FROM iq_dummy;
     ```
 
 
@@ -117,5 +117,5 @@ The second syntax returns the number of whole hours from the first date/time to 
 
 [YEARS Function \[Date and Time\] for Data Lake Relational Engine](years-function-date-and-time-for-data-lake-relational-engine-a5926bf.md "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.")
 
-[HOURS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/21c21405d89646019adb537e2ed90796.html "Returns the number of hours since an arbitrary starting date and time, the number of whole hours between two specified times, or adds the specified integer-expression number of hours to a time.") :arrow_upper_right:
+[HOURS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/21c21405d89646019adb537e2ed90796.html "Returns the number of hours since an arbitrary starting date and time, the number of whole hours between two specified times, or adds the specified integer-expression number of hours to a time.") :arrow_upper_right:
 

@@ -6,10 +6,13 @@ An online help view providing column names, data types, and column descriptions 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio889aa3fe26d34d678b2c85f99c95bc50__section_skb_fwg_k4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 <table>
@@ -18,21 +21,15 @@ An online help view providing column names, data types, and column descriptions 
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -41,21 +38,15 @@ Description
 
 ViewID
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The unique ID of the monitoring view.
-
-
 
 </td>
 </tr>
@@ -64,21 +55,15 @@ The unique ID of the monitoring view.
 
 ViewName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(64\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the monitoring view.
-
-
 
 </td>
 </tr>
@@ -87,21 +72,15 @@ The name of the monitoring view.
 
 ColumnName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(64\)
 
-
-
 </td>
 <td valign="top">
 
 The monitoring view column name.
-
-
 
 </td>
 </tr>
@@ -110,21 +89,15 @@ The monitoring view column name.
 
 ColumnNumber
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The monitoring view column number.
-
-
 
 </td>
 </tr>
@@ -133,21 +106,15 @@ The monitoring view column number.
 
 DataType
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(25\)
 
-
-
 </td>
 <td valign="top">
 
 The data type of the monitoring view column.
-
-
 
 </td>
 </tr>
@@ -156,21 +123,15 @@ The data type of the monitoring view column.
 
 Size
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The size of the monitoring view column.
-
-
 
 </td>
 </tr>
@@ -179,21 +140,15 @@ The size of the monitoring view column.
 
 Description
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(512\)
 
-
-
 </td>
 <td valign="top">
 
 The description of the monitoring view column.
-
-
 
 </td>
 </tr>
@@ -212,16 +167,16 @@ iqmonViewColumns displays the column names, data types, and column descriptions 
 To display column data for all monitoring views, use this syntax:
 
 ```
-select * from iqmonViewColumns
+select * from iqmonViewColumns;
 ```
 
 You can limit the focus of iqmonViewColumns to return column information for a particular data lake Relational Engine monitoring view. For example, if you're only interested in the iqmonThreadManager monitoring view columns, use this syntax:
 
 ```
-select * from iqmonViewColumns where ViewName = iqmonThreadManager
+select * from iqmonViewColumns where ViewName = iqmonThreadManager;
 ```
 
-The monitoring view columns listed by iqmonViewColumns can help you troubleshoot common data lake Relational Engine performance problems. For diagnostic use-case information, see the [SAP HANA Cloud, Data Lake Performance and Tuning for Data Lake Relational Engine (Monitoring Views)](https://help.sap.com/viewer/028be133f34c4d2d998c6fbc258659c5/2023_2_QRC/en-US/56032dd760ca4790a55d069d4475b441.html "This document shows you how to use the monitoring views to monitor data lake Relational Engine system health, and to help you troubleshoot performance issues.") :arrow_upper_right: manual.
+The monitoring view columns listed by iqmonViewColumns can help you troubleshoot common data lake Relational Engine performance problems. For diagnostic use-case information, see the [SAP HANA Cloud, Data Lake Performance and Tuning for Data Lake Relational Engine (Monitoring Views)](https://help.sap.com/viewer/028be133f34c4d2d998c6fbc258659c5/2023_4_QRC/en-US/56032dd760ca4790a55d069d4475b441.html "This document shows you how to use the monitoring views to monitor data lake Relational Engine system health, and to help you troubleshoot performance issues.") :arrow_upper_right: manual.
 
 
 
@@ -229,5 +184,5 @@ The monitoring view columns listed by iqmonViewColumns can help you troubleshoot
 
 ## Privileges
 
-You must have the MONITOR system privilege to access this view. DBAs can consult [Granting a System Privilege to a User](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_2_QRC/en-US/a43bcb8284f210158039b1793a92a4fc.html "Allow the granting of specific system privileges to specific users, with or without administrative rights.") :arrow_upper_right: and [Alphabetical List of System Privileges for Data Lake Relational Engine](../080-sql-statements/alphabetical-list-of-system-privileges-for-data-lake-relational-engine-a449325.md) for information on granting the MONITOR system privilege to a user.
+You must have the MONITOR system privilege to access this view. DBAs can consult [Granting a System Privilege to a User](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/a43bcb8284f210158039b1793a92a4fc.html "Allow the granting of specific system privileges to specific users, with or without administrative rights.") :arrow_upper_right: and [Alphabetical List of System Privileges for Data Lake Relational Engine](../080-sql-statements/alphabetical-list-of-system-privileges-for-data-lake-relational-engine-a449325.md) for information on granting the MONITOR system privilege to a user.
 

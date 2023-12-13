@@ -7,7 +7,7 @@ For a given expression, the `WIDTH_BUCKET` function returns the bucket number th
 
 
 ```
-WIDTH_BUCKET ( <expression>, <min_value>, <max_value>, <num_buckets> )
+WIDTH_BUCKET ( <expression>, <min_value>, <max_value>, <num_buckets> );
 ```
 
 
@@ -96,7 +96,7 @@ The following example creates a 10-bucket histogram on the `credit_limit` column
 
 ```
 select EmployeeID, Surname, Salary, WIDTH_BUCKET(Salary, 29000, 60000, 4)
- "Wages" from Employees where State = 'FL' order by "Wages"
+ "Wages" from Employees where State = 'FL' order by "Wages";
 ```
 
 ```
@@ -117,5 +117,5 @@ When the bounds are reversed, the buckets are open-closed intervals. For example
 **Related Information**  
 
 
-[WIDTH_BUCKET Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/69892e4fa52c4ad885c269d8009f06c3.html "For a given expression, the WIDTH_BUCKET function returns the bucket number that the result of this expression will be assigned after it is evaluated.") :arrow_upper_right:
+[WIDTH_BUCKET Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/69892e4fa52c4ad885c269d8009f06c3.html "For a given expression, the WIDTH_BUCKET function returns the bucket number that the result of this expression will be assigned after it is evaluated.") :arrow_upper_right:
 

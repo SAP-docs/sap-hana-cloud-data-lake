@@ -7,7 +7,7 @@ Returns the name of the day of the week from the specified date.
 
 
 ```
-DAYNAME ( <date-expression> )
+DAYNAME ( <date-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The date.
 
 <a name="loiobe690a0aa62c4e67986070c70f25b3fe__section_z2w_4bm_srb"/>
 
-## Returns
+## Result Set
 
 VARCHAR
 
@@ -57,11 +57,11 @@ VARCHAR
 The following statement returns the value Saturday:
 
 ```
-SELECT DAYNAME ( '1987/05/02' ) FROM iq_dummy
+SELECT DAYNAME ( '1987/05/02' ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[DAYNAME Function [Date and Time] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a549c43b84f21015a569d8e52c4af3f8.html "Returns the name of the day of the week from the specified date.") :arrow_upper_right:
+[DAYNAME Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a549c43b84f21015a569d8e52c4af3f8.html "Returns the name of the day of the week from the specified date.") :arrow_upper_right:
 

@@ -7,7 +7,7 @@ Converts a number from degrees to radians.
 
 
 ```
-RADIANS ( <numeric-expression> )
+RADIANS ( <numeric-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ A number, in degrees. This angle is converted to radians
 
 <a name="loioa572340384f21015b1d3dab0d7a76062__RADIANS_returns1"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -57,11 +57,11 @@ DOUBLE
 The following statement returns a value of approximately 0.5236:
 
 ```
-SELECT RADIANS( 30 ) FROM iq_dummy
+SELECT RADIANS( 30 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[RADIANS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/dbeab0046dff49e89f016a8496e978f8.html "Converts a number from degrees to radians.") :arrow_upper_right:
+[RADIANS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/dbeab0046dff49e89f016a8496e978f8.html "Converts a number from degrees to radians.") :arrow_upper_right:
 

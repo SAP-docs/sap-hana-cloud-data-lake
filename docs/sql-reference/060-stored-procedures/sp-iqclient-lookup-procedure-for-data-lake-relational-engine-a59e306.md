@@ -7,7 +7,7 @@ Allows a client application to determine the data lake Relational Engine user ac
 
 
 ```
-sp_iqclient_lookup [ '<IPaddress>' ], [ <Port> ], [ <UserID> ]
+sp_iqclient_lookup [ '<IPaddress>' ], [ <Port> ], [ <UserID> ];
 ```
 
 
@@ -59,7 +59,7 @@ The data lake Relational Engine user ID.
 The `sp_iqclient_lookup` procedure takes the client IP address and port number and returns a single row containing Number \(the connection ID\), IPaddress, Port, and UserID:
 
 ```
-sp_iqclient_lookup '158.76.235.71',3360
+sp_iqclient_lookup '158.76.235.71',3360;
 ```
 
 ```
@@ -71,7 +71,7 @@ Number   IPaddress      Port    UserID
 Optionally, you can pass a third argument to select only the UserID. If no arguments are passed, `sp_iqclient_lookup` returns all current logins with their IP addresses and port numbers. For example:
 
 ```
-sp_iqclient_lookup
+sp_iqclient_lookup;
 ```
 
 ```
@@ -117,7 +117,7 @@ The `sp_iqclient_lookup` stored procedure may impact server performance, which v
 -   The following example shows IP addresses for UserID jcazale:
 
     ```
-    sp_iqclient_lookup null, null, jcazale
+    sp_iqclient_lookup null, null, jcazale;
     ```
 
     ```
@@ -130,7 +130,7 @@ The `sp_iqclient_lookup` stored procedure may impact server performance, which v
 -   The following example shows IP addresses from client IP 162.66.131.36:
 
     ```
-    sp_iqclient_lookup '162.66.131.36'
+    sp_iqclient_lookup '162.66.131.36';
     ```
 
     ```

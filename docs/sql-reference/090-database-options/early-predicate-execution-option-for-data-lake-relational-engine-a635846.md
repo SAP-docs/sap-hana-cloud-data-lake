@@ -6,8 +6,11 @@ Controls whether simple local predicates are executed before query optimization.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa635846284f21015a53bd0bf89909d0d__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

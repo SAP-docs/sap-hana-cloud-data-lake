@@ -6,16 +6,19 @@ Creates a text configuration object using another text configuration object as a
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa602a06684f21015b7f78f0f1a3ea0d9__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 CREATE TEXT CONFIGURATION [ { <owner> | <schema-name> }.]<new-config-name> 
-   FROM [ { <owner> | <schema-name> }.]<existing-config-name>
+   FROM [ { <owner> | <schema-name> }.]<existing-config-name>;
 ```
 
 

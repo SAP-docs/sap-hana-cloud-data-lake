@@ -6,10 +6,13 @@ Turns off individual keywords, allowing their use as identifiers.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6442c6f84f21015b0a4d779623d830f__section_bvh_vpr_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Turns off individual keywords, allowing their use as identifiers.
 ## Syntax
 
 ```
-NON_KEYWORDS = <string>
+NON_KEYWORDS = <string>;
 ```
 
 
@@ -60,28 +63,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -90,28 +85,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -120,28 +107,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -158,13 +137,13 @@ NON\_KEYWORDS turns off individual keywords. If you have an identifier in your d
 This statement prevents TRUNCATE and SYNCHRONIZE from being recognized as keywords:
 
 ```
-SET OPTION NON_KEYWORDS = 'TRUNCATE, SYNCHRONIZE'
+SET OPTION NON_KEYWORDS = 'TRUNCATE, SYNCHRONIZE';
 ```
 
 Each new setting of this option replaces the previous setting. This statement clears all previous settings:
 
 ```
-SET OPTION NON_KEYWORDS =
+SET OPTION NON_KEYWORDS =;
 ```
 
 A side effect of the options is that SQL statements using a turned-off keyword cannot be used; they produce a syntax error.

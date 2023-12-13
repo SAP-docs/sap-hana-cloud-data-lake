@@ -6,15 +6,18 @@ Reports connection property information.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be575056c5f10148e5c8cb5b61644ff__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_conn_properties( [ <connidparm> ] )
+sa_conn_properties( [ <connidparm> ] );
 ```
 
 
@@ -25,7 +28,7 @@ sa_conn_properties( [ <connidparm> ] )
 <dl>
 <dt><b>
 
- *<connidparm\>* 
+*<connidparm\>* 
 
 </b></dt>
 <dd>
@@ -48,21 +51,15 @@ Use this optional INTEGER parameter to specify the connection ID number. The def
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -71,21 +68,15 @@ Description
 
 Number
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the connection ID \(a number\) for the current connection.
-
-
 
 </td>
 </tr>
@@ -94,21 +85,15 @@ Returns the connection ID \(a number\) for the current connection.
 
 PropNum
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Returns the connection property number.
-
-
 
 </td>
 </tr>
@@ -117,21 +102,15 @@ Returns the connection property number.
 
 PropName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the connection property name.
-
-
 
 </td>
 </tr>
@@ -140,21 +119,15 @@ Returns the connection property name.
 
 PropDescription
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 Returns the connection property description.
-
-
 
 </td>
 </tr>
@@ -163,21 +136,15 @@ Returns the connection property description.
 
 Value
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 Returns the connection property value.
-
-
 
 </td>
 </tr>
@@ -207,7 +174,9 @@ None
 
 
 
-The following example uses the sa\_conn\_properties system procedure to return a result set summarizing connection property information for all connections.
+## Examples
+
+This example uses the sa\_conn\_properties system procedure to return a result set summarizing connection property information for all connections.
 
 ```
 CALL sa_conn_properties( );
@@ -220,28 +189,20 @@ CALL sa_conn_properties( );
 
 Number
 
-
-
 </th>
 <th valign="top">
 
 PropNum
-
-
 
 </th>
 <th valign="top">
 
 PropName
 
-
-
 </th>
 <th valign="top">
 
 ...
-
-
 
 </th>
 </tr>
@@ -249,29 +210,21 @@ PropName
 <td valign="top">
 
 79
-
-
 
 </td>
 <td valign="top">
 
 37
 
-
-
 </td>
 <td valign="top">
 
 ClientStmtCacheHits
 
-
-
 </td>
 <td valign="top">
 
 ...
-
-
 
 </td>
 </tr>
@@ -280,28 +233,20 @@ ClientStmtCacheHits
 
 79
 
-
-
 </td>
 <td valign="top">
 
 38
-
-
 
 </td>
 <td valign="top">
 
 ClientStmtCacheMisses
 
-
-
 </td>
 <td valign="top">
 
 ...
-
-
 
 </td>
 </tr>
@@ -310,28 +255,20 @@ ClientStmtCacheMisses
 
 ...
 
+</td>
+<td valign="top">
 
+...
 
 </td>
 <td valign="top">
 
 ...
 
-
-
 </td>
 <td valign="top">
 
 ...
-
-
-
-</td>
-<td valign="top">
-
-...
-
-
 
 </td>
 </tr>

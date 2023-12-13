@@ -15,14 +15,10 @@ These comment indicators are available in data lake Relational Engine:
 
 Comment Indicator
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Description
-
-
 
 </th>
 </tr>
@@ -31,14 +27,10 @@ Description
 
 \-- \(Double hyphen\)
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 The database server ignores any remaining characters on the line. This is the SQL92 comment indicator.
-
-
 
 </td>
 </tr>
@@ -47,14 +39,10 @@ The database server ignores any remaining characters on the line. This is the SQ
 
 // \(Double slash\)
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 The double slash has the same meaning as the double hyphen.
-
-
 
 </td>
 </tr>
@@ -63,14 +51,10 @@ The double slash has the same meaning as the double hyphen.
 
 /\* … \*/ \(Slash-asterisk\)
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Any characters between the two comment markers are ignored. The two comment markers might be on the same or different lines. Comments indicated in this style can be nested. This style of commenting is also called C-style comments.
-
-
 
 </td>
 </tr>
@@ -79,14 +63,10 @@ Any characters between the two comment markers are ignored. The two comment mark
 
 % \(Percent sign\)
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 The percent sign has the same meaning as the double hyphen. You should not use % as a comment indicator.
-
-
 
 </td>
 </tr>

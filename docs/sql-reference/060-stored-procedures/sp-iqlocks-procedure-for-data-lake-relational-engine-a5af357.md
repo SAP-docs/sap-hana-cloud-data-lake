@@ -6,23 +6,26 @@ Shows information about locks in the database, for both the IQ main store and th
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5af357c84f21015bd5cb5d281321779__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 sp_iqlocks ( [ <connection>,] [ [ <owner>.]<table_name>,]
- <max_locks>,] [ <sort_order> ] )
+ <max_locks>,] [ <sort_order> ] );
 ```
 
 
 
 <a name="loioa5af357c84f21015bd5cb5d281321779__iq_refbb_1658"/>
 
-## Parameter
+## Parameters
 
 All parameters are optional to restrict results:
 
@@ -82,7 +85,7 @@ All parameters are optional to restrict results:
 
 <a name="loioa5af357c84f21015bd5cb5d281321779__section_rsk_nch_nbb"/>
 
-## Returns
+## Result Set
 
 sp\_iqlocks displays the following information, sorted as specified in the *<sort\_order\>* parameter:
 
@@ -93,21 +96,15 @@ sp\_iqlocks displays the following information, sorted as specified in the *<sor
 
 Column
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -116,21 +113,15 @@ Description
 
 conn\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the current connection.
-
-
 
 </td>
 </tr>
@@ -139,21 +130,15 @@ The name of the current connection.
 
 conn\_id
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 Connection ID that has the lock.
-
-
 
 </td>
 </tr>
@@ -162,21 +147,15 @@ Connection ID that has the lock.
 
 user\_id
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 User associated with this connection ID.
-
-
 
 </td>
 </tr>
@@ -185,21 +164,15 @@ User associated with this connection ID.
 
 table\_type
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(6\)
 
-
-
 </td>
 <td valign="top">
 
 The type of table. This type is either BASE for a table, GLBTMP for global temporary table, or MVIEW for a materialized view. Materialized views are only supported for SAP SQL Anywhere tables in the data lake Relational Engine catalog store.
-
-
 
 </td>
 </tr>
@@ -208,21 +181,15 @@ The type of table. This type is either BASE for a table, GLBTMP for global tempo
 
 creator
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The owner of the table.
-
-
 
 </td>
 </tr>
@@ -231,21 +198,15 @@ The owner of the table.
 
 table\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Table on which the lock is held.
-
-
 
 </td>
 </tr>
@@ -254,21 +215,15 @@ Table on which the lock is held.
 
 index\_id
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The index ID or NULL
-
-
 
 </td>
 </tr>
@@ -277,21 +232,15 @@ The index ID or NULL
 
 lock\_class
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(8\)
 
-
-
 </td>
 <td valign="top">
 
 The lock class. One of Schema, Row, Table, or Position.
-
-
 
 </td>
 </tr>
@@ -300,21 +249,15 @@ The lock class. One of Schema, Row, Table, or Position.
 
 lock\_duration
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(11\)
 
-
-
 </td>
 <td valign="top">
 
 The duration of the lock. One of Transaction, Position, or Connection.
-
-
 
 </td>
 </tr>
@@ -323,21 +266,15 @@ The duration of the lock. One of Transaction, Position, or Connection.
 
 lock\_type
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(9\)
 
-
-
 </td>
 <td valign="top">
 
 The lock type \(this is dependent on the lock class\).
-
-
 
 </td>
 </tr>
@@ -346,21 +283,15 @@ The lock type \(this is dependent on the lock class\).
 
 row\_identifier
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The identifier for the row the lock starts on, or NULL.
-
-
 
 </td>
 </tr>
@@ -369,21 +300,15 @@ The identifier for the row the lock starts on, or NULL.
 
 row\_range
 
-
-
 </td>
 <td valign="top">
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The number of contiguous rows that are locked.
-
-
 
 </td>
 </tr>
@@ -408,21 +333,15 @@ The value in the lock\_type column depends on the lock classification in the loc
 
 Lock Class
 
-
-
 </th>
 <th valign="top">
 
 Lock Types
 
-
-
 </th>
 <th valign="top">
 
 Comments
-
-
 
 </th>
 </tr>
@@ -430,8 +349,6 @@ Comments
 <td valign="top">
 
 Schema
-
-
 
 </td>
 <td valign="top">
@@ -446,16 +363,12 @@ Schema
 
 For schema locks, the row\_identifier and index ID values are NULL.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Row
-
-
 
 </td>
 <td valign="top">
@@ -478,16 +391,12 @@ A surrogate lock is a special case of a row lock. Surrogate locks are held on su
 
 If required, key and non-key portions of a row can be locked independently. A connection can obtain a read lock on the key portion of a row for shared \(read\) access so that other connections can still obtain write locks on other non-key columns of a row. Updating non-key columns of a row does not interfere with the insertion and deletion of foreign rows referencing that row.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Table
-
-
 
 </td>
 <td valign="top">
@@ -503,16 +412,12 @@ Table
 
 None
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 Position
-
-
 
 </td>
 <td valign="top">
@@ -526,8 +431,6 @@ Position
 <td valign="top">
 
 Usually a position lock is also held on a specific row, and that row's 64-bit row identifier appears in the row\_identifier column in the result set. However, Position locks can be held on entire scans \(index or sequential\), in which case the row\_identifier column is NULL.
-
-
 
 </td>
 </tr>
@@ -554,12 +457,12 @@ None
 
 <a name="loioa5af357c84f21015bd5cb5d281321779__iq_refbb_1660"/>
 
-## Example
+## Examples
 
 The example shows the sp\_iqlocks procedure call and its output in the data lake Relational Engine database. The procedure is called with all default options, so that the output shows all locks, sorted by connection:
 
 ```
-call sp_iqlocks()
+call sp_iqlocks();
 ```
 
 ```

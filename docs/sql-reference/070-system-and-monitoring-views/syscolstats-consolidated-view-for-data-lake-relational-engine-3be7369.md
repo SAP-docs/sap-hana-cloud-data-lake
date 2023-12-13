@@ -6,10 +6,13 @@ The SYSCOLSTATS view contains the column statistics that are stored as histogram
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be7369e6c5f1014a082a74d845643f4__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -22,6 +25,6 @@ ALTER VIEW "SYS"."SYSCOLSTATS" AS SELECT u.user_name, t.table_name, c.column_nam
 FROM SYS.ISYSCOLSTAT s      
 JOIN SYS.ISYSTABCOL c on (s.table_id = c.table_id and s.column_id = c.column_id)     
 JOIN SYS.ISYSTAB t on (t.table_id = c.table_id)     
-JOIN SYS.ISYSUSER u on (u.user_id = t.creator)
+JOIN SYS.ISYSUSER u on (u.user_id = t.creator);
 ```
 

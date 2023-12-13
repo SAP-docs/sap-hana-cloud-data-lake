@@ -16,7 +16,7 @@ As a convenience, this document includes some SAP HANA database SQL syntax speci
 
 ![](images/HANA_Data_Lake_SQL_57453bf.png)
 
-Click the icon to open the section for Data lake Relational Engine \(SAP HANA DB-Managed\) syntax.
+Click the icon to open the section for Data lake Relational Engine\(SAP HANA DB-Managed\) syntax.
 
 
 
@@ -34,5 +34,5 @@ Click this icon to open the section for SAP HANA database syntax optimized for d
 
 ## Audience
 
-This guide is for SAP HANA database users with an integrated data lake Relational Engine \(SAP HANA DB-Managed\). If your data lake Relational Engine is not integrated – then guide isn’t the correct SQL reference guide for you. See [SAP HANA Cloud, Data Lake SQL Reference for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/7b5bd4e8cdcb4593aba6f2895572b0a9.html "This reference guide describes the SQL functions, procedures, tables, views, statements, and options used by data lake Relational Engine.") :arrow_upper_right: instead. A nonintegrated data lake Relational Engine gives you more SQL permissions, and therefore the [SAP HANA Cloud, Data Lake SQL Reference for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/7b5bd4e8cdcb4593aba6f2895572b0a9.html "This reference guide describes the SQL functions, procedures, tables, views, statements, and options used by data lake Relational Engine.") :arrow_upper_right: guide contains more reference topics than this guide.
+This guide is for SAP HANA database users with an integrated data lake Relational Engine \(SAP HANA DB-Managed\). If your data lake Relational Engine is not integrated – then guide isn’t the correct SQL reference guide for you. See [SAP HANA Cloud, Data Lake SQL Reference for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/7b5bd4e8cdcb4593aba6f2895572b0a9.html "This reference guide describes the SQL functions, procedures, tables, views, statements, and options used by data lake Relational Engine.") :arrow_upper_right: instead. A nonintegrated data lake Relational Engine gives you more SQL permissions, and therefore the [SAP HANA Cloud, Data Lake SQL Reference for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/7b5bd4e8cdcb4593aba6f2895572b0a9.html "This reference guide describes the SQL functions, procedures, tables, views, statements, and options used by data lake Relational Engine.") :arrow_upper_right: guide contains more reference topics than this guide.
 

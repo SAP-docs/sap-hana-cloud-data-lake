@@ -6,10 +6,13 @@ Implements error handling for compound statements \(if an error occurs in the TR
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio817faa4f6ce210149928aea666aaa42d__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -49,7 +52,7 @@ Implements error handling for compound statements \(if an error occurs in the TR
 <dl class="glossary">
 <dt><b>
 
- *<statement-label\>* 
+*<statement-label\>* 
 
 </b></dt>
 <dd>
@@ -60,7 +63,7 @@ When an ending *<statement-label\>* is specified, it must match the beginning *<
 
 </dd><dt><b>
 
- *<local-declaration\>* 
+*<local-declaration\>* 
 
 </b></dt>
 <dd>
@@ -71,7 +74,7 @@ Immediately following the BEGIN TRY, a compound statement can have local declara
 
 </dd><dt><b>
 
- *<variable-declaration\>* 
+*<variable-declaration\>* 
 
 </b></dt>
 <dd>
@@ -82,7 +85,7 @@ A valid DECLARE statement.
 
 </dd><dt><b>
 
- *<exception-declaration\>* 
+*<exception-declaration\>* 
 
 </b></dt>
 <dd>
@@ -93,7 +96,7 @@ A valid DECLARE statement.
 
 </dd><dt><b>
 
- *<cursor-declaration\>* 
+*<cursor-declaration\>* 
 
 </b></dt>
 <dd>
@@ -104,7 +107,7 @@ A valid DECLARE CURSOR statement.
 
 </dd><dt><b>
 
- *<temporary-table-declaration\>* 
+*<temporary-table-declaration\>* 
 
 </b></dt>
 <dd>
@@ -162,6 +165,8 @@ Not in the standard.
 
 
 
+## Example
+
 These examples use the following table:
 
 ```
@@ -195,16 +200,12 @@ Executing the following procedure by using `CALL proc1(10);` inserts the followi
 
 \-10
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 10
-
-
 
 </td>
 </tr>

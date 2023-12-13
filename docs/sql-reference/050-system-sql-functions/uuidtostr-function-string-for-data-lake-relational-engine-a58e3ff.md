@@ -7,7 +7,7 @@ Converts a unique identifier value \(UUID, also known as GUID\) to a string valu
 
 
 ```
-UUIDTOSTR ( <uuid-expression> )
+UUIDTOSTR ( <uuid-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ A unique identifier value.
 
 <a name="loioa58e3ffd84f2101593c5c09c7d64fec4__UUIDTOSTR_returns1"/>
 
-## Returns
+## Result Set
 
 VARCHAR
 
@@ -70,11 +70,11 @@ CREATE TABLE T3 (
 pk uniqueidentifier primary key,c1 int);
 INSERT INTO T3 (pk, c1) 
 values (0x12345678123456789012123456789012, 1)
-SELECT UUIDTOSTR(pk) FROM T3
+SELECT UUIDTOSTR(pk) FROM T3;
 ```
 
 **Related Information**  
 
 
-[UUIDTOSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/60f4cba865204365bd10f0d9cfb44fc6.html "Converts a unique identifier value (UUID, also known as GUID) to a string value.") :arrow_upper_right:
+[UUIDTOSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/60f4cba865204365bd10f0d9cfb44fc6.html "Converts a unique identifier value (UUID, also known as GUID) to a string value.") :arrow_upper_right:
 

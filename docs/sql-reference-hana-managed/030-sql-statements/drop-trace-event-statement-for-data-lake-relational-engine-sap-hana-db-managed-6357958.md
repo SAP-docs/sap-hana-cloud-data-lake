@@ -6,15 +6,18 @@ Drops a user-defined trace event.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user. It cannot be run using the REMOTE\_EXECUTE procedure.
+<a name="loio63579584baca4c78a6b2f830a2dfcc36__section_iyl_lhw_ysb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected directly to data lake Relational Engine **coordinator** as a data lake Relational Engine user. This syntax cannot be run using the REMOTE\_EXECUTE procedure.
 
 
 
 ```
-DROP TRACE EVENT [ IF EXISTS ] <trace-event-name>
+DROP TRACE EVENT [ IF EXISTS ] <trace-event-name>;
 ```
 
 
@@ -70,6 +73,8 @@ Not in the standard.
 
 
 
+## Example
+
 Drop the trace event named my\_event:
 
 ```
@@ -79,5 +84,7 @@ DROP TRACE EVENT my_event;
 **Related Information**  
 
 
-[DROP TRACE EVENT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/816f81ae6ce210149309e843cf27de9d.html "Drops a user-defined trace event.") :arrow_upper_right:
+[CREATE TEMPORARY TRACE EVENT Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-temporary-trace-event-statement-for-data-lake-relational-engine-sap-hana-db-manage-648c6bf.md "Creates a user trace event that persists until the database is stopped.")
+
+[DROP TRACE EVENT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/816f81ae6ce210149309e843cf27de9d.html "Drops a user-defined trace event.") :arrow_upper_right:
 

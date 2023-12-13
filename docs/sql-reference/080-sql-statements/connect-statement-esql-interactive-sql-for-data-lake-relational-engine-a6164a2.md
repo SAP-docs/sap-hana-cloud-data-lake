@@ -6,10 +6,13 @@ Establishes a connection to the database identified by *<database-name\>* runnin
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6164a2584f210158b79b517cd3c0491__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -27,7 +30,7 @@ CONNECT
    …[ TO <engine-name> ]
    …[ DATABASE <database-name> ]
    …[ AS <connection-name> ]
-   …[ USER ] <userid> [ IDENTIFIED BY ]
+   …[ USER ] <userid> [ IDENTIFIED BY ];
 ```
 
 
@@ -40,7 +43,7 @@ Syntax 2
 <dd>
 
 ```
-CONNECT USING <connect-string>
+CONNECT USING <connect-string>;
 ```
 
 
@@ -160,13 +163,13 @@ None
 -   The following example connects to the default database using dbisql without specifying credentials. You are prompted for a user ID and password:
 
     ```
-    CONNECT
+    CONNECT;
     ```
 
 -   The following example connects to the default database as user HDLADMIN using . You are prompted for a user ID and password:
 
     ```
-    CONNECT USER "HDLADMIN"
+    CONNECT USER "HDLADMIN";
     ```
 
 -   The following example connects to the demo database as user HDLADMIN using dbisql, where *<machine\_iqdemo\>* is the engine name:
@@ -175,13 +178,13 @@ None
     CONNECT 
     TO <machine_iqdemo>
     USER "HDLADMIN"
-    IDENTIFIED BY <password>
+    IDENTIFIED BY <password>;
     ```
 
 -   The following example connects to the demo database using a connect string using dbisql:
 
     ```
-    CONNECT USING 'UID=HDLADMIN;PWD=<password>;DBN=iqdemo'
+    CONNECT USING 'UID=HDLADMIN;PWD=<password>;DBN=iqdemo';
     ```
 
 

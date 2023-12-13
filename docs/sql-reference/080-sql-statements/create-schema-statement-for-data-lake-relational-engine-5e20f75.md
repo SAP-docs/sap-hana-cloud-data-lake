@@ -6,15 +6,18 @@ Creates a schema in the current instance.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio5e20f75f3b664f02b1d92f4a22999105__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-CREATE SCHEMA [ <owner>.]<schema_name>
+CREATE SCHEMA [ <owner>.]<schema_name>;
 ```
 
 
@@ -108,4 +111,9 @@ This example creates the schema named my\_schema1 that is owned by user\_1.
 ```
 CREATE SCHEMA user_1.my_schema1;
 ```
+
+**Related Information**  
+
+
+[DROP SCHEMA Statement for Data Lake Relational Engine](drop-schema-statement-for-data-lake-relational-engine-0c4b714.md "Removes a schema from the database.")
 

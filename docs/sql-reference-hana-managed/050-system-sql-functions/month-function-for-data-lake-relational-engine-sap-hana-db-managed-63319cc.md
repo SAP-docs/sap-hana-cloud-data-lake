@@ -7,7 +7,7 @@ Returns a number from 1 to 12 corresponding to the month of the given date.
 
 
 ```
-MONTH ( <date-expression> )
+MONTH ( <date-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ A date/time value.
 
 <a name="loio63319ccc3d6847fab168f3418d0fec07__section_j1h_jfn_vrb"/>
 
-## Returns
+## Result Set
 
 SMALLINT
 
@@ -57,11 +57,11 @@ SMALLINT
 The following statement returns the value 7:
 
 ```
-SELECT MONTH( '1998-07-13' ) FROM iq_dummy
+SELECT MONTH( '1998-07-13' ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[MONTH Function [Date and Time] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a565928184f21015aecd84c01c4c2078.html "Returns a number from 1 to 12 corresponding to the month of the given date.") :arrow_upper_right:
+[MONTH Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a565928184f21015aecd84c01c4c2078.html "Returns a number from 1 to 12 corresponding to the month of the given date.") :arrow_upper_right:
 

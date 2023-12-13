@@ -6,10 +6,13 @@ Each row in the SYSJARCOMPONENT system view defines a JAR file component, which 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be911066c5f1014bb6e8daa85182ded__section_z4y_ppq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYSJARCOMPONENT system view defines a JAR file component, which 
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 component\_id
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The primary key containing the id of the component.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The primary key containing the id of the component.
 
 jar\_id
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 If the row describes a JAR, the value is the ID number of the JAR. Otherwise, the value is NULL.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ If the row describes a JAR, the value is the ID number of the JAR. Otherwise, th
 
 component\_name
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The name of the component.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ The name of the component.
 
 component\_type
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 This column is no longer used and contains NULL.
-
-
 
 </td>
 </tr>
@@ -135,21 +108,15 @@ This column is no longer used and contains NULL.
 
 contents
 
-
-
 </td>
 <td valign="top">
 
 LONG BINARY
 
-
-
 </td>
 <td valign="top">
 
 The contents of the JAR file component. For a manifest-like component, this is character text. For a class file component, this is byte code.
-
-
 
 </td>
 </tr>

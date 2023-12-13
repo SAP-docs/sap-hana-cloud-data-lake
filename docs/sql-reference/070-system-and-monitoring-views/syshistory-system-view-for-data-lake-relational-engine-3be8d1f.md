@@ -6,10 +6,13 @@ Each row in the SYSHISTORY system view records a system operation on the databas
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be8d1f26c5f10149c6fec07f3fa8f8e__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYSHISTORY system view records a system operation on the databas
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,14 +40,10 @@ Description
 
 operation
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
-
-
 
 </td>
 <td valign="top">
@@ -148,21 +141,15 @@ Information about the last backup, including date and time of the backup, the ba
 
 object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For any operation other than DTT and LAST\_DTT, the value in this column will be 0. For DTT and LAST\_DTT operations, this is the dbspace\_id of the dbspace as defined in the SYSDBSPACE system view.
-
-
 
 </td>
 </tr>
@@ -171,14 +158,10 @@ For any operation other than DTT and LAST\_DTT, the value in this column will be
 
 sub\_operation
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
-
-
 
 </td>
 <td valign="top">
@@ -221,21 +204,15 @@ The dbspace calibration has been restored to the default setting.
 
 version
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The version and build number of the database server used to perform the operation.
-
-
 
 </td>
 </tr>
@@ -244,21 +221,15 @@ The version and build number of the database server used to perform the operatio
 
 platform
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The operating system on which the operation was carried out.
-
-
 
 </td>
 </tr>
@@ -267,21 +238,15 @@ The operating system on which the operation was carried out.
 
 first\_time
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 The local date and time the database was first started on a particular operating system with a particular version of the software.
-
-
 
 </td>
 </tr>
@@ -290,21 +255,15 @@ The local date and time the database was first started on a particular operating
 
 last\_time
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 The most recent local date and time the database was started on a particular operating system with a particular version of the software.
-
-
 
 </td>
 </tr>
@@ -313,21 +272,15 @@ The most recent local date and time the database was started on a particular ope
 
 details
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 This column stores information such as command line options used to start the database server or the capability bits enabled for the database. This information is for use by Technical Support.
-
-
 
 </td>
 </tr>
@@ -336,21 +289,15 @@ This column stores information such as command line options used to start the da
 
 first\_time\_utc
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE
 
-
-
 </td>
 <td valign="top">
 
 The UTC date and time the database was first started on a particular operating system with a particular version of the software.
-
-
 
 </td>
 </tr>
@@ -359,21 +306,15 @@ The UTC date and time the database was first started on a particular operating s
 
 last\_time\_utc
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE
 
-
-
 </td>
 <td valign="top">
 
 The most recent UTC date and time the database was started on a particular operating system with a particular version of the software.
-
-
 
 </td>
 </tr>

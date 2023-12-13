@@ -6,10 +6,13 @@ Enables users to insert values into or to update an IDENTITY or AUTOINCREMENT co
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa63914eb84f21015b454db5374017eb5__section_fq2_gpq_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Enables users to insert values into or to update an IDENTITY or AUTOINCREMENT co
 ## Syntax
 
 ```
-IDENTITY_INSERT = <datalake_table_name>
+IDENTITY_INSERT = <datalake_table_name>;
 ```
 
 
@@ -64,28 +67,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -94,28 +89,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -124,28 +111,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -173,19 +152,19 @@ To drop a table with an IDENTITY column, IDENTITY\_INSERT must not be set to tha
 If you use the table Employees to run explicit inserts:
 
 ```
-SET TEMPORARY OPTION IDENTITY_INSERT = 'HDLADMIN.Employees'
+SET TEMPORARY OPTION IDENTITY_INSERT = 'HDLADMIN.Employees';
 ```
 
 To turn the option off, specify the equals sign and an empty string:
 
 ```
-SET TEMPORARY OPTION IDENTITY_INSERT = ''
+SET TEMPORARY OPTION IDENTITY_INSERT = '';
 ```
 
 Illustrates the effect of user level options on temporary options \(see *Note*\), if you are connected to the database as HDLADMIN and enter:
 
 ```
-SET OPTION IDENTITY_INSERT = 'Customers'
+SET OPTION IDENTITY_INSERT = 'Customers';
 ```
 
 The value for the option is set to Customers for the user HDLADMIN and temporary for the current connection. Other users who subsequently connect to the database as HDLADMIN find their option value for IDENTITY\_INSERT is Customers also.
@@ -201,7 +180,7 @@ The value for the option is set to Customers for the user HDLADMIN and temporary
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[IDENTITY_INSERT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3122a9a6dcee455791a4097b41c21407.html "Enables users to insert values into or to update an IDENTITY or AUTOINCREMENT column.") :arrow_upper_right:
+[IDENTITY_INSERT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3122a9a6dcee455791a4097b41c21407.html "Enables users to insert values into or to update an IDENTITY or AUTOINCREMENT column.") :arrow_upper_right:
 
 [Scope and Duration of Database Options](scope-and-duration-of-database-options-a629c37.md "You can set options at three levels of scope: public, user, and temporary.")
 

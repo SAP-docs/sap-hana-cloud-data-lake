@@ -7,7 +7,7 @@ Returns the arc-sine, in radians, of a number.
 
 
 ```
-ASIN ( <numeric-expression> )
+ASIN ( <numeric-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The sine of the angle.
 
 <a name="loioa534668f84f2101599958685dfc4673b__ASIN_returns1"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -57,7 +57,7 @@ DOUBLE
 The following statement returns the value 0.546850:
 
 ```
-SELECT ASIN( 0.52 ) FROM iq_dummy
+SELECT ASIN( 0.52 ) FROM iq_dummy;
 ```
 
 **Related Information**  
@@ -65,5 +65,5 @@ SELECT ASIN( 0.52 ) FROM iq_dummy
 
 [Trigonometry Functions in Data Lake Relational Engine](trigonometry-functions-in-data-lake-relational-engine-caafd14.md "Some numeric functions return trigonometric information.")
 
-[ASIN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/a56e5e54ba234675b4a5c30b13e933e9.html "Returns the arc-sine, in radians, of a number.") :arrow_upper_right:
+[ASIN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/a56e5e54ba234675b4a5c30b13e933e9.html "Returns the arc-sine, in radians, of a number.") :arrow_upper_right:
 

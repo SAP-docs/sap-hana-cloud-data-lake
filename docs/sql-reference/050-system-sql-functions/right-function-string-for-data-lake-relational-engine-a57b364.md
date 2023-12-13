@@ -7,7 +7,7 @@ Returns the rightmost characters of a string.
 
 
 ```
-RIGHT ( <string-expression>, <numeric-expression> )
+RIGHT ( <string-expression>, <numeric-expression> );
 ```
 
 
@@ -47,7 +47,7 @@ The number of characters at the end of the string to return.
 
 <a name="loioa57b364f84f210158a90b2b566be1d36__RIGHT_returns1"/>
 
-## Returns
+## Result Set
 
 -   LONG VARCHAR
 -   LONG NVARCHAR
@@ -81,7 +81,7 @@ If the string contains multibyte characters, and the proper collation is being u
 The following statement returns the value "olate":
 
 ```
-SELECT RIGHT( 'chocolate', 5 ) FROM iq_dummy
+SELECT RIGHT( 'chocolate', 5 ) FROM iq_dummy;
 ```
 
 **Related Information**  
@@ -101,5 +101,5 @@ SELECT RIGHT( 'chocolate', 5 ) FROM iq_dummy
 
 [UPPER Function \[String\] for Data Lake Relational Engine](upper-function-string-for-data-lake-relational-engine-a58cbc0.md "Converts all characters in a string to uppercase.")
 
-[RIGHT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/03fba12b431c4d80bcb8933cd7e984ab.html "Returns the rightmost characters of a string.") :arrow_upper_right:
+[RIGHT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/03fba12b431c4d80bcb8933cd7e984ab.html "Returns the rightmost characters of a string.") :arrow_upper_right:
 

@@ -7,7 +7,7 @@ Converts all characters in a string to uppercase.
 
 
 ```
-UPPER ( <string-expression> )
+UPPER ( <string-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The string to be converted to uppercase.
 
 <a name="loioa58cbc0284f21015ac14f5baa190b878__UPPER_returns1"/>
 
-## Returns
+## Result Set
 
 -   LONG NVARCHAR
 -   LONG VARCHAR
@@ -64,7 +64,7 @@ The string to be converted to uppercase.
 The following statement returns the value “CHOCOLATE”:
 
 ```
-SELECT UPPER( 'ChocoLate' ) FROM iq_dummy
+SELECT UPPER( 'ChocoLate' ) FROM iq_dummy;
 ```
 
 **Related Information**  
@@ -84,5 +84,5 @@ SELECT UPPER( 'ChocoLate' ) FROM iq_dummy
 
 [UCASE Function \[String\] for Data Lake Relational Engine](ucase-function-string-for-data-lake-relational-engine-a58c382.md "Converts all characters in a string to uppercase.")
 
-[UPPER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/10843333345b407694db50383c73a083.html "Converts all characters in a string to uppercase.") :arrow_upper_right:
+[UPPER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/10843333345b407694db50383c73a083.html "Converts all characters in a string to uppercase.") :arrow_upper_right:
 

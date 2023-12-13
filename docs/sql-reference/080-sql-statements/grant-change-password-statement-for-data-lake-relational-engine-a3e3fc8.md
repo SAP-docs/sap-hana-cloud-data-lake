@@ -10,17 +10,20 @@ Sections in this topic are minimized. To expand or recollapse a section, click t
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa3e3fc8084f2101599d0afbadc8092b4__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 GRANT CHANGE PASSWORD ( { <target_user_list> | ANY | ANY WITH ROLES <target_role_list> } )
    TO <user_id>[, …]
-   [ { WITH ADMIN [ ONLY ] OPTION | WITH NO ADMIN OPTION } ]
+   [ { WITH ADMIN [ ONLY ] OPTION | WITH NO ADMIN OPTION } ];
 ```
 
 
@@ -157,19 +160,19 @@ ANSI SQL – compliance level: Transact-SQL extension
 -   The following example grants `Sally` and `Laurel` the ability to manage the password of `Bob`, `Sam`, and `Peter`:
 
     ```
-    GRANT CHANGE PASSWORD (Bob, Sam, Peter) TO (Sally, Laurel)
+    GRANT CHANGE PASSWORD (Bob, Sam, Peter) TO (Sally, Laurel);
     ```
 
 -   The following example grants `Mary` the right to grant the CHANGE PASSWORD system privilege to any user in the database. However, since the system privilege is granted with the WITH ADMIN ONLY OPTION clause, `Mary` cannot manage the password of any other user.
 
     ```
-    GRANT CHANGE PASSWORD (ANY) TO Mary WITH ADMIN ONLY OPTION
+    GRANT CHANGE PASSWORD (ANY) TO Mary WITH ADMIN ONLY OPTION;
     ```
 
 -   The following example grants `Steve` and `Joe` the ability to manage the password of any member of `Role1` or `Role2`:
 
     ```
-    GRANT CHANGE PASSWORD (ANY WITH ROLES Role1, Role2) TO Steve, Joe
+    GRANT CHANGE PASSWORD (ANY WITH ROLES Role1, Role2) TO Steve, Joe;
     ```
 
 

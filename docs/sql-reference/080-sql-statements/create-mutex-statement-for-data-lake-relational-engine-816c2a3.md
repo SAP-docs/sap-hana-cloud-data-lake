@@ -6,17 +6,19 @@ Creates or replaces a mutex \(lock\) that can be used to lock a resource such as
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio816c2a336ce21014a279eb2f6d47cbb0__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 CREATE [ OR REPLACE | TEMPORARY ] MUTEX [ IF NOT EXISTS ] [ <owner>.]<mutex-name>
-   [ SCOPE { CONNECTION | TRANSACTION } ] 
-
+   [ SCOPE { CONNECTION | TRANSACTION } ];
 ```
 
 
@@ -156,6 +158,8 @@ Not in the standard.
 </dl>
 
 
+
+## Example
 
 The following statement creates a connection scope mutex called protect\_my\_cr\_section to protect a critical section of a stored procedure.
 

@@ -6,10 +6,13 @@ Reads the specified event trace data \(ETD\) file and returns the contents of th
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio54317f64bd364214b86e0e6b5aba2300__section_p4t_vqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -24,7 +27,7 @@ sp_read_etd(
 [,timestamp_start=<timestamp-with-timezone>]
 [,timestamp_end=<timestamp-with-timezone>]
 [,regex ]=<regular-expression>[,...]]
-)
+);
 ```
 
 
@@ -37,7 +40,7 @@ sp_read_etd(
 <dl>
 <dt><b>
 
- *<filename\_pattern\>* 
+*<filename\_pattern\>* 
 
 </b></dt>
 <dd>
@@ -50,7 +53,7 @@ This ARRAY of LONG NVARCHAR values specifies the names of the ETD files to be pr
 
 </dd><dt><b>
 
- *<event\_names\>* 
+*<event\_names\>* 
 
 </b></dt>
 <dd>
@@ -61,7 +64,7 @@ This LONG NVARCHAR provides a comma-separated list of events for which data will
 
 </dd><dt><b>
 
- *<host\_names\>* 
+*<host\_names\>* 
 
 </b></dt>
 <dd>
@@ -72,7 +75,7 @@ This LONG NVARCHAR provides a comma-separated list of hosts that have generated 
 
 </dd><dt><b>
 
- *<severity\_level\>* 
+*<severity\_level\>* 
 
 </b></dt>
 <dd>
@@ -86,14 +89,10 @@ This LONG NVARCHAR specifies the maximum severity level to retrieve. A NULL retu
 
 Severity level
 
-
-
 </th>
 <th valign="top">
 
 Value
-
-
 
 </th>
 </tr>
@@ -102,14 +101,10 @@ Value
 
 ALWAYS
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
 
 </td>
 </tr>
@@ -118,14 +113,10 @@ ALWAYS
 
 CRITICAL
 
-
-
 </td>
 <td valign="top">
 
 50
-
-
 
 </td>
 </tr>
@@ -134,14 +125,10 @@ CRITICAL
 
 ERROR
 
-
-
 </td>
 <td valign="top">
 
 100
-
-
 
 </td>
 </tr>
@@ -150,14 +137,10 @@ ERROR
 
 WARNING
 
-
-
 </td>
 <td valign="top">
 
 150
-
-
 
 </td>
 </tr>
@@ -166,14 +149,10 @@ WARNING
 
 INFORMATION
 
-
-
 </td>
 <td valign="top">
 
 200
-
-
 
 </td>
 </tr>
@@ -182,14 +161,10 @@ INFORMATION
 
 DEBUG
 
-
-
 </td>
 <td valign="top">
 
 250
-
-
 
 </td>
 </tr>
@@ -199,7 +174,7 @@ DEBUG
 
 </dd><dt><b>
 
- *<record\_start\>* 
+*<record\_start\>* 
 
 </b></dt>
 <dd>
@@ -210,7 +185,7 @@ This UNSIGNED INT identifies the first record number to retrieve. A value of NUL
 
 </dd><dt><b>
 
- *<record\_end\>* 
+*<record\_end\>* 
 
 </b></dt>
 <dd>
@@ -221,7 +196,7 @@ Use this UNSIGNED INT to identify the last record number to retrieve. A value of
 
 </dd><dt><b>
 
- *<timestamp\_start\>* 
+*<timestamp\_start\>* 
 
 </b></dt>
 <dd>
@@ -232,7 +207,7 @@ Use this TIMESTAMP WITH TIME ZONE to identify the starting timestamp.
 
 </dd><dt><b>
 
- *<timestamp\_end\>* 
+*<timestamp\_end\>* 
 
 </b></dt>
 <dd>
@@ -243,7 +218,7 @@ Use this TIMESTAMP WITH TIME ZONE to identify the ending timestamp.
 
 </dd><dt><b>
 
- *<regex\>* 
+*<regex\>* 
 
 </b></dt>
 <dd>
@@ -270,21 +245,15 @@ This procedure returns a result set comprised of rows, as follows:
 
 Column
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -293,21 +262,15 @@ Description
 
 timestamp
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE
 
-
-
 </td>
 <td valign="top">
 
 The time the event occurred
-
-
 
 </td>
 </tr>
@@ -316,21 +279,15 @@ The time the event occurred
 
 pid
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The process ID that generated the event
-
-
 
 </td>
 </tr>
@@ -339,21 +296,15 @@ The process ID that generated the event
 
 tid
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The thread ID that generated the event
-
-
 
 </td>
 </tr>
@@ -362,21 +313,15 @@ The thread ID that generated the event
 
 host\_name
 
-
-
 </td>
 <td valign="top">
 
 LONG NVARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The host that generated the event
-
-
 
 </td>
 </tr>
@@ -385,21 +330,15 @@ The host that generated the event
 
 os
 
-
-
 </td>
 <td valign="top">
 
 LONG NVARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The operating system name
-
-
 
 </td>
 </tr>
@@ -408,21 +347,15 @@ The operating system name
 
 processor
 
-
-
 </td>
 <td valign="top">
 
 LONG NVARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The processor type
-
-
 
 </td>
 </tr>
@@ -431,21 +364,15 @@ The processor type
 
 severity
 
-
-
 </td>
 <td valign="top">
 
 LONG NVARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The severity level of the event
-
-
 
 </td>
 </tr>
@@ -454,21 +381,15 @@ The severity level of the event
 
 severity\_number
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
 
-
-
 </td>
 <td valign="top">
 
 The severity level number
-
-
 
 </td>
 </tr>
@@ -477,21 +398,15 @@ The severity level number
 
 event\_name
 
-
-
 </td>
 <td valign="top">
 
 LONG NVARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The name of the event
-
-
 
 </td>
 </tr>
@@ -500,21 +415,15 @@ The name of the event
 
 event\_data
 
-
-
 </td>
 <td valign="top">
 
 LONG NVARCHAR
 
-
-
 </td>
 <td valign="top">
 
 An XML document that describes the fields of the event
-
-
 
 </td>
 </tr>
@@ -523,21 +432,15 @@ An XML document that describes the fields of the event
 
 record\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The order that the event appears in the ETD file. The record\_id starts with 0 and is monotonously increasing, with 0 being the first record in the ETD file.
-
-
 
 </td>
 </tr>
@@ -579,6 +482,10 @@ Requires all of the following:
 
 
 
+<a name="loio54317f64bd364214b86e0e6b5aba2300__sp_read_etd_example1"/>
+
+## Examples
+
 To call the SP\_READ\_ETD system procedure, use the OPENXML operator to retrieve *<event\_data\>* of a single type of event as columns. The following statement returns the timestamp from the SP\_READ\_ETD system procedure and two values \(ID and INFO\) stored in *<event\_data\>* as a single result set:
 
 ```
@@ -599,21 +506,15 @@ FROM dbo.sp_read_etd( 'audit_log_20210305_174604.081_auditdb_eng.etd' ), event_n
 
 timestamp
 
-
-
 </th>
 <th valign="top">
 
 ID
 
-
-
 </th>
 <th valign="top">
 
 INFO
-
-
 
 </th>
 </tr>
@@ -622,21 +523,15 @@ INFO
 
 2020-09-10 14:10:33.089-04:00
 
-
-
 </td>
 <td valign="top">
 
 1
 
-
-
 </td>
 <td valign="top">
 
 abc
-
-
 
 </td>
 </tr>
@@ -645,21 +540,15 @@ abc
 
 2020-09-10 14:10:36.054-04:00
 
-
-
 </td>
 <td valign="top">
 
 2
 
-
-
 </td>
 <td valign="top">
 
 def
-
-
 
 </td>
 </tr>
@@ -684,21 +573,15 @@ GROUP BY T1.timestamp, T1.event_name, T1.event_data;
 
 timestamp
 
-
-
 </th>
 <th valign="top">
 
 event\_name
 
-
-
 </th>
 <th valign="top">
 
 data
-
-
 
 </th>
 </tr>
@@ -707,21 +590,15 @@ data
 
 2020-09-10 12:10:13.059-04:00
 
-
-
 </td>
 <td valign="top">
 
 EVENT2
 
-
-
 </td>
 <td valign="top">
 
 id=1,desc=abc
-
-
 
 </td>
 </tr>
@@ -730,21 +607,15 @@ id=1,desc=abc
 
 2020-09-10 14:10:46.054-04:00
 
-
-
 </td>
 <td valign="top">
 
 EVENT1
 
-
-
 </td>
 <td valign="top">
 
 id=2,location=XYZ,other\_information=abc
-
-
 
 </td>
 </tr>
@@ -760,5 +631,5 @@ FROM dbo.sp_read_etd( 'trace1.etd', regex = '.*abc.*' );
 **Related Information**  
 
 
-[sp_read_etd System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3be64fbd6c5f1014abaea34c00918824.html "Reads the specified event trace data (ETD) file and returns the contents of the file as a set of rows.") :arrow_upper_right:
+[sp_read_etd System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3be64fbd6c5f1014abaea34c00918824.html "Reads the specified event trace data (ETD) file and returns the contents of the file as a set of rows.") :arrow_upper_right:
 

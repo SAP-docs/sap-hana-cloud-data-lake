@@ -7,7 +7,7 @@ Returns a substring of a string.
 
 
 ```
-{ SUBSTRING | SUBSTR } ( <string-expression>, <start> [ , <length> ] )
+{ SUBSTRING | SUBSTR } ( <string-expression>, <start> [ , <length> ] );
 ```
 
 
@@ -61,7 +61,7 @@ The length of the substring to return, in characters:
 
 <a name="loiof114d3543b9c48f69b269b951d549034__section_gty_lr5_vrb"/>
 
-## Returns
+## Result Set
 
 -   LONG BINARY
 -   LONG NVARCHAR
@@ -101,26 +101,26 @@ When the `ansi_substring` database option is set to ON \(default\), negative val
 
     ```
     SELECT SUBSTRING ( 'back yard', 1 , 4 )
-      FROM iq_dummy
+      FROM iq_dummy;
     ```
 
 -   The following statement returns ***yard***:
 
     ```
     SELECT SUBSTR ( 'back yard', -1 , -4 )
-      FROM iq_dummy
+      FROM iq_dummy;
     ```
 
 -   The following statement returns ***0x2233***:
 
     ```
     SELECT SUBSTR ( 0x112233445566, 2, 2 )
-      FROM iq_dummy
+      FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[SUBSTRING Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a58787e784f21015acc5ecadf5b1a9a0.html "Returns a substring of a string.") :arrow_upper_right:
+[SUBSTRING Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a58787e784f21015acc5ecadf5b1a9a0.html "Returns a substring of a string.") :arrow_upper_right:
 

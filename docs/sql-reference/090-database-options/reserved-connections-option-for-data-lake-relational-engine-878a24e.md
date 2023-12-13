@@ -6,8 +6,11 @@ Controls the minimum number of concurrent connections that a database must reser
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loio878a24e0145b409a92647b8673bea416__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

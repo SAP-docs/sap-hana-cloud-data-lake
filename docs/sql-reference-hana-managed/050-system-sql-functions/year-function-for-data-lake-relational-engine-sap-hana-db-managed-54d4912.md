@@ -7,7 +7,7 @@ Returns a 4-digit number corresponding to the year of the given date/time.
 
 
 ```
-YEAR ( <timestamp-expression> )
+YEAR ( <timestamp-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ A date and time.
 
 <a name="loio54d4912c1eb74fccac5ded7c6fc9fa8d__section_ajb_1dv_vrb"/>
 
-## Returns
+## Result Set
 
 SMALLINT
 
@@ -66,11 +66,11 @@ The `YEAR` function is the same as the `YEARS` \(*<timestamp-expression\>*\) fun
 The following statement returns the value 1998:
 
 ```
-SELECT YEAR( '1998-07-13 06:07:12' ) FROM iq_dummy
+SELECT YEAR( '1998-07-13 06:07:12' ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[YEAR Function [Date and Time] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a591eb9d84f210159e35a75b4b036a0d.html "Returns a 4-digit number corresponding to the year of the given date/time.") :arrow_upper_right:
+[YEAR Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a591eb9d84f210159e35a75b4b036a0d.html "Returns a 4-digit number corresponding to the year of the given date/time.") :arrow_upper_right:
 

@@ -6,8 +6,11 @@ Specifies the percent of prefetch resources for column data in all DML operation
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loio6aa1a34579b342f9ac1016e7c338b6f1__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

@@ -8,6 +8,8 @@ Like user-supplied selectivity estimates, the selectivity value is always expres
 
 
 
+## Example
+
 The following example is exactly equivalent to the second user-supplied condition selectivity example:
 
 ```

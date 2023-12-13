@@ -6,15 +6,18 @@ Establishes a savepoint within the current transaction.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa624b80484f210159389bf077847f59d__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-SAVE TRANSACTION [ <savepoint-name> ]
+SAVE TRANSACTION [ <savepoint-name> ];
 ```
 
 
@@ -77,7 +80,7 @@ BEGIN
      DELETE FROM #tmp WHERE row_num >= 3
      ROLLBACK TRANSACTION before_delete
      SELECT * FROM #tmp
-END
+END;
 ```
 
 **Related Information**  

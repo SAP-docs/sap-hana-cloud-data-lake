@@ -6,10 +6,13 @@ Presents information on the `ISYSLDAPSERVER` system table in a readable format.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa3db32e184f21015827dfb364642c1a6__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -22,21 +25,15 @@ The ISYSLDAPSERVER system table defines a set of attributes for the LDAP server.
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Column Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -45,21 +42,15 @@ Description
 
 ldsrv\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT NOT NULL
 
-
-
 </td>
 <td valign="top">
 
 A unique identifier for the LDAP server that is the primary keyand is used by the login policy to refer to the LDAP server.
-
-
 
 </td>
 </tr>
@@ -68,21 +59,15 @@ A unique identifier for the LDAP server that is the primary keyand is used by th
 
 ldsrv\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\) NOT NULL
 
-
-
 </td>
 <td valign="top">
 
 The name assigned to the LDAP server.
-
-
 
 </td>
 </tr>
@@ -91,14 +76,10 @@ The name assigned to the LDAP server.
 
 ldsrv\_state
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(9\) NOT NULL
-
-
 
 </td>
 <td valign="top">
@@ -123,14 +104,10 @@ Read-only state of the LDAP server:
 
 ldsrv\_start\_tls
 
-
-
 </td>
 <td valign="top">
 
 TINYINT NOT NULL
-
-
 
 </td>
 <td valign="top">
@@ -151,14 +128,10 @@ Valid range:
 
 ldsrv\_num\_retries
 
-
-
 </td>
 <td valign="top">
 
 TINYINT NOT NULL
-
-
 
 </td>
 <td valign="top">
@@ -169,8 +142,6 @@ Valid range: 1–60
 
 Default value: 3
 
-
-
 </td>
 </tr>
 <tr>
@@ -178,14 +149,10 @@ Default value: 3
 
 ldsrv\_timeout
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT NOT NULL
-
-
 
 </td>
 <td valign="top">
@@ -196,8 +163,6 @@ Valid range: 1–3600000 \(1 hour\)
 
 Default value: 10000
 
-
-
 </td>
 </tr>
 <tr>
@@ -205,21 +170,15 @@ Default value: 10000
 
 ldsrv\_last\_state\_change
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP NOT NULL
 
-
-
 </td>
 <td valign="top">
 
 Indicates the time the last state change occurred. The value is stored in Coordinated Universal Time \(UTC\), regardless of the local time zone of the LDAP server.
-
-
 
 </td>
 </tr>
@@ -228,21 +187,15 @@ Indicates the time the last state change occurred. The value is stored in Coordi
 
 ldsrv\_search\_url
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1024\) NULL
 
-
-
 </td>
 <td valign="top">
 
 The LDAP URL to be used to find the Distinguished Name \(DN\) for a user based on their user ID.
-
-
 
 </td>
 </tr>
@@ -251,21 +204,15 @@ The LDAP URL to be used to find the Distinguished Name \(DN\) for a user based o
 
 ldsrv\_auth\_url
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1024\) NULL
 
-
-
 </td>
 <td valign="top">
 
 The LDAP search string to be used to find the DN for a user given their user ID.
-
-
 
 </td>
 </tr>
@@ -274,21 +221,15 @@ The LDAP search string to be used to find the DN for a user given their user ID.
 
 ldsrv\_access\_dn
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1024\) NULL
 
-
-
 </td>
 <td valign="top">
 
 The DN used to access the LDAP server for searches to obtain the DN for a user ID.
-
-
 
 </td>
 </tr>
@@ -297,21 +238,15 @@ The DN used to access the LDAP server for searches to obtain the DN for a user I
 
 ldsrv\_access\_dn\_pwd
 
-
-
 </td>
 <td valign="top">
 
 VARBINARY\(1024\) NULL
 
-
-
 </td>
 <td valign="top">
 
 The password for the access account. The password is symmetrically encrypted when stored on disk.
-
-
 
 </td>
 </tr>

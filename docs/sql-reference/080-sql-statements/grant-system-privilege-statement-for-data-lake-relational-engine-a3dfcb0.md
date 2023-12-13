@@ -6,17 +6,20 @@ Grants specific system privileges to users or roles, with or without administrat
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa3dfcb0284f21015b74ac3cded42ee69__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 GRANT <system_privilege_name> [, …]
    TO <grantee> [, …]
-   [ { WITH NO ADMIN | WITH ADMIN [ ONLY ] } OPTION ]
+   [ { WITH NO ADMIN | WITH ADMIN [ ONLY ] } OPTION ];
 ```
 
 
@@ -125,13 +128,13 @@ You must have been granted the specific system privilege with administrative pri
 This example grants the CHECKPOINT system privilege to Sally with no administrative privileges:
 
 ```
-GRANT CHECKPOINT TO Sally WITH NO ADMIN OPTION
+GRANT CHECKPOINT TO Sally WITH NO ADMIN OPTION;
 ```
 
 This example grants the MONITOR system privilege to Jane with administrative privileges only:
 
 ```
-GRANT MONITOR TO Jane WITH ADMIN ONLY OPTION
+GRANT MONITOR TO Jane WITH ADMIN ONLY OPTION;
 ```
 
 **Related Information**  

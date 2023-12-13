@@ -6,10 +6,13 @@ Each row in the SYSFOREIGNKEYS view describes one foreign key for each table in 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be8b8106c5f10149a76ed295d2769f5__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -38,6 +41,6 @@ ALTER VIEW "SYS"."SYSFOREIGNKEYS"( foreign_creator,
       join SYS.ISYSUSER as fk_up on fk_up.user_id = fk_tab.creator
       join SYS.ISYSTAB as pk_tab on pk_tab.table_id = fk.primary_table_id
       join SYS.ISYSUSER as pk_up on pk_up.user_id = pk_tab.creator
-      join SYS.ISYSIDX as ix on ix.table_id = fk.foreign_table_id and ix.index_id = fk.foreign_index_id
+      join SYS.ISYSIDX as ix on ix.table_id = fk.foreign_table_id and ix.index_id = fk.foreign_index_id;
 ```
 

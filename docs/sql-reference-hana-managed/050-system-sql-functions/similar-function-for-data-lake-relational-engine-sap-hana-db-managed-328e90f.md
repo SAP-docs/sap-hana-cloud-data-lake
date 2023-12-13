@@ -7,7 +7,7 @@ Returns an integer between 0 and 100 representing the similarity between two str
 
 
 ```
-SIMILAR ( <string-expression1>, <string-expression2> )
+SIMILAR ( <string-expression1>, <string-expression2> );
 ```
 
 
@@ -47,7 +47,7 @@ The second string to be compared.
 
 <a name="loio328e90f2bcb14535a8a34b74369bbbfc__section_c4t_5y5_vrb"/>
 
-## Returns
+## Result Set
 
 SMALLINT
 
@@ -79,7 +79,7 @@ This function can be used to correct a list of names \(such as customers\). Some
 The following statement returns the value 80:
 
 ```
-SELECT SIMILAR( 'toast', 'coast' ) FROM iq_dummy
+SELECT SIMILAR( 'toast', 'coast' ) FROM iq_dummy;
 ```
 
 This signifies that the two values are 80% similar.
@@ -87,5 +87,5 @@ This signifies that the two values are 80% similar.
 **Related Information**  
 
 
-[SIMILAR Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a57f56c484f21015b142b043da48dee3.html "Returns an integer between 0 and 100 representing the similarity between two strings.") :arrow_upper_right:
+[SIMILAR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57f56c484f21015b142b043da48dee3.html "Returns an integer between 0 and 100 representing the similarity between two strings.") :arrow_upper_right:
 

@@ -7,7 +7,7 @@ Returns the number of characters in the specified string.
 
 
 ```
-LENGTH ( <string-expression> )
+LENGTH ( <string-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The string.
 
 <a name="loioae555cf86ee34fe887637dbcd64a33c3__section_k5q_w1h_trb"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -67,7 +67,7 @@ The LENGTH function is the same as the CHAR\_LENGTH function.
 The following statement returns the value 9:
 
 ```
-SELECT LENGTH( 'chocolate' ) FROM iq_dummy
+SELECT LENGTH( 'chocolate' ) FROM iq_dummy;
 ```
 
 **Related Information**  
@@ -77,5 +77,5 @@ SELECT LENGTH( 'chocolate' ) FROM iq_dummy
 
 [LEN Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](len-function-for-data-lake-relational-engine-sap-hana-db-managed-a895aab.md "Takes one argument as an input of type BINARY or STRING and returns the number of characters, as defined by the database's collation sequence, of a specified string expression, excluding trailing blanks.")
 
-[LENGTH Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a55ea65684f21015a60794ef54777c14.html "Returns the number of characters in the specified string.") :arrow_upper_right:
+[LENGTH Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a55ea65684f21015a60794ef54777c14.html "Returns the number of characters in the specified string.") :arrow_upper_right:
 

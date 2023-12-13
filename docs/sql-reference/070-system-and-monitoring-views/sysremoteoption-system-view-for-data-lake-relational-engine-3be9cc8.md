@@ -6,10 +6,13 @@ Each row in the SYSREMOTEOPTION system view describes the value of a message lin
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be9cc816c5f1014892df503c93c8381__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -22,21 +25,15 @@ Some columns in this view contain potentially sensitive data. The SYSREMOTEOPTIO
 
 Column
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -45,21 +42,15 @@ Description
 
 option\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 An identification number for the message link parameter.
-
-
 
 </td>
 </tr>
@@ -68,21 +59,15 @@ An identification number for the message link parameter.
 
 user\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The user ID for which the parameter is set.
-
-
 
 </td>
 </tr>
@@ -91,21 +76,15 @@ The user ID for which the parameter is set.
 
 setting
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The value of the message link parameter.
-
-
 
 </td>
 </tr>

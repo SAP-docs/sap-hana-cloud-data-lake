@@ -6,36 +6,25 @@ Reports database property information.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be58d086c5f1014925bf0cfadeb33ef__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_db_properties( [ <dbidparm> ] )
+sa_db_properties(  );
 ```
 
 
 
 ## Parameters
 
-
-<dl>
-<dt><b>
-
- *<dbidparm\>* 
-
-</b></dt>
-<dd>
-
-Use this optional INTEGER parameter to specify the database ID number. The default is NULL.
-
-
-
-</dd>
-</dl>
+None
 
 
 
@@ -48,21 +37,15 @@ Use this optional INTEGER parameter to specify the database ID number. The defau
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -71,21 +54,15 @@ Description
 
 Number
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The database ID number.
-
-
 
 </td>
 </tr>
@@ -94,21 +71,15 @@ The database ID number.
 
 PropNum
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The database property number.
-
-
 
 </td>
 </tr>
@@ -117,21 +88,15 @@ The database property number.
 
 PropName
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The database property name.
-
-
 
 </td>
 </tr>
@@ -140,21 +105,15 @@ The database property name.
 
 PropDescription
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(255\)
 
-
-
 </td>
 <td valign="top">
 
 The database property description.
-
-
 
 </td>
 </tr>
@@ -163,21 +122,15 @@ The database property description.
 
 Value
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The database property value.
-
-
 
 </td>
 </tr>
@@ -197,10 +150,7 @@ If *<dbidparm\>* is greater than zero, then database properties for the supplied
 
 Requires EXECUTE object-level privilege on the procedure.
 
-To execute this procedure for other databases, also requires one of:
-
--   SERVER OPERATOR system privilege
--   MONITOR system privilege
+To execute this procedure for other databases, also requires MONITOR system privilege.
 
 
 
@@ -210,7 +160,9 @@ None
 
 
 
-The following example uses the sa\_db\_properties system procedure to return a result set summarizing database properties for all databases when the invoker has SERVER OPERATOR or MONITOR system privilege. Otherwise, database properties for the current database are returned.
+## Examples
+
+This example uses the sa\_db\_properties system procedure to return a result set summarizing database properties for the database.
 
 ```
 CALL sa_db_properties( );
@@ -223,28 +175,25 @@ CALL sa_db_properties( );
 
 Number
 
-
-
 </th>
 <th valign="top">
 
 PropNum
-
-
 
 </th>
 <th valign="top">
 
 PropName
 
+</th>
+<th valign="top">
 
+PropDescription
 
 </th>
 <th valign="top">
 
-...
-
-
+Value
 
 </th>
 </tr>
@@ -252,127 +201,244 @@ PropName
 <td valign="top">
 
 0
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
-
-</td>
-<td valign="top">
-
-ConnCount
-
-
-
-</td>
-<td valign="top">
-
-...
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-
-
-</td>
-<td valign="top">
-
-1
-
-
-
-</td>
-<td valign="top">
-
-IdleCheck
-
-
-
-</td>
-<td valign="top">
-
-...
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-
 
 </td>
 <td valign="top">
 
 2
 
+</td>
+<td valign="top">
 
+BytesReceived
 
 </td>
 <td valign="top">
 
-IdleWrite
-
-
+Bytes received by server
 
 </td>
 <td valign="top">
 
-...
-
-
+82369619
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-...
-
-
+0
 
 </td>
 <td valign="top">
 
-...
-
-
+3
 
 </td>
 <td valign="top">
 
-...
-
-
+BytesReceivedUncomp
 
 </td>
 <td valign="top">
 
-...
+Bytes received after decompression
 
+</td>
+<td valign="top">
 
+82369619
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+4
+
+</td>
+<td valign="top">
+
+BytesSent
+
+</td>
+<td valign="top">
+
+Bytes sent to client
+
+</td>
+<td valign="top">
+
+182649602
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+5
+
+</td>
+<td valign="top">
+
+BytesSentUncomp
+
+</td>
+<td valign="top">
+
+Bytes sent before compression
+
+</td>
+<td valign="top">
+
+182649602
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+10
+
+</td>
+<td valign="top">
+
+CacheHits
+
+</td>
+<td valign="top">
+
+Cache Hits
+
+</td>
+<td valign="top">
+
+143588940
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+11
+
+</td>
+<td valign="top">
+
+CacheReadIndInt
+
+</td>
+<td valign="top">
+
+Cache index interior reads
+
+</td>
+<td valign="top">
+
+5334621
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+12
+
+</td>
+<td valign="top">
+
+CacheReadIndLeaf
+
+</td>
+<td valign="top">
+
+Cache index leaf reads
+
+</td>
+<td valign="top">
+
+31752948
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+16
+
+</td>
+<td valign="top">
+
+CacheRead
+
+</td>
+<td valign="top">
+
+Cache reads
+
+</td>
+<td valign="top">
+
+143596017
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
 
 </td>
 </tr>
 </table>
-
-The following example uses the sa\_db\_properties system procedure to return a result set summarizing database properties for a second database.
-
-```
-CALL sa_db_properties( 1 );
-```
 

@@ -7,7 +7,7 @@ Computes the statistical variance of a population consisting of a numeric-expres
 
 
 ```
-VAR_POP ( [ ALL ] <expression> )
+VAR_POP ( [ ALL ] <expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The expression \(commonly a column name\) that has a population-based variance t
 
 <a name="loioeb8e5a4d6b304dedab621a6bd58a471d__section_r23_yfv_vrb"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -74,7 +74,7 @@ SELECT year( ShipDate ) AS Year, quarter( ShipDate )
   AS Quarter, AVG( Quantity ) AS Average, 
   VAR_POP( Quantity ) AS Variance 
 FROM SalesOrderItems GROUP BY Year, Quarter 
-  ORDER BY Year, Quarter
+  ORDER BY Year, Quarter;
 ```
 
 
@@ -84,28 +84,20 @@ FROM SalesOrderItems GROUP BY Year, Quarter
 
 Year
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Quarter
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
 Average
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Variance
-
-
 
 </th>
 </tr>
@@ -113,29 +105,21 @@ Variance
 <td valign="top" rowspan="1">
 
 2000
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 1
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 25.775148
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 203.9021
-
-
 
 </td>
 </tr>
@@ -144,28 +128,20 @@ Variance
 
 2000
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2
-
-
 
 </td>
 <td valign="top" rowspan="1">
 
 27.050847
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 225.8109
-
-
 
 </td>
 </tr>
@@ -174,28 +150,20 @@ Variance
 
 ...
 
+</td>
+<td valign="top" rowspan="1">
 
+...
 
 </td>
 <td valign="top" rowspan="1">
 
 ...
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 ...
-
-
-
-</td>
-<td valign="top" rowspan="1">
-
-...
-
-
 
 </td>
 </tr>
@@ -204,5 +172,5 @@ Variance
 **Related Information**  
 
 
-[VAR_POP Function [Aggregate] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a58ec03e84f21015b373c5236f4567a1.html "Computes the statistical variance of a population consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
+[VAR_POP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a58ec03e84f21015b373c5236f4567a1.html "Computes the statistical variance of a population consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
 

@@ -6,22 +6,33 @@ For the connected user, sp\_iqcheckoptions displays a list of the current value 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa59dae3484f21015bb068d7476af8cf5__section_cjs_yvh_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqcheckoptions
+sp_iqcheckoptions;
 ```
+
+
+
+<a name="loioa59dae3484f21015bb068d7476af8cf5__section_dlg_5jn_zyb"/>
+
+## Parameters
+
+None
 
 
 
 <a name="loioa59dae3484f21015bb068d7476af8cf5__section_qnq_syz_mbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -30,14 +41,10 @@ sp_iqcheckoptions
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,14 +53,10 @@ Description
 
 User\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the user or role for whom the option has been set. At database creation, all options are set for the PUBLIC role. Any option that has been set for a role or user other than PUBLIC is displayed.
-
-
 
 </td>
 </tr>
@@ -62,14 +65,10 @@ The name of the user or role for whom the option has been set. At database creat
 
 Option\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the option.
-
-
 
 </td>
 </tr>
@@ -78,14 +77,10 @@ The name of the option.
 
 Current\_value
 
-
-
 </td>
 <td valign="top">
 
 The current value of the option.
-
-
 
 </td>
 </tr>
@@ -94,14 +89,10 @@ The current value of the option.
 
 Default\_value
 
-
-
 </td>
 <td valign="top">
 
 The default value of the option.
-
-
 
 </td>
 </tr>
@@ -110,14 +101,10 @@ The default value of the option.
 
 Option\_type
 
-
-
 </td>
 <td valign="top">
 
 “Temporary” for a TEMPORARY option, else “Permanent”.
-
-
 
 </td>
 </tr>
@@ -135,7 +122,7 @@ For the connected user, the sp\_iqcheckoptions stored procedure displays a list 
 
 When sp\_iqcheckoptions is run, the HDLADMIN user sees all options set on a permanent basis for all roles and users and sees temporary options set for the DBA. Users who are not DBAs see their own temporary options. All users see nondefault server startup options.
 
-The HDLADMIN user sees all options set on a permanent basis for all roles and users, along with temporary options set for the DBA. Users who are not DBAs see their own temporary options. All users see nondefault server startup options.
+The HDLADMIN user sees all options set on a permanent basis for all roles and users, along with temporary options. Users see their own temporary options. All users see nondefault server startup options.
 
 
 
@@ -157,36 +144,509 @@ None
 
 ## Examples
 
-In these examples, the temporary option APPEND\_LOAD is set to ON and the role myrole has the option MAX\_WARNINGS set to 9. The user joel has a temporary value of 55 set for MAX\_WARNINGS.
+This example uses sp\_iqcheckoptions run by user HDLADMIN:
 
--   In the first example, sp\_iqcheckoptions is run by user HDLADMIN:
+```
+CALL  sp_iqcheckoptions;
+```
 
-    ```
-    User_name        Option_name          Current_value           Default_value   Option_type
-    HDLADMIN         Ansi_update_constr   CURSORS                 Off             Permanent
-    PUBLIC           Ansi_update_constr   Cursors                 Off             Permanent
-    HDLADMIN         Checkpoint_time      20                      60              Temporary
-    HDLADMIN         Connection_authent   Company=MyComp;                         Temporary
-                                          Application=DBTools;Signa 
-    HDLADMIN         Login_procedure      HDLADMIN.sp_iq_proce    sp_login_envir  Permanent
-    PUBLIC           Login_procedure      HDLADMIN.sp_iq_proce    sp_login_envir  Permanent
-    myrole           Max_Warnings         9                       281474976710655 Permanent
-    HDLADMIN         Thread_count         25                      0               Temporary
-    ```
 
--   In the second example, sp\_iqcheckoptions is run by the user joel:
+<table>
+<tr>
+<th valign="top">
 
-    ```
-    User_name Option_name          Current_value           Default_value   Option_type
-    joel      Ansi_update_constr   CURSORS                 Off             Permanent
-    PUBLIC    Ansi_update_constr   Cursors                 Off             Permanent
-    joel      Checkpoint_time      20                      60              Temporary
-    joel      Connection_authent   Company=MyComp;                         Temporary
-                                   Application=DBTools;Signa 
-    joel      Login_procedure      HDLADMIN.sp_iq_proce    sp_login_envir  Permanent
-    PUBLIC    Login_procedure      HDLADMIN.sp_iq_proce    sp_login_envir  Permanent
-    joel      Max_Warnings         55                      281474976710655 Temporary
-    joel      Thread_count         25                      0               Temporary
-    ```
+User\_name
 
+</th>
+<th valign="top">
+
+Option\_name
+
+</th>
+<th valign="top">
+
+Current\_value
+
+</th>
+<th valign="top">
+
+Default\_value
+
+</th>
+<th valign="top">
+
+Option\_type
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+Ansi\_update\_constr
+
+</td>
+<td valign="top">
+
+CURSORS
+
+</td>
+<td valign="top">
+
+Off
+
+</td>
+<td valign="top">
+
+Permanent
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+PUBLIC
+
+</td>
+<td valign="top">
+
+Ansi\_update\_constr
+
+</td>
+<td valign="top">
+
+Cursors
+
+</td>
+<td valign="top">
+
+Off
+
+</td>
+<td valign="top">
+
+Permanent
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+Checkpoint\_time
+
+</td>
+<td valign="top">
+
+20
+
+</td>
+<td valign="top">
+
+60
+
+</td>
+<td valign="top">
+
+Temporary
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+Connection\_authent
+
+</td>
+<td valign="top">
+
+Company=MyComp;
+
+Application=DBTools;Signa
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Temporary
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+Login\_procedure
+
+</td>
+<td valign="top">
+
+HDLADMIN.sp\_iq\_proce
+
+</td>
+<td valign="top">
+
+sp\_login\_envir
+
+</td>
+<td valign="top">
+
+Permanent
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+PUBLIC
+
+</td>
+<td valign="top">
+
+Login\_procedure
+
+</td>
+<td valign="top">
+
+HDLADMIN.sp\_iq\_proce
+
+</td>
+<td valign="top">
+
+sp\_login\_envir
+
+</td>
+<td valign="top">
+
+Permanent
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+myrole
+
+</td>
+<td valign="top">
+
+Max\_Warnings
+
+</td>
+<td valign="top">
+
+9
+
+</td>
+<td valign="top">
+
+281474976710655
+
+</td>
+<td valign="top">
+
+Permanent
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+Thread\_count
+
+</td>
+<td valign="top">
+
+25
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+Temporary
+
+</td>
+</tr>
+</table>
+
+This example uses sp\_iqcheckoptions run by user USER1:
+
+
+<table>
+<tr>
+<th valign="top">
+
+User\_name
+
+</th>
+<th valign="top">
+
+Option\_name
+
+</th>
+<th valign="top">
+
+Current\_value
+
+</th>
+<th valign="top">
+
+Default\_value
+
+</th>
+<th valign="top">
+
+Option\_type
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+Ansi\_update\_constr
+
+</td>
+<td valign="top">
+
+CURSORS
+
+</td>
+<td valign="top">
+
+Off
+
+</td>
+<td valign="top">
+
+Permanent
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+PUBLIC
+
+</td>
+<td valign="top">
+
+Ansi\_update\_constr
+
+</td>
+<td valign="top">
+
+Cursors
+
+</td>
+<td valign="top">
+
+Off
+
+</td>
+<td valign="top">
+
+Permanent
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+Checkpoint\_time
+
+</td>
+<td valign="top">
+
+20
+
+</td>
+<td valign="top">
+
+60
+
+</td>
+<td valign="top">
+
+Temporary
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+Connection\_authent
+
+</td>
+<td valign="top">
+
+Company=MyComp;
+
+Application=DBTools;Signa
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Temporary
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+Login\_procedure
+
+</td>
+<td valign="top">
+
+HDLADMIN.sp\_iq\_proce
+
+</td>
+<td valign="top">
+
+sp\_login\_envir
+
+</td>
+<td valign="top">
+
+Permanent
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+PUBLIC
+
+</td>
+<td valign="top">
+
+Login\_procedure
+
+</td>
+<td valign="top">
+
+HDLADMIN.sp\_iq\_proce
+
+</td>
+<td valign="top">
+
+sp\_login\_envir
+
+</td>
+<td valign="top">
+
+Permanent
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+Max\_Warnings
+
+</td>
+<td valign="top">
+
+55
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+281474976710655Temporary
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+Thread\_count
+
+</td>
+<td valign="top">
+
+25
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+Temporary
+
+</td>
+</tr>
+</table>
 

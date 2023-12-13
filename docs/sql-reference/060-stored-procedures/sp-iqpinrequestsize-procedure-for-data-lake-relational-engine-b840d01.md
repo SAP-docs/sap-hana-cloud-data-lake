@@ -6,22 +6,25 @@ Returns the mapping of pin requests to the maximum releaseable size in kilobytes
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loiob840d01e1af14cd490c991e2b6ce6a0d__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqpinrequestsize()
+sp_iqpinrequestsize();
 ```
 
 
 
 <a name="loiob840d01e1af14cd490c991e2b6ce6a0d__pin_request_size_returns1"/>
 
-## Returns
+## Result Set
 
 Returns the mapping of pin requests to the maximum releaseable size in kilobytes.
 
@@ -32,14 +35,10 @@ Returns the mapping of pin requests to the maximum releaseable size in kilobytes
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -48,14 +47,10 @@ Description
 
 pin\_id
 
-
-
 </td>
 <td valign="top">
 
 Displays the ID of the pin request.
-
-
 
 </td>
 </tr>
@@ -64,14 +59,10 @@ Displays the ID of the pin request.
 
 max\_kb\_release
 
-
-
 </td>
 <td valign="top">
 
 Displays the maximum size, in kilobytes, to be released if the pin request is deleted.
-
-
 
 </td>
 </tr>
@@ -96,4 +87,68 @@ sp\_iqpinrequestsize can only be run on the coordinator node. The coordinator en
 ### 
 
 Requires EXECUTE object-level privilege on the procedure.
+
+
+
+<a name="loiob840d01e1af14cd490c991e2b6ce6a0d__pin_request_size_examples1"/>
+
+## Examples
+
+This example returns the size each pin request found.
+
+```
+CALL sp_iqpinrequestsize();
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+pin\_id
+
+</th>
+<th valign="top">
+
+max\_kb\_release
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+14140968961
+
+</td>
+<td valign="top">
+
+1216
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+14141034497
+
+</td>
+<td valign="top">
+
+1216
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+14141037569
+
+</td>
+<td valign="top">
+
+1216
+
+</td>
+</tr>
+</table>
 

@@ -6,16 +6,19 @@ Decrements the counter associated with a semaphore.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio81803f236ce210149660ddd29337c1c8__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 WAITFOR SEMAPHORE [<owner>.]<semaphore-name> 
-   [ TIMEOUT <in-milliseconds> ] 
+   [ TIMEOUT <in-milliseconds> ]; 
 
 ```
 
@@ -122,6 +125,8 @@ Not in the standard.
 </dl>
 
 
+
+## Example
 
 The following statement creates a semaphore and sets its initial value to zero:
 

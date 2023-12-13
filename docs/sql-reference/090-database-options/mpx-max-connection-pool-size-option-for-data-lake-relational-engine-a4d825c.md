@@ -6,8 +6,11 @@ Maximum number of connections allowed in the connection pool on a worker node.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa4d825ce84f21015afff83e9dabeec9a__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

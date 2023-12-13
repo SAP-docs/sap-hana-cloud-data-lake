@@ -7,7 +7,7 @@ Returns the natural logarithm of a number.
 
 
 ```
-LOG ( <numeric-expression> )
+LOG ( <numeric-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The number.
 
 <a name="loio4bedccf5149e42c2bdb12854c1587418__section_zvf_byg_trb"/>
 
-## Returns
+## Result Set
 
 This function converts its argument to DOUBLE, performs the computation in double-precision floating point, and returns a DOUBLE as the result. If the parameter is NULL, the result is NULL.
 
@@ -65,11 +65,11 @@ This function converts its argument to DOUBLE, performs the computation in doubl
 The following statement returns the value 3.912023:
 
 ```
-SELECT LOG( 50 ) FROM iq_dummy
+SELECT LOG( 50 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[LOG Function [Numeric] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a560332084f21015bf3b92161333e171.html "Returns the natural logarithm of a number.") :arrow_upper_right:
+[LOG Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a560332084f21015bf3b92161333e171.html "Returns the natural logarithm of a number.") :arrow_upper_right:
 

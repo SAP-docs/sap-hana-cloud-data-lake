@@ -6,8 +6,11 @@ Setting this option ON forces the query optimizer to mimic older versions of dat
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa874949c84f210158f26cfc56b077cde__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 
@@ -17,7 +20,7 @@ Setting this option ON forces the query optimizer to mimic older versions of dat
 
 OFF
 
- 
+
 
 
 

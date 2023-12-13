@@ -6,22 +6,25 @@ Returns details about column indexes in one or more tables.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa87e284f84f21015b893da0ff4572d65__section_vt2_cwh_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqcolumnmetadata [ <table.name> [, <owner-name> ] ]
+sp_iqcolumnmetadata [ <table.name> [, <owner-name> ] ];
 ```
 
 
 
 <a name="loioa87e284f84f21015b893da0ff4572d65__section_wtj_yl4_tvb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -30,14 +33,10 @@ sp_iqcolumnmetadata [ <table.name> [, <owner-name> ] ]
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -46,14 +45,10 @@ Description
 
 uname
 
-
-
 </td>
 <td valign="top">
 
 Owner of the table.
-
-
 
 </td>
 </tr>
@@ -62,14 +57,10 @@ Owner of the table.
 
 tname
 
-
-
 </td>
 <td valign="top">
 
 Name of the table.
-
-
 
 </td>
 </tr>
@@ -78,14 +69,10 @@ Name of the table.
 
 iname
 
-
-
 </td>
 <td valign="top">
 
 Name of the index.
-
-
 
 </td>
 </tr>
@@ -94,14 +81,10 @@ Name of the index.
 
 col
 
-
-
 </td>
 <td valign="top">
 
 Column number.
-
-
 
 </td>
 </tr>
@@ -110,14 +93,10 @@ Column number.
 
 cname
 
-
-
 </td>
 <td valign="top">
 
 Column name.
-
-
 
 </td>
 </tr>
@@ -126,14 +105,10 @@ Column name.
 
 domain\_name
 
-
-
 </td>
 <td valign="top">
 
 Column data type.
-
-
 
 </td>
 </tr>
@@ -142,14 +117,10 @@ Column data type.
 
 width
 
-
-
 </td>
 <td valign="top">
 
 Column width in bytes.
-
-
 
 </td>
 </tr>
@@ -158,14 +129,10 @@ Column width in bytes.
 
 NBit
 
-
-
 </td>
 <td valign="top">
 
 Bit count \(NBit level 1-31\).
-
-
 
 </td>
 </tr>
@@ -174,14 +141,10 @@ Bit count \(NBit level 1-31\).
 
 TokenCount
 
-
-
 </td>
 <td valign="top">
 
 Approximate number of distinct values.
-
-
 
 </td>
 </tr>
@@ -190,14 +153,10 @@ Approximate number of distinct values.
 
 DictSize
 
-
-
 </td>
 <td valign="top">
 
 Dictionary Value size.
-
-
 
 </td>
 </tr>
@@ -206,14 +165,10 @@ Dictionary Value size.
 
 CountSize
 
-
-
 </td>
 <td valign="top">
 
 Dictionary Count size.
-
-
 
 </td>
 </tr>
@@ -222,14 +177,10 @@ Dictionary Count size.
 
 "IQ Unique"
 
-
-
 </td>
 <td valign="top">
 
 IQ UNIQUE value from CREATE/ALTER TABLE.
-
-
 
 </td>
 </tr>
@@ -238,14 +189,10 @@ IQ UNIQUE value from CREATE/ALTER TABLE.
 
 Style
 
-
-
 </td>
 <td valign="top">
 
 FP index type.
-
-
 
 </td>
 </tr>

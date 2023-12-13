@@ -7,7 +7,7 @@ Returns the object ID.
 
 
 ```
-OBJECT_ID ( <object-name> )
+OBJECT_ID ( <object-name> );
 ```
 
 
@@ -50,7 +50,7 @@ The name of the object.
 The following statement returns the object ID 100209 of the *<Customers\>* table:
 
 ```
-SELECT OBJECT_ID ('CUSTOMERS') FROM iq_dummy
+SELECT OBJECT_ID ('CUSTOMERS') FROM iq_dummy;
 ```
 
 **Related Information**  

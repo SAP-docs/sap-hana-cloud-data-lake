@@ -6,10 +6,13 @@ Sends native syntax to a remote server, enabling users to specify the server to 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61ec00b84f210158c6dee868f166997__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,7 +26,7 @@ Syntax 1 – Sends a Statement to a Remote Server
 <dd>
 
 ```
-FORWARD TO <server-name> { <sql-statement> } 
+FORWARD TO <server-name> { <sql-statement> }; 
 ```
 
 
@@ -36,7 +39,7 @@ Syntax 2 – Places Data Lake Relational Engine into Passthrough Mode to Send a 
 <dd>
 
 ```
-FORWARD TO [ <server-name> ]
+FORWARD TO [ <server-name> ];
 ```
 
 
@@ -142,7 +145,7 @@ The following example shows a passthrough session with the remote server abcprod
 FORWARD TO abcprod
 SELECT * from titles
 SELECT * from authors
-FORWARD TO
+FORWARD TO;
 ```
 
 **Related Information**  

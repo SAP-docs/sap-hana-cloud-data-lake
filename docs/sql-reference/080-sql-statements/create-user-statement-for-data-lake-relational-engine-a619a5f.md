@@ -6,17 +6,20 @@ Creates a user.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa619a5f184f210158155ea1a4fe03da8__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 CREATE USER <user-name>  [ IDENTIFIED BY <password> ]
    [ LOGIN POLICY <policy-name> ]
-   [ FORCE PASSWORD CHANGE { ON | OFF } ]
+   [ FORCE PASSWORD CHANGE { ON | OFF } ];
 ```
 
 
@@ -108,7 +111,7 @@ Controls whether the user must specify a new password upon logging in. This sett
 
 
 
-<a name="loioa619a5f184f210158155ea1a4fe03da8__IQ_Permissions"/>
+<a name="loioa619a5f184f210158155ea1a4fe03da8__create_user_privilege1"/>
 
 ## Privileges
 
@@ -153,5 +156,7 @@ LOGIN POLICY Test1 FORCE PASSWORD CHANGE ON;
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[Login Policy Options](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_2_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
+[Login Policy Options](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
+
+[CREATE USER Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/a21f6524ecab45fcaa89b6f9bf4670e8.html "Creates a user.") :arrow_upper_right:
 

@@ -6,8 +6,11 @@ Controls the divisor for allocation of space from IQ\_SYSTEM\_MAIN dbspace for u
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioc33cb21ac3b3486a88d30c8ef9053822__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

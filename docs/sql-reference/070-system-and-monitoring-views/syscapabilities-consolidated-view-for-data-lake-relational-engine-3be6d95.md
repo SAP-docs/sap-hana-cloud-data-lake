@@ -6,10 +6,13 @@ Each row in the SYSCAPABILITIES view specifies the status of a capability for a 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be6d95b6c5f101490bacd85d8e32485__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,6 +21,6 @@ The tables and columns that make up this view are provided in the SQL statement 
 ```
 ALTER VIEW "SYS"."SYSCAPABILITIES"
   as select ISYSCAPABILITY.capid,ISYSCAPABILITY.srvid,property('RemoteCapability',ISYSCAPABILITY.capid) as capname,ISYSCAPABILITY.capvalue
-    from SYS.ISYSCAPABILITY
+    from SYS.ISYSCAPABILITY;
 ```
 

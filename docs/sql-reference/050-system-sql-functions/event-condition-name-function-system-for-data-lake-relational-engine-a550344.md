@@ -7,7 +7,7 @@ Can be used to list the possible parameters for `EVENT_CONDITION`.
 
 
 ```
-EVENT_CONDITION_NAME ( <integer> )
+EVENT_CONDITION_NAME ( <integer> );
 ```
 
 
@@ -36,7 +36,7 @@ An integer that is greater than or equal to zero.
 
 <a name="loioa550344c84f21015b24ccfeb1382c210__event_condition_name_returns1"/>
 
-## Returns
+## Result Set
 
 VARCHAR
 

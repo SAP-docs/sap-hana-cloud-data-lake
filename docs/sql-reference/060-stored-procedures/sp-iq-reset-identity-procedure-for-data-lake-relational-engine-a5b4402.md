@@ -6,15 +6,18 @@ Sets the seed of the Identity/Autoincrement column associated with the specified
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5b4402f84f21015970e99c2e7a4deaf__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iq_reset_identity ( <table_name>, <table_owner>, <value> )
+sp_iq_reset_identity ( <table_name>, <table_owner>, <value> );
 ```
 
 
@@ -68,6 +71,14 @@ The seed value you specify to replace the default seed value.
 
 
 
+<a name="loioa5b4402f84f21015970e99c2e7a4deaf__section_kbl_bbv_xyb"/>
+
+## Result Set
+
+None
+
+
+
 <a name="loioa5b4402f84f21015970e99c2e7a4deaf__iq_refbb_1736"/>
 
 ## Remarks
@@ -82,7 +93,7 @@ You need to specify *<table\_name\>*, *<table owner\>*, and *<value\>*.
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md). If you own the object referenced by the procedure, no additional privilege is required. 
+To run this procedure, you need the EXECUTE privilege on the procedure. If you own the object referenced by the procedure, no additional privilege is required. 
 
 For objects owned by others, you need one of the following privileges:
 
@@ -93,21 +104,15 @@ For objects owned by others, you need one of the following privileges:
 
 Privilege Name
 
-
-
 </th>
 <th valign="top">
 
 Privilege Type
 
-
-
 </th>
 <th valign="top">
 
 Grant Statement
-
-
 
 </th>
 </tr>
@@ -124,14 +129,10 @@ Grant Statement
 
 System privileges
 
-
-
 </td>
 <td valign="top">
 
 [GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-
 
 </td>
 </tr>
@@ -147,14 +148,10 @@ System privileges
 
 Object-level privilege
 
-
-
 </td>
 <td valign="top">
 
 [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md)
-
-
 
 </td>
 </tr>
@@ -170,14 +167,14 @@ None
 
 <a name="loioa5b4402f84f21015970e99c2e7a4deaf__section_nyx_y3f_nbb"/>
 
-## Example
+## Examples
 
-The following example creates an Identity column with a starting seed of 50:
+This example uses the sp\_iq\_reset\_identity system procedure to reset the Identity column with a starting seed of 50:
 
 ```
-CREATE TABLE mytable(c1 INT identity)
+CREATE TABLE mytable(C1 INT IDENTITY);
 
-call sp_iq_reset_identity('mytable', 'dba', 50)
+CALL sp_iq_reset_identity('mytable', 'hdladmin', 50);
 ```
 
 **Related Information**  

@@ -7,7 +7,7 @@ Returns the character with the ASCII value of a number.
 
 
 ```
-CHAR ( <integer-expression> )
+CHAR ( <integer-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The number to be converted to an ASCII character. The number must be in the rang
 
 <a name="loioa53b50f084f210159a74ba4e4e50f914__CHAR_returns1"/>
 
-## Returns
+## Result Set
 
 VARCHAR
 
@@ -67,18 +67,18 @@ CHAR returns NULL for integer expressions with values greater than 255 or less t
 -   The following statement returns the value “Y”:
 
     ```
-    SELECT CHAR( 89 ) FROM iq_dummy
+    SELECT CHAR( 89 ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value “S”:
 
     ```
-    SELECT CHAR( 83 ) FROM iq_dummy
+    SELECT CHAR( 83 ) FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[CHAR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/6c2f4cf7004b4f2cace1afa4889a44d0.html "Returns the character with the ASCII value of a number.") :arrow_upper_right:
+[CHAR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/6c2f4cf7004b4f2cace1afa4889a44d0.html "Returns the character with the ASCII value of a number.") :arrow_upper_right:
 

@@ -6,10 +6,13 @@ Enables or prevents users from accessing query plans from the Interactive SQL cl
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa64f443284f21015acbbd8e919d9c49b__section_fq2_gpq_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Enables or prevents users from accessing query plans from the Interactive SQL cl
 ## Syntax
 
 ```
-QUERY_PLAN_TEXT_ACCESS = { ON | OFF }
+QUERY_PLAN_TEXT_ACCESS = { ON | OFF };
 ```
 
 
@@ -64,28 +67,20 @@ Requires the SET ANY CUSTOMER SYSTEM OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -94,28 +89,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -124,28 +111,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -174,7 +153,7 @@ No plan available. The database option QUERY_PLAN_TEXT_ACCESS is OFF.
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[QUERY_PLAN_TEXT_ACCESS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/176630977a7d4a46b04fe1f7b30fd9c2.html "Enables or prevents users from accessing query plans from the Interactive SQL client or from using SQL functions to get plans.") :arrow_upper_right:
+[QUERY_PLAN_TEXT_ACCESS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/176630977a7d4a46b04fe1f7b30fd9c2.html "Enables or prevents users from accessing query plans from the Interactive SQL client or from using SQL functions to get plans.") :arrow_upper_right:
 
 [QUERY\_DETAIL Option for Data Lake Relational Engine](query-detail-option-for-data-lake-relational-engine-a64c3ef.md "Specifies whether or not to include additional query information in the Query Detail section of the query plan.")
 

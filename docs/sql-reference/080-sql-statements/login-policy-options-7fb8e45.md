@@ -13,21 +13,15 @@ Available options for CUSTOMER\_ROOT and user-defined login policies.
 
 Option
 
-
-
 </th>
 <th valign="top">
 
 Description
 
-
-
 </th>
 <th valign="top">
 
 Properties
-
-
 
 </th>
 </tr>
@@ -36,14 +30,10 @@ Properties
 
 AUTO\_UNLOCK\_TIME
 
-
-
 </td>
 <td valign="top">
 
 The time period after which locked accounts not granted the MANAGE ANY USER system privilege are automatically unlocked. You can define this option in any login policy.
-
-
 
 </td>
 <td valign="top">
@@ -61,14 +51,10 @@ The time period after which locked accounts not granted the MANAGE ANY USER syst
 
 CHANGE\_PASSWORD\_DUAL\_CONTROL
 
-
-
 </td>
 <td valign="top">
 
 Requires input from two users, each of whom is granted the CHANGE PASSWORD system privilege, to change the password of another user.
-
-
 
 </td>
 <td valign="top">
@@ -86,14 +72,10 @@ Requires input from two users, each of whom is granted the CHANGE PASSWORD syste
 
 LOCKED
 
-
-
 </td>
 <td valign="top">
 
 If set ON, then users can’t establish new connections. This setting temporarily denies access to users of the login policy.
-
-
 
 </td>
 <td valign="top">
@@ -110,8 +92,6 @@ If set ON, then users can’t establish new connections. This setting temporaril
 <td valign="top">
 
 LOGIN\_MODE
-
-
 
 </td>
 <td valign="top">
@@ -141,7 +121,7 @@ Accepts an individual value, or a comma-separated list, composed of:
 
 -   Default – NULL
 
-
+For example, "Standard,X509"
 
 </td>
 </tr>
@@ -150,14 +130,10 @@ Accepts an individual value, or a comma-separated list, composed of:
 
 MAX\_CONNECTIONS
 
-
-
 </td>
 <td valign="top">
 
 The maximum number of concurrent connections allowed for a user.
-
-
 
 </td>
 <td valign="top">
@@ -175,14 +151,10 @@ The maximum number of concurrent connections allowed for a user.
 
 MAX\_DAYS\_SINCE\_LOGIN
 
-
-
 </td>
 <td valign="top">
 
 The maximum elapsed days since the last login. Once the maximum days + 1 day is reached, the user account is locked.
-
-
 
 </td>
 <td valign="top">
@@ -200,14 +172,10 @@ The maximum elapsed days since the last login. Once the maximum days + 1 day is 
 
 MAX\_FAILED\_LOGIN\_ATTEMPTS
 
-
-
 </td>
 <td valign="top">
 
 The maximum number of failed attempts, since the last successful attempt, to log in before the account is locked.
-
-
 
 </td>
 <td valign="top">
@@ -225,14 +193,10 @@ The maximum number of failed attempts, since the last successful attempt, to log
 
 PASSWORD\_EXPIRY\_ON\_NEXT\_LOGIN
 
-
-
 </td>
 <td valign="top">
 
 If set ON, then the user's password expires at the next login.
-
-
 
 </td>
 <td valign="top">
@@ -250,14 +214,10 @@ If set ON, then the user's password expires at the next login.
 
 PASSWORD\_LIFE\_TIME
 
-
-
 </td>
 <td valign="top">
 
 The maximum number of days before a password must be changed.
-
-
 
 </td>
 <td valign="top">
@@ -275,14 +235,10 @@ The maximum number of days before a password must be changed.
 
 X509\_LIFE\_TIME
 
-
-
 </td>
 <td valign="top">
 
 The maximum number of minutes that an X.509 certificate will remain valid for authentication.
-
-
 
 </td>
 <td valign="top">

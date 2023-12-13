@@ -7,7 +7,7 @@ Returns a number indicating the quarter of the year from the supplied date expre
 
 
 ```
-QUARTERSTR( <date-expression>,[ <quarter_start_month> ] )
+QUARTERSTR( <date-expression>,[ <quarter_start_month> ] );
 ```
 
 
@@ -47,7 +47,7 @@ Any integer 1 to 12. If not specified, default value is 1 \(January\).
 
 <a name="loio8fbd6b73408a49d1aa5c88d99954bf7c__QUARTERSTR_returns1"/>
 
-## Returns
+## Result Set
 
 A string in the format YYYY-QN where YYYY is year and N is quarter number.
 
@@ -68,11 +68,11 @@ A string in the format YYYY-QN where YYYY is year and N is quarter number.
 With the `DATE_ORDER` option set to the default of *<ymd\>*, the following statement returns the value 1998-Q4:
 
 ```
-SELECT QUARTERSTR ( '1999/01/28', 2 ) FROM iq_dummy
+SELECT QUARTERSTR ( '1999/01/28', 2 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[QUARTERSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/b6d0deaed8aa424a88f56de678b77b77.html "Returns a number indicating the quarter of the year from the supplied date expression and quarter start month.") :arrow_upper_right:
+[QUARTERSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/b6d0deaed8aa424a88f56de678b77b77.html "Returns a number indicating the quarter of the year from the supplied date expression and quarter start month.") :arrow_upper_right:
 

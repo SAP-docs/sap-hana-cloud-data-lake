@@ -7,28 +7,16 @@ Returns information about all temporary and permanent mutexes and semaphores, in
 
 
 ```
-sp_list_mutexes_semaphores( [<oid>] )
+sp_list_mutexes_semaphores;
 ```
 
 
 
+<a name="loio95ebd85c6ea11014aa449ce4706bbebd__section_obc_v1j_yyb"/>
+
 ## Parameters
 
-
-<dl>
-<dt><b>
-
-oid
-
-</b></dt>
-<dd>
-
-\(For internal use only\) The unsigned bigint object ID parameter. Use the default parameter value NULL.
-
-
-
-</dd>
-</dl>
+None
 
 
 
@@ -41,21 +29,15 @@ oid
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 Column description
-
-
 
 </th>
 </tr>
@@ -64,21 +46,15 @@ Column description
 
 *<mutex\_semaphore\_id\>*
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The ID for the object. If the object is permanent, the ID value is the same as found SYSMUTEXSEMAPHORE system view. If the object is temporary, the value is the internally-generated temporary ID.
-
-
 
 </td>
 </tr>
@@ -87,21 +63,15 @@ The ID for the object. If the object is permanent, the ID value is the same as f
 
 *<creator\>*
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The owner of the mutex or semaphore
-
-
 
 </td>
 </tr>
@@ -110,21 +80,15 @@ The owner of the mutex or semaphore
 
 *<"name"\>*
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the mutex or semaphore
-
-
 
 </td>
 </tr>
@@ -133,21 +97,15 @@ The name of the mutex or semaphore
 
 *<"type"\>*
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(9\)
 
-
-
 </td>
 <td valign="top">
 
 The type of object. The value 'mutex:T' is for transaction-scope mutexes, the value 'mutex:C' is for connection-scope mutexes, and the value 'semaphore' is for semaphores.
-
-
 
 </td>
 </tr>
@@ -156,21 +114,15 @@ The type of object. The value 'mutex:T' is for transaction-scope mutexes, the va
 
 *<is\_temp\>*
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 'Y' or 'N' indicating whether the mutex or semaphore is temporary.
-
-
 
 </td>
 </tr>
@@ -179,21 +131,15 @@ CHAR\(1\)
 
 *<is\_dropped\>*
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 'Y' or 'N' indicating whether the mutex or semaphore is dropped but not yet released. Y indicates that the mutex was dropped but still needs to be released, N indicates the mutex was dropped and released. This value is always N for semaphores
-
-
 
 </td>
 </tr>
@@ -202,21 +148,15 @@ CHAR\(1\)
 
 *<start\_with\>*
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The initial value of the semaphore. This value is always NULL for mutexes.
-
-
 
 </td>
 </tr>
@@ -225,21 +165,15 @@ The initial value of the semaphore. This value is always NULL for mutexes.
 
 *<current\_count\>*
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The current value of the semaphore. This value is always NULL for mutexes.
-
-
 
 </td>
 </tr>
@@ -248,21 +182,15 @@ The current value of the semaphore. This value is always NULL for mutexes.
 
 *<currently\_owned\_by\>*
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 A comma-separated list of connection IDs for connections currently holding the mutex locked.
-
-
 
 </td>
 </tr>
@@ -271,21 +199,15 @@ A comma-separated list of connection IDs for connections currently holding the m
 
 *<currently\_waited\_for\>*
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 A comma-separated list of connection IDs for connections that are currently waiting for a semaphore or that are currently blocked on a mutex.
-
-
 
 </td>
 </tr>
@@ -325,9 +247,264 @@ Not in the standard.
 
 
 
+<a name="loio95ebd85c6ea11014aa449ce4706bbebd__section_ed2_yfk_yyb"/>
+
+## Examples
+
 The following statement returns information about all of the mutexes and semaphores in the database:
 
 ```
-CALL dbo.sp_list_mutexes_semaphores();
+CALL sp_list_mutexes_semaphores();
 ```
+
+
+<table>
+<tr>
+<th valign="top">
+
+mutex\_semaphore\_id
+
+</th>
+<th valign="top">
+
+creator
+
+</th>
+<th valign="top">
+
+name
+
+</th>
+<th valign="top">
+
+type
+
+</th>
+<th valign="top">
+
+is\_temp
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+3
+
+</td>
+<td valign="top">
+
+hdl\_telemetry\_service
+
+</td>
+<td valign="top">
+
+telemetry\_users\_mutex
+
+</td>
+<td valign="top">
+
+MUTEX:C
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+2
+
+</td>
+<td valign="top">
+
+cg\_dbo
+
+</td>
+<td valign="top">
+
+hdl\_container\_users\_mutex
+
+</td>
+<td valign="top">
+
+MUTEX:C
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+cg\_dbo
+
+</td>
+<td valign="top">
+
+hdl\_add\_missing\_container\_objects\_mutex
+
+</td>
+<td valign="top">
+
+MUTEX:C
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="6">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+is\_temp
+
+</th>
+<th valign="top">
+
+is\_dropped
+
+</th>
+<th valign="top">
+
+start\_with
+
+</th>
+<th valign="top">
+
+current\_count
+
+</th>
+<th valign="top">
+
+currently\_owned\_by
+
+</th>
+<th valign="top">
+
+currently\_waited\_for
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+</table>
 

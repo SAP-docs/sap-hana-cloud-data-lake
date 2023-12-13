@@ -6,12 +6,14 @@ Sets the format used for timestamps retrieved from the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Setting Database Options](remote-execute-usage-examples-for-setting-database-options-0023bea.md).
+<a name="loio002566cefa3a43bca454142befc1cdac__section_dzz_4jj_kyb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,7 +22,7 @@ Sets the format used for timestamps retrieved from the database.
 ## Syntax
 
 ```
-TIMESTAMP_FORMAT = <string>
+TIMESTAMP_FORMAT = <string>;
 ```
 
 
@@ -51,10 +53,43 @@ Privilege Category: PUBLIC
 
 ### 
 
-Requires one of:
+The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
 
--   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user:
+
+</b></dt>
+<dd>
+
+-   To set a database option permanently, use REMOTE\_EXECUTE.
+
+    Requires one of:
+
+    -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+    -   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+    -   See [REMOTE\_EXECUTE Guidance and Examples for Setting Permanent Database Options](remote-execute-guidance-and-examples-for-setting-permanent-database-options-0023bea.md).
+
+
+
+
+
+</dd><dt><b>
+
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+-   Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this database option.
+
+
+
+</dd>
+</dl>
 
 
 
@@ -69,28 +104,20 @@ Requires one of:
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -99,28 +126,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -129,28 +148,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -171,14 +182,10 @@ The format is a string using these symbols:
 
 Symbol
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Description
-
-
 
 </th>
 </tr>
@@ -187,14 +194,10 @@ Description
 
 yy
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2-digit year.
-
-
 
 </td>
 </tr>
@@ -203,14 +206,10 @@ yy
 
 yyyy
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 4-digit year.
-
-
 
 </td>
 </tr>
@@ -219,14 +218,10 @@ yyyy
 
 mm
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2-digit month, or two digit minutes if following a colon \(as in 'hh:mm'\).
-
-
 
 </td>
 </tr>
@@ -235,14 +230,10 @@ mm
 
 mmm
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 3-character short form for name of the month of year.
-
-
 
 </td>
 </tr>
@@ -251,14 +242,10 @@ mmm
 
 mmmm\[m...\]
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Character long form for month name—as many characters as there are m's, until the number of m’s specified exceeds the number of characters in the month’s name.
-
-
 
 </td>
 </tr>
@@ -267,14 +254,10 @@ Character long form for month name—as many characters as there are m's, until 
 
 dd
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2-digit day of month.
-
-
 
 </td>
 </tr>
@@ -283,14 +266,10 @@ dd
 
 ddd
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 3-character short form for name of the day of week.
-
-
 
 </td>
 </tr>
@@ -299,14 +278,10 @@ ddd
 
 dddd\[d...\]
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Character long form for day name—as many characters as there are d's, until the number of d’s specified exceeds the number of characters in the day’s name.
-
-
 
 </td>
 </tr>
@@ -315,14 +290,10 @@ Character long form for day name—as many characters as there are d's, until th
 
 hh
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2-digit hours.
-
-
 
 </td>
 </tr>
@@ -331,14 +302,10 @@ hh
 
 nn
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 2-digit minutes.
-
-
 
 </td>
 </tr>
@@ -347,14 +314,10 @@ nn
 
 ss.SSS
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Seconds \(ss\) and fractions of a second \(SSS\), up to six decimal places. Not all platforms support timestamps to a precision of six places.
-
-
 
 </td>
 </tr>
@@ -363,14 +326,10 @@ Seconds \(ss\) and fractions of a second \(SSS\), up to six decimal places. Not 
 
 aa
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 a.m. or p.m. \(12-hour clock\).
-
-
 
 </td>
 </tr>
@@ -379,14 +338,10 @@ a.m. or p.m. \(12-hour clock\).
 
 pp
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 p.m. if needed \(12-hour clock.\)
-
-
 
 </td>
 </tr>
@@ -401,7 +356,9 @@ Multibyte characters are not supported in format strings. Only single-byte chara
 
 [SET OPTION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/set-option-statement-for-data-lake-relational-engine-sap-hana-db-managed-84a37a4.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_1_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine database behaves or performs.") :arrow_upper_right:
+[SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md "Grant database options temporarily for the current connection only on a data lake Relational Engine relational container.")
 
-[TIME_FORMAT Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a664098384f21015ae52f7395391a59c.html "Sets the format used for times retrieved from the database.") :arrow_upper_right:
+[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
+
+[TIME_FORMAT Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a664098384f21015ae52f7395391a59c.html "Sets the format used for times retrieved from the database.") :arrow_upper_right:
 

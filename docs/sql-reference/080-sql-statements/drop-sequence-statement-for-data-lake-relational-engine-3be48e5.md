@@ -6,15 +6,18 @@ Drops a sequence.This statement applies to data lake Relational Engine catalog s
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be48e516c5f1014911fbb7c9231737e__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-DROP SEQUENCE [ <owner>.]<sequence-name>
+DROP SEQUENCE [ <owner>.]<sequence-name>;
 ```
 
 
@@ -69,6 +72,8 @@ Sequences comprise optional ANSI/ISO SQL Language Feature T176.
 
 
 
+## Example
+
 The following example creates and then drops a sequence named Test:
 
 ```
@@ -84,9 +89,9 @@ DROP SEQUENCE Test;
 **Related Information**  
 
 
+[CREATE SEQUENCE Statement for Data Lake Relational Engine](create-sequence-statement-for-data-lake-relational-engine-3be47d4.md "Creates a sequence that can be used to generate primary key values that are unique across multiple tables, and for generating default values for a table. This statement applies to data lake Relational Engine catalog store tables only.")
+
 [ALTER SEQUENCE Statement for Data Lake Relational Engine](alter-sequence-statement-for-data-lake-relational-engine-3be43c9.md "Alters a sequence. This statement applies to data lake Relational Engine catalog store tables only.")
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
-
-[CREATE SEQUENCE Statement for Data Lake Relational Engine](create-sequence-statement-for-data-lake-relational-engine-3be47d4.md "Creates a sequence that can be used to generate primary key values that are unique across multiple tables, and for generating default values for a table. This statement applies to data lake Relational Engine catalog store tables only.")
 

@@ -6,16 +6,19 @@ Initializes or refreshes the data in a materialized view by executing its query 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loiofaab95d872784a4c8d2a7bd3e74faa04__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 REFRESH MATERIALIZED VIEW [ { <owner> | <schema-name>}.]<mat_view_name>
-   [ FORCE BUILD ]
+   [ FORCE BUILD ];
 ```
 
 
@@ -120,6 +123,8 @@ Not in the standard.
 
 
 
+## Example
+
 Suppose you create a materialized view, EmployeeConfid99, and then populate it with data using the following statements:
 
 ```
@@ -146,11 +151,11 @@ REFRESH MATERIALIZED VIEW EmployeeConfid99 FORCE BUILD;
 
 [ALTER MATERIALIZED VIEW Statement for Data Lake Relational Engine](alter-materialized-view-statement-for-data-lake-relational-engine-d958953.md "Alters a materialized view.")
 
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
-
-[REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/817277ba6ce21014a14fa76ab2f0e6e1.html "Initializes or refreshes the data in a materialized view by executing its query definition.") :arrow_upper_right:
+[REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/817277ba6ce21014a14fa76ab2f0e6e1.html "Initializes or refreshes the data in a materialized view by executing its query definition.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
+
+[DROP MATERIALIZED VIEW Statement for Data Lake Relational Engine](drop-materialized-view-statement-for-data-lake-relational-engine-35de0ef.md "Removes a data type from the database.")
 

@@ -7,7 +7,7 @@ Returns the absolute value of a numeric expression.
 
 
 ```
-ABS ( <numeric-expression> )
+ABS ( <numeric-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ The number that has the absolute value to be returned.
 
 <a name="loioa532439384f21015be5cb176f7ecbae4__ABS_returns1"/>
 
-## Returns
+## Result Set
 
 An absolute value of the numeric expression.
 
@@ -47,15 +47,11 @@ An absolute value of the numeric expression.
 
 Numeric Expression Data Type
 
-
-
 </th>
 <th valign="top">
 
 Returns
 
-
-
 </th>
 </tr>
 <tr>
@@ -63,15 +59,11 @@ Returns
 
 INT
 
-
-
 </td>
 <td valign="top">
 
 INT
 
-
-
 </td>
 </tr>
 <tr>
@@ -79,14 +71,10 @@ INT
 
 FLOAT
 
-
-
 </td>
 <td valign="top">
 
 FLOAT
-
-
 
 </td>
 </tr>
@@ -95,14 +83,10 @@ FLOAT
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 DOUBLE
-
-
 
 </td>
 </tr>
@@ -111,14 +95,10 @@ DOUBLE
 
 NUMERIC
 
-
-
 </td>
 <td valign="top">
 
 NUMERIC
-
-
 
 </td>
 </tr>
@@ -141,11 +121,11 @@ NUMERIC
 The following statement returns the value 66:
 
 ```
-SELECT ABS( -66 ) FROM iq_dummy
+SELECT ABS( -66 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[ABS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/45f984dcb7e440c4b082a7ef7662f923.html "Returns the absolute value of a numeric expression.") :arrow_upper_right:
+[ABS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/45f984dcb7e440c4b082a7ef7662f923.html "Returns the absolute value of a numeric expression.") :arrow_upper_right:
 

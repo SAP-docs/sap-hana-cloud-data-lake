@@ -7,7 +7,7 @@ Returns the position of the first occurrence of a specified string in another st
 
 
 ```
-CHARINDEX ( <string-expression1>, <string-expression2> )
+CHARINDEX ( <string-expression1>, <string-expression2> );
 ```
 
 
@@ -47,7 +47,7 @@ The string to be searched. The position of the first character in the string bei
 
 <a name="loioa53cde2984f210158cbd968731b1879c__CHARINDEX_returns1"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -89,7 +89,7 @@ This example uses the following statement:
 ```
 SELECT Surname, GivenName
 FROM Employees
-WHERE CHARINDEX('K', Surname ) = 1
+WHERE CHARINDEX('K', Surname ) = 1;
 ```
 
 The statement returns the following values:
@@ -101,14 +101,10 @@ The statement returns the following values:
 
 Surname
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 GivenName
-
-
 
 </th>
 </tr>
@@ -117,14 +113,10 @@ GivenName
 
 Klobucher
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 James
-
-
 
 </td>
 </tr>
@@ -133,14 +125,10 @@ James
 
 Kuo
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Felicia
-
-
 
 </td>
 </tr>
@@ -149,14 +137,10 @@ Felicia
 
 Kelly
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Moira
-
-
 
 </td>
 </tr>
@@ -167,5 +151,5 @@ Moira
 
 [SUBSTRING Function \[String\] for Data Lake Relational Engine](substring-function-string-for-data-lake-relational-engine-a58787e.md "Returns a substring of a string.")
 
-[CHARINDEX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ae499513aa0346978ca7d3c6f34656da.html "Returns the position of the first occurrence of a specified string in another string.") :arrow_upper_right:
+[CHARINDEX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ae499513aa0346978ca7d3c6f34656da.html "Returns the position of the first occurrence of a specified string in another string.") :arrow_upper_right:
 

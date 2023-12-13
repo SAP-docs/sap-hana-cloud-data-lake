@@ -6,8 +6,11 @@ Controls the amount of main buffer cache allocated to FP indexes in data lake Re
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa636a3a184f21015bd0190caa12fa1a2__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

@@ -6,15 +6,18 @@ Gives the size of the specified index.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5ad8fe784f21015bda0e710013b6646__section_p4t_vqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqindexsize [ [ <owner>.]<table_name>.]<index_name> 
+sp_iqindexsize [ [ <owner>.]<table_name>.]<index_name>; 
 ```
 
 
@@ -65,7 +68,7 @@ The name of the index.
 
 <a name="loioa5ad8fe784f21015bda0e710013b6646__sp_iqindexsize_returns1"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -74,14 +77,10 @@ The name of the index.
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -90,14 +89,10 @@ Description
 
 `Username`
 
-
-
 </td>
 <td valign="top">
 
 Index owner.
-
-
 
 </td>
 </tr>
@@ -106,14 +101,10 @@ Index owner.
 
 `Indexname`
 
-
-
 </td>
 <td valign="top">
 
 Index for which results are returned, including the table name.
-
-
 
 </td>
 </tr>
@@ -122,14 +113,10 @@ Index for which results are returned, including the table name.
 
 `Type`
 
-
-
 </td>
 <td valign="top">
 
 Index type.
-
-
 
 </td>
 </tr>
@@ -138,14 +125,10 @@ Index type.
 
 `Info`
 
-
-
 </td>
 <td valign="top">
 
 Component of the data lake Relational Engine index for which the KBytes, Pages, and Compressed Pages are being reported. The components vary by index type. For example, the default \(FP\) index includes BARRAY \(barray\) and Bitmap \(bm\) components.
-
-
 
 </td>
 </tr>
@@ -154,14 +137,10 @@ Component of the data lake Relational Engine index for which the KBytes, Pages, 
 
 `KBytes`
 
-
-
 </td>
 <td valign="top">
 
-Physical object size in KB.
-
-
+An approximation of the physical table size, in kilobytes. Data lake Relational Engine uses a 512KB page size and the size in KB reported by sp\_iqtablesize is based on a heuristic for the average page size in the cloud dbspace.
 
 </td>
 </tr>
@@ -170,14 +149,10 @@ Physical object size in KB.
 
 `Pages`
 
-
-
 </td>
 <td valign="top">
 
 Number of data lake Relational Engine pages needed to hold the object in memory.
-
-
 
 </td>
 </tr>
@@ -186,14 +161,10 @@ Number of data lake Relational Engine pages needed to hold the object in memory.
 
 `Compressed Pages`
 
-
-
 </td>
 <td valign="top">
 
 Number of data lake Relational Engine pages when the object is compressed \(on disk\).
-
-
 
 </td>
 </tr>
@@ -240,10 +211,10 @@ None
 
 <a name="loioa5ad8fe784f21015bda0e710013b6646__sp_iqindexsize_examples1"/>
 
-## Example
+## Examples
 
 ```
-sp_iqindexsize ASIQ_IDX_T780_I4_HG
+sp_iqindexsize ASIQ_IDX_T780_I4_HG;
 ```
 
 
@@ -253,50 +224,36 @@ sp_iqindexsize ASIQ_IDX_T780_I4_HG
 
 Username
 
-
-
 </th>
 <th valign="top">
 
 Indexname
-
-
 
 </th>
 <th valign="top">
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 Info
-
-
 
 </th>
 <th valign="top">
 
 Kbytes
 
-
-
 </th>
 <th valign="top">
 
 Pages
-
-
 
 </th>
 <th valign="top">
 
 Compressed Pages
 
-
-
 </th>
 </tr>
 <tr>
@@ -304,49 +261,35 @@ Compressed Pages
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 <td valign="top">
 
 Total
 
-
-
 </td>
 <td valign="top">
 
 288
-
-
 
 </td>
 <td valign="top">
 
 4
 
-
-
 </td>
 <td valign="top">
 
 2
-
-
 
 </td>
 </tr>
@@ -355,49 +298,35 @@ Total
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 <td valign="top">
 
 vdo
 
+</td>
+<td valign="top">
 
+0
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
 
 </td>
 </tr>
@@ -406,49 +335,35 @@ vdo
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 <td valign="top">
 
 bt
 
-
-
 </td>
 <td valign="top">
 
 152
-
-
 
 </td>
 <td valign="top">
 
 2
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 </tr>
@@ -457,49 +372,35 @@ bt
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 <td valign="top">
 
 garray
 
+</td>
+<td valign="top">
 
+0
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
 
 </td>
 </tr>
@@ -508,49 +409,35 @@ garray
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 <td valign="top">
 
 bm
 
-
-
 </td>
 <td valign="top">
 
 136
-
-
 
 </td>
 <td valign="top">
 
 2
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 </tr>
@@ -559,49 +446,35 @@ bm
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 <td valign="top">
 
 barray
 
+</td>
+<td valign="top">
 
+0
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
 
 </td>
 </tr>
@@ -610,49 +483,35 @@ barray
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 <td valign="top">
 
 dpstore
 
+</td>
+<td valign="top">
 
+0
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
 
 </td>
 </tr>
@@ -661,49 +520,35 @@ dpstore
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
 
-
-
 </td>
 <td valign="top">
 
 HG
-
-
 
 </td>
 <td valign="top">
 
 largelob
 
+</td>
+<td valign="top">
 
+0
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
 
 </td>
 </tr>
@@ -712,49 +557,35 @@ largelob
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
-
-
 
 </td>
 <td valign="top">
 
 HG
 
-
-
 </td>
 <td valign="top">
 
 txtPst
 
+</td>
+<td valign="top">
 
+0
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
 
 </td>
 </tr>
@@ -771,50 +602,36 @@ CREATE TEXT INDEX ti ON Employees( Street ) IMMEDIATE REFRESH;sp_iqindexsize 'ti
 
 Username
 
-
-
 </th>
 <th valign="top">
 
 Indexname
-
-
 
 </th>
 <th valign="top">
 
 Type
 
-
-
 </th>
 <th valign="top">
 
 Info
-
-
 
 </th>
 <th valign="top">
 
 KBytes
 
-
-
 </th>
 <th valign="top">
 
 Pages
-
-
 
 </th>
 <th valign="top">
 
 Compressed Pages
 
-
-
 </th>
 </tr>
 <tr>
@@ -822,49 +639,35 @@ Compressed Pages
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Employees.ti
 
-
-
 </td>
 <td valign="top">
 
 TEXT
-
-
 
 </td>
 <td valign="top">
 
 Total
 
-
-
 </td>
 <td valign="top">
 
 896
-
-
 
 </td>
 <td valign="top">
 
 12
 
-
-
 </td>
 <td valign="top">
 
 6
-
-
 
 </td>
 </tr>
@@ -873,49 +676,35 @@ Total
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Employees.ti
 
-
-
 </td>
 <td valign="top">
 
 TEXT
-
-
 
 </td>
 <td valign="top">
 
 vdo
 
+</td>
+<td valign="top">
 
+0
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
 
 </td>
 </tr>
@@ -924,49 +713,35 @@ vdo
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Employees.ti
 
-
-
 </td>
 <td valign="top">
 
 TEXT
-
-
 
 </td>
 <td valign="top">
 
 bt
 
-
-
 </td>
 <td valign="top">
 
 304
-
-
 
 </td>
 <td valign="top">
 
 4
 
-
-
 </td>
 <td valign="top">
 
 2
-
-
 
 </td>
 </tr>
@@ -975,49 +750,35 @@ bt
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Employees.ti
 
-
-
 </td>
 <td valign="top">
 
 TEXT
-
-
 
 </td>
 <td valign="top">
 
 garray
 
-
-
 </td>
 <td valign="top">
 
 152
-
-
 
 </td>
 <td valign="top">
 
 2
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 </tr>
@@ -1026,49 +787,35 @@ garray
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Employees.ti
 
-
-
 </td>
 <td valign="top">
 
 TEXT
-
-
 
 </td>
 <td valign="top">
 
 bm
 
-
-
 </td>
 <td valign="top">
 
 136
-
-
 
 </td>
 <td valign="top">
 
 2
 
-
-
 </td>
 <td valign="top">
 
 1
-
-
 
 </td>
 </tr>
@@ -1077,50 +824,36 @@ bm
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Employees.ti
 
-
-
 </td>
 <td valign="top">
 
 TEXT
-
-
 
 </td>
 <td valign="top">
 
 barray
 
-
-
 </td>
 <td valign="top">
 
 152
 
-
-
 </td>
 <td valign="top">
 
 2
-
-
 
 </td>
 <td valign="top">
 
 1
 
-
-
 </td>
 </tr>
 <tr>
@@ -1128,49 +861,35 @@ barray
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Employees.ti
 
-
-
 </td>
 <td valign="top">
 
 TEXT
-
-
 
 </td>
 <td valign="top">
 
 dpstore
 
+</td>
+<td valign="top">
 
+0
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
 
 </td>
 </tr>
@@ -1179,49 +898,35 @@ dpstore
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Employees.ti
 
-
-
 </td>
 <td valign="top">
 
 TEXT
-
-
 
 </td>
 <td valign="top">
 
 largelob
 
+</td>
+<td valign="top">
 
+0
 
 </td>
 <td valign="top">
 
 0
 
-
-
 </td>
 <td valign="top">
 
 0
-
-
-
-</td>
-<td valign="top">
-
-0
-
-
 
 </td>
 </tr>
@@ -1230,49 +935,35 @@ largelob
 
 GROUPO
 
-
-
 </td>
 <td valign="top">
 
 GROUPO.Employees.ti
-
-
 
 </td>
 <td valign="top">
 
 TEXT
 
-
-
 </td>
 <td valign="top">
 
 txtPst
-
-
 
 </td>
 <td valign="top">
 
 304
 
-
-
 </td>
 <td valign="top">
 
 4
 
-
-
 </td>
 <td valign="top">
 
 2
-
-
 
 </td>
 </tr>

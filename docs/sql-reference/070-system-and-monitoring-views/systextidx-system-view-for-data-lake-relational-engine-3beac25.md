@@ -6,10 +6,13 @@ Each row in the SYSTEXTIDX system view describes one text index. The underlying 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3beac2596c5f101497d5d883cf3766e9__section_bg3_c2q_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYSTEXTIDX system view describes one text index. The underlying 
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 index\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The object ID of the text index in SYSIDX.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ The object ID of the text index in SYSIDX.
 
 sequence
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ For internal use only.
 
 status
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>
@@ -112,21 +91,15 @@ For internal use only.
 
 text\_config
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The object ID of the text configuration object in SYSTEXTCONFIG.
-
-
 
 </td>
 </tr>
@@ -135,21 +108,15 @@ The object ID of the text configuration object in SYSTEXTCONFIG.
 
 next\_handle
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>
@@ -158,21 +125,15 @@ For internal use only.
 
 last\_handle
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>
@@ -181,21 +142,15 @@ For internal use only.
 
 deleted\_length
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The total size of deleted indexed values in the text index.
-
-
 
 </td>
 </tr>
@@ -204,21 +159,15 @@ The total size of deleted indexed values in the text index.
 
 pending\_length
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The total size of indexed values that will be added to the text index at the next refresh.
-
-
 
 </td>
 </tr>
@@ -227,14 +176,10 @@ The total size of indexed values that will be added to the text index at the nex
 
 refresh\_type
 
-
-
 </td>
 <td valign="top">
 
 TINYINT
-
-
 
 </td>
 <td valign="top">
@@ -288,21 +233,15 @@ IMMEDIATE
 
 refresh\_interval
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The AUTO REFRESH interval, in minutes.
-
-
 
 </td>
 </tr>
@@ -311,21 +250,15 @@ The AUTO REFRESH interval, in minutes.
 
 last\_refresh
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 The local time of the last refresh.
-
-
 
 </td>
 </tr>
@@ -334,21 +267,15 @@ The local time of the last refresh.
 
 last\_refresh\_utc
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE
 
-
-
 </td>
 <td valign="top">
 
 The UTC time of the last refresh.
-
-
 
 </td>
 </tr>

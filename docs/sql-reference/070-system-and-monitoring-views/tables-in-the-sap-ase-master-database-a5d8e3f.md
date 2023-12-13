@@ -11,28 +11,20 @@ Not all SAP Adaptive Server Enterprise master database tables are implemented in
 
 Table Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 <th valign="top">
 
 Data?
 
-
-
 </th>
 <th valign="top">
 
 Supported by Data Lake Relational Engine?
-
-
 
 </th>
 </tr>
@@ -41,28 +33,20 @@ Supported by Data Lake Relational Engine?
 
 `syscharsets`
 
-
-
 </td>
 <td valign="top">
 
 One row for each character set or sort order
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -71,28 +55,20 @@ No
 
 `sysconfigures`
 
-
-
 </td>
 <td valign="top">
 
 One row for each configuration parameter that can be set by a user
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -101,28 +77,20 @@ No
 
 `syscurconfigs`
 
-
-
 </td>
 <td valign="top">
 
 Information about configuration parameters currently being used by the server
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -131,28 +99,20 @@ No
 
 `sysdatabases`
 
-
-
 </td>
 <td valign="top">
 
 One row for each database on the server
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -161,28 +121,20 @@ No
 
 `sysdevices`
 
-
-
 </td>
 <td valign="top">
 
 One row for each disk dump device, disk for databases, and disk partition for databases
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -191,28 +143,20 @@ No
 
 `sysengines`
 
-
-
 </td>
 <td valign="top">
 
 One row for each server currently online
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -221,28 +165,20 @@ No
 
 `syslanguages`
 
-
-
 </td>
 <td valign="top">
 
 One row for each language \(except U.S. English\) known to the server
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -251,28 +187,20 @@ No
 
 `syslocks`
 
-
-
 </td>
 <td valign="top">
 
 Information about active locks
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -281,28 +209,20 @@ No
 
 `sysloginroles`
 
-
-
 </td>
 <td valign="top">
 
 One row for each server login that possesses a system-defined role
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -311,28 +231,20 @@ No
 
 `syslogins`
 
-
-
 </td>
 <td valign="top">
 
 One row for each valid user account
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 </tr>
@@ -341,28 +253,20 @@ Yes
 
 `sysmessages`
 
-
-
 </td>
 <td valign="top">
 
 One row for each system error or warning
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -371,28 +275,20 @@ No
 
 `sysprocesses`
 
-
-
 </td>
 <td valign="top">
 
 Information about server processes
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -401,28 +297,20 @@ No
 
 `sysremotelogins`
 
-
-
 </td>
 <td valign="top">
 
 One row for each remote user
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -431,28 +319,20 @@ No
 
 `syssrvroles`
 
-
-
 </td>
 <td valign="top">
 
 One row for each server-wide role
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -461,28 +341,20 @@ No
 
 `sysservers`
 
-
-
 </td>
 <td valign="top">
 
 One row for each remote server
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -491,28 +363,20 @@ No
 
 `sysusages`
 
-
-
 </td>
 <td valign="top">
 
 One row for each disk piece allocated to a database
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>

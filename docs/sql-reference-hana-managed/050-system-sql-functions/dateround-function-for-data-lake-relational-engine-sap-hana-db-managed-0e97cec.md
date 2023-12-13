@@ -7,7 +7,7 @@ Calculates a new date, time, or datetime value by rounding the provided value up
 
 
 ```
-DATEROUND ( <date-part>, <datetime-expression> [, <multiple-expression> ] )
+DATEROUND ( <date-part>, <datetime-expression> [, <multiple-expression> ] );
 ```
 
 
@@ -96,7 +96,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     <tr>
     <td valign="top">
     
-        -   1
+    -   1
     -   2
     -   4
     -   5
@@ -112,7 +112,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   40
+    -   40
     -   50
     -   64
     -   80
@@ -128,7 +128,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   400
+    -   400
     -   500
     -   625
     -   800
@@ -144,7 +144,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   4000
+    -   4000
     -   5000
     -   6250
     -   8000
@@ -160,7 +160,7 @@ For the microsecond, millisecond, second, minute, and hour date parts, specify a
     </td>
     <td valign="top">
     
-        -   40000
+    -   40000
     -   50000
     -   62500
     -   100000
@@ -201,33 +201,33 @@ If data lake Relational Engine rounds to a multiple of the week date part, then 
 
     ```
     SELECT DATEROUND( MI, 'August 13, 2009 10:33.123AM', 10)
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 -   This statement returns the value August 13, 2009 10:32:35.456600 AM:
 
     ```
     SELECT DATEROUND( US, 'August 13, 2009, 10:32:35.456500AM', 200 )
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 -   This statement returns the value August 13, 2009 10:32:35.456789 AM:
 
     ```
     SELECT DATEROUND( US, 'August 13, 2009, 10:32:35.456789AM')
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 -   This statement returns the value August 13, 2009 10:32:35.456400 AM:
 
     ```
     SELECT DATEROUND( US, 'August 13, 2009, 10:32:35.456499AM', 200 )
-     FROM iq_dummy
+     FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[DATEROUND Function [Date and Time] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a5483a3f84f21015ba1087485982b02f.html "Calculates a new date, time, or datetime value by rounding the provided value up or down to the nearest multiple of the specified value with the specified granularity.") :arrow_upper_right:
+[DATEROUND Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5483a3f84f21015ba1087485982b02f.html "Calculates a new date, time, or datetime value by rounding the provided value up or down to the nearest multiple of the specified value with the specified granularity.") :arrow_upper_right:
 

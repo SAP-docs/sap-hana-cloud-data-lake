@@ -6,10 +6,13 @@ Prepares a statement to be executed later or used for a cursor.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa621eea184f210159e6ef52c2216ba0b__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -17,7 +20,7 @@ Prepares a statement to be executed later or used for a cursor.
 PREPARE <statement-name> 
    FROM <statement> [ FOR { READ ONLY | UPDATE [ OF <column-name-list> ] } ] 
    ... [ DESCRIBE <describe-type> INTO [ [ SQL ] DESCRIPTOR ] <descriptor> ]
-   ... [ WITH EXECUTE ]
+   ... [ WITH EXECUTE ];
 ```
 
 ```
@@ -27,7 +30,7 @@ PREPARE <statement-name>
    | INPUT 
    | OUTPUT 
    | SELECT LIST } ... { LONG NAMES [ [ OWNER.]TABLE.]COLUMN ] 
-   | WITH VARIABLE RESULT }
+   | WITH VARIABLE RESULT };
 ```
 
 
@@ -181,8 +184,6 @@ EXEC SQL PREPARE employee_statement FROM
 [DECLARE CURSOR Statement \[ESQL\] \[SP\] for Data Lake Relational Engine](declare-cursor-statement-esql-sp-for-data-lake-relational-engine-a61ac0b.md "Declares a cursor. Cursors are the primary means for manipulating the results of queries.")
 
 [DESCRIBE Statement \[ESQL\] for Data Lake Relational Engine](describe-statement-esql-for-data-lake-relational-engine-a61bb2c.md "Gets information about the host variables required to store data retrieved from the database or host variables used to pass data to the database.")
-
-[DROP Statement for Data Lake Relational Engine](drop-statement-for-data-lake-relational-engine-a61c216.md "Removes objects from the database.")
 
 [EXECUTE Statement \[ESQL\] for Data Lake Relational Engine](execute-statement-esql-for-data-lake-relational-engine-a774406.md "Executes a SQL statement.")
 

@@ -6,15 +6,18 @@ Drops a connection with the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa61bf2a484f2101586c89bad47992194__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-DISCONNECT [ { <connection-name> | CURRENT | ALL } ]
+DISCONNECT [ { <connection-name> | CURRENT | ALL } ];
 ```
 
 
@@ -91,13 +94,13 @@ None
 -   The following example uses `DISCONNECT` in Embedded SQL:
 
     ```
-    EXEC SQL DISCONNECT :conn_name
+    EXEC SQL DISCONNECT :conn_name;
     ```
 
 -   The following example uses `DISCONNECT` from `dbisql` to disconnect all connections:
 
     ```
-    DISCONNECT ALL
+    DISCONNECT ALL;
     ```
 
 

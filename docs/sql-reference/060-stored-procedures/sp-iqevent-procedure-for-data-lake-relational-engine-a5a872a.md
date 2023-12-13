@@ -6,22 +6,25 @@ Displays information about system and user-defined events.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5a872a584f21015ba4c951765fe55ca__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqevent [ <event-name> ], [ <event-owner> ], [ <event-type> ]
+sp_iqevent [ <event-name> ], [ <event-owner> ], [ <event-type> ];
 ```
 
 
 
 <a name="loioa5a872a584f21015ba4c951765fe55ca__iq_refbb_1564"/>
 
-## Parameter
+## Parameters
 
 
 <dl>
@@ -69,7 +72,7 @@ The type of event. Allowed values are:
 
 <a name="loioa5a872a584f21015ba4c951765fe55ca__section_ztj_rlz_mbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -78,14 +81,10 @@ The type of event. Allowed values are:
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -94,14 +93,10 @@ Description
 
 event\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the event.
-
-
 
 </td>
 </tr>
@@ -110,14 +105,10 @@ The name of the event.
 
 event\_owner
 
-
-
 </td>
 <td valign="top">
 
 The owner of the event.
-
-
 
 </td>
 </tr>
@@ -126,14 +117,10 @@ The owner of the event.
 
 event\_type
 
-
-
 </td>
 <td valign="top">
 
 For system events, the event type as listed in the SYSEVENTTYPE system table.
-
-
 
 </td>
 </tr>
@@ -142,14 +129,10 @@ For system events, the event type as listed in the SYSEVENTTYPE system table.
 
 enabled
 
-
-
 </td>
 <td valign="top">
 
 Indicates whether or not the event is allowed to fire \(Y/N\).
-
-
 
 </td>
 </tr>
@@ -158,14 +141,10 @@ Indicates whether or not the event is allowed to fire \(Y/N\).
 
 action
 
-
-
 </td>
 <td valign="top">
 
 The event handler definition.
-
-
 
 </td>
 </tr>
@@ -174,14 +153,10 @@ The event handler definition.
 
 condition
 
-
-
 </td>
 <td valign="top">
 
 The WHERE condition used to control firing of the event handler.
-
-
 
 </td>
 </tr>
@@ -189,8 +164,6 @@ The WHERE condition used to control firing of the event handler.
 <td valign="top">
 
 location
-
-
 
 </td>
 <td valign="top">
@@ -210,14 +183,10 @@ The location where the event is allowed to fire:
 
 remarks
 
-
-
 </td>
 <td valign="top">
 
 A comment string.
-
-
 
 </td>
 </tr>
@@ -258,7 +227,7 @@ None
 -   The following example displays information about all user events in the database:
 
     ```
-    sp_iqevent
+    sp_iqevent;
     ```
 
 -   The following example displays information about the user-defined event e1:
@@ -292,49 +261,49 @@ None
 -   In the following example, No rows returned, as the event non\_existing\_event does not exist:
 
     ```
-    sp_iqevent non_existing_event
+    sp_iqevent non_existing_event;
     ```
 
 -   The following example displays information about all events owned by DBA:
 
     ```
-    sp_iqevent NULL, DBA
+    sp_iqevent NULL, DBA;
     ```
 
 -   The following example displays information about the event e1 owned by DBA:
 
     ```
-    sp_iqevent e1, DBA
+    sp_iqevent e1, DBA;
     ```
 
 -   In the following example, ev\_iqbegintxn is a system-defined event. If there is no user-defined event also named ev\_iqbegintxn, no rows are returned. \(By default, only user-defined events are returned\):
 
     ```
-    sp_iqevent ev_iqbegintxn
+    sp_iqevent ev_iqbegintxn;
     ```
 
 -   In the following example, no rows returned, as the event ev\_iqbegintxn is not a user event \(by default only user events returned\):
 
     ```
-    sp_iqevent ev_iqbegintxn, dbo
+    sp_iqevent ev_iqbegintxn, dbo;
     ```
 
 -   The following example displays information about all system events \(owned by dbo or SYS\):
 
     ```
-    sp_iqevent NULL, NULL, SYSTEM
+    sp_iqevent NULL, NULL, SYSTEM;
     ```
 
 -   The following example displays information about the system event ev\_iqbegintxn:
 
     ```
-    sp_iqevent ev_iqbegintxn, NULL, SYSTEM
+    sp_iqevent ev_iqbegintxn, NULL, SYSTEM;
     ```
 
 -   The following example displays information about the system event ev\_iqbegintxn owned by dbo:
 
     ```
-    sp_iqevent ev_iqbegintxn, dbo, ALL
+    sp_iqevent ev_iqbegintxn, dbo, ALL;
     ```
 
 

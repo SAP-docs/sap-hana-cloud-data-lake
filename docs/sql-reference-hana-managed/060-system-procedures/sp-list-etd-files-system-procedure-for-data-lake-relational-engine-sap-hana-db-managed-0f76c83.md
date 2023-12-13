@@ -6,17 +6,21 @@ Lists the event trace data \(ETD\) files logged to the file container by databas
 
 
 
+<a name="loio0f76c8361cd84a2b8b35f74382b9265f__section_dh4_3db_1yb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+
 > ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Running Procedures](remote-execute-usage-examples-for-running-procedures-3e7f86d.md) for more information.
+> This syntax cannot be run when connected to SAP HANA database as a SAP HANA database user and using SAP HANA database REMOTE\_EXECUTE or REMOTE\_EXECUTE\_QUERY.
 
 
 
 ```
-sp_list_etd_files([ <file_name_pattern > ])
+sp_list_etd_files( [ <file_name_pattern > ] );
 ```
 
 
@@ -29,12 +33,12 @@ sp_list_etd_files([ <file_name_pattern > ])
 <dl>
 <dt><b>
 
- *<file\_name\_pattern\>* 
+*<file\_name\_pattern\>* 
 
 </b></dt>
 <dd>
 
-Enter a file name pattern for ETD file name matching. Accepts the wildcard characters ***\**** and ***?*** .
+Enter a file name pattern for ETD file name matching. Accepts the wildcard characters `*` and `?` .
 
 If null, then lists all ETD files.
 
@@ -47,7 +51,7 @@ If null, then lists all ETD files.
 
 <a name="loio0f76c8361cd84a2b8b35f74382b9265f__section_qcm_hm2_srb"/>
 
-## Column Definitions for Output
+## Result Set
 
 
 <table>
@@ -56,21 +60,15 @@ If null, then lists all ETD files.
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -79,21 +77,15 @@ Description
 
 file\_name
 
-
-
 </td>
 <td valign="top">
 
 LONG NVARCHAR
 
-
-
 </td>
 <td valign="top">
 
 File name of the ETD file.
-
-
 
 </td>
 </tr>
@@ -102,21 +94,15 @@ File name of the ETD file.
 
 file\_size
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 ETD file size in bytes.
-
-
 
 </td>
 </tr>
@@ -125,21 +111,15 @@ ETD file size in bytes.
 
 modified\_date\_time
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE
 
-
-
 </td>
 <td valign="top">
 
 Time the ETD file was last modified.
-
-
 
 </td>
 </tr>
@@ -155,14 +135,18 @@ The result set displays one ETD file per row.
 
 
 
-<a name="loio0f76c8361cd84a2b8b35f74382b9265f__section_ylc_twb_zmb"/>
+<a name="loio0f76c8361cd84a2b8b35f74382b9265f__section_gzr_tdb_1yb"/>
 
 ## Privileges
 
-Requires one of:
 
--   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+### 
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure
+-   MANAGE AUDITING system privilege
 
 
 
@@ -176,27 +160,88 @@ None
 
 <a name="loio0f76c8361cd84a2b8b35f74382b9265f__section_xws_jm2_srb"/>
 
-## Example
+## Examples
 
-Assume you have a SELECT statement listing all ETD files with a file name beginning with the string '`my_session_20201126_`' :
-
-```
-SELECT * FROM dbo.sp_list_etd_files('my_session_20201126_*')
-
+Assume you have a SELECT statement listing all ETD files with a file name beginning with the string '`my_session_20201126_`'. The following statement returns the ETD files for the session:
 
 ```
-
-The example output is:
-
+SELECT * FROM sp_list_etd_files('my_session_20201126_*');
 ```
-my_session_20201126_181818.173_auditdb_eng.etd 635  2020-09-13 18:40:21.000+00:00
-my_session_20201126_184000.000_auditdb_eng.etd 710  2020-11-26 18:50:52.000+00:00
-my_session_20201126_185000.000_auditdb_eng.etd  260 2020-11-26 18:50:52.000+00:00
 
-```
+
+<table>
+<tr>
+<th valign="top">
+
+file\_name
+
+</th>
+<th valign="top">
+
+file\_size
+
+</th>
+<th valign="top">
+
+modified\_date\_time
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+my\_session\_20201126\_181818.173\_auditdb\_eng.etd
+
+</td>
+<td valign="top">
+
+635
+
+</td>
+<td valign="top">
+
+2023-08-13 18:40:21.000+00:00
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+my\_session\_20201126\_184000.000\_auditdb\_eng.etd
+
+</td>
+<td valign="top">
+
+710
+
+</td>
+<td valign="top">
+
+2023-08-26 18:50:52.000+00:00
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+my\_session\_20201126\_185000.000\_auditdb\_eng.etd
+
+</td>
+<td valign="top">
+
+260
+
+</td>
+<td valign="top">
+
+2023-09-26 18:50:52.000+00:00
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 
 
-[sp_list_etd_files System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/5f0eb4a9f1734b6d9ef6661867578898.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
+[sp_list_etd_files System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/5f0eb4a9f1734b6d9ef6661867578898.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
 

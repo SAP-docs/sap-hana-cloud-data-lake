@@ -6,15 +6,18 @@ Releases a savepoint within the current transaction.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa622de8d84f21015be4fc3e6a28ea41e__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-RELEASE SAVEPOINT [ <savepoint-name> ]
+RELEASE SAVEPOINT [ <savepoint-name> ];
 ```
 
 

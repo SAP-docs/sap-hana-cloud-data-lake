@@ -20,14 +20,10 @@ System privileges control the rights of users to perform authorized database tas
 
 System Privilege
 
-
-
 </th>
 <th valign="top">
 
 Allows a User To...
-
-
 
 </th>
 </tr>
@@ -35,8 +31,6 @@ Allows a User To...
 <td valign="top">
 
 ALTER ANY OBJECT
-
-
 
 </td>
 <td valign="top">
@@ -55,14 +49,10 @@ Alter and comment on the following types of objects owned by any user:
 
 ALTER ANY PROCEDURE
 
-
-
 </td>
 <td valign="top">
 
 Alter and comment on procedures and functions owned by any user.
-
-
 
 </td>
 </tr>
@@ -70,8 +60,6 @@ Alter and comment on procedures and functions owned by any user.
 <td valign="top">
 
 CREATE ANY OBJECT
-
-
 
 </td>
 <td valign="top">
@@ -90,14 +78,10 @@ Create and comment on the following types of objects owned by any user:
 
 CREATE ANY PROCEDURE
 
-
-
 </td>
 <td valign="top">
 
 Create and comment on procedures and functions owned by any user.
-
-
 
 </td>
 </tr>
@@ -106,14 +90,10 @@ Create and comment on procedures and functions owned by any user.
 
 CREATE PROCEDURE
 
-
-
 </td>
 <td valign="top">
 
 Create and comment on self-owned procedures and functions.
-
-
 
 </td>
 </tr>
@@ -121,8 +101,6 @@ Create and comment on self-owned procedures and functions.
 <td valign="top">
 
 DROP ANY OBJECT
-
-
 
 </td>
 <td valign="top">
@@ -141,14 +119,10 @@ Drop the following types of objects owned by any user:
 
 DROP ANY PROCEDURE
 
-
-
 </td>
 <td valign="top">
 
 Drop procedures and functions owned by any user.
-
-
 
 </td>
 </tr>
@@ -157,14 +131,10 @@ Drop procedures and functions owned by any user.
 
 MANAGE ANY OBJECT PRIVILEGE
 
-
-
 </td>
 <td valign="top">
 
 Grant object privileges to users and roles.
-
-
 
 </td>
 </tr>
@@ -173,14 +143,10 @@ Grant object privileges to users and roles.
 
 MANAGE ANY TRACE SESSION
 
-
-
 </td>
 <td valign="top">
 
 Create a trace session.
-
-
 
 </td>
 </tr>
@@ -189,14 +155,10 @@ Create a trace session.
 
 MANAGE ROLES
 
-
-
 </td>
 <td valign="top">
 
 Grant roles to users and other roles.
-
-
 
 </td>
 </tr>

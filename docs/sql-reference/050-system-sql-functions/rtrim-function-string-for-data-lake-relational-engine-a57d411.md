@@ -7,7 +7,7 @@ Returns a string, trimmed of all the trailing characters present in the trim cha
 
 
 ```
-RTRIM ( <string-expression>, [ <trim_character_set> ] )
+RTRIM ( <string-expression>, [ <trim_character_set> ] );
 ```
 
 
@@ -47,7 +47,7 @@ The set of characters to use for trim.
 
 <a name="loioa57d411084f21015969acd7d63bcc34c__RTRIM_returns1"/>
 
-## Returns
+## Result Set
 
 Trimmed string.
 
@@ -76,7 +76,7 @@ If trim character set is not specified, all training spaces in the string expres
 The following statement removes all trailing `a` and `b` characters from the given string and returns the value `babababAabend`.
 
 ```
-SELECT RTRIM ('babababAabendbababab','ab') "rtrim" FROM iq_dummy
+SELECT RTRIM ('babababAabendbababab','ab') "rtrim" FROM iq_dummy;
 ```
 
 **Related Information**  
@@ -86,5 +86,5 @@ SELECT RTRIM ('babababAabendbababab','ab') "rtrim" FROM iq_dummy
 
 [TRIM Function \[String\] for Data Lake Relational Engine](trim-function-string-for-data-lake-relational-engine-a58b326.md "Returns a string, trimmed of all the leading and trailing characters present in the trim character set.")
 
-[RTRIM Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3b49f57802c0438a98d16f1b572609ac.html "Returns a string, trimmed of all the trailing characters present in the trim character set.") :arrow_upper_right:
+[RTRIM Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3b49f57802c0438a98d16f1b572609ac.html "Returns a string, trimmed of all the trailing characters present in the trim character set.") :arrow_upper_right:
 

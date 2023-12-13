@@ -6,8 +6,11 @@ The amount of time before data lake Relational Engine removes a shut down node f
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa448d24284f210159f2192ccbd77d071__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

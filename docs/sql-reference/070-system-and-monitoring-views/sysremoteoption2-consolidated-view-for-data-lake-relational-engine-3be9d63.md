@@ -6,10 +6,13 @@ Joins together, and presents in a more readable format, the columns from SYSREMO
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be9d6356c5f1014b687a7ef8ca12a18__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -22,6 +25,6 @@ ALTER VIEW "SYS"."SYSREMOTEOPTION2"
   as select ISYSREMOTEOPTION.option_id,
     ISYSREMOTEOPTION.user_id,
     SYS.HIDE_FROM_NON_DBA(ISYSREMOTEOPTION.setting) as setting
-    from SYS.ISYSREMOTEOPTION
+    from SYS.ISYSREMOTEOPTION;
 ```
 

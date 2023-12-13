@@ -6,20 +6,18 @@ Returns information about the files and subdirectories in a specified directory.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE_EXECUTE/REMOTE_EXECUTE_DDL Usage Examples for Running Procedures](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3e7f86d36c3c4335822e2908ee320623.html "The process to run a procedure depends on if the procedure returns a results set.") :arrow_upper_right: for more information.
+<a name="loio81790c1c6ce21014b303ec9036456fdb__section_uv1_znj_g4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_list_directory(
-<root_path>
-[, <max_depth> ]
-)
+sp_list_directory( <root_path> [, <max_depth> ] );
 ```
 
 
@@ -32,7 +30,7 @@ sp_list_directory(
 <dl>
 <dt><b>
 
- *<root\_path\>* 
+*<root\_path\>* 
 
 </b></dt>
 <dd>
@@ -50,7 +48,7 @@ For diagnostic files, *<root\_path\>* requires the common prefix:
 
 </dd><dt><b>
 
- *<max\_depth\>* 
+*<max\_depth\>* 
 
 </b></dt>
 <dd>
@@ -75,14 +73,10 @@ Use this optional INTEGER parameter to specify the maximum number of directories
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Column description
-
-
 
 </th>
 </tr>
@@ -91,14 +85,10 @@ Column description
 
 *<file\_path\>*
 
-
-
 </td>
 <td valign="top">
 
 LONG NVARCHAR - The path to a file or subdirectory within the specified directory. If *<directory\_path\>* is specified as a relative path, then the returned *<file\_path\>* is a relative value. Otherwise, *<file\_path\>* is an absolute value. When the sandbox feature is enabled, the absolute and relative paths refer to the directory where the main database file is located.
-
-
 
 </td>
 </tr>
@@ -107,14 +97,10 @@ LONG NVARCHAR - The path to a file or subdirectory within the specified director
 
 *<file\_type\>*
 
-
-
 </td>
 <td valign="top">
 
 NVARCHAR\(1\) - F if the *<file\_path\>* value is a file or D when the *<file\_path\>* value is a directory.
-
-
 
 </td>
 </tr>
@@ -123,14 +109,10 @@ NVARCHAR\(1\) - F if the *<file\_path\>* value is a file or D when the *<file\_p
 
 *<file\_size\>* 
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT - Specifies the size in bytes of the file or NULL when *<file\_path\>* value is a directory
-
-
 
 </td>
 </tr>
@@ -139,14 +121,10 @@ UNSIGNED BIGINT - Specifies the size in bytes of the file or NULL when *<file\_p
 
 *<owner\>*
 
-
-
 </td>
 <td valign="top">
 
 NVARCHAR\(128\) - The owner of the file or directory.
-
-
 
 </td>
 </tr>
@@ -155,14 +133,10 @@ NVARCHAR\(128\) - The owner of the file or directory.
 
 *<create\_date\_time\>*
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE - The date and time the file or directory was created, returned in the database server's time zone.
-
-
 
 </td>
 </tr>
@@ -171,14 +145,10 @@ TIMESTAMP WITH TIME ZONE - The date and time the file or directory was created, 
 
 *<modified\_date\_time\>*
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE - The date and time the file or directory was last modified, returned in the database server's time zone.
-
-
 
 </td>
 </tr>
@@ -187,14 +157,10 @@ TIMESTAMP WITH TIME ZONE - The date and time the file or directory was last modi
 
 *<access\_date\_time\>*
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP WITH TIME ZONE - The date and time the file or directory was last accessed, returned in the database server's time zone.
-
-
 
 </td>
 </tr>
@@ -203,14 +169,10 @@ TIMESTAMP WITH TIME ZONE - The date and time the file or directory was last acce
 
 *<permissions\>*
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(10\) - The set of access permissions for the file or directory.
-
-
 
 </td>
 </tr>
@@ -267,7 +229,15 @@ Not in the standard.
 
 
 
-Example result:
+<a name="loio81790c1c6ce21014b303ec9036456fdb__sp_list_directory_example"/>
+
+## Examples
+
+The following example lists the files and subdirectories for diagnostic logs, one level down.
+
+```
+CALL sp_list_directory( '/diag/logs','1');
+```
 
 
 <table>
@@ -276,56 +246,40 @@ Example result:
 
 file\_path
 
-
-
 </th>
 <th valign="top">
 
 file\_type
-
-
 
 </th>
 <th valign="top">
 
 file\_size
 
-
-
 </th>
 <th valign="top">
 
 owner
-
-
 
 </th>
 <th valign="top">
 
 create\_date\_time
 
-
-
 </th>
 <th valign="top">
 
 modified\_date\_time
-
-
 
 </th>
 <th valign="top">
 
 access\_date\_time
 
-
-
 </th>
 <th valign="top">
 
 permissions
-
-
 
 </th>
 </tr>
@@ -334,286 +288,82 @@ permissions
 
 /diag/logs/mpx-coord-0
 
-
-
 </td>
 <td valign="top">
 
 D
 
+</td>
+<td valign="top">
 
+NULL
 
 </td>
 <td valign="top">
 
-
-
-</td>
-<td valign="top">
-
-saptu
-
-
+122181570
 
 </td>
 <td valign="top">
 
-1970-01-01 00:00:00.000-05:00
-
-
+1970-01-01 00:00:00.000-00:00
 
 </td>
 <td valign="top">
 
-2021-11-25 01:33:13.000-05:00
-
-
+2023-09-28 13:35:33.000-00:00
 
 </td>
 <td valign="top">
 
-1970-01-01 00:00:00.000-05:00
-
-
+1970-01-01 00:00:00.000-00:00
 
 </td>
 <td valign="top">
 
-drwxr-xr-x
-
-
+drwxr-x---
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-/diag/logs/mpx-coord-0/iqaas\_20211125\_000000.002\_mpx-coord-0.iqmsg
-
-
+/diag/logs/mpx-coord-0
 
 </td>
 <td valign="top">
 
-F
-
-
+FD
 
 </td>
 <td valign="top">
 
-632846
-
-
+NULL
 
 </td>
 <td valign="top">
 
-saptu
-
-
+122181570
 
 </td>
 <td valign="top">
 
-1970-01-01 00:00:00.000-05:00
-
-
+1970-01-01 00:00:00.000-00:00
 
 </td>
 <td valign="top">
 
-2021-11-25 01:30:06.000-05:00
-
-
+2023-09-28 13:35:33.000-00:00
 
 </td>
 <td valign="top">
 
-1970-01-01 00:00:00.000-05:00
-
-
+1970-01-01 00:00:00.000-00:00
 
 </td>
 <td valign="top">
 
-\-rwxr-xr-x
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-/diag/logs/mpx-coord-0/iqaas\_20211124\_174654.405\_mpx-coord-0.iqmsg
-
-
-
-</td>
-<td valign="top">
-
-F
-
-
-
-</td>
-<td valign="top">
-
-6683
-
-
-
-</td>
-<td valign="top">
-
-saptu
-
-
-
-</td>
-<td valign="top">
-
-1970-01-01 00:00:00.000-05:00
-
-
-
-</td>
-<td valign="top">
-
-2021-11-24 17:47:08.000-05:00
-
-
-
-</td>
-<td valign="top">
-
-1970-01-01 00:00:00.000-05:00
-
-
-
-</td>
-<td valign="top">
-
-\-rwxr-xr-x
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-/diag/logs/mpx-coord-0/iqaas\_20211124\_174421.990\_mpx-coord-0.iqmsg
-
-
-
-</td>
-<td valign="top">
-
-F
-
-
-
-</td>
-<td valign="top">
-
-22277
-
-
-
-</td>
-<td valign="top">
-
-saptu
-
-
-
-</td>
-<td valign="top">
-
-1970-01-01 00:00:00.000-05:00
-
-
-
-</td>
-<td valign="top">
-
-2021-11-24 17:46:51.000-05:00
-
-
-
-</td>
-<td valign="top">
-
-1970-01-01 00:00:00.000-05:00
-
-
-
-</td>
-<td valign="top">
-
-\-rwxr-xr-x
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-/diag/logs/mpx-coord-0/iqaas\_20211124\_174029.462\_mpx-coord-0.iqmsg
-
-
-
-</td>
-<td valign="top">
-
-F
-
-
-
-</td>
-<td valign="top">
-
-4072
-
-
-
-</td>
-<td valign="top">
-
-saptu
-
-
-
-</td>
-<td valign="top">
-
-1970-01-01 00:00:00.000-05:00
-
-
-
-</td>
-<td valign="top">
-
-2021-11-24 17:40:37.000-05:00
-
-
-
-</td>
-<td valign="top">
-
-1970-01-01 00:00:00.000-05:00
-
-
-
-</td>
-<td valign="top">
-
-\-rwxr-xr-x
-
-
+drwxr-x---
 
 </td>
 </tr>
@@ -622,7 +372,7 @@ saptu
 **Related Information**  
 
 
-[sp_list_directory System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/3bdb623038354a3b9f12503766abe7c1.html "Returns information about the files and subdirectories in a specified directory.") :arrow_upper_right:
+[sp_list_directory System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3bdb623038354a3b9f12503766abe7c1.html "Returns information about the files and subdirectories in a specified directory.") :arrow_upper_right:
 
-[sp_list_etd_files System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/0f76c8361cd84a2b8b35f74382b9265f.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
+[sp_list_etd_files System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/0f76c8361cd84a2b8b35f74382b9265f.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
 

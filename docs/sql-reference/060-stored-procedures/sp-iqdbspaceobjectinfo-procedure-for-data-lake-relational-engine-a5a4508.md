@@ -6,16 +6,19 @@ Lists objects and subobjects of type table \(including columns, indexes, metadat
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5a4508c84f21015bbd8e6350bea7591__section_j5b_wvh_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 sp_iqdbspaceobjectinfo [ <dbspace-name> ]
- [ , <owner_name> ] [ ,  <object_name> ] [ , <object-type> ]
+ [ , <owner_name> ] [ ,  <object_name> ] [ , <object-type> ];
 ```
 
 
@@ -77,7 +80,7 @@ sp_iqdbspaceobjectinfo [ <dbspace-name> ]
 
 <a name="loioa5a4508c84f21015bbd8e6350bea7591__section_un4_ppz_mbb"/>
 
-## Returns
+## Result Set
 
 
 <table>
@@ -86,14 +89,10 @@ sp_iqdbspaceobjectinfo [ <dbspace-name> ]
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -102,14 +101,10 @@ Description
 
 dbspace\_name
 
-
-
 </td>
 <td valign="top">
 
 Name of the dbspace.
-
-
 
 </td>
 </tr>
@@ -118,14 +113,10 @@ Name of the dbspace.
 
 dbspace\_id
 
-
-
 </td>
 <td valign="top">
 
 Identifier of the dbspace.
-
-
 
 </td>
 </tr>
@@ -134,14 +125,10 @@ Identifier of the dbspace.
 
 object\_type
 
-
-
 </td>
 <td valign="top">
 
 Table.
-
-
 
 </td>
 </tr>
@@ -150,14 +137,10 @@ Table.
 
 owner
 
-
-
 </td>
 <td valign="top">
 
 Name of the owner of the object.
-
-
 
 </td>
 </tr>
@@ -166,14 +149,10 @@ Name of the owner of the object.
 
 object\_name
 
-
-
 </td>
 <td valign="top">
 
 Name of the table object on the dbspace.
-
-
 
 </td>
 </tr>
@@ -182,14 +161,10 @@ Name of the table object on the dbspace.
 
 object\_id
 
-
-
 </td>
 <td valign="top">
 
 Global object ID of the object.
-
-
 
 </td>
 </tr>
@@ -198,14 +173,10 @@ Global object ID of the object.
 
 id
 
-
-
 </td>
 <td valign="top">
 
 Table ID of the object.
-
-
 
 </td>
 </tr>
@@ -214,14 +185,10 @@ Table ID of the object.
 
 columns
 
-
-
 </td>
 <td valign="top">
 
 Number of table columns located on the given dbspace. If a column or one of the column-partitions is located on a dbspace, it is counted to be present on that dbspace. The result is shown in the form n/N \(n out of total N columns of the table are on the given dbspace\).
-
-
 
 </td>
 </tr>
@@ -230,14 +197,10 @@ Number of table columns located on the given dbspace. If a column or one of the 
 
 indexes
 
-
-
 </td>
 <td valign="top">
 
 Number of user-defined indexes on the table located on the given dbspace. Shown in the form n/N \(n out of total N indexes on the table are on the given dbspace\). This does not contain indexes, which are system-generated, such as FP indexes and HG indexes in the case of unique constraints.
-
-
 
 </td>
 </tr>
@@ -246,14 +209,10 @@ Number of user-defined indexes on the table located on the given dbspace. Shown 
 
 metadata
 
-
-
 </td>
 <td valign="top">
 
  
-
-
 
 </td>
 </tr>
@@ -262,14 +221,10 @@ metadata
 
 primary\_key
 
-
-
 </td>
 <td valign="top">
 
 Boolean field \(1/0\) that denotes whether the primary key of the table, if any, is located on this dbspace.Boolean field \(Y/N\) that denotes whether the metadata information of the subobject is also located on this dbspace.
-
-
 
 </td>
 </tr>
@@ -278,14 +233,10 @@ Boolean field \(1/0\) that denotes whether the primary key of the table, if any,
 
 unique\_constraint
 
-
-
 </td>
 <td valign="top">
 
 Number of unique constraints on the table that are located on the given dbspace. Appears in the form n/N \(n out of total N unique constraints on the table are in the given dbspace\).
-
-
 
 </td>
 </tr>
@@ -294,14 +245,10 @@ Number of unique constraints on the table that are located on the given dbspace.
 
 foreign\_key
 
-
-
 </td>
 <td valign="top">
 
 Boolean fieldNumber of foreign\_keys on the table that are located on the given dbspace. Appears in the form n/N \(n out of total N foreign keys on the table are in the given dbspace\).
-
-
 
 </td>
 </tr>
@@ -310,14 +257,10 @@ Boolean fieldNumber of foreign\_keys on the table that are located on the given 
 
 partitions
 
-
-
 </td>
 <td valign="top">
 
 Number of partitions of the table that are located on the given dbspace. Appears in the form n/N \(n out of total N partitions of the table are in the given dbspace\).
-
-
 
 </td>
 </tr>
@@ -360,7 +303,7 @@ These examples show objects in the iqdemo database to better illustrate output. 
 -   The following example displays information about a specific dbspace in the database:
 
     ```
-    sp_iqdbspaceobjectinfo iq_main
+    sp_iqdbspaceobjectinfo iq_main;
     ```
 
     ```
@@ -396,7 +339,7 @@ These examples show objects in the iqdemo database to better illustrate output. 
 -   The following example displays information about the objects owned by a specific user in a specific dbspace in the database:
 
     ```
-    sp_iqdbspaceobjectinfo iq_main,GROUPO
+    sp_iqdbspaceobjectinfo iq_main,GROUPO;
     ```
 
     ```

@@ -6,8 +6,11 @@ Controls whether or not MESSAGE statements that include a DEBUG ONLY clause are 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa6331adb84f21015ad4ae4e3d890bb7e__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

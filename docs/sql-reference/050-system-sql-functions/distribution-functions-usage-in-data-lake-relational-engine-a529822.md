@@ -11,7 +11,7 @@ These functions return one value per group. For PERCENTILE\_DISC, the data type 
 The inverse distribution analytical functions require a `WITHIN GROUP (ORDER BY)` clause. For example:
 
 ```
-PERCENTILE_CONT ( <expression1> ) WITHIN GROUP ( ORDER BY <expression2> [ASC | DESC ] )
+PERCENTILE_CONT ( <expression1> ) WITHIN GROUP ( ORDER BY <expression2> [ASC | DESC ] );
 ```
 
 The value of *<expression1\>* must be a constant of numeric data type and range from 0 to 1 \(inclusive\). If the argument is NULL, then a "wrong argument for percentile" error is returned. If the argument value is less than 0, or greater than 1, then a "data value out of range" error is returned.

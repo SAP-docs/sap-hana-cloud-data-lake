@@ -7,7 +7,7 @@ Encrypts the specified value using the supplied encryption key and returns a LON
 
 
 ```
-ENCRYPT( <string-expression> , <key> [ , <algorithm-format> [ , <initialization-vector> ] ] )
+ENCRYPT( <string-expression> , <key> [ , <algorithm-format> [ , <initialization-vector> ] ] );
 ```
 
 ```
@@ -55,7 +55,7 @@ PADDING= { PKCS5
 <dl>
 <dt><b>
 
- *<string-expression\>* 
+*<string-expression\>* 
 
 </b></dt>
 <dd>
@@ -66,7 +66,7 @@ The string to be encrypted. Binary values are supported. This parameter is case 
 
 </dd><dt><b>
 
- *<key\>* 
+*<key\>* 
 
 </b></dt>
 <dd>
@@ -82,7 +82,7 @@ Specify keys in PEM format for RSA.
 
 </dd><dt><b>
 
- *<algorithm-format\>* 
+*<algorithm-format\>* 
 
 </b></dt>
 <dd>
@@ -93,7 +93,7 @@ This optional string parameter specifies the type of algorithm, format, and padd
 <dl>
 <dt><b>
 
- *<algorithm\>* 
+*<algorithm\>* 
 
 </b></dt>
 <dd>
@@ -321,7 +321,7 @@ The data is not padded. The input data must be a multiple of the cipher block le
 
 </dd><dt><b>
 
- *<initialization-vector\>* 
+*<initialization-vector\>* 
 
 </b></dt>
 <dd>
@@ -337,7 +337,7 @@ Specify *<initialization-vector\>* when *<format\>* is set to RAW. The string ca
 
 <a name="loio81f72ceb6ce210149256a7523672a8bb__ENCRYPT_returns1"/>
 
-## Returns
+## Result Set
 
 LONG BINARY
 
@@ -379,6 +379,8 @@ Not in the standard.
 
 
 
+## Example
+
 The following trigger encrypts the user\_pwd column of the user\_info table. This column contains users' passwords, and the trigger fires whenever a password value is changed.
 
 ```
@@ -392,12 +394,41 @@ BEGIN
 END;
 ```
 
+The following example updates the `secret` column with an encrypted version of the `password` column. The data is encrypted using RSA encryption and a public key certificate and decrypted using a private key certificate. The example also shows how to generate a public and private key certificate.
+
+```
+CREATE OR REPLACE TABLE SensitiveData
+    ( 
+    username char(30), password char(30), secret binary(64) 
+    );
+    
+    INSERT INTO SensitiveData (username, password) 
+    VALUES 
+    ('Martin',  'topXsecret1'), 
+    ('Jasmine', 'my_big_secret'), 
+    ('Aidan',   'Shortcutsmakelongdelays');
+    
+    CREATE OR REPLACE VARIABLE pub LONG VARCHAR;
+    CREATE OR REPLACE VARIABLE priv lONG VARCHAR;
+    CREATE OR REPLACE TABLE keys ( ext INT, pubkey LONG VARCHAR, privkey LONG VARCHAR );
+    CALL sp_generate_key_pair( 512, pub, priv, 'RSA' );
+    INSERT INTO keys VALUES ( 0, pub, priv ); // save in database table
+    MESSAGE 'Server keys: \n' || pub || '\n' || priv;
+    UPDATE SensitiveData 
+    SET secret = ENCRYPT( password, pub, 'RSA' );
+    
+    SET priv = (SELECT privkey FROM keys WHERE ext = 0);
+    SELECT username, LENGTH(secret), CAST(DECRYPT(secret, priv, 'RSA') AS VARCHAR) 
+    FROM SensitiveData;
+  
+```
+
 **Related Information**  
 
 
-[ENCRYPT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/ec24782b83b94e6ebfa99014d36aa61d.html "Encrypts the specified value using the supplied encryption key and returns a LONG BINARY value.") :arrow_upper_right:
+[ENCRYPT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ec24782b83b94e6ebfa99014d36aa61d.html "Encrypts the specified value using the supplied encryption key and returns a LONG BINARY value.") :arrow_upper_right:
 
 [DECRYPT Function \[String\] for Data Lake Relational Engine](decrypt-function-string-for-data-lake-relational-engine-81f6b4a.md "Decrypts the string using the supplied key and returns a LONG BINARY value.")
 
-[Encryption Algorithm Aliases](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2023_2_QRC/en-US/a7a8e3a5458e43bf8e405b6bd9c66ad9.html "The encryption algorithms for data lake Relational Engine data at rest have multiple aliases for compatibility across systems.") :arrow_upper_right:
+[Encryption Algorithm Aliases](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2023_4_QRC/en-US/a7a8e3a5458e43bf8e405b6bd9c66ad9.html "The encryption algorithms for data lake Relational Engine data at rest have multiple aliases for compatibility across systems.") :arrow_upper_right:
 

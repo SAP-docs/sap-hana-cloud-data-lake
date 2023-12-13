@@ -6,10 +6,13 @@ Each row in the SYSSYNCSCRIPT system view identifies a stored procedure for scri
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bea70906c5f1014901efbe57e06183f__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -22,21 +25,15 @@ The underlying system table for this view is ISYSSYNCSCRIPT.
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -45,21 +42,15 @@ Description
 
 pub\_object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The object ID of the publication to which the script belongs.
-
-
 
 </td>
 </tr>
@@ -68,21 +59,15 @@ The object ID of the publication to which the script belongs.
 
 table\_object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The object ID of the table to which the script applies.
-
-
 
 </td>
 </tr>
@@ -91,21 +76,15 @@ The object ID of the table to which the script applies.
 
 type
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The type of upload procedure.
-
-
 
 </td>
 </tr>
@@ -114,21 +93,15 @@ The type of upload procedure.
 
 proc\_object\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The object ID of the stored procedure to use for the publication.
-
-
 
 </td>
 </tr>

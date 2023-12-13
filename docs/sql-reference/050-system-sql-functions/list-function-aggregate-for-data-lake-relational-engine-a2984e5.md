@@ -10,7 +10,7 @@ Returns a delimited list of values for every row in a group.
 LIST(
 [ALL | DISTINCT] <string-expresssion>
 [, <'delimiter-string'>]
-[ORDER BY <order-by-expression> [ ASC | DESC ], ... ] )
+[ORDER BY <order-by-expression> [ ASC | DESC ], ... ] );
 ```
 
 
@@ -59,18 +59,18 @@ When an ORDER BY clause contains constants, they are interpreted by the optimize
 A query block containing more than one aggregate function with valid ORDER BY clauses can be executed if the ORDER BY clauses can be logically combined into a single ORDER BY clause. For example, the following clauses:
 
 ```
- ORDER BY expression1, 'a', expression2 
+ ORDER BY expression1, 'a', expression2; 
 ```
 
 ```
 
- ORDER BY expression1, 'b', expression2, 'c', expression3 
+ ORDER BY expression1, 'b', expression2, 'c', expression3; 
 ```
 
 are subsumed by the clause:
 
 ```
- ORDER BY expression1, expression2, expression3 
+ ORDER BY expression1, expression2, expression3; 
 ```
 
 
@@ -82,7 +82,7 @@ are subsumed by the clause:
 
 <a name="loioa2984e5584f21015bddde2495874815d__LIST_returns1"/>
 
-## Returns
+## Result Set
 
 LONG VARCHAR
 
@@ -157,16 +157,12 @@ GROUP BY DepartmentID;
 
 LIST\( EmployeeID \)
 
-
-
 </th>
 </tr>
 <tr>
 <td valign="top">
 
 102,105,160,243,247,249,266,278,...
-
-
 
 </td>
 </tr>
@@ -175,16 +171,12 @@ LIST\( EmployeeID \)
 
 129,195,299,467,641,667,690,856,...
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 148,390,586,757,879,1293,1336,...
-
-
 
 </td>
 </tr>
@@ -193,16 +185,12 @@ LIST\( EmployeeID \)
 
 184,207,318,409,591,888,992,1062,...
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 191,703,750,868,921,1013,1570,...
-
-
 
 </td>
 </tr>
@@ -223,16 +211,12 @@ GROUP BY DepartmentID;
 
 Sorted IDs
 
-
-
 </th>
 </tr>
 <tr>
 <td valign="top">
 
 1013,191,750,921,868,1658,...
-
-
 
 </td>
 </tr>
@@ -241,16 +225,12 @@ Sorted IDs
 
 1751,591,1062,1191,992,888,318,...
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 1336,879,586,390,757,148,1483,...
-
-
 
 </td>
 </tr>
@@ -259,16 +239,12 @@ Sorted IDs
 
 1039,129,1142,195,667,1162,902,...
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 160,105,1250,247,266,249,445,...
-
-
 
 </td>
 </tr>
@@ -289,16 +265,12 @@ GROUP BY DepartmentID;
 
 Sorted IDs
 
-
-
 </th>
 </tr>
 <tr>
 <td valign="top">
 
 1013;191;750;921;868;1658;703;...
-
-
 
 </td>
 </tr>
@@ -307,16 +279,12 @@ Sorted IDs
 
 1751;591;1062;1191;992;888;318;...
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 1336;879;586;390;757;148;1483;...
-
-
 
 </td>
 </tr>
@@ -325,16 +293,12 @@ Sorted IDs
 
 1039;129;1142;195;667;1162;902; ...
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 160;105;1250;247;266;249;445;...
-
-
 
 </td>
 </tr>
@@ -351,5 +315,5 @@ GROUP BY DepartmentID;
 **Related Information**  
 
 
-[LIST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7b4801a3a3a64799b52b9ace7257dfd9.html "Returns a delimited list of values for every row in a group.") :arrow_upper_right:
+[LIST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7b4801a3a3a64799b52b9ace7257dfd9.html "Returns a delimited list of values for every row in a group.") :arrow_upper_right:
 

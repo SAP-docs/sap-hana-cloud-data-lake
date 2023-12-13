@@ -8,7 +8,7 @@ An interrow function that returns the value of an attribute in a previous row in
 
 ```
 LAG ( <value_expr> [, <offset> [, <default> ] ] ) 
-    OVER ( [ PARTITION BY <window_partition> ] ORDER BY <window_ordering> )
+    OVER ( [ PARTITION BY <window_partition> ] ORDER BY <window_ordering> );
 ```
 
 
@@ -137,5 +137,5 @@ dID        StartDate    Salary      Lag(Salary)
 
 [LEAD Function \[Analytical\] for Data Lake Relational Engine](lead-function-analytical-for-data-lake-relational-engine-a55d051.md "An interrow function that returns the value of an attribute in a subsequent row in the table or table partition.")
 
-[LAG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/0561e5415d37410b837052f20b4239b9.html "An interrow function that returns the value of an attribute in a previous row in the table or table partition.") :arrow_upper_right:
+[LAG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/0561e5415d37410b837052f20b4239b9.html "An interrow function that returns the value of an attribute in a previous row in the table or table partition.") :arrow_upper_right:
 

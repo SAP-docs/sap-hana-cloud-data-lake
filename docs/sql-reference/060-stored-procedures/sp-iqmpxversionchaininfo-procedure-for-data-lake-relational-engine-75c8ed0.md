@@ -6,15 +6,18 @@ Displays detailed status information about the current database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio75c8ed076eed41ae914648167432ca1a__section_umy_gqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sp_iqmpxversionchaininfo <detailLevel>
+sp_iqmpxversionchaininfo <detailLevel>;
 ```
 
 
@@ -47,7 +50,7 @@ Enables you to set the level of detail for log messages that are logged to data 
 
 <a name="loio75c8ed076eed41ae914648167432ca1a__section_fqg_g4g_nbb"/>
 
-## Returns
+## Result Set
 
 ****
 
@@ -58,14 +61,10 @@ Enables you to set the level of detail for log messages that are logged to data 
 
 Measurement
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -74,14 +73,10 @@ Description
 
 ServerID
 
-
-
 </td>
 <td valign="top">
 
 The ID of the worker node.
-
-
 
 </td>
 </tr>
@@ -90,14 +85,10 @@ The ID of the worker node.
 
 CurrentVersion
 
-
-
 </td>
 <td valign="top">
 
 The latest \(newest\) version this node is aware of.
-
-
 
 </td>
 </tr>
@@ -106,14 +97,10 @@ The latest \(newest\) version this node is aware of.
 
 LastActiveVersion
 
-
-
 </td>
 <td valign="top">
 
 The last \(oldest\) version that any transaction on this node refers to.
-
-
 
 </td>
 </tr>
@@ -122,14 +109,10 @@ The last \(oldest\) version that any transaction on this node refers to.
 
 OARV
 
-
-
 </td>
 <td valign="top">
 
 The oldest active reader version across the entire multiplex. This value is the same across all rows.
-
-
 
 </td>
 </tr>
@@ -138,14 +121,10 @@ The oldest active reader version across the entire multiplex. This value is the 
 
 LastAppliedVersion
 
-
-
 </td>
 <td valign="top">
 
 The last \(recent\) version that was applied \(cleaned-up\) on the coordinator node. This value is the same across all rows.
-
-
 
 </td>
 </tr>
@@ -184,12 +163,12 @@ SQLCODE= -1012068, ODBC 3 State="HY000" Line 1, column 1."
 
 <a name="loio75c8ed076eed41ae914648167432ca1a__section_utq_cf3_jkb"/>
 
-## Example
+## Examples
 
 Query:
 
 ```
-sp_iqmpxversionchaininfo 0
+sp_iqmpxversionchaininfo 0;
 ```
 
 Result:

@@ -7,7 +7,7 @@ Inserts a string into another string at a specified position.
 
 
 ```
-INSERTSTR ( <numeric-expression>, <string-expression1>, <string-expression2> )
+INSERTSTR ( <numeric-expression>, <string-expression1>, <string-expression2> );
 ```
 
 
@@ -58,7 +58,7 @@ The string to be inserted.
 
 <a name="loioa558efff84f210159092915333b9e6df__INSERTSTR_returns1"/>
 
-## Returns
+## Result Set
 
 LONG VARCHAR or LONG BINARY, depending on the data type of the input expressions.
 
@@ -82,7 +82,7 @@ LONG VARCHAR or LONG BINARY, depending on the data type of the input expressions
 The following statement returns the value "backoffice":
 
 ```
-SELECT INSERTSTR( 0, 'office ', 'back' ) FROM iq_dummy
+SELECT INSERTSTR( 0, 'office ', 'back' ) FROM iq_dummy;
 ```
 
 **Related Information**  
@@ -92,5 +92,5 @@ SELECT INSERTSTR( 0, 'office ', 'back' ) FROM iq_dummy
 
 [STUFF Function \[String\] for Data Lake Relational Engine](stuff-function-string-for-data-lake-relational-engine-a58705b.md "Deletes a number of characters from one string and replaces them with another string.")
 
-[INSERTSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/064a64ca374142608c2c968248d9bbe7.html "Inserts a string into another string at a specified position.") :arrow_upper_right:
+[INSERTSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/064a64ca374142608c2c968248d9bbe7.html "Inserts a string into another string at a specified position.") :arrow_upper_right:
 

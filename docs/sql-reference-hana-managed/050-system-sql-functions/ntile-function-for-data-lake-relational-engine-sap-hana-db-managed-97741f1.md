@@ -8,7 +8,7 @@ Distributes query results into a specified number of buckets and assigns the buc
 
 ```
 NTILE ( <expression1> )
-OVER ( ORDER BY <expression2> [ ASC | DESC ] )
+OVER ( ORDER BY <expression2> [ ASC | DESC ] );
 ```
 
 
@@ -115,5 +115,5 @@ To find the top 10% of car dealers by sales, you specify `NTILE(10)` in the exam
 **Related Information**  
 
 
-[NTILE Function [Analytical] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a5695f3f84f21015a23ae9730b31eef2.html "Distributes query results into a specified number of buckets and assigns the bucket number to each row in the bucket.") :arrow_upper_right:
+[NTILE Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5695f3f84f21015a23ae9730b31eef2.html "Distributes query results into a specified number of buckets and assigns the bucket number to each row in the bucket.") :arrow_upper_right:
 

@@ -13,14 +13,10 @@ You can use these bitwise operators on all unscaled integer data types in data l
 
 Operator
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -29,14 +25,10 @@ Description
 
 &
 
-
-
 </td>
 <td valign="top">
 
 AND
-
-
 
 </td>
 </tr>
@@ -45,14 +37,10 @@ AND
 
 |
 
-
-
 </td>
 <td valign="top">
 
 OR
-
-
 
 </td>
 </tr>
@@ -61,14 +49,10 @@ OR
 
 ^
 
-
-
 </td>
 <td valign="top">
 
 EXCLUSIVE OR
-
-
 
 </td>
 </tr>
@@ -77,14 +61,10 @@ EXCLUSIVE OR
 
 ~
 
-
-
 </td>
 <td valign="top">
 
 NOT
-
-
 
 </td>
 </tr>

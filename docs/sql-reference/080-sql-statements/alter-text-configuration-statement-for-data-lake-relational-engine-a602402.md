@@ -6,10 +6,13 @@ Alters a text configuration object.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa602402c84f21015a00eb58f531612a0__section_tqv_vvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,7 +23,7 @@ ALTER TEXT CONFIGURATION [ { <owner> | <schema-name> }.]<config-name>
 ...| { MINIMUM | MAXIMUM } TERM LENGTH <integer>
 ...| TERM BREAKER { GENERIC | NGRAM }
 ...| PREFILTER EXTERNAL NAME <external-call>
-   | DROP PREFILTER }
+   | DROP PREFILTER };
 ```
 
 

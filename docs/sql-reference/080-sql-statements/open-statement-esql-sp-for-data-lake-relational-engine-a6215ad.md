@@ -6,17 +6,20 @@ Opens a previously declared cursor to access information from the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6215ada84f2101596dfe103bbef22a4__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 OPEN <cursor-name>
    ... [ USING [ DESCRIPTOR { <sqlda-name> | <host-variable> } [, …]  ] ]
-   ... [ WITH HOLD ]
+   ... [ WITH HOLD ];
 ```
 
 
@@ -152,7 +155,7 @@ See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](gra
        ...
     END LOOP
     CLOSE cur_employee;
-    END
+    END;
     ```
 
 

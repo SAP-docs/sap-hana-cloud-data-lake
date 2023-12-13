@@ -6,10 +6,13 @@ Each row in the SYSPUBLICATIONS view describes a publication.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be9b8136c5f101492b99abcd3ee0073__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -29,6 +32,6 @@ ALTER VIEW "SYS"."SYSPUBLICATIONS"
     end as sync_type
     from SYS.ISYSPUBLICATION as p
       join SYS.ISYSUSER as u on u.user_id = p.creator
-      left outer join SYS.ISYSREMARK as r on(p.object_id = r.object_id)
+      left outer join SYS.ISYSREMARK as r on(p.object_id = r.object_id);
 ```
 

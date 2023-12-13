@@ -6,10 +6,13 @@ Removes a class, a package, or a JAR file from a database. Removed classes are n
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6230d6784f21015819abbfa7efd1fde__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -19,7 +22,7 @@ REMOVE JAVA <classes_to_remove>
 <classes_to_remove>
    { CLASS <java_class_name> [, <java_class_name> ]… 
    | PACKAGE <java_package_name> [, <java_package_name> ]… 
-   | JAR <jar_name> [, <jar_name> ]… [ RETAIN CLASSES ] }
+   | JAR <jar_name> [, <jar_name> ]… [ RETAIN CLASSES ] };
 ```
 
 
@@ -113,7 +116,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 The following example removes a Java class named "Demo" from the current database:
 
 ```
-REMOVE JAVA CLASS Demo
+REMOVE JAVA CLASS Demo;
 ```
 
 **Related Information**  

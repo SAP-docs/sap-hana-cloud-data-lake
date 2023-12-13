@@ -6,10 +6,13 @@ Each row of the SYSREMOTEOPTIONS view describes the values of a message link par
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be9de6a6c5f1014a01c9ac914e01962__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -29,6 +32,6 @@ ALTER VIEW "SYS"."SYSREMOTEOPTIONS"
       ,SYS.ISYSUSER as sup
     where srt.type_id = srot.type_id
     and srot.option_id = sro.option_id
-    and sro.user_id = sup.user_id
+    and sro.user_id = sup.user_id;
 ```
 

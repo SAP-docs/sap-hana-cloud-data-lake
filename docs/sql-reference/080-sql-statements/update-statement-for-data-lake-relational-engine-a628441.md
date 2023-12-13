@@ -6,10 +6,13 @@ Modifies existing rows of a single table, or a view that contains only one table
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa628441e84f21015a952a4b8bd52ee72__section_azh_5fj_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -36,7 +39,7 @@ UPDATE [ { <owner> | <schema-name> }.]{ <table-name> | <view-name> } [ [ AS ] <c
 <table-expression> ::=
    <table-spec> 
    | <table-expression> <join-type> <table-spec> [ ON <condition> ] 
-   | <table-expression>, ...
+   | <table-expression>, ...;
 ```
 
 
@@ -64,7 +67,7 @@ Use the SET clause to set column names or variables to the specified expression.
 Use the SET clause to set the column to a computed column value by using this format:
 
 ```
-SET <column-name> = <expression>, ...
+SET <column-name> = <expression>, ...;
 ```
 
 Each specified column is set to the value of the expression. There are no restrictions on *<expression\>*. If *<expression\>* is a *<column-name\>*, then the previous value from that column is used.
@@ -74,7 +77,7 @@ If a column has a default defined, then use the SET clause to set a column to it
 You can also use the SET clause to assign a variable by using the following format:
 
 ```
-SET @<variable-name> = <expression>, ...
+SET @<variable-name> = <expression>, ...;
 ```
 
 The *<owner\>* specification is only for use with database-scope variables.
@@ -98,7 +101,7 @@ This statement illustrates a potential ambiguity in table names in UPDATE statem
 UPDATE table_1
 SET column_1 = ...
 FROM table_1 AS alias_1, table_2 AS alias_2
-WHERE ...
+WHERE ...;
 ```
 
 Each instance of table\_1 in the FROM clause has a correlation name, denoting a self-join of table\_1 to itself. However, the UPDATE statement fails to specify which of the rows that make up the self-join are to be updated. This can be corrected by specifying the correlation name in the UPDATE statement as follows:
@@ -107,7 +110,7 @@ Each instance of table\_1 in the FROM clause has a correlation name, denoting a 
 UPDATE table_1
 SET column_1 = ...
 FROM table_1 AS alias_1, table_1 AS alias_2
-WHERE ...
+WHERE ...;
 ```
 
 If the same table name in which you are updating rows is used in the FROM clause, they are considered to reference the same table if one of the following is true:
@@ -171,7 +174,7 @@ Using the wrong join condition in a FROM clause causes unpredictable results. If
 UPDATE T1 
 SET T1.c2 = T2.c2
 FROM T1 JOIN TO T2
-ON T1.c1 = T2.c1
+ON T1.c1 = T2.c1;
 ```
 
 If table T2 has more than one row per T2.c1, results might be as follows:
@@ -200,7 +203,7 @@ For example, in this statement, table T1 is on the left side of a left outer joi
 UPDATE T1 
 SET T1.c2 = T2.c4
 FROM T1 LEFT OUTER JOIN T2
-ON T1.rowid = T2.rowid
+ON T1.rowid = T2.rowid;
 ```
 
 Normally, the order in which rows are updated does not matter. However, in conjunction with the NUMBER\(\*\) function, an ordering can be useful to get increasing numbers added to the rows in some specified order. If you are not using the NUMBER\(\*\) function, avoid using the ORDER BY clause, because the UPDATE statement performs better without it.
@@ -228,7 +231,7 @@ FROM t ... WHERE t.y = r.y),
 r.s= (SELECT SUM(x.s) 
 FROM x ... 
 WHERE x.x = r.x)
-WHERE r.a = 10
+WHERE r.a = 10;
 ```
 
 Data lake Relational Engine supports DEFAULT column values in UPDATE statements. If a column has a DEFAULT value, this DEFAULT value is used as the value of the column in any UPDATE statement that does not explicitly modify the value for the column.
@@ -317,7 +320,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[UPDATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/2de4f7ac0a4244d597b33cb572ca1d8f.html "Modifies existing rows of a single table, or a view that contains only one table.") :arrow_upper_right:
+[UPDATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/2de4f7ac0a4244d597b33cb572ca1d8f.html "Modifies existing rows of a single table, or a view that contains only one table.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

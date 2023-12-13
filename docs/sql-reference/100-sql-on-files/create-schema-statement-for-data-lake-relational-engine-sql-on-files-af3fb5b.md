@@ -6,10 +6,12 @@ Create a schema, which is a collection of tables, managed by SQL on Files.
 
 
 
-> ### Restriction:  
-> This topic is limited to SQL on Files use cases.
-> 
-> This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioaf3fb5b713f34db2aaa8efbf0c2a9e45__section_fry_b3b_nqb"/>
+
+## Usage
+
+-   This topic is limited to SQL on Files use cases.
+-   This SQL on Files SQL statement can be used when connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +20,7 @@ Create a schema, which is a collection of tables, managed by SQL on Files.
 ## Syntax
 
 ```
-CREATE SCHEMA <remote-schema-name> IN FILES_SERVICE
+CREATE SCHEMA <remote-schema-name> IN FILES_SERVICE;
 ```
 
 
@@ -72,5 +74,5 @@ CREATE SCHEMA Factory IN FILES_SERVICE;
 **Related Information**  
 
 
-[CREATE SCHEMA Statement for Data Lake Relational Engine (SAP HANA DB-Managed) [SQL on Files]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/5cd793c72fd34f4bb337698fa11ea3d0.html "Create a schema, which is a collection of tables, managed by SQL on Files.") :arrow_upper_right:
+[CREATE SCHEMA Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/5cd793c72fd34f4bb337698fa11ea3d0.html "Create a schema, which is a collection of tables, managed by SQL on Files.") :arrow_upper_right:
 

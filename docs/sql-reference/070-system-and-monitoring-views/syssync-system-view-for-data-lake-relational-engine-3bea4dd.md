@@ -6,10 +6,13 @@ The SYSSYNC system view contains information relating to synchronization.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3bea4dd76c5f1014b9938f9b6fbaf40f__section_v1w_qbq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -24,21 +27,15 @@ The underlying system table for this view is ISYSSYNC.
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -47,21 +44,15 @@ Description
 
 sync\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 A number that uniquely identifies the row.
-
-
 
 </td>
 </tr>
@@ -70,21 +61,15 @@ A number that uniquely identifies the row.
 
 type
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
 
-
-
 </td>
 <td valign="top">
 
 This value is always D.
-
-
 
 </td>
 </tr>
@@ -93,21 +78,15 @@ This value is always D.
 
 publication\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 A publication\_id found in the SYSPUBLICATION system view.
-
-
 
 </td>
 </tr>
@@ -116,21 +95,15 @@ A publication\_id found in the SYSPUBLICATION system view.
 
 progress
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The log offset of the last successful upload.
-
-
 
 </td>
 </tr>
@@ -139,21 +112,15 @@ The log offset of the last successful upload.
 
 site\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 A user name.
-
-
 
 </td>
 </tr>
@@ -162,21 +129,15 @@ A user name.
 
 "option"
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 Synchronization options.
-
-
 
 </td>
 </tr>
@@ -185,21 +146,15 @@ Synchronization options.
 
 server\_connect
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The address or URL of the server.
-
-
 
 </td>
 </tr>
@@ -208,21 +163,15 @@ The address or URL of the server.
 
 server\_conn\_type
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The communication protocol, such as TCP/IP, to use when synchronizing.
-
-
 
 </td>
 </tr>
@@ -231,21 +180,15 @@ The communication protocol, such as TCP/IP, to use when synchronizing.
 
 last\_download\_time
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Indicates the last time a download stream was received from the server.
-
-
 
 </td>
 </tr>
@@ -254,21 +197,15 @@ Indicates the last time a download stream was received from the server.
 
 last\_upload\_time
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Indicates the last time \(measured at the server\) that information was successfully uploaded. The default is jan-1-1900.
-
-
 
 </td>
 </tr>
@@ -277,21 +214,15 @@ Indicates the last time \(measured at the server\) that information was successf
 
 created
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The log offset at which the subscription was created.
-
-
 
 </td>
 </tr>
@@ -300,21 +231,15 @@ The log offset at which the subscription was created.
 
 log\_sent
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 The log progress up to which information has been uploaded. It is not necessary that an acknowledgment of the upload be received for the entry in this column to be updated.
-
-
 
 </td>
 </tr>
@@ -323,21 +248,15 @@ The log progress up to which information has been uploaded. It is not necessary 
 
 generation\_number
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 For file-base downloads, the last generation number received for this subscription. The default is 0.
-
-
 
 </td>
 </tr>
@@ -346,21 +265,15 @@ For file-base downloads, the last generation number received for this subscripti
 
 extended\_state
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(1024\)
 
-
-
 </td>
 <td valign="top">
 
 For internal use only.
-
-
 
 </td>
 </tr>
@@ -369,21 +282,15 @@ For internal use only.
 
 script\_version
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 Indicates the script version used by the CREATE and ALTER SYNCHRONIZATION SUBSCRIPTION statements and the START SYNCHRONIZATION SCHEMA CHANGE statement.
-
-
 
 </td>
 </tr>
@@ -392,21 +299,15 @@ Indicates the script version used by the CREATE and ALTER SYNCHRONIZATION SUBSCR
 
 subscription\_name
 
-
-
 </td>
 <td valign="top">
 
 CHAR \(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the subscription.
-
-
 
 </td>
 </tr>
@@ -415,21 +316,15 @@ The name of the subscription.
 
 server\_protocol
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 For internal use only. Contains a value used internally to identify the version of the synchronization server.
-
-
 
 </td>
 </tr>

@@ -6,18 +6,17 @@ Changes options that affect the behavior of the database and its compatibility w
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Executing SQL Statements](remote-execute-usage-examples-for-executing-sql-statements-fd99ac0.md).
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
 
 
 
 ```
 SET [ EXISTING ] [ TEMPORARY ] OPTION
-   … [ { <user_id> | PUBLIC }.]<option-name> = [ <option-value> ]
+   … [ { <user_id> | PUBLIC }.]<option-name> = [ <option-value> ];
 ```
 
 
@@ -94,7 +93,7 @@ The classes of options are:
 Specifying either a user ID or the PUBLIC user ID determines whether the option is set for an individual user, a role represented by *<user\_id\>*, or the PUBLIC user ID \(the role to which all users are a member\). If the option applies to a role ID, option settings are not inherited by members of the role — the change is applied only to the role ID. If no role is specified, the option change is applied to the currently logged-in user ID that issued the SET OPTION statement. For example, this statement applies an option change to the PUBLIC user ID:
 
 ```
-SET OPTION Public.login_mode = standard
+SET OPTION Public.login_mode = standard;
 ```
 
 In Embedded SQL, only database options can be set temporarily.
@@ -116,10 +115,21 @@ Temporarily setting an option for the PUBLIC user ID, as opposed to setting the 
 
 ### 
 
-Requires one of:
+-   To set a database option permanently, use REMOTE\_EXECUTE.
 
--   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+    Requires one of:
+
+    -   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+    -   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+    -   See [REMOTE\_EXECUTE Guidance and Examples for Setting Permanent Database Options](../040-database-options/remote-execute-guidance-and-examples-for-setting-permanent-database-options-0023bea.md).
+
+
+-   To set a database option temporarily, use the SET\_TEMPORARY\_OPTION procedure, which requires you be a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+
+    -   See [SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md).
+
+
 
 
 
@@ -138,13 +148,13 @@ Requires one of:
 -   The following example sets the DATE\_FORMAT option:
 
     ```
-    SET OPTION public.date_format = 'Mmm dd yyyy'
+    SET OPTION public.date_format = 'Mmm dd yyyy';
     ```
 
 -   The following example sest the WAIT\_FOR\_COMMIT option to on:
 
     ```
-    SET OPTION wait_for_commit = 'on'
+    SET OPTION wait_for_commit = 'on';
     ```
 
 -   The following example embeddes SQL examples:
@@ -158,7 +168,9 @@ Requires one of:
 **Related Information**  
 
 
-[Database Options in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/database-options-in-data-lake-relational-engine-sap-hana-db-managed-8d17dee.md "Database options customize and modify database behavior.")
+[Database Options in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/database-options-in-data-lake-relational-engine-sap-hana-db-managed-8d17dee.md "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.")
 
-[SET OPTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a625da7584f21015a300a0dd2457eb57.html "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.") :arrow_upper_right:
+[SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md "Grant database options temporarily for the current connection only on a data lake Relational Engine relational container.")
+
+[SET OPTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a625da7584f21015a300a0dd2457eb57.html "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.") :arrow_upper_right:
 

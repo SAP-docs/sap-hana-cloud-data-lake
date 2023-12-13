@@ -6,15 +6,18 @@ Tells the SQL preprocessor to use a SQLCA other than the default global *<sqlca\
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6263c3584f21015b49c8e4956f4ca03__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-SET SQLCA <sqlca>
+SET SQLCA <sqlca>;
 ```
 
 

@@ -6,16 +6,27 @@ Determines the current status of the LDAP server configuration object.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa44d541d84f2101585ffc945ef610744__section_idn_b13_b4b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_get_ldapserver_status()
+sa_get_ldapserver_status;
 ```
+
+
+
+<a name="loioa44d541d84f2101585ffc945ef610744__section_ykw_hzf_zyb"/>
+
+## Parameters
+
+None
 
 
 
@@ -30,21 +41,15 @@ sa_get_ldapserver_status()
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -53,21 +58,15 @@ Description
 
 `ldsrv_id`
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED BIGINT
 
-
-
 </td>
 <td valign="top">
 
 A unique identifier for the LDAP server configuration object that is the primary key and is used by the login policy to refer to the LDAP server.
-
-
 
 </td>
 </tr>
@@ -76,21 +75,15 @@ A unique identifier for the LDAP server configuration object that is the primary
 
 `ldsrv_name`
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name assigned to the LDAP server configuration object.
-
-
 
 </td>
 </tr>
@@ -99,14 +92,10 @@ The name assigned to the LDAP server configuration object.
 
 `ldsrv_state`
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(9\)
-
-
 
 </td>
 <td valign="top">
@@ -128,21 +117,15 @@ Read-only state of the LDAP server, A numeric value is stored in system table; a
 
 `ldsrv_last_state_change`
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Indicates the time the last state change occurred. The value is stored in Coordinated Universal Time \(UTC\), regardless of the local time zone of the LDAP server.
-
-
 
 </td>
 </tr>

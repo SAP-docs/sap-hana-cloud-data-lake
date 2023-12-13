@@ -13,14 +13,10 @@ Use character data types for storing strings of letters, numbers, and symbols.
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -29,8 +25,6 @@ Description
 
 CLOB
 
-
-
 </td>
 <td valign="top">
 
@@ -38,16 +32,12 @@ Supports character large object \(CLOB\) data with a length ranging from zero \(
 
 The maximum length is equal to 4 GB multiplied by the database page size \(512 KB\).
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 LONG VARCHAR
-
-
 
 </td>
 <td valign="top">
@@ -58,8 +48,6 @@ Multibyte characters can be stored as LONG VARCHAR, but the length is in bytes, 
 
 VARCHARhas no blank padding is added to the storage of these strings.
 
-
-
 </td>
 </tr>
 <tr>
@@ -67,14 +55,10 @@ VARCHARhas no blank padding is added to the storage of these strings.
 
 TEXT
 
-
-
 </td>
 <td valign="top">
 
 Stores character data of arbitrary length. TEXT is a domain, implemented as a LONG VARCHAR.
-
-
 
 </td>
 </tr>
@@ -83,15 +67,13 @@ Stores character data of arbitrary length. TEXT is a domain, implemented as a LO
 
 VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 Stores arbitrary length character data.
 
 ```
-VARCHAR [ ( <max-length> [ BYTE | CHAR | CHARACTER ] ) ]
+VARCHAR [ ( <max-length> [ BYTE | CHAR | CHARACTER ] ) ];
 ```
 
 
@@ -116,8 +98,6 @@ VARCHARhas no blank padding added to the storage of these strings.
 
 All index types, except DATE, TIME, and DATETIME/TIMESTAMP are supported for VARCHAR data to a maximum of to 255 bytes in length. For VARCHAR using character-length semantic, the maximum byte length depends on the number of bytes used per character. The limit becomes 255 divided by the number of bytes per character.
 
-
-
 </td>
 </tr>
 </table>
@@ -137,28 +117,20 @@ The storage size of character data, given column definition size, and input data
 
 Data Type
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Column Definition
-
-
 
 </th>
 <th valign="top" rowspan="1">
 
 Input Data
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 Storage
-
-
 
 </th>
 </tr>
@@ -167,28 +139,20 @@ Storage
 
 VARCHAR
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Width of \(32 K – 1\) bytes
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 \(32 K – 1\) bytes
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 \(32 K – 1\) bytes
-
-
 
 </td>
 </tr>

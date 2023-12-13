@@ -7,7 +7,7 @@ Returns the tangent of a number.
 
 
 ```
-TAN ( <numeric-expression> )
+TAN ( <numeric-expression> );
 ```
 
 
@@ -36,7 +36,7 @@ An angle, in radians.
 
 <a name="loioe2c70619ddcb41a58cd65f42dc1bab7f__section_z4w_1kv_vrb"/>
 
-## Returns
+## Result Set
 
 DOUBLE
 
@@ -57,11 +57,11 @@ DOUBLE
 Returns the value 0.572561:
 
 ```
-SELECT TAN( 0.52 ) FROM iq_dummy
+SELECT TAN( 0.52 ) FROM iq_dummy;
 ```
 
 **Related Information**  
 
 
-[TAN Function [Numeric] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a58a2ec084f2101584a8c423a3ca9750.html "Returns the tangent of a number.") :arrow_upper_right:
+[TAN Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a58a2ec084f2101584a8c423a3ca9750.html "Returns the tangent of a number.") :arrow_upper_right:
 

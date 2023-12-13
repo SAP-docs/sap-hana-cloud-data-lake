@@ -6,8 +6,11 @@ The percentage of the total number of threads allocated to data lake Relational 
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loio8c72a082717844b9918c5f27e82dc385__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

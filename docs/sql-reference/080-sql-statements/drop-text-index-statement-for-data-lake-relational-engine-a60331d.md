@@ -6,16 +6,19 @@ Removes a TEXT index from the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa60331d484f21015b12ac440f67fd4d1__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 DROP TEXT INDEX <text-index-name>
-   ON [ { <owner> | <schema-name> }.]<table-name>
+   ON [ { <owner> | <schema-name> }.]<table-name>;
 ```
 
 

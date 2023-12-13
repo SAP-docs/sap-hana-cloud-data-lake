@@ -6,11 +6,22 @@ Describes the result set for a query with one row describing each output column 
 
 
 
+<a name="loio268f1ef2cade4d43be01e422595d548a__section_gz5_gcf_pzb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using SAP HANA database REMOTE\_EXECUTE\_QUERY.
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+
+
+
 ```
 sa_describe_query( 
 <query> 
 [, <add_keys> ] 
-)
+);
 ```
 
 
@@ -21,7 +32,7 @@ sa_describe_query(
 <dl>
 <dt><b>
 
- *<query\>* 
+*<query\>* 
 
 </b></dt>
 <dd>
@@ -32,7 +43,7 @@ Use this LONG VARCHAR parameter to specify the text of the SQL statement being d
 
 </dd><dt><b>
 
- *<add\_keys\>* 
+*<add\_keys\>* 
 
 </b></dt>
 <dd>
@@ -57,21 +68,15 @@ Use this optional BIT parameter to specify whether to determine a set of columns
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -80,21 +85,15 @@ Description
 
 column\_number
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The ordinal position of the column described by this row, starting at 1.
-
-
 
 </td>
 </tr>
@@ -103,21 +102,15 @@ The ordinal position of the column described by this row, starting at 1.
 
 name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the column.
-
-
 
 </td>
 </tr>
@@ -126,21 +119,15 @@ The name of the column.
 
 domain\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 The data type of the column.
-
-
 
 </td>
 </tr>
@@ -149,21 +136,15 @@ The data type of the column.
 
 domain\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The data type name.
-
-
 
 </td>
 </tr>
@@ -172,21 +153,15 @@ The data type name.
 
 domain\_name\_with\_size
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(160\)
 
-
-
 </td>
 <td valign="top">
 
 The data type name, including size and precision \(as used in CREATE TABLE or CAST functions\).
-
-
 
 </td>
 </tr>
@@ -195,21 +170,15 @@ The data type name, including size and precision \(as used in CREATE TABLE or CA
 
 width
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The length of a string parameter, the precision of a numeric parameter, or the number of bytes of storage for any other data type.
-
-
 
 </td>
 </tr>
@@ -218,21 +187,15 @@ The length of a string parameter, the precision of a numeric parameter, or the n
 
 scale
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The number of digits after the decimal point for numeric data type columns, and zero for all other data types.
-
-
 
 </td>
 </tr>
@@ -241,21 +204,15 @@ The number of digits after the decimal point for numeric data type columns, and 
 
 declared\_width
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The length of a string parameter, the precision of a numeric parameter, or the number of bytes of storage for any other data type.
-
-
 
 </td>
 </tr>
@@ -264,21 +221,15 @@ The length of a string parameter, the precision of a numeric parameter, or the n
 
 user\_type\_id
 
-
-
 </td>
 <td valign="top">
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 The type\_id of the user-defined data type if there is one, otherwise NULL.
-
-
 
 </td>
 </tr>
@@ -287,21 +238,15 @@ The type\_id of the user-defined data type if there is one, otherwise NULL.
 
 user\_type\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the user-defined data type if there is one, otherwise NULL.
-
-
 
 </td>
 </tr>
@@ -310,21 +255,15 @@ The name of the user-defined data type if there is one, otherwise NULL.
 
 correlation\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The correlation name associated with the expression if one is available, otherwise NULL.
-
-
 
 </td>
 </tr>
@@ -333,21 +272,15 @@ The correlation name associated with the expression if one is available, otherwi
 
 base\_table\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The table\_id if the expression is a column, otherwise NULL.
-
-
 
 </td>
 </tr>
@@ -356,21 +289,15 @@ The table\_id if the expression is a column, otherwise NULL.
 
 base\_column\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The column\_id if the expression is a column, otherwise NULL.
-
-
 
 </td>
 </tr>
@@ -379,21 +306,15 @@ The column\_id if the expression is a column, otherwise NULL.
 
 base\_owner\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The owner name if the expression is a column, otherwise NULL.
-
-
 
 </td>
 </tr>
@@ -402,21 +323,15 @@ The owner name if the expression is a column, otherwise NULL.
 
 base\_table\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The table name if the expression is a column, otherwise NULL.
-
-
 
 </td>
 </tr>
@@ -425,21 +340,15 @@ The table name if the expression is a column, otherwise NULL.
 
 base\_column\_name
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The column name if the expression is a column, otherwise NULL.
-
-
 
 </td>
 </tr>
@@ -448,21 +357,15 @@ The column name if the expression is a column, otherwise NULL.
 
 nulls\_allowed
 
-
-
 </td>
 <td valign="top">
 
 BIT
 
-
-
 </td>
 <td valign="top">
 
 An indicator that is 1 if the expression can be NULL, otherwise 0.
-
-
 
 </td>
 </tr>
@@ -471,21 +374,15 @@ An indicator that is 1 if the expression can be NULL, otherwise 0.
 
 is\_autoincrement
 
-
-
 </td>
 <td valign="top">
 
 BIT
 
-
-
 </td>
 <td valign="top">
 
 An indicator that is 1 if the expression is a column declared to be AUTOINCREMENT, otherwise 0.
-
-
 
 </td>
 </tr>
@@ -494,21 +391,15 @@ An indicator that is 1 if the expression is a column declared to be AUTOINCREMEN
 
 is\_key\_column
 
-
-
 </td>
 <td valign="top">
 
 BIT
 
-
-
 </td>
 <td valign="top">
 
 An indicator that is 1 if the expression is part of a key for the result set, otherwise 0. For more information, see the Remarks section below.
-
-
 
 </td>
 </tr>
@@ -517,21 +408,15 @@ An indicator that is 1 if the expression is part of a key for the result set, ot
 
 is\_added\_key\_column
 
-
-
 </td>
 <td valign="top">
 
 BIT
 
-
-
 </td>
 <td valign="top">
 
 An indicator that is 1 if the expression is an added key column, otherwise 0. For more information, see the Remarks section below.
-
-
 
 </td>
 </tr>
@@ -568,21 +453,15 @@ The following table provides some examples.
 
 Declaration
 
-
-
 </th>
 <th valign="top">
 
 width
 
-
-
 </th>
 <th valign="top">
 
 declared\_width
-
-
 
 </th>
 </tr>
@@ -591,21 +470,15 @@ declared\_width
 
 CHAR\(10\)
 
-
-
 </td>
 <td valign="top">
 
 10
 
-
-
 </td>
 <td valign="top">
 
 10
-
-
 
 </td>
 </tr>
@@ -614,21 +487,15 @@ CHAR\(10\)
 
 CHAR\(10 CHAR\)
 
-
-
 </td>
 <td valign="top">
 
 40
 
-
-
 </td>
 <td valign="top">
 
 10
-
-
 
 </td>
 </tr>
@@ -637,21 +504,15 @@ CHAR\(10 CHAR\)
 
 DATE
 
-
-
 </td>
 <td valign="top">
 
 depends on the length of the date\_format option string
 
-
-
 </td>
 <td valign="top">
 
 8
-
-
 
 </td>
 </tr>
@@ -660,21 +521,15 @@ depends on the length of the date\_format option string
 
 DOUBLE
 
-
-
 </td>
 <td valign="top">
 
 8
 
-
-
 </td>
 <td valign="top">
 
 8
-
-
 
 </td>
 </tr>
@@ -683,21 +538,15 @@ DOUBLE
 
 REAL
 
-
-
 </td>
 <td valign="top">
 
 4
 
-
-
 </td>
 <td valign="top">
 
 4
-
-
 
 </td>
 </tr>
@@ -706,21 +555,15 @@ REAL
 
 NUMERIC\(10, 3\)
 
-
-
 </td>
 <td valign="top">
 
 10 \(precision\)
 
-
-
 </td>
 <td valign="top">
 
 10 \(precision\)
-
-
 
 </td>
 </tr>
@@ -729,21 +572,15 @@ NUMERIC\(10, 3\)
 
 TIME
 
-
-
 </td>
 <td valign="top">
 
 depends on the length of the time\_format option string
 
-
-
 </td>
 <td valign="top">
 
 8
-
-
 
 </td>
 </tr>
@@ -752,21 +589,15 @@ depends on the length of the time\_format option string
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 depends on the length of the timestamp\_format option string
 
-
-
 </td>
 <td valign="top">
 
 8
-
-
 
 </td>
 </tr>
@@ -775,21 +606,15 @@ depends on the length of the timestamp\_format option string
 
 TIMESTAMP WITH TIME ZONE
 
-
-
 </td>
 <td valign="top">
 
 depends on the length of the timestamp\_with\_time\_zone\_format option string
 
-
-
 </td>
 <td valign="top">
 
 8
-
-
 
 </td>
 </tr>
@@ -797,14 +622,45 @@ depends on the length of the timestamp\_with\_time\_zone\_format option string
 
 
 
-<a name="loio268f1ef2cade4d43be01e422595d548a__section_w1n_k2x_tvb"/>
+<a name="loio268f1ef2cade4d43be01e422595d548a__section_uv1_d1b_1yb"/>
 
 ## Privileges
 
-Requires one of:
 
--   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+### 
+
+The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
+
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using REMOTE\_EXECUTE\_QUERY:
+
+</b></dt>
+<dd>
+
+Requires the REMOTE EXECUTE privilege on the remote source *<hana\_relational\_container\_schema\>*\_SOURCE.
+
+-   See [REMOTE\_EXECUTE\_QUERY Guidance and Examples for Running Stored Procedures](remote-execute-query-guidance-and-examples-for-running-stored-procedures-3e7f86d.md).
+
+
+
+
+</dd><dt><b>
+
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+Requires EXECUTE object-level privilege on the procedure.
+
+
+
+</dd>
+</dl>
 
 
 
@@ -816,34 +672,271 @@ None
 
 
 
-## 1
+## Examples
 
-The following example describes the information returned when querying all columns in the Departments table:
+This example uses the sa\_describe\_query system procedure to describe the information returned when querying all columns in the Dummy table:
 
 ```
-SELECT *  
-FROM sa_describe_query( 'SELECT * FROM Departments DEPT' );
+CALL sa_describe_query( 'SELECT * FROM dummy' );
 ```
 
 The results show the values of the is\_key\_column and is\_added\_key\_column as NULL because the *<add\_keys\>* parameter was not specified.
 
 
+<table>
+<tr>
+<th valign="top">
 
-## 2
+column\_number
 
-The following example describes the information returned by querying the DepartmentName and Surname columns of the Employees table, joined with the Departments table:
+</th>
+<th valign="top">
 
-```
-SELECT  *
-FROM  sa_describe_query( 'SELECT DepartmentName, Surname
- FROM Employees E JOIN Departments D ON E.EmployeeID = D.DepartmentHeadId',
- add_keys = 1 );
-```
+name
 
-The results shows a 1 in rows 3 and 4 of the result set, indicating that the columns needed to uniquely identify rows in the result set for the query are Employees.EmployeeID and Departments.DepartmentID. Also, a 1 is present in the is\_added\_key\_column for rows 3 and 4 because Employees.EmployeeID and Departments.DepartmentID were not explicitly referenced in the query being described.
+</th>
+<th valign="top">
+
+domain\_id
+
+</th>
+<th valign="top">
+
+domain\_name
+
+</th>
+<th valign="top">
+
+domain\_name\_with\_size
+
+</th>
+<th valign="top">
+
+width
+
+</th>
+<th valign="top">
+
+scale
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+dummy\_col
+
+</td>
+<td valign="top">
+
+2
+
+</td>
+<td valign="top">
+
+integer
+
+</td>
+<td valign="top">
+
+integer
+
+</td>
+<td valign="top">
+
+4
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="6">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+declared\_width
+
+</th>
+<th valign="top">
+
+user\_type\_id
+
+</th>
+<th valign="top">
+
+user\_type\_name
+
+</th>
+<th valign="top">
+
+correlation\_name
+
+</th>
+<th valign="top">
+
+base\_table\_id
+
+</th>
+<th valign="top">
+
+base\_column\_id
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+4
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+DUMMY
+
+</td>
+<td valign="top">
+
+1200
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="5">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+base\_owner\_name
+
+</th>
+<th valign="top">
+
+base\_table\_name
+
+</th>
+<th valign="top">
+
+base\_column\_name
+
+</th>
+<th valign="top">
+
+nulls\_allowed
+
+</th>
+<th valign="top">
+
+is\_autoincrement
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+SYS
+
+</td>
+<td valign="top">
+
+DUMMY
+
+</td>
+<td valign="top">
+
+dummy\_col
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="2">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+is\_key\_column
+
+</th>
+<th valign="top">
+
+is\_added\_key\_column
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 
 
-[sa_describe_query System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/8174bd7b6ce21014b1c9f89d8beb41cb.html "Describes the result set for a query with one row describing each output column of the query.") :arrow_upper_right:
+[sa_describe_query System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/8174bd7b6ce21014b1c9f89d8beb41cb.html "Describes the result set for a query with one row describing each output column of the query.") :arrow_upper_right:
 

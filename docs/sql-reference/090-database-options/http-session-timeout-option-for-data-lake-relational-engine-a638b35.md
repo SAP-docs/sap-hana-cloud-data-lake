@@ -6,8 +6,11 @@ Specifies the amount of time, in minutes, that the client waits for an HTTP sess
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa638b35784f21015bad8a47292e44a25__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

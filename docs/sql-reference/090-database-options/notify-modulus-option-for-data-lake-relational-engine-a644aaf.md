@@ -6,8 +6,11 @@ Controls the default frequency of notify messages issued by certain commands.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa644aafb84f21015ad5fdadb6a18cd53__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

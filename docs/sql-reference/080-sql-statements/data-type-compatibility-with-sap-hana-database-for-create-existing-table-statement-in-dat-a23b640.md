@@ -17,28 +17,20 @@ For example, if the data lake Relational Engine proxy table points to a column i
 
 Data Type Classification
 
-
-
 </th>
 <th valign="top">
 
 SAP HANA Database Data Type
-
-
 
 </th>
 <th valign="top">
 
 Supports a Matching Data Type in Data Lake Relational Engine Virtual Tables?
 
-
-
 </th>
 <th valign="top">
 
 If No, What Data Type Is Substituted in Data Lake Relational Engine Virtual Tables?
-
-
 
 </th>
 </tr>
@@ -47,28 +39,20 @@ If No, What Data Type Is Substituted in Data Lake Relational Engine Virtual Tabl
 
 Binary
 
-
-
 </td>
 <td valign="top">
 
 BLOB
-
-
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 LONG BINARY
-
-
 
 </td>
 </tr>
@@ -77,21 +61,15 @@ LONG BINARY
 
 VARBINARY
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -100,21 +78,15 @@ N/A
 
 VARBINARY\(*<n\>*\)
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -123,28 +95,20 @@ N/A
 
 BOOLEAN
 
-
-
 </td>
 <td valign="top">
 
 BOOLEAN
-
-
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 BIT
-
-
 
 </td>
 </tr>
@@ -153,28 +117,20 @@ BIT
 
 Character
 
-
-
 </td>
 <td valign="top">
 
 CLOB
-
-
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 LONG NVARCHAR
-
-
 
 </td>
 </tr>
@@ -183,21 +139,15 @@ LONG NVARCHAR
 
 NCLOB
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 LONG NVARCHAR
-
-
 
 </td>
 </tr>
@@ -206,21 +156,15 @@ LONG NVARCHAR
 
 NVARCHAR and its alias VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR \(n CHAR\)
-
-
 
 </td>
 </tr>
@@ -229,28 +173,20 @@ VARCHAR \(n CHAR\)
 
 Datetime
 
-
-
 </td>
 <td valign="top">
 
 DATE
-
-
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -259,21 +195,15 @@ N/A
 
 SECONDDATE
 
-
-
 </td>
 <td valign="top">
 
  
 
-
-
 </td>
 <td valign="top">
 
 DATETIMEX
-
-
 
 </td>
 </tr>
@@ -282,21 +212,15 @@ DATETIMEX
 
 TIME
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -305,14 +229,10 @@ N/A
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
@@ -323,8 +243,6 @@ Data Lake Relational Engine supports 6 or 7 digit precision, depending on the TI
 
 For more information, see [Decimal Precision of the TIMESTAMP Data Type in Data Lake Relational Engine](../020-sql-data-types/decimal-precision-of-the-timestamp-data-type-in-data-lake-relational-engine-520ce6c.md).
 
-
-
 </td>
 </tr>
 <tr>
@@ -332,28 +250,20 @@ For more information, see [Decimal Precision of the TIMESTAMP Data Type in Data 
 
 Numeric
 
-
-
 </td>
 <td valign="top">
 
 SMALLDECIMAL
-
-
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 DECIMAL
-
-
 
 </td>
 </tr>
@@ -362,21 +272,15 @@ DECIMAL
 
 BIGINT
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -385,8 +289,6 @@ N/A
 
 DECIMAL and DECIMAL\(*<p\>*,*<s\>*\)
 
-
-
 </td>
 <td valign="top">
 
@@ -394,14 +296,10 @@ No - DECIMAL with no precision
 
 Yes - DECIMAL with precision
 
-
-
 </td>
 <td valign="top">
 
 DECIMAL with no precision and scale is not supported.
-
-
 
 </td>
 </tr>
@@ -410,21 +308,15 @@ DECIMAL with no precision and scale is not supported.
 
 REAL
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 FLOAT
-
-
 
 </td>
 </tr>
@@ -433,21 +325,15 @@ FLOAT
 
 FLOAT
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 DOUBLE
-
-
 
 </td>
 </tr>
@@ -455,22 +341,16 @@ DOUBLE
 <td valign="top">
 
 DOUBLE
-
-
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -479,21 +359,15 @@ N/A
 
 TINYINT
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -502,21 +376,15 @@ N/A
 
 SMALLINT
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -525,21 +393,15 @@ N/A
 
 INTEGER or INT
 
-
-
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 </tr>
@@ -548,28 +410,20 @@ N/A
 
 Other
 
-
-
 </td>
 <td valign="top">
 
 BOOLEAN
-
-
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 Not supported
-
-
 
 </td>
 </tr>
@@ -578,21 +432,15 @@ Not supported
 
 ST\_GEOMETRY
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 Not supported
-
-
 
 </td>
 </tr>
@@ -601,21 +449,15 @@ Not supported
 
 ST\_POINT
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 Not supported
-
-
 
 </td>
 </tr>
@@ -624,21 +466,15 @@ Not supported
 
 ARRAY
 
-
-
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 Not supported
-
-
 
 </td>
 </tr>

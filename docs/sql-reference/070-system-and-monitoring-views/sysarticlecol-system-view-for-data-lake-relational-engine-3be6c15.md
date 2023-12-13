@@ -6,10 +6,13 @@ Each row of the SYSARTICLECOL system view identifies a column in an article. The
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be6c15d6c5f1014ae52e9d129434364__section_qjx_pcq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row of the SYSARTICLECOL system view identifies a column in an article. The
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 publication\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 A unique identifier for the publication of which the column is a part.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ A unique identifier for the publication of which the column is a part.
 
 table\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The table to which the column belongs.
-
-
 
 </td>
 </tr>
@@ -89,21 +74,15 @@ The table to which the column belongs.
 
 column\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INT
 
-
-
 </td>
 <td valign="top">
 
 The column identifier, from the SYSTABCOL system view.
-
-
 
 </td>
 </tr>

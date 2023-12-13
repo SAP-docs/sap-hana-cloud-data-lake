@@ -6,17 +6,20 @@ Checks whether the materialized view supports the specified refresh and build ty
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio7d2d2da5be7e45eaa465aa7f13cde013__section_p4t_vqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 sa_materialized_view_can_have_refresh_build_type(
-   <refresh_type>, <build_type>, 
-   <view_name>, { <owner_name> | <schema_name> } )
+   '<refresh-type>', '<build-type>', 
+   '<view_name>', '{ <owner-name> | <schema-name> }' );
 ```
 
 
@@ -74,7 +77,7 @@ Specifies the owner of the materialized
 
 <a name="loio7d2d2da5be7e45eaa465aa7f13cde013__sa_matview_can_have_results1"/>
 
-## Results Set
+## Result Set
 
 
 <table>
@@ -83,21 +86,15 @@ Specifies the owner of the materialized
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Data Type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -106,21 +103,15 @@ Description
 
 SQLStateVal
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(6\)
 
-
-
 </td>
 <td valign="top">
 
 The SQLSTATE returned.
-
-
 
 </td>
 </tr>
@@ -129,21 +120,15 @@ The SQLSTATE returned.
 
 ErrorMessage
 
-
-
 </td>
 <td valign="top">
 
 LONG VARCHAR
 
-
-
 </td>
 <td valign="top">
 
 The error message corresponding to the SQLSTATE.
-
-
 
 </td>
 </tr>
@@ -157,14 +142,6 @@ The error message corresponding to the SQLSTATE.
 
 This procedure returns a table with a list of errors that prevents the specified materialized view from being altered with the specified *<refresh\_type\>* and *<build\_type\>* values.
 
-For example, calling the procedure with the parameters A, I, MV1, HDLAMIN checks whether the materialized view MV1 owned by HDLADMIN can be altered to do an automatic \(A\), incremental \(I\) refresh.
-
-```
-sa_materialized_view_can_have_refresh_build_type('A', 'I', 'MV1', 'hdladmin')
-```
-
-If the definition does not support the refresh and build type, the procedure returns the relevant errors in a table.
-
 
 
 <a name="loio7d2d2da5be7e45eaa465aa7f13cde013__sa_matview_can_have_priv1"/>
@@ -176,6 +153,59 @@ If the definition does not support the refresh and build type, the procedure ret
 ### 
 
 Requires EXECUTE object-level privilege on the procedure.
+
+Also requires one of the following:
+
+-   You own the underlying table of the view
+-   SELECT ANY TABLE system privilege
+-   SELECT object-level privilege on the view and its underlying tables
+-   SELECT object-level privilege on the schema of the materialized view and its underlying tables if the schema is owned by another user
+
+
+
+<a name="loio7d2d2da5be7e45eaa465aa7f13cde013__sa_matview_can_have_examples1"/>
+
+## Examples
+
+```
+-- Setup for the following examples:
+CREATE TABLE BAR (C1 INT, C2 INT, C3 VARCHAR(10));
+CREATE MATERIALIZED VIEW MV_BAR1 AS SELECT C1, C2, C3 FROM BAR AUTO FULL REFRESH;
+```
+
+This example checks to see if materialized view MV\_BAR1 supports an automatic \(A\), incremental \(I\) refresh. Since this definition does not support this refresh and build type, the procedure returns the relevant errors in a table.
+
+```
+CALL SA_MATERIALIZED_VIEW_CAN_HAVE_REFRESH_BUILD_TYPE ('A', 'I', 'MV1', 'hdladmin');
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+SQLStateVal
+
+</th>
+<th valign="top">
+
+ErrorMessage
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+42WCA
+
+</td>
+<td valign="top">
+
+The materialized view mv1 cannot be changed to incremental or immediate because it does not have a unique index on non-nullable columns.
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 
@@ -190,5 +220,5 @@ Requires EXECUTE object-level privilege on the procedure.
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine](../080-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-faab95d.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_materialized_view_can_have_refresh_build_type System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/46d97724fd354bb68d1c4081bd2576b0.html "Checks whether the materialized view supports the specified refresh and build type properties.") :arrow_upper_right:
+[sa_materialized_view_can_have_refresh_build_type System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/46d97724fd354bb68d1c4081bd2576b0.html "Checks whether the materialized view supports the specified refresh and build type properties.") :arrow_upper_right:
 

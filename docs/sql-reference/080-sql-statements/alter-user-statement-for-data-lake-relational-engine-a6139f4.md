@@ -6,10 +6,13 @@ Changes user settings.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6139f4584f21015bdc3a625b5b218b5__section_xv3_wvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -21,7 +24,7 @@ Changes user settings.
 ALTER USER <user-name> 
    { [ IDENTIFIED BY <password> ]
    | [ LOGIN POLICY <policy-name> ]  
-   | [ FORCE PASSWORD CHANGE { ON | OFF } ] }
+   | [ FORCE PASSWORD CHANGE { ON | OFF } ] };
 ```
 
 
@@ -29,7 +32,7 @@ ALTER USER <user-name> 
 ### Syntax 2 – Refreshes the Distinguished Name \(DN\) for an LDAP User
 
 ```
-ALTER USER <user-name> REFRESH DN
+ALTER USER <user-name> REFRESH DN;
 ```
 
 
@@ -37,17 +40,15 @@ ALTER USER <user-name> REFRESH DN
 ### Syntax 2 – Reverts a User's Login Policy to the Original Values
 
 ```
-ALTER USER <user-name> RESET LOGIN POLICY
+ALTER USER <user-name> RESET LOGIN POLICY;
 ```
 
 
 
-### Syntax 3 – Changes a User's Password
-
-When the CHANGE\_PASSWORD\_DUAL\_CONTROL is enabled in a user's login policy
+### Syntax 3 – Changes a User's Password when the CHANGE\_PASSOWRD\_DUAL\_CONTROL option is enabled
 
 ```
-ALTER USER IDENTIFIED [ FIRST | LAST ] BY <password_part>
+ALTER USER IDENTIFIED [ FIRST | LAST ] BY <password_part>;
 ```
 
 
@@ -183,9 +184,9 @@ If the CHANGE\_PASSWORD\_DUAL CONTROL login policy option is disable \(OFF\) dur
 -   The target user isbe unable to log in with the single password part already defined. The ALTER USER statement must be reissued using single password control syntax.
 -   If the option is disabled after the dual password change process is complete, but before the target user logs in, there is no impact on the target user. The target user must log in using both password parts.
 
-If the target user is already logged in when the dual password change process occurs, the user cannot change their password in the current session until both parts of the new password are set. Once the dual password change process is complete, the target user can use GRANT CONNECT, ALTER USER, or sp\_iqpassword to the password without first logging out. The prompt to enter the current password, use the new dual control password, not the password originally entered for the current session.
+If the target user is already logged in when the dual password change process occurs, the user cannot change their password in the current session until both parts of the new password are set. Once the dual password change process is complete, the target user can use GRANT CONNECT or ALTER USER to change the password without first logging out. The prompt to enter the current password, use the new dual control password, not the password originally entered for the current session.
 
-The GRANT CONNECT statement is not supported during for the dual password change process to set either password part. However, once the dual password change process is complete, the target user can use the GRANT CONNECT statement, ALTER USER, or sp\_iqpassword to change their password without first logging out.
+The GRANT CONNECT statement is not supported during for the dual password change process to set either password part. However, once the dual password change process is complete, the target user can use the GRANT CONNECT statement or ALTER USER to change their password without first logging out.
 
 As soon as both parts of the password are successfully specified by users with the CHANGE PASSWORD system privilege, the password for the target user is automatically expired. This forces the target user to change the password the next time they log in.
 
@@ -220,25 +221,14 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 The following example alters a user named SQLTester. The password is set to welcome. The SQLTester user is assigned to the Test1 login policy and the password does not expire on the next login:
 
 ```
-ALTER USER SQLTester 
-IDENTIFIED BY welcome
-LOGIN POLICY Test1
-FORCE PASSWORD CHANGE OFF
-```
-
-The following example alters a user named SQLTester. The password is set to welcome. The SQLTester user is assigned to the Test1 login policy and the password does not expire on the next login:
-
-```
-ALTER USER SQLTester 
-IDENTIFIED BY welcome
-LOGIN POLICY Test1
-FORCE PASSWORD CHANGE OFF
+ALTER USER SQLTester IDENTIFIED BY welcome
+LOGIN POLICY Test1 FORCE PASSWORD CHANGE OFF;
 ```
 
 The following example clears the distinguished name \(DN\) and timestamp for a user named Mary used for LDAP authentication:
 
 ```
-ALTER USER Mary REFRESH DN
+ALTER USER Mary REFRESH DN;
 ```
 
 The following example sets the password for user3 to PassPart1PassPart2. This assumes that user1 and user2 have the CHANGE PASSWORD system privilege and the change\_password\_dual\_control option is enabled \(ON\) in the login policy for user3:
@@ -246,13 +236,13 @@ The following example sets the password for user3 to PassPart1PassPart2. This as
 1.  User1 enters:
 
     ```
-    ALTER USER user3 IDENTIFIED FIRST BY PassPart1
+    ALTER USER user3 IDENTIFIED FIRST BY PassPart1;
     ```
 
 2.  User2 enters:
 
     ```
-    ALTER USER user3 IDENTIFIED LAST BY PassPart2
+    ALTER USER user3 IDENTIFIED LAST BY PassPart2;
     ```
 
 3.  Once set, User3 logs on by entering the password PassPart1PassPart2.
@@ -272,7 +262,7 @@ The following example sets the password for user3 to PassPart1PassPart2. This as
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[Login Policy Options](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_2_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
+[Login Policy Options](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
 
-[ALTER USER Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/a9da89453d43402981a6e01fa8c7742d.html "Changes user settings.") :arrow_upper_right:
+[ALTER USER Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/a9da89453d43402981a6e01fa8c7742d.html "Changes user settings.") :arrow_upper_right:
 

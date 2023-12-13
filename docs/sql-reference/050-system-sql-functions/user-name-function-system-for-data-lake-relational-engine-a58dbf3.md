@@ -7,7 +7,7 @@ Returns the user name.
 
 
 ```
-USER_NAME ( [ <user-id> ] )
+USER_NAME ( [ <user-id> ] );
 ```
 
 
@@ -34,7 +34,7 @@ The user identification number.
 
 
 
-## Returns
+## Result Set
 
 LONG VARCHAR
 
@@ -59,13 +59,13 @@ LONG VARCHAR
 -   The following statement returns the value “HDLADMIN”:
 
     ```
-    SELECT USER_NAME ( 1 ) FROM iq_dummy
+    SELECT USER_NAME ( 1 ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value “SYS”:
 
     ```
-    SELECT USER_NAME ( 0 ) FROM iq_dummy
+    SELECT USER_NAME ( 0 ) FROM iq_dummy;
     ```
 
 

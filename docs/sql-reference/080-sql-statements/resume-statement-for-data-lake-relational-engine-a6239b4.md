@@ -6,10 +6,13 @@ Resumes execution of a procedure that returns result sets.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6239b4d84f2101594fce0499fe8dd88__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,7 +26,7 @@ Syntax 1 – Supported in `dbisqlc`
 <dd>
 
 ```
-RESUME <cursor-name>
+RESUME <cursor-name>;
 ```
 
 
@@ -36,7 +39,7 @@ Syntax 2 – Supported in `dbisql`
 <dd>
 
 ```
-RESUME [ ALL ]
+RESUME [ ALL ];
 ```
 
 

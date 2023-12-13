@@ -6,20 +6,21 @@ Reads a file and returns the contents of the file as a LONG BINARY variable.
 
 
 
+<a name="loio3802bd2d3a464336b1abe16107b12e47__section_by2_t1x_fzb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+
 > ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Running Procedures](remote-execute-usage-examples-for-running-procedures-3e7f86d.md) for more information.
+> This syntax cannot be run when connected to SAP HANA database as a SAP HANA database user and using SAP HANA database REMOTE\_EXECUTE or REMOTE\_EXECUTE\_QUERY.
 
 
 
 ```
-xp_read_file(
-<filename>
-[, <lazy> ]
-)
+xp_read_file( <filename>[, <lazy> ] );
 ```
 
 
@@ -32,7 +33,7 @@ xp_read_file(
 <dl>
 <dt><b>
 
- *<filename\>* 
+*<filename\>* 
 
 </b></dt>
 <dd>
@@ -43,7 +44,7 @@ Use this LONG VARCHAR parameter to specify the name of the file for which to ret
 
 </dd><dt><b>
 
- *<lazy\>* 
+*<lazy\>* 
 
 </b></dt>
 <dd>
@@ -59,9 +60,37 @@ When you specify this optional INTEGER parameter and its value is not 0, the con
 
 <a name="loio3802bd2d3a464336b1abe16107b12e47__section_ups_kp2_srb"/>
 
-## Returns
+## Result Set
 
 This function returns the contents of the named file as a LONG BINARY value. If the file does not exist or cannot be read, NULL is returned.
+
+
+<table>
+<tr>
+<th valign="top">
+
+Column Name
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+*<filename\>*
+
+</td>
+<td valign="top">
+
+Displays NULL if the filename does not exist or cannot be read.
+
+</td>
+</tr>
+</table>
 
 
 
@@ -81,17 +110,50 @@ The function returns NULL if the specified file does not exist.
 
 
 
+<a name="loio3802bd2d3a464336b1abe16107b12e47__section_szs_mbb_1yb"/>
+
 ## Privileges
 
-You need all of the following:
 
--   EXECUTE object-level privilege on the system procedure
--   EXECUTE privilege on the xp\_read\_real\_file system procedure
+
+### 
+
+Requires all of the following:
+
+-   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on the xp\_read\_real\_file procedure
 -   READ FILE system privilege
 
 
 
+## Examples
+
+This example indicates that filename mpx-coord-0.iqmsg in path /diag/logs/ either does not exist or cannot be read.
+
 ```
-SELECT xp_read_file('/diag/logs/mpx-writer-0-0/mpx-writer-0-0/iqaas_20211217_110352.332_mpx-coord-0.iqmsg')
+Call xp_read_file('/diag/logs/mpx-coord-0.iqmsg');
 ```
+
+
+<table>
+<tr>
+<th valign="top">
+
+xp\_read\_file\('/diag/logs/mpx-coord-0.iqmsg'\)
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+</table>
+
+**Related Information**  
+
+
+[xp_read_file System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3beb56b86c5f101495dbf54443bd191d.html "Reads a file and returns the contents of the file as a LONG BINARY variable.") :arrow_upper_right:
 

@@ -6,10 +6,13 @@ Controls the maximum stale time limit, in the specified units of time.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loiof444eb30bf634e93a0e63edb1a85ffa8__section_nnn_jnr_znb"/>
+
+## Usage
+
+This data lake Relational Engine database option can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -18,7 +21,7 @@ Controls the maximum stale time limit, in the specified units of time.
 ## Syntax
 
 ```
-MATERIALIZED_VIEW_STALENESS_LIMIT = { Fresh | N { Minute[s] | Hour[s] | Day[s] | Week[s] | Month[s] } }
+MATERIALIZED_VIEW_STALENESS_LIMIT = { Fresh | N { Minute[s] | Hour[s] | Day[s] | Week[s] | Month[s] } };
 ```
 
 
@@ -70,28 +73,20 @@ Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this databas
 
  
 
-
-
 </th>
 <th valign="top">
 
 PUBLIC Role
-
-
 
 </th>
 <th valign="top">
 
 For Current User
 
-
-
 </th>
 <th valign="top">
 
 For Other Users
-
-
 
 </th>
 </tr>
@@ -100,28 +95,20 @@ For Other Users
 
 Allowed to set permanently?
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 </tr>
@@ -130,28 +117,20 @@ Yes
 
 Allowed to set temporarily?
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 Yes \(current connection only\)
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 </tr>
@@ -180,5 +159,5 @@ SET TEMPORARY OPTION materialized_view_staleness_limit='30 Minutes';
 **Related Information**  
 
 
-[MATERIALIZED_VIEW_STALENESS_LIMIT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7ac82c4f1cfb46bbb18966f957d91b3d.html "Controls the maximum stale time limit, in the specified units of time.") :arrow_upper_right:
+[MATERIALIZED_VIEW_STALENESS_LIMIT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7ac82c4f1cfb46bbb18966f957d91b3d.html "Controls the maximum stale time limit, in the specified units of time.") :arrow_upper_right:
 

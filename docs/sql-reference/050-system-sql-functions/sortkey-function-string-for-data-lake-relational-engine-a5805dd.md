@@ -8,7 +8,7 @@ Generates values that can be used to sort character strings based on alternate c
 
 ```
 SORTKEY ( <string-expression> [, { <collation-id>
-| <collation-name> [ ( <collation-tailoring-string> ) ] } ] )
+| <collation-name> [ ( <collation-tailoring-string> ) ] } ] );
 ```
 
 
@@ -21,7 +21,7 @@ SORTKEY ( <string-expression> [, { <collation-id>
 <dl>
 <dt><b>
 
- *<string-expression\>* 
+*<string-expression\>* 
 
 </b></dt>
 <dd>
@@ -68,7 +68,7 @@ Similarly, you can specify the alias NCHAR\_COLLATION to generate sort-keys as u
 \(Optional\) Specify collation tailoring options \(*<collation-tailoring-string\>*\) for additional control over sorting and comparison of characters. These options take the form of keyword=value pairs assembled in parentheses, following the collation name. For example:
 
 ```
-'UCA(locale=es;case=LowerFirst;accent=respect)'
+'UCA(locale=es;case=LowerFirst;accent=respect);'
 ```
 
 > ### Note:  
@@ -83,7 +83,7 @@ Similarly, you can specify the alias NCHAR\_COLLATION to generate sort-keys as u
 
 <a name="loioa5805ddb84f2101591ffe19db63f3521__SORTKEY_returns1"/>
 
-## Returns
+## Result Set
 
 BINARY
 
@@ -98,14 +98,14 @@ The `SORTKEY` function generates values that can be used to order results based 
 For example, you can store the values returned by the `SORTKEY` function in a column with the source character string. The following `SELECT` statement retrieves data from table T1 in the sorted order of c1 according to the Thai dictionary:
 
 ```
-SELECT rid, c1 from T1 ORDER BY SORTKEY(c1)
+SELECT rid, c1 from T1 ORDER BY SORTKEY(c1);
 ```
 
 You instead store the value returned by `SORTKEY`in a column with the source character string. To retrieve the character data in the required order, the `SELECT` statement needs to include only an `ORDER BY` clause on the column that contains the results of running the `SORTKEY` function:
 
 ```
-UPDATE T1 SET shadowc1=SORTKEY(c1) FROM T1;
-SELECT rid, c1 FROM T1 ORDER BY shadowc1
+UPDATE T1 SET shadowc1=SORTKEY(c1) FROM T1
+SELECT rid, c1 FROM T1 ORDER BY shadowc1;
 ```
 
 The `SORTKEY` function guarantees that the values it returns for a given set of sort order criteria work for the binary comparisons that are performed on `VARBINARY` data types.
@@ -126,827 +126,611 @@ Valid collations are as follows:
     <th valign="top" rowspan="1">
 
     Description
-
-
     
     </th>
     <th valign="top" rowspan="1">
 
     Collation Name
-
-
     
     </th>
     <th valign="top" rowspan="1">
 
     Collation ID
-
-
     
     </th>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        Default Unicode multilingual
-
-
+    Default Unicode multilingual
     
     </td>
     <td valign="top" rowspan="1">
     
-        default
-
-
+    default
     
     </td>
     <td valign="top" rowspan="1">
     
-        0
-
-
+    0
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        CP 850 Alternative: no accent
-
-
+    CP 850 Alternative: no accent
     
     </td>
     <td valign="top" rowspan="1">
     
-        altnoacc
-
-
+    altnoacc
     
     </td>
     <td valign="top" rowspan="1">
     
-        39
-
-
+    39
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        CP 850 Alternative: lowercase first
-
-
+    CP 850 Alternative: lowercase first
     
     </td>
     <td valign="top" rowspan="1">
     
-        altdict
-
-
+    altdict
     
     </td>
     <td valign="top" rowspan="1">
     
-        45
-
-
+    45
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        CP 850 Western European: no case, preference
-
-
+    CP 850 Western European: no case, preference
     
     </td>
     <td valign="top" rowspan="1">
     
-        altnocsp
-
-
+    altnocsp
     
     </td>
     <td valign="top" rowspan="1">
     
-        46
-
-
+    46
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        CP 850 Scandinavian dictionary
-
-
+    CP 850 Scandinavian dictionary
     
     </td>
     <td valign="top" rowspan="1">
     
-        scandict
-
-
+    scandict
     
     </td>
     <td valign="top" rowspan="1">
     
-        47
-
-
+    47
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        CP 850 Scandinavian: no case, preference
-
-
+    CP 850 Scandinavian: no case, preference
     
     </td>
     <td valign="top" rowspan="1">
     
-        scannocp
-
-
+    scannocp
     
     </td>
     <td valign="top" rowspan="1">
     
-        48
-
-
+    48
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        GB Pinyin
-
-
+    GB Pinyin
     
     </td>
     <td valign="top" rowspan="1">
     
-        gbpinyin
-
-
+    gbpinyin
     
     </td>
     <td valign="top" rowspan="1">
     
-        n/a
-
-
+    n/a
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        Binary sort
-
-
+    Binary sort
     
     </td>
     <td valign="top" rowspan="1">
     
-        binary
-
-
+    binary
     
     </td>
     <td valign="top" rowspan="1">
     
-        50
-
-
+    50
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        Latin-1 English, French, German dictionary
-
-
+    Latin-1 English, French, German dictionary
     
     </td>
     <td valign="top" rowspan="1">
     
-        dict
-
-
+    dict
     
     </td>
     <td valign="top" rowspan="1">
     
-        51
-
-
+    51
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        Latin-1 English, French, German no case
-
-
+    Latin-1 English, French, German no case
     
     </td>
     <td valign="top" rowspan="1">
     
-        nocase
-
-
+    nocase
     
     </td>
     <td valign="top" rowspan="1">
     
-        52
-
-
+    52
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        Latin-1 English, French, German no case, preference
-
-
+    Latin-1 English, French, German no case, preference
     
     </td>
     <td valign="top" rowspan="1">
     
-        nocasep
-
-
+    nocasep
     
     </td>
     <td valign="top" rowspan="1">
     
-        53
-
-
+    53
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        Latin-1 English, French, German no accent
-
-
+    Latin-1 English, French, German no accent
     
     </td>
     <td valign="top" rowspan="1">
     
-        noaccent
-
-
+    noaccent
     
     </td>
     <td valign="top" rowspan="1">
     
-        54
-
-
+    54
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        Latin-1 Spanish dictionary
-
-
+    Latin-1 Spanish dictionary
     
     </td>
     <td valign="top" rowspan="1">
     
-        espdict
-
-
+    espdict
     
     </td>
     <td valign="top" rowspan="1">
     
-        55
-
-
+    55
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        Latin-1 Spanish no case
-
-
+    Latin-1 Spanish no case
     
     </td>
     <td valign="top" rowspan="1">
     
-        espnocs
-
-
+    espnocs
     
     </td>
     <td valign="top" rowspan="1">
     
-        56
-
-
+    56
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        Latin-1 Spanish no accent
-
-
+    Latin-1 Spanish no accent
     
     </td>
     <td valign="top" rowspan="1">
     
-        espnoac
-
-
+    espnoac
     
     </td>
     <td valign="top" rowspan="1">
     
-        57
-
-
+    57
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        ISO 8859-5 Russian dictionary
-
-
+    ISO 8859-5 Russian dictionary
     
     </td>
     <td valign="top" rowspan="1">
     
-        rusdict
-
-
+    rusdict
     
     </td>
     <td valign="top" rowspan="1">
     
-        58
-
-
+    58
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        ISO 8859-5 Russian no case
-
-
+    ISO 8859-5 Russian no case
     
     </td>
     <td valign="top" rowspan="1">
     
-        rusnocs
-
-
+    rusnocs
     
     </td>
     <td valign="top" rowspan="1">
     
-        59
-
-
+    59
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        ISO 8859-5 Cyrillic dictionary
-
-
+    ISO 8859-5 Cyrillic dictionary
     
     </td>
     <td valign="top" rowspan="1">
     
-        cyrdict
-
-
+    cyrdict
     
     </td>
     <td valign="top" rowspan="1">
     
-        63
-
-
+    63
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        ISO 8859-5 Cyrillic no case
-
-
+    ISO 8859-5 Cyrillic no case
     
     </td>
     <td valign="top" rowspan="1">
     
-        cyrnocs
-
-
+    cyrnocs
     
     </td>
     <td valign="top" rowspan="1">
     
-        64
-
-
+    64
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        ISO 8859-7 Greek dictionary
-
-
+    ISO 8859-7 Greek dictionary
     
     </td>
     <td valign="top" rowspan="1">
     
-        elldict
-
-
+    elldict
     
     </td>
     <td valign="top" rowspan="1">
     
-        65
-
-
+    65
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        ISO 8859-2 Hungarian dictionary
-
-
+    ISO 8859-2 Hungarian dictionary
     
     </td>
     <td valign="top" rowspan="1">
     
-        hundict
-
-
+    hundict
     
     </td>
     <td valign="top" rowspan="1">
     
-        69
-
-
+    69
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        ISO 8859-2 Hungarian no accents
-
-
+    ISO 8859-2 Hungarian no accents
     
     </td>
     <td valign="top" rowspan="1">
     
-        hunnoac
-
-
+    hunnoac
     
     </td>
     <td valign="top" rowspan="1">
     
-        70
-
-
+    70
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        ISO 8859-2 Hungarian no case
-
-
+    ISO 8859-2 Hungarian no case
     
     </td>
     <td valign="top" rowspan="1">
     
-        hunnocs
-
-
+    hunnocs
     
     </td>
     <td valign="top" rowspan="1">
     
-        71
-
-
+    71
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        ISO 8859-5 Turkish dictionary
-
-
+    ISO 8859-5 Turkish dictionary
     
     </td>
     <td valign="top" rowspan="1">
     
-        turdict
-
-
+    turdict
     
     </td>
     <td valign="top" rowspan="1">
     
-        72
-
-
+    72
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        ISO 8859-5 Turkish no accents
-
-
+    ISO 8859-5 Turkish no accents
     
     </td>
     <td valign="top" rowspan="1">
     
-        turnoac
-
-
+    turnoac
     
     </td>
     <td valign="top" rowspan="1">
     
-        73
-
-
+    73
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        ISO 8859-5 Turkish no case
-
-
+    ISO 8859-5 Turkish no case
     
     </td>
     <td valign="top" rowspan="1">
     
-        turnocs
-
-
+    turnocs
     
     </td>
     <td valign="top" rowspan="1">
     
-        74
-
-
+    74
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        CP 874 \(TIS 620\) Royal Thai dictionary
-
-
+    CP 874 \(TIS 620\) Royal Thai dictionary
     
     </td>
     <td valign="top" rowspan="1">
     
-        thaidict
-
-
+    thaidict
     
     </td>
     <td valign="top" rowspan="1">
     
-        1
-
-
+    1
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        ISO 14651 ordering standard
-
-
+    ISO 14651 ordering standard
     
     </td>
     <td valign="top" rowspan="1">
     
-        14651
-
-
+    14651
     
     </td>
     <td valign="top" rowspan="1">
     
-        22
-
-
+    22
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        Shift-JIS binary order
-
-
+    Shift-JIS binary order
     
     </td>
     <td valign="top" rowspan="1">
     
-        sjisbin
-
-
+    sjisbin
     
     </td>
     <td valign="top" rowspan="1">
     
-        179
-
-
+    179
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        Unicode UTF-8 binary sort
-
-
+    Unicode UTF-8 binary sort
     
     </td>
     <td valign="top" rowspan="1">
     
-        utf8bin
-
-
+    utf8bin
     
     </td>
     <td valign="top" rowspan="1">
     
-        24
-
-
+    24
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        EUC JIS binary order
-
-
+    EUC JIS binary order
     
     </td>
     <td valign="top" rowspan="1">
     
-        eucjisbn
-
-
+    eucjisbn
     
     </td>
     <td valign="top" rowspan="1">
     
-        192
-
-
+    192
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        GB2312 binary order
-
-
+    GB2312 binary order
     
     </td>
     <td valign="top" rowspan="1">
     
-        gb2312bn
-
-
+    gb2312bn
     
     </td>
     <td valign="top" rowspan="1">
     
-        137
-
-
+    137
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        CP932 MS binary order
-
-
+    CP932 MS binary order
     
     </td>
     <td valign="top" rowspan="1">
     
-        cp932bin
-
-
+    cp932bin
     
     </td>
     <td valign="top" rowspan="1">
     
-        129
-
-
+    129
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        Big5 binary order
-
-
+    Big5 binary order
     
     </td>
     <td valign="top" rowspan="1">
     
-        big5bin
-
-
+    big5bin
     
     </td>
     <td valign="top" rowspan="1">
     
-        194
-
-
+    194
     
     </td>
     </tr>
     <tr>
     <td valign="top" rowspan="1">
     
-        EUC KSC binary order
-
-
+    EUC KSC binary order
     
     </td>
     <td valign="top" rowspan="1">
     
-        euckscbn
-
-
+    euckscbn
     
     </td>
     <td valign="top" rowspan="1">
     
-        161
-
-
+    161
     
     </td>
     </tr>
@@ -969,17 +753,17 @@ SELECT SORTKEY( 'abc', '1252LATIN1(case=LowerFirst)' );
 If the database was created without specifying tailoring options, the following two clauses may generate different sort orders, even if the database collation name is specified for the `SORTKEY` function:
 
 ```
-ORDER BY string-expression
+ORDER BY string-expression;
 ```
 
 ```
-ORDER BY SORTKEY( string-expression, database-collation-name )
+ORDER BY SORTKEY( string-expression, database-collation-name );
 ```
 
 Different sort orders may be generated, because the default tailoring settings used for database creation and for the `SORTKEY` function are different. To get the same behavior from `SORTKEY` as for the database collation, either provide a tailoring syntax for *<collation-tailoring-string\>* that matches the settings for the database collation, or specify `db_collation` for collation-name. For example:
 
 ```
-SORTKEY( expression, 'db_collation' )
+SORTKEY( expression, 'db_collation' );
 ```
 
 
@@ -1005,5 +789,5 @@ SELECT Surname, GivenName FROM Employees ORDER BY SORTKEY( Surname, 'dict' );
 **Related Information**  
 
 
-[SORTKEY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/66b441998f6b490ca54f8314748c9331.html "Generates values that can be used to sort character strings based on alternate collation rules.") :arrow_upper_right:
+[SORTKEY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/66b441998f6b490ca54f8314748c9331.html "Generates values that can be used to sort character strings based on alternate collation rules.") :arrow_upper_right:
 

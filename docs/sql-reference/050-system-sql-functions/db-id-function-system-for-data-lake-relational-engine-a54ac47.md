@@ -7,7 +7,7 @@ Returns the database ID number.
 
 
 ```
-DB_ID ( [ <database-name> ] )
+DB_ID ( [ <database-name> ] );
 ```
 
 
@@ -34,7 +34,7 @@ A string expression containing the database name. If database-name is a string c
 
 
 
-## Returns
+## Result Set
 
 INT
 
@@ -64,13 +64,13 @@ INT
 -   Returns the value 0, if `iqdemo` is the only running database:
 
     ```
-    SELECT DB_ID( 'iqdemo' ) FROM iq_dummy
+    SELECT DB_ID( 'iqdemo' ) FROM iq_dummy;
     ```
 
 -   Returns the value 0, if executed against the only running database:
 
     ```
-    SELECT DB_ID() FROM iq_dummy
+    SELECT DB_ID() FROM iq_dummy;
     ```
 
 

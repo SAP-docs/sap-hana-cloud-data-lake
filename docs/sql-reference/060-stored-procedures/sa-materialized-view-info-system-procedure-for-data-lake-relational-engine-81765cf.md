@@ -6,15 +6,18 @@ Returns information about the specified materialized views.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio81765cf86ce21014a6c5cb4c15fd4d22__section_p4t_vqn_14b"/>
+
+## Usage
+
+This data lake Relational Engine procedure can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_materialized_view_info( [ <view_name> [, <owner_name> ] ] )
+sa_materialized_view_info( [ '<view-name>' [, '{ <owner-name> | <schema-name> }'] ] );
 ```
 
 
@@ -27,7 +30,7 @@ sa_materialized_view_info( [ <view_name> [, <owner_name> ] ] )
 <dl>
 <dt><b>
 
- *<view\_name\>* 
+*<view-name\>* 
 
 </b></dt>
 <dd>
@@ -38,12 +41,12 @@ Use this optional CHAR\(128\) parameter to specify the name of the materialized 
 
 </dd><dt><b>
 
- *<owner\_name\>* 
+*<owner\>* | *<schema-name\>*
 
 </b></dt>
 <dd>
 
-Use this optional CHAR\(128\) parameter to specify the owner of the materialized view. The default is NULL.
+Use this optional CHAR\(128\) parameter to specify the owner or schema name for the *<table-name\>*. The default is NULL.
 
 
 
@@ -63,21 +66,15 @@ Use this optional CHAR\(128\) parameter to specify the owner of the materialized
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -86,21 +83,15 @@ Description
 
 OwnerName
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The owner of the view.
-
-
 
 </td>
 </tr>
@@ -109,21 +100,15 @@ The owner of the view.
 
 ViewName
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(128\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the view.
-
-
 
 </td>
 </tr>
@@ -132,14 +117,10 @@ The name of the view.
 
 Status
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -182,14 +163,10 @@ enabled
 
 DataStatus
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -261,21 +238,15 @@ An underlying table has changed since the last refresh, and the view is consider
 
 ViewLastRefreshed
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
 
-
-
 </td>
 <td valign="top">
 
 The database server local date and time when the view was last refreshed. If the value of ViewLastRefreshed is NULL, the view is uninitialized. This value is affected by simulated time zone.
-
-
 
 </td>
 </tr>
@@ -284,14 +255,10 @@ The database server local date and time when the view was last refreshed. If the
 
 DataLastModified
 
-
-
 </td>
 <td valign="top">
 
 TIMESTAMP
-
-
 
 </td>
 <td valign="top">
@@ -300,8 +267,6 @@ For a stale view, the last database server local date and time that underlying d
 
 The value is NULL for views that are not initialized, or for views that are not considered stale.
 
-
-
 </td>
 </tr>
 <tr>
@@ -309,14 +274,10 @@ The value is NULL for views that are not initialized, or for views that are not 
 
 AvailForOptimization
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -392,14 +353,10 @@ The view can be used by the optimizer. The owner of the view allows the view to 
 
 RefreshType
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -442,14 +399,10 @@ Automatic views are refreshed automatically.
 
 BuildType
 
-
-
 </td>
 <td valign="top">
 
 CHAR\(1\)
-
-
 
 </td>
 <td valign="top">
@@ -510,36 +463,26 @@ The following table shows how the AvailForOptimization property is determined. S
 
 User allows view to be used in optimization?
 
-
-
 </th>
 <th valign="top">
 
 The view definition satisfies all the conditions required for use?
-
-
 
 </th>
 <th valign="top">
 
 The connection options match those required for use of the view?
 
-
-
 </th>
 <th valign="top">
 
 The view is initialized?
-
-
 
 </th>
 <th valign="top">
 
 AvailForOptimization value
 
-
-
 </th>
 </tr>
 <tr>
@@ -547,36 +490,26 @@ AvailForOptimization value
 
 Yes
 
+</td>
+<td valign="top">
 
+Yes
 
 </td>
 <td valign="top">
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
-
-</td>
-<td valign="top">
-
-Yes
-
-
 
 </td>
 <td valign="top">
 
 Y
 
-
-
 </td>
 </tr>
 <tr>
@@ -584,36 +517,26 @@ Y
 
 No
 
+</td>
+<td valign="top">
 
+N/A
 
 </td>
 <td valign="top">
 
 N/A
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
-
-</td>
-<td valign="top">
-
-N/A
-
-
 
 </td>
 <td valign="top">
 
 D
 
-
-
 </td>
 </tr>
 <tr>
@@ -621,36 +544,26 @@ D
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 <td valign="top">
 
 N/A
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 I
 
-
-
 </td>
 </tr>
 <tr>
@@ -658,36 +571,26 @@ I
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 N/A
 
-
-
 </td>
 <td valign="top">
 
 N/A
-
-
 
 </td>
 <td valign="top">
 
 No
-
-
 
 </td>
 <td valign="top">
 
 N
 
-
-
 </td>
 </tr>
 <tr>
@@ -695,41 +598,33 @@ N
 
 Yes
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 No
 
-
-
 </td>
 <td valign="top">
 
 Yes
-
-
 
 </td>
 <td valign="top">
 
 O
 
-
-
 </td>
 </tr>
 </table>
 
 An initialized materialized view can be empty. This occurs when there is no data in the underlying tables that meets the materialized view definition. An empty view is not considered the same as an uninitialized materialized view, which also has no data in it. The value of the ViewLastRefreshed property allows you to distinguish between whether the view is uninitialized \(NULL\), or empty because of data in the underlying tables \(non-NULL\).
+
+The results of the sa\_materialized\_view\_info system procedure can be combined with the results of the sa\_materialized\_view\_can\_have\_refresh\_build\_type system procedure to return status information, and whether the view is eligible for being an Incremental view.
 
 
 
@@ -743,6 +638,13 @@ An initialized materialized view can be empty. This occurs when there is no data
 
 Requires EXECUTE object-level privilege on the procedure.
 
+Also requires one of the following:
+
+-   You own the underlying table of the view
+-   SELECT ANY TABLE system privilege
+-   SELECT object-level privilege on the view and its underlying tables
+-   SELECT object-level privilege on the schema of the materialized view and its underlying tables if the schema is owned by another user
+
 
 
 <a name="loio81765cf86ce21014a6c5cb4c15fd4d22__sa_matview_info_sideeffects1"/>
@@ -753,62 +655,14 @@ All metadata for the specified materialized views, and all dependencies, are loa
 
 
 
-The following statement returns information about all materialized views in the database:
+<a name="loio81765cf86ce21014a6c5cb4c15fd4d22__sa_matview_info_examples1"/>
+
+## Examples
+
+This example uses the sa\_materialized\_view\_info system procedure to return information about all materialized views in the database:
 
 ```
-SELECT *
-   FROM sa_materialized_view_info();
-```
-
-The results of the sa\_materialized\_view\_info system procedure can be combined with the results of the sa\_materialized\_view\_can\_have\_refresh\_build\_type system procedure to return status information, and whether the view is eligible for being an Incremental view. Execute the following statements to create materialized views that are examined for this example:
-
-```
-CREATE MATERIALIZED VIEW view0 AS ( 
-   SELECT ID, Name, Description, Size 
-   FROM Products 
-   WHERE Quantity > 0 );
-
-CREATE UNIQUE INDEX u_view0 
-   ON view0( ID );
-
-ALTER MATERIALIZED VIEW view0 
-   MANUAL INCREMENTAL REFRESH;
-
-CREATE MATERIALIZED VIEW view00 AS (
-   SELECT ID, Name, Description, Size 
-   FROM Products 
-   WHERE Quantity <= 0 );
-
-CREATE UNIQUE INDEX u_view00 
-   ON view00( ID );
-
-CREATE MATERIALIZED VIEW view1 AS (
-   SELECT ID, Name, Description, Size 
-   FROM Products 
-   WHERE Quantity = 0 );
-
-ALTER MATERIALIZED VIEW view1 
-   DISABLE;
-
-CREATE MATERIALIZED VIEW view100
-   AS (SELECT C.ID, C.Surname, sum(P.UnitPrice) as revenue, C.CompanyName, SO.OrderDate
-         FROM Customers C, SalesOrders SO, SalesOrderItems SOI, Products P
-         WHERE C.ID = SO.CustomerID
-         AND SO.ID = SOI.ID
-         AND P.ID = SOI.ProductID
-         GROUP BY C.ID, C.Surname, C.CompanyName, SO.OrderDate);
-
-REFRESH MATERIALIZED VIEW view100;
-```
-
-Execute the following statement to return the status and eligibility information for the views owned by you:
-
-```
-SELECT ViewName, Status, ViewLastRefreshed, AvailForOptimization, RefreshType, BuildType, CanBeIncremental
-   FROM sa_materialized_view_info() AS V,
-      LATERAL( SELECT LIST(ErrorMessage, ';' )
-         FROM sa_materialized_view_can_have_refresh_build_type('M', 'I', V.ViewName, V.OwnerName ) ) AS I( CanBeIncremental )
-   WHERE OwnerName = USER_NAME();
+CALL sa_materialized_view_info();
 ```
 
 
@@ -816,274 +670,330 @@ SELECT ViewName, Status, ViewLastRefreshed, AvailForOptimization, RefreshType, B
 <tr>
 <th valign="top">
 
+OwnerName
+
+</th>
+<th valign="top">
+
 ViewName
-
-
 
 </th>
 <th valign="top">
 
 Status
 
+</th>
+<th valign="top">
 
+DataStatus
 
 </th>
 <th valign="top">
 
 ViewLastRefreshed
 
-
-
 </th>
 <th valign="top">
 
+DataLastModified
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+V\_BAR1
+
+</td>
+<td valign="top">
+
+E
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+m\_t1
+
+</td>
+<td valign="top">
+
+E
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+<td valign="top">
+
+03:00.0
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+mv1
+
+</td>
+<td valign="top">
+
+E
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="3">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
 AvailForOptimization
-
-
 
 </th>
 <th valign="top">
 
 RefreshType
 
+</th>
+<th valign="top">
 
+BuildType
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+D
+
+</td>
+<td valign="top">
+
+A
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+D
+
+</td>
+<td valign="top">
+
+A
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+D
+
+</td>
+<td valign="top">
+
+A
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+</tr>
+</table>
+
+This example returns information about materialized view V\_BAR1, owned by USER1:
+
+```
+CALL sa_materialized_view_info('V_BAR1', 'USER1);
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+OwnerName
+
+</th>
+<th valign="top">
+
+ViewName
+
+</th>
+<th valign="top">
+
+Status
+
+</th>
+<th valign="top">
+
+DataStatus
+
+</th>
+<th valign="top">
+
+ViewLastRefreshed
+
+</th>
+<th valign="top">
+
+DataLastModified
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+V\_BAR1
+
+</td>
+<td valign="top">
+
+E
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="3">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+AvailForOptimization
+
+</th>
+<th valign="top">
+
+RefreshType
 
 </th>
 <th valign="top">
 
 BuildType
 
-
-
-</th>
-<th valign="top">
-
-CanBeIncremental
-
-
-
 </th>
 </tr>
 <tr>
 <td valign="top">
 
-view0
-
-
-
-</td>
-<td valign="top">
-
-E
-
-
-
-</td>
-<td valign="top">
-
-\(NULL\)
-
-
-
-</td>
-<td valign="top">
-
 D
 
-
-
 </td>
 <td valign="top">
 
-M
-
-
-
-</td>
-<td valign="top">
-
-I
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-view00
-
-
-
-</td>
-<td valign="top">
-
-E
-
-
-
-</td>
-<td valign="top">
-
-\(NULL\)
-
-
-
-</td>
-<td valign="top">
-
-D
-
-
-
-</td>
-<td valign="top">
-
-M
-
-
+A
 
 </td>
 <td valign="top">
 
 F
-
-
-
-</td>
-<td valign="top">
-
- 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-view1
-
-
-
-</td>
-<td valign="top">
-
-D
-
-
-
-</td>
-<td valign="top">
-
-\(NULL\)
-
-
-
-</td>
-<td valign="top">
-
-D
-
-
-
-</td>
-<td valign="top">
-
-M
-
-
-
-</td>
-<td valign="top">
-
-F
-
-
-
-</td>
-<td valign="top">
-
-`Cannot use view 'view1' because it has been disabled.` 
-
-
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-view100
-
-
-
-</td>
-<td valign="top">
-
-E
-
-
-
-</td>
-<td valign="top">
-
-2022-12-19 12:53:00.000
-
-
-
-</td>
-<td valign="top">
-
-D
-
-
-
-</td>
-<td valign="top">
-
-M
-
-
-
-</td>
-<td valign="top">
-
-F
-
-
-
-</td>
-<td valign="top">
-
- ***'The materialized view 'view100' cannot be changed to incremental or immediate because it has already been initialized. ; The materialized view cannot be changed to incremental or immediate because its SELECT list contains a SUM function over a nullable expression and it doesn't contain a COUNT function over the same expression.'*** 
-
-
 
 </td>
 </tr>
 </table>
-
-The results show that:
-
--   view0 was never refreshed and is an incremental view.
-
--   view00 was never refreshed and is a manual view.
-
--   view1 is disabled
-
--   view100 is a manual view that was last refreshed at 2022-12-19 12:53:00.000.
-
--   view00 can be changed to an incremental view because there are no error messages in the CanBeIncremental column.
-
--   view1 and view100 cannot be changed to incremental views for the reasons listed in the CanBeIncremental column.
-
 
 **Related Information**  
 
@@ -1098,5 +1008,5 @@ The results show that:
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine](../080-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-faab95d.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_materialized_view_info System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/7897509ad128448889f704a5f1a80aa6.html "Returns information about the specified materialized views.") :arrow_upper_right:
+[sa_materialized_view_info System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7897509ad128448889f704a5f1a80aa6.html "Returns information about the specified materialized views.") :arrow_upper_right:
 

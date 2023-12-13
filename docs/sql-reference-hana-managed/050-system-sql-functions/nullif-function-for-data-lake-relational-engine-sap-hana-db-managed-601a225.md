@@ -7,7 +7,7 @@ Provides an abbreviated `CASE` expression by comparing expressions.
 
 
 ```
-NULLIF ( <expression1>, <expression2> )
+NULLIF ( <expression1>, <expression2> );
 ```
 
 
@@ -47,7 +47,7 @@ An expression to be compared.
 
 <a name="loio601a225cec8f4647a3a612f92994e087__section_vns_2nn_vrb"/>
 
-## Returns
+## Result Set
 
 Data type of the first argument.
 
@@ -88,18 +88,18 @@ ELSE <expression1> END
 -   The following statement returns `a`:
 
     ```
-    SELECT NULLIF( 'a', 'b' ) FROM iq_dummy
+    SELECT NULLIF( 'a', 'b' ) FROM iq_dummy;
     ```
 
 -   The following statement returns NULL:
 
     ```
-    SELECT NULLIF( 'a', 'a' ) FROM iq_dummy
+    SELECT NULLIF( 'a', 'a' ) FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[NULLIF Function [Miscellaneous] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a569fd1184f210159b61c1d4823ce243.html "Provides an abbreviated CASE expression by comparing expressions.") :arrow_upper_right:
+[NULLIF Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a569fd1184f210159b61c1d4823ce243.html "Provides an abbreviated CASE expression by comparing expressions.") :arrow_upper_right:
 

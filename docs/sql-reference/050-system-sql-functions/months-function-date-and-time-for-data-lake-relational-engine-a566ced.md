@@ -9,7 +9,7 @@ Returns the number of months since an arbitrary starting date/time or the number
 ```
 MONTHS ( <date-expression>
 | <date-expression, datetime-expression>
-| <date-expression, integer-expression> )
+| <date-expression, integer-expression> );
 ```
 
 
@@ -49,7 +49,7 @@ The number of months to be added to the *<date-expression\>*. If *<integer-expre
 
 <a name="loioa566ced484f21015ad419bb64c76680c__months_returns1"/>
 
-## Returns
+## Result Set
 
 -   INT
 -   TIMSTAMP
@@ -63,7 +63,7 @@ The number of months to be added to the *<date-expression\>*. If *<integer-expre
 The first syntax returns the number of months since an arbitrary starting date. This number is often useful for determining whether two date/time expressions are in the same month in the same year.
 
 ```
-MONTHS( invoice_sent ) = MONTHS( payment_received )
+MONTHS( invoice_sent ) = MONTHS( payment_received );
 ```
 
 Comparing the MONTH function would incorrectly include a payment made 12 months after the invoice was sent.
@@ -89,21 +89,21 @@ The third syntax adds *<integer-expression\>* months to the given date. If the n
 -   The following statement returns the value 23982:
 
     ```
-    SELECT MONTHS( '1998-07-13 06:07:12' ) FROM iq_dummy
+    SELECT MONTHS( '1998-07-13 06:07:12' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 2, to signify the difference between the two dates:
 
     ```
     SELECT MONTHS( '1999-07-13 06:07:12',
-    	'1999-09-13 10:07:12' ) FROM iq_dummy
+    	'1999-09-13 10:07:12' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the datetime value 1999-10-12 21:05:07.000:
 
     ```
     SELECT MONTHS( CAST( '1999-05-12 21:05:07'
-    AS DATETIME ), 5) FROM iq_dummy
+    AS DATETIME ), 5) FROM iq_dummy;
     ```
 
 
@@ -128,5 +128,5 @@ The third syntax adds *<integer-expression\>* months to the given date. If the n
 
 [YEARS Function \[Date and Time\] for Data Lake Relational Engine](years-function-date-and-time-for-data-lake-relational-engine-a5926bf.md "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.")
 
-[MONTHS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/8c326df1855d47f2ad7c9a6a658b0db9.html "Returns the number of months since an arbitrary starting date/time or the number of months between two specified date/times, or adds the specified integer-expression number of months to a date/time.") :arrow_upper_right:
+[MONTHS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/8c326df1855d47f2ad7c9a6a658b0db9.html "Returns the number of months since an arbitrary starting date/time or the number of months between two specified date/times, or adds the specified integer-expression number of months to a date/time.") :arrow_upper_right:
 

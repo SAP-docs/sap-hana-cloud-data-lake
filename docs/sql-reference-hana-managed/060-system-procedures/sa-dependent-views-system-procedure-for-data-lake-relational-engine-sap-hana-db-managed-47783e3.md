@@ -6,20 +6,19 @@ Returns the list of all dependent views for a given table or view.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
-> 
-> -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXECUTE procedure.
-> 
->     -   See [REMOTE\_EXECUTE Usage Examples for Running Procedures](remote-execute-usage-examples-for-running-procedures-3e7f86d.md) for more information.
+<a name="loio47783e3af31b4f27a28b41ad534f8332__section_gz5_gcf_pzb"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user and using SAP HANA database REMOTE\_EXECUTE\_QUERY.
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-sa_dependent_views( 
-[ <tbl_name> 
-[, <owner_name> ] ] 
-)
+sa_dependent_views( [ '<table-name>' , '<schema-name>' ] );
 ```
 
 
@@ -32,7 +31,7 @@ sa_dependent_views(
 <dl>
 <dt><b>
 
- *<tbl\_name\>* 
+*<table-name\>* 
 
 </b></dt>
 <dd>
@@ -43,12 +42,12 @@ Use this optional CHAR\(128\) parameter to specify the name of the table or view
 
 </dd><dt><b>
 
- *<owner\_name\>* 
+*<schema-name\>* 
 
 </b></dt>
 <dd>
 
-Use this optional CHAR\(128\) parameter to specify the owner for *<tbl\_name\>*. The default is NULL.
+Specify the user-created schema name for the *<table-name\>*. The referenced table must reside in a user-created schema in a relational container. It cannot reside in the default schema \(SYSHDL\_*<relational\_container\_name\>*\).
 
 
 
@@ -68,21 +67,15 @@ Use this optional CHAR\(128\) parameter to specify the owner for *<tbl\_name\>*.
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -91,21 +84,15 @@ Description
 
 table\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The object ID of the table or view.
-
-
 
 </td>
 </tr>
@@ -114,21 +101,15 @@ The object ID of the table or view.
 
 dep\_view\_id
 
-
-
 </td>
 <td valign="top">
 
 UNSIGNED INTEGER
 
-
-
 </td>
 <td valign="top">
 
 The object ID of the dependent views.
-
-
 
 </td>
 </tr>
@@ -140,27 +121,65 @@ The object ID of the dependent views.
 
 ## Remarks
 
+When directly connected to data lake Relational Engine, the table specified must be in a user-created schema in the relational container. It cannot be in the default relational container schema \(SYSHDL\_*<relational\_container\_name\>*\).
+
 Use this procedure to obtain the list of IDs of tables and their dependent views.
 
 No errors are generated if no existing tables satisfy the specified criteria for table and owner names. The following conditions also apply:
 
--   If both *<owner\>* and *<tbl\_name\>* are NULL, information is returned on all tables that have dependent views.
+-   If both *<schema-name\>* and *<table-name\>* are NULL, information is returned on all tables that have dependent views.
 
--   If *<tbl\_name\>* is NULL but *<owner\>* is specified, information is returned on all tables owned by the specified owner.
+-   If *<table-name\>* is NULL but *<schema-name\>* is is specified, information is returned on all tables owned by the specified owner.
 
--   If *<tbl\_name\>* is specified but *<owner\>* is NULL, information is returned on any one of the tables with the specified name.
-
-
+-   If *<table-name\>* is specified but *<schema-name\>* is NULL, information is returned on any one of the tables with the specified name.
 
 
-<a name="loio47783e3af31b4f27a28b41ad534f8332__section_u51_bkf_3jb"/>
 
-## Permissions
 
-Requires one of:
+<a name="loio47783e3af31b4f27a28b41ad534f8332__section_zm1_31b_1yb"/>
 
--   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the REMOTE\_EXECUTE procedure of the SAP HANA database relational container schema associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+## Privileges
+
+
+
+### 
+
+The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
+
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user and using REMOTE\_EXECUTE\_QUERY:
+
+</b></dt>
+<dd>
+
+Requires the REMOTE EXECUTE privilege on the remote source *<hana\_relational\_container\_schema\>*\_SOURCE.
+
+-   See [REMOTE\_EXECUTE\_QUERY Guidance and Examples for Running Stored Procedures](remote-execute-query-guidance-and-examples-for-running-stored-procedures-3e7f86d.md).
+
+
+
+
+</dd><dt><b>
+
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+Requires EXECUTE object-level privilege on the procedure.
+
+Also requires one of the following:
+
+-   SELECT object-level privilege on the view and its underlying tables
+-   SELECT object-level privilege on the schema of the view and its underlying tables
+
+
+
+</dd>
+</dl>
 
 
 
@@ -172,22 +191,72 @@ None
 
 
 
-In this example, the sa\_dependent\_views system procedure is used to obtain the list of IDs for the views that are dependent on the SalesOrders table. The procedure returns the table\_id for SalesOrders, and the dep\_view\_id for the dependent view, ViewSalesOrders.
+## Examples
+
+
+
+### 
+
+This example uses sa\_dependent\_views to list the id's of the views dependent on the table mytable. Mytable is in the user-created schema myschema1 in relational containerSYSHDL\_CONTAINER1.
 
 ```
-CALL sa_dependent_views( 'SalesOrders' );
+CALL sa_dependent_views( 'mytable','SYSHDL_CONTAINER1_MYSCHEMA1' );
 ```
 
-In this example, the sa\_dependent\_views system procedure is used in a SELECT statement to obtain the list of names of views dependent on the SalesOrders table. The procedure returns the ViewSalesOrders view.
 
-```
-SELECT t.table_name FROM SYSTAB t,  
-sa_dependent_views( 'SalesOrders' ) v 
-WHERE t.table_id = v.dep_view_id;
-```
+<table>
+<tr>
+<th valign="top">
+
+table\_id
+
+</th>
+<th valign="top">
+
+dep\_view\_id
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+1783
+
+</td>
+<td valign="top">
+
+1784
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1783
+
+</td>
+<td valign="top">
+
+1785
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1783
+
+</td>
+<td valign="top">
+
+1787
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 
 
-[sa_dependent_views System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/3be595096c5f101489d8d608a7ef882e.html "Returns the list of all dependent views for a given table or view.") :arrow_upper_right:
+[sa_dependent_views System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3be595096c5f101489d8d608a7ef882e.html "Returns the list of all dependent views for a given table or view.") :arrow_upper_right:
 

@@ -16,7 +16,7 @@ Syntax 1: Return the number of weeks between year 0000 and a TIMESTAMP value
 <dd>
 
 ```
-WEEKS( <timestamp-expression> )
+WEEKS( <timestamp-expression> );
 ```
 
 
@@ -29,7 +29,7 @@ Syntax 2: Return the number of weeks between two TIMESTAMP values
 <dd>
 
 ```
-WEEKS( <timestamp-expression>, <timestamp-expression> )
+WEEKS( <timestamp-expression>, <timestamp-expression> );
 ```
 
 
@@ -42,7 +42,7 @@ Syntax 3: Add years to a TIMESTAMP value
 <dd>
 
 ```
-WEEKS( <timestamp-expression>, <integer-expression> )
+WEEKS( <timestamp-expression>, <integer-expression> );
 ```
 
 
@@ -60,7 +60,7 @@ WEEKS( <timestamp-expression>, <integer-expression> )
 <dl>
 <dt><b>
 
- *<timestamp-expression\>* 
+*<timestamp-expression\>* 
 
 </b></dt>
 <dd>
@@ -87,7 +87,7 @@ The number of weeks \(as a SMALLINT value\) to be added to the *<timestamp-expre
 
 <a name="loioa590601384f210158a02bf2d5a2c1783__WEEKS_returns1"/>
 
-## Returns
+## Result Set
 
 INTEGER \(SMALLINT\) when comparing two TIMESTAMP values.
 
@@ -102,7 +102,7 @@ TIMESTAMP when adding weeks to a TIMESTAMP value.
 Weeks are defined as going from Sunday to Saturday, as they do in a North American calendar. The number returned by the first syntax is often useful for determining if two dates are in the same week:
 
 ```
-WEEKS ( invoice_sent ) = WEEKS ( payment_received ) FROM iq_dummy
+WEEKS ( invoice_sent ) = WEEKS ( payment_received ) FROM iq_dummy;
 ```
 
 For syntax 2, the value of WEEKS is calculated from the number of Sundays between the two dates. Hours, minutes, and seconds are ignored.
@@ -125,21 +125,21 @@ For syntax 2, the value of WEEKS is calculated from the number of Sundays betwee
 -   The following statement returns the value 104278:
 
     ```
-    SELECT WEEKS( '1998-07-13 06:07:12' ) FROM iq_dummy
+    SELECT WEEKS( '1998-07-13 06:07:12' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the value 9, to signify the difference between the two dates:
 
     ```
     SELECT WEEKS( '1999-07-13 06:07:12',
-    	'1999-09-13 10:07:12' ) FROM iq_dummy
+    	'1999-09-13 10:07:12' ) FROM iq_dummy;
     ```
 
 -   The following statement returns the timestamp value 1999-06-16 21:05:07.000:
 
     ```
     SELECT WEEKS( CAST( '1999-05-12 21:05:07'
-    AS TIMESTAMP ), 5) FROM iq_dummy
+    AS TIMESTAMP ), 5) FROM iq_dummy;
     ```
 
 
@@ -164,5 +164,5 @@ For syntax 2, the value of WEEKS is calculated from the number of Sundays betwee
 
 [YEARS Function \[Date and Time\] for Data Lake Relational Engine](years-function-date-and-time-for-data-lake-relational-engine-a5926bf.md "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.")
 
-[WEEKS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_2_QRC/en-US/1bad0c474fc14fa299ff73a738157073.html "Returns the number of weeks since an arbitrary starting date/time, returns the number of weeks between two specified date/times, or adds the specified integer-expression number of weeks to a date/time.") :arrow_upper_right:
+[WEEKS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/1bad0c474fc14fa299ff73a738157073.html "Returns the number of weeks since an arbitrary starting date/time, returns the number of weeks between two specified date/times, or adds the specified integer-expression number of weeks to a date/time.") :arrow_upper_right:
 

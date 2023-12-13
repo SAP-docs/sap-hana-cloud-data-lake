@@ -7,7 +7,7 @@ Returns the position of the first occurrence of a specified string in another st
 
 
 ```
-CHARINDEX ( <string-expression1>, <string-expression2> )
+CHARINDEX ( <string-expression1>, <string-expression2> );
 ```
 
 
@@ -47,7 +47,7 @@ The string to be searched. The position of the first character in the string bei
 
 <a name="loioae499513aa0346978ca7d3c6f34656da__section_cdy_fsl_srb"/>
 
-## Returns
+## Result Set
 
 INT
 
@@ -89,7 +89,7 @@ This example uses the following statement:
 ```
 SELECT Surname, GivenName
 FROM Employees
-WHERE CHARINDEX('K', Surname ) = 1
+WHERE CHARINDEX('K', Surname ) = 1;
 ```
 
 The statement returns the following values:
@@ -101,14 +101,10 @@ The statement returns the following values:
 
 Surname
 
-
-
 </th>
 <th valign="top" rowspan="1">
 
 GivenName
-
-
 
 </th>
 </tr>
@@ -117,14 +113,10 @@ GivenName
 
 Klobucher
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 James
-
-
 
 </td>
 </tr>
@@ -133,14 +125,10 @@ James
 
 Kuo
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Felicia
-
-
 
 </td>
 </tr>
@@ -149,14 +137,10 @@ Felicia
 
 Kelly
 
-
-
 </td>
 <td valign="top" rowspan="1">
 
 Moira
-
-
 
 </td>
 </tr>
@@ -165,5 +149,5 @@ Moira
 **Related Information**  
 
 
-[CHARINDEX Function [String] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_1_QRC/en-US/a53cde2984f210158cbd968731b1879c.html "Returns the position of the first occurrence of a specified string in another string.") :arrow_upper_right:
+[CHARINDEX Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a53cde2984f210158cbd968731b1879c.html "Returns the position of the first occurrence of a specified string in another string.") :arrow_upper_right:
 

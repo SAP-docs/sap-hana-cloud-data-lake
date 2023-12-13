@@ -6,15 +6,18 @@ Cancels any changes made since a savepoint was established using `SAVE TRANSACTI
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa624594684f210159608f69e6d6d2ed8__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-ROLLBACK TRANSACTION [ <savepoint-name> ]
+ROLLBACK TRANSACTION [ <savepoint-name> ];
 ```
 
 
@@ -85,7 +88,7 @@ BEGIN
      DELETE FROM #tmp WHERE row_num >= 3
      ROLLBACK TRANSACTION before_delete
      SELECT * FROM #tmp
-END
+END;
 ```
 
 **Related Information**  

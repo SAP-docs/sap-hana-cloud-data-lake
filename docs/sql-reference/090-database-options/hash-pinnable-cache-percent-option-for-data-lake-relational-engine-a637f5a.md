@@ -6,8 +6,11 @@ Controls the maximum percentage of a user’s temp memory that a hash object can
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa637f5af84f21015b8ba9c54e0dce632__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

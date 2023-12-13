@@ -2,14 +2,17 @@
 
 # CREATE CERTIFICATE Statement for Data Lake Relational Engine
 
-Adds or replaces a certificate in the database from the given file or string.
+Adds or replaces a certificate in the database using the given file or string.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio816b6bb36ce21014a7a7a27482e677e1__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -17,7 +20,7 @@ Adds or replaces a certificate in the database from the given file or string.
 CREATE [ OR REPLACE ] CERTIFICATE <certificate-name>
    [ PURPOSE { JWT | X509 } FOR PROVIDER <provider_name> ]
    FROM { <certificate-string> | <variable-name> }
-
+;
 ```
 
 
@@ -27,13 +30,15 @@ CREATE [ OR REPLACE ] CERTIFICATE <certificate-name>
 
 
 
+<a name="loio816b6bb36ce21014a7a7a27482e677e1__create_certificate_param1"/>
+
 ## Parameters
 
 
 <dl class="glossary">
 <dt><b>
 
-PURPOSE clause
+PURPOSE
 
 </b></dt>
 <dd>
@@ -44,12 +49,12 @@ Specifies the provider of the purpose for the certificate.
 
 </dd><dt><b>
 
-FROM clause
+FROM
 
 </b></dt>
 <dd>
 
-Specifies a string or variable containing a certificate.
+Specifies a string or file containing a certificate.
 
 
 
@@ -58,33 +63,48 @@ Specifies a string or variable containing a certificate.
 
 
 
+<a name="loio816b6bb36ce21014a7a7a27482e677e1__create_certificate_remarks1"/>
+
 ## Remarks
 
-The CREATE CERTIFICATE statement adds or replaces a certificate in the database from the given string or variable. The string or variable should contain either a binary DER-format certificate or a text PEM-format certificate. DER-format certificates are converted and stored as PEM certificates.
+The string or file should contain either a binary DER-format certificate or a text PEM-format certificate. DER-format certificates are converted and stored as PEM certificates.
 
 Certificates that are stored in the database can be used by web service procedures and functions that make secure HTTPS connections to a web server. Certificates with a specified PURPOSE can be used for user authentication.
 
 The certificate is validated at login time, not when the certificate is created.
 
-When you add a certificate, it is added to the ISYSCERTIFICATE system table. Use the corresponding system view SYSCERTIFICATE to view the table.
+Use the SYSCERTIFICATE system view to display a list of certificates
 
 The CREATE CERTIFICATE statement is not used to create an actual certificate. Use the Certificate Creation utility \(createcert\) to do this.
 
 
 
+<a name="loio816b6bb36ce21014a7a7a27482e677e1__create_certificate_priv1"/>
+
 ## Privileges
 
-You must have the MANAGE CERTIFICATES and READ FILE system privileges.
+
+
+### 
+
+Requires one of the following:
+
+-   To manage self-owned certificates requires the MANAGE ONWER CERTIFICATES system privilege.
+-   To manage certificates owned by other requires the MANAGE CREDENTIAL system privilege.
 
 See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md) for assistance with granting privileges.
 
 
+
+<a name="loio816b6bb36ce21014a7a7a27482e677e1__create_certificate_side_effects1"/>
 
 ## Side Effects
 
 Automatic commit.
 
 
+
+<a name="loio816b6bb36ce21014a7a7a27482e677e1__create_certificate_standards1"/>
 
 ## Standards
 
@@ -106,7 +126,7 @@ Not in the standard.
 
 
 
-<a name="loio816b6bb36ce21014a7a7a27482e677e1__section_gwx_f3p_p4b"/>
+<a name="loio816b6bb36ce21014a7a7a27482e677e1__create_certificate_examples1"/>
 
 ## Example
 
@@ -116,7 +136,7 @@ This example creates a certificate with a JWT purpose.
 CREATE CERTIFICATE my_cert1
 PURPOSE JWT FOR PROVIDER my_jwt_provider
 FROM '-----BEGIN CERTIFICATE-----
-...-----END CERTIFICATE-----'
+...-----END CERTIFICATE-----';
 ```
 
 This example creates a certificate with an X.509 purpose.
@@ -125,15 +145,23 @@ This example creates a certificate with an X.509 purpose.
 CREATE CERTIFICATE my_cert2
 PURPOSE X509 FOR PROVIDER my_X509_provider
 FROM '-----BEGIN CERTIFICATE-----
-...-----END CERTIFICATE-----'
+...-----END CERTIFICATE-----';
 ```
 
 **Related Information**  
 
 
+[DROP CERTIFICATE for Data Lake Relational Engine](drop-certificate-for-data-lake-relational-engine-c22eaf4.md "Drops a certificate from the database.")
+
 [CREATE JWT PROVIDER Statement for Data Lake Relational Engine](create-jwt-provider-statement-for-data-lake-relational-engine-49b7ee1.md "Defines a JWT provider in the data lake Relational Engine database.")
+
+[CREATE X509 PROVIDER Statement for Data Lake Relational Engine](create-x509-provider-statement-for-data-lake-relational-engine-fe6ef48.md "Create an X.509 provider in the database.")
+
+[CREATE PSE Statement for Data Lake Relational Engine](create-pse-statement-for-data-lake-relational-engine-cda6e32.md "Create a personal security environment (PSE).")
+
+[SYSCERTIFICATE System View for Data Lake Relational Engine](../070-system-and-monitoring-views/syscertificate-system-view-for-data-lake-relational-engine-a34ee8b.md "Each row of the SYSCERTIFICATE system view stores a certificate in text PEM-format. This view includes certificates with and without an associated PSE.")
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[DROP JWT PROVIDER Statement for Data Lake Relational Engine](drop-jwt-provider-statement-for-data-lake-relational-engine-c20d71c.md "Drops a JWT provider from the data lake Relational Engine database.")
+[CREATE CERTIFICATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/d827f8589599403c94bd8700114c9e46.html "Adds or replaces a certificate in the database using the given file or string.") :arrow_upper_right:
 

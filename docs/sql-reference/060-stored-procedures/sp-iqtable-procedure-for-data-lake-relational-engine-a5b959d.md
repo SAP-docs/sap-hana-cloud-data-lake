@@ -6,15 +6,13 @@ Displays information about tables in the database.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine procedure can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa5b959dd84f21015a98fd3e05fb1aee9__section_umy_gqn_14b"/>
 
+## Usage
 
+This data lake Relational Engine procedure can be used when connected as follows:
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -23,7 +21,7 @@ Displays information about tables in the database.
 ### Syntax 1
 
 ```
-sp_iqtable ( [ <table_name> ] ,[ <table_owner> ] , [ <table_type> ] )
+sp_iqtable ( [ <table_name> ] ,[ <table_owner> ] , [ <table_type> ] );
 ```
 
 ```
@@ -40,8 +38,13 @@ sp_iqtable ( [ <table_name> ] ,[ <table_owner> ] , [ <table_type> ] )
 
 ```
 sp_iqtable [ table_name='<tablename>' ],
-    [ table_owner='<tableowner>' ] , [ table_type='<tabletype>' ]
+    [ table_owner='<tableowner>' ] , [ table_type='<tabletype>' ];
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -96,7 +99,7 @@ sp_iqtable [ table_name='<tablename>' ],
 
 <a name="loioa5b959dd84f21015a98fd3e05fb1aee9__IQ_Returns"/>
 
-## Returns
+## Result Set
 
 Specifying one parameter returns only the tables that match that parameter. Specifying more than one parameter filters the results by all of the parameters specified. Specifying no parameters returns all data lake Relational Engine tables in the database. There is no method for returning the names of local temporary tables.
 
@@ -107,14 +110,10 @@ Specifying one parameter returns only the tables that match that parameter. Spec
 
 Column Name
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -123,14 +122,10 @@ Description
 
 table\_name
 
-
-
 </td>
 <td valign="top">
 
 The name of the table.
-
-
 
 </td>
 </tr>
@@ -138,8 +133,6 @@ The name of the table.
 <td valign="top">
 
 table\_type
-
-
 
 </td>
 <td valign="top">
@@ -161,14 +154,10 @@ The table type:
 
 table\_owner
 
-
-
 </td>
 <td valign="top">
 
 The owner of the table.
-
-
 
 </td>
 </tr>
@@ -176,8 +165,6 @@ The owner of the table.
 <td valign="top">
 
 server\_type
-
-
 
 </td>
 <td valign="top">
@@ -189,16 +176,12 @@ The server type:
 
 All views are created in the SA store.
 
-
-
 </td>
 </tr>
 <tr>
 <td valign="top">
 
 location
-
-
 
 </td>
 <td valign="top">
@@ -218,14 +201,10 @@ The location:
 
 dbspace\_id
 
-
-
 </td>
 <td valign="top">
 
 Number that identifies the dbspace.
-
-
 
 </td>
 </tr>
@@ -233,8 +212,6 @@ Number that identifies the dbspace.
 <td valign="top">
 
 isPartitioned
-
-
 
 </td>
 <td valign="top">
@@ -253,14 +230,10 @@ Partition information:
 
 remarks
 
-
-
 </td>
 <td valign="top">
 
 User comments added with the COMMENT statement.
-
-
 
 </td>
 </tr>
@@ -269,14 +242,10 @@ User comments added with the COMMENT statement.
 
 table\_constraints
 
-
-
 </td>
 <td valign="top">
 
 Constraints against the table.
-
-
 
 </td>
 </tr>
@@ -284,8 +253,6 @@ Constraints against the table.
 <td valign="top">
 
 PartitionType
-
-
 
 </td>
 <td valign="top">
@@ -298,6 +265,18 @@ If partitioned, indicates the type of partition:
 -   None
 
 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+isRLV
+
+</td>
+<td valign="top">
+
+For internal use.
 
 </td>
 </tr>
@@ -338,193 +317,501 @@ None
 
 ## Examples
 
--   The following variations in syntax both return information about the table Departments:
+The following variations in syntax both return information about the table Departments:
 
-    ```
-    sp_iqtable ('Departments')
-    ```
+```
+sp_iqtable ('Departments');
+```
 
-    ```
-    sp_iqtable table_name='Departments'
-    ```
-
-
-    <table>
-    <tr>
-    <th valign="top">
-
-    Table\_name
+```
+sp_iqtable table_name='Departments';
+```
 
 
-    
-    </th>
-    <th valign="top">
+<table>
+<tr>
+<th valign="top">
 
-    Table\_type
+Table\_name
+
+</th>
+<th valign="top">
+
+Table\_type
+
+</th>
+<th valign="top">
+
+Table\_owner
+
+</th>
+<th valign="top">
+
+Server\_type
+
+</th>
+<th valign="top">
+
+location
+
+</th>
+<th valign="top">
+
+dbspace\_id
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+A1
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+IQ
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+<td valign="top">
+
+16388
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+A3
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+IQ
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+<td valign="top">
+
+16388
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+A4
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+IQ
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+<td valign="top">
+
+16388
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+D1
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+USER3
+
+</td>
+<td valign="top">
+
+IQ
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+<td valign="top">
+
+16388
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+D2
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+USER3
+
+</td>
+<td valign="top">
+
+IQ
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+<td valign="top">
+
+16388
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+P2
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+USER2
+
+</td>
+<td valign="top">
+
+IQ
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+<td valign="top">
+
+16388
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+P4
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+USER2
+
+</td>
+<td valign="top">
+
+IQ
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+<td valign="top">
+
+16388
+
+</td>
+</tr>
+</table>
 
 
-    
-    </th>
-    <th valign="top">
+<table>
+<tr>
+<th valign="top">
 
-    Table\_owner
+isPartitioned
 
+</th>
+<th valign="top">
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        Departments
+Remarks
 
+</th>
+<th valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        BASE
+table\_constraints
 
+</th>
+<th valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        GROUPO
+PartitionType
 
+</th>
+<th valign="top">
 
-    
-    </td>
-    </tr>
-    </table>
-    
+isRlv
 
-    <table>
-    <tr>
-    <th valign="top">
+</th>
+</tr>
+<tr>
+<td valign="top">
 
-    Server\_type
+N
 
+</td>
+<td valign="top">
 
-    
-    </th>
-    <th valign="top">
+NULL
 
-    Location
+</td>
+<td valign="top">
 
+NULL
 
-    
-    </th>
-    <th valign="top">
+</td>
+<td valign="top">
 
-    dbspace\_id
+None
 
+</td>
+<td valign="top">
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        IQ
+F
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        Main
+N
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        16387
+NULL
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    </table>
-    
+NULL
 
-    <table>
-    <tr>
-    <th valign="top">
+</td>
+<td valign="top">
 
-    isPartitioned
+None
 
+</td>
+<td valign="top">
 
-    
-    </th>
-    <th valign="top">
+F
 
-    Remarks
+</td>
+</tr>
+<tr>
+<td valign="top">
 
+N
 
-    
-    </th>
-    <th valign="top">
+</td>
+<td valign="top">
 
-    table\_constraints
+NULL
 
+</td>
+<td valign="top">
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        N
+NULL
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        contains the names and heads of the various departments in the sporting goods company
+None
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    <td valign="top">
-    
-        \(NULL\)
+F
 
+</td>
+</tr>
+<tr>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    </table>
-    
+N
 
-    <table>
-    <tr>
-    <th valign="top">
+</td>
+<td valign="top">
 
-    PartitionType
+NULL
 
+</td>
+<td valign="top">
 
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        None
+NULL
 
+</td>
+<td valign="top">
 
-    
-    </td>
-    </tr>
-    </table>
-    
+None
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+None
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+None
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+None
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+</tr>
+</table>
+
 -   The following variations in syntax both return all tables that are owned by table owner GROUPO:
 
     ```
     sp_iqtable NULL,GROUPO
-    sp_iqtable table_owner='GROUPO'
+    sp_iqtable table_owner='GROUPO';
     ```
 
 
@@ -533,369 +820,159 @@ None
     <th valign="top">
 
     Table\_name
-
-
     
     </th>
     <th valign="top">
 
     Table\_type
-
-
     
     </th>
     <th valign="top">
 
     Table\_owner
-
-
     
     </th>
     <th valign="top">
 
     Server\_type
-
-
     
     </th>
     <th valign="top">
 
-    Location
+    location
+    
+    </th>
+    <th valign="top">
 
-
+    dbspace\_id
     
     </th>
     </tr>
     <tr>
     <td valign="top">
     
-        Contacts
-
-
+    P1
     
     </td>
     <td valign="top">
     
-        BASE
-
-
+    BASE
     
     </td>
     <td valign="top">
     
-        GROUPO
-
-
+    USER2
     
     </td>
     <td valign="top">
     
-        IQ
-
-
+    IQ
     
     </td>
     <td valign="top">
     
-        Main
-
-
+    Main
+    
+    </td>
+    <td valign="top">
+    
+    16388
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-        Customers
-
-
+    P2
     
     </td>
     <td valign="top">
     
-        BASE
-
-
+    BASE
     
     </td>
     <td valign="top">
     
-        GROUPO
-
-
+    USER2
     
     </td>
     <td valign="top">
     
-        IQ
-
-
+    IQ
     
     </td>
     <td valign="top">
     
-        Main
-
-
+    Main
+    
+    </td>
+    <td valign="top">
+    
+    16388
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-        Departments
-
-
+    P3
     
     </td>
     <td valign="top">
     
-        BASE
-
-
+    BASE
     
     </td>
     <td valign="top">
     
-        GROUPO
-
-
+    USER2
     
     </td>
     <td valign="top">
     
-        IQ
-
-
+    IQ
     
     </td>
     <td valign="top">
     
-        Main
-
-
+    Main
+    
+    </td>
+    <td valign="top">
+    
+    16388
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-        Employees
-
-
+    P4
     
     </td>
     <td valign="top">
     
-        BASE
-
-
+    BASE
     
     </td>
     <td valign="top">
     
-        GROUPO
-
-
+    USER2
     
     </td>
     <td valign="top">
     
-        IQ
-
-
+    IQ
     
     </td>
     <td valign="top">
     
-        Main
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        FinancialCodes
-
-
+    Main
     
     </td>
     <td valign="top">
     
-        BASE
-
-
-    
-    </td>
-    <td valign="top">
-    
-        GROUPO
-
-
-    
-    </td>
-    <td valign="top">
-    
-        IQ
-
-
-    
-    </td>
-    <td valign="top">
-    
-        Main
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        FinancialData
-
-
-    
-    </td>
-    <td valign="top">
-    
-        BASE
-
-
-    
-    </td>
-    <td valign="top">
-    
-        GROUPO
-
-
-    
-    </td>
-    <td valign="top">
-    
-        IQ
-
-
-    
-    </td>
-    <td valign="top">
-    
-        Main
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        Products
-
-
-    
-    </td>
-    <td valign="top">
-    
-        BASE
-
-
-    
-    </td>
-    <td valign="top">
-    
-        GROUPO
-
-
-    
-    </td>
-    <td valign="top">
-    
-        IQ
-
-
-    
-    </td>
-    <td valign="top">
-    
-        Main
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        SalesOrders
-
-
-    
-    </td>
-    <td valign="top">
-    
-        BASE
-
-
-    
-    </td>
-    <td valign="top">
-    
-        GROUPO
-
-
-    
-    </td>
-    <td valign="top">
-    
-        IQ
-
-
-    
-    </td>
-    <td valign="top">
-    
-        Main
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        SalesOrderItems
-
-
-    
-    </td>
-    <td valign="top">
-    
-        BASE
-
-
-    
-    </td>
-    <td valign="top">
-    
-        GROUPO
-
-
-    
-    </td>
-    <td valign="top">
-    
-        IQ
-
-
-    
-    </td>
-    <td valign="top">
-    
-        Main
-
-
+    16388
     
     </td>
     </tr>
@@ -904,396 +981,144 @@ None
 
     <table>
     <tr>
-    <th valign="top">
+    <th valign="top" colspan="5">
 
-    dbspace\_id
-
-
+    \(Continued\)
     
     </th>
+    </tr>
+    <tr>
     <th valign="top">
 
     isPartitioned
-
-
     
     </th>
     <th valign="top">
 
     Remarks
-
-
     
     </th>
     <th valign="top">
 
     table\_constraints
-
-
     
     </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        16387
-
-
-    
-    </td>
-    <td valign="top">
-    
-        N
-
-
-    
-    </td>
-    <td valign="top">
-    
-        names, addresses, and telephone numbers of all people with whom the company wishes to retain contact information
-
-
-    
-    </td>
-    <td valign="top">
-    
-        \(NULL\)
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        16387
-
-
-    
-    </td>
-    <td valign="top">
-    
-        N
-
-
-    
-    </td>
-    <td valign="top">
-    
-        customers of the sporting goods company
-
-
-    
-    </td>
-    <td valign="top">
-    
-        \(NULL\)
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        16387
-
-
-    
-    </td>
-    <td valign="top">
-    
-        N
-
-
-    
-    </td>
-    <td valign="top">
-    
-        contains the names and heads of the various departments in the sporting goods company
-
-
-    
-    </td>
-    <td valign="top">
-    
-        \(NULL\)
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        16387
-
-
-    
-    </td>
-    <td valign="top">
-    
-        N
-
-
-    
-    </td>
-    <td valign="top">
-    
-        contains information such as names, salary, hire date and birthday
-
-
-    
-    </td>
-    <td valign="top">
-    
-        \(NULL\)
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        16387
-
-
-    
-    </td>
-    <td valign="top">
-    
-        N
-
-
-    
-    </td>
-    <td valign="top">
-    
-        types of revenue and expenses that the sporting goods company has
-
-
-    
-    </td>
-    <td valign="top">
-    
-        \(NULL\)
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        16387
-
-
-    
-    </td>
-    <td valign="top">
-    
-        N
-
-
-    
-    </td>
-    <td valign="top">
-    
-        revenues and expenses of the sporting goods company
-
-
-    
-    </td>
-    <td valign="top">
-    
-        \(NULL\)
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        16387
-
-
-    
-    </td>
-    <td valign="top">
-    
-        N
-
-
-    
-    </td>
-    <td valign="top">
-    
-        products sold by the sporting goods company
-
-
-    
-    </td>
-    <td valign="top">
-    
-        \(NULL\)
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        16387
-
-
-    
-    </td>
-    <td valign="top">
-    
-        N
-
-
-    
-    </td>
-    <td valign="top">
-    
-        individual items that make up the sales orders
-
-
-    
-    </td>
-    <td valign="top">
-    
-        \(NULL\)
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        16387
-
-
-    
-    </td>
-    <td valign="top">
-    
-        N
-
-
-    
-    </td>
-    <td valign="top">
-    
-        sales orders that customers have submitted to the sporting goods company
-
-
-    
-    </td>
-    <td valign="top">
-    
-        \(NULL\)
-
-
-    
-    </td>
-    </tr>
-    </table>
-    
-
-    <table>
-    <tr>
     <th valign="top">
 
     PartitionType
+    
+    </th>
+    <th valign="top">
 
-
+    isRlv
     
     </th>
     </tr>
     <tr>
     <td valign="top">
     
-        None
-
-
+    N
+    
+    </td>
+    <td valign="top">
+    
+    NULL
+    
+    </td>
+    <td valign="top">
+    
+    NULL
+    
+    </td>
+    <td valign="top">
+    
+    None
+    
+    </td>
+    <td valign="top">
+    
+    F
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-        None
-
-
+    N
+    
+    </td>
+    <td valign="top">
+    
+    NULL
+    
+    </td>
+    <td valign="top">
+    
+    NULL
+    
+    </td>
+    <td valign="top">
+    
+    None
+    
+    </td>
+    <td valign="top">
+    
+    F
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-        None
-
-
+    N
+    
+    </td>
+    <td valign="top">
+    
+    NULL
+    
+    </td>
+    <td valign="top">
+    
+    NULL
+    
+    </td>
+    <td valign="top">
+    
+    None
+    
+    </td>
+    <td valign="top">
+    
+    F
     
     </td>
     </tr>
     <tr>
     <td valign="top">
     
-        None
-
-
+    N
     
     </td>
-    </tr>
-    <tr>
     <td valign="top">
     
-        None
-
-
+    NULL
     
     </td>
-    </tr>
-    <tr>
     <td valign="top">
     
-        None
-
-
+    NULL
     
     </td>
-    </tr>
-    <tr>
     <td valign="top">
     
-        None
-
-
+    None
     
     </td>
-    </tr>
-    <tr>
     <td valign="top">
     
-        None
-
-
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-        None
-
-
+    F
     
     </td>
     </tr>

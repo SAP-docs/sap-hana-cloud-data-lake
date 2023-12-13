@@ -6,10 +6,13 @@ Pivots a table expression in the FROM clause of a SELECT statement \(FROM *<pivo
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio817234f06ce210149f3fe4ad7428edfd__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -45,7 +48,7 @@ FROM <pivot-source-table>
    { IN ( <constant-expression>
       [ [ AS ] <constant-expression-alias> ] [,...] )
    | IN ( ( <constant-expression> [,...] )
-      [ [ AS ] <constant-expression-alias> ] [,...] ) }
+      [ [ AS ] <constant-expression-alias> ] [,...] ) };
 ```
 
 
@@ -159,6 +162,8 @@ Not in the standard.
 
 
 
+## Example
+
 The following example selects data from the Employees table and pivots it on the DepartmentID column, where the Department ID is 100, 200, 300, 400, or 500.
 
 ```
@@ -181,42 +186,30 @@ ORDER BY State;
 
 STATE
 
-
-
 </th>
 <th valign="top">
 
 100\_TotalSalary
-
-
 
 </th>
 <th valign="top">
 
 200\_TotalSalary
 
-
-
 </th>
 <th valign="top">
 
 300\_TotalSalary
-
-
 
 </th>
 <th valign="top">
 
 400\_TotalSalary
 
-
-
 </th>
 <th valign="top">
 
 500\_TotalSalary
-
-
 
 </th>
 </tr>
@@ -225,42 +218,30 @@ STATE
 
 AZ
 
-
-
 </td>
 <td valign="top">
 
 \(NULL\)
 
-
-
 </td>
 <td valign="top">
 
 \(NULL\)
-
-
 
 </td>
 <td valign="top">
 
 93,732.000
 
-
-
 </td>
 <td valign="top">
 
 \(NULL\)
 
-
-
 </td>
 <td valign="top">
 
 85,300.800
-
-
 
 </td>
 </tr>
@@ -269,42 +250,30 @@ AZ
 
 CA
 
-
-
 </td>
 <td valign="top">
 
 \(NULL\)
-
-
 
 </td>
 <td valign="top">
 
 156,600.000
 
+</td>
+<td valign="top">
 
+\(NULL\)
 
 </td>
 <td valign="top">
 
 \(NULL\)
 
-
-
 </td>
 <td valign="top">
 
 \(NULL\)
-
-
-
-</td>
-<td valign="top">
-
-\(NULL\)
-
-
 
 </td>
 </tr>
@@ -313,42 +282,30 @@ CA
 
 OR
 
-
-
 </td>
 <td valign="top">
 
 \(NULL\)
-
-
 
 </td>
 <td valign="top">
 
 47,653.000
 
-
-
 </td>
 <td valign="top">
 
 \(NULL\)
-
-
 
 </td>
 <td valign="top">
 
 80,339.000
 
-
-
 </td>
 <td valign="top">
 
 54,790.000
-
-
 
 </td>
 </tr>
@@ -357,42 +314,30 @@ OR
 
 UT
 
-
-
 </td>
 <td valign="top">
 
 306,318.690
-
-
 
 </td>
 <td valign="top">
 
 37,900.000
 
-
-
 </td>
 <td valign="top">
 
 31,200.000
-
-
 
 </td>
 <td valign="top">
 
 107,129.000
 
-
-
 </td>
 <td valign="top">
 
 59,479.000
-
-
 
 </td>
 </tr>

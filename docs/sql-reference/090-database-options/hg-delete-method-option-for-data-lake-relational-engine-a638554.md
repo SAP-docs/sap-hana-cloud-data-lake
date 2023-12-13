@@ -6,8 +6,11 @@ Specifies the algorithm used during a delete in a HG index.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine database option is set by the system and cannot be changed.
+<a name="loioa638554984f210159bbf86926740c08b__section_rv2_mvs_swb"/>
+
+## Usage
+
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 

@@ -6,10 +6,13 @@ Each row in the SYS.SYSCAPABILITYNAME system view provides a name for each capab
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine system view can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loio3be6e8886c5f101499f0f49f10ebba92__section_skg_rcq_b4b"/>
+
+## Usage
+
+This data lake Relational Engine system view can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -20,21 +23,15 @@ Each row in the SYS.SYSCAPABILITYNAME system view provides a name for each capab
 
 Column name
 
-
-
 </th>
 <th valign="top">
 
 Data type
 
-
-
 </th>
 <th valign="top">
 
 Description
-
-
 
 </th>
 </tr>
@@ -43,21 +40,15 @@ Description
 
 capid
 
-
-
 </td>
 <td valign="top">
 
 INTEGER
 
-
-
 </td>
 <td valign="top">
 
 A number uniquely identifying the capability.
-
-
 
 </td>
 </tr>
@@ -66,21 +57,15 @@ A number uniquely identifying the capability.
 
 capname
 
-
-
 </td>
 <td valign="top">
 
 VARCHAR\(32000\)
 
-
-
 </td>
 <td valign="top">
 
 The name of the capability.
-
-
 
 </td>
 </tr>

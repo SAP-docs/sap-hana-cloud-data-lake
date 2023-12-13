@@ -6,15 +6,18 @@ Displays a message on the message window of the database server.
 
 
 
-> ### Restriction:  
-> This data lake Relational Engine SQL statement can be used when connected as follows:
-> 
-> -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+<a name="loioa6221e2a84f210159efdf11b85fd25e8__section_ovp_dvr_znb"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-PRINT <format-string> [, <arg-list>]
+PRINT <format-string> [, <arg-list>];
 ```
 
 
@@ -60,13 +63,13 @@ None
     ```
     CREATE PROCEDURE print_test
     AS
-    PRINT 'Procedure called successfully'
+    PRINT 'Procedure called successfully';
     ```
 
 -   This statement returns the string ***Procedure called successfully*** to the client:
 
     ```
-    EXECUTE print_test
+    EXECUTE print_test;
     ```
 
 -   The following example uses placeholders in the `PRINT` statement; execute these statements inside a procedure:
@@ -74,7 +77,7 @@ None
     ```
     DECLARE @var1 INT, @var2 INT
     SELECT @var1 = 3, @var2 = 5
-    PRINT 'Variable 1 = %1!, Variable 2 = %2!', @var1, @var2
+    PRINT 'Variable 1 = %1!, Variable 2 = %2!', @var1, @var2;
     ```
 
 
