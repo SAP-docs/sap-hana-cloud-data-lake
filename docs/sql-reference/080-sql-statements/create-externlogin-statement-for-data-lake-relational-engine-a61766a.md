@@ -20,7 +20,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 CREATE EXTERNLOGIN <login-name> 
    TO <remote-server> 
    REMOTE LOGIN <remote-user> 
-   [ IDENTIFIED BY <remote-password> ];
+   [ IDENTIFIED BY <remote-password> ]
 ```
 
 

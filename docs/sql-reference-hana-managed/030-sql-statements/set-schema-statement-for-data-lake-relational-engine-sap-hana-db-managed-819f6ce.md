@@ -12,12 +12,12 @@ Sets the default schema for the connection
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
 ```
-SET SCHEMA [ <schema_name> ];
+SET SCHEMA [ <schema_name> ]
 ```
 
 
@@ -39,7 +39,7 @@ SET SCHEMA [ <schema_name> ];
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>

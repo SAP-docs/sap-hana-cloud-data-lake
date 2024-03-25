@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-PARAMETERS <parameter1>, <parameter2>, …;
+PARAMETERS <parameter1>, <parameter2>, …
 ```
 
 

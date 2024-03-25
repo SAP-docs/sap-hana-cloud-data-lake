@@ -82,5 +82,5 @@ SELECT ARGN( 6, 1,2,3,4,5,6 ) FROM iq_dummy;
 **Related Information**  
 
 
-[ARGN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/fa3998bd27284db3b8f25033b4130aba.html "Returns a selected argument from a list of arguments.") :arrow_upper_right:
+[ARGN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/fa3998bd27284db3b8f25033b4130aba.html "Returns a selected argument from a list of arguments.") :arrow_upper_right:
 

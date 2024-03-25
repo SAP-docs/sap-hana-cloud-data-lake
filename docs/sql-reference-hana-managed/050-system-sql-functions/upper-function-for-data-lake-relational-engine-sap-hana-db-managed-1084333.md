@@ -70,5 +70,5 @@ SELECT UPPER( 'ChocoLate' ) FROM iq_dummy;
 **Related Information**  
 
 
-[UPPER Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a58cbc0284f21015ac14f5baa190b878.html "Converts all characters in a string to uppercase.") :arrow_upper_right:
+[UPPER Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a58cbc0284f21015ac14f5baa190b878.html "Converts all characters in a string to uppercase.") :arrow_upper_right:
 

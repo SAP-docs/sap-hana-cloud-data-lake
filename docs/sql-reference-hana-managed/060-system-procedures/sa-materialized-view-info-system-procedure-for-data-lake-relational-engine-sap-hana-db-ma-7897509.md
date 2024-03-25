@@ -18,7 +18,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sa_materialized_view_info( [ '<view-name>', '<schema-name>' ] );
+sa_materialized_view_info( [ '<view-name>', '<schema-name>' ] )
 ```
 
 
@@ -662,9 +662,7 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </b></dt>
 <dd>
 
-Requires EXECUTE object-level privilege on the procedure.
-
-Also requires one of the following:
+Requires EXECUTE object-level privilege on the procedure along with one of the following:
 
 -   SELECT object-level privilege on the view and its underlying tables
 -   SELECT object-level privilege on the schema of the materialized view and its underlying tables
@@ -749,12 +747,12 @@ N
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 </tr>
@@ -786,7 +784,7 @@ F
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 </tr>
@@ -813,12 +811,12 @@ N
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 </tr>
@@ -966,12 +964,12 @@ N
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 </tr>
@@ -1035,5 +1033,5 @@ F
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-817277b.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_materialized_view_info System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/81765cf86ce21014a6c5cb4c15fd4d22.html "Returns information about the specified materialized views.") :arrow_upper_right:
+[sa_materialized_view_info System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/81765cf86ce21014a6c5cb4c15fd4d22.html "Returns information about the specified materialized views.") :arrow_upper_right:
 

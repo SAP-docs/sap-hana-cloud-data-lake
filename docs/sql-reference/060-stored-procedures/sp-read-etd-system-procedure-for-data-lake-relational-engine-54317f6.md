@@ -27,7 +27,7 @@ sp_read_etd(
 [,timestamp_start=<timestamp-with-timezone>]
 [,timestamp_end=<timestamp-with-timezone>]
 [,regex ]=<regular-expression>[,...]]
-);
+)
 ```
 
 
@@ -631,5 +631,5 @@ FROM dbo.sp_read_etd( 'trace1.etd', regex = '.*abc.*' );
 **Related Information**  
 
 
-[sp_read_etd System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3be64fbd6c5f1014abaea34c00918824.html "Reads the specified event trace data (ETD) file and returns the contents of the file as a set of rows.") :arrow_upper_right:
+[sp_read_etd System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3be64fbd6c5f1014abaea34c00918824.html "Reads the specified event trace data (ETD) file and returns the contents of the file as a set of rows.") :arrow_upper_right:
 

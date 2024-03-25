@@ -74,5 +74,5 @@ SELECT QUARTERSTR ( '1999/01/28', 2 ) FROM iq_dummy;
 **Related Information**  
 
 
-[QUARTERSTR Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/8fbd6b73408a49d1aa5c88d99954bf7c.html "Returns a number indicating the quarter of the year from the supplied date expression and quarter start month.") :arrow_upper_right:
+[QUARTERSTR Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8fbd6b73408a49d1aa5c88d99954bf7c.html "Returns a number indicating the quarter of the year from the supplied date expression and quarter start month.") :arrow_upper_right:
 

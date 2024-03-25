@@ -315,5 +315,5 @@ GROUP BY DepartmentID;
 **Related Information**  
 
 
-[LIST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7b4801a3a3a64799b52b9ace7257dfd9.html "Returns a delimited list of values for every row in a group.") :arrow_upper_right:
+[LIST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7b4801a3a3a64799b52b9ace7257dfd9.html "Returns a delimited list of values for every row in a group.") :arrow_upper_right:
 

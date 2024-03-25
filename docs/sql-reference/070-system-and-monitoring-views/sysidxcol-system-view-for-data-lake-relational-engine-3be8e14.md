@@ -142,5 +142,5 @@ The ID of the primary key column that corresponds to this foreign key column. Th
 **Related Information**  
 
 
-[SYSIDXCOL System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/c788126885234b62a755b24da7d314e9.html "Each row in the SYSIDXCOL system view describes one column of an index described in the SYSIDX system view. The underlying system table for this view is ISYSIDXCOL.") :arrow_upper_right:
+[SYSIDXCOL System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/c788126885234b62a755b24da7d314e9.html "Each row in the SYSIDXCOL system view describes one column of an index described in the SYSIDX system view. The underlying system table for this view is ISYSIDXCOL.") :arrow_upper_right:
 

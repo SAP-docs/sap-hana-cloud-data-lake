@@ -39,7 +39,7 @@ UPDATE [ { <owner> | <schema-name> }.]{ <table-name> | <view-name> } [ [ AS ] <c
 <table-expression> ::=
    <table-spec> 
    | <table-expression> <join-type> <table-spec> [ ON <condition> ] 
-   | <table-expression>, ...;
+   | <table-expression>, ...
 ```
 
 
@@ -161,6 +161,8 @@ To update columns that appear in the ORDER BY clause, set the ansi\_update\_cons
 ## Remarks
 
 The table referenced in the UPDATE statement can be a base table or a temporary table.
+
+In data lake Relational Engine, a timestamp data type column can support 6 or 7 decimal precision. See [TIMESTAMP Data Type Precision in Data Lake Relational Engine](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-520ce6c.md). If you attempt to insert 7 decimal precision data into a 6 decimal precision column in the data lake Relational Engine, then the value will be truncated to 6 decimal places and precision is lost. To prevent this behavior, set the TIMESTAMP\_RTRUNCATION database option to ON. See [TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine](../090-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-dbb08c7.md).When enabled, the UPDATE operation fails if precision will be lost on a timestamp column.
 
 Defaults on updates are honored for current user, user and current timestamp, and timestamp only.
 
@@ -320,11 +322,15 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[UPDATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/2de4f7ac0a4244d597b33cb572ca1d8f.html "Modifies existing rows of a single table, or a view that contains only one table.") :arrow_upper_right:
-
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
 [CREATE TABLE Statement for Data Lake Relational Engine](create-table-statement-for-data-lake-relational-engine-a619764.md "Creates a new table in the database or on a remote server.")
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
+
+[TIMESTAMP Data Type Precision in Data Lake Relational Engine](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-520ce6c.md "Precision conflicts between TIMESTAMP data types result in data loss.")
+
+[UPDATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/2de4f7ac0a4244d597b33cb572ca1d8f.html "Modifies existing rows of a single table, or a view that contains only one table.") :arrow_upper_right:
+
+[TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine](../090-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-dbb08c7.md "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.")
 

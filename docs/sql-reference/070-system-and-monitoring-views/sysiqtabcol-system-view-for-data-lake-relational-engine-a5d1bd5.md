@@ -183,5 +183,5 @@ Primary key (table_id);
 **Related Information**  
 
 
-[SYSIQTABCOL System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/8387df93bb6c4a87acd9138dbaa18ba9.html "Presents group information from ISYSIQTABCOL in a readable format. Each row in the SYSIQTABCOL view describes a column in an IQ table.") :arrow_upper_right:
+[SYSIQTABCOL System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/8387df93bb6c4a87acd9138dbaa18ba9.html "Presents group information from ISYSIQTABCOL in a readable format. Each row in the SYSIQTABCOL view describes a column in an IQ table.") :arrow_upper_right:
 

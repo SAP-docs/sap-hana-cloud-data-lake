@@ -101,5 +101,5 @@ dID        StartDate    Salary      Row_number()
 **Related Information**  
 
 
-[ROW_NUMBER Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57c3ea884f21015b4f8c850a5a5357f.html "A ranking function that returns a unique row number for each row in a window partition, restarting the row numbering at the start of every window partition.") :arrow_upper_right:
+[ROW_NUMBER Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a57c3ea884f21015b4f8c850a5a5357f.html "A ranking function that returns a unique row number for each row in a window partition, restarting the row numbering at the start of every window partition.") :arrow_upper_right:
 

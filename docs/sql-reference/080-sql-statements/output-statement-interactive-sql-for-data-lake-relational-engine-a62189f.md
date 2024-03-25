@@ -26,12 +26,12 @@ OUTPUT TO <filename>
    [ COLUMN WIDTHS ( <integer>, … ) ]
    [ HEXADECIMAL { ON | OFF | ASIS } ]
    [ ENCODING <encoding> ]
-   [ WITH COLUMN NAMES ];
+   [ WITH COLUMN NAMES ]
 ```
 
 ```
 <output-format> ::=
-   { TEXT | FIXED | HTML | SQL | XML };
+   { TEXT | FIXED | HTML | SQL | XML }
 ```
 
 

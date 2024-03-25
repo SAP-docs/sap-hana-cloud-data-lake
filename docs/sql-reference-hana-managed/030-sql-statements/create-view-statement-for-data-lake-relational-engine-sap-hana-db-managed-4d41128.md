@@ -10,7 +10,7 @@ Creates a view on the database. Views are used to give a different perspective o
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
@@ -18,7 +18,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
 CREATE [ OR REPLACE ] VIEW
    [ <schema-name>.]<view-name> [ ( <column-name> [ , … ] ) ]
    AS <select-statement>
-   [ WITH CHECK OPTION ];
+   [ WITH CHECK OPTION ]
 ```
 
 
@@ -105,7 +105,7 @@ Views can be updated unless the SELECT statement defining the view contains a GR
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -174,5 +174,5 @@ Automatic commit
 
 [System Views in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../070-system-views/system-views-in-data-lake-relational-engine-sap-hana-db-managed-92e2e6c.md "System views allow you to query for information about the system state using SELECT statements. The results appear as tables.")
 
-[CREATE VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a61a051684f210158cced2d83231bd8a.html "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.") :arrow_upper_right:
+[CREATE VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a61a051684f210158cced2d83231bd8a.html "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.") :arrow_upper_right:
 

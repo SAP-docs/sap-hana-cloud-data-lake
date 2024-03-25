@@ -76,5 +76,5 @@ SELECT SIGN( -550 ) FROM iq_dummy;
 **Related Information**  
 
 
-[SIGN Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57ed58c84f21015bb5e803787dd27eb.html "Returns the sign of a number.") :arrow_upper_right:
+[SIGN Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a57ed58c84f21015bb5e803787dd27eb.html "Returns the sign of a number.") :arrow_upper_right:
 

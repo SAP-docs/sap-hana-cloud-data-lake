@@ -157,7 +157,7 @@ Specifies the database tables or views involved in a `SELECT` statement.
 ```
 <table-version-names> ::=
    { OLD [ AS ] <correlation-name> [ FINAL [ AS ] <correlation-name> ]
-   | FINAL [ AS ] <correlation-name> };
+   | FINAL [ AS ] <correlation-name> }
 ```
 
 
@@ -566,9 +566,9 @@ See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](gra
 
 [SELECT Statement for Data Lake Relational Engine](select-statement-for-data-lake-relational-engine-a624e72.md "Retrieves information from the database.")
 
-[FROM Clause for Full Text Searches](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a5f8ddf384f210159ed4b49306dfae5f.html "Specifies the database tables or views involved in a SELECT statement.") :arrow_upper_right:
+[FROM Clause for Full Text Searches](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a5f8ddf384f210159ed4b49306dfae5f.html "Specifies the database tables or views involved in a SELECT statement.") :arrow_upper_right:
 
-[FROM Clause for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ccd090fa57a84916b181a47c6ba634e1.html "Specifies the database tables or views involved in a SELECT statement.") :arrow_upper_right:
+[FROM Clause for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/ccd090fa57a84916b181a47c6ba634e1.html "Specifies the database tables or views involved in a SELECT statement.") :arrow_upper_right:
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
 

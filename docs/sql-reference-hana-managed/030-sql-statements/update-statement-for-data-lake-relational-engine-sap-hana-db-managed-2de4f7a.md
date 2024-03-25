@@ -10,7 +10,7 @@ Modifies existing rows of a single table, or a view that contains only one table
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
@@ -37,7 +37,7 @@ UPDATE [ <schema-name>.]{ <table-name> | <view-name> } [ [ AS ] <correlation-nam
 <table-expression> ::=
    <table-spec> 
    | <table-expression> <join-type> <table-spec> [ ON <condition> ] 
-   | <table-expression>, ...;
+   | <table-expression>, ...
 ```
 
 
@@ -160,6 +160,8 @@ To update columns that appear in the ORDER BY clause, set the ansi\_update\_cons
 
 The table referenced in the UPDATE statement can be a base table or a temporary table.
 
+In data lake Relational Engine, a timestamp data type column can support 6 or 7 decimal precision. See [TIMESTAMP Data Type Precision in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-sap-hana-db-managed-5cbca14.md). If you attempt to insert 7 decimal precision data into a 6 decimal precision column in the data lake Relational Engine, then the value will be truncated to 6 decimal places and precision is lost. To prevent this behavior, set the TIMESTAMP\_RTRUNCATION database option to ON. See [TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-sap-hana-db-managed-7ea796c.md).When enabled, the UPDATE operation fails if precision will be lost on a timestamp column.
+
 Defaults on updates are honored for current user, user and current timestamp, and timestamp only.
 
 Each named column is set to the value of the expression on the right-hand side of the equal sign. Even *<column-name\>* can be used in the expression—the old value is used.
@@ -254,7 +256,7 @@ You cannot update a database-scope variable owned by another user.
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -329,5 +331,9 @@ Requires one of:
 **Related Information**  
 
 
-[UPDATE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a628441e84f21015a952a4b8bd52ee72.html "Modifies existing rows of a single table, or a view that contains only one table.") :arrow_upper_right:
+[TIMESTAMP Data Type Precision in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-sap-hana-db-managed-5cbca14.md "Precision conflicts between TIMESTAMP data types result in data loss.")
+
+[TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-sap-hana-db-managed-7ea796c.md "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.")
+
+[UPDATE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a628441e84f21015a952a4b8bd52ee72.html "Modifies existing rows of a single table, or a view that contains only one table.") :arrow_upper_right:
 

@@ -12,7 +12,7 @@ Modifies an existing personal security environment \(PSE\).
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
@@ -20,7 +20,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
 ALTER PSE <pse-name> 
    { <certificate-clause>
    | <set-own-certificate-clause>
-   | <unset-own-certificate-clause> };
+   | <unset-own-certificate-clause> }
 ```
 
 
@@ -50,7 +50,7 @@ None
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -123,5 +123,5 @@ ALTER PSE mypse1 DROP CERTIFICATE Digicert;
 
 [DROP PSE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-pse-statement-for-data-lake-relational-engine-sap-hana-db-managed-daf65f6.md "Removes a personal security environment (PSE) from the database.")
 
-[ALTER PSE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/53742a28df0f40deb5cd7a9784fc1a55.html "Modifies an existing personal security environment (PSE).") :arrow_upper_right:
+[ALTER PSE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/53742a28df0f40deb5cd7a9784fc1a55.html "Modifies an existing personal security environment (PSE).") :arrow_upper_right:
 

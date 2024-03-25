@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-NOTIFY TRACE EVENT <trace-event-name> ( [ <param1> [ ,... ] ] );
+NOTIFY TRACE EVENT <trace-event-name> ( [ <param1> [ ,... ] ] )
 ```
 
 
@@ -121,7 +121,7 @@ NOTIFY TRACE EVENT my_event( 3, 'Hello world 3' );
 **Related Information**  
 
 
-[NOTIFY TRACE EVENT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/e3c01f5594f0442daf8275954bc2bb57.html "Logs a user-defined trace event to a trace session.") :arrow_upper_right:
+[NOTIFY TRACE EVENT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/e3c01f5594f0442daf8275954bc2bb57.html "Logs a user-defined trace event to a trace session.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

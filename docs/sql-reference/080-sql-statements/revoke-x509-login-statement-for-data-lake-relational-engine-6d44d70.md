@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-REVOKE X509 LOGIN FROM [ ( { <external_identity> [, ...] | ANY AS USER <userid> [, ...] } ) ] FOR PROVIDER <x509_provider_name>;
+REVOKE X509 LOGIN FROM [ ( { <external_identity> [, ...] | ANY AS USER <userid> [, ...] } ) ] FOR PROVIDER <x509_provider_name>
 ```
 
 

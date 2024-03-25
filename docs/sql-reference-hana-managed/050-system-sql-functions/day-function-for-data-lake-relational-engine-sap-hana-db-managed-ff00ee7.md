@@ -63,5 +63,5 @@ SELECT DAY( '2001-09-12' ) FROM iq_dummy;
 **Related Information**  
 
 
-[DAY Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5493fe284f2101587fac052951c6f01.html "Returns an integer from 1 to 31 corresponding to the day of the month of the date specified.") :arrow_upper_right:
+[DAY Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5493fe284f2101587fac052951c6f01.html "Returns an integer from 1 to 31 corresponding to the day of the month of the date specified.") :arrow_upper_right:
 

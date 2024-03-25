@@ -385,5 +385,5 @@ Timestamp at which user was locked due to failed login attempts.
 **Related Information**  
 
 
-[SYSUSER System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/191fd8e1a9594171a03df906f59e0a4f.html "Each row in the SYS.SYSUSER system view describes a user, role, or schema in the system.") :arrow_upper_right:
+[SYSUSER System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/191fd8e1a9594171a03df906f59e0a4f.html "Each row in the SYS.SYSUSER system view describes a user, role, or schema in the system.") :arrow_upper_right:
 

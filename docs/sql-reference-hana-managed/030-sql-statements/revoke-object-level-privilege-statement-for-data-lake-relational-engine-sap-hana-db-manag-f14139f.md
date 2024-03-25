@@ -12,7 +12,7 @@ Removes object-level privileges that were given using the `GRANT` statement.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -21,7 +21,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
 REVOKE { <object-level-privilege> [,...]
    ON { [ <owner>.]<object-name> 
       | SCHEMA <schema-name> } 
-   FROM <user_role_shema> [,...];
+   FROM <user_role_shema> [,...]
 ```
 
 
@@ -77,7 +77,7 @@ Specifies the object or schema privilege being revoked.
    | USAGE
 ```
 
-For an explanation of each object-level privilege, see [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right:.
+For an explanation of each object-level privilege, see [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right:.
 
 
 
@@ -119,7 +119,7 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>

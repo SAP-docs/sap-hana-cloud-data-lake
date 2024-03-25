@@ -26,7 +26,7 @@ CREATE [ OR REPLACE ] TEMPORARY TRACE EVENT <trace-event-name>
  | WARNING
  | INFORMATION
  | DEBUG } ]
-[ ( <field-name> <field-type> [ , ... ] ] );
+[ ( <field-name> <field-type> [ , ... ] ] )
 ```
 
 
@@ -247,7 +247,7 @@ CREATE TEMPORARY TRACE EVENT my_event( id INTEGER, information LONG VARCHAR );
 **Related Information**  
 
 
-[CREATE TEMPORARY TRACE EVENT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/816cfdb66ce21014b8ff8c954b0293b5.html "Creates a user trace event that persists until the database is stopped.") :arrow_upper_right:
+[CREATE TEMPORARY TRACE EVENT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/816cfdb66ce21014b8ff8c954b0293b5.html "Creates a user trace event that persists until the database is stopped.") :arrow_upper_right:
 
 [DROP TRACE EVENT Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-trace-event-statement-for-data-lake-relational-engine-sap-hana-db-managed-6357958.md "Drops a user-defined trace event.")
 

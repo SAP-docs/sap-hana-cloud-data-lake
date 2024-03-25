@@ -135,5 +135,5 @@ dID        StartDate    Salary      Lag(Salary)
 **Related Information**  
 
 
-[LAG Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a55b772a84f2101583fef0038bcd8bb0.html "An interrow function that returns the value of an attribute in a previous row in the table or table partition.") :arrow_upper_right:
+[LAG Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a55b772a84f2101583fef0038bcd8bb0.html "An interrow function that returns the value of an attribute in a previous row in the table or table partition.") :arrow_upper_right:
 

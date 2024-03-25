@@ -10,13 +10,13 @@ Initializes or refreshes the data in a materialized view by executing its query 
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
 ```
 REFRESH MATERIALIZED VIEW [ <schema-name>.]<mat_view_name>
-   [ FORCE BUILD ];
+   [ FORCE BUILD ]
 ```
 
 
@@ -72,7 +72,7 @@ This statement cannot be executed when the connection has cursors opened with th
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -156,7 +156,7 @@ REFRESH MATERIALIZED VIEW EmployeeConfid99 FORCE BUILD;
 
 [CREATE MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-816c0ee.md "Creates a materialized view.")
 
-[REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/faab95d872784a4c8d2a7bd3e74faa04.html "Initializes or refreshes the data in a materialized view by executing its query definition.") :arrow_upper_right:
+[REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/faab95d872784a4c8d2a7bd3e74faa04.html "Initializes or refreshes the data in a materialized view by executing its query definition.") :arrow_upper_right:
 
 [DROP MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-50e7633.md "Removes a data type from the database.")
 

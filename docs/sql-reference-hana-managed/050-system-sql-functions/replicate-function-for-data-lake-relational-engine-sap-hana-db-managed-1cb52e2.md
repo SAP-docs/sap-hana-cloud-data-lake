@@ -87,5 +87,5 @@ SELECT REPLICATE( 'repeat', 3 ) FROM iq_dummy;
 **Related Information**  
 
 
-[REPLICATE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57a156384f2101597df9d785635d3b0.html "Concatenates a string a specified number of times.") :arrow_upper_right:
+[REPLICATE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a57a156384f2101597df9d785635d3b0.html "Concatenates a string a specified number of times.") :arrow_upper_right:
 

@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-GRANT JWT LOGIN TO <external_identity> FOR PROVIDER <jwt_provider_name> AS USER <userid>;
+GRANT JWT LOGIN TO <external_identity> FOR PROVIDER <jwt_provider_name> AS USER <userid>
 ```
 
 

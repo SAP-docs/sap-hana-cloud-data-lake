@@ -10,7 +10,7 @@ Invokes a procedure.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
@@ -20,7 +20,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
 
 ```
 [ <variable> = ] CALL { <owner> | <schema-name> }<procedure-name> ( [ <expression> ] [ , … ] ) 
-    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ];
+    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ]
 ```
 
 
@@ -29,7 +29,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
 
 ```
 [ <variable> = ] CALL { <owner> | <schema-name> }<procedure-name> ( [ <parameter-name> = <expression> ] [ , … ] ) 
-    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ];
+    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ]
 ```
 
 
@@ -111,7 +111,7 @@ returnval = CALL proc_integer ( arg1 = val1, ... );
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -180,5 +180,5 @@ Requires one of:
 **Related Information**  
 
 
-[CALL Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a614c16084f21015bc34dd15aeb50bde.html "Invokes a procedure.") :arrow_upper_right:
+[CALL Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a614c16084f21015bc34dd15aeb50bde.html "Invokes a procedure.") :arrow_upper_right:
 

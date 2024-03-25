@@ -63,5 +63,5 @@ SELECT TAN( 0.52 ) FROM iq_dummy;
 **Related Information**  
 
 
-[TAN Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a58a2ec084f2101584a8c423a3ca9750.html "Returns the tangent of a number.") :arrow_upper_right:
+[TAN Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a58a2ec084f2101584a8c423a3ca9750.html "Returns the tangent of a number.") :arrow_upper_right:
 

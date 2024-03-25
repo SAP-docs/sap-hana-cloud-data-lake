@@ -83,5 +83,5 @@ DROP TABLE ExternalSchema1.ExternalTable1 IN FILES_SERVICE;
 
 [REFRESH \(Remote\) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](refresh-remote-table-statement-for-data-lake-relational-engine-sql-on-files-e275657.md "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.")
 
-[DROP (Remote) TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ca1e55df6c6f4e0aa381832e5504a4b9.html "Drop a remote table from a SQL on Files external catalog.") :arrow_upper_right:
+[DROP (Remote) TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/ca1e55df6c6f4e0aa381832e5504a4b9.html "Drop a remote table from a SQL on Files external catalog.") :arrow_upper_right:
 

@@ -85,5 +85,5 @@ from MyData;
 **Related Information**  
 
 
-[ISNUMERIC Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/f82be4309ee34e0dab5a3148c3d56fc6.html "Tests whether a string argument can be converted to a numeric.") :arrow_upper_right:
+[ISNUMERIC Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/f82be4309ee34e0dab5a3148c3d56fc6.html "Tests whether a string argument can be converted to a numeric.") :arrow_upper_right:
 

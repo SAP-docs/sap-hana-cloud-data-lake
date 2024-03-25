@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_dependent_views( [ '<table-name>' [, '{ <owner-name> | <schema-name> }' ] ] );
+sa_dependent_views( [ '<table-name>' [, '{ <owner-name> | <schema-name> }' ] ] )
 ```
 
 
@@ -141,9 +141,7 @@ No errors are generated if no existing tables satisfy the specified criteria for
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
-
-Also requires one of the following:
+Requires EXECUTE object-level privilege on the procedure, along with one of the following:
 
 -   You own the underlying table of the view
 -   SELECT ANY TABLE system privilege
@@ -171,7 +169,7 @@ None
 This example assumes the following objects exist:
 
 ```
---- Setup for the following examles
+--- Setup for the following examples ---
 CREATE TABLE mytable (ColA int, ColB VARCHAR(10), ColC int);
 CREATE VIEW V_mytable_A AS SELECT ColA FROM mytable;
 CREATE VIEW V_mytable_B AS SELECT ColB FROM mytable;
@@ -278,5 +276,5 @@ V\_mytable
 **Related Information**  
 
 
-[sa_dependent_views System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/47783e3af31b4f27a28b41ad534f8332.html "Returns the list of all dependent views for a given table or view.") :arrow_upper_right:
+[sa_dependent_views System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/47783e3af31b4f27a28b41ad534f8332.html "Returns the list of all dependent views for a given table or view.") :arrow_upper_right:
 

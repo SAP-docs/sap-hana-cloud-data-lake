@@ -19,7 +19,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 ALTER JWT PROVIDER <jwt_provider_name>
     { SET { <issuer_clause> | <claims_clause> | <priority_clause> }
-      | UNSET <unset_claims_clause> };
+      | UNSET <unset_claims_clause> }
 ```
 
 

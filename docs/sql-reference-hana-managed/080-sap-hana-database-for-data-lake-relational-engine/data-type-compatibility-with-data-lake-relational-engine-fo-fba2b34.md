@@ -247,9 +247,9 @@ Yes
 
 N/A
 
-Data Lake Relational Engine supports 6 or 7 digit precision, depending on the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option and the configuration of the instance. Ensure that your instance is configured for 7 digit precision to avoid potential data loss when creating Data Lake Relational Engine proxy tables containing the TIMESTAMP data type.
+Data Lake Relational Engine supports 6 or 7-digit precision, depending on the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option and the configuration of the instance. Ensure that your instance is configured for 7-digit precision to avoid potential data loss when creating Data Lake Relational Engine proxy tables containing the TIMESTAMP data type.
 
-For more information, see [Decimal Precision of the TIMESTAMP Data Type in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../020-sql-data-types/decimal-precision-of-the-timestamp-data-type-in-data-lake-relational-engine-sap-hana-db-m-5cbca14.md).
+For more information, see [TIMESTAMP Data Type Precision in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-sap-hana-db-managed-5cbca14.md).
 
 </td>
 </tr>

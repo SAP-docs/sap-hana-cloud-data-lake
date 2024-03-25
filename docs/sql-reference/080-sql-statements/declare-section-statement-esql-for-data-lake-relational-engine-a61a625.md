@@ -17,9 +17,9 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-EXEC SQL BEGIN DECLARE SECTION;
+EXEC SQL BEGIN DECLARE SECTION
 ... <C declarations>
-EXEC SQL END DECLARE SECTION;
+EXEC SQL END DECLARE SECTION
 ```
 
 

@@ -196,5 +196,5 @@ SELECT a, CAST(REPLACE(a,'C','ZZ') AS CHAR(5)) FROM aa;
 
 [UPPER Function \[String\] for Data Lake Relational Engine](upper-function-string-for-data-lake-relational-engine-a58cbc0.md "Converts all characters in a string to uppercase.")
 
-[REPLACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/b8f3ed4beb9645e98dee8a2c50011263.html "Replaces all occurrences of a substring with another substring.") :arrow_upper_right:
+[REPLACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/b8f3ed4beb9645e98dee8a2c50011263.html "Replaces all occurrences of a substring with another substring.") :arrow_upper_right:
 

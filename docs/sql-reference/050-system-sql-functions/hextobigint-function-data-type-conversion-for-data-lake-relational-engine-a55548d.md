@@ -93,5 +93,5 @@ SELECT HEXTOBIGINT ( 'fffffff7' ) FROM iq_dummy;
 
 [CONVERSION\_ERROR Option \[TSQL\] for Data Lake Relational Engine](../090-database-options/conversion-error-option-tsql-for-data-lake-relational-engine-a63018a.md "Controls reporting of data type conversion failures on fetching information from the database.")
 
-[HEXTOBIGINT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/afd4faa8d87d4e4c90a0159fb250d01d.html "Returns the BIGINT equivalent of a hexadecimal string.") :arrow_upper_right:
+[HEXTOBIGINT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/afd4faa8d87d4e4c90a0159fb250d01d.html "Returns the BIGINT equivalent of a hexadecimal string.") :arrow_upper_right:
 

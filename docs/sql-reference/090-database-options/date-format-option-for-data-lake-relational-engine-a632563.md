@@ -21,7 +21,7 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-DATE_FORMAT = <string_expression>;
+DATE_FORMAT = <string_expression>
 ```
 
 
@@ -293,7 +293,7 @@ SELECT dateformat ( cast ('2011/01/01' as date ), 'yyyy/Mm/Dd' );
 returns this value:
 
 ```
-2011/1/1l
+2011/1/1
 ```
 
 
@@ -305,7 +305,7 @@ returns this value:
 This table illustrates DATE\_FORMAT settings, together with the output from this statement, executed on Saturday May 21, 2011:
 
 ```
-SELECT CURRENT DATE;
+SELECT CURRENT DATE
 ```
 
 
@@ -383,7 +383,7 @@ mm-yyyy
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[DATE_FORMAT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3e2ecb4848cc4a6ba20cd155322dee96.html "Sets the format used for dates retrieved from the database.") :arrow_upper_right:
+[DATE_FORMAT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3e2ecb4848cc4a6ba20cd155322dee96.html "Sets the format used for dates retrieved from the database.") :arrow_upper_right:
 
 [RETURN\_DATE\_TIME\_AS\_STRING Option for Data Lake Relational Engine](return-date-time-as-string-option-for-data-lake-relational-engine-a652ffd.md "Controls how a date, time, or timestamp value is passed to the client application when queried.")
 

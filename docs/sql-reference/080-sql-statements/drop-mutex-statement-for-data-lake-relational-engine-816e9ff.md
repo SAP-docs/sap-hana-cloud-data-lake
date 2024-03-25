@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-DROP MUTEX [ IF EXISTS ] [ <owner>.]<mutex-name>;
+DROP MUTEX [ IF EXISTS ] [ <owner>.]<mutex-name>
 ```
 
 

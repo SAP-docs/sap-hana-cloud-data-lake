@@ -20,7 +20,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 PUT <cursor-name> 
    [ { USING DESCRIPTOR <sqlda-name> 
      | FROM <hostvar-list> ] [ INTO { DESCRIPTOR <into-sqlda-name> 
-     | <into-hostvar-list> } ] [ ARRAY :<nnn> ] } ];
+     | <into-hostvar-list> } ] [ ARRAY :<nnn> ] } ]
 ```
 
 

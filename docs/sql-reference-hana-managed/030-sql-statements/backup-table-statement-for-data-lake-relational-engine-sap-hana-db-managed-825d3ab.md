@@ -10,7 +10,7 @@ Backup data lake Relational Engine tables.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
@@ -20,7 +20,7 @@ BACKUP TABLE <schema-name>.<table_name> TO <location>
    KEY <encryption_key>
    CONNECTION_STRING <connection_string>
    MAX PART SIZE <integer> BYTES|KB|MB|GB|TB
-   MAX PART WRITERS <integer>;
+   MAX PART WRITERS <integer>
 ```
 
 
@@ -472,7 +472,7 @@ The default value is 4.
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -590,7 +590,7 @@ BACKUP TABLE original_table TO
 
 [RESTORE TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](restore-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-1128b04.md "Restore backed up tables in data lake Relational Engine.")
 
-[Table-Level Backup and Restore of Data in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/5483df1be61442c18d65e0ee66fe27a1.html "Data lake Relational Engine provides table-level backup and restore functionality that enables you to backup and restore individual tables by creating an image of data (FP index in binary format) for all columns in a data lake Relational Engine table.") :arrow_upper_right:
+[Table-Level Backup and Restore of Data in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/5483df1be61442c18d65e0ee66fe27a1.html "Data lake Relational Engine provides table-level backup and restore functionality that enables you to backup and restore individual tables by creating an image of data (FP index in binary format) for all columns in a data lake Relational Engine table.") :arrow_upper_right:
 
-[BACKUP TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/5c2f08fec3194c57ae23a640fc0cf73f.html "Backup data lake Relational Engine tables.") :arrow_upper_right:
+[BACKUP TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/5c2f08fec3194c57ae23a640fc0cf73f.html "Backup data lake Relational Engine tables.") :arrow_upper_right:
 

@@ -21,7 +21,7 @@ CASE <value-expression>
    … WHEN [ <constant> | NULL ] THEN <statement-list> …
    … [ WHEN [ <constant> | NULL ] THEN <statement-list> ] …
    … ELSE <statement-list>
-   … END;
+   … END
 ```
 
 

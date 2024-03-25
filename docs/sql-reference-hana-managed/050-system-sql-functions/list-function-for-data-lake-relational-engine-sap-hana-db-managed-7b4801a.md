@@ -315,5 +315,5 @@ GROUP BY DepartmentID;
 **Related Information**  
 
 
-[LIST Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a2984e5584f21015bddde2495874815d.html "Returns a delimited list of values for every row in a group.") :arrow_upper_right:
+[LIST Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a2984e5584f21015bddde2495874815d.html "Returns a delimited list of values for every row in a group.") :arrow_upper_right:
 

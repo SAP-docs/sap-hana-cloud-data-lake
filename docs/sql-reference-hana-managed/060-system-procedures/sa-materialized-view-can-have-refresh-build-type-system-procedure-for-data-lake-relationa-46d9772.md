@@ -20,7 +20,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 ```
 sa_materialized_view_can_have_refresh_build_type(
    '<refresh-type>', '<build-type>', 
-   '<view_name>', '<schema_name>' );
+   '<view_name>', '<schema_name>' )
 ```
 
 
@@ -178,10 +178,10 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </b></dt>
 <dd>
 
-Requires all of the following:
+Requires EXECUTE object-level privilege on the procedure, along with one of the following:
 
 -   SELECT object-level privilege on the view and its underlying tables
--   SELECT object-level privilege on the schema of the materialized view and its underlying tables
+-   SELECT object-level privilege on the schema of the materialized view and its underlying tables if the schema is owned by another user
 
 
 
@@ -195,7 +195,7 @@ Requires all of the following:
 ## Examples
 
 ```
--- Setup for the following examples:
+-- Setup for the following examples ---
 CREATE TABLE BAR (C1 INT, C2 INT, C3 VARCHAR(10));
 CREATE MATERIALIZED VIEW MV_BAR1 AS SELECT C1, C2, C3 FROM BAR AUTO FULL REFRESH;
 ```
@@ -247,5 +247,5 @@ The materialized view mv1 cannot be changed to incremental or immediate because 
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-817277b.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_materialized_view_can_have_refresh_build_type System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/7d2d2da5be7e45eaa465aa7f13cde013.html "Checks whether the materialized view supports the specified refresh and build type properties.") :arrow_upper_right:
+[sa_materialized_view_can_have_refresh_build_type System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/7d2d2da5be7e45eaa465aa7f13cde013.html "Checks whether the materialized view supports the specified refresh and build type properties.") :arrow_upper_right:
 

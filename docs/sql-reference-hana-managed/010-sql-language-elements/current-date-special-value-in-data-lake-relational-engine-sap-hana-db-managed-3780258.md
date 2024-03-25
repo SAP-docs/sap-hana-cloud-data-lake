@@ -13,10 +13,10 @@ Returns the current year, month, and day.
 Data lake Relational Engine \(SAP HANA DB-Managed\) special values can be used when connected as follows:
 
 -   To use a special value as a column default when creating a table, you must be:
-    -   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure
+    -   Connected to SAP HANA database as a SAP HANA database user.
 
 -   To return an expression as part of a SELECT statement that returns a value, you must be:
-    -   Connected to SAP HANA database as a SAP HANA database user, and using the REMOTE\_EXEUCTE\_QUERY function.
+    -   Connected to SAP HANA database as a SAP HANA database user.
 
 
 

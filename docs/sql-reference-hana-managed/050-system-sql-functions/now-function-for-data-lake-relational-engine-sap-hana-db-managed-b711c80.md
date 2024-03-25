@@ -41,5 +41,5 @@ SELECT NOW(*) FROM iq_dummy;
 **Related Information**  
 
 
-[NOW Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a568dfde84f210159d57b7ca3bb6ca84.html "Returns the current date and time. This is the historical syntax for CURRENT TIMESTAMP.") :arrow_upper_right:
+[NOW Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a568dfde84f210159d57b7ca3bb6ca84.html "Returns the current date and time. This is the historical syntax for CURRENT TIMESTAMP.") :arrow_upper_right:
 

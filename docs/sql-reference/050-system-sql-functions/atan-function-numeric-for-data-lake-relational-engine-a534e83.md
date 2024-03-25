@@ -65,5 +65,5 @@ SELECT ATAN( 0.52 ) FROM iq_dummy;
 
 [Trigonometry Functions in Data Lake Relational Engine](trigonometry-functions-in-data-lake-relational-engine-caafd14.md "Some numeric functions return trigonometric information.")
 
-[ATAN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/4d0428abd20f49fea3612d88cf749e7d.html "Returns the arc-tangent, in radians, of a number.") :arrow_upper_right:
+[ATAN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/4d0428abd20f49fea3612d88cf749e7d.html "Returns the arc-tangent, in radians, of a number.") :arrow_upper_right:
 

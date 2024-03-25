@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 CREATE [ OR REPLACE | TEMPORARY ] MUTEX [ IF NOT EXISTS ] [ <owner>.]<mutex-name>
-   [ SCOPE { CONNECTION | TRANSACTION } ];
+   [ SCOPE { CONNECTION | TRANSACTION } ]
 ```
 
 

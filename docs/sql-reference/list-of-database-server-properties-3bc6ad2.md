@@ -130,7 +130,7 @@ BuildProduction
 </td>
 <td valign="top">
 
-Whether the database server is compiled for production use \(Yes\) or whether the database server is a debug build \(No\)..
+Whether the database server is compiled for production use \(Yes\) or whether the database server is a debug build \(No\).
 
 </td>
 </tr>
@@ -820,7 +820,9 @@ FipsMode
 </td>
 <td valign="top">
 
-Whether the -fips option was specified when the database server was started.
+Whether the -fips option was specified when the database server was started. If the -fips option was specified, all encryption and hashing use FIPS 140-2 certified algorithms.
+
+In the Government Cloud \(US\) region, only FIPS 140-2 certified encryption modules are used, even when non-FIPS algorithms are explicitly requested.
 
 </td>
 </tr>

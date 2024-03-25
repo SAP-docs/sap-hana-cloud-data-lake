@@ -29,7 +29,7 @@ DESCRIBE
 <long-name-spec> ::=
    { OWNER.TABLE.COLUMN 
    | TABLE.COLUMN 
-   | COLUMN };
+   | COLUMN }
 ```
 
 

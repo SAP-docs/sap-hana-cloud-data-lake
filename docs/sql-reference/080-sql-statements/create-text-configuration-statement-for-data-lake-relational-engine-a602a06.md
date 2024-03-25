@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 CREATE TEXT CONFIGURATION [ { <owner> | <schema-name> }.]<new-config-name> 
-   FROM [ { <owner> | <schema-name> }.]<existing-config-name>;
+   FROM [ { <owner> | <schema-name> }.]<existing-config-name>
 ```
 
 
@@ -65,13 +65,18 @@ To view the list of all text configuration objects and their settings in the dat
 ## Privileges
 
 -   To create a self-owned text configuration requires the CREATE TEXT CONFIGURATION system privilege.
--   To create a text configuration owned by another user requires one of:
-    -   CREATE ANY TEXT CONFIGURATION system privilege.
-    -   CREATE ANY OBJECT system privilege.
-    -   CREATE ANY object-level privilege on the schema if the text configuration is in a schema owned by another user.
+-   To create a text configuration owned by another user requires one of the following:
+    -   CREATE ANY TEXT CONFIGURATION system privilege
+    -   CREATE ANY OBJECT system privilege
+
+-   To create a text configuration in a schema requires one of the following:
+    -   You own the schema.
+    -   CREATE ANY TEXT CONFIGURATION object-level privilege on the schema
+    -   CREATE ANY OBJECT object-level privilege on the schema
+    -   CREATE ANY object-level privilege on the schema
 
 
-All text configuration objects have PUBLIC access. Any user with privilege to create a `TEXT` index can use any text configuration object.
+All text configuration objects have PUBLIC access. Any user with privilege to create a TEXT index can use any text configuration object.
 
 See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md) for assistance with granting privileges.
 

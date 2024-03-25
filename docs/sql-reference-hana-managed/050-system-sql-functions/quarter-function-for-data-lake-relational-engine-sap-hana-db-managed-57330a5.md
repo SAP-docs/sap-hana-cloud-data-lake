@@ -136,5 +136,5 @@ SELECT QUARTER ( '1987/05/02' ) FROM iq_dummy;
 **Related Information**  
 
 
-[QUARTER Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a571b27b84f21015b649cee091ad3bd6.html "Returns a number indicating the quarter of the year from the supplied date expression.") :arrow_upper_right:
+[QUARTER Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a571b27b84f21015b649cee091ad3bd6.html "Returns a number indicating the quarter of the year from the supplied date expression.") :arrow_upper_right:
 

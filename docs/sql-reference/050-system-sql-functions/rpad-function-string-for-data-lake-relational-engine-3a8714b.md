@@ -116,5 +116,5 @@ Vendor extension.
 **Related Information**  
 
 
-[RPAD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/6c4ea243716a46e789d87818e8be6df1.html "Right-pads a string with spaces or a specified pattern to make a string that is a specified number of characters in length.") :arrow_upper_right:
+[RPAD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/6c4ea243716a46e789d87818e8be6df1.html "Right-pads a string with spaces or a specified pattern to make a string that is a specified number of characters in length.") :arrow_upper_right:
 

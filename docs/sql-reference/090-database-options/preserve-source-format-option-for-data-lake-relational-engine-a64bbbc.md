@@ -21,7 +21,7 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-PRESERVE_SOURCE_FORMAT = { ON | OFF };
+PRESERVE_SOURCE_FORMAT = { ON | OFF }
 ```
 
 

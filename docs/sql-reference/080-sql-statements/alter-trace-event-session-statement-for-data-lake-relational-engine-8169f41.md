@@ -24,14 +24,14 @@ ALTER TRACE EVENT SESSION <session-name>
   | ADD TARGET FILE [ ( SET <target-parameter-name>=<target-parameter-value> [, ...] ) ]
   | DROP TARGET <FILE> [, ...] ]
   | STATE = { START | STOP }
-};
+}
 ```
 
 ```
 <target-parameter-name> :
 { filename_prefix
  | flush_on_write
- | compressed };
+ | compressed }
 ```
 
 
@@ -294,5 +294,5 @@ ALTER TRACE EVENT SESSION my_session STATE = START;
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[ALTER TRACE EVENT SESSION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/21b2b4f214224d81920ed9bcaf88d7ee.html "Adds or removes trace events or targets from a session, or starts or stops a trace session.") :arrow_upper_right:
+[ALTER TRACE EVENT SESSION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/21b2b4f214224d81920ed9bcaf88d7ee.html "Adds or removes trace events or targets from a session, or starts or stops a trace session.") :arrow_upper_right:
 

@@ -10,7 +10,7 @@ Creates an index on a specified table, or pair of tables. Once an index is creat
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
@@ -20,13 +20,16 @@ CREATE [ UNIQUE ] [ <index-type> ] INDEX [ IF NOT EXISTS ] <index-name>
    … ( <column-name> [ , <column-name> ] … )
    … [ NOTIFY <integer> ]
    … [ DELIMITED BY '<separators-string>' ]
-   … [ LIMIT <maxwordsize-integer> ];
+   … [ LIMIT <maxwordsize-integer> ]
 ```
 
 ```
 <index-type> ::=
-   { CMP | DATE | DTTM | HG | HNG | TEXT | TIME | WD };
+   { CMP | DATE | DTTM | HG | HNG | TIME | WD }
 ```
+
+> ### Tip:  
+> Looking for TEXT index information? See [CREATE TEXT INDEX Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-text-index-statement-for-data-lake-relational-engine-sap-hana-db-managed-11447f8.md).
 
 
 
@@ -55,9 +58,11 @@ For columns in data lake Relational Engine tables, you can specify an *<index-ty
 -   DTTM – Datetime
 -   HG – High\_Group \(default\)
 -   HNG
--   TEXT
 -   TIME
 -   WD – Word
+
+> ### Tip:  
+> Looking for TEXT index information? See [CREATE TEXT INDEX Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-text-index-statement-for-data-lake-relational-engine-sap-hana-db-managed-11447f8.md).
 
 If you do not specify an *<index-type\>*, an HG index is created by default.
 
@@ -393,7 +398,7 @@ Gives notification messages after n records are successfully added for the index
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -470,11 +475,11 @@ Automatic commit
 **Related Information**  
 
 
+[CREATE INDEX Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a617ca4484f21015b2cdfdebbf4a5eee.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
+
 [ALTER INDEX Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](alter-index-statement-for-data-lake-relational-engine-sap-hana-db-managed-daf745a.md "Renames indexes in base or global temporary tables, foreign key role names of indexes and foreign keys explicitly created by a user, or changes the clustered nature of an index on a catalog store table. You can't rename indexes created to enforce key constraints.")
 
 [DROP INDEX Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-index-statement-for-data-lake-relational-engine-sap-hana-db-managed-52fb1c7.md "Removes an index from the database.")
 
 [BEGIN PARALLEL IQ … END PARALLEL IQ Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](begin-parallel-iq-end-parallel-iq-statement-for-data-lake-relational-engine-sap-hana-db-m-6632c2b.md "Groups CREATE INDEX statements together for execution at the same time.")
-
-[CREATE INDEX Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a617ca4484f21015b2cdfdebbf4a5eee.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
 

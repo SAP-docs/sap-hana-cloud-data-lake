@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-ROLLBACK TO SAVEPOINT [ <savepoint-name> ];
+ROLLBACK TO SAVEPOINT [ <savepoint-name> ]
 ```
 
 

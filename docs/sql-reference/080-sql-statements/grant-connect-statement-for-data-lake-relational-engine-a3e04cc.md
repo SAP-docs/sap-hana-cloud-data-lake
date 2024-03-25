@@ -18,8 +18,8 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 GRANT CONNECT 
-   TO <userID> [, …];
-   IDENTIFIED BY <password> [, …];
+   TO <userID>
+   IDENTIFIED BY <password>;
 ```
 
 
@@ -42,7 +42,7 @@ GRANT CONNECT
 </b></dt>
 <dd>
 
-Must be the name of an existing user or role that has a login password. Separate multiple user\_IDs with commas.
+Must be the name of an existing user or role that has a login password.
 
 
 
@@ -55,19 +55,19 @@ Must be the name of an existing user or role that has a login password. Separate
 
 ## Remarks
 
-`GRANT CONNECT` can be used to create a new user or be used by any user to change their own password.
+GRANT CONNECT can be used to create a new user or be used by any user to change their own password.
 
 > ### Tip:  
-> Use the `CREATE USER` statement rather than the `GRANT CONNECT` statement to create users.
+> Use the CREATE USER statement rather than the GRANT CONNECT statement to create users.
 > 
 > If you inadvertently enter the user ID of an existing user when you are trying to add a new user, you are actually changing the password of the existing user. You do not receive a warning because this behavior is considered normal.
 
 > ### Note:  
-> Use system procedures, not `GRANT` and `REVOKE` statements to add and remove user IDs.
+> Use system procedures, not GRANT and REVOKE statements to add and remove user IDs.
 
 A user without a password cannot connect to the database. This is useful when you are creating groups and you do not want anyone to connect to the role user ID. To create a user without a password, do not include the IDENTIFIED BY clause.
 
-When specifying a password, it must be a valid identifier. Passwords have a maximum length of 255 bytes. If the VERIFY\_PASSWORD\_FUNCTION database option is set to a value other than the empty string, the `GRANT CONNECT TO` statement calls the function identified by the option value. The function returns NULL to indicate that the password conforms to rules. If the `VERIFY_PASSWORD_FUNCTION` option is set, you can specify only one *<userid\>* and *<password\>* with the `GRANT CONNECT` statement.
+When specifying a password, it must be a valid identifier. Passwords have a maximum length of 255 bytes. If the VERIFY\_PASSWORD\_FUNCTION database option is set to a value other than the empty string, the GRANT CONNECT TO statement calls the function identified by the option value. The function returns NULL to indicate that the password conforms to rules. Since the VERIFY\_PASSWORD\_FUNCTION option is set, you can specify only one *<userid\>* and *<password\>* with the GRANT CONNECT statement.
 
 Invalid names for database user IDs and passwords include those that:
 

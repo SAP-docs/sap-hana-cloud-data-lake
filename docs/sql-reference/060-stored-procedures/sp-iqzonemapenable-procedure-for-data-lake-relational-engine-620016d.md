@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqzonemapenable ('<table_name>', '<owner>');
+sp_iqzonemapenable ('<table_name>', '<owner>')
 ```
 
 

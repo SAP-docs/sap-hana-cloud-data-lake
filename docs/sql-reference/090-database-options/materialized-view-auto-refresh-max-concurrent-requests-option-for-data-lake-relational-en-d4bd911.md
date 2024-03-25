@@ -141,5 +141,5 @@ Once the limit is reached, refresh requests will be queued and will remain queue
 **Related Information**  
 
 
-[MATERIALIZED_VIEW_AUTO_REFRESH_MAX_CONCURRENT_REQUESTS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/18ef1dc498014c8387888ec6f61220bf.html "Controls the maximum number of materialized view refresh requests that can be concurrently running in data lake Relational Engine.") :arrow_upper_right:
+[MATERIALIZED_VIEW_AUTO_REFRESH_MAX_CONCURRENT_REQUESTS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/18ef1dc498014c8387888ec6f61220bf.html "Controls the maximum number of materialized view refresh requests that can be concurrently running in data lake Relational Engine.") :arrow_upper_right:
 

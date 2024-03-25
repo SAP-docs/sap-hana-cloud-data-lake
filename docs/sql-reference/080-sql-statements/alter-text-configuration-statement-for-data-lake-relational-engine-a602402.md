@@ -21,9 +21,7 @@ ALTER TEXT CONFIGURATION [ { <owner> | <schema-name> }.]<config-name>
 ...{ STOPLIST <stoplist> 
 ...| DROP STOPLIST
 ...| { MINIMUM | MAXIMUM } TERM LENGTH <integer>
-...| TERM BREAKER { GENERIC | NGRAM }
-...| PREFILTER EXTERNAL NAME <external-call>
-   | DROP PREFILTER };
+...| TERM BREAKER GENERIC }
 ```
 
 
@@ -92,29 +90,7 @@ TERM BREAKER
 </b></dt>
 <dd>
 
-Specifies the name of the algorithm to use for separating column values into terms. The choices for IN SYSTEM tables are GENERIC \(the default\) or NGRAM. The GENERIC algorithm treats any string of one or more alphanumerics, separated by non-alphanumerics, as a term. The NGRAM algorithm breaks strings into n-grams. An n-gram is an n-character substring of a larger string. The NGRAM term breaker is required for fuzzy \(approximate\) matching, or for documents that do not use whitespace or non-alphanumeric characters to separate terms. NGRAM is supported for IN SYSTEM tables. NGRAM term breaker is built on TEXT indexes, so use text configuration object settings to define whether to use an NGRAM or GENERIC TEXT index. TERM BREAKER can include the specification for the external term breaker library using EXTERNAL NAME and the library entry point.
-
-
-
-</dd><dt><b>
-
-PREFILTER EXTERNAL NAME
-
-</b></dt>
-<dd>
-
-Specifies the entry\_point and the library name of the external pre-filter library provided by external vendors.
-
-
-
-</dd><dt><b>
-
-DROP PREFILTER
-
-</b></dt>
-<dd>
-
-Drops the external prefilter and sets NULL to the prefilter columns in `ISYSTEXTCONFIG` table.
+Specifies the name of the algorithm to use for separating column values into terms.
 
 
 
@@ -127,7 +103,7 @@ Drops the external prefilter and sets NULL to the prefilter columns in `ISYSTEXT
 
 ## Remarks
 
-TEXT indexes are dependent on a text configuration object. TEXT indexes use immediate refresh, and cannot be truncated; you must drop the indexes before you can alter the text configuration object. To view the settings for text configuration objects, query the `SYSTEXTCONFIG` system view.
+TEXT indexes are dependent on a text configuration object. TEXT indexes use immediate refresh, and cannot be truncated; you must drop the indexes before you can alter the text configuration object. To view the settings for text configuration objects, query the SYSTEXTCONFIG system view.
 
 
 
@@ -135,11 +111,12 @@ TEXT indexes are dependent on a text configuration object. TEXT indexes use imme
 
 ## Privileges
 
--   To alter a self-owned text configuration requires the CREATE EXTERNAL REFERENCE system privilege.
--   To alter a text configuration owned by another user requires the CREATE EXTERNAL REFERENCE system privilege along with one of:
-    -   ALTER ANY TEXT CONFIGURATION system privilege.
-    -   ALTER ANY OBJECT system privilege.
-    -   ALTER object-level privilege on the schema containing the text configuration if the schema is owned by another user.
+-   Requires one of the following:
+-   -   You own the text configuration
+-   ALTER ANY TEXT CONFIGURATION system privilege
+-   ALTER ANY OBJECT system privilege
+-   You own the schema containing the text configuration
+-   ALTER object-level privilege on the schema containing the text configuration
 
 
 See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md) for assistance with granting privileges.
@@ -170,21 +147,6 @@ Automatic commit
     ```
     ALTER TEXT CONFIGURATION maxTerm16
     STOPLIST 'because about therefore only';
-    ```
-
--   The following example updates the text configuration object, `my_text_config`, to use the entry point `my_term_breaker` in the external library `mytermbreaker.dll` for breaking the text:
-
-    ```
-    CREATE TEXT CONFIGURATION my_text_config FROM default_char;
-    ALTER TEXT CONFIGURATION my_text_config
-    TERM BREAKER GENERIC EXTERNAL NAME 'platform:my_term_breaker@mytermbreaker';
-    ```
-
--   The following example updates the text configuration object, `my_text_config`, to use the entry point `my_prefilter` in the external library `myprefilter.dll` for prefiltering the documents:
-
-    ```
-    ALTER TEXT CONFIGURATION my_text_config
-    PREFILTER EXTERNAL NAME 'platform:my_prefilter@myprefilter';
     ```
 
 

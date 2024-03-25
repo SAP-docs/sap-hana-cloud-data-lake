@@ -12,7 +12,7 @@ Turns on individual keywords that are disabled by default.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -22,7 +22,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be 
 ## Syntax
 
 ```
-RESERVED_KEYWORDS = <string_expression>;
+RESERVED_KEYWORDS = <string_expression>
 ```
 
 
@@ -211,7 +211,7 @@ SET OPTION RESERVED_KEYWORDS = ;
 
 [Reserved Words in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../010-sql-language-elements/reserved-words-in-data-lake-relational-engine-sap-hana-db-managed-2bbe71e.md "Some keywords in SQL are also reserved words.")
 
-[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
+[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
 
-[RESERVED_KEYWORDS Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a248737984f21015a82f960e9878cbd1.html "Turns on individual keywords that are disabled by default.") :arrow_upper_right:
+[RESERVED_KEYWORDS Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a248737984f21015a82f960e9878cbd1.html "Turns on individual keywords that are disabled by default.") :arrow_upper_right:
 

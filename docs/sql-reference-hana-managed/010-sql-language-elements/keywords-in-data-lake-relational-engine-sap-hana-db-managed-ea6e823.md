@@ -6,14 +6,14 @@ Each SQL statement contains one or more keywords.
 
 
 
-SQL isn't case-sensitive to keywords.
+Though SQL keywords aren't case-sensitive, all keywords in the documentation are shown in UPPERCASE.
 
 The following statements are equivalent, where SELECT and FROM are keywords:  
 
 ```
-SELECT *FROM Employees;
+SELECT * FROM Employees;
 
-Select *From Employees;
+Select * From Employees;
 
 select * from Employees;
 

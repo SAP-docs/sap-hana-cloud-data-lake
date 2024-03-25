@@ -26,7 +26,7 @@ Syntax 1
 <dd>
 
 ```
-sp_iqview ( [ <view_name> ] , [ <view_owner> ] , [ view_type ] );
+sp_iqview ( [ <view_name> ] , [ <view_owner> ] , [ view_type ] )
 ```
 
 
@@ -40,7 +40,7 @@ Syntax 2
 
 ```
 sp_iqview [ view_name='<viewname>' ],
-[ view_owner='<viewowner>' ] , [ view_type='<viewtype>' ];
+[ view_owner='<viewowner>' ] , [ view_type='<viewtype>' ]
 ```
 
 

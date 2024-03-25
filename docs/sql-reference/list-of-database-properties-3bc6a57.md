@@ -593,6 +593,18 @@ The number of times the server has forced a flush of the disk cache.
 <tr>
 <td valign="top">
 
+ConciseAuditing
+
+</td>
+<td valign="top">
+
+Whether the concise auditing behavior introduced in QRC 1/2024 is enabled \(On\) or not \(Off\).
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 ConnCount
 
 </td>

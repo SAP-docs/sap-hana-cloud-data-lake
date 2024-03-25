@@ -89,5 +89,5 @@ FROM Employees;
 **Related Information**  
 
 
-[SUM Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5889fe484f21015b024abf6dcede473.html "Returns the total of the specified expression for each group of rows.") :arrow_upper_right:
+[SUM Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5889fe484f21015b024abf6dcede473.html "Returns the total of the specified expression for each group of rows.") :arrow_upper_right:
 

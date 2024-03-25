@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_http_header_info( [<header_parm>] );
+sa_http_header_info( [<header_parm>] )
 ```
 
 

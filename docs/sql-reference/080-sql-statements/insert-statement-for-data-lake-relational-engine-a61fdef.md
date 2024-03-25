@@ -27,7 +27,7 @@ Syntax 1
 
 ```
 INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name> 
-   [ ( <column-name> [, …] ) ] VALUES [ ( { <expression> | DEFAULT }[, ...] ) ];
+   [ ( <column-name> [, …] ) ] VALUES [ ( { <expression> | DEFAULT }[, ...] ) ]
 ```
 
 
@@ -41,7 +41,7 @@ Syntax 1a
 
 ```
 INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name> 
-   DEFAULT VALUES;
+   DEFAULT VALUES
 ```
 
 
@@ -56,7 +56,7 @@ Syntax 2
 ```
 INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name> [ ( <column-name> [, …] ) ]
    ... <insert-load-options> <insert-select-load-options>
-   ... <select-statement>;
+   ... <select-statement>
 ```
 
 
@@ -72,7 +72,7 @@ Syntax 3
 INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name>[ ( <column-name> [, …] ) ]
     ... <insert-select-load-options> <insert-select-load-options>
     ... LOCATION '<servername.dbname>' [ <location-options> ]
-   ... { <select-statement> | '<select statement>' };
+   ... { <select-statement> | '<select statement>' }
 ```
 
 
@@ -84,7 +84,7 @@ INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name>[ ( <column-name
 <insert-load-options> ::=
    [ LIMIT <number-of-rows> ] 
    [ NOTIFY <number-of-rows> ] 
-   [ SKIP <number-of-rows> ];
+   [ SKIP <number-of-rows> ]
 ```
 
 ```
@@ -92,14 +92,14 @@ INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name>[ ( <column-name
    [ WORD SKIP <number> ]
    [ IGNORE CONSTRAINT <constraint-type> [, …] ] 
    [ MESSAGE LOG '<string>' ROW LOG '<string>' [ ONLY LOG <logwhat> [, …] ] ] 
-   [ LOG DELIMITED BY '<string>' ];
+   [ LOG DELIMITED BY '<string>' ]
 ```
 
 ```
 <location-options> ::=
    { PACKETSIZE <interger>
    | QUOTED_IDENTIFIER { ON | OFF }
-   | ISOLATION LEVEL <integer> };
+   | ISOLATION LEVEL <integer> }
 ```
 
 ```
@@ -109,7 +109,7 @@ INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name>[ ( <column-name
    | NULL <integer> 
    | FOREIGN KEY <integer> 
    | DATA VALUE <integer> 
-   | ALL <integer> };
+   | ALL <integer> }
 ```
 
 ```
@@ -120,7 +120,7 @@ INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name>[ ( <column-name
    | UNIQUE
    | DATA VALUE
    | FOREIGN KEY
-   | WORD };
+   | WORD }
 ```
 
 
@@ -300,20 +300,16 @@ Specifies an isolation level for the connection to a remote server. The levels a
 
 ## Remarks
 
-Syntax 1 and 1a allows the insertion of a single row with the specified expression values. If the list of column names is not specified, the values are inserted into the table columns in the order they were created \(the same order as retrieved with SELECT \*\). The row is inserted into the table at an arbitrary position. \(In relational databases, tables are not ordered.\)
+**Syntax 1 and 1a** - Allows the insertion of a single row with the specified expression values. If the list of column names is not specified, the values are inserted into the table columns in the order they were created \(the same order as retrieved with SELECT \*\). The row is inserted into the table at an arbitrary position. \(In relational databases, tables are not ordered.\)
 
-Syntax 2 allows the user to perform a mass insertion into a table using the results of a fully general SELECT statement. Insertions are done in an arbitrary order unless the SELECT statement contains an ORDER BY clause. The columns from the select list are matched ordinally with the columns specified in the column list, or sequentially in the order in which the columns were created.
+**Syntax 2** - Allows the user to perform a mass insertion into a table using the results of a fully general SELECT statement. Insertions are done in an arbitrary order unless the SELECT statement contains an ORDER BY clause. The columns from the select list are matched ordinally with the columns specified in the column list, or sequentially in the order in which the columns were created.
 
 > ### Note:  
 > The NUMBER\(\*\) function is useful for generating primary keys with Syntax 2 of the INSERT statement.
 
-Syntax 3 INSERT...LOCATION is a variation of Syntax 2 that allows you to insert data from an SAP Adaptive Server Enterprisedata lake Relational Engine or data lake Relational Engine database. The *<servername.dbname\>* specified in the LOCATION clause identifies the remote server and database for the table in the FROM clause.
+**Syntax 3** - INSERT...LOCATION is a variation of Syntax 2 that allows you to insert data from an SAP Adaptive Server Enterprisedata lake Relational Engine or data lake Relational Engine database. The *<servername.dbname\>* specified in the LOCATION clause identifies the remote server and database for the table in the FROM clause.
 
-The external login is defined on the IQ server as:
-
-```
-CREATE EXTERNLOGIN russid TO ase1 REMOTE LOGIN ase1user IDENTIFIED BY mydatabase;
-```
+In data lake Relational Engine, a timestamp data type column can support 6 or 7 decimal precision. See [TIMESTAMP Data Type Precision in Data Lake Relational Engine](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-520ce6c.md). If you attempt to insert 7 decimal precision data into a 6 decimal precision column in the data lake Relational Engine, then the value will be truncated to 6 decimal places and precision is lost. To prevent this behavior, set the TIMESTAMP\_RTRUNCATION database option to ON. See [TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine](../090-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-dbb08c7.md). When enabled, the INSERT operation fails if precision will be lost on a timestamp column.
 
 Character strings inserted into tables are always stored in the case they are entered, regardless of whether the database is case-sensitive or not. Thus, a string “Value” inserted into a table is always held in the database with an uppercase V and the remainder of the letters lowercase. SELECT statements return the string as 'Value.' If the database is not case-sensitive, however, all comparisons make 'Value' the same as 'value,' 'VALUE," and so on. Further, if a single-column primary key already contains an entry Value, an INSERT of value is rejected, as it would make the primary key not unique.
 
@@ -426,9 +422,15 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [LOAD TABLE Statement \(Non-Parquet Formats\) for Data Lake Relational Engine](load-table-statement-non-parquet-formats-for-data-lake-relational-engine-7ca3f60.md "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or Google Cloud Storage) or from data lake Files containers (the managed object store).")
 
-[INSERT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/cbe6857cc94b4923a6ee5917651f5084.html "Inserts a single row or a selection of rows, from elsewhere in the current database, into the table. This command can also insert a selection of rows from another database into the table.") :arrow_upper_right:
-
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
+
+[TIMESTAMP Data Type Precision in Data Lake Relational Engine](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-520ce6c.md "Precision conflicts between TIMESTAMP data types result in data loss.")
+
+[INSERT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/cbe6857cc94b4923a6ee5917651f5084.html "Inserts a single row or a selection of rows, from elsewhere in the current database, into the table. This command can also insert a selection of rows from another database into the table.") :arrow_upper_right:
+
+[TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine](../090-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-dbb08c7.md "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.")
+
+[TIMESTAMP_RTRUNCATION Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7ea796c77e5047c78acff41829be70aa.html "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.") :arrow_upper_right:
 

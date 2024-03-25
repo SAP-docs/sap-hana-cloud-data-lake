@@ -7,7 +7,7 @@ Checks validity of the current database. Optionally corrects allocation problems
 
 
 ```
-sp_iqcheckdb '<mode> <target> [ … ] [ resources <resource-percent> ]';
+sp_iqcheckdb '<mode> <target> [ … ] [ resources <resource-percent> ]'
 ```
 
 ```
@@ -86,7 +86,7 @@ If *<owner\>* is not specified, current user and database owner \(dbo\) are subs
 > If either the table name or the index name contains spaces, enclose the *<table-name\>* or *<index-name\>* parameter in double quotation marks:
 > 
 > ```
-> sp_iqcheckdb 'check index "dbo.sstab.i2" resources 75';
+> sp_iqcheckdb 'check index "dbo.sstab.i2" resources 75'
 > ```
 
 
@@ -163,7 +163,7 @@ sp\_iqcheckdb also allows you to check the consistency of a specified table, ind
 There are three modes for checking database consistency, and one for resetting allocation maps. If mode and target are not both specified in the parameter string, data lake Relational Engine returns the error message:
 
 ```
-At least one mode and target must be specified to DBCC.
+Could not execute 'sp_iqcheckdb' Error: (dberror) [-1000276]: At least one mode and target must be specified. – (dblib/db_dbcc.cxx 1459)
 ```
 
 sp\_iqcheckdb checks the allocation of every block in the database and saves the information in the current session until the next sp\_iqdbstatistics procedure is issued. sp\_iqdbstatistics displays the latest result from the most recent execution of sp\_iqcheckdb.

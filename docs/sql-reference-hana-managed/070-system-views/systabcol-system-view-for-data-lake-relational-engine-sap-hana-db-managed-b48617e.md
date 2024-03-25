@@ -391,5 +391,5 @@ To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE priv
 **Related Information**  
 
 
-[SYSTABCOL System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3beaa3956c5f1014883cb0c3e3559cc9.html "The SYS.SYSTABCOL system view contains one row for each column of each table and view in the database.") :arrow_upper_right:
+[SYSTABCOL System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3beaa3956c5f1014883cb0c3e3559cc9.html "The SYS.SYSTABCOL system view contains one row for each column of each table and view in the database.") :arrow_upper_right:
 

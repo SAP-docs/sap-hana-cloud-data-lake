@@ -17,7 +17,8 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqhelp [ <obj-name> ], [ <obj-owner> ], [ <obj-category> ], [ <obj-type> ];
+sp_iqhelp [ <obj-name> [, <obj-owner> [, <obj-category>
+   [, <obj-type> ] ] ] ]
 ```
 
 
@@ -91,6 +92,14 @@ The type of object. Allowed values are:
 </dl>
 
 The sp\_iqhelp procedure can be invoked without any parameters. If no parameters are specified, sp\_iqhelp displays information about all independent objects in the database, that is, base tables, views, stored procedures, functions, events, and data types.
+
+
+
+<a name="loioa5a978bb84f21015ae55ee5c09228875__section_ohf_b4b_vzb"/>
+
+## Result Set
+
+The result set depends on the parameters specified.
 
 
 
@@ -289,133 +298,745 @@ None
 
 ## Examples
 
--   The following example displays detailed information about the table sale:
+-   This example displays detailed information about the table sale in SALE tables:
 
     ```
-    sp_iqhelp sale
+    CALL sp_iqhelp SALE;
     ```
 
-    ```
-     Table_name Table_owner Server_type Location dbspace_id isPartitioned  table_constraints
-    ==========  ===========  ==========  =======  == ======= =============
-    sale      DBA         IQ           Main    16387      N
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    Table\_name
     
-    Remarks  table_constraints
-    =======  ================== (NULL)   (NULL) 
+    </th>
+    <th valign="top">
+
+    Table\_owner
     
-    column_name domain_name width scale nulls default cardinality
-    ==========  =========== ===== ===== ===== ======= ===========
-    prod_id     integer     4     0     Y    (NULL)   0
-    month_num   integer     4     0     Y    (NULL)   0
-    rep_id      integer     4     0     Y    (NULL)   0
-    sales       integer     4     0     Y    (NULL)   0
+    </th>
+    <th valign="top">
+
+    Server\_type
     
-      est_cardinality    isPartitioned    remarks    check
-      ==============     =============    =======    =====
-      0                  N               (NULL)      (NULL)
-      0                  N               (NULL)      (NULL)
-      0                  N               (NULL)      (NULL)
-      0                  N               (NULL)      (NULL)
+    </th>
+    <th valign="top">
+
+    Location
     
-    index_name           column_name  index_type  unique_index  location
-    ==========           ===========  =========== ===========   ========
-    ASIQ_IDX_T463_C2_FP  month_num    FP          N             Main
-    ASIQ_IDX_T463_C1_FP  prod_id      FP          N             Main
-    ASIQ_IDX_T463_C3_FP  rep_id       FP          N             Main
-    ASIQ_IDX_T463_C4_FP  sales        FP          N             Main
+    </th>
+    <th valign="top">
+
+    dbspace\_id
     
-      remarks
-      =======
-      (NULL)
-      (NULL)
-      (NULL)
-      (NULL)
-    ```
+    </th>
+    <th valign="top">
 
--   The following example displays detailed information about the procedure sp\_customer\_list:
-
-    ```
-    sp_iqhelp sp_customer_list
-    proc_name    proc_owner    proc_defn
-    ==========  ===========    =========
-    sp_customer_list    DBA    create procedure DBA.sp_customer_list()
-                               result(id integer company_name char(35))
-                               begin
-                               select id company_name from Customers
-                               end
+    isPartitioned
     
-      replicate    srvid    remarks
-      =========    =====    =======
-      N            (NULL)   (NULL)
+    </th>
+    <th valign="top">
+
+    Remarks
     
-    parm_name      parm_type  parm_mode  domain_name  width  scale
-    =========      =========  =========  ===========  =====  =====
-    id             result     out        integer      4      0
-    company_name   result     out        char         35     0
+    </th>
+    <th valign="top">
+
+    table\_constraints
     
-      default
-      =======
-      (NULL)
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    SALE
+    
+    </td>
+    <td valign="top">
+    
+    USER1
+    
+    </td>
+    <td valign="top">
+    
+    IQ
+    
+    </td>
+    <td valign="top">
+    
+    Main
+    
+    </td>
+    <td valign="top">
+    
+    16388
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    NULL
+    
+    </td>
+    <td valign="top">
+    
+    NULL
+    
+    </td>
+    </tr>
+    </table>
+    
+
+    <table>
+    <tr>
+    <th valign="top" colspan="10">
+
+    \(Continued\)
+    
+    </th>
+    </tr>
+    <tr>
+    <th valign="top">
+
+    column\_name
+    
+    </th>
+    <th valign="top">
+
+    domain\_name
+    
+    </th>
+    <th valign="top">
+
+    width
+    
+    </th>
+    <th valign="top">
+
+    scale
+    
+    </th>
+    <th valign="top">
+
+    nulls
+    
+    </th>
+    <th valign="top">
+
+    \[default\]
+    
+    </th>
+    <th valign="top">
+
+    cardinality
+    
+    </th>
+    <th valign="top">
+
+    isPartitioned
+    
+    </th>
+    <th valign="top">
+
+    remarks
+    
+    </th>
+    <th valign="top">
+
+    \[check\]
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    prod\_id
+    
+    </td>
+    <td valign="top">
+    
+    integer
+    
+    </td>
+    <td valign="top">
+    
+    4
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    <td valign="top">
+    
+    Y
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    month\_num
+    
+    </td>
+    <td valign="top">
+    
+    integer
+    
+    </td>
+    <td valign="top">
+    
+    4
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    <td valign="top">
+    
+    Y
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    sales
+    
+    </td>
+    <td valign="top">
+    
+    integer
+    
+    </td>
+    <td valign="top">
+    
+    4
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    <td valign="top">
+    
+    Y
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    </table>
+    
+
+    <table>
+    <tr>
+    <th valign="top" colspan="6">
+
+    \(Continued\)
+    
+    </th>
+    </tr>
+    <tr>
+    <th valign="top">
+
+    index\_name
+    
+    </th>
+    <th valign="top">
+
+    column\_name
+    
+    </th>
+    <th valign="top">
+
+    index\_type
+    
+    </th>
+    <th valign="top">
+
+    unique\_index
+    
+    </th>
+    <th valign="top">
+
+    location
+    
+    </th>
+    <th valign="top">
+
+    remarks
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    ASIQ\_IDX\_T463\_C2\_FP
+    
+    </td>
+    <td valign="top">
+    
+    month\_num
+    
+    </td>
+    <td valign="top">
+    
+    FP
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    Main
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    ASIQ\_IDX\_T463\_C1\_FP
+    
+    </td>
+    <td valign="top">
+    
+    prod\_id
+    
+    </td>
+    <td valign="top">
+    
+    FP
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    Main
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    ASIQ\_IDX\_T463\_C3\_FP
+    
+    </td>
+    <td valign="top">
+    
+    rep\_id
+    
+    </td>
+    <td valign="top">
+    
+    FP
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    Main
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    ASIQ\_IDX\_T463\_C4\_FP
+    
+    </td>
+    <td valign="top">
+    
+    sales
+    
+    </td>
+    <td valign="top">
+    
+    FP
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    Main
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    </table>
+    
+
+-   This example displays detailed information about the procedure sp\_customer\_list:
+
+    ```
+    CALL sp_iqhelp sp_customer_list
     ```
 
--   The following example displays summary information about all user-defined tables, views, procedures, events, and data types in the database:
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    proc\_name
+    
+    </th>
+    <th valign="top">
+
+    proc\_owner
+    
+    </th>
+    <th valign="top">
+
+    proc\_defn
+    
+    </th>
+    <th valign="top">
+
+    replicate
+    
+    </th>
+    <th valign="top">
+
+    srvid
+    
+    </th>
+    <th valign="top">
+
+    remarks
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    sp\_customer\_list
+    
+    </td>
+    <td valign="top">
+    
+    HDLADMIN
+    
+    </td>
+    <td valign="top">
+    
+    CREATE PROCEDURE USER1.sp\_customer\_list\(\) RESUILT\(ID integer, Company\_name varchar\(35\) \) BEGIN SELECT ID, Company\_name FROM CUSTOMERS end
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    </table>
+    
+
+    <table>
+    <tr>
+    <th valign="top" colspan="7">
+
+    \(Continued\)
+    
+    </th>
+    </tr>
+    <tr>
+    <th valign="top">
+
+    parm\_name
+    
+    </th>
+    <th valign="top">
+
+    parm\_type
+    
+    </th>
+    <th valign="top">
+
+    parm\_mode
+    
+    </th>
+    <th valign="top">
+
+    domain\_name
+    
+    </th>
+    <th valign="top">
+
+    width
+    
+    </th>
+    <th valign="top">
+
+    scale
+    
+    </th>
+    <th valign="top">
+
+    \[default\]
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    id
+    
+    </td>
+    <td valign="top">
+    
+    result
+    
+    </td>
+    <td valign="top">
+    
+    out
+    
+    </td>
+    <td valign="top">
+    
+    integer
+    
+    </td>
+    <td valign="top">
+    
+    4
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    <td valign="top">
+    
+    NULL
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    company\_name
+    
+    </td>
+    <td valign="top">
+    
+    result
+    
+    </td>
+    <td valign="top">
+    
+    out
+    
+    </td>
+    <td valign="top">
+    
+    varchar
+    
+    </td>
+    <td valign="top">
+    
+    35
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    <td valign="top">
+    
+    NULL
+    
+    </td>
+    </tr>
+    </table>
+    
+-   This example displays summary information about all user-defined tables, views, procedures, events, and data types in the database:
 
     ```
-    sp_iqhelp;
+    CALL sp_iqhelp;
     ```
 
--   The following example displays information about table t1 owned by user u1 and the columns, indexes, and constraints associated with t1:
+-   This example displays information about table t1 owned by user u1 and the columns, indexes, and constraints associated with t1:
 
     ```
-    sp_iqhelp t1, u1, "table";
+    CALL sp_iqhelp t1, u1, "table";
     ```
 
--   The following example displays information about view v1u1 and the columns associated with v1:
+-   This example displays information about view v1u1 and the columns associated with v1:
 
     ```
-    sp_iqhelp NULL, u1, "view";
+    CALL sp_iqhelp NULL, u1, "view";
     ```
 
--   The following example displays information about the procedure sp2 and the parameters of owned by user sp2:
+-   This example displays information about the procedure sp2 and the parameters of owned by user sp2:
 
     ```
-    sp_iqhelp sp2;
+    CALL sp_iqhelp sp2;
     ```
 
--   The following example displays information about the event e1:
+-   This example displays information about the event e1:
 
     ```
-    sp_iqhelp e1;
+    CALL sp_iqhelp e1;
     ```
 
--   The following example displays information about the data type dt1:
+-   This example displays information about the data type dt1:
 
     ```
-    sp_iqhelp dt1;
+    CALL sp_iqhelp dt1;
     ```
 
--   The following example displays summary information about all system objects \(owned by dbo or SYS\):
+-   This example displays summary information about all system objects \(owned by dbo or SYS\):
 
     ```
-    sp_iqhelp NULL, NULL, NULL, SYSTEM;
+    CALL sp_iqhelp NULL, NULL, NULL, SYSTEM;
     ```
 
--   The following examples all return the error message ***owned by user"Object 'non\_existing\_obj' not found"***, as the object non\_existing\_obj does not exist:
+-   This examples all return the error message ***owned by user"Object 'non\_existing\_obj' not found"***, as the object non\_existing\_obj does not exist:
 
     ```
-    sp_iqhelp non_existing_obj;
-    ```
-
-    ```
-    sp_iqhelp NULL, non_existing_user;
+    CALL sp_iqhelp non_existing_obj;
     ```
 
     ```
-    sp_iqhelp t1, NULL, "apple";
+    CALL sp_iqhelp NULL, non_existing_user;
     ```
 
     ```
-    sp_iqhelp t1, NULL, NULL, "USER";
+    CALL sp_iqhelp t1, NULL, "apple";
+    ```
+
+    ```
+    CALL sp_iqhelp t1, NULL, NULL, "USER";
     ```
 
 

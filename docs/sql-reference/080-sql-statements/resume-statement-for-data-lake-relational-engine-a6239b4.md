@@ -26,7 +26,7 @@ Syntax 1 – Supported in `dbisqlc`
 <dd>
 
 ```
-RESUME <cursor-name>;
+RESUME <cursor-name>
 ```
 
 
@@ -39,7 +39,7 @@ Syntax 2 – Supported in `dbisql`
 <dd>
 
 ```
-RESUME [ ALL ];
+RESUME [ ALL ]
 ```
 
 

@@ -48,7 +48,7 @@ FROM <pivot-source-table>
    { IN ( <constant-expression>
       [ [ AS ] <constant-expression-alias> ] [,...] )
    | IN ( ( <constant-expression> [,...] )
-      [ [ AS ] <constant-expression-alias> ] [,...] ) };
+      [ [ AS ] <constant-expression-alias> ] [,...] ) }
 ```
 
 

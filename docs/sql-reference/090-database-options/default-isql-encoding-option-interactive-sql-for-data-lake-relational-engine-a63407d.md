@@ -21,7 +21,7 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-DEFAULT_ISQL_ENCODING = <value>;
+DEFAULT_ISQL_ENCODING = <value>
 ```
 
 
@@ -79,7 +79,7 @@ Interactive SQL determines the code page that is used for a particular OUTPUT or
 Set the encoding to UTF-16 \(for reading Unicode files\):
 
 ```
-SET TEMPORARY OPTION DEFAULT_ISQL_ENCODING = 'UTF-16';
+SET TEMPORARY OPTION DEFAULT_ISQL_ENCODING = 'UTF-16'
 ```
 
 **Related Information**  

@@ -21,7 +21,7 @@ REFRESH TEXT INDEX <text-index-name> ON [ { <owner> | <schema-name> }.]<table-na
    [ WITH { ISOLATION LEVEL <isolation-level> 
           | EXCLUSIVE MODE 
           | SHARE MODE } ]
-   [ FORCE { BUILD | INCREMENTAL } ];
+   [ FORCE { BUILD | INCREMENTAL } ]
 ```
 
 

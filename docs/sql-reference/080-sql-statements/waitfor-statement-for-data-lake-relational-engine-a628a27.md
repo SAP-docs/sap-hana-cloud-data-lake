@@ -19,7 +19,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 WAITFOR { DELAY <time_value> | TIME <time_value> }
    [ CHECK EVERY <integer> }
-   [ AFTER MESSAGE BREAK ];
+   [ AFTER MESSAGE BREAK ]
 ```
 
 

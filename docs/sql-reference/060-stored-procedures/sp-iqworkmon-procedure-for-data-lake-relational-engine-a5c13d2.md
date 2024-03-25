@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqworkmon [ '<action>' ] [ , '<mode>' ];
+sp_iqworkmon [ '<action>' ] [ , '<mode>' ]
 ```
 
 
@@ -39,7 +39,7 @@ Specifies the control action to apply by using one of the following values:
 
 ```
 <action> ::=
-   'start' , 'stop' , 'status' , 'reset';
+   'start' , 'stop' , 'status' , 'reset'
 ```
 
 -   start – starts monitoring for the specified mode immediately.
@@ -62,7 +62,7 @@ Specifies the type of monitoring to control.
 
 ```
 <mode> ::=
-    'index' , 'table' , 'column ' , 'all';
+    'index' , 'table' , 'column ' , 'all'
 ```
 
 The INDEX, TABLE, and COLUMN keywords individually control monitoring of index usage, table usage, and column usage respectively. The default ALL keyword controls monitoring of all usage monitoring features simultaneously.
@@ -143,7 +143,7 @@ Usage is collected only for SQL statements containing a FROM clause; for example
 If one argument is specified, it can only be *<action\>*. For example:
 
 ```
-sp_iqworkmon 'stop';
+sp_iqworkmon 'stop'
 ```
 
 

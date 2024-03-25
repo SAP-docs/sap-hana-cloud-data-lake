@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 DELETE [ FROM [ <owner>.]<correlation-name> ]
-   WHERE CURRENT OF { <identifier> | <hostvar> };
+   WHERE CURRENT OF { <identifier> | <hostvar> }
 ```
 
 

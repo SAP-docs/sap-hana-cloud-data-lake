@@ -12,12 +12,12 @@ Drops a certificate from the database.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
 ```
-DROP CERTIFICATE [IF EXISTS ] <certificate-name>;
+DROP CERTIFICATE [IF EXISTS ] <certificate-name>
 ```
 
 
@@ -69,7 +69,7 @@ None
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -121,5 +121,5 @@ DROP CERTIFICATE mycert1;
 
 [CREATE CERTIFICATE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-certificate-statement-for-data-lake-relational-engine-sap-hana-db-managed-d827f85.md "Adds or replaces a certificate in the database using the given file or string.")
 
-[DROP CERTIFICATE for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/c22eaf42bb524cc58ef660f84743c934.html "Drops a certificate from the database.") :arrow_upper_right:
+[DROP CERTIFICATE STATEMENT for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/c22eaf42bb524cc58ef660f84743c934.html "Drops a certificate from the database.") :arrow_upper_right:
 

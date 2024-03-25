@@ -80,5 +80,5 @@ For example, the value might be 0xd3749fe09cf446e399913bc6434f1f08. You can conv
 **Related Information**  
 
 
-[NEWID Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a56756f884f2101589eefadf085512d9.html "Generates a UUID (Universally Unique Identifier) value.") :arrow_upper_right:
+[NEWID Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a56756f884f2101589eefadf085512d9.html "Generates a UUID (Universally Unique Identifier) value.") :arrow_upper_right:
 

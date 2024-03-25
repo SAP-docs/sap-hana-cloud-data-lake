@@ -21,7 +21,7 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-MAX_TEMP_SPACE_PER_CONNECTION = <value>;
+MAX_TEMP_SPACE_PER_CONNECTION = <value>
 ```
 
 
@@ -192,5 +192,5 @@ wilson.MAX_TEMP_SPACE_PER_CONNECTION = 5000
 
 [QUERY\_TEMP\_SPACE\_LIMIT Option for Data Lake Relational Engine](query-temp-space-limit-option-for-data-lake-relational-engine-a650c63.md "Specifies the maximum estimated amount of temp space before a query is rejected.")
 
-[MAX_TEMP_SPACE_PER_CONNECTION Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/713e6c2a4c594b22ae18a449e8ecd9dc.html "Limits temporary store space used per connection.") :arrow_upper_right:
+[MAX_TEMP_SPACE_PER_CONNECTION Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/713e6c2a4c594b22ae18a449e8ecd9dc.html "Limits temporary store space used per connection.") :arrow_upper_right:
 

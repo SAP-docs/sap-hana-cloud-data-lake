@@ -12,7 +12,7 @@ Enforces sizing limits for explicit and implicit NBit columns.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -22,7 +22,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be 
 ## Syntax
 
 ```
-FP_NBIT_ENFORCE_LIMITS = { ON | OFF };
+FP_NBIT_ENFORCE_LIMITS = { ON | OFF }
 ```
 
 
@@ -198,5 +198,5 @@ If FP\_NBIT\_ENFORCE\_LIMITS is set to:
 
 [FP\_NBIT\_ROLLOVER\_MAX\_MB Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](fp-nbit-rollover-max-mb-option-for-data-lake-relational-engine-sap-hana-db-managed-9035f14.md "Sets a threshold for the total dictionary size for implicit NBit rollovers to Flat FP.")
 
-[FP_NBIT_ENFORCE_LIMITS Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a874045684f21015abbbd6b7d63613e5.html "Enforces sizing limits for explicit and implicit NBit columns.") :arrow_upper_right:
+[FP_NBIT_ENFORCE_LIMITS Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a874045684f21015abbbd6b7d63613e5.html "Enforces sizing limits for explicit and implicit NBit columns.") :arrow_upper_right:
 

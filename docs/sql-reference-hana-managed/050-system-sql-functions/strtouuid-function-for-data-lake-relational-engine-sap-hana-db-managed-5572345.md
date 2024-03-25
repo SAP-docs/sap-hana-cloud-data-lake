@@ -77,5 +77,5 @@ INSERT INTO T (pk, c1)
 **Related Information**  
 
 
-[STRTOUUID Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a58683c184f21015bb5cb68f114bbcb9.html "Converts a string value to a unique identifier (UUID or GUID) value.") :arrow_upper_right:
+[STRTOUUID Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a58683c184f21015bb5cb68f114bbcb9.html "Converts a string value to a unique identifier (UUID or GUID) value.") :arrow_upper_right:
 

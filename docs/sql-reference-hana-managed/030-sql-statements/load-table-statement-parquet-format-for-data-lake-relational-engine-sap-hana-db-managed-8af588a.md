@@ -16,7 +16,7 @@ For information on loading data in other formats, see [LOAD TABLE Statement \(No
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
@@ -79,7 +79,7 @@ constraint-type string ::=
    | NULL limit
    | FOREIGN KEY limit [, ...]
    | DATA VALUE limit
-   | ALL limit };
+   | ALL limit }
 ```
 
 
@@ -662,7 +662,7 @@ For data lake Relational Engine, you need to set ESCAPES OFF.
 
 Specify `.parquet` or `.parq` as the file name extension.
 
-See [Loading Parquet Files](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/a054ac0ce09e47799e5f24860378056b.html "Parquet is an efficient, open-source, column-oriented format file designed for Apache Hadoop. You can load tables in Parquet format using the data lake Relational Engine LOAD TABLE statement.") :arrow_upper_right: in *SAP HANA Cloud, Data Lake Relational Engine Load and Unload Management* for more information.
+See [Loading Parquet Files](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/a054ac0ce09e47799e5f24860378056b.html "Parquet is an efficient, open-source, column-oriented format file designed for Apache Hadoop. You can load tables in Parquet format using the data lake Relational Engine LOAD TABLE statement.") :arrow_upper_right: in *SAP HANA Cloud, Data Lake Relational Engine Load and Unload Management* for more information.
 
 
 
@@ -1171,7 +1171,7 @@ In this example, temp still gets data from the third column in the Parquet file 
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -1282,8 +1282,7 @@ Requires one of:
         CONNECTION_STRING 'ACCESS_KEY_ID=xyz;
             SECRET_ACCESS_KEY=abc;
             REGION=eu-central-1;
-            SESSION_TOKEN=pqr'
-        QUOTES OFF 
+            SESSION_TOKEN=pqr' 
         ESCAPES OFF
         IGNORE CONSTRAINT UNIQUE 0, NULL 0
         MESSAGE LOG 's3://MY_BUCKET_6/m.log'
@@ -1309,8 +1308,9 @@ Requires one of:
            row delimited by '\n'
            LIMIT 14   SKIP 10
            IGNORE CONSTRAINT UNIQUE 2, FOREIGN KEY 8
-           word skip 10 quotes off escapes off strip
-           off
+           word skip 10 
+           escapes off 
+           strip ofF
            ...;
     ```
 
@@ -1353,5 +1353,5 @@ Requires one of:
 **Related Information**  
 
 
-[Loading Parquet Files](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/a054ac0ce09e47799e5f24860378056b.html "Parquet is an efficient, open-source, column-oriented format file designed for Apache Hadoop. You can load tables in Parquet format using the data lake Relational Engine LOAD TABLE statement.") :arrow_upper_right:
+[Loading Parquet Files](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/a054ac0ce09e47799e5f24860378056b.html "Parquet is an efficient, open-source, column-oriented format file designed for Apache Hadoop. You can load tables in Parquet format using the data lake Relational Engine LOAD TABLE statement.") :arrow_upper_right:
 

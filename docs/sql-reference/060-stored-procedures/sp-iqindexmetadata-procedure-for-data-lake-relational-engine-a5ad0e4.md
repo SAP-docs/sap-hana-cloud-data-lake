@@ -17,8 +17,8 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-hdladmin.sp_iqindexmetadata '<index-name>'
-[ , '<table-name>' [ , '<owner-name>' ] ]; 
+hdladmin.sp_iqindexmetadata ( '<index-name>'
+   [, '<table-name>' [, '<owner-name>' ] ] )
 ```
 
 
@@ -49,7 +49,59 @@ For all indexes except FP, use the text name defined for the index. For FP index
 
 ## Result Set
 
-The first row of output for all index types is the owner name, table name, and index name for the index. Additional output is index type specific.
+
+<table>
+<tr>
+<th valign="top">
+
+Column Name
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Value1
+
+</td>
+<td valign="top">
+
+The table owner.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Value2
+
+</td>
+<td valign="top">
+
+The table name.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Value3
+
+</td>
+<td valign="top">
+
+The index name.
+
+</td>
+</tr>
+</table>
+
+Additional output is index type specific.
 
 
 <table>
@@ -145,10 +197,9 @@ User supplier IQ UNIQUE value for the column is available through sp\_iqindexmet
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure. If you own the object referenced by the procedure, no additional privilege is required.
+Requires EXECUTE object-level privilege on the procedure, along with one of the following:
 
-For objects owned by others, you need one of the following privileges:
-
+-   You own the object.
 -   ALTER ANY INDEX system privilege
 -   ALTER ANY OBJECT system privilege
 -   REFERENCES object-level privilege on the table
@@ -205,7 +256,7 @@ tname
 <tr>
 <td valign="top">
 
-hdladmin
+USER1
 
 </td>
 <td valign="top">
@@ -220,7 +271,7 @@ user\_object\_store
 </td>
 <td valign="top">
 
-hdladmin
+USER1
 
 </td>
 <td valign="top">
@@ -232,7 +283,7 @@ table1
 <tr>
 <td valign="top">
 
-hdladmin
+USER1
 
 </td>
 <td valign="top">
@@ -247,7 +298,7 @@ user\_object\_store
 </td>
 <td valign="top">
 
-hdladmin
+USER1
 
 </td>
 <td valign="top">
@@ -259,7 +310,7 @@ table1
 <tr>
 <td valign="top">
 
-hdladmin
+USER1
 
 </td>
 <td valign="top">
@@ -274,7 +325,7 @@ user\_object\_store
 </td>
 <td valign="top">
 
-hdladmin
+USER1
 
 </td>
 <td valign="top">
@@ -288,7 +339,7 @@ table1
 Then, display the metadata for the FP index on the table.
 
 ```
-sp_iqindexmetadata 'ASIQ_IDX_T1759_C1_FP','table1','hdladmin';
+CALL sp_iqindexmetadata ('ASIQ_IDX_T1759_C1_FP','table1',USER1);
 ```
 
 
@@ -313,7 +364,7 @@ Value3
 <tr>
 <th valign="top">
 
-HDLADMIN
+USER1
 
 </th>
 <th valign="top">
@@ -706,7 +757,7 @@ IQ Unique
 This example displays the metadata for the high group index HG1 on table table1.
 
 ```
-sp_iqindexmetadata 'HG1','table1','hdladmin';
+CALL sp_iqindexmetadata ('HG1','table1',USER1);
 ```
 
 
@@ -731,7 +782,7 @@ Value3
 <tr>
 <td valign="top">
 
-HDLADMIN
+USER1
 
 </td>
 <td valign="top">

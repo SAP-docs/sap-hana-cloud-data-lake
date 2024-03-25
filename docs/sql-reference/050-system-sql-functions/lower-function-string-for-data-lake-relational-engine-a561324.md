@@ -89,5 +89,5 @@ SELECT LOWER( 'LOWER CasE' ) FROM iq_dummy;
 
 [UPPER Function \[String\] for Data Lake Relational Engine](upper-function-string-for-data-lake-relational-engine-a58cbc0.md "Converts all characters in a string to uppercase.")
 
-[LOWER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3ad17721e94b4a24a12a07986c829123.html "Converts all characters in a string to lowercase.") :arrow_upper_right:
+[LOWER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3ad17721e94b4a24a12a07986c829123.html "Converts all characters in a string to lowercase.") :arrow_upper_right:
 

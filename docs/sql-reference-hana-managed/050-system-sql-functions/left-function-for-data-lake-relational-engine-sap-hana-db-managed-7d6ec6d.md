@@ -88,5 +88,5 @@ SELECT LEFT( 'chocolate', 5 ) FROM iq_dummy;
 **Related Information**  
 
 
-[LEFT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a55d883284f210158c5ec15e3e69239f.html "Returns a specified number of characters from the beginning of a string.") :arrow_upper_right:
+[LEFT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a55d883284f210158c5ec15e3e69239f.html "Returns a specified number of characters from the beginning of a string.") :arrow_upper_right:
 

@@ -24,14 +24,14 @@ ALTER TRACE EVENT SESSION <session-name>
   | ADD TARGET FILE [ ( SET <target-parameter-name>=<target-parameter-value> [, ...] ) ]
   | DROP TARGET <FILE> [, ...] ]
   | STATE = { START | STOP }
-};
+}
 ```
 
 ```
 <target-parameter-name> :
 { filename_prefix
  | flush_on_write
- | compressed };
+ | compressed }
 ```
 
 
@@ -284,7 +284,7 @@ ALTER TRACE EVENT SESSION my_session STATE = START;
 **Related Information**  
 
 
-[ALTER TRACE EVENT SESSION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/8169f4176ce21014b768e5f2b0bf8951.html "Adds or removes trace events or targets from a session, or starts or stops a trace session.") :arrow_upper_right:
+[ALTER TRACE EVENT SESSION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8169f4176ce21014b768e5f2b0bf8951.html "Adds or removes trace events or targets from a session, or starts or stops a trace session.") :arrow_upper_right:
 
 [CREATE TEMPORARY TRACE EVENT SESSION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-temporary-trace-event-session-statement-for-data-lake-relational-engine-sap-hana-d-0c1bc71.md "Creates a user trace event session.")
 

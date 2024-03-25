@@ -116,5 +116,5 @@ SELECT read_server_file('/diag/logs/mpx-writer-0-0/iqaas_20211217_110352.331_mpx
 **Related Information**  
 
 
-[READ_SERVER_FILE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/81fb732a6ce21014b442b1082d0be5af.html "Reads data from the specified file on the server and returns the full or partial contents of the file as a LONG BINARY value.") :arrow_upper_right:
+[READ_SERVER_FILE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/81fb732a6ce21014b442b1082d0be5af.html "Reads data from the specified file on the server and returns the full or partial contents of the file as a LONG BINARY value.") :arrow_upper_right:
 

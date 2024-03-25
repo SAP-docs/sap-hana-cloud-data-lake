@@ -101,5 +101,5 @@ SELECT HEXTOINT ( '1A4' ) FROM iq_dummy;
 
 [CONVERSION\_ERROR Option \[TSQL\] for Data Lake Relational Engine](../090-database-options/conversion-error-option-tsql-for-data-lake-relational-engine-a63018a.md "Controls reporting of data type conversion failures on fetching information from the database.")
 
-[HEXTOINT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/79e066782ff645e8b6014d4f4d1e0d9e.html "Returns the unsigned BIGINT equivalent of a hexadecimal string.") :arrow_upper_right:
+[HEXTOINT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/79e066782ff645e8b6014d4f4d1e0d9e.html "Returns the unsigned BIGINT equivalent of a hexadecimal string.") :arrow_upper_right:
 

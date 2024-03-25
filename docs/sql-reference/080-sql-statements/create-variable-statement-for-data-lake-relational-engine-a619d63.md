@@ -27,11 +27,11 @@ Syntax 1 – Creates a Connection-Scope Variable
 
 ```
 <identifier> <data-type> 
-   [ { = | DEFAULT } CREATE [ OR REPLACE ] VARIABLE <initial-value> ];
+   [ { = | DEFAULT } CREATE [ OR REPLACE ] VARIABLE <initial-value> ]
 ```
 
 ```
-<initial-value> ::= <expression>;
+<initial-value> ::= <expression>
 ```
 
 
@@ -72,7 +72,7 @@ CREATE [ OR REPLACE ] DATABASE VARIABLE [ IF NOT EXISTS ]
      | TIMESTAMP 
      | USER 
      | UTC TIMESTAMP }
-   | USER };
+   | USER }
 ```
 
 

@@ -75,8 +75,8 @@ The encryption key \(string\) that is required to decrypt the *<string-expressio
 
 Specify keys in PEM format for RSA.
 
-> ### Caution:  
-> For strongly encrypted databases, store a copy of the key in a safe location. If you lose the encryption key, there is no way to access the data, even with the assistance of Technical Support. The database must be discarded and you must create a new database.
+> ### Note:  
+> For strongly encrypted data, store a copy of the key in a safe location. If you lose the encryption key, there is no way to access the data, even with the assistance of Technical Support.
 
 
 
@@ -147,6 +147,9 @@ AES\_FIPS
 <dd>
 
 The data is encrypted using the FIPS-certified version of the AES 128-bit algorithm.
+
+> ### Note:  
+> For instances in the Government Cloud \(US\) region, AES\_FIPS is the default. Specifying non-FIPS algorithms results in FIPS equivalents being used. If no FIPS equivalents are available, then the function returns an error.
 
 For AES\_FIPS, *<padding\>* can be PKCS5, ZEROES, and NONE \(if FORMAT=RAW\).
 
@@ -347,13 +350,13 @@ LONG BINARY
 
 ## Remarks
 
-The LONG BINARY value returned by this function is up to 31 bytes longer than the input *<string-expression\>*. The value returned by this function is not human-readable. Use the DECRYPT function to decrypt a *<string-expression\>* that was encrypted with the ENCRYPT function. For AES, to successfully decrypt a *<string-expression\>*, use the same encryption key and algorithm that were used to encrypt the data. If you specify an incorrect encryption key, then an error is generated. A lost key results in inaccessible data, from which there is no recovery.
+The LONG BINARY value returned by this function is up to 31 bytes longer than the input *<string-expression\>*. The value returned by this function isn't human-readable. Use the DECRYPT function to decrypt a *<string-expression\>* that was encrypted with the ENCRYPT function. For AES, to successfully decrypt a *<string-expression\>*, use the same encryption key and algorithm that were used to encrypt the data. If you specify an incorrect encryption key, then an error is generated. A lost key results in inaccessible data, from which there's no recovery.
 
-If you are storing encrypted values in a table, then the column should be BINARY or LONG BINARY so that character set conversion is not performed on the data.
+If you're storing encrypted values in a table, then the column should be BINARY or LONG BINARY so that character set conversion isn't performed on the data.
 
 When FORMAT=RAW, the data is encrypted using raw encryption. Specify the encryption key, initialization vector, and, optionally, the padding format. These same values must be specified when decrypting the data. The decryption can be performed outside of the database server or by using the DECRYPT function.
 
-Do not use raw encryption when the data is to be encrypted and decrypted only within the database server because you must specify the initialization vector and the padding, and the encryption key cannot be verified during decryption.
+Don't use raw encryption when the data is to be encrypted and decrypted only within the database server because you must specify the initialization vector and the padding, and the encryption key can't be verified during decryption.
 
 
 
@@ -397,38 +400,50 @@ END;
 The following example updates the `secret` column with an encrypted version of the `password` column. The data is encrypted using RSA encryption and a public key certificate and decrypted using a private key certificate. The example also shows how to generate a public and private key certificate.
 
 ```
-CREATE OR REPLACE TABLE SensitiveData
-    ( 
-    username char(30), password char(30), secret binary(64) 
-    );
-    
-    INSERT INTO SensitiveData (username, password) 
-    VALUES 
+// Generate public and private keys
+CREATE OR REPLACE VARIABLE pub LONG VARCHAR;
+CREATE OR REPLACE VARIABLE priv lONG VARCHAR;
+CALL sp_generate_key_pair( 512, pub, priv, 'RSA' );
+MESSAGE 'Server keys: \n' || pub || '\n' || priv;
+
+// Save keys in a database table
+DROP TABLE IF EXISTS Keys;
+CREATE TABLE Keys ( keypair INT, pubkey LONG VARCHAR, privkey LONG VARCHAR );
+INSERT INTO Keys VALUES ( 0, pub, priv );
+
+DROP TABLE IF EXISTS UserData;
+CREATE TABLE UserData
+( 
+    username varchar(30), password char(30) 
+);
+INSERT INTO UserData (username, password) 
+VALUES 
     ('Martin',  'topXsecret1'), 
     ('Jasmine', 'my_big_secret'), 
     ('Aidan',   'Shortcutsmakelongdelays');
-    
-    CREATE OR REPLACE VARIABLE pub LONG VARCHAR;
-    CREATE OR REPLACE VARIABLE priv lONG VARCHAR;
-    CREATE OR REPLACE TABLE keys ( ext INT, pubkey LONG VARCHAR, privkey LONG VARCHAR );
-    CALL sp_generate_key_pair( 512, pub, priv, 'RSA' );
-    INSERT INTO keys VALUES ( 0, pub, priv ); // save in database table
-    MESSAGE 'Server keys: \n' || pub || '\n' || priv;
-    UPDATE SensitiveData 
-    SET secret = ENCRYPT( password, pub, 'RSA' );
-    
-    SET priv = (SELECT privkey FROM keys WHERE ext = 0);
-    SELECT username, LENGTH(secret), CAST(DECRYPT(secret, priv, 'RSA') AS VARCHAR) 
-    FROM SensitiveData;
-  
+
+// Create a secure version of the UserData table
+DROP TABLE IF EXISTS SecureData;
+CREATE TABLE SecureData
+( 
+    username varchar(30), password binary(64) 
+);
+INSERT INTO SecureData (
+    SELECT username, ENCRYPT( password, pub, 'RSA' )
+    FROM UserData );
+
+SET priv = (SELECT privkey FROM keys WHERE keypair = 0);
+SELECT username, LENGTH(password), CAST(DECRYPT(password, priv, 'RSA') AS VARCHAR) 
+    FROM SecureData;
+
 ```
 
 **Related Information**  
 
 
-[ENCRYPT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ec24782b83b94e6ebfa99014d36aa61d.html "Encrypts the specified value using the supplied encryption key and returns a LONG BINARY value.") :arrow_upper_right:
+[ENCRYPT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/ec24782b83b94e6ebfa99014d36aa61d.html "Encrypts the specified value using the supplied encryption key and returns a LONG BINARY value.") :arrow_upper_right:
 
 [DECRYPT Function \[String\] for Data Lake Relational Engine](decrypt-function-string-for-data-lake-relational-engine-81f6b4a.md "Decrypts the string using the supplied key and returns a LONG BINARY value.")
 
-[Encryption Algorithm Aliases](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2023_4_QRC/en-US/a7a8e3a5458e43bf8e405b6bd9c66ad9.html "The encryption algorithms for data lake Relational Engine data at rest have multiple aliases for compatibility across systems.") :arrow_upper_right:
+[Encryption Algorithm Aliases](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a7a8e3a5458e43bf8e405b6bd9c66ad9.html "The encryption algorithms for data lake Relational Engine data at rest have multiple aliases for compatibility across systems.") :arrow_upper_right:
 

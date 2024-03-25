@@ -71,5 +71,5 @@ SELECT ASCII( 'Z' ) FROM iq_dummy;
 **Related Information**  
 
 
-[ASCII Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/554cede3499a4ef98a05be128493031f.html "Returns the integer ASCII value of the first byte in a string-expression.") :arrow_upper_right:
+[ASCII Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/554cede3499a4ef98a05be128493031f.html "Returns the integer ASCII value of the first byte in a string-expression.") :arrow_upper_right:
 

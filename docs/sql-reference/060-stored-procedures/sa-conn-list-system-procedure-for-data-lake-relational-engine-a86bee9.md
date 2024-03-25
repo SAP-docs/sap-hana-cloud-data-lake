@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_conn_list ( [ <connidparm> ] [ ,<dbidparm> ] );
+sa_conn_list ( [ <connidparm> ] [ ,<dbidparm> ] )
 ```
 
 
@@ -144,14 +144,14 @@ Number
 <tr>
 <td valign="top">
 
-1,949
+1949
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-1,948
+1948
 
 </td>
 </tr>

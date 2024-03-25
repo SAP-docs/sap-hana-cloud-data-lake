@@ -32,5 +32,5 @@ ALTER VIEW "SYS"."SYSPROCS"( creator,
 
 [SYSPROCPARM System View for Data Lake Relational Engine](sysprocparm-system-view-for-data-lake-relational-engine-3be9842.md "Each row in the SYSPROCPARM system view describes one parameter, result set column, or return value of a procedure or function in the database. The underlying system table for this view is ISYSPROCPARM.")
 
-[SYSPROCS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/14c3138ca7ac4e70a0bb3babb3165b28.html "The SYSPROCS view shows the procedure or function name, the name of its creator and any comments recorded for the procedure or function.") :arrow_upper_right:
+[SYSPROCS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/14c3138ca7ac4e70a0bb3babb3165b28.html "The SYSPROCS view shows the procedure or function name, the name of its creator and any comments recorded for the procedure or function.") :arrow_upper_right:
 

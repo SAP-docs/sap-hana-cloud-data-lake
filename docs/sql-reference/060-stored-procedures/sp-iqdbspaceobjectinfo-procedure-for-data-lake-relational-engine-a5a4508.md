@@ -18,7 +18,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 ```
 sp_iqdbspaceobjectinfo [ <dbspace-name> ]
- [ , <owner_name> ] [ ,  <object_name> ] [ , <object-type> ];
+ [ , <owner_name> ] [ ,  <object_name> ] [ , <object-type> ]
 ```
 
 

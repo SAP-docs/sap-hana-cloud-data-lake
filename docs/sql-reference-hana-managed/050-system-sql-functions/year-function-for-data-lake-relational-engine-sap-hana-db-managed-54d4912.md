@@ -72,5 +72,5 @@ SELECT YEAR( '1998-07-13 06:07:12' ) FROM iq_dummy;
 **Related Information**  
 
 
-[YEAR Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a591eb9d84f210159e35a75b4b036a0d.html "Returns a 4-digit number corresponding to the year of the given date/time.") :arrow_upper_right:
+[YEAR Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a591eb9d84f210159e35a75b4b036a0d.html "Returns a 4-digit number corresponding to the year of the given date/time.") :arrow_upper_right:
 

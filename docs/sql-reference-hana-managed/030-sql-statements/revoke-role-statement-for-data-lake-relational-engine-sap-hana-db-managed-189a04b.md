@@ -12,14 +12,14 @@ Removes a users membership in a role or his or her ability to administer the rol
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
 REVOKE [ { EXERCISE | ADMIN } OPTION FOR ] ROLE <user-defined-role> 
-FROM { <system-role> | <user_id> } [, ...];
+FROM { <system-role> | <user_id> } [, ...]
 ```
 
 
@@ -99,7 +99,7 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -153,5 +153,5 @@ REVOKE ROLE role1 FROM user1;
 
 [GRANT ROLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](grant-role-statement-for-data-lake-relational-engine-sap-hana-db-managed-59327e4.md "Grants roles to users or other roles, with or without administrative rights.")
 
-[REVOKE ROLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a3e9de3284f21015bfd7b663b9989fe3.html "Removes a users membership in a role or his or her ability to administer the role.") :arrow_upper_right:
+[REVOKE ROLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a3e9de3284f21015bfd7b663b9989fe3.html "Removes a users membership in a role or his or her ability to administer the role.") :arrow_upper_right:
 

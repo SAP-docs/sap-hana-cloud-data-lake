@@ -74,5 +74,5 @@ SELECT ATAN2( 0.52, 060 ) FROM iq_dummy;
 **Related Information**  
 
 
-[ATAN2 Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5356c1b84f210159f68d03274510fe6.html "Returns the arc-tangent, in radians, of the ratio of two numbers.") :arrow_upper_right:
+[ATAN2 Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5356c1b84f210159f68d03274510fe6.html "Returns the arc-tangent, in radians, of the ratio of two numbers.") :arrow_upper_right:
 

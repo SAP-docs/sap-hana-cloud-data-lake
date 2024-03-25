@@ -145,7 +145,7 @@ Data Lake Relational Engine HDLADMIN User
 </b></dt>
 <dd>
 
-HDLADMIN is the default data lake Relational Engine user \(not an SAP HANA database user\) that is created when you provision a data lake Relational Engine instance. It allows you to directly connect to data lake Relational Engine and manage the data. By default, HDLADMIN has no privilege to data within relational containers. It must be explicitly granted by a member of the container administrator role of the relational container. For more information, see [Relational Containers and HDLADMIN in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/8511271f325c49aa87713e815f4708c9.html "Relational containers are isolated from each other, and the HDLADMIN user, by design.") :arrow_upper_right:.
+HDLADMIN is the default data lake Relational Engine user \(not an SAP HANA database user\) that is created when you provision a data lake Relational Engine instance. It allows you to directly connect to data lake Relational Engine and manage the data. By default, HDLADMIN has no privilege to data within relational containers. It must be explicitly granted by a member of the container administrator role of the relational container. For more information, see [Relational Containers and HDLADMIN in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/8511271f325c49aa87713e815f4708c9.html "Relational containers are isolated from each other, and the HDLADMIN user, by design.") :arrow_upper_right:.
 
 
 

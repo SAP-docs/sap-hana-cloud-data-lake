@@ -103,5 +103,5 @@ SELECT DATEFORMAT (start_date, 'yy') + '?' FROM Employees;
 **Related Information**  
 
 
-[DATEFORMAT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/d8071cc3053447a9bd6d90807082d61a.html "Returns a string representing a date expression in the specified format.") :arrow_upper_right:
+[DATEFORMAT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/d8071cc3053447a9bd6d90807082d61a.html "Returns a string representing a date expression in the specified format.") :arrow_upper_right:
 

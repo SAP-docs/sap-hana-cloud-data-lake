@@ -12,7 +12,7 @@ Controls which materialized views are checked for staleness.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -22,7 +22,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be 
 ## Syntax
 
 ```
-MATERIALIZED_VIEW_STALENESS_CHECK= { 0 | 1 | 2);
+MATERIALIZED_VIEW_STALENESS_CHECK= { 0 | 1 | 2)
 ```
 
 
@@ -183,5 +183,5 @@ No
 
 [SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md "Grant database options temporarily for the current connection only on a data lake Relational Engine relational container.")
 
-[MATERIALIZED_VIEW_STALENESS_CHECK Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/aa769ea2e3b54c92a0b6b2fd1f7e44bc.html "Controls which materialized views are checked for staleness.") :arrow_upper_right:
+[MATERIALIZED_VIEW_STALENESS_CHECK Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/aa769ea2e3b54c92a0b6b2fd1f7e44bc.html "Controls which materialized views are checked for staleness.") :arrow_upper_right:
 

@@ -18,10 +18,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sa_describe_query( 
-<query> 
-[, <add_keys> ] 
-);
+sa_describe_query( <query>[, <add_keys> ] )
 ```
 
 
@@ -938,5 +935,5 @@ NULL
 **Related Information**  
 
 
-[sa_describe_query System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/8174bd7b6ce21014b1c9f89d8beb41cb.html "Describes the result set for a query with one row describing each output column of the query.") :arrow_upper_right:
+[sa_describe_query System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8174bd7b6ce21014b1c9f89d8beb41cb.html "Describes the result set for a query with one row describing each output column of the query.") :arrow_upper_right:
 

@@ -20,7 +20,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 CREATE TEXT INDEX <text-index-name>
    ON [ { <owner> | <schema-name> }]<table-name>( <column-name>,
    [ CONFIGURATION [ <owner>]<text-configuration-name>]
-   [ IMMEDIATE REFRESH ];
+   [ IMMEDIATE REFRESH ]
 ```
 
 
@@ -96,6 +96,8 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 
 
+<a name="loioa602ced184f210158c90b4b833754412__side_effects"/>
+
 ## Side Effects
 
 Automatic commit
@@ -106,7 +108,7 @@ Automatic commit
 
 ## Examples
 
-The following example creates a TEXT index, `myTxtIdx`, on the `CompanyName` column of the `Customers` table in the `iqdemo` database, using the `max_term_sixteen` text configuration object:
+The following example creates a TEXT index, `myTxtIdx`, on the `CompanyName` column of the `Customers` table, using the `max_term_sixteen` text configuration object:
 
 ```
 CREATE TEXT INDEX myTxtIdx ON Customers (CompanyName );
@@ -118,6 +120,8 @@ CONFIGURATION max_term_sixteen;
 
 **Related Information**  
 
+
+[CREATE INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/afc9ba646bb842d6b4c5975aa7d17d16.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
 
 [ALTER TEXT INDEX Statement for Data Lake Relational Engine](alter-text-index-statement-for-data-lake-relational-engine-a602711.md "Renames, moves or alters the definition of a TEXT index.")
 

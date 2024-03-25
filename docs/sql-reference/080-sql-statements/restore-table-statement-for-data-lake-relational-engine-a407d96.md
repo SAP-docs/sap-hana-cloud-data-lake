@@ -20,7 +20,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 RESTORE TABLE { <owner> | <schema-name> }.<table_name> 
    FROM <location>
    KEY <encryption_key> 
-   CONNECTION_STRING <connection_string>;
+   CONNECTION_STRING <connection_string>
 ```
 
 
@@ -508,11 +508,11 @@ RESTORE TABLE HDL_T100
 
 [BACKUP TABLE Statement for Data Lake Relational Engine](backup-table-statement-for-data-lake-relational-engine-5c2f08f.md "Backup data lake Relational Engine tables.")
 
-[Table-Level Backup and Restore of Data in Data Lake Relational Engine](https://help.sap.com/viewer/a893f37e84f210158511c41edb6a6367/2023_4_QRC/en-US/77ec0de9476d4ccbbb14c73df86e7c7d.html "Data lake Relational Engine provides table-level backup and restore functionality that enables you to back up and restore individual tables by creating an image of data (FP index in binary format) for all columns in a data lake Relational Engine table.") :arrow_upper_right:
+[Table-Level Backup and Restore of Data in Data Lake Relational Engine](https://help.sap.com/viewer/a893f37e84f210158511c41edb6a6367/2024_1_QRC/en-US/77ec0de9476d4ccbbb14c73df86e7c7d.html "Data lake Relational Engine provides table-level backup and restore functionality that enables you to back up and restore individual tables by creating an image of data (FP index in binary format) for all columns in a data lake Relational Engine table.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
 
-[RESTORE TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/1128b04e1d5b4d36a35367e1f3c8cbf4.html "Restore backed up tables in data lake Relational Engine.") :arrow_upper_right:
+[RESTORE TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/1128b04e1d5b4d36a35367e1f3c8cbf4.html "Restore backed up tables in data lake Relational Engine.") :arrow_upper_right:
 

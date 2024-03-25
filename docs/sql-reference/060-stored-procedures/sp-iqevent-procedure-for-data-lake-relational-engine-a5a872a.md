@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqevent [ <event-name> ], [ <event-owner> ], [ <event-type> ];
+sp_iqevent [ <event-name> ], [ <event-owner> ], [ <event-type> ]
 ```
 
 
@@ -224,86 +224,288 @@ None
 
 ## Examples
 
--   The following example displays information about all user events in the database:
+-   This example displays information about all user events in the database:
 
     ```
-    sp_iqevent;
+    CALL sp_iqevent;
     ```
 
--   The following example displays information about the user-defined event e1:
+-   This example displays information about the user-defined event e1:
 
     ```
-    sp_iqevent e1
+    CALL sp_iqevent e1;
+    ```
+
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    event\_name
     
-    event_name    event_owner    event_type    enabled    action
-    e1            DBA           (NULL)         Y          (NULL)
+    </th>
+    <th valign="top">
+
+    event\_owner
     
-    condition    location    remarks
-    (NULL)       A           (NULL)
-    ```
+    </th>
+    <th valign="top">
 
--   The following example displays information about all system events:
-
-    ```
-    sp_iqevent NULL, NULL, SYSTEM
+    event\_type
     
-    event_name      event_owner    event_type       enabled   action
-    ev_iqbegintxn   dbo            IQTLVAvailable   Y         begin call
-                                                              dbo.sp_iqlog...
-    ev_iqmpxcompact dbo           (NULL)            N         begin Declare
-                                                              _Catalog...
+    </th>
+    <th valign="top">
+
+    enabled
     
-    condition    location    remarks
-    (NULL)       A           (NULL)
-    (NULL)       A           (NULL)
+    </th>
+    <th valign="top">
+
+    action
+    
+    </th>
+    <th valign="top">
+
+    condition
+    
+    </th>
+    <th valign="top">
+
+    location
+    
+    </th>
+    <th valign="top">
+
+    remarks
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    e1
+    
+    </td>
+    <td valign="top">
+    
+    DBA
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    Y
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    A
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    </table>
+    
+-   This example displays information about all system events:
+
+    ```
+    CALL sp_iqevent NULL, NULL, SYSTEM;
     ```
 
--   In the following example, No rows returned, as the event non\_existing\_event does not exist:
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    event\_name
+    
+    </th>
+    <th valign="top">
+
+    event\_owner
+    
+    </th>
+    <th valign="top">
+
+    event\_type
+    
+    </th>
+    <th valign="top">
+
+    enabled
+    
+    </th>
+    <th valign="top">
+
+    action
+    
+    </th>
+    <th valign="top">
+
+    condition
+    
+    </th>
+    <th valign="top">
+
+    location
+    
+    </th>
+    <th valign="top">
+
+    remarks
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    ev\_iqbegintxn
+    
+    </td>
+    <td valign="top">
+    
+    dbo
+    
+    </td>
+    <td valign="top">
+    
+    IQTLVAvailable
+    
+    </td>
+    <td valign="top">
+    
+    Y
+    
+    </td>
+    <td valign="top">
+    
+    begin call dbo.sp\_iqlog...
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    A
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    ev\_iqmpxcompact
+    
+    </td>
+    <td valign="top">
+    
+    dbo
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    begin Declare\_Catalog...
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    A
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    </table>
+    
+-   In this example, no rows returned, as the event non\_existing\_event does not exist:
 
     ```
-    sp_iqevent non_existing_event;
+    CALL sp_iqevent non_existing_event;
     ```
 
--   The following example displays information about all events owned by DBA:
+-   This example displays information about all events owned by DBA:
 
     ```
-    sp_iqevent NULL, DBA;
+    CALL sp_iqevent NULL, DBA;
     ```
 
--   The following example displays information about the event e1 owned by DBA:
+-   This example displays information about the event e1 owned by DBA:
 
     ```
-    sp_iqevent e1, DBA;
+    CALL sp_iqevent e1, DBA;
     ```
 
--   In the following example, ev\_iqbegintxn is a system-defined event. If there is no user-defined event also named ev\_iqbegintxn, no rows are returned. \(By default, only user-defined events are returned\):
+-   In this example, ev\_iqbegintxn is a system-defined event. If there is no user-defined event also named ev\_iqbegintxn, no rows are returned. \(By default, only user-defined events are returned\):
 
     ```
-    sp_iqevent ev_iqbegintxn;
+    CALL sp_iqevent ev_iqbegintxn;
     ```
 
--   In the following example, no rows returned, as the event ev\_iqbegintxn is not a user event \(by default only user events returned\):
+-   In this example, no rows are returned, as the event ev\_iqbegintxn is not a user event \(by default only user events returned\):
 
     ```
-    sp_iqevent ev_iqbegintxn, dbo;
+    CALL sp_iqevent ev_iqbegintxn, dbo;
     ```
 
--   The following example displays information about all system events \(owned by dbo or SYS\):
+-   This example displays information about all system events \(owned by dbo or SYS\):
 
     ```
-    sp_iqevent NULL, NULL, SYSTEM;
+    CALL sp_iqevent NULL, NULL, SYSTEM;
     ```
 
--   The following example displays information about the system event ev\_iqbegintxn:
+-   This example displays information about the system event ev\_iqbegintxn:
 
     ```
-    sp_iqevent ev_iqbegintxn, NULL, SYSTEM;
+    CALL sp_iqevent ev_iqbegintxn, NULL, SYSTEM;
     ```
 
--   The following example displays information about the system event ev\_iqbegintxn owned by dbo:
+-   This example displays information about the system event ev\_iqbegintxn owned by dbo:
 
     ```
-    sp_iqevent ev_iqbegintxn, dbo, ALL;
+    CALL sp_iqevent ev_iqbegintxn, dbo, ALL;
     ```
 
 

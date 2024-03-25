@@ -75,8 +75,8 @@ The encryption key \(string\) that is required to decrypt the *<string-expressio
 
 Specify keys in PEM format for RSA.
 
-> ### Caution:  
-> For strongly encrypted databases, store a copy of the key in a safe location. If you lose the encryption key, there is no way to access the data, even with the assistance of Technical Support. The database must be discarded and you must create a new database.
+> ### Note:  
+> For strongly encrypted data, store a copy of the key in a safe location. If you lose the encryption key, there is no way to access the data, even with the assistance of Technical Support.
 
 
 
@@ -148,7 +148,10 @@ AES\_FIPS
 
 The data is encrypted using the FIPS-certified version of the AES 128-bit algorithm with CBC block cipher mode.
 
-If the database server was started using the -fips server option, AES\_FIPS is used as the default. For AES\_FIPS, *<padding\>* can be PKCS5, ZEROES, and NONE \(if FORMAT=RAW\).
+> ### Note:  
+> For instances in the Government Cloud \(US\) region, AES\_FIPS is the default. Specifying non-FIPS algorithms results in FIPS equivalents being used. If no FIPS equivalents are available, then the function returns an error.
+
+For AES\_FIPS, *<padding\>* can be PKCS5, ZEROES, and NONE \(if FORMAT=RAW\).
 
 
 
@@ -365,7 +368,7 @@ For AES, to successfully decrypt a *<string-expression\>*, use the same encrypti
 For RSA, if you specify an incorrect encryption key, then an error is generated unless FORMAT=RAW is specified. When you specify FORMAT=RAW and an incorrect encryption key or an incorrect initialization vector, the decryption fails silently.
 
 > ### Caution:  
-> For strongly encrypted data, store a copy of the key in a safe location. If you lose the encryption key, then there is no way to access the data, even with the assistance of Technical Support.
+> For strongly encrypted data, store a copy of the key in a safe location. If you lose the encryption key, then there’s no way to access the data, even with the assistance of Technical Support.
 
 
 
@@ -431,9 +434,9 @@ FROM SensitiveData;
 **Related Information**  
 
 
-[DECRYPT Function \[String\] for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/0f7fac6182714716b7e144c408dbf207.html "Decrypts the string using the supplied key and returns a LONG BINARY value.") :arrow_upper_right:
+[DECRYPT Function \[String\] for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/0f7fac6182714716b7e144c408dbf207.html "Decrypts the string using the supplied key and returns a LONG BINARY value.") :arrow_upper_right:
 
 [ENCRYPT Function \[String\] for Data Lake Relational Engine](encrypt-function-string-for-data-lake-relational-engine-81f72ce.md "Encrypts the specified value using the supplied encryption key and returns a LONG BINARY value.")
 
-[Encryption Algorithm Aliases](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2023_4_QRC/en-US/a7a8e3a5458e43bf8e405b6bd9c66ad9.html "The encryption algorithms for data lake Relational Engine data at rest have multiple aliases for compatibility across systems.") :arrow_upper_right:
+[Encryption Algorithm Aliases](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a7a8e3a5458e43bf8e405b6bd9c66ad9.html "The encryption algorithms for data lake Relational Engine data at rest have multiple aliases for compatibility across systems.") :arrow_upper_right:
 

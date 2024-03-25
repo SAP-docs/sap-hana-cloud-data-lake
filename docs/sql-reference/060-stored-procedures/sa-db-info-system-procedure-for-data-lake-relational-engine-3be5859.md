@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_db_info( [ <dbidparm> ] );
+sa_db_info( [ <dbidparm> ] )
 ```
 
 
@@ -179,9 +179,7 @@ If *<dbidparm\>* is greater than zero, then properties for the supplied database
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure.
-
-To execute this procedure for other databases, requires MONITOR system privilege.
+Requires EXECUTE object-level privilege on the procedure. To execute this procedure for other databases, also requires the MONITOR system privilege.
 
 
 

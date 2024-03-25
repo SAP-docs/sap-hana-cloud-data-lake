@@ -21,7 +21,7 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-LOG_DEADLOCKS = { ON | OFF };
+LOG_DEADLOCKS = { ON | OFF }
 ```
 
 

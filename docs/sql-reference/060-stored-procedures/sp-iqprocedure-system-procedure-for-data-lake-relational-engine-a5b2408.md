@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqprocedure [ <proc-name> ], [ <proc-owner> ], [ <proc-type> ];
+sp_iqprocedure [ <proc-name> ], [ <proc-owner> ], [ <proc-type> ]
 ```
 
 

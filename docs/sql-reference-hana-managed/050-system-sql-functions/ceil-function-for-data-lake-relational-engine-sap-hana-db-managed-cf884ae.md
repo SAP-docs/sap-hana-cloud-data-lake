@@ -57,5 +57,5 @@ For a given expression, the `CEIL` function takes one argument. For example, `CE
 
 [FLOOR Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](floor-function-for-data-lake-relational-engine-sap-hana-db-managed-0beceab.md "Returns the floor of (largest integer not greater than) a number.")
 
-[CEIL Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a53a419c84f21015b689e542cbf26996.html "Returns the smallest integer greater than or equal to the specified expression.") :arrow_upper_right:
+[CEIL Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a53a419c84f21015b689e542cbf26996.html "Returns the smallest integer greater than or equal to the specified expression.") :arrow_upper_right:
 

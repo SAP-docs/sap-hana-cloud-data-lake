@@ -65,5 +65,5 @@ If an operation exceeds FP\_NBIT\_LOOKUP\_MB and FP\_NBIT\_ROLLOVER\_MAX\_MB lim
 
 [sp\_iqrebuildindex Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqrebuildindex-procedure-for-data-lake-relational-engine-a5b342e.md "Rebuilds column indexes.")
 
-[FP_NBIT_LOOKUP_MB Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3a6a1e34bc754fe2bdb9412884c6a57f.html "Limits the total dictionary size per column for implicit NBit FP columns.") :arrow_upper_right:
+[FP_NBIT_LOOKUP_MB Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3a6a1e34bc754fe2bdb9412884c6a57f.html "Limits the total dictionary size per column for implicit NBit FP columns.") :arrow_upper_right:
 

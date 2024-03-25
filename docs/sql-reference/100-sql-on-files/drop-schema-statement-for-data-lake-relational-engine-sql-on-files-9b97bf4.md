@@ -91,5 +91,5 @@ DROP SCHEMA Factory CASCADE IN FILES_SERVICE;
 **Related Information**  
 
 
-[DROP SCHEMA Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/d71105d49064495ca6a2be5cf34348d7.html "Drop a remote schema, which is a collection of remote tables, in a SQL on Files external catalog.") :arrow_upper_right:
+[DROP SCHEMA Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/d71105d49064495ca6a2be5cf34348d7.html "Drop a remote schema, which is a collection of remote tables, in a SQL on Files external catalog.") :arrow_upper_right:
 

@@ -21,7 +21,7 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-MATERIALIZED_VIEW_STALENESS_LIMIT = { Fresh | N { Minute[s] | Hour[s] | Day[s] | Week[s] | Month[s] } };
+MATERIALIZED_VIEW_STALENESS_LIMIT = { Fresh | N { Minute[s] | Hour[s] | Day[s] | Week[s] | Month[s] } }
 ```
 
 
@@ -159,5 +159,5 @@ SET TEMPORARY OPTION materialized_view_staleness_limit='30 Minutes';
 **Related Information**  
 
 
-[MATERIALIZED_VIEW_STALENESS_LIMIT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7ac82c4f1cfb46bbb18966f957d91b3d.html "Controls the maximum stale time limit, in the specified units of time.") :arrow_upper_right:
+[MATERIALIZED_VIEW_STALENESS_LIMIT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7ac82c4f1cfb46bbb18966f957d91b3d.html "Controls the maximum stale time limit, in the specified units of time.") :arrow_upper_right:
 

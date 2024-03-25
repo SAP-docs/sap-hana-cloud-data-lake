@@ -63,5 +63,5 @@ SELECT EXP( 15 ) FROM iq_dummy;
 **Related Information**  
 
 
-[EXP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/982ccd1f2f84468d9753761e3be45fca.html "Returns the exponential function, e, to the power of a number.") :arrow_upper_right:
+[EXP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/982ccd1f2f84468d9753761e3be45fca.html "Returns the exponential function, e, to the power of a number.") :arrow_upper_right:
 

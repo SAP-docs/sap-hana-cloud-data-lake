@@ -12,12 +12,12 @@ Removes a personal security environment \(PSE\) from the database.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
 ```
-PSE <pse-name> [ CASCADE ];
+PSE <pse-name> [ CASCADE ]
 ```
 
 
@@ -80,7 +80,7 @@ None
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -125,5 +125,5 @@ DROP PSE mypse1 CASCADE;
 
 [DROP PSE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-pse-statement-for-data-lake-relational-engine-sap-hana-db-managed-daf65f6.md "Removes a personal security environment (PSE) from the database.")
 
-[DROP PSE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/2918c50e87e2453187cd8c1e9d043c64.html "Removes a personal security environment (PSE) from the database.") :arrow_upper_right:
+[DROP PSE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/2918c50e87e2453187cd8c1e9d043c64.html "Removes a personal security environment (PSE) from the database.") :arrow_upper_right:
 

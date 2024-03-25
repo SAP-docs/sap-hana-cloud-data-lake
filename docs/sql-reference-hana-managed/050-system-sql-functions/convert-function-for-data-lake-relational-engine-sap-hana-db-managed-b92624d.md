@@ -897,5 +897,5 @@ SELECT CONVERT( integer, 5.2 ) FROM iq_dummy;
 **Related Information**  
 
 
-[CONVERT Function \[Data Type Conversion\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a53f6efb84f21015af0e8594ce5cd68e.html "Returns an expression converted to a supplied data type.") :arrow_upper_right:
+[CONVERT Function \[Data Type Conversion\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a53f6efb84f21015af0e8594ce5cd68e.html "Returns an expression converted to a supplied data type.") :arrow_upper_right:
 

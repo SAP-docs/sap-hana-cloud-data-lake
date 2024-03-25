@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-DROP USER <user-name>;
+DROP USER <user-name>
 ```
 
 
@@ -77,5 +77,5 @@ DROP USER SQLTester;
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[DROP USER Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/d94380cc72f2455b9c92809eee051a5a.html "Removes a user.") :arrow_upper_right:
+[DROP USER Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/d94380cc72f2455b9c92809eee051a5a.html "Removes a user.") :arrow_upper_right:
 

@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-SAVEPOINT [ <savepoint-name> ];
+SAVEPOINT [ <savepoint-name> ]
 ```
 
 
@@ -55,7 +55,7 @@ An identifier that can be used in a `RELEASE SAVEPOINT` or `ROLLBACK TO SAVEPOIN
 
 All savepoints are automatically released when a transaction ends.
 
-Savepoints that are established while a trigger is executing or while an atomic compound statement is executing are automatically released when the atomic operation ends.
+Savepoints that are established while a trigger is executing or while an ATOMIC compound statement is executing are automatically released when the ATOMIC operation ends.
 
 
 

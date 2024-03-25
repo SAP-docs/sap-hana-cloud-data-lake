@@ -20,7 +20,6 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 CREATE [ OR REPLACE ] CERTIFICATE <certificate-name>
    [ PURPOSE { JWT | X509 } FOR PROVIDER <provider_name> ]
    FROM { <certificate-string> | <variable-name> }
-;
 ```
 
 
@@ -89,8 +88,8 @@ The CREATE CERTIFICATE statement is not used to create an actual certificate. Us
 
 Requires one of the following:
 
--   To manage self-owned certificates requires the MANAGE ONWER CERTIFICATES system privilege.
--   To manage certificates owned by other requires the MANAGE CREDENTIAL system privilege.
+-   To manage self-owned certificates requires the MANAGE OWNER CERTIFICATES system privilege.
+-   To manage certificates owned by other requires the MANAGE CERTIFICATES system privilege.
 
 See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md) for assistance with granting privileges.
 
@@ -151,7 +150,7 @@ FROM '-----BEGIN CERTIFICATE-----
 **Related Information**  
 
 
-[DROP CERTIFICATE for Data Lake Relational Engine](drop-certificate-for-data-lake-relational-engine-c22eaf4.md "Drops a certificate from the database.")
+[DROP CERTIFICATE STATEMENT for Data Lake Relational Engine](drop-certificate-statement-for-data-lake-relational-engine-c22eaf4.md "Drops a certificate from the database.")
 
 [CREATE JWT PROVIDER Statement for Data Lake Relational Engine](create-jwt-provider-statement-for-data-lake-relational-engine-49b7ee1.md "Defines a JWT provider in the data lake Relational Engine database.")
 
@@ -163,5 +162,5 @@ FROM '-----BEGIN CERTIFICATE-----
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[CREATE CERTIFICATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/d827f8589599403c94bd8700114c9e46.html "Adds or replaces a certificate in the database using the given file or string.") :arrow_upper_right:
+[CREATE CERTIFICATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/d827f8589599403c94bd8700114c9e46.html "Adds or replaces a certificate in the database using the given file or string.") :arrow_upper_right:
 

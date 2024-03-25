@@ -283,7 +283,7 @@ The ESCAPE clause is supported by data lake Relational Engine only.
 
 [PATINDEX Function \[String\] for Data Lake Relational Engine](../050-system-sql-functions/patindex-function-string-for-data-lake-relational-engine-a56c8f8.md "Returns the starting position of the first occurrence of a specified pattern.")
 
-[Selecting a Collation to Support a Specific Locale](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a7552a1284f21015bc9ae70deba5bbf8.html "Address character set issues properly by using the collation, which best supports the locale.") :arrow_upper_right:
+[Selecting a Collation to Support a Specific Locale](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a7552a1284f21015bc9ae70deba5bbf8.html "Address character set issues properly by using the collation, which best supports the locale.") :arrow_upper_right:
 
-[Unstructured Data Queries](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a5f84d4284f21015aa65c9ccbfed3414.html "Learn about querying large object data, including the full text search capability that handles unstructured and semistructured data.") :arrow_upper_right:
+[Unstructured Data Queries](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a5f84d4284f21015aa65c9ccbfed3414.html "Learn about querying large object data, including the full text search capability that handles unstructured and semistructured data.") :arrow_upper_right:
 

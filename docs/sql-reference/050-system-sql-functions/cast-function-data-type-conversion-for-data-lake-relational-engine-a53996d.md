@@ -59,6 +59,8 @@ The specified data type.
 
 If you do not indicate a length for character string types, data lake Relational Engine chooses an appropriate length. If neither precision nor scale is specified for a DECIMAL conversion, the database server selects appropriate values.
 
+In data lake Relational Engine, a timestamp data type column can support 6 or 7 decimal precision. See [TIMESTAMP Data Type Precision in Data Lake Relational Engine](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-520ce6c.md). If you attempt to insert 7 decimal precision data into a 6 decimal precision column in the data lake Relational Engine, then the value will be truncated to 6 decimal places and precision is lost. To prevent this behavior, set the TIMESTAMP\_RTRUNCATION database option to ON. See [TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine](../090-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-dbb08c7.md).When enabled, the CAST operation fails if precision will be lost on a timestamp column.
+
 Set the data type explicitly, or specify the %TYPE attribute to set the data type to the data type of a column in a table or view, or to the data type of a variable. For example:
 
 ```
@@ -109,6 +111,8 @@ B NUMERIC(15,2);
 **Related Information**  
 
 
+[TIMESTAMP Data Type Precision in Data Lake Relational Engine](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-520ce6c.md "Precision conflicts between TIMESTAMP data types result in data loss.")
+
 [GRAPHICAL\_PLAN Function \[String\] for Data Lake Relational Engine](graphical-plan-function-string-for-data-lake-relational-engine-a553c53.md "Returns the graphical query plan to Interactive SQL in an XML format string.")
 
 [DAYS Function \[Date and Time\] for Data Lake Relational Engine](days-function-date-and-time-for-data-lake-relational-engine-a54a45b.md "Returns the number of days since an arbitrary starting date, returns the number of days between two specified dates, or adds the specified integer-expression number of days to a given date.")
@@ -131,5 +135,7 @@ B NUMERIC(15,2);
 
 [YEARS Function \[Date and Time\] for Data Lake Relational Engine](years-function-date-and-time-for-data-lake-relational-engine-a5926bf.md "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.")
 
-[CAST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/4a2c75bbed1d4b399e51f704ee7d35dc.html "Returns the value of an expression converted to a supplied data type.") :arrow_upper_right:
+[TIMESTAMP_RTRUNCATION Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7ea796c77e5047c78acff41829be70aa.html "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.") :arrow_upper_right:
+
+[CAST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/4a2c75bbed1d4b399e51f704ee7d35dc.html "Returns the value of an expression converted to a supplied data type.") :arrow_upper_right:
 

@@ -16,13 +16,8 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 ```
-sp_iqconnection [ <connhandle> ];
+sp_iqconnection [ <connhandle> ]
 ```
 
 
@@ -369,7 +364,7 @@ The value "Y" in this column indicates that the underlying INC connection for a 
 *<connhandle\>* is equal to the Number connection property and is the ID number of the connection. The connection\_property system function returns the connection ID:
 
 ```
-SELECT connection_property ( 'Number' );
+SELECT connection_property ( 'Number' )
 ```
 
 When called with an input parameter of a valid *<connhandle\>*, sp\_iqconnection returns the one row for that connection only.
@@ -460,4 +455,294 @@ Requires all of:
 ## Side Effects
 
 None
+
+
+
+<a name="loioa4da343584f210159719d7a4830c267f__section_dnh_dyx_tzb"/>
+
+## Examples
+
+This example returns information on connection 602508:
+
+```
+CALL sp_iqconnection (602508);
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+ConnHandle
+
+</th>
+<th valign="top">
+
+Name
+
+</th>
+<th valign="top">
+
+Userid
+
+</th>
+<th valign="top">
+
+LastReqTime
+
+</th>
+<th valign="top">
+
+ReqType
+
+</th>
+<th valign="top">
+
+IQCmdType
+
+</th>
+<th valign="top">
+
+LastIQCmdTime
+
+</th>
+<th valign="top">
+
+IQCursors
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+602508
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+19:20.8
+
+</td>
+<td valign="top">
+
+OPEN
+
+</td>
+<td valign="top">
+
+IQUTILITYOPENCURSOR
+
+</td>
+<td valign="top">
+
+19:20.8
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="7">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+LowestIQCursorState
+
+</th>
+<th valign="top">
+
+IQthreads
+
+</th>
+<th valign="top">
+
+TxnID
+
+</th>
+<th valign="top">
+
+ConnCreateTime
+
+</th>
+<th valign="top">
+
+TempTableSpaceKB
+
+</th>
+<th valign="top">
+
+TempWorkSpaceKB
+
+</th>
+<th valign="top">
+
+IQconnID
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+NONE
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+16576516
+
+</td>
+<td valign="top">
+
+13:45.4
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+912637
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="9">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+satoiq\_count
+
+</th>
+<th valign="top">
+
+iqtosa\_count
+
+</th>
+<th valign="top">
+
+CommLink
+
+</th>
+<th valign="top">
+
+NodeAddr
+
+</th>
+<th valign="top">
+
+LastIdle
+
+</th>
+<th valign="top">
+
+MPXServerName
+
+</th>
+<th valign="top">
+
+LSName
+
+</th>
+<th valign="top">
+
+INCConnName
+
+</th>
+<th valign="top">
+
+INCConnSuspended
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+46
+
+</td>
+<td valign="top">
+
+2
+
+</td>
+<td valign="top">
+
+TCPIP
+
+</td>
+<td valign="top">
+
+52.57.33.140
+
+</td>
+<td valign="top">
+
+7886
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+OPEN
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+</tr>
+</table>
 

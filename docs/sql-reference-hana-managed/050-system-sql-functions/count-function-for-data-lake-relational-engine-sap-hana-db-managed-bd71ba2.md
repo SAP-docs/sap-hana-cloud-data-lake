@@ -102,5 +102,5 @@ GROUP BY city;
 **Related Information**  
 
 
-[COUNT Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a54290fd84f21015b7dddc9484de19d0.html "Counts the number of rows in a group, depending on the specified parameters.") :arrow_upper_right:
+[COUNT Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a54290fd84f21015b7dddc9484de19d0.html "Counts the number of rows in a group, depending on the specified parameters.") :arrow_upper_right:
 

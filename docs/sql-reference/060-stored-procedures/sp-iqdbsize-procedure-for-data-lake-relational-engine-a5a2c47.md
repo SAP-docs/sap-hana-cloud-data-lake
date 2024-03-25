@@ -17,8 +17,30 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqdbsize ( [ main ] );
+sp_iqdbsize ( '[ MAIN ]' )
 ```
+
+
+
+<a name="loioa5a2c47f84f21015ae93aa3096658803__section_xpv_dls_5zb"/>
+
+## Parameters
+
+
+<dl>
+<dt><b>
+
+MAIN
+
+</b></dt>
+<dd>
+
+\(Applicable to coordinator only\) When run on the coordinator, the default parameter is MAIN, which returns the size of the shared data lake Relational Engine store.
+
+
+
+</dd>
+</dl>
 
 
 
@@ -134,8 +156,6 @@ The total size in blocks used to store the metadata for tables.
 
 Returns the total size of the database. Also returns the number of pages required to hold the database in memory and the number of data lake Relational Engine pages when the database is compressed \(on disk\).
 
-If run on a multiplex database, the default parameter is main, which returns the size of the shared data lake Relational Engine store.
-
 
 
 <a name="loioa5a2c47f84f21015ae93aa3096658803__iq_refbb_1502"/>
@@ -156,7 +176,7 @@ None
 
 ## Examples
 
-The following example displays size information for the database iqdemo:
+The following example displays size information for the database when run on the worker node:
 
 ```
 sp_iqdbsize;
@@ -199,12 +219,17 @@ CompressedPages
 </td>
 <td valign="top">
 
-19786
+1692817
 
 </td>
 <td valign="top">
 
-456
+3488
+
+</td>
+<td valign="top">
+
+20
 
 </td>
 <td valign="top">
@@ -212,16 +237,18 @@ CompressedPages
 15
 
 </td>
-<td valign="top">
-
-13
-
-</td>
 </tr>
 </table>
 
 
 <table>
+<tr>
+<th valign="top" colspan="4">
+
+\(Continued\)
+
+</th>
+</tr>
 <tr>
 <th valign="top">
 
@@ -233,16 +260,155 @@ NBlocks
 CatalogBlocks
 
 </th>
+<th valign="top">
+
+RLVLogBlocks
+
+</th>
+<th valign="top">
+
+RLVLogKBytes
+
+</th>
 </tr>
 <tr>
 <td valign="top">
 
-57
+109
 
 </td>
 <td valign="top">
 
 36
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+</table>
+
+The following example displays size information for the database when run on the coordinator node:
+
+```
+sp_iqdbsize('MAIN');;
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+Database
+
+</th>
+<th valign="top">
+
+PhysicalBlocks
+
+</th>
+<th valign="top">
+
+KBytes
+
+</th>
+<th valign="top">
+
+Pages
+
+</th>
+<th valign="top">
+
+CompressedPages
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+/data\_shared/coord/iqaas.db
+
+</td>
+<td valign="top">
+
+1701625
+
+</td>
+<td valign="top">
+
+3488
+
+</td>
+<td valign="top">
+
+20
+
+</td>
+<td valign="top">
+
+15
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="4">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+NBlocks
+
+</th>
+<th valign="top">
+
+CatalogBlocks
+
+</th>
+<th valign="top">
+
+RLVLogBlocks
+
+</th>
+<th valign="top">
+
+RLVLogKBytes
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+109
+
+</td>
+<td valign="top">
+
+36
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+ 
 
 </td>
 </tr>

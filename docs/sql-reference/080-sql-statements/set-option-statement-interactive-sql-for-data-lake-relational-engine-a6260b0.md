@@ -27,7 +27,7 @@ Syntax 1
 
 ```
 SET [ TEMPORARY ] OPTION
-   … [ { <userid> | PUBLIC }.]<option-name> = [ <option-value> ];
+   … [ { <userid> | PUBLIC }.]<option-name> = [ <option-value> ]
 ```
 
 
@@ -40,7 +40,7 @@ Syntax 2
 <dd>
 
 ```
-SET PERMANENT;
+SET PERMANENT
 ```
 
 
@@ -53,7 +53,7 @@ Syntax 3
 <dd>
 
 ```
-SET;
+SET
 ```
 
 

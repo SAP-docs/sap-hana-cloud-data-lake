@@ -321,5 +321,5 @@ Evans
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[MEDIAN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/d48698c99cd5450980130ce6dcd32356.html "Returns the median of an expression.") :arrow_upper_right:
+[MEDIAN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/d48698c99cd5450980130ce6dcd32356.html "Returns the median of an expression.") :arrow_upper_right:
 

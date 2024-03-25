@@ -52,5 +52,5 @@ Is a column, variable, or expression with a data type that is either exact numer
 **Related Information**  
 
 
-[SQUARE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/b449a8a0b1e949ef81aceed2ee770dd3.html "Returns the square of the specified expression as a float.") :arrow_upper_right:
+[SQUARE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/b449a8a0b1e949ef81aceed2ee770dd3.html "Returns the square of the specified expression as a float.") :arrow_upper_right:
 

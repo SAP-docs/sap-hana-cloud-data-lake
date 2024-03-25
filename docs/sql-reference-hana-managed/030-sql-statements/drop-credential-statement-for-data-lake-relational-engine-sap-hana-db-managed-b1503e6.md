@@ -12,13 +12,13 @@ Drops an existing component-specific or application-specific credential.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
 ```
 DROP CREDENTIAL FOR [ USER <user-name> ] COMPONENT <component-id> 
-   PURPOSE <purpose-def> TYPE <type-def>;
+   PURPOSE <purpose-def> TYPE <type-def>
 ```
 
 
@@ -103,7 +103,7 @@ When dropping a credential, the *<user-name\>*, *<component-id\>*, *<purpose-def
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -146,5 +146,5 @@ DROP CREDENTIAL FOR USER user1 COMPONENT 'SAPHDLRELOADUNLOAD' PURPOSE 'AccessHDL
 
 [CREATE CREDENTIAL Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-credential-statement-for-data-lake-relational-engine-sap-hana-db-managed-da4e344.md "Creates a component-specific or application-specific credential.")
 
-[DROP CREDENTIAL Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/4a43c4c30466458ba7c9c80ec44f6bdc.html "Drops an existing component-specific or application-specific credential.") :arrow_upper_right:
+[DROP CREDENTIAL Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/4a43c4c30466458ba7c9c80ec44f6bdc.html "Drops an existing component-specific or application-specific credential.") :arrow_upper_right:
 

@@ -12,7 +12,7 @@ Enables users to insert values into or to update an IDENTITY or AUTOINCREMENT co
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -22,7 +22,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be 
 ## Syntax
 
 ```
-IDENTITY_INSERT = <datalake_table_name>;
+IDENTITY_INSERT = <datalake_table_name>
 ```
 
 
@@ -194,19 +194,19 @@ To drop a table with an IDENTITY column, IDENTITY\_INSERT must not be set to tha
 If you use the table Employees to run explicit inserts:
 
 ```
-SET TEMPORARY OPTION IDENTITY_INSERT = 'HDLADMIN.Employees';
+SET TEMPORARY OPTION IDENTITY_INSERT = 'HDLADMIN.Employees'
 ```
 
 To turn the option off, specify the equals sign and an empty string:
 
 ```
-SET TEMPORARY OPTION IDENTITY_INSERT = '';
+SET TEMPORARY OPTION IDENTITY_INSERT = ''
 ```
 
 Illustrates the effect of user level options on temporary options \(see *Note*\), if you are connected to the database as HDLADMIN and enter:
 
 ```
-SET OPTION IDENTITY_INSERT = 'Customers';
+SET OPTION IDENTITY_INSERT = 'Customers'
 ```
 
 The value for the option is set to Customers for the user HDLADMIN and temporary for the current connection. Other users who subsequently connect to the database as HDLADMIN find their option value for IDENTITY\_INSERT is Customers also.
@@ -218,5 +218,5 @@ The value for the option is set to Customers for the user HDLADMIN and temporary
 
 [SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md "Grant database options temporarily for the current connection only on a data lake Relational Engine relational container.")
 
-[IDENTITY_INSERT Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a63914eb84f21015b454db5374017eb5.html "Enables users to insert values into or to update an IDENTITY or AUTOINCREMENT column.") :arrow_upper_right:
+[IDENTITY_INSERT Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a63914eb84f21015b454db5374017eb5.html "Enables users to insert values into or to update an IDENTITY or AUTOINCREMENT column.") :arrow_upper_right:
 

@@ -20,7 +20,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 <select-without>-<order-by>
    … UNION [ ALL ] <select-without>-<order-by>
    … [ UNION [ ALL ] <select-without>-<order-by> ]…
-   … [ <order-by-clause> [, ...] ];
+   … [ <order-by-clause> [, ...] ]
 ```
 
 

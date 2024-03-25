@@ -19,13 +19,13 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 SET DESCRIPTOR <descriptor-name>
    … { COUNT = { <integer> | <hostvar> }
-     | VALUE <n> <assignment> [, …] };
+     | VALUE <n> <assignment> [, …] }
 ```
 
 ```
 <assignment> ::=
    { { TYPE | SCALE | PRECISION | LENGTH | INDICATOR } = { <integer> | <hostvar> } 
-   | DATA = <hostvar> };
+   | DATA = <hostvar> }
 ```
 
 

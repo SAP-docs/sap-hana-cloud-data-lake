@@ -14,7 +14,7 @@ SELECT * FROM "SELECT";
 
 If you are using Embedded SQL, then you can use the database library function sql\_needs\_quotes to determine whether a string requires quotation marks. A string requires quotes if it is a reserved word or if it contains a character not ordinarily allowed in an identifier.
 
-SQL is not case-sensitive with respect to keywords. Each of the words in this list may appear in uppercase, lowercase, or any combination of the two. All strings that differ only in capitalization from these words are reserved words.
+SQL is not case-sensitive with respect to keywords. Each of the words in this list may appear in uppercase, lowercase, or any combination of the two. All strings that differ only in capitalization from these words are reserved words. Reserved words in the documentation are always shown in UPPERCASE.
 
 This list lists the SQL reserved words for data lake Relational Engine.
 
@@ -285,5 +285,5 @@ XML
 
 [Keywords in Data Lake Relational Engine](keywords-in-data-lake-relational-engine-a4eb80b.md "Each SQL statement contains one or more keywords.")
 
-[Reserved Words in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/2bbe71e4f77a41cd81be468e2ac4b751.html "Some keywords in SQL are also reserved words.") :arrow_upper_right:
+[Reserved Words in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/2bbe71e4f77a41cd81be468e2ac4b751.html "Some keywords in SQL are also reserved words.") :arrow_upper_right:
 

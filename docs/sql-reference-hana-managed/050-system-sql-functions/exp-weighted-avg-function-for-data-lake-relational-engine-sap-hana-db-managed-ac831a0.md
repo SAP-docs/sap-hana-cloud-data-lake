@@ -93,5 +93,5 @@ The *<window-spec\>* parameter represents usage as a window function in a `SELEC
 
 [WEIGHTED\_AVG Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](weighted-avg-function-for-data-lake-relational-engine-sap-hana-db-managed-7a370d0.md "Calculates an arithmetically (or linearly) weighted average.")
 
-[EXP_WEIGHTED_AVG Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a551b4fb84f210158a07f463ff01b5e2.html "Calculates an exponential weighted moving average. Weightings determine the relative importance of each quantity that makes up the average.") :arrow_upper_right:
+[EXP_WEIGHTED_AVG Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a551b4fb84f210158a07f463ff01b5e2.html "Calculates an exponential weighted moving average. Weightings determine the relative importance of each quantity that makes up the average.") :arrow_upper_right:
 

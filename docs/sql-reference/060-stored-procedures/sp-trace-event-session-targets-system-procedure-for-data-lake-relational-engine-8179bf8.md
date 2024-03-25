@@ -21,7 +21,7 @@ sp_trace_event_session_targets(
    [ <session_name>  
    [, <include_server_sessions>
    [, <include_audit_events> ] ] ]
-);
+)
 ```
 
 
@@ -174,5 +174,5 @@ SELECT * FROM dbo.sp_trace_event_session_targets( );
 **Related Information**  
 
 
-[sp_trace_event_session_targets System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/08a49c4ce49d4d44b534b74d5e9aac35.html "Lists the targets of a trace session.") :arrow_upper_right:
+[sp_trace_event_session_targets System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/08a49c4ce49d4d44b534b74d5e9aac35.html "Lists the targets of a trace session.") :arrow_upper_right:
 

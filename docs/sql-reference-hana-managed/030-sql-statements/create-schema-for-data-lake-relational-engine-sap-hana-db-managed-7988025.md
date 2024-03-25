@@ -12,12 +12,12 @@ Creates a schema in the current instance.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
 ```
-CREATE SCHEMA [ <owner>.]<schema_name>;
+CREATE SCHEMA [ <owner>.]<schema_name>
 ```
 
 

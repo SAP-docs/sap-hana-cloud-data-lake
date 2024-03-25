@@ -221,5 +221,5 @@ Indicates whether the columns in the foreign key are allowed to contain the NULL
 **Related Information**  
 
 
-[SYSFKEY System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/24f16387665e47a492bd2517a5a27a33.html "Each row in the SYSFKEY system view describes a foreign key constraint in the system. The underlying system table for this view is ISYSFKEY.") :arrow_upper_right:
+[SYSFKEY System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/24f16387665e47a492bd2517a5a27a33.html "Each row in the SYSFKEY system view describes a foreign key constraint in the system. The underlying system table for this view is ISYSFKEY.") :arrow_upper_right:
 

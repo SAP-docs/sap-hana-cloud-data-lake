@@ -10,13 +10,13 @@ Changes options that affect the behavior of the database and its compatibility w
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
 ```
 SET [ EXISTING ] [ TEMPORARY ] OPTION
-   … [ { <user_id> | PUBLIC }.]<option-name> = [ <option-value> ];
+   … [ { <user_id> | PUBLIC }.]<option-name> = [ <option-value> ]
 ```
 
 
@@ -172,5 +172,5 @@ Temporarily setting an option for the PUBLIC user ID, as opposed to setting the 
 
 [SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md "Grant database options temporarily for the current connection only on a data lake Relational Engine relational container.")
 
-[SET OPTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a625da7584f21015a300a0dd2457eb57.html "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.") :arrow_upper_right:
+[SET OPTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a625da7584f21015a300a0dd2457eb57.html "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.") :arrow_upper_right:
 

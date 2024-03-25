@@ -7,7 +7,7 @@ Returns information about all temporary and permanent mutexes and semaphores, in
 
 
 ```
-sp_list_mutexes_semaphores;
+sp_list_mutexes_semaphores
 ```
 
 

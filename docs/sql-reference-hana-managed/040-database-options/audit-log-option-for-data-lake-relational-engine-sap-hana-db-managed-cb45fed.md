@@ -12,7 +12,7 @@ Specifies the type and location of the audit log.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -294,5 +294,5 @@ SET OPTION PUBLIC.audit_log = 'FILE(filename_prefix=audit_log)';
 **Related Information**  
 
 
-[AUDIT_LOG Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/812cbb736ce2101490b7fab431caa9ff.html "Specifies the type and location of the audit log.") :arrow_upper_right:
+[AUDIT_LOG Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/812cbb736ce2101490b7fab431caa9ff.html "Specifies the type and location of the audit log.") :arrow_upper_right:
 

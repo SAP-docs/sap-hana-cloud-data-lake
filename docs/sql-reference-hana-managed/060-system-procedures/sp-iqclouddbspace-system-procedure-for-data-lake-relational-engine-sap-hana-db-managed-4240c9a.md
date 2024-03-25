@@ -18,8 +18,16 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sp_iqclouddbspace();
+sp_iqclouddbspace()
 ```
+
+
+
+<a name="loio4240c9a98ce04c2cb85a37ada268acb4__section_yfd_p1y_tzb"/>
+
+## Parameters
+
+None
 
 
 
@@ -105,6 +113,14 @@ The size of a database page in bytes. This is calculated based on the compressio
 
 
 
+<a name="loio4240c9a98ce04c2cb85a37ada268acb4__section_emv_x1y_tzb"/>
+
+## Remarks
+
+None
+
+
+
 <a name="loio4240c9a98ce04c2cb85a37ada268acb4__section_psc_lw1_1yb"/>
 
 ## Privileges
@@ -119,7 +135,7 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -221,7 +237,7 @@ user\_object\_store
 **Related Information**  
 
 
-[Cloud Dbspaces](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2023_4_QRC/en-US/493eb818429e4996b3da4153192a9efa.html "Cloud dbspace is a new offering where the database engine stores a user dbspace in object storage solutions such as Microsoft Azure Blob Storage, AWS Simple Storage Service (S3), or Google Cloud Storage. In a cloud dbspace, database pages are physically stored as objects as opposed to regular file system blocks.") :arrow_upper_right:
+[Cloud Dbspaces](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2024_1_QRC/en-US/493eb818429e4996b3da4153192a9efa.html "In a cloud dbspace, the database engine stores a user dbspace in object storage solutions such as Microsoft Azure Blob Storage, AWS Simple Storage Service (S3), or Google Cloud Storage. In a cloud dbspace, database pages are physically stored as objects as opposed to regular file system blocks.") :arrow_upper_right:
 
-[sp_iqclouddbspace System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/4ef0219c16ec4f578395e34785797cfe.html "Displays detailed information about the user_object_store dbspace.") :arrow_upper_right:
+[sp_iqclouddbspace System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/4ef0219c16ec4f578395e34785797cfe.html "Displays detailed information about the user_object_store dbspace.") :arrow_upper_right:
 

@@ -19,7 +19,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 EXECUTE [ <@return_status> = ] [<owner>.]<procedure_name>
    ... { [ <@parameter-name> = ] <expression>
-       | [ <@parameter-name> = ] <@variable> [ <output> ] } ,...;
+       | [ <@parameter-name> = ] <@variable> [ <output> ] } ,...
 ```
 
 

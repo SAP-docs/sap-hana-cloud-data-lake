@@ -19,7 +19,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 ALTER TEXT INDEX [ { <owner> | <schema-name> }.]<text-index-name>
    ON [ { <owner> | <schema-name> }.]<table-name>  
-   RENAME { AS | TO } <new-name>;
+   RENAME { AS | TO } <new-name>
 ```
 
 

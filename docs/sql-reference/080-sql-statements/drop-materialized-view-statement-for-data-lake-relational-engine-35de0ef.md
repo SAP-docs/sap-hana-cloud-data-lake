@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-DROP MATERIALIZED VIEW [ IF EXISTS ] [ { <owner> | <schema-name> }.]<mat-view-name>;
+DROP MATERIALIZED VIEW [ IF EXISTS ] [ { <owner> | <schema-name> }.]<mat-view-name>
 ```
 
 
@@ -111,5 +111,5 @@ DROP IF EXISTS MATERIALIZD VIEW mymatview1;
 
 [sa\_dependent\_views System Procedure for Data Lake Relational Engine](../060-stored-procedures/sa-dependent-views-system-procedure-for-data-lake-relational-engine-3be5950.md "Returns the list of all dependent views for a given table or view.")
 
-[DROP MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/50e76331a4664b5bb2c4454e80b5f8f4.html "Removes a data type from the database.") :arrow_upper_right:
+[DROP MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/50e76331a4664b5bb2c4454e80b5f8f4.html "Removes a data type from the database.") :arrow_upper_right:
 

@@ -124,5 +124,5 @@ SELECT COVAR_POP( Salary, ( YEAR( NOW( ) ) - YEAR( BirthDate ) ) ) FROM Employee
 **Related Information**  
 
 
-[COVAR_POP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/6d40c8333876450388dfaa9078b06644.html "Returns the population covariance of a set of number pairs.") :arrow_upper_right:
+[COVAR_POP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/6d40c8333876450388dfaa9078b06644.html "Returns the population covariance of a set of number pairs.") :arrow_upper_right:
 

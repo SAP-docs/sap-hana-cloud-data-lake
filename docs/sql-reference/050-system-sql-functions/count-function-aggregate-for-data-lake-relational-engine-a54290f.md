@@ -108,5 +108,5 @@ GROUP BY city;
 
 [SUM Function \[Aggregate\] for Data Lake Relational Engine](sum-function-aggregate-for-data-lake-relational-engine-a5889fe.md "Returns the total of the specified expression for each group of rows.")
 
-[COUNT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/bd71ba2eab21415e8d3ce875005fc9b9.html "Counts the number of rows in a group, depending on the specified parameters.") :arrow_upper_right:
+[COUNT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/bd71ba2eab21415e8d3ce875005fc9b9.html "Counts the number of rows in a group, depending on the specified parameters.") :arrow_upper_right:
 

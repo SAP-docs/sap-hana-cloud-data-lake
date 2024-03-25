@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-SET <option-name> <option-value>;
+SET <option-name> <option-value>
 ```
 
 ```
@@ -28,7 +28,7 @@ SET <option-name> <option-value>;
    | QUOTED_IDENTIFIER [ { ON | OFF } ]
    | ROWCOUNT <integer>
    | STRING_RTRUNCATION [ { ON | OFF } ]
-   | TRANSACTION ISOLATION LEVEL [ { 0 | 1 | 2 | 3 } ] };
+   | TRANSACTION ISOLATION LEVEL [ { 0 | 1 | 2 | 3 } ] }
 ```
 
 

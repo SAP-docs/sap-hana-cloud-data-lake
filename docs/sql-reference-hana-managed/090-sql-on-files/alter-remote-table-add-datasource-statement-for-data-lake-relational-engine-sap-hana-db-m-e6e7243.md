@@ -19,7 +19,7 @@ Attach an external data source, such as a file or directory, to a SQL on Files r
 
 -   This data lake Relational Engine \(SAP HANA DB-Managed\) SQL on Files SQL statement can be used as follows:
 
-    -   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+    -   Connected to SAP HANA database as a SAP HANA database user..
     -   Using the REMOTE\_EXECUTE procedure. See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](../030-sql-statements/remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
 
 
@@ -184,7 +184,7 @@ The value extraction from a path segments happens in the following steps:
 
 Note that using a DATE, TIME, or TIMESTAMP format cannot be configured for `FROM DIRECTORY` mapped columns. The default values always apply.
 
-See [Structuring a Data Lake Files Folder Hierarchy for Big Data](https://help.sap.com/viewer/3ef213750ce94aac885ac4fc54ea212f/2023_4_QRC/en-US/c712a4dff1ad429cad9a2a3e42336e42.html "Structure data for optimal performance by understanding how SQL on Files tables handle predicates.") :arrow_upper_right: for further examples and guidance on how to use `FROM DIRECTORY` mapping effectively.
+See [Structuring a Data Lake Files Folder Hierarchy for Big Data](https://help.sap.com/viewer/3ef213750ce94aac885ac4fc54ea212f/2024_1_QRC/en-US/c712a4dff1ad429cad9a2a3e42336e42.html "Structure data for optimal performance by understanding how SQL on Files tables handle predicates.") :arrow_upper_right: for further examples and guidance on how to use `FROM DIRECTORY` mapping effectively.
 
 
 
@@ -833,5 +833,5 @@ CALL SYSHDL_CONTAINER1.REMOTE_EXECUTE(
 
 [ALTER \(Remote\) TABLE DROP DATASOURCE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\) \[SQL on Files\]](alter-remote-table-drop-datasource-statement-for-data-lake-relational-engine-sap-hana-db-1e570af.md "Remove a data source from a SQL on Files table.")
 
-[ALTER (Remote) TABLE ADD DATASOURCE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/65c9d8fb06914172a3960b804f7613f3.html "Attach an external data source, such as a file or directory, to a SQL on Files remote table.") :arrow_upper_right:
+[ALTER (Remote) TABLE ADD DATASOURCE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/65c9d8fb06914172a3960b804f7613f3.html "Attach an external data source, such as a file or directory, to a SQL on Files remote table.") :arrow_upper_right:
 

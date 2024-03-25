@@ -22,7 +22,7 @@ REMOVE JAVA <classes_to_remove>
 <classes_to_remove>
    { CLASS <java_class_name> [, <java_class_name> ]… 
    | PACKAGE <java_package_name> [, <java_package_name> ]… 
-   | JAR <jar_name> [, <jar_name> ]… [ RETAIN CLASSES ] };
+   | JAR <jar_name> [, <jar_name> ]… [ RETAIN CLASSES ] }
 ```
 
 

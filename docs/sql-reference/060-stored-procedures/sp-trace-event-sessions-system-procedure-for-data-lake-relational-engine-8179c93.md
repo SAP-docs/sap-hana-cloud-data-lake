@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_trace_event_sessions( [ <session_name> ] );
+sp_trace_event_sessions( [ <session_name> ] )
 ```
 
 
@@ -359,5 +359,5 @@ NULL
 **Related Information**  
 
 
-[sp_trace_event_sessions System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3a8340e1d6cd40ebbb3717c9530a2047.html "Returns a list of the trace event sessions that are defined for the database.") :arrow_upper_right:
+[sp_trace_event_sessions System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3a8340e1d6cd40ebbb3717c9530a2047.html "Returns a list of the trace event sessions that are defined for the database.") :arrow_upper_right:
 

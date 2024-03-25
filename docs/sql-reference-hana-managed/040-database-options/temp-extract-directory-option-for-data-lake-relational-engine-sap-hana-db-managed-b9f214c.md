@@ -12,7 +12,7 @@ Controls whether a user is allowed to use the data extraction facility. Also con
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -22,7 +22,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be 
 ## Syntax
 
 ```
-TEMP_EXTRACT_DIRECTORY = <string_expression>;
+TEMP_EXTRACT_DIRECTORY = <string_expression>
 ```
 
 
@@ -256,7 +256,7 @@ If the TEMP\_EXTRACT\_DIRECTORY option is:
 -   Set to an invalid directory path, then an error occurs: ***Files does not exist File: *<invalid path\>****
 -   Blank, then temporary extract files are placed in directories according to their specification in TEMP\_EXTRACT\_NAME*<N\>*.
 
-For example syntax, see [(Deprecated) Unloading Data to the External Object Store Using the Data Extraction Facility](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/a732a39184f21015979f85151aea1b30.html "The data extraction facility is a group of database options that unload data to the external object store.") :arrow_upper_right:.
+For example syntax, see [(Deprecated) Unloading Data to the External Object Store Using the Data Extraction Facility](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/a732a39184f21015979f85151aea1b30.html "The data extraction facility is a group of database options that unload data to the external object store.") :arrow_upper_right:.
 
 **Related Information**  
 
@@ -267,7 +267,7 @@ For example syntax, see [(Deprecated) Unloading Data to the External Object Stor
 
 [TEMP\_EXTRACT\_NAME<N\> Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](temp-extract-name-n-option-for-data-lake-relational-engine-sap-hana-db-managed-1f0b3e1.md "Specifies the data lake Filescontainer object file name, or theAzure block blob name, or the Amazon S3 bucket object name you’re extracting to. You must specify the name when extracting data from data lake Relational Engine to cloud storage.")
 
-[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
+[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
 
-[TEMP_EXTRACT_DIRECTORY Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a65cd33584f210159126844d7b32b6a8.html "Controls whether a user is allowed to use the data extraction facility. Also controls the directory into which temp extract files are placed, and overrides a directory path specified in the TEMP_EXTRACT_NAMEN option.") :arrow_upper_right:
+[TEMP_EXTRACT_DIRECTORY Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a65cd33584f210159126844d7b32b6a8.html "Controls whether a user is allowed to use the data extraction facility. Also controls the directory into which temp extract files are placed, and overrides a directory path specified in the TEMP_EXTRACT_NAMEN option.") :arrow_upper_right:
 

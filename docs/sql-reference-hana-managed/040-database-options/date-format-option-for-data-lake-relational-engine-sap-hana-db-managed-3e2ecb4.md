@@ -12,7 +12,7 @@ Sets the format used for dates retrieved from the database.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -22,7 +22,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be 
 ## Syntax
 
 ```
-DATE_FORMAT = <string_expression>;
+DATE_FORMAT = <string_expression>
 ```
 
 
@@ -333,7 +333,7 @@ SELECT dateformat ( cast ('2011/01/01' as date ), 'yyyy/Mm/Dd' );
 returns this value:
 
 ```
-2011/1/1l
+2011/1/1
 ```
 
 
@@ -419,9 +419,9 @@ mm-yyyy
 
 [SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md "Grant database options temporarily for the current connection only on a data lake Relational Engine relational container.")
 
-[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
+[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
 
 [DATEFORMAT Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../050-system-sql-functions/dateformat-function-for-data-lake-relational-engine-sap-hana-db-managed-d8071cc.md "Returns a string representing a date expression in the specified format.")
 
-[DATE_FORMAT Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a632563684f2101581da9a102de30f81.html "Sets the format used for dates retrieved from the database.") :arrow_upper_right:
+[DATE_FORMAT Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a632563684f2101581da9a102de30f81.html "Sets the format used for dates retrieved from the database.") :arrow_upper_right:
 

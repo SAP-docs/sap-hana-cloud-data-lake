@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 DROP LDAP SERVER <ldapua-server-name>
-   [ WITH DROP ALL REFERENCES ] [ WITH SUSPEND ];
+   [ WITH DROP ALL REFERENCES ] [ WITH SUSPEND ]
 ```
 
 

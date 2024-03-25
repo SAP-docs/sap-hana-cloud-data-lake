@@ -202,5 +202,5 @@ You must specify the `FROM` *<table-name\>* clause.
 **Related Information**  
 
 
-[ROWID Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/77bc1bdbb46f48368bb3398b4cabaea0.html "Returns the internal row ID value for each row of the table.") :arrow_upper_right:
+[ROWID Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/77bc1bdbb46f48368bb3398b4cabaea0.html "Returns the internal row ID value for each row of the table.") :arrow_upper_right:
 

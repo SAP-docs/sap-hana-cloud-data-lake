@@ -105,5 +105,5 @@ DATE
 **Related Information**  
 
 
-[YMD Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a592fc9184f21015bfa68c6078363fae.html "Returns a date value corresponding to the given year, month, and day of the month.") :arrow_upper_right:
+[YMD Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a592fc9184f21015bfa68c6078363fae.html "Returns a date value corresponding to the given year, month, and day of the month.") :arrow_upper_right:
 

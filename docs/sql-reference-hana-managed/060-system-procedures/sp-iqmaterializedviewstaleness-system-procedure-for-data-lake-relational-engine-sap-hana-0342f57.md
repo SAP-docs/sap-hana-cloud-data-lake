@@ -18,7 +18,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sp_iqmaterializedviewstaleness( '<view-name>', '<schema-name>' );
+sp_iqmaterializedviewstaleness( '<view-name>', '<schema-name>' )
 ```
 
 
@@ -60,19 +60,12 @@ Specify the user-created schema name for the *<view-name\>*. The referenced tabl
 
 ## Result Set
 
-sp\_iqmaterializedviewstaleness displays the following information:
-
 
 <table>
 <tr>
 <th valign="top">
 
-Column
-
-</th>
-<th valign="top">
-
-Data Type
+Column Name
 
 </th>
 <th valign="top">
@@ -89,11 +82,6 @@ view\_owner
 </td>
 <td valign="top">
 
-varchar\(257\)
-
-</td>
-<td valign="top">
-
 The owner of the materialized view.
 
 </td>
@@ -106,11 +94,6 @@ view\_name
 </td>
 <td valign="top">
 
-varchar\(257\)
-
-</td>
-<td valign="top">
-
 The name of the materialized view.
 
 </td>
@@ -119,11 +102,6 @@ The name of the materialized view.
 <td valign="top">
 
 stale
-
-</td>
-<td valign="top">
-
-char\(1\),
 
 </td>
 <td valign="top">
@@ -145,11 +123,6 @@ stale\_time
 </td>
 <td valign="top">
 
-INTEGER
-
-</td>
-<td valign="top">
-
 The amount of time, in minutes, that the visible version of the materialized view has been stale relative to the start time of the active transaction or NULL if the materialized view is fresh.
 
 </td>
@@ -162,11 +135,6 @@ known\_stale\_time
 </td>
 <td valign="top">
 
-TIMESTAMP
-
-</td>
-<td valign="top">
-
 The known stale time for the visible version of the materialized view, or NULL if it is fresh. The known stale time may be non-NULL even if the materialized view is fresh. This occurs if a transaction not visible to the querying transaction makes a change to a base table and commits.
 
 </td>
@@ -175,11 +143,6 @@ The known stale time for the visible version of the materialized view, or NULL i
 <td valign="top">
 
 txn\_begin\_time
-
-</td>
-<td valign="top">
-
-TIMESTAMP
 
 </td>
 <td valign="top">
@@ -252,6 +215,74 @@ This example returns staleness information for materialized view MV\_T10 owned b
 CALL sp_iqmaterializedviewstaleness('MV_T10','USER1');
 ```
 
+
+<table>
+<tr>
+<th valign="top">
+
+view\_owner
+
+</th>
+<th valign="top">
+
+view\_name
+
+</th>
+<th valign="top">
+
+stale
+
+</th>
+<th valign="top">
+
+stale\_time
+
+</th>
+<th valign="top">
+
+known\_stale\_time
+
+</th>
+<th valign="top">
+
+txn\_begin\_time
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+MV\_T10
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+24:44.0
+
+</td>
+</tr>
+</table>
+
 **Related Information**  
 
 
@@ -265,5 +296,5 @@ CALL sp_iqmaterializedviewstaleness('MV_T10','USER1');
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-817277b.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sp_iqmaterializedviewstaleness Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a762f3bcb4b14014821890ed5e6a25b8.html "Displays staleness information about the visible version of a materialized view.") :arrow_upper_right:
+[sp_iqmaterializedviewstaleness Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a762f3bcb4b14014821890ed5e6a25b8.html "Displays staleness information about the visible version of a materialized view.") :arrow_upper_right:
 

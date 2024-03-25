@@ -92,5 +92,5 @@ supplier#021     10,000             5
 
 [RANK Function \[Analytical\] for Data Lake Relational Engine](rank-function-analytical-for-data-lake-relational-engine-a57337e.md "Ranks items in a group.")
 
-[DENSE_RANK Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/f68bfad26916474fba05b8e4555bf58e.html "Ranks items in a group.") :arrow_upper_right:
+[DENSE_RANK Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/f68bfad26916474fba05b8e4555bf58e.html "Ranks items in a group.") :arrow_upper_right:
 

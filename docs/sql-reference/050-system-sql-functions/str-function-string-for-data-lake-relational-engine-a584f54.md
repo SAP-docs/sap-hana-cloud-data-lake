@@ -107,5 +107,5 @@ If the integer portion of the number cannot fit in the length specified, then th
 **Related Information**  
 
 
-[STR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/6152b1608e3e4c5e898c592f645366b7.html "Returns the string equivalent of a number.") :arrow_upper_right:
+[STR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/6152b1608e3e4c5e898c592f645366b7.html "Returns the string equivalent of a number.") :arrow_upper_right:
 

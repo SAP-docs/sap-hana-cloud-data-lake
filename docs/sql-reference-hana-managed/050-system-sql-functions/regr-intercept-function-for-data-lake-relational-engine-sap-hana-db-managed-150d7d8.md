@@ -135,5 +135,5 @@ SELECT REGR_INTERCEPT( Salary, ( YEAR( NOW() ) - YEAR( BirthDate ) ) )FROM Emplo
 
 [WINDOW Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/window-clause-for-data-lake-relational-engine-sap-hana-db-managed-c83b61b.md "Defines all or part of a window for use with window functions such as AVG and RANK in a SELECT statement.")
 
-[REGR_INTERCEPT Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57548bd84f21015a72397703df578ba.html "Computes the y-intercept of the linear regression line that best fits the dependent and independent variables.") :arrow_upper_right:
+[REGR_INTERCEPT Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a57548bd84f21015a72397703df578ba.html "Computes the y-intercept of the linear regression line that best fits the dependent and independent variables.") :arrow_upper_right:
 

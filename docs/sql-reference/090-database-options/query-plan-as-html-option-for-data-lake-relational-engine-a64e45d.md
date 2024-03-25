@@ -21,7 +21,7 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-QUERY_PLAN_AS_HTML = { ON | OFF };
+QUERY_PLAN_AS_HTML = { ON | OFF }
 ```
 
 
@@ -162,21 +162,21 @@ Output generated from a query plan named Q101. The leader node \(L\) *<query-num
 Output generated from the leader node:
 
 ```
-HDLADMIN_L_1_Q101_20121108_083000_94.html;
+HDLADMIN_L_1_Q101_20121108_083000_94.html
 ```
 
 Output from one of the worker nodes:
 
 ```
 HDLADMIN_W_2_Q101_20121108_083000_94_2.html
-HDLADMIN_W_2_Q101_20121108_083000_94_1.html;
+HDLADMIN_W_2_Q101_20121108_083000_94_1.html
 ```
 
 Corresponding output from another worker:
 
 ```
 HDLADMIN_W_3_Q101_20121113-054928_94_2.html
-HDLADMIN_W_3_Q101_20121113-054933_94_1.html;
+HDLADMIN_W_3_Q101_20121113-054933_94_1.html
 ```
 
 **Related Information**  
@@ -190,7 +190,7 @@ HDLADMIN_W_3_Q101_20121113-054933_94_1.html;
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[QUERY_PLAN_AS_HTML Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/486458ad1942418e9d70db482284c485.html "Generates graphical query plans in HTML format for viewing in a Web browser.") :arrow_upper_right:
+[QUERY_PLAN_AS_HTML Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/486458ad1942418e9d70db482284c485.html "Generates graphical query plans in HTML format for viewing in a Web browser.") :arrow_upper_right:
 
 [QUERY\_NAME Option for Data Lake Relational Engine](query-name-option-for-data-lake-relational-engine-a64cbce.md "Gives a name to an executed query in its query plan.")
 

@@ -105,5 +105,5 @@ DATE
 **Related Information**  
 
 
-[YMD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/0cf8ed274a1d4591baedd1691a352a48.html "Returns a date value corresponding to the given year, month, and day of the month.") :arrow_upper_right:
+[YMD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/0cf8ed274a1d4591baedd1691a352a48.html "Returns a date value corresponding to the given year, month, and day of the month.") :arrow_upper_right:
 

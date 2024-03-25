@@ -138,5 +138,5 @@ SELECT QUARTER ( '1987/05/02' ) FROM iq_dummy;
 
 [QUARTERSTR Function \[Date and Time\] for Data Lake Relational Engine](quarterstr-function-date-and-time-for-data-lake-relational-engine-8fbd6b7.md "Returns a number indicating the quarter of the year from the supplied date expression and quarter start month.")
 
-[QUARTER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/57330a53cc29480ebf71c3bc97486052.html "Returns a number indicating the quarter of the year from the supplied date expression.") :arrow_upper_right:
+[QUARTER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/57330a53cc29480ebf71c3bc97486052.html "Returns a number indicating the quarter of the year from the supplied date expression.") :arrow_upper_right:
 

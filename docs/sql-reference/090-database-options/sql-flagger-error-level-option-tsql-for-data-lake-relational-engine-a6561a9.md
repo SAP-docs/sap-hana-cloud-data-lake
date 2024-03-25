@@ -21,7 +21,7 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-SQL_FLAGGER_ERROR_LEVEL = <string_expression>;
+SQL_FLAGGER_ERROR_LEVEL = <string_expression>
 ```
 
 
@@ -162,5 +162,5 @@ For compatibility with previous data lake Relational Engine versions, the follow
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[SQL_FLAGGER_ERROR_LEVEL Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/8d0419f947274ddfb7c2be8bb35ac237.html "Controls the behavior in response to any SQL code that is not part of the specified standard.") :arrow_upper_right:
+[SQL_FLAGGER_ERROR_LEVEL Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/8d0419f947274ddfb7c2be8bb35ac237.html "Controls the behavior in response to any SQL code that is not part of the specified standard.") :arrow_upper_right:
 

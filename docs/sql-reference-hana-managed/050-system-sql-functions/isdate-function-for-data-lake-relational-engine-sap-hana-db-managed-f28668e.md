@@ -87,5 +87,5 @@ select
 **Related Information**  
 
 
-[ISDATE Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a559f0f684f21015b95ee838e6da62dc.html "Tests whether a string argument can be converted to a date.") :arrow_upper_right:
+[ISDATE Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a559f0f684f21015b95ee838e6da62dc.html "Tests whether a string argument can be converted to a date.") :arrow_upper_right:
 

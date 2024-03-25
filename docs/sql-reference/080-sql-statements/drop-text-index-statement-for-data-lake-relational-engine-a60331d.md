@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 DROP TEXT INDEX <text-index-name>
-   ON [ { <owner> | <schema-name> }.]<table-name>;
+   ON [ { <owner> | <schema-name> }.]<table-name>
 ```
 
 

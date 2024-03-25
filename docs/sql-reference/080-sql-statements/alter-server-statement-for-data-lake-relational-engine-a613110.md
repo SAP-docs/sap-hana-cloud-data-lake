@@ -18,10 +18,10 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 ALTER SERVER <server-name> 
-   [ CLASS '{ ASEODBC | HANAODBC | ODBC | IQODBC }' ]
-   [ USING '<SQL_endpoint>' ]
+   [ CLASS '{ ASEODBC | HANAODBC| IQODBC }' ]
+   [ USING '<SQL-endpoint> ]
    [ CAPABILITY '<cap-name>' { ON | OFF } ]
-   [ CONNECTION CLOSE [ CURRENT | ALL | <connection-id> ] ];
+   [ CONNECTION CLOSE [ CURRENT | ALL | <connection-id> ] ]
 ```
 
 
@@ -39,12 +39,22 @@ ALTER SERVER <server-name>
 <dl>
 <dt><b>
 
-*<SQL\_endpoint\>*
+*<SQL-endpoint\>*
 
 </b></dt>
 <dd>
 
-The ODBC connection parameters for the remote server are dictated by the ODBC driver being used. Only TLS connections are supported.
+The ODBC connection parameters for the remote server are dictated by the ODBC driver being used. Only TLS connections are supported
+
+
+
+</dd>
+<dd>
+
+
+<dl>
+
+</dl>
 
 
 

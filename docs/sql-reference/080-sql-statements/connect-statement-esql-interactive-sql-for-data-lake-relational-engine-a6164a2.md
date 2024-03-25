@@ -30,7 +30,7 @@ CONNECT
    …[ TO <engine-name> ]
    …[ DATABASE <database-name> ]
    …[ AS <connection-name> ]
-   …[ USER ] <userid> [ IDENTIFIED BY ];
+   …[ USER ] <userid> [ IDENTIFIED BY ]
 ```
 
 
@@ -43,7 +43,7 @@ Syntax 2
 <dd>
 
 ```
-CONNECT USING <connect-string>;
+CONNECT USING <connect-string>
 ```
 
 

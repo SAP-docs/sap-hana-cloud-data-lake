@@ -19,7 +19,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 ```
 sa_materialized_view_can_have_refresh_build_type(
    '<refresh-type>', '<build-type>', 
-   '<view_name>', '{ <owner-name> | <schema-name> }' );
+   '<view_name>', '{ <owner-name> | <schema-name> }' )
 ```
 
 
@@ -152,9 +152,7 @@ This procedure returns a table with a list of errors that prevents the specified
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
-
-Also requires one of the following:
+Requires EXECUTE object-level privilege on the procedure, along with one of the following:
 
 -   You own the underlying table of the view
 -   SELECT ANY TABLE system privilege
@@ -168,7 +166,7 @@ Also requires one of the following:
 ## Examples
 
 ```
--- Setup for the following examples:
+-- Setup for the following examples ---
 CREATE TABLE BAR (C1 INT, C2 INT, C3 VARCHAR(10));
 CREATE MATERIALIZED VIEW MV_BAR1 AS SELECT C1, C2, C3 FROM BAR AUTO FULL REFRESH;
 ```
@@ -220,5 +218,5 @@ The materialized view mv1 cannot be changed to incremental or immediate because 
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine](../080-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-faab95d.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_materialized_view_can_have_refresh_build_type System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/46d97724fd354bb68d1c4081bd2576b0.html "Checks whether the materialized view supports the specified refresh and build type properties.") :arrow_upper_right:
+[sa_materialized_view_can_have_refresh_build_type System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/46d97724fd354bb68d1c4081bd2576b0.html "Checks whether the materialized view supports the specified refresh and build type properties.") :arrow_upper_right:
 

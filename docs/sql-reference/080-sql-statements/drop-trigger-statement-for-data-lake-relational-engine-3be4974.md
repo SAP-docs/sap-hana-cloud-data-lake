@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-DROP TRIGGER [ IF EXISTS ] [ <owner>.][<table-name>.]<trigger-name>;
+DROP TRIGGER [ IF EXISTS ] [ <owner>.][<table-name>.]<trigger-name>
 ```
 
 

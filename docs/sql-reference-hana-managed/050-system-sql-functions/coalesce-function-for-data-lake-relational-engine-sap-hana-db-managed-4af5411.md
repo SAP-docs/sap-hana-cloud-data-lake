@@ -63,5 +63,5 @@ SELECT COALESCE( NULL, 34, 13, 0 ) FROM iq_dummy;
 **Related Information**  
 
 
-[COALESCE Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a53d627984f21015a1fa9a5eb36a5dde.html "Returns the first non-NULL expression from a list.") :arrow_upper_right:
+[COALESCE Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a53d627984f21015a1fa9a5eb36a5dde.html "Returns the first non-NULL expression from a list.") :arrow_upper_right:
 

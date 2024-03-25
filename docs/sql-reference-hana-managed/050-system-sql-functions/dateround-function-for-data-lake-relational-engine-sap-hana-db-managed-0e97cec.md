@@ -229,5 +229,5 @@ If data lake Relational Engine rounds to a multiple of the week date part, then 
 **Related Information**  
 
 
-[DATEROUND Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5483a3f84f21015ba1087485982b02f.html "Calculates a new date, time, or datetime value by rounding the provided value up or down to the nearest multiple of the specified value with the specified granularity.") :arrow_upper_right:
+[DATEROUND Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5483a3f84f21015ba1087485982b02f.html "Calculates a new date, time, or datetime value by rounding the provided value up or down to the nearest multiple of the specified value with the specified granularity.") :arrow_upper_right:
 

@@ -26,7 +26,7 @@ FETCH
        | INTO <variable-list> }
    ... [ PURGE ] [ BLOCK <n> ] [ ARRAY <fetch-count> ]
    ... INTO <variable-list>
-   ... IQ CACHE <row-count>;
+   ... IQ CACHE <row-count>
 ```
 
 

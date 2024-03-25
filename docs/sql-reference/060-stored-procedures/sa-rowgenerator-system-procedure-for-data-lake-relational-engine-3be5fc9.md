@@ -17,11 +17,8 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_rowgenerator(
- [ <rstart>
- [, <rend>
- [, <rstep> ] ] ]
-);
+sa_rowgenerator( [ <rstart>[, <rend>
+   [, <rstep> ] ] ] )
 ```
 
 
@@ -132,7 +129,7 @@ No rows are returned if you do not specify correct start and end values and a po
 You can emulate the behavior of the RowGenerator table with the following statement:
 
 ```
-SELECT row_num FROM sa_rowgenerator( 1, 255 );
+SELECT row_num FROM sa_rowgenerator( 1, 255 )
 ```
 
 
@@ -306,5 +303,5 @@ SELECT DATEADD ( day, row_num, '1900-01-01' ) AS d, DATEPART ( week, d ) w
 **Related Information**  
 
 
-[sa_rowgenerator System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7b99d032cfbe4f80bde904bee1902662.html "Returns a result set with rows between a specified start and end value.") :arrow_upper_right:
+[sa_rowgenerator System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7b99d032cfbe4f80bde904bee1902662.html "Returns a result set with rows between a specified start and end value.") :arrow_upper_right:
 

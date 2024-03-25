@@ -87,5 +87,5 @@ This signifies that the two values are 80% similar.
 **Related Information**  
 
 
-[SIMILAR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57f56c484f21015b142b043da48dee3.html "Returns an integer between 0 and 100 representing the similarity between two strings.") :arrow_upper_right:
+[SIMILAR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a57f56c484f21015b142b043da48dee3.html "Returns an integer between 0 and 100 representing the similarity between two strings.") :arrow_upper_right:
 

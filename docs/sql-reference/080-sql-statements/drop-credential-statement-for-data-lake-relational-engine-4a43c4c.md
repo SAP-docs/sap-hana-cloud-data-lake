@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 DROP CREDENTIAL FOR [ USER <user-name> ] COMPONENT <component-id> 
-   PURPOSE <purpose-def> TYPE <type-def>;
+   PURPOSE <purpose-def> TYPE <type-def>
 ```
 
 
@@ -131,5 +131,5 @@ DROP CREDENTIAL FOR USER user1 COMPONENT 'SAPHDLRELOADUNLOAD' PURPOSE 'AccessHDL
 
 [CREATE CREDENTIAL Statement for Data Lake Relational Engine](create-credential-statement-for-data-lake-relational-engine-642b497.md "Creates a component-specific or application-specific credential.")
 
-[DROP CREDENTIAL Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/b1503e6de40c4360b44486c19f7478c2.html "Drops an existing component-specific or application-specific credential.") :arrow_upper_right:
+[DROP CREDENTIAL Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/b1503e6de40c4360b44486c19f7478c2.html "Drops an existing component-specific or application-specific credential.") :arrow_upper_right:
 

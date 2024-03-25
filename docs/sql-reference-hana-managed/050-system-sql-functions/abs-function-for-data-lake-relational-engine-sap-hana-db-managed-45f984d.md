@@ -127,5 +127,5 @@ SELECT ABS( -66 ) FROM iq_dummy;
 **Related Information**  
 
 
-[ABS Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a532439384f21015be5cb176f7ecbae4.html "Returns the absolute value of a numeric expression.") :arrow_upper_right:
+[ABS Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a532439384f21015be5cb176f7ecbae4.html "Returns the absolute value of a numeric expression.") :arrow_upper_right:
 

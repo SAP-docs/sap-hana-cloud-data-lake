@@ -74,5 +74,5 @@ CREATE SCHEMA Factory IN FILES_SERVICE;
 **Related Information**  
 
 
-[CREATE SCHEMA Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/5cd793c72fd34f4bb337698fa11ea3d0.html "Create a schema, which is a collection of tables, managed by SQL on Files.") :arrow_upper_right:
+[CREATE SCHEMA Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/5cd793c72fd34f4bb337698fa11ea3d0.html "Create a schema, which is a collection of tables, managed by SQL on Files.") :arrow_upper_right:
 

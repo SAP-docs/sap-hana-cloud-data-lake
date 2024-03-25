@@ -112,5 +112,5 @@ FROM iq_dummy;
 **Related Information**  
 
 
-[STUFF Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a58705b984f21015b314be7887f1392a.html "Deletes a number of characters from one string and replaces them with another string.") :arrow_upper_right:
+[STUFF Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a58705b984f21015b314be7887f1392a.html "Deletes a number of characters from one string and replaces them with another string.") :arrow_upper_right:
 

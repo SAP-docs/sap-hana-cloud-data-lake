@@ -131,5 +131,5 @@ If arguments *<string-expression-1\>* and *<string-expression-2\>* are of binary
 
 [BYTE\_LOCATE Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](byte-locate-function-for-data-lake-relational-engine-sap-hana-db-managed-65d4388.md "Returns the position of one BYTE string within another.")
 
-[LOCATE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a55fae8484f2101591b6b7d46dca7cc4.html "Returns the position of one string within another.") :arrow_upper_right:
+[LOCATE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a55fae8484f2101591b6b7d46dca7cc4.html "Returns the position of one string within another.") :arrow_upper_right:
 

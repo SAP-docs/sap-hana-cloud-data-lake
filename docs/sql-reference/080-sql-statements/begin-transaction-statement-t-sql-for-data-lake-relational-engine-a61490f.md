@@ -19,7 +19,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ## Syntax
 
 ```
-BEGIN TRAN[SACTION] [ <transaction-name> ];
+BEGIN TRAN[SACTION] [ <transaction-name> ]
 ```
 
 

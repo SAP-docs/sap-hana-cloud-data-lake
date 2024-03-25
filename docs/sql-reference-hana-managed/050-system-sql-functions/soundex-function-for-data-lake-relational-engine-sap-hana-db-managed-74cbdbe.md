@@ -81,5 +81,5 @@ SELECT SOUNDEX( 'Smith' ), SOUNDEX( 'Smythe' ) FROM iq_dummy;
 **Related Information**  
 
 
-[SOUNDEX Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a580dde084f21015b422a82fcc67a159.html "Returns a number representing the sound of a string.") :arrow_upper_right:
+[SOUNDEX Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a580dde084f21015b422a82fcc67a159.html "Returns a number representing the sound of a string.") :arrow_upper_right:
 

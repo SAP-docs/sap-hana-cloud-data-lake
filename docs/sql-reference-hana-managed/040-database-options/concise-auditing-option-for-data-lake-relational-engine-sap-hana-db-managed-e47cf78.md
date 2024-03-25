@@ -12,7 +12,7 @@ Controls whether concise auditing or legacy auditing is used.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -178,12 +178,12 @@ No
 
 An instance restart is required if you change the option.
 
-Concise auditing behavior is introduced in QRC 1/2024. Setting this option to OFF reverts to legacy auditing behavior, which is deprecated.
+Concise auditing behavior was introduced in QRC 1/2024. Setting this option to OFF reverts to legacy auditing behavior, which is deprecated.
 
 **Related Information**  
 
 
-[Auditing Database Events](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2023_4_QRC/en-US/4c20fb59d0e848e09ffb191c9d2c0b16.html "Auditing tracks all of the activity performed on a data lake Relational Engine database.") :arrow_upper_right:
+[Auditing Database Events](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/4c20fb59d0e848e09ffb191c9d2c0b16.html "Auditing tracks all of the activity performed on a data lake Relational Engine database.") :arrow_upper_right:
 
-[CONCISE_AUDITING Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/742c50f6746f4fb488ed6498e203def4.html "Controls whether concise auditing or legacy auditing is used.") :arrow_upper_right:
+[CONCISE_AUDITING Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/742c50f6746f4fb488ed6498e203def4.html "Controls whether concise auditing or legacy auditing is used.") :arrow_upper_right:
 

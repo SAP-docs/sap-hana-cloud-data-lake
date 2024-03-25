@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_performance_diagnostics( );
+sa_performance_diagnostics( )
 ```
 
 
@@ -624,7 +624,7 @@ Returns the number of snapshots associated with the connection.
 The `sa_performance_diagnostics` system procedure returns a result set consisting of a set of request timing properties and statistics if the server has been told to collect the information. Recording of request timing information must be turned on the database server before calling `sa_performance_diagnostics`. To do this, specify the -zt option when starting the database server or execute the following:
 
 ```
-CALL sa_server_option( 'RequestTiming','ON' );
+CALL sa_server_option( 'RequestTiming','ON' )
 ```
 
 

@@ -107,5 +107,5 @@ If the integer portion of the number cannot fit in the length specified, then th
 **Related Information**  
 
 
-[STR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a584f54284f21015bb43e961aa835036.html "Returns the string equivalent of a number.") :arrow_upper_right:
+[STR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a584f54284f21015bb43e961aa835036.html "Returns the string equivalent of a number.") :arrow_upper_right:
 

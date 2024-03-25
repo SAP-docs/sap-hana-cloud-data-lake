@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_get_user_status( );
+sa_get_user_status( )
 ```
 
 
@@ -269,9 +269,7 @@ If the user is authenticated using LDAP User Authentication, the output includes
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure.
-
-To view information about other users, also requires the MANAGE ANY USER system privilege.
+Requires EXECUTE object-level privilege on the procedure. To view information about other users, also requires the MANAGE ANY USER system privilege.
 
 
 

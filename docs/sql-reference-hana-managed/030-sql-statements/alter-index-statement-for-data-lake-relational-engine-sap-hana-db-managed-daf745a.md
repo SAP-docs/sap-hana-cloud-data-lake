@@ -10,14 +10,14 @@ Renames indexes in base or global temporary tables, foreign key role names of in
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
 ```
 ALTER { INDEX <index-name> | [ INDEX ] FOREIGN KEY <role-name> | [ INDEX ] PRIMARY KEY }
    ON [ <schema-name>.]<table-name>
-     [ RENAME { TO | AS } <new-name> ];
+     [ RENAME { TO | AS } <new-name> ]
 ```
 
 
@@ -80,7 +80,7 @@ Attempts to alter an index in a local temporary table return the error ***index 
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -144,5 +144,5 @@ Automatic commit. Clears the Results tab in the Results pane in Interactive SQL.
 
 [DROP INDEX Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-index-statement-for-data-lake-relational-engine-sap-hana-db-managed-52fb1c7.md "Removes an index from the database.")
 
-[ALTER INDEX Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a612b20e84f21015b756a29e4fc11d93.html "Renames indexes in base or global temporary tables, foreign key role names of indexes and foreign keys explicitly created by a user, or changes the clustered nature of an index on a catalog store table. You can't rename indexes created to enforce key constraints.") :arrow_upper_right:
+[ALTER INDEX Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a612b20e84f21015b756a29e4fc11d93.html "Renames indexes in base or global temporary tables, foreign key role names of indexes and foreign keys explicitly created by a user, or changes the clustered nature of an index on a catalog store table. You can't rename indexes created to enforce key constraints.") :arrow_upper_right:
 

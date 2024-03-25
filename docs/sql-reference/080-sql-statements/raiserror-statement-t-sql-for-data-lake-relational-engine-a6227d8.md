@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-RAISERROR <error-number> [ <format-string> ] [, <arg-list >];
+RAISERROR <error-number> [ <format-string> ] [, <arg-list >]
 ```
 
 

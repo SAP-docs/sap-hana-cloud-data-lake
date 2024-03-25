@@ -119,5 +119,5 @@ supplier#021     10000             1
 **Related Information**  
 
 
-[PERCENT_RANK Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a56d183584f21015881bb3f46bb765ee.html "Computes the (fractional) position of one row returned from a query with respect to the other rows returned by the query, as defined by the ORDER BY clause.") :arrow_upper_right:
+[PERCENT_RANK Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a56d183584f21015881bb3f46bb765ee.html "Computes the (fractional) position of one row returned from a query with respect to the other rows returned by the query, as defined by the ORDER BY clause.") :arrow_upper_right:
 

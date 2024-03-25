@@ -84,5 +84,5 @@ SELECT UCASE( 'ChocoLate' ) FROM iq_dummy;
 
 [UPPER Function \[String\] for Data Lake Relational Engine](upper-function-string-for-data-lake-relational-engine-a58cbc0.md "Converts all characters in a string to uppercase.")
 
-[UCASE_syntax Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3c1a297f45ba489283c80d39e97a4218.html "Converts all characters in a string to uppercase.") :arrow_upper_right:
+[UCASE_syntax Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3c1a297f45ba489283c80d39e97a4218.html "Converts all characters in a string to uppercase.") :arrow_upper_right:
 

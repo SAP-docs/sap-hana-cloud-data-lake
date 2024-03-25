@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-DROP INDEX [ IF EXISTS ] [ { <owner> | <schema-name> }.]<table-name>.]<index-name>;
+DROP INDEX [ IF EXISTS ] [ { <owner> | <schema-name> }.]<table-name>.]<index-name>
 ```
 
 
@@ -116,5 +116,5 @@ DROP INDEX myindex1;
 
 [CREATE INDEX Statement for Data Lake Relational Engine](create-index-statement-for-data-lake-relational-engine-a617ca4.md "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.")
 
-[DROP INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/52fb1c748541447ebde630204fada322.html "Removes an index from the database.") :arrow_upper_right:
+[DROP INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/52fb1c748541447ebde630204fada322.html "Removes an index from the database.") :arrow_upper_right:
 

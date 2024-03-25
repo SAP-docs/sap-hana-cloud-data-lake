@@ -122,5 +122,5 @@ When the `ansi_substring` database option is set to ON \(default\), negative val
 **Related Information**  
 
 
-[SUBSTRING Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a58787e784f21015acc5ecadf5b1a9a0.html "Returns a substring of a string.") :arrow_upper_right:
+[SUBSTRING Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a58787e784f21015acc5ecadf5b1a9a0.html "Returns a substring of a string.") :arrow_upper_right:
 

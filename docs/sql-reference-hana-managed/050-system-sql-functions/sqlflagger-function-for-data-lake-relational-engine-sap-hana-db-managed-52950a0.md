@@ -104,5 +104,5 @@ You can also use the iqsqlpp SQL Preprocessor Utility to flag any Embedded SQL t
 **Related Information**  
 
 
-[SQLFLAGGER Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a581e75f84f210158c3cd3ba6b97a9eb.html "Returns the conformity of a given SQL statement to a specified standard.") :arrow_upper_right:
+[SQLFLAGGER Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a581e75f84f210158c3cd3ba6b97a9eb.html "Returns the conformity of a given SQL statement to a specified standard.") :arrow_upper_right:
 

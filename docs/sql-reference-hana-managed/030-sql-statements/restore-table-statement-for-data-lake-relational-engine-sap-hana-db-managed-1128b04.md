@@ -10,7 +10,7 @@ Restore backed up tables in data lake Relational Engine.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
@@ -18,7 +18,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
 RESTORE TABLE <schema-name>.<table_name> 
    FROM <location>
    KEY <encryption_key> 
-   CONNECTION_STRING <connection_string>;
+   CONNECTION_STRING <connection_string>
 ```
 
 
@@ -413,7 +413,7 @@ Find your AWS *<access\_key\_id\>*, *<secret\_access\_key\>*, and *<AWS\_region\
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -514,7 +514,7 @@ RESTORE TABLE HDL_T100
 
 [BACKUP TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](backup-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-825d3ab.md "Backup data lake Relational Engine tables.")
 
-[Table-Level Backup and Restore of Data in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/5483df1be61442c18d65e0ee66fe27a1.html "Data lake Relational Engine provides table-level backup and restore functionality that enables you to backup and restore individual tables by creating an image of data (FP index in binary format) for all columns in a data lake Relational Engine table.") :arrow_upper_right:
+[Table-Level Backup and Restore of Data in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/5483df1be61442c18d65e0ee66fe27a1.html "Data lake Relational Engine provides table-level backup and restore functionality that enables you to backup and restore individual tables by creating an image of data (FP index in binary format) for all columns in a data lake Relational Engine table.") :arrow_upper_right:
 
-[RESTORE TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a407d9655299472ba67454d6ed26a19b.html "Restore backed up tables in data lake Relational Engine.") :arrow_upper_right:
+[RESTORE TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a407d9655299472ba67454d6ed26a19b.html "Restore backed up tables in data lake Relational Engine.") :arrow_upper_right:
 

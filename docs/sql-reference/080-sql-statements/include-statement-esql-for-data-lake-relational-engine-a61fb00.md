@@ -21,7 +21,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-INCLUDE <filename>;
+INCLUDE <filename>
 ```
 
 

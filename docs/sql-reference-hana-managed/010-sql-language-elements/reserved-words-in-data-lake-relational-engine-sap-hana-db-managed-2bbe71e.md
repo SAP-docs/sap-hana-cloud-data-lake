@@ -14,7 +14,7 @@ SELECT * FROM "SELECT";
 
 If you are using Embedded SQL, then you can use the database library function sql\_needs\_quotes to determine whether a string requires quotation marks. A string requires quotes if it is a reserved word or if it contains a character not ordinarily allowed in an identifier.
 
-SQL is not case-sensitive with respect to keywords. Each of the words in this list may appear in uppercase, lowercase, or any combination of the two. All strings that differ only in capitalization from these words are reserved words.
+SQL is not case-sensitive with respect to keywords. Each of the words in this list may appear in uppercase, lowercase, or any combination of the two. All strings that differ only in capitalization from these words are reserved words. Reserved words in the documentation are always shown in UPPERCASE.
 
 This list lists the SQL reserved words for data lake Relational Engine.
 
@@ -285,7 +285,7 @@ XML
 
 [RESERVED\_KEYWORDS Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/reserved-keywords-option-for-data-lake-relational-engine-sap-hana-db-managed-991b4fb.md "Turns on individual keywords that are disabled by default.")
 
-[Reserved Words in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a4ec20ca84f2101599e4ca641dea6f76.html "Some keywords in SQL are also reserved words.") :arrow_upper_right:
+[Reserved Words in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a4ec20ca84f2101599e4ca641dea6f76.html "Some keywords in SQL are also reserved words.") :arrow_upper_right:
 
 [Keywords in Data Lake Relational Engine \(SAP HANA DB-Managed\)](keywords-in-data-lake-relational-engine-sap-hana-db-managed-ea6e823.md "Each SQL statement contains one or more keywords.")
 

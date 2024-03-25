@@ -18,7 +18,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sp_list_directory( <root_path> [, <max_depth> ] );
+sp_list_directory( <root_path> [, <max_depth> ] )
 ```
 
 
@@ -390,5 +390,5 @@ drwxr-x---
 **Related Information**  
 
 
-[sp_list_directory System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/81790c1c6ce21014b303ec9036456fdb.html "Returns information about the files and subdirectories in a specified directory.") :arrow_upper_right:
+[sp_list_directory System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/81790c1c6ce21014b303ec9036456fdb.html "Returns information about the files and subdirectories in a specified directory.") :arrow_upper_right:
 

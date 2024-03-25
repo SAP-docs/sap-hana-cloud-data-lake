@@ -17,12 +17,8 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_validate(
-[ <tbl_name>
-[, <owner_name> ] ]
-[, <check_type> ] ]
-[, <isolation_type> ] ]
-);
+sa_validate( [ <tbl_name>[, <owner_name>
+   [, <check_type>[, <isolation_type> ] ] ] ] )
 ```
 
 
@@ -253,7 +249,7 @@ All tables, materialized views, and indexes in the database are validated \(equi
 </td>
 <td valign="top">
 
-If *<owner\_name\>* is NULL, then all tables matching *<tbl\_name\>*, their materialized views, and their indexes are validated.
+x
 
 </td>
 </tr>
@@ -374,7 +370,7 @@ No error detected
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 </tr>

@@ -17,8 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-<text>[, <config_name>[, <owner> ] ] )sa_char_terms(; 
-   
+sa_char_terms ( <text>[, <config_name>[, <owner> ] ] )
 ```
 
 

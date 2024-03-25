@@ -20,7 +20,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 REVOKE { <object-level-privilege> [,...]
    ON { [ <owner>.]<object-name> 
       | SCHEMA <schema-name> } 
-   FROM <user_role_shema> [,...];
+   FROM <user_role_shema> [,...]
 ```
 
 

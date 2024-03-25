@@ -529,5 +529,5 @@ SELECT LAST_VALUE (COL1+2 ORDER BY COL2) from T1;
 
 [WINDOW Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/window-clause-for-data-lake-relational-engine-sap-hana-db-managed-c83b61b.md "Defines all or part of a window for use with window functions such as AVG and RANK in a SELECT statement.")
 
-[LAST_VALUE Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a55bfa7784f21015b86bd5dcfa28a6a5.html "Returns the last value from a set of values.") :arrow_upper_right:
+[LAST_VALUE Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a55bfa7784f21015b86bd5dcfa28a6a5.html "Returns the last value from a set of values.") :arrow_upper_right:
 

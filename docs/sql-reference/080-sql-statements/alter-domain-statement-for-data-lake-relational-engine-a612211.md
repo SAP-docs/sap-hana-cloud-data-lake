@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 ALTER { DOMAIN | DATATYPE } <user-type>
-   RENAME <new-name>;
+   RENAME <new-name>
 ```
 
 

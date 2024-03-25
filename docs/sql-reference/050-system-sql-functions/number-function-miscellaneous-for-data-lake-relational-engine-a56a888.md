@@ -111,5 +111,5 @@ WHERE DepartmentID > 10;
 **Related Information**  
 
 
-[NUMBER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/473f30fba028466f85cbeb5397f95320.html "Generates numbers starting at 1 for each successive row in the results of the query.") :arrow_upper_right:
+[NUMBER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/473f30fba028466f85cbeb5397f95320.html "Generates numbers starting at 1 for each successive row in the results of the query.") :arrow_upper_right:
 

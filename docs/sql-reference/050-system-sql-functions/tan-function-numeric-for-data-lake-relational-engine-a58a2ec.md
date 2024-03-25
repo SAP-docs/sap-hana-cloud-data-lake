@@ -65,5 +65,5 @@ SELECT TAN( 0.52 ) FROM iq_dummy;
 
 [Trigonometry Functions in Data Lake Relational Engine](trigonometry-functions-in-data-lake-relational-engine-caafd14.md "Some numeric functions return trigonometric information.")
 
-[TAN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/e2c70619ddcb41a58cd65f42dc1bab7f.html "Returns the tangent of a number.") :arrow_upper_right:
+[TAN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/e2c70619ddcb41a58cd65f42dc1bab7f.html "Returns the tangent of a number.") :arrow_upper_right:
 

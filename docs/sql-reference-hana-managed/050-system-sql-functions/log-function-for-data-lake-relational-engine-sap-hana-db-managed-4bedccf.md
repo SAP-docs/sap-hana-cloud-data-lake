@@ -71,5 +71,5 @@ SELECT LOG( 50 ) FROM iq_dummy;
 **Related Information**  
 
 
-[LOG Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a560332084f21015bf3b92161333e171.html "Returns the natural logarithm of a number.") :arrow_upper_right:
+[LOG Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a560332084f21015bf3b92161333e171.html "Returns the natural logarithm of a number.") :arrow_upper_right:
 

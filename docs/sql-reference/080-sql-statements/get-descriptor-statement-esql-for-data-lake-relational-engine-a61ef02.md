@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 GET DESCRIPTOR <descriptor-name>
-    { <...hostvar> = COUNT } | VALUE <n> <assignment> [,…] };
+    { <...hostvar> = COUNT } | VALUE <n> <assignment> [,…] }
 ```
 
 ```
@@ -31,7 +31,7 @@ GET DESCRIPTOR <descriptor-name>
    | INDICATOR 
    | NAME 
    | NULLABLE 
-   | RETURNED_LENGTH };
+   | RETURNED_LENGTH }
 ```
 
 

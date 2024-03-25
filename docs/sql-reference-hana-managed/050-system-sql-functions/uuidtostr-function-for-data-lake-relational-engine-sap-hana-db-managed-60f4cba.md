@@ -76,5 +76,5 @@ SELECT UUIDTOSTR(pk) FROM T3;
 **Related Information**  
 
 
-[UUIDTOSTR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a58e3ffd84f2101593c5c09c7d64fec4.html "Converts a unique identifier value (UUID, also known as GUID) to a string value.") :arrow_upper_right:
+[UUIDTOSTR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a58e3ffd84f2101593c5c09c7d64fec4.html "Converts a unique identifier value (UUID, also known as GUID) to a string value.") :arrow_upper_right:
 

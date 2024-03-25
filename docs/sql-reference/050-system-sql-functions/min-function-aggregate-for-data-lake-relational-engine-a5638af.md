@@ -88,5 +88,5 @@ FROM Employees;
 
 [MAX Function \[Aggregate\] for Data Lake Relational Engine](max-function-aggregate-for-data-lake-relational-engine-a5626d6.md "Returns the maximum expression value found in each group of rows.")
 
-[MIN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/6cfcb760c23641ab9c5aaa17d056f4c0.html "Returns the minimum expression value found in each group of rows.") :arrow_upper_right:
+[MIN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/6cfcb760c23641ab9c5aaa17d056f4c0.html "Returns the minimum expression value found in each group of rows.") :arrow_upper_right:
 

@@ -74,5 +74,5 @@ The name of the option.
 **Related Information**  
 
 
-[SYSMVOPTIONNAME System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/8c7b66fe90e64870b498bbb2071d3041.html "Each row in the SYSMVOPTIONNAME system view gives the name of an option that is stored for each materialized view at the time of its creation. The value for the option can be found in the SYSMVOPTION system view. The underlying system table for this view is ISYSMVOPTIONNAME.") :arrow_upper_right:
+[SYSMVOPTIONNAME System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/8c7b66fe90e64870b498bbb2071d3041.html "Each row in the SYSMVOPTIONNAME system view gives the name of an option that is stored for each materialized view at the time of its creation. The value for the option can be found in the SYSMVOPTION system view. The underlying system table for this view is ISYSMVOPTIONNAME.") :arrow_upper_right:
 

@@ -63,5 +63,5 @@ SELECT COT( 0.52 ) FROM iq_dummy;
 **Related Information**  
 
 
-[COT Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a540f97a84f21015bfc68a88c0565f03.html "Returns the cotangent of a number, expressed in radians.") :arrow_upper_right:
+[COT Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a540f97a84f21015bfc68a88c0565f03.html "Returns the cotangent of a number, expressed in radians.") :arrow_upper_right:
 

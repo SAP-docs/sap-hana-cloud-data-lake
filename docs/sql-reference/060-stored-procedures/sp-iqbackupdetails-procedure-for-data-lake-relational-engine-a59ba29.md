@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqbackupdetails <backup_id>; 
+sp_iqbackupdetails <backup_id>
 ```
 
 
@@ -313,7 +313,7 @@ The dbfile path from SYSBACKUPDETAIL, if it matches the physical file path \("fi
 To obtain the backup\_id value from the SYSIQBACKUPHISTORY table, execute:
 
 ```
-select * from sysiqbackuphistory;
+select * from sysiqbackuphistory
 ```
 
 

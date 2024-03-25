@@ -17,12 +17,12 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-dbo.sp_iqrowdensity ( '<target>' );
+dbo.sp_iqrowdensity ( '<target>' )
 ```
 
 ```
 '<target>' ::=
-   ( table <table-name> | ( column <column-name> ( … ) );
+   ( table <table-name> | ( column <column-name> ( … ) )
 ```
 
 

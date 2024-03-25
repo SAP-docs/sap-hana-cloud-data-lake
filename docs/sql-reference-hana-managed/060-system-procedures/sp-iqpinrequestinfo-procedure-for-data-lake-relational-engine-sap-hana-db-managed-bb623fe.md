@@ -20,7 +20,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sp_iqpinrequestinfo();
+sp_iqpinrequestinfo()
 ```
 
 
@@ -256,5 +256,5 @@ Requires EXECUTE object-level privilege on the procedure.
 **Related Information**  
 
 
-[sp_iqpinrequestinfo Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/d7eb871b0ea94bc9a20dc8a35a7d08c7.html "Displays information for all persisted pin requests including those that have been unpinned and waiting to be deleted when nobody uses it.") :arrow_upper_right:
+[sp_iqpinrequestinfo Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/d7eb871b0ea94bc9a20dc8a35a7d08c7.html "Displays information for all persisted pin requests including those that have been unpinned and waiting to be deleted when nobody uses it.") :arrow_upper_right:
 

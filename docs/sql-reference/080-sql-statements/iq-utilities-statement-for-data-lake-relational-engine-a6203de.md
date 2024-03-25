@@ -20,7 +20,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 IQ UTILITIES { MAIN | PRIVATE }
     [ INTO ] <table-name>
     { START MONITOR [ '<monitor-options>' ]
-    | STOP MONITOR };
+    | STOP MONITOR }
 ```
 
 ```
@@ -34,7 +34,7 @@ IQ UTILITIES { MAIN | PRIVATE }
     | -file_suffix <suffix>
     | -io 
     | -interval <seconds> 
-    | -threads }...;
+    | -threads }...
 ```
 
 

@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-CREATE JWT PROVIDER <jwt_provider_name> <issuer_clause> <claims_clause> [ <priority_clause> ];
+CREATE JWT PROVIDER <jwt_provider_name> <issuer_clause> <claims_clause> [ <priority_clause> ]
 ```
 
 
@@ -199,7 +199,7 @@ CREATE JWT PROVIDER my_jwt_provider WITH ISSUER 'http://example.com:8080/uaa/oau
 **Related Information**  
 
 
-[JSON Web Token User Authentication](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/90d07ffd877e4b3db69b66c2e585e2e0.html "Data lake Relational Engine supports JSON Web Tokens (JWT) for user authentication.") :arrow_upper_right:
+[JSON Web Token User Authentication](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/90d07ffd877e4b3db69b66c2e585e2e0.html "Data lake Relational Engine supports JSON Web Tokens (JWT) for user authentication.") :arrow_upper_right:
 
 [ALTER JWT PROVIDER Statement for Data Lake Relational Engine](alter-jwt-provider-statement-for-data-lake-relational-engine-f6b0a31.md "Alters a JWT provider in the data lake Relational Engine database.")
 

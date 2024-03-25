@@ -21,7 +21,7 @@ GRANT <object-level-privilege> [, …]
    ON { [ <owner>.]<object-name>
        | SCHEMA <schema-name> } 
    TO <user_role_schema> [, …]
-   [ WITH GRANT OPTION ];
+   [ WITH GRANT OPTION ]
 ```
 
 

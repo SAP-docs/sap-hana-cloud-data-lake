@@ -22,7 +22,7 @@ BACKUP TABLE { <owner> | <schema-name> }.<table_name> TO <location>
    KEY <encryption_key>
    CONNECTION_STRING <connection_string>
    MAX PART SIZE <integer> BYTES|KB|MB|GB|TB
-   MAX PART WRITERS <integer>;
+   MAX PART WRITERS <integer>
 ```
 
 
@@ -579,9 +579,9 @@ BACKUP TABLE original_table TO
 
 [RESTORE TABLE Statement for Data Lake Relational Engine](restore-table-statement-for-data-lake-relational-engine-a407d96.md "Restore backed up tables in data lake Relational Engine.")
 
-[Table-Level Backup and Restore of Data in Data Lake Relational Engine](https://help.sap.com/viewer/a893f37e84f210158511c41edb6a6367/2023_4_QRC/en-US/77ec0de9476d4ccbbb14c73df86e7c7d.html "Data lake Relational Engine provides table-level backup and restore functionality that enables you to back up and restore individual tables by creating an image of data (FP index in binary format) for all columns in a data lake Relational Engine table.") :arrow_upper_right:
+[Table-Level Backup and Restore of Data in Data Lake Relational Engine](https://help.sap.com/viewer/a893f37e84f210158511c41edb6a6367/2024_1_QRC/en-US/77ec0de9476d4ccbbb14c73df86e7c7d.html "Data lake Relational Engine provides table-level backup and restore functionality that enables you to back up and restore individual tables by creating an image of data (FP index in binary format) for all columns in a data lake Relational Engine table.") :arrow_upper_right:
 
-[BACKUP TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/825d3abe4fad45fa82d7619871808c6a.html "Backup data lake Relational Engine tables.") :arrow_upper_right:
+[BACKUP TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/825d3abe4fad45fa82d7619871808c6a.html "Backup data lake Relational Engine tables.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

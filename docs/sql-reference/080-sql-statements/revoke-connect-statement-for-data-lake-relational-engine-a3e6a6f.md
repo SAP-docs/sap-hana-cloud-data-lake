@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 REVOKE CONNECT
-   FROM <user_id> [,...];
+   FROM <user_id> [,...]
 ```
 
 

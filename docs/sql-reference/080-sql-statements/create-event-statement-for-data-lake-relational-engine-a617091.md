@@ -24,7 +24,7 @@ CREATE [ OR REPLACE ] EVENT <event-name>
    [ HANDLER
        BEGIN
        ...
-       END ];
+       END ]
 ```
 
 ```
@@ -44,7 +44,7 @@ CREATE [ OR REPLACE ] EVENT <event-name>
    |  LogDiskSpace 
    |  "RAISERROR" 
    |  ServerIdle 
-   |  TempDiskSpace };
+   |  TempDiskSpace }
 ```
 
 ```
@@ -55,7 +55,7 @@ CREATE [ OR REPLACE ] EVENT <event-name>
    | > 
    | != 
    | <= 
-   | >= } <value>;
+   | >= } <value>
 ```
 
 ```
@@ -66,7 +66,7 @@ CREATE [ OR REPLACE ] EVENT <event-name>
    [ EVERY <period> { HOURS | MINUTES | SECONDS } ] 
    [ ON { ( <day-of-week>, … ) 
       | ( <day-of-month>, … ) } ] 
-   [ START DATE <start-date> ];
+   [ START DATE <start-date> ]
 ```
 
 

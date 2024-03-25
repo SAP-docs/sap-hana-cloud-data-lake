@@ -24,7 +24,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ALTER VIEW
    ...[ { <owner> | <schema-name> }.]<view-name> [ ( <column-name> [ , … ] ) ]
    ...AS <select-statement>
-   ...[ WITH CHECK OPTION ];
+   ...[ WITH CHECK OPTION ]
 ```
 
 
@@ -34,7 +34,7 @@ ALTER VIEW
 ```
 ALTER VIEW
    ...[ { <owner> | <schema-name> }.]<view-name> 
-   ...{ SET HIDDEN | RECOMPILE | DISABLE | ENABLE };
+   ...{ SET HIDDEN | RECOMPILE | DISABLE | ENABLE }
 ```
 
 
@@ -284,5 +284,5 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
 
-[ALTER VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/6ef54831fa96405b83c2a82cf9a88b9a.html "Replaces a view definition with a modified version.") :arrow_upper_right:
+[ALTER VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/6ef54831fa96405b83c2a82cf9a88b9a.html "Replaces a view definition with a modified version.") :arrow_upper_right:
 

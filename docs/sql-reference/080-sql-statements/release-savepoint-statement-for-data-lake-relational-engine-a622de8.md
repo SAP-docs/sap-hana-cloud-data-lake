@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-RELEASE SAVEPOINT [ <savepoint-name> ];
+RELEASE SAVEPOINT [ <savepoint-name> ]
 ```
 
 

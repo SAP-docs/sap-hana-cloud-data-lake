@@ -19,7 +19,7 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-QUERY_NAME = <string_expression>;
+QUERY_NAME = <string_expression>
 ```
 
 
@@ -137,13 +137,13 @@ No
 You can assign the QUERY\_NAME option any quote-delimited string value, up to 80 characters. For example:
 
 ```
-set temporary option Query_Name = 'my third query';
+set temporary option Query_Name = 'my third query'
 ```
 
 When this option is set, query plans that are sent to the `.iqmsg` file or `.html` file include a line near the top of the plan that looks like:
 
 ```
-Query_Name:  'my third query';
+Query_Name:  'my third query'
 ```
 
 If you set the option to a different value before each query in a script, it is much easier to identify the correct query plan for a particular query. The query name is also added to the file name for HTML query plans. This option has no other effect on the query.
@@ -159,5 +159,5 @@ If you set the option to a different value before each query in a script, it is 
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[QUERY_NAME Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/46c2fe6f4e30441c982519451fa6a6bf.html "Gives a name to an executed query in its query plan.") :arrow_upper_right:
+[QUERY_NAME Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/46c2fe6f4e30441c982519451fa6a6bf.html "Gives a name to an executed query in its query plan.") :arrow_upper_right:
 

@@ -131,5 +131,5 @@ This function returns the value 75.
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[REGR_COUNT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/6ae6fc4e7e5e41489f2f3481cc6f8a3d.html "Returns an integer that represents the number of non-NULL number pairs used to fit the regression line.") :arrow_upper_right:
+[REGR_COUNT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/6ae6fc4e7e5e41489f2f3481cc6f8a3d.html "Returns an integer that represents the number of non-NULL number pairs used to fit the regression line.") :arrow_upper_right:
 

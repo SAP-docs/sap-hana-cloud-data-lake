@@ -21,7 +21,7 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-MATERIALIZED_VIEW_STALENESS_CHECK= { 0 | 1 | 2);
+MATERIALIZED_VIEW_STALENESS_CHECK= { 0 | 1 | 2)
 ```
 
 
@@ -137,5 +137,5 @@ No
 **Related Information**  
 
 
-[MATERIALIZED_VIEW_STALENESS_CHECK Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7f412b6887e147db9f22903b91bba87d.html "Controls which materialized views are checked for staleness.") :arrow_upper_right:
+[MATERIALIZED_VIEW_STALENESS_CHECK Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7f412b6887e147db9f22903b91bba87d.html "Controls which materialized views are checked for staleness.") :arrow_upper_right:
 

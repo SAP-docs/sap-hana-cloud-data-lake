@@ -33,7 +33,7 @@ CREATE EXISTING TABLE [ <owner> .]<proxy-table-name>
    <column-name> <data-type>[,<column-name> <data-type>,...]
 
 <location-string> ::=
-   <remote-server-name>..<remote-schema-name>.<remote-table-name>;
+   <remote-server-name>..<remote-schema-name>.<remote-table-name>
 ```
 
 
@@ -125,18 +125,18 @@ CREATE EXISTING TABLE nation
                               n_name char(25),
                               n_regionkey int,
                               n_comment char(152)) 
-	AT 'SQLonFilesServer1..ExternalSchema1.nation';
+	AT 'SQLonFilesServer1..ExternalSchema1.nation'
 ```
 
 The following example creates a proxy table named `sof_employee` for the Employees table at the remote server RemoteSOF:
 
 ```
 CREATE EXISTING TABLE sof_employee
-	AT 'RemoteSOF..ExternalSchema1.Employees';
+	AT 'RemoteSOF..ExternalSchema1.Employees'
 ```
 
 **Related Information**  
 
 
-[CREATE (Proxy) EXISTING TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/569aa95237b54d28883feeceef487e21.html "Create a new proxy table that represents an existing table on a SQL on Files external catalog.") :arrow_upper_right:
+[CREATE (Proxy) EXISTING TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/569aa95237b54d28883feeceef487e21.html "Create a new proxy table that represents an existing table on a SQL on Files external catalog.") :arrow_upper_right:
 

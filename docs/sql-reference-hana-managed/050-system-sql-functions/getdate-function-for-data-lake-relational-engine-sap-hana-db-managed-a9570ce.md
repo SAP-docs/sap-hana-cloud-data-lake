@@ -49,5 +49,5 @@ SELECT GETDATE( ) FROM iq_dummy;
 **Related Information**  
 
 
-[GETDATE Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a553449784f21015aba2a0fc3f4ce78c.html "Returns the current date and time.") :arrow_upper_right:
+[GETDATE Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a553449784f21015aba2a0fc3f4ce78c.html "Returns the current date and time.") :arrow_upper_right:
 

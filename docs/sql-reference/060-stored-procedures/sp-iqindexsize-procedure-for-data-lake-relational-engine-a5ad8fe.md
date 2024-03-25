@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqindexsize [ [ <owner>.]<table_name>.]<index_name>; 
+sp_iqindexsize [ [ <owner>.]<table_name>.]<index_name>
 ```
 
 
@@ -214,385 +214,14 @@ None
 ## Examples
 
 ```
-sp_iqindexsize ASIQ_IDX_T780_I4_HG;
+--- Setup for the following examples ---
+CREATE TEXT INDEX IDX_EMPLOYEES ON EMPLOYEES( CITY ) IMMEDIATE REFRESH;
 ```
 
-
-<table>
-<tr>
-<th valign="top">
-
-Username
-
-</th>
-<th valign="top">
-
-Indexname
-
-</th>
-<th valign="top">
-
-Type
-
-</th>
-<th valign="top">
-
-Info
-
-</th>
-<th valign="top">
-
-Kbytes
-
-</th>
-<th valign="top">
-
-Pages
-
-</th>
-<th valign="top">
-
-Compressed Pages
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-GROUPO
-
-</td>
-<td valign="top">
-
-GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
-
-</td>
-<td valign="top">
-
-HG
-
-</td>
-<td valign="top">
-
-Total
-
-</td>
-<td valign="top">
-
-288
-
-</td>
-<td valign="top">
-
-4
-
-</td>
-<td valign="top">
-
-2
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-GROUPO
-
-</td>
-<td valign="top">
-
-GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
-
-</td>
-<td valign="top">
-
-HG
-
-</td>
-<td valign="top">
-
-vdo
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-GROUPO
-
-</td>
-<td valign="top">
-
-GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
-
-</td>
-<td valign="top">
-
-HG
-
-</td>
-<td valign="top">
-
-bt
-
-</td>
-<td valign="top">
-
-152
-
-</td>
-<td valign="top">
-
-2
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-GROUPO
-
-</td>
-<td valign="top">
-
-GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
-
-</td>
-<td valign="top">
-
-HG
-
-</td>
-<td valign="top">
-
-garray
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-GROUPO
-
-</td>
-<td valign="top">
-
-GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
-
-</td>
-<td valign="top">
-
-HG
-
-</td>
-<td valign="top">
-
-bm
-
-</td>
-<td valign="top">
-
-136
-
-</td>
-<td valign="top">
-
-2
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-GROUPO
-
-</td>
-<td valign="top">
-
-GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
-
-</td>
-<td valign="top">
-
-HG
-
-</td>
-<td valign="top">
-
-barray
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-GROUPO
-
-</td>
-<td valign="top">
-
-GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
-
-</td>
-<td valign="top">
-
-HG
-
-</td>
-<td valign="top">
-
-dpstore
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-GROUPO
-
-</td>
-<td valign="top">
-
-GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
-
-</td>
-<td valign="top">
-
-HG
-
-</td>
-<td valign="top">
-
-largelob
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-GROUPO
-
-</td>
-<td valign="top">
-
-GROUPO.Departments.ASIQ\_IDX\_T780\_I4\_HG
-
-</td>
-<td valign="top">
-
-HG
-
-</td>
-<td valign="top">
-
-txtPst
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-</table>
+This example returns information on the index IDX\_H2.
 
 ```
-CREATE TEXT INDEX ti ON Employees( Street ) IMMEDIATE REFRESH;sp_iqindexsize 'ti';
+CALL sp_iqindexsize 'IDX_EMPLOYEES';
 ```
 
 
@@ -630,19 +259,19 @@ Pages
 </th>
 <th valign="top">
 
-Compressed Pages
+CompressedPages
 
 </th>
 </tr>
 <tr>
 <td valign="top">
 
-GROUPO
+USER1
 
 </td>
 <td valign="top">
 
-GROUPO.Employees.ti
+USER1.EMPLOYEES.CITY
 
 </td>
 <td valign="top">
@@ -674,12 +303,12 @@ Total
 <tr>
 <td valign="top">
 
-GROUPO
+USER1
 
 </td>
 <td valign="top">
 
-GROUPO.Employees.ti
+USER1.EMPLOYEES.CITY
 
 </td>
 <td valign="top">
@@ -711,12 +340,12 @@ vdo
 <tr>
 <td valign="top">
 
-GROUPO
+USER1
 
 </td>
 <td valign="top">
 
-GROUPO.Employees.ti
+USER1.EMPLOYEES.CITY
 
 </td>
 <td valign="top">
@@ -748,12 +377,12 @@ bt
 <tr>
 <td valign="top">
 
-GROUPO
+USER1
 
 </td>
 <td valign="top">
 
-GROUPO.Employees.ti
+USER1.EMPLOYEES.CITY
 
 </td>
 <td valign="top">
@@ -785,12 +414,12 @@ garray
 <tr>
 <td valign="top">
 
-GROUPO
+USER1
 
 </td>
 <td valign="top">
 
-GROUPO.Employees.ti
+USER1.EMPLOYEES.CITY
 
 </td>
 <td valign="top">
@@ -822,12 +451,12 @@ bm
 <tr>
 <td valign="top">
 
-GROUPO
+USER1
 
 </td>
 <td valign="top">
 
-GROUPO.Employees.ti
+USER1.EMPLOYEES.CITY
 
 </td>
 <td valign="top">
@@ -859,12 +488,12 @@ barray
 <tr>
 <td valign="top">
 
-GROUPO
+USER1
 
 </td>
 <td valign="top">
 
-GROUPO.Employees.ti
+USER1.EMPLOYEES.CITY
 
 </td>
 <td valign="top">
@@ -896,12 +525,12 @@ dpstore
 <tr>
 <td valign="top">
 
-GROUPO
+USER1
 
 </td>
 <td valign="top">
 
-GROUPO.Employees.ti
+USER1.EMPLOYEES.CITY
 
 </td>
 <td valign="top">
@@ -933,12 +562,12 @@ largelob
 <tr>
 <td valign="top">
 
-GROUPO
+USER1
 
 </td>
 <td valign="top">
 
-GROUPO.Employees.ti
+USER1.EMPLOYEES.CITY
 
 </td>
 <td valign="top">

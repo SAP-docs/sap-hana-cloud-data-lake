@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_conn_properties( [ <connidparm> ] );
+sa_conn_properties( [ <connidparm> ] )
 ```
 
 
@@ -162,9 +162,7 @@ If *<connidparm\>* is less than zero, then property values for the current conne
 
 ## Privileges
 
-Require EXECUTE object-level privilege on the procedure.
-
-To obtain a list of all connection IDs, you also need the MONITOR system privilege.
+Require EXECUTE object-level privilege on the procedure. To obtain a list of all connection IDs, you also need the MONITOR system privilege.
 
 
 

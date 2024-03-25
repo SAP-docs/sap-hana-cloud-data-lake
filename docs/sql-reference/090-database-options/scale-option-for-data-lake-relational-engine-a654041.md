@@ -21,7 +21,7 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-SCALE = <value>;
+SCALE = <value>
 ```
 
 

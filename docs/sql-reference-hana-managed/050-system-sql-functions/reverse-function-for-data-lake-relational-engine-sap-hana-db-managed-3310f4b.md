@@ -85,5 +85,5 @@ SQL – Transact-SQL extension to ISO/ANSI SQL grammar
 **Related Information**  
 
 
-[REVERSE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57a972e84f2101584c3b9d17a08b0f9.html "Takes one argument as an input of type BINARY or STRING and returns the specified string with characters listed in reverse order.") :arrow_upper_right:
+[REVERSE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a57a972e84f2101584c3b9d17a08b0f9.html "Takes one argument as an input of type BINARY or STRING and returns the specified string with characters listed in reverse order.") :arrow_upper_right:
 

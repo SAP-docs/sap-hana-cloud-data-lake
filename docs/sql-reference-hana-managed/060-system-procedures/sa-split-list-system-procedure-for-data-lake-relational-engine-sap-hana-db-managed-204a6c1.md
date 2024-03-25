@@ -18,11 +18,8 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sa_split_list( 
-   <str>
-   [, <delim>
-   [, <maxlen> ] ]
-   );
+sa_split_list( <str>[, <delim>
+   [, <maxlen> ] ] )
 ```
 
 
@@ -160,7 +157,7 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -202,7 +199,7 @@ None
 ## Examples
 
 ```
--- Setup for the following examples
+-- Setup for the following examples ---
 CREATE TABLE PRODUCTS (NAME VARCHAR(15), COLOR VARCHAR(10));
 INSERT INTO PRODUCTS  VALUES ('Tee Shirt','Black');
 INSERT INTO PRODUCTS VALUES ('Baseball Cap', 'Black');
@@ -383,5 +380,5 @@ six
 
 [LIST Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../050-system-sql-functions/list-function-for-data-lake-relational-engine-sap-hana-db-managed-7b4801a.md "Returns a delimited list of values for every row in a group.")
 
-[sa_split_list System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/8177739d6ce21014b82ebbcba7441f0b.html "Takes a string of values, separated by a delimiter, and returns a set of rows (one row for each value).") :arrow_upper_right:
+[sa_split_list System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8177739d6ce21014b82ebbcba7441f0b.html "Takes a string of values, separated by a delimiter, and returns a set of rows (one row for each value).") :arrow_upper_right:
 

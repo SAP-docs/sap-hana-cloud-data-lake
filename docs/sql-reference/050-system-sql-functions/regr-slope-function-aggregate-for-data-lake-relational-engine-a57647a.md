@@ -135,5 +135,5 @@ SELECT REGR_SLOPE( Salary, ( YEAR( NOW() ) - YEAR( BirthDate ) ) )FROM Employees
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[REGR_SLOPE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/2b3cc76a26a04898952576a65be0272f.html "Computes the slope of the linear regression line, fitted to non-NULL pairs.") :arrow_upper_right:
+[REGR_SLOPE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/2b3cc76a26a04898952576a65be0272f.html "Computes the slope of the linear regression line, fitted to non-NULL pairs.") :arrow_upper_right:
 

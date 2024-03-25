@@ -80,5 +80,5 @@ FROM iq_dummy;
 **Related Information**  
 
 
-[STRING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/4b6311065965472286c536537d380f53.html "Concatenates one or more strings into one large string.") :arrow_upper_right:
+[STRING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/4b6311065965472286c536537d380f53.html "Concatenates one or more strings into one large string.") :arrow_upper_right:
 

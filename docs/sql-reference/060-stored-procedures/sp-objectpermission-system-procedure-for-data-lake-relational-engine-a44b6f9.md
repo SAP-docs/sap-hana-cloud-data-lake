@@ -20,7 +20,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 sp_objectpermission ( 
    [ <object_name> ], 
    [ <object_owner> ], 
-   [ <object_type> ] );
+   [ <object_type> ] )
 ```
 
 

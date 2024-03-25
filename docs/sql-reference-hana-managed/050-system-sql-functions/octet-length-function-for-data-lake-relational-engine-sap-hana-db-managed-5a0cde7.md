@@ -55,5 +55,5 @@ SAP database products – not supported by SAP Adaptive Server Enterprise or SAP
 **Related Information**  
 
 
-[OCTET_LENGTH Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a56c053484f21015952de04bc4dab521.html "Returns an unsigned 64-bit value containing the byte length of the column parameter.") :arrow_upper_right:
+[OCTET_LENGTH Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a56c053484f21015952de04bc4dab521.html "Returns an unsigned 64-bit value containing the byte length of the column parameter.") :arrow_upper_right:
 

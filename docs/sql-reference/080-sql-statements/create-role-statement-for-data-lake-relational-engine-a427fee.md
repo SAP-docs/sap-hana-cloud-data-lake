@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 CREATE [ OR REPLACE ] ROLE { <role_name> | FOR USER <user_id> }
-   [ WITH ADMIN [ ONLY ] <admin_name> [...] , [ SYS_MANAGE_ROLES_ROLE ];
+   [ WITH ADMIN [ ONLY ] <admin_name> [...] , [ SYS_MANAGE_ROLES_ROLE ]
 ```
 
 

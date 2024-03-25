@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-DROP X509 PROVIDER <x509_provider_name> [ CASCADE ];
+DROP X509 PROVIDER <x509_provider_name> [ CASCADE ]
 ```
 
 

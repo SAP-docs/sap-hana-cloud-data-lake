@@ -19,7 +19,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 CREATE { DOMAIN | DATATYPE } <domain-name> <data-type>
    … [ NOT ] NULL ]
-   … [ DEFAULT <default-value> ];
+   … [ DEFAULT <default-value> ]
 ```
 
 ```
@@ -35,7 +35,7 @@ CREATE { DOMAIN | DATATYPE } <domain-name> <data-type>
    | CURRENT REMOTE USER 
    | NULL 
    | TIMESTAMP 
-   | LAST USER };
+   | LAST USER }
 ```
 
 ```
@@ -46,7 +46,7 @@ CREATE { DOMAIN | DATATYPE } <domain-name> <data-type>
       | TIMESTAMP 
       | USER 
       | PUBLISHER } 
-   | USER };
+   | USER }
 ```
 
 

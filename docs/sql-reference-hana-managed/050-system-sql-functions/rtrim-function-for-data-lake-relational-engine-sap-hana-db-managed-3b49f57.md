@@ -82,5 +82,5 @@ SELECT RTRIM ('babababAabendbababab','ab') "rtrim" FROM iq_dummy;
 **Related Information**  
 
 
-[RTRIM Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57d411084f21015969acd7d63bcc34c.html "Returns a string, trimmed of all the trailing characters present in the trim character set.") :arrow_upper_right:
+[RTRIM Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a57d411084f21015969acd7d63bcc34c.html "Returns a string, trimmed of all the trailing characters present in the trim character set.") :arrow_upper_right:
 

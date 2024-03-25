@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqfile [ <dbspace-name> ];
+sp_iqfile [ <dbspace-name> ]
 ```
 
 
@@ -252,92 +252,319 @@ None
 
 ## Examples
 
-The following example displays information about the files in the dbspaces:
+This example displays information about the files in the dbspaces:
 
 ```
 sp_iqfile;
 ```
 
-```
 
-sp_iqfile;
-DBSpaceName,DBFileName,Path,SegmentType,RWMode,Online,
-Usage,DBFileSize,Reserve,StripeSize,BlkTypes,FirstBlk,
-LastBlk,OkToDrop,servername,mirrorLogicalFileName,IsDASSharedFile
+<table>
+<tr>
+<th valign="top">
 
-'IQ_SYSTEM_MAIN','IQ_SYSTEM_MAIN',
-'../mpx_configdb.iq','MAIN','RW','T','24','700M','0B','1K',
-'1H,17888F,32D,2498A,151O,198X,128M,32C',1,89600,'N',,'(NULL)','F'   
-'dbsp1','dbsp1','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  mpx_configdb.iqdb1','MAIN','RW','T','1','50M','0B','1K','1H',
-  1045440,1051839,'N',,'(NULL)','F'   
-'dbsp2','dbsp2','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  mpx_configdb.iqdb2','MAIN','RW','T','1','50M','0B','1K','1H',
-  2090880,2097279,'N',,'(NULL)','F'   
-'dbsp3','dbsp3','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  mpx_configdb.iqdb3','MAIN','RW','T','1','50M','0B','1K','1H',
-  3136320,3142719,'N',,'(NULL)','F'   
-'dbsp4','dbsp4','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  mpx_configdb.iqdb4','MAIN','RW','T','1','50M','0B','1K','1H',
-  4181760,4188159,'N',,'(NULL)','F'   
-'dbsp5','dbsp5','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  mpx_configdb.iqdb5','MAIN','RW','T','1','50M','0B','1K','1H',
-  5227200,5233599,'N',,'(NULL)','F'   
-'dbsp6','dbsp6','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  mpx_configdb.iqdb6','MAIN','RW','T','1','50M','0B','1K','1H',
-  6272640,6279039,'N',,'(NULL)','F'   
-'dbsp7','dbsp71','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  mpx_configdb.iqdb71','MAIN','RW','T','1','200M','0B','1K','1H',
-  7318080,7343679,'Y',,'(NULL)','F'   
-'dbsp7','dbsp72','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  mpx_configdb.iqdb72','MAIN','RW','T','1','200M','0B','1K','1H',
-  8363520,8389119,'Y',,'(NULL)','F'   
-'dbsp7','dbsp73','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  mpx_configdb.iqdb73','MAIN','RW','T','1','200M','0B','1K','1H',
-  9408960,9434559,'Y',,'(NULL)','F'   
-'dbsp8','dbsp81','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  mpx_configdb.iqdb81','MAIN','RW','T','1','20M','0B','1K','1H',
-  10454400,10456959,'Y',,'(NULL)','F'   
-'dbsp8','dbsp82','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  mpx_configdb.iqdb82','MAIN','RW','T','1','20M','0B','1K','1H'
-  ,11499840,11502399,'Y',,'(NULL)','F'   
-'dbsp8','dbsp83','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  mpx_configdb.iqdb83','MAIN','RW','T','1','20M','0B','1K','1H',
-  12545280,12547839,'Y',,'(NULL)','F'   
-'das62H2','dasP62H2','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  das62H2_1.iq','MAIN','RW','T','1','10M','0B','1K','1H',
-  13590720,13591999,'Y',
-  'user4_1927_nw45780','(NULL)','F'   
-'das62H2','dasM62H2','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  das62H2_3.iq','MAIN','RW','T','1','10M','0B','1K','1H',14636160,14637439,'Y',
-  'user4_1927_nw55880','dasP62H2','F'   
-'das62H2','dasM62H2_11','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  das62H2_33.iq','MAIN','RW','T','1','10M','0B','1K','1H',15681600,15682879,'Y',
-  'user4_1927_nw45780','dasP62H2','F'   
-'das62H2','dasM62H2_22','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  das62H2_44.iq','MAIN','RW','T','1','10M','0B','1K','1H',16727040,16728319,'Y',
-  'user4_1927_nw45780','dasP62H2','F'   
-'das62H2','dasP62H_55','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  das62H_55.iq','MAIN','RW','T','1','50M','0B','1K','1H',17772480,17778879,'Y',
-  'user4_1927_nw55880','(NULL)','F'   
-'das62H2','dasM62H_55','/lint12dev7/users/user4/machine.lint12dev_local/mpxstore/
-  das62M_55.iq','MAIN','RW','T','1','50M','0B','1K','1H',18817920,18824319,'Y',
-  'user4_1927_nw45780','dasP62H_55','F'   
-'sfs_dbs','f1','/shared_disk1/users/user4/dasfmpx/nw35095/
-  f1.iq','MAIN','RW','T','1','7.81M','0B','1K','1H',2090880,2091879,'Y',
-  'nw35095_dbsrv7915','(NULL)','T'
-'sfs_dbs','f1_m','/local_disk1/users/user4/dasfmpx/nw411359/
-  f1_m.iq','MAIN','RW','T','1','7.81M','0B','1K','1H',2090880,2091879,'Y',
-  'nw411359_dbsrv7915','f1','F'
-'sfs_dbs','f2','/shared_disk2/users/user4/dasfmpx/nw35095/
-  f2.iq','MAIN','RW','T','1','7.81M','0B','1K','1H',3136320,3137319,'Y',
-  'nw35095_dbsrv7915','(NULL)','T'
-'sfs_dbs','f2_m','/local_disk2/users/user4/dasfmpx/nw411359/
-  f2_m.iq','MAIN','RW','T','1','7.81M','0B','1K','1H',3136320,3137319,'Y',
-  'nw411359_dbsrv7915','f2','F'
-'IQ_SYSTEM_TEMP','IQ_SYSTEM_TEMP','nc110203mpx_configdb.iqtmp','TEMPORARY',
-  'RW','T','1','300M','0B','1K','1H,64F,48A',1,38400,'N',
-  'tbucken_1927_nc110203','(NULL)','F'
-   
-```
+Usage
+
+</th>
+<th valign="top">
+
+DBFileSize
+
+</th>
+<th valign="top">
+
+Reserve
+
+</th>
+<th valign="top">
+
+StripeSize
+
+</th>
+<th valign="top">
+
+BlkTypes
+
+</th>
+<th valign="top">
+
+FirstBlk
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+NA
+
+</td>
+<td valign="top">
+
+256G
+
+</td>
+<td valign="top">
+
+768G
+
+</td>
+<td valign="top">
+
+1M
+
+</td>
+<td valign="top">
+
+1H,1677696F,32D,128M
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NA
+
+</td>
+<td valign="top">
+
+512M
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+1M
+
+</td>
+<td valign="top">
+
+1H
+
+</td>
+<td valign="top">
+
+37663488
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NA
+
+</td>
+<td valign="top">
+
+NA
+
+</td>
+<td valign="top">
+
+424K
+
+</td>
+<td valign="top">
+
+1M
+
+</td>
+<td valign="top">
+
+1H
+
+</td>
+<td valign="top">
+
+4611686018427380000
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+450G
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+1M
+
+</td>
+<td valign="top">
+
+1H,160F,48A
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="5">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+LastBlk
+
+</th>
+<th valign="top">
+
+OkToDrop
+
+</th>
+<th valign="top">
+
+servername
+
+</th>
+<th valign="top">
+
+mirrorLogicalFileName
+
+</th>
+<th valign="top">
+
+IsDASSharedFile
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+8388608
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+\(NULL\)
+
+</td>
+<td valign="top">
+
+\(NULL\)
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+37679871
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+\(NULL\)
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+9223372036854770000
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+\(NULL\)
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+14745600
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+IQNOTEMP
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+</tr>
+</table>
 

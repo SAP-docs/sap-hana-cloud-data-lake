@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqconstraint [ '<table-name>', '<column-name>', '<table-owner>' ];
+sp_iqconstraint [ '<table-name>', '<column-name>', '<table-owner>' ]
 ```
 
 
@@ -66,6 +66,172 @@ A parameter that specifies the table owner.
 
 
 
+<a name="loioa5a0395484f210158c8090a617a7aab6__section_h4t_11w_c1c"/>
+
+## Result Set
+
+
+<table>
+<tr>
+<th valign="top">
+
+Column Name
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+table\_name
+
+</td>
+<td valign="top">
+
+The name of the primary enforeced table.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+table\_owner
+
+</td>
+<td valign="top">
+
+The owner of the table.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+index\_name
+
+</td>
+<td valign="top">
+
+The candidate key index.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+CKType
+
+</td>
+<td valign="top">
+
+The type of constraint - primary key or unique.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+column\_name
+
+</td>
+<td valign="top">
+
+The name of the primary key columns.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+foreign\_table\_name
+
+</td>
+<td valign="top">
+
+The name of the foreign table.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+foreign\_table\_owner
+
+</td>
+<td valign="top">
+
+The name of the foreign table owner.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+role
+
+</td>
+<td valign="top">
+
+The name of the foreign key role.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+fk\_enforced
+
+</td>
+<td valign="top">
+
+Specifies the enforced status. Valid value are: Y for enforced, N for unenforced.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+foreign\_index\_name
+
+</td>
+<td valign="top">
+
+The name of the foreign key index.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+foreign\_column\_name
+
+</td>
+<td valign="top">
+
+The name of the foreign key columns.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+location
+
+</td>
+<td valign="top">
+
+=The location of the constraint. Valid values are: TEMP, MAIN, or SYSTEM.
+
+</td>
+</tr>
+</table>
+
+
+
 <a name="loioa5a0395484f210158c8090a617a7aab6__iq_refbb_1468"/>
 
 ## Remarks
@@ -95,30 +261,151 @@ None
 This is sample output that displays all primary key/foreign key pairs where either the candidate key or foreign key contains column ck1 for owner bob in all tables:
 
 ```
-call sp_iqconstraint('','ck1','bob');
+CALL sp_iqconstraint('','ck1','user1');
 ```
 
-```
-PTAB1 bob ASIQ_IDX_T27_HG  unique   ck1,ck2  selftab bob CK6FK3  Y  
-ASIQ_IDX_T42_HG  ck1,ck2PTAB2 bob ASIQ_IDX_T27_HG  unique   ck1,ck2  selftab bob CK6FK4  Y  
-ASIQ_IDX_T206_I42_HG  ck1,ck2selftab bob ASIQ_IDX_T26_HG  unique   ck1,ck2  selftab bob CK3FK1  Y  
-ASIQ_IDX_T206_I42_HG  ck1,ck2
-```
 
-The columns displayed are:
+<table>
+<tr>
+<th valign="top">
 
--   Primary enforced table
--   Table owner
--   Candidate key index
--   Primary key or inique
--   Primary key columns
--   Foreign table
--   Foreign table owner
--   Foreign key role name
--   Enforced status \(“Y” for enforced, “N” for unenforced\)
--   Foreign key index
--   Foreign key columns
--   Location \(“TEMP,” “MAIN,” or “SYSTEM”\)
+table\_name
+
+</th>
+<th valign="top">
+
+table\_owner
+
+</th>
+<th valign="top">
+
+index\_name
+
+</th>
+<th valign="top">
+
+CKtype
+
+</th>
+<th valign="top">
+
+column\_name
+
+</th>
+<th valign="top">
+
+foreign\_table\_name
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+ORDERS
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+ASIQ\_IDX\_T1872\_I3\_HG
+
+</td>
+<td valign="top">
+
+PK
+
+</td>
+<td valign="top">
+
+CUST\_ID
+
+</td>
+<td valign="top">
+
+CUSTOMERS
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="6">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+foreign\_table\_owner
+
+</th>
+<th valign="top">
+
+role
+
+</th>
+<th valign="top">
+
+fk\_enforced
+
+</th>
+<th valign="top">
+
+foreign\_index\_name
+
+</th>
+<th valign="top">
+
+foreign\_column\_name
+
+</th>
+<th valign="top">
+
+location
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+ORDERS
+
+</td>
+<td valign="top">
+
+Y
+
+</td>
+<td valign="top">
+
+ASIQ\_IDX\_T1873\_C1\_HG
+
+</td>
+<td valign="top">
+
+CUST\_ID
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 

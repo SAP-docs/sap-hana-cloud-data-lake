@@ -21,7 +21,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 ### Syntax 1
 
 ```
-sp_iqtable ( [ <table_name> ] ,[ <table_owner> ] , [ <table_type> ] );
+sp_iqtable ( [ <table_name> ] ,[ <table_owner> ] , [ <table_type> ] )
 ```
 
 ```
@@ -38,7 +38,7 @@ sp_iqtable ( [ <table_name> ] ,[ <table_owner> ] , [ <table_type> ] );
 
 ```
 sp_iqtable [ table_name='<tablename>' ],
-    [ table_owner='<tableowner>' ] , [ table_type='<tabletype>' ];
+    [ table_owner='<tableowner>' ] , [ table_type='<tabletype>' ]
 ```
 
 

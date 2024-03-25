@@ -88,5 +88,5 @@ It does so since 21-07-01 represents July 1, 2021.
 **Related Information**  
 
 
-[EXTRACT Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/c3565b1366b448828db3cc916507f15b.html "Returns a date part from a DATE, TIME, or TIMESTAMP expression.") :arrow_upper_right:
+[EXTRACT Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/c3565b1366b448828db3cc916507f15b.html "Returns a date part from a DATE, TIME, or TIMESTAMP expression.") :arrow_upper_right:
 

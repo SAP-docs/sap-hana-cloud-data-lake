@@ -19,7 +19,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 CREATE USER <user-name>  [ IDENTIFIED BY <password> ]
    [ LOGIN POLICY <policy-name> ]
-   [ FORCE PASSWORD CHANGE { ON | OFF } ];
+   [ FORCE PASSWORD CHANGE { ON | OFF } ]
 ```
 
 
@@ -42,7 +42,7 @@ CREATE USER <user-name>  [ IDENTIFIED BY <password> ]
 </b></dt>
 <dd>
 
-A data lake Relational Engine user ID cannot:
+A data lake Relational Engine user ID can't:
 
 -   begin with white space, single quotes, or double quotes
 -   end with white space
@@ -59,7 +59,7 @@ IDENTIFIED BY *<password\>*
 
 Password of the user. You do not have to specify a password for the user. A user without a password cannot connect to the database. This is useful if you are creating a role and do not want anyone to connect to the database using the role user ID.
 
-A data lake Relational Engine password must be minimum of 6 characters in length. For single-byte character sets, this value is the same as the number of characters. It must contain:
+A data lake Relational Engine password must be a minimum of 6 characters in length. For single-byte character sets, this value is the same as the number of characters. It must contain:
 
 -   at least one number character \(0-9\)
 -   at least one upper case Latin letter character \(A-Z\)
@@ -74,13 +74,6 @@ Passwords are case-sensitive and they cannot:
 -   be less than 6 characters in length
 -   contain the user’s ID \(user name\)
 -   be the re-use of an old password for that user
-
-The encryption algorithm used for hashing the user passwords is FIPS-certified encryption support:
-
--   The DLL is called dbfips17.dll.
--   The HASH function accepts the algorithms: SHA1\_FIPS SHA256\_FIPS.
--   If the -fips server option is specified and an algorithm that is not FIPS-certified is given to the HASH function, then the database server uses SHA1\_FIPS instead of SHA1, SHA256\_FIPS instead of SHA256, and returns an error if MD5 is used \(MD5 is not a FIPS-certified algorithm\).
--   If the -fips option is specified, then the database server uses SHA256\_FIPS for password hashing.
 
 
 
@@ -156,7 +149,9 @@ LOGIN POLICY Test1 FORCE PASSWORD CHANGE ON;
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[Login Policy Options](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
+[Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
 
-[CREATE USER Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/a21f6524ecab45fcaa89b6f9bf4670e8.html "Creates a user.") :arrow_upper_right:
+[CREATE USER Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/a21f6524ecab45fcaa89b6f9bf4670e8.html "Creates a user.") :arrow_upper_right:
+
+[User ID and Password Restrictions and Considerations](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a46126b284f21015bae2a1c9bb31c205.html "A user must have a user ID and password to connect to the database.") :arrow_upper_right:
 

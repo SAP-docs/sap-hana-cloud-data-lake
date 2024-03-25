@@ -12,7 +12,7 @@ A string operator that generates a result set from an XML document.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) syntax can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 

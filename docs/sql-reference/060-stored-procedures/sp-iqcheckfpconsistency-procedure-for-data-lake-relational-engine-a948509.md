@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqcheckfpconsistency ( <table_name>, <column_name>, <table_owner> );
+sp_iqcheckfpconsistency ( <table_name>, <column_name>, <table_owner> )
 ```
 
 
@@ -75,7 +75,7 @@ The name of the owner of tables to check.
 <tr>
 <th valign="top">
 
-Value
+Column Name
 
 </th>
 <th valign="top">
@@ -129,6 +129,8 @@ status
 <td valign="top">
 
 The status of the column being checked.
+
+See the data lake Relational Engine message file for detail error messages.
 
 </td>
 </tr>
@@ -277,28 +279,6 @@ No Errors Detected
 <td valign="top">
 
 ...
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
- 
-
-</td>
-<td valign="top">
-
-See the data lake Relational Engine message file for detail error messages
 
 </td>
 </tr>

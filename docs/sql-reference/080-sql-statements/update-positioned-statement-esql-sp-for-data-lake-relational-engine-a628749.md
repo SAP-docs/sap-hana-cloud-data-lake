@@ -19,12 +19,12 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 UPDATE <table-list> 
    SET <set-item> [, ...]
-   WHERE CURRENT OF <cursor-name>;
+   WHERE CURRENT OF <cursor-name>
 ```
 
 ```
 <set-item> ::=
-   <column-name> [.<field-name>…] = <scalar-value>;
+   <column-name> [.<field-name>…] = <scalar-value>
 ```
 
 

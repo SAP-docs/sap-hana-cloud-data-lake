@@ -41,5 +41,5 @@ To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE priv
 
 [SYSPROCPARM System View for Data Lake Relational Engine \(SAP HANA DB-Managed\)](sysprocparm-system-view-for-data-lake-relational-engine-sap-hana-db-managed-80ec5b7.md "Each row in the SYSPROCPARM system view describes one parameter, result set column, or return value of a procedure or function in the database. The underlying system table for this view is ISYSPROCPARM.")
 
-[SYSPROCS System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/569e62fd205049ecb6f35968ae512de8.html "The SYSPROCS view shows the procedure or function name, the name of its creator and any comments recorded for the procedure or function.") :arrow_upper_right:
+[SYSPROCS System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/569e62fd205049ecb6f35968ae512de8.html "The SYSPROCS view shows the procedure or function name, the name of its creator and any comments recorded for the procedure or function.") :arrow_upper_right:
 

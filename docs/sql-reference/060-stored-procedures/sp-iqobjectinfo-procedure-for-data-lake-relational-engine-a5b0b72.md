@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqobjectinfo [ <owner_name> ]  [ , <object_name> ] [ , <object-type> ]; 
+sp_iqobjectinfo [ <owner_name> ]  [ , <object_name> ] [ , <object-type> ] 
 ```
 
 

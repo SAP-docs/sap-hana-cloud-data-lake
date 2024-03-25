@@ -43,7 +43,7 @@ DECLARE
       | TIMESTAMP 
       | USER 
       | UTC TIMESTAMP } 
-   | USER };
+   | USER }
 ```
 
 

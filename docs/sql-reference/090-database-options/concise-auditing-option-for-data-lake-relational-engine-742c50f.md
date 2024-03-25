@@ -138,12 +138,12 @@ No
 
 An instance restart is required if you change the option.
 
-Concise auditing behavior is introduced in QRC 1/2024. Setting this option to OFF reverts to legacy auditing behavior, which is deprecated.
+Concise auditing behavior was introduced in QRC 1/2024. Setting this option to OFF reverts to legacy auditing behavior, which is deprecated.
 
 **Related Information**  
 
 
-[Auditing Database Events](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2023_4_QRC/en-US/4c20fb59d0e848e09ffb191c9d2c0b16.html "Auditing tracks all of the activity performed on a data lake Relational Engine database.") :arrow_upper_right:
+[Auditing Database Events](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/4c20fb59d0e848e09ffb191c9d2c0b16.html "Auditing tracks all of the activity performed on a data lake Relational Engine database.") :arrow_upper_right:
 
-[CONCISE_AUDITING Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/e47cf784a3274b41bbaaa416bcc07d97.html "Controls whether concise auditing or legacy auditing is used.") :arrow_upper_right:
+[CONCISE_AUDITING Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/e47cf784a3274b41bbaaa416bcc07d97.html "Controls whether concise auditing or legacy auditing is used.") :arrow_upper_right:
 

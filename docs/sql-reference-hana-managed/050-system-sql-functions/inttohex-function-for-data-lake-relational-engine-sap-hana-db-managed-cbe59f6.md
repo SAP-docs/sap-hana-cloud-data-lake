@@ -78,5 +78,5 @@ If data conversion of input to INTTOHEX conversion fails, data lake Relational E
 **Related Information**  
 
 
-[INTTOHEX Function \[Data Type Conversion\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a55971e984f21015845192079b46b239.html "Returns the hexadecimal equivalent of a decimal integer.") :arrow_upper_right:
+[INTTOHEX Function \[Data Type Conversion\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a55971e984f21015845192079b46b239.html "Returns the hexadecimal equivalent of a decimal integer.") :arrow_upper_right:
 

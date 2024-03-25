@@ -14,7 +14,7 @@ Alter the refresh mode of a table.
 
 -   This data lake Relational Engine \(SAP HANA DB-Managed\) SQL on Files SQL statement can be used as follows:
 
-    -   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+    -   Connected to SAP HANA database as a SAP HANA database user..
     -   Using the REMOTE\_EXECUTE procedure. See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](../030-sql-statements/remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
 
 
@@ -74,7 +74,7 @@ The refresh mode of the table.
 </b></dt>
 <dd>
 
-Sets the refresh mode to manual, and must be refreshed using the [REFRESH (Remote) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/e2756579d6354112a5e5e0f9fe0c2ccb.html "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.") :arrow_upper_right:.
+Sets the refresh mode to manual, and must be refreshed using the [REFRESH (Remote) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/e2756579d6354112a5e5e0f9fe0c2ccb.html "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.") :arrow_upper_right:.
 
 
 
@@ -104,7 +104,7 @@ Sets the refresh to automatically occur with every SELECT query on the table.
 Refreshing a table includes removing deleted files from the external catalog, adding new files and directories to the catalog, and updating modified files.
 
 > ### Note:  
-> If a table is created with the refresh mode set to `MANUAL`, the list of files is only updated by using `REFRESH TABLE` statements. The `REFRESH TABLE` statement is not necessary for tables created with the refresh mode set to `AUTO`. See the [CREATE (Remote) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/beffc07c515540088d372197c9eee191.html "Create a remote table managed by SQL on Files.") :arrow_upper_right: for more information.
+> If a table is created with the refresh mode set to `MANUAL`, the list of files is only updated by using `REFRESH TABLE` statements. The `REFRESH TABLE` statement is not necessary for tables created with the refresh mode set to `AUTO`. See the [CREATE (Remote) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/beffc07c515540088d372197c9eee191.html "Create a remote table managed by SQL on Files.") :arrow_upper_right: for more information.
 
 Refreshing the table updates the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to the remote table. Files added to the underlying source but not yet tracked in the external catalog are not visible when querying the table. A SELECT query failure occurs if there are files tracked in the external catalog that have been deleted or modified in the underlying source.
 
@@ -148,5 +148,5 @@ ALTER TABLE ExternalSchema1.ExternalTable1 IN FILES_SERVICE
 
 [DROP \(Remote\) TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\) \[SQL on Files\]](drop-remote-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-sql-on-fi-ca1e55d.md "Drop a remote table from a SQL on Files external catalog.")
 
-[ALTER (Remote) TABLE Statement with REFRESH for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/ae5645003caf4d14bcd05ca4d8f3219e.html "Alter the refresh mode of a table.") :arrow_upper_right:
+[ALTER (Remote) TABLE Statement with REFRESH for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/ae5645003caf4d14bcd05ca4d8f3219e.html "Alter the refresh mode of a table.") :arrow_upper_right:
 

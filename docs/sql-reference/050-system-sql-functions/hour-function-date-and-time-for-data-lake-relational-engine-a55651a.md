@@ -63,5 +63,5 @@ SELECT HOUR( '1998-07-09 21:12:13' ) FROM iq_dummy;
 **Related Information**  
 
 
-[HOUR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/13ca8f80a24a45b3ae7e434753dd97c8.html "Returns a number from 0 to 23 corresponding to the hour component of the specified date/time.") :arrow_upper_right:
+[HOUR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/13ca8f80a24a45b3ae7e434753dd97c8.html "Returns a number from 0 to 23 corresponding to the hour component of the specified date/time.") :arrow_upper_right:
 

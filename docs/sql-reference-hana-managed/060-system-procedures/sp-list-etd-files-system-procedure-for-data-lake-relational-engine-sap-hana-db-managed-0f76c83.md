@@ -20,7 +20,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sp_list_etd_files( [ <file_name_pattern > ] );
+sp_list_etd_files( [ <file_name_pattern > ] )
 ```
 
 
@@ -243,5 +243,5 @@ my\_session\_20201126\_185000.000\_auditdb\_eng.etd
 **Related Information**  
 
 
-[sp_list_etd_files System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/5f0eb4a9f1734b6d9ef6661867578898.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
+[sp_list_etd_files System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/5f0eb4a9f1734b6d9ef6661867578898.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
 

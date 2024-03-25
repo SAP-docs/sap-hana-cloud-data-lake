@@ -18,7 +18,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sa_dependent_views( [ '<table-name>' , '<schema-name>' ] );
+sa_dependent_views( [ '<table-name>' , '<schema-name>' ] )
 ```
 
 
@@ -169,9 +169,7 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </b></dt>
 <dd>
 
-Requires EXECUTE object-level privilege on the procedure.
-
-Also requires one of the following:
+Requires EXECUTE object-level privilege on the procedure, along with one of the following:
 
 -   SELECT object-level privilege on the view and its underlying tables
 -   SELECT object-level privilege on the schema of the view and its underlying tables
@@ -258,5 +256,5 @@ dep\_view\_id
 **Related Information**  
 
 
-[sa_dependent_views System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3be595096c5f101489d8d608a7ef882e.html "Returns the list of all dependent views for a given table or view.") :arrow_upper_right:
+[sa_dependent_views System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3be595096c5f101489d8d608a7ef882e.html "Returns the list of all dependent views for a given table or view.") :arrow_upper_right:
 

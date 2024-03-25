@@ -10,7 +10,7 @@ Creates a new user-defined SQL procedure in the database.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -20,18 +20,18 @@ CREATE [ OR REPLACE ] [ TEMPORARY ] PROCEDURE [ <schema-name>.]<procedure-
    [ SQL SECURITY { INVOKER | DEFINER } ]
    [ RESULT ( <result-column>, …) | NO RESULT SET ]  
    [ ON EXCEPTION RESUME ]
-   { <compound statement> | AT <location-string> };
+   { <compound statement> | AT <location-string> }
 ```
 
 ```
 <parameter> ::=
    { { IN | OUT | INOUT } <parameter-name> <data-type> [ DEFAULT <expression> ] 
    | SQLCODE 
-   | SQLSTATE };
+   | SQLSTATE }
 ```
 
 ```
-<result-column> ::= <column-name> <data-type>;
+<result-column> ::= <column-name> <data-type>
 ```
 
 
@@ -278,7 +278,7 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -315,7 +315,7 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 
 
 
-For information on using a procedure created when connected as a data lake Relational Engine user, see [User-Defined Procedures in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/44dbf05fa907437b9145f1541cdbb920.html "User-defined procedures perform one or more specific tasks in data lake Relational Engine.") :arrow_upper_right:.
+For information on using a procedure created when connected as a data lake Relational Engine user, see [User-Defined Procedures in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/44dbf05fa907437b9145f1541cdbb920.html "User-defined procedures perform one or more specific tasks in data lake Relational Engine.") :arrow_upper_right:.
 
 
 
@@ -416,5 +416,5 @@ Automatic commit
 
 [DROP PROCEDURE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-procedure-statement-for-data-lake-relational-engine-sap-hana-db-managed-86898fa.md "Removes a user-defined procedure from the database.")
 
-[CREATE PROCEDURE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a6185b2184f21015b2419a5444b55609.html "Creates a new user-defined SQL procedure in the database.") :arrow_upper_right:
+[CREATE PROCEDURE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a6185b2184f21015b2419a5444b55609.html "Creates a new user-defined SQL procedure in the database.") :arrow_upper_right:
 

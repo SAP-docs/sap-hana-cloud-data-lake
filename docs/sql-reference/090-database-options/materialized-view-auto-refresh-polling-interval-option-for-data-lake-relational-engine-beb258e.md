@@ -133,5 +133,5 @@ No
 **Related Information**  
 
 
-[MATERIALIZED_VIEW_AUTO_REFRESH_POLLING_INTERVAL Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/84aa190c7a8f463196bd9755c6146a29.html "Controls the amount of time (in minutes) between polling refresh requests executed by the materialized view auto refresh manager.") :arrow_upper_right:
+[MATERIALIZED_VIEW_AUTO_REFRESH_POLLING_INTERVAL Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/84aa190c7a8f463196bd9755c6146a29.html "Controls the amount of time (in minutes) between polling refresh requests executed by the materialized view auto refresh manager.") :arrow_upper_right:
 

@@ -22,7 +22,7 @@ sa_locks(
     [, <creator> 
     [, <table_name> 
     [, <max_locks>
-    [, <object_type> ] ] ] ] );
+    [, <object_type> ] ] ] ] )
 ```
 
 
@@ -454,6 +454,375 @@ This example uses the sa\_locks system procedure to return the locks that are cu
 ```
 CALL sa_locks( ); 
 ```
+
+
+<table>
+<tr>
+<th valign="top">
+
+conn\_name
+
+</th>
+<th valign="top">
+
+conn\_id
+
+</th>
+<th valign="top">
+
+user\_id
+
+</th>
+<th valign="top">
+
+table\_type
+
+</th>
+<th valign="top">
+
+creator
+
+</th>
+<th valign="top">
+
+table\_name
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+540620
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+dbo
+
+</td>
+<td valign="top">
+
+iqmonSystemOverview
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+540621
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+dbo
+
+</td>
+<td valign="top">
+
+iqmonSystemOverview
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+540620
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+dbo
+
+</td>
+<td valign="top">
+
+iqmonThreadManager
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+540621
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+dbo
+
+</td>
+<td valign="top">
+
+iqmonThreadManager
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+
+
+</td>
+<td valign="top">
+
+
+
+</td>
+<td valign="top">
+
+
+
+</td>
+<td valign="top">
+
+
+
+</td>
+<td valign="top">
+
+
+
+</td>
+<td valign="top">
+
+
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="5">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+index\_id
+
+</th>
+<th valign="top">
+
+lock\_class
+
+</th>
+<th valign="top">
+
+lock\_duration
+
+</th>
+<th valign="top">
+
+lock\_type
+
+</th>
+<th valign="top">
+
+row\_identifier
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+Schema
+
+</td>
+<td valign="top">
+
+Transaction
+
+</td>
+<td valign="top">
+
+Shared
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+Schema
+
+</td>
+<td valign="top">
+
+Transaction
+
+</td>
+<td valign="top">
+
+Shared
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+Schema
+
+</td>
+<td valign="top">
+
+Transaction
+
+</td>
+<td valign="top">
+
+Shared
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+Schema
+
+</td>
+<td valign="top">
+
+Transaction
+
+</td>
+<td valign="top">
+
+Shared
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+
+
+</td>
+<td valign="top">
+
+
+
+</td>
+<td valign="top">
+
+
+
+</td>
+<td valign="top">
+
+
+
+</td>
+<td valign="top">
+
+
+
+</td>
+</tr>
+</table>
 
 This example executes a query that joins the results of the sa\_locks system procedure to a particular table by using the ROWID of the table in the join predicate.
 

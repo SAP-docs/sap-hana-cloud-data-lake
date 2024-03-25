@@ -20,7 +20,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 IF <search-condition> THEN <statement-list>
 ... [ ELSEIF <search-condition> THEN <statement-list> ]...
 ... [ ELSE <statement-list> ]
-... END IF;
+... END IF
 ```
 
 

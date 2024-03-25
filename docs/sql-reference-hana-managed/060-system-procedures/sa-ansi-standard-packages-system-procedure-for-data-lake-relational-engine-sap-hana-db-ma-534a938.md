@@ -21,9 +21,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 ```
 sa_ansi_standard_packages(
-<standard>
-, <statement>
-);
+   <standard>, <statement> )
 ```
 
 
@@ -167,5 +165,5 @@ None
 **Related Information**  
 
 
-[sa_ansi_standard_packages System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3be553e66c5f1014ae7590829b8dfdbf.html "Returns information about the non-core SQL extensions used in a SQL statement.") :arrow_upper_right:
+[sa_ansi_standard_packages System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3be553e66c5f1014ae7590829b8dfdbf.html "Returns information about the non-core SQL extensions used in a SQL statement.") :arrow_upper_right:
 

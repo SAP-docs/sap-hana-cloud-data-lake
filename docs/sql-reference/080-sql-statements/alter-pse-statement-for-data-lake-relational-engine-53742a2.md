@@ -20,7 +20,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ALTER PSE <pse-name> 
    { <certificate-clause>
    | <set-own-certificate-clause>
-   | <unset-own-certificate-clause> };
+   | <unset-own-certificate-clause> }
 ```
 
 
@@ -208,5 +208,5 @@ ALTER PSE mypse1 DROP CERTIFICATE Digicert;
 
 [DROP PSE Statement for Data Lake Relational Engine](drop-pse-statement-for-data-lake-relational-engine-2918c50.md "Removes a personal security environment (PSE) from the database.")
 
-[ALTER PSE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/056ee2c16cd548e3a811170533f684e7.html "Modifies an existing personal security environment (PSE).") :arrow_upper_right:
+[ALTER PSE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/056ee2c16cd548e3a811170533f684e7.html "Modifies an existing personal security environment (PSE).") :arrow_upper_right:
 

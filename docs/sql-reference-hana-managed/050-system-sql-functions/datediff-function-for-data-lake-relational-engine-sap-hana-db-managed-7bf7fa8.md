@@ -197,5 +197,5 @@ DATEDIFF(MINUTE,
 **Related Information**  
 
 
-[DATEDIFF Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a545a63784f210158075c22cd6f85d3a.html "Returns the interval between two dates.") :arrow_upper_right:
+[DATEDIFF Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a545a63784f210158075c22cd6f85d3a.html "Returns the interval between two dates.") :arrow_upper_right:
 

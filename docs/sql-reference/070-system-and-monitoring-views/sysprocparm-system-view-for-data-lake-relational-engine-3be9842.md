@@ -336,5 +336,5 @@ Additionally, SYSPROCPARM is updated whenever a checkpoint is run if the out-of-
 **Related Information**  
 
 
-[SYSPROCPARM System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/80ec5b7639274fb58a0d680ef35009b6.html "Each row in the SYSPROCPARM system view describes one parameter, result set column, or return value of a procedure or function in the database. The underlying system table for this view is ISYSPROCPARM.") :arrow_upper_right:
+[SYSPROCPARM System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/80ec5b7639274fb58a0d680ef35009b6.html "Each row in the SYSPROCPARM system view describes one parameter, result set column, or return value of a procedure or function in the database. The underlying system table for this view is ISYSPROCPARM.") :arrow_upper_right:
 

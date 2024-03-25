@@ -86,5 +86,5 @@ SELECT MOD( 5, 3 ) FROM iq_dummy;
 
 [REMAINDER Function \[Numeric\] for Data Lake Relational Engine](remainder-function-numeric-for-data-lake-relational-engine-a5788e7.md "Returns the remainder when one whole number is divided by another.")
 
-[MOD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/f5c120d23a114a08951fed08d45fecc1.html "Returns the remainder when one whole number is divided by another.") :arrow_upper_right:
+[MOD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/f5c120d23a114a08951fed08d45fecc1.html "Returns the remainder when one whole number is divided by another.") :arrow_upper_right:
 

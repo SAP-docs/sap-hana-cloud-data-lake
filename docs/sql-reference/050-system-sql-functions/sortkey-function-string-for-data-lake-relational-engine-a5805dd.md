@@ -789,5 +789,5 @@ SELECT Surname, GivenName FROM Employees ORDER BY SORTKEY( Surname, 'dict' );
 **Related Information**  
 
 
-[SORTKEY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/66b441998f6b490ca54f8314748c9331.html "Generates values that can be used to sort character strings based on alternate collation rules.") :arrow_upper_right:
+[SORTKEY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/66b441998f6b490ca54f8314748c9331.html "Generates values that can be used to sort character strings based on alternate collation rules.") :arrow_upper_right:
 

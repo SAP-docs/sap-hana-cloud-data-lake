@@ -19,7 +19,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 OPEN <cursor-name>
    ... [ USING [ DESCRIPTOR { <sqlda-name> | <host-variable> } [, …]  ] ]
-   ... [ WITH HOLD ];
+   ... [ WITH HOLD ]
 ```
 
 

@@ -82,5 +82,5 @@ supplier#021     10,000             5
 **Related Information**  
 
 
-[DENSE_RANK Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a54d078b84f21015b96984e51c0cb74a.html "Ranks items in a group.") :arrow_upper_right:
+[DENSE_RANK Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a54d078b84f21015b96984e51c0cb74a.html "Ranks items in a group.") :arrow_upper_right:
 

@@ -12,7 +12,7 @@ Causes an automatic commit after every DML request.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE\_DDL procedure.
+-   Connected to SAP HANA database as a SAP HANA database user.
 -   Connected directly to data lake Relational Engine **coordinator** as a data lake Relational Engine user
 
 

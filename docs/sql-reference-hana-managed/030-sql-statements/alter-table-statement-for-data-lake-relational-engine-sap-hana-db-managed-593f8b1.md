@@ -10,7 +10,7 @@ Modifies a table definition.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
@@ -32,7 +32,7 @@ ALTER TABLE [ <schema-name>.]<table-name>
             | <hash-range-partitioning-scheme>
    | SUBPARTITION BY RANGE <range-partition-decl>
    | ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>
-   | UNPARTITION;
+   | UNPARTITION
 ```
 
 
@@ -80,7 +80,7 @@ Defines a table column. Two columns in the same table cannot have the same name.
 
 ```
 <column definition> ::= 
-   <column-name> <data-type> [ NOT NULL | NULL  ] 
+   <data-type> [ NOT NULL | NULL  ] 
     [ IN <dbspace-name> ] 
     [ DEFAULT <default-value> | IDENTITY ];
 ```
@@ -824,7 +824,7 @@ If SELECT *<\*\>* is used in a view definition and you alter a table referenced 
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -1017,9 +1017,9 @@ To move a table between relational containers \(for example, from SYSHDL\_CONTAI
 
 [DROP TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-1e62d19.md "Removes a table from the database.")
 
-[Moving a Table Between Schemas and Relational Containers](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/7cc5b90e27e145aa9542a7a494bd61ef.html "Move a data lake Relational Engine physical table between schemas in the same relational container or between relational containers.") :arrow_upper_right:
+[Moving a Table Between Schemas and Relational Containers](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/7cc5b90e27e145aa9542a7a494bd61ef.html "Move a data lake Relational Engine physical table between schemas in the same relational container or between relational containers.") :arrow_upper_right:
 
 [Data Types Compatibility with SAP HANA Database for the CREATE TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](data-types-compatibility-with-sap-hana-database-for-the-create-table-statement-for-data-l-e77d888.md "The data lake Relational Engine CREATE TABLE statement lets you create a data lake Relational Engine physical table.")
 
-[ALTER TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/39f1ec0fd2c9451c8b64df54efe48a03.html "Modifies a table definition.") :arrow_upper_right:
+[ALTER TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/39f1ec0fd2c9451c8b64df54efe48a03.html "Modifies a table definition.") :arrow_upper_right:
 

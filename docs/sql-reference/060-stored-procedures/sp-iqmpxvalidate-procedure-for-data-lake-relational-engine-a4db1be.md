@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-call dbo.sp_iqmpxvalidate( 'Y' );
+call dbo.sp_iqmpxvalidate( 'Y' )
 ```
 
 

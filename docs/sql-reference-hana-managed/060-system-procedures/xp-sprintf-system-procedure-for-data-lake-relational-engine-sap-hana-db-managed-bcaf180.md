@@ -12,7 +12,7 @@ Builds a result string from a set of input strings.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -22,7 +22,7 @@ xp_sprintf(
 <buffer>
 , <format>
 [ , <param1> [, <param2> ... ] ]
-);
+)
 ```
 
 
@@ -96,21 +96,21 @@ Requires EXECUTE object-level privilege on the procedure.
 The following statements put the string Hello World! into the result variable.
 
 ```
-CREATE VARIABLE result CHAR( 254 );
-CALL xp_sprintf( result, '%s %s', 'Hello', 'World!' );
-SELECT result;
+CREATE VARIABLE result CHAR( 254 )
+CALL xp_sprintf( result, '%s %s', 'Hello', 'World!' )
+SELECT result
 ```
 
 The following statements format the year, month, and day into a date string.
 
 ```
-CREATE VARIABLE result CHAR( 254 );
-CALL xp_sprintf( result, '%s/%s/%s', 2014, 11, 23 );
-SELECT result;
+CREATE VARIABLE result CHAR( 254 )
+CALL xp_sprintf( result, '%s/%s/%s', 2014, 11, 23 )
+SELECT result
 ```
 
 **Related Information**  
 
 
-[xp_sprintf System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/8180c9106ce21014894dc48bcbd02bb5.html "Builds a result string from a set of input strings.") :arrow_upper_right:
+[xp_sprintf System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8180c9106ce21014894dc48bcbd02bb5.html "Builds a result string from a set of input strings.") :arrow_upper_right:
 

@@ -27,7 +27,7 @@ Syntax 1 - Exclusively for multiplex coordinator nodes:
 
 ```
 LOCK TABLE <table-list> [ WITH HOLD ] 
-   IN { SHARE | WRITE | EXCLUSIVE } MODE [  WAIT <time> ];
+   IN { SHARE | WRITE | EXCLUSIVE } MODE [  WAIT <time> ]
 ```
 
 
@@ -41,7 +41,7 @@ LOCK TABLE <table-list> [ WITH HOLD ]
 
 ```
 LOCK TABLE <table-name>
-   IN WRITE MODE [ WAIT <time> ];
+   IN WRITE MODE [ WAIT <time> ]
 ```
 
 

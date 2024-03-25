@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqindexadvice ( [ <resetflag> ] );
+sp_iqindexadvice ( [ <resetflag> ] )
 ```
 
 
@@ -44,22 +44,73 @@ Lets the caller clear the index advice storage. If *<resetflag\>* is nonzero, al
 
 
 
+<a name="loioa5ab8bc984f2101593388431a4a60c82__section_w4p_c23_vzb"/>
+
+## Result Set
+
+
+<table>
+<tr>
+<th valign="top">
+
+Column Name
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Advice
+
+</td>
+<td valign="top">
+
+Displays a unique advice message.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+NInst
+
+</td>
+<td valign="top">
+
+Displays the number of instances of message.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+LastDT
+
+</td>
+<td valign="top">
+
+Displays the last date and time advice was generated.
+
+</td>
+</tr>
+</table>
+
+
+
 <a name="loioa5ab8bc984f2101593388431a4a60c82__iq_refbb_1599"/>
 
 ## Remarks
 
 Allows users to query aggregated index advisor messages using SQL. The information can help you decide which indexes or schema changes will affect the most queries.
 
-> ### Note:  
-> The index advice derives from a single query at a single point in time. The index advice doesn't take any other factors into account.
-> 
-> Consider the index advice carefully before acting on it. Adding indexes can improve query speed, but at the cost of load performance. Your query improvement may not be worth the costs of loading into more indexes, and the costs of working with a larger object.
+The index advice derives from a single query at a single point in time. The index advice doesn't take any other factors into account.
 
-`INDEX_ADVISOR` columns are:
-
--   Advice – unique advice message
--   NInst – number of instances of message
--   LastDT – last date/time advice was generated
+Consider the index advice carefully before acting on it. Adding indexes can improve query speed, but at the cost of load performance. Your query improvement may not be worth the costs of loading into more indexes, and the costs of working with a larger object.
 
 
 
@@ -86,7 +137,11 @@ None
 
 ## Examples
 
-The following shows sample output from the sp\_iqindexadvice procedure:
+This example shows sample output from the sp\_iqindexadvice procedure:
+
+```
+CALL sp_iqindexadvice;
+```
 
 
 <table>

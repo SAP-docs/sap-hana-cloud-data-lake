@@ -67,5 +67,5 @@ SELECT SPACE( 10 ) FROM iq_dummy;
 **Related Information**  
 
 
-[SPACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ad081410a2bf423c888257b5d0f621a3.html "Returns a specified number of spaces.") :arrow_upper_right:
+[SPACE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/ad081410a2bf423c888257b5d0f621a3.html "Returns a specified number of spaces.") :arrow_upper_right:
 

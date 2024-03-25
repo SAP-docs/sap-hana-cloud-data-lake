@@ -31,7 +31,7 @@ Syntax 1 – Validates a Database
 <dd>
 
 ```
-VALIDATE { CHECKSUM | DATABASE };
+VALIDATE { CHECKSUM | DATABASE }
 ```
 
 
@@ -47,7 +47,7 @@ Syntax 2 – Validates Tables and Materialized Views
 VALIDATE 
    { TABLE [ <owner>.]<table-name>
    | MATERIALIZED VIEW [ { <owner> | <schema-name> }.]<materialized-view-name> }
-   [ WITH EXPRESS CHECK ];
+   [ WITH EXPRESS CHECK ]
 ```
 
 
@@ -64,7 +64,7 @@ VALIDATE
    { INDEX <index-name> 
    | [ INDEX ] FOREIGN KEY <role-name> 
    | [ INDEX ] PRIMARY KEY  }
-   ON [ { <owner> | <schema-name> }.]{ <table-name> | <materialized-view-name> };
+   ON [ { <owner> | <schema-name> }.]{ <table-name> | <materialized-view-name> }
 ```
 
 
@@ -78,7 +78,7 @@ Syntax 4 – Validates Text Indexes
 
 ```
 VALIDATE TEXT INDEX <index-name> 
-   ON [ { <owner> | <schema-name> }.]<table-name>;
+   ON [ { <owner> | <schema-name> }.]<table-name>
 ```
 
 

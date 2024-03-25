@@ -84,5 +84,5 @@ SELECT MOD( 5, 3 ) FROM iq_dummy;
 **Related Information**  
 
 
-[MOD Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5650e7684f21015b1dcafaf320a4d00.html "Returns the remainder when one whole number is divided by another.") :arrow_upper_right:
+[MOD Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5650e7684f21015b1dcafaf320a4d00.html "Returns the remainder when one whole number is divided by another.") :arrow_upper_right:
 

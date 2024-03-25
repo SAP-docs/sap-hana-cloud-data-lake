@@ -64,5 +64,5 @@ SELECT SECOND( '1998-07-13 08:21:05' ) FROM iq_dummy;
 **Related Information**  
 
 
-[SECOND Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57dc03b84f210158836c9258c67e700.html "Returns a number from 0 to 59 corresponding to the second component of the given date/time value.") :arrow_upper_right:
+[SECOND Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a57dc03b84f210158836c9258c67e700.html "Returns a number from 0 to 59 corresponding to the second component of the given date/time value.") :arrow_upper_right:
 

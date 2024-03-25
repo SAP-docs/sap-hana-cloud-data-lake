@@ -76,5 +76,5 @@ SELECT UUIDTOSTR(pk) FROM T3;
 **Related Information**  
 
 
-[UUIDTOSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/60f4cba865204365bd10f0d9cfb44fc6.html "Converts a unique identifier value (UUID, also known as GUID) to a string value.") :arrow_upper_right:
+[UUIDTOSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/60f4cba865204365bd10f0d9cfb44fc6.html "Converts a unique identifier value (UUID, also known as GUID) to a string value.") :arrow_upper_right:
 

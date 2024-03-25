@@ -143,7 +143,7 @@ This option can only be set temporarily for the current connection. When you iss
 **Related Information**  
 
 
-[Transactional DDL in Data Lake Relational Engine](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/6fd1d28ae2324096a609e89e18a1ab57.html "Transactional DDL lets you execute an arbitrary number of DDL statements as a single transaction and then decide whether to commit or roll back the transaction as a whole.") :arrow_upper_right:
+[Transactional DDL in Data Lake Relational Engine](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/6fd1d28ae2324096a609e89e18a1ab57.html "Transactional DDL lets you execute an arbitrary number of DDL statements as a single transaction and then decide whether to commit or roll back the transaction as a whole.") :arrow_upper_right:
 
 [AUTO\_COMMIT Option for Data Lake Relational Engine](auto-commit-option-for-data-lake-relational-engine-fdb9c1e.md "Causes an automatic commit after every DML request.")
 

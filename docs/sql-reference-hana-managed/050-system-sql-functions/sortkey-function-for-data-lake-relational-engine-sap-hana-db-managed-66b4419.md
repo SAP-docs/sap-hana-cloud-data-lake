@@ -789,7 +789,7 @@ SELECT Surname, GivenName FROM Employees ORDER BY SORTKEY( Surname, 'dict' );
 **Related Information**  
 
 
-[Collations in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/665704355a5147879224d7ec0aae629f.html "Data lake Relational Engine databases use CESU8BIN (CESU-8, 8-bit multibyte encoding for Unicode, binary ordering) collation and the Unicode Collation Algorithm (UCA).") :arrow_upper_right:
+[Collations in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/665704355a5147879224d7ec0aae629f.html "Data lake Relational Engine databases use CESU8BIN (CESU-8, 8-bit multibyte encoding for Unicode, binary ordering) collation and the Unicode Collation Algorithm (UCA).") :arrow_upper_right:
 
-[SORTKEY Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5805ddb84f2101591ffe19db63f3521.html "Generates values that can be used to sort character strings based on alternate collation rules.") :arrow_upper_right:
+[SORTKEY Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5805ddb84f2101591ffe19db63f3521.html "Generates values that can be used to sort character strings based on alternate collation rules.") :arrow_upper_right:
 

@@ -23,7 +23,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 sp_trace_event_fields( 
    [ <event_name> 
    [, <include_audit_events> ] ]
-  );
+  )
 ```
 
 
@@ -568,5 +568,5 @@ NULL
 **Related Information**  
 
 
-[sp_trace_event_fields System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/8179a2a56ce210148a18fd12322fa8f2.html "Returns information about the fields of the specified trace event.") :arrow_upper_right:
+[sp_trace_event_fields System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8179a2a56ce210148a18fd12322fa8f2.html "Returns information about the fields of the specified trace event.") :arrow_upper_right:
 

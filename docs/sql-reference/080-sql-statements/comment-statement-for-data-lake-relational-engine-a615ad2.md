@@ -42,7 +42,7 @@ COMMENT ON
    | TRIGGER [ [ <owner>.]<table-name>.]<trigger-name>
    | USER <userid>
    | VIEW [ <owner>.]<view-name> }
-   IS { <string> | NULL };
+   IS { <string> | NULL }
 ```
 
 ```
@@ -53,7 +53,7 @@ COMMENT ON
    | C_ESQL32 
    | C_ESQL64 
    | C_ODBC32 
-   | C_ODBC64 };
+   | C_ODBC64 }
 ```
 
 

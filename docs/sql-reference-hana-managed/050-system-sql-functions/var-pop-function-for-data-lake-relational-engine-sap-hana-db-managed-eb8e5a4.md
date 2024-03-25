@@ -172,5 +172,5 @@ Variance
 **Related Information**  
 
 
-[VAR_POP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a58ec03e84f21015b373c5236f4567a1.html "Computes the statistical variance of a population consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
+[VAR_POP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a58ec03e84f21015b373c5236f4567a1.html "Computes the statistical variance of a population consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
 

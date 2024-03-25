@@ -74,5 +74,5 @@ SELECT TRIM ('babababENDbababa','ab') "trim" FROM iq_dummy;
 **Related Information**  
 
 
-[TRIM Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a58b326684f210158b01c6a84254a2f2.html "Returns a string, trimmed of all the leading and trailing characters present in the trim character set.") :arrow_upper_right:
+[TRIM Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a58b326684f210158b01c6a84254a2f2.html "Returns a string, trimmed of all the leading and trailing characters present in the trim character set.") :arrow_upper_right:
 

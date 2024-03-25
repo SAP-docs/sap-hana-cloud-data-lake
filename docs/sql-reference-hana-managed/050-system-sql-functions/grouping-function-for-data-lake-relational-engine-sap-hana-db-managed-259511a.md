@@ -62,5 +62,5 @@ Data lake Relational Engine does not support the PERCENTILE\_CONT or PERCENTILE\
 
 [GROUP BY Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/group-by-clause-for-data-lake-relational-engine-sap-hana-db-managed-86be6d9.md)
 
-[GROUPING Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a554461384f21015aca0af2a35f9c2a7.html "Identifies whether a column in a ROLLUP or CUBE operation result set is NULL because it is part of a subtotal row, or NULL because of the underlying data.") :arrow_upper_right:
+[GROUPING Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a554461384f21015aca0af2a35f9c2a7.html "Identifies whether a column in a ROLLUP or CUBE operation result set is NULL because it is part of a subtotal row, or NULL because of the underlying data.") :arrow_upper_right:
 

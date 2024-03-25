@@ -7,7 +7,7 @@ Returns an integer value indicating whether the invoking user has been granted a
 
 
 ```
-sp_has_role ( [ <rolename> ], [ <grant_type> ], [ <throw_error> ] );
+sp_has_role ( [ <rolename>[, <grant_type>[, <throw_error> ] ] ] )
 ```
 
 
@@ -64,6 +64,28 @@ Valid values are:
 <tr>
 <th valign="top">
 
+Column Name
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+sp\_has\_role
+
+</td>
+<td valign="top">
+
+
+<table>
+<tr>
+<th valign="top">
+
 Value
 
 </th>
@@ -113,6 +135,12 @@ The system privilege or user-defined role specified does not exist. No error mes
 
 
 
+</td>
+</tr>
+</table>
+
+
+
 ## Remarks
 
 If the value of the grant\_type argument is ADMIN, the function checks whether the invoking user has administrative privileges for the system privilege. If the value of the grant\_type argument is NO ADMIN, the function checks whether the invoking user has privileged use of the system privilege or role.
@@ -136,13 +164,12 @@ Requires EXECUTE object-level privilege on the procedure.
 
 ## Examples
 
+All examples are run using the invoking user, in this case USER1.
+
 ```
--- Setup for the following example
+-- Setup for the following example ---
 GRANT CREATE ANY PROCEDRE TO USER1 WITH NO ADMIN OPTION;
 ```
-
-> ### Caution:  
-> All examples are run using the invoking user, in this case USER1.
 
 This example uses sp\_has\_role to return the value 1, which indicates that USER1 has been granted the CREATE ANY PROCEDURE system privilege:
 
@@ -150,15 +177,69 @@ This example uses sp\_has\_role to return the value 1, which indicates that USER
 SELECT sp_has_role ('create any procedure');
 ```
 
+
+<table>
+<tr>
+<th valign="top">
+
+sp\_has\_role\('create any procedure'\)
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+1
+
+</td>
+</tr>
+</table>
+
 This example uses sp\_has\_role to return the value 0, which indicates that USER1 has not been granted the CREATE ANY PROCEDURE system privilege with ADMIN option:
 
 ```
 SELECT sp_has_role ('create any procedure', 'admin');
 ```
 
+
+<table>
+<tr>
+<th valign="top">
+
+sp\_has\_role\('create any procedure','admin'\)
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+</tr>
+</table>
+
 This example uses sp\_has\_role to return the value -1, which indicates that role\_a doesn't exist.
 
 ```
 SELECT sp_has_role ('role_a');
 ```
+
+
+<table>
+<tr>
+<th valign="top">
+
+sp\_has\_role\('role\_a'\)
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+\-1
+
+</td>
+</tr>
+</table>
 

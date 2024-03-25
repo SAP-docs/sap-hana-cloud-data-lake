@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-TRIGGER EVENT <event-name> [ ( <parm> = <value>, ... ) ];
+TRIGGER EVENT <event-name> [ ( <parm> = <value>, ... ) ]
 ```
 
 

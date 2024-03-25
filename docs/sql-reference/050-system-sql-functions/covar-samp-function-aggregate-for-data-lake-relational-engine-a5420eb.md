@@ -124,5 +124,5 @@ SELECT COVAR_SAMP( Salary, ( 2008 - YEAR( BirthDate ) ) ) FROM Employees;
 **Related Information**  
 
 
-[COVAR_SAMP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3a064918478c4d47ab0da64c2d61cc3e.html "Returns the sample covariance of a set of number pairs.") :arrow_upper_right:
+[COVAR_SAMP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3a064918478c4d47ab0da64c2d61cc3e.html "Returns the sample covariance of a set of number pairs.") :arrow_upper_right:
 

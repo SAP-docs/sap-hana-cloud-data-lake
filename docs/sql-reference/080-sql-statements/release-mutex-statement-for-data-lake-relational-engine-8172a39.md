@@ -17,8 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-RELEASE MUTEX [ <owner>.]<mutex-name>;
-
+RELEASE MUTEX [ <owner>.]<mutex-name>
 ```
 
 

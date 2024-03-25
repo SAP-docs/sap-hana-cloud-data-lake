@@ -23,8 +23,7 @@ sp_remote_tables (
     [ , <remote-table-owner>
     [ , <remote-database-name>
     [ , <with-table-type> ] ] ] ]
-);
-
+)
 ```
 
 

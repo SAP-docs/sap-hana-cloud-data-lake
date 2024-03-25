@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqestspace ( <table_name>, <#_of_rows>, <iq_page_size> );
+sp_iqestspace ( <table_name>, <#_of_rows>, <iq_page_size> )
 ```
 
 

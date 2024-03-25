@@ -20,7 +20,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 [ <statement-label>: ]
 ... [ WHILE <search-condition> ] LOOP
 ... <statement-list>
-... END LOOP [ <statement-label> ];
+... END LOOP [ <statement-label> ]
 ```
 
 

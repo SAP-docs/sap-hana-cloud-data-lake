@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqsetcompression ( <owner>, <table>, <column>, <on_off_flag> );
+sp_iqsetcompression ( <owner>, <table>, <column>, <on_off_flag> )
 ```
 
 

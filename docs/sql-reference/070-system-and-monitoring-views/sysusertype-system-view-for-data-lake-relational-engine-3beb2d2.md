@@ -210,5 +210,5 @@ The annotated type string representing the physical type of the user type.
 **Related Information**  
 
 
-[SYSUSERTYPE System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/164b9020b45548209db5cb851a82589d.html "Each row in the SYS.SYSUSERTYPE system view holds a description of a user-defined data type.") :arrow_upper_right:
+[SYSUSERTYPE System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/164b9020b45548209db5cb851a82589d.html "Each row in the SYS.SYSUSERTYPE system view holds a description of a user-defined data type.") :arrow_upper_right:
 

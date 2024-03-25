@@ -38,5 +38,5 @@ ALTER VIEW "SYS"."SYSPROCPARMS"( creator,
 **Related Information**  
 
 
-[SYSPROCPARMS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/2eaba61c7575405ab7b5fbee219298ad.html "Each row in the SYSPROCPARMS view describes a parameter to a procedure in the database.") :arrow_upper_right:
+[SYSPROCPARMS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/2eaba61c7575405ab7b5fbee219298ad.html "Each row in the SYSPROCPARMS view describes a parameter to a procedure in the database.") :arrow_upper_right:
 

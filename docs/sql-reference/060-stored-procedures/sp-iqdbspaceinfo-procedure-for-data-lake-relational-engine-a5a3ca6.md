@@ -17,8 +17,8 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqdbspaceinfo [ <dbspace-name> ]
- [, <owner_name> ] [, <object_name> ] [, <object-type> ];
+sp_iqdbspaceinfo [ <dbspace-name> [, <owner_name>
+   [, <object_name> [, <object-type> ] ] ] ]
 ```
 
 
@@ -309,80 +309,1144 @@ None
 
 ## Examples
 
-These examples show objects in the iqdemo database to better illustrate output. iqdemo includes a sample user dbspace named iq\_main that may not be present in your own databases.
+This example displays the size of all objects and subobjects in all tables in all dbspaces in the database:
 
--   The following example displays the size of all objects and subobjects in all tables in all dbspaces in the database:
+```
+sp_iqdbspaceinfo;
+```
 
-    ```
-    sp_iqdbspaceinfo;
-    ```
 
-    ```
-    dbspace_name    object_type  owner   object_name     object_id  id   columns
-    iq_main         table        DBA     emp1              3689     741   96K
-    iq_main         table        DBA     iq_dummy          3686     740   24K
-    iq_main         table        DBA     sale              3698     742   96K
-    iq_main         table        GROUPO  Contacts          3538     732   288K
-    iq_main         table        GROUPO  Customers         3515     731   240K
-    iq_main         table        GROUPO  Departments       3632     738   72K
-    iq_main         table        GROUPO  Employees         3641     739   408K
-    iq_main         table        GROUPO  FinancialCodes    3612     736   72K
-    iq_main         table        GROUPO  FinancialData     3621     737   96K
-    iq_main         table        GROUPO  Products          3593     735   272K
-    iq_main         table        GROUPO  SalesOrderItems   3580     734   120K
-    iq_main         table        GROUPO  SalesOrders       3565     733   144K
-    
-    indexes  metadata  primary_key  unique_constraint  foreign_key  dbspace_online  is_dbspace_preallocate
-    0B       1.37M     0B           0B                 0B           Y               T 
-    0B       464K      0B           0B                 0B           Y               T              
-    0B       1.22M     0B           0B                 0B           Y               T
-    0B       5.45M     24K          0B                 48K          Y               T
-    48K      4.63M     24K          0B                 0B           Y               T
-    0B       1.78M     24K          0B                 48K          Y               T
-    0B       8.03M     24K          0B                 48K          Y               T
-    0B       1.53M     24K          0B                 0B           Y               T
-    0B       2.19M     24K          0B                 48K          Y               T
-    192K     4.67M     24K          0B                 0B           Y               T
-    0B       2.7M      24K          0B                 104K         Y               T
-    0B       3.35M     24K          0B                 144K         Y               T
-    ```
+<table>
+<tr>
+<th valign="top">
 
--   The following example displays the size of all objects and subobjects owned by a specified user in a specified dbspace in the database:
+dbspace\_name
 
-    ```
-    sp_iqdbspaceinfo iq_main,GROUPO;
-    ```
+</th>
+<th valign="top">
 
-    ```
-    dbspace_name    object_type  owner   object_name     object_id  id   columns
-    iq_main         table        GROUPO  Contacts          3538     732   288K
-    iq_main         table        GROUPO  Customers         3515     731   240K
-    iq_main         table        GROUPO  Departments       3632     738   72K
-    iq_main         table        GROUPO  Employees         3641     739   408K
-    iq_main         table        GROUPO  FinancialCodes    3612     736   72K
-    iq_main         table        GROUPO  FinancialData     3621     737   96K
-    iq_main         table        GROUPO  Products          3593     735   272K
-    iq_main         table        GROUPO  SalesOrderItems   3580     734   120K
-    iq_main         table        GROUPO  SalesOrders       3565     733   144K
-    
-    indexes  metadata  primary_key  unique_constraint  foreign_key  dbspace_online  is_dbspace_preallocate
-    0B       5.45M     24K          0B                 48K          Y               T
-    48K      4.63M     24K          0B                 0B           Y               T
-    0B       1.78M     24K          0B                 48K          Y               T
-    0B       8.03M     24K          0B                 48K          Y               T
-    0B       1.53M     24K          0B                 0B           Y               T
-    0B       2.19M     24K          0B                 48K          Y               T
-    192K     4.67M     24K          0B                 0B           Y               T
-    0B       2.7M      24K          0B                 104K         Y               T
-    0B       3.35M     24K          0B                 144K         Y               T
-    ```
+object\_type
 
--   The following example displays the size of a specified object and its subobjects owned by a specified user in a specified dbspace in the database:
+</th>
+<th valign="top">
 
-    ```
-    sp_iqdbspaceinfo iq_main,GROUPO,Departments;
-    ```
+owner
 
+</th>
+<th valign="top">
+
+object\_name
+
+</th>
+<th valign="top">
+
+object\_id
+
+</th>
+<th valign="top">
+
+id
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+hotsql\_dbspace
+
+</td>
+<td valign="top">
+
+table
+
+</td>
+<td valign="top">
+
+dbo
+
+</td>
+<td valign="top">
+
+hdl\_hotsql\_configuration
+
+</td>
+<td valign="top">
+
+5459
+
+</td>
+<td valign="top">
+
+1722
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+hotsql\_dbspace
+
+</td>
+<td valign="top">
+
+table
+
+</td>
+<td valign="top">
+
+dbo
+
+</td>
+<td valign="top">
+
+iq\_dummy
+
+</td>
+<td valign="top">
+
+5763
+
+</td>
+<td valign="top">
+
+1726
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+hotsql\_dbspace
+
+</td>
+<td valign="top">
+
+table
+
+</td>
+<td valign="top">
+
+dbo
+
+</td>
+<td valign="top">
+
+t\_pwd\_history
+
+</td>
+<td valign="top">
+
+5577
+
+</td>
+<td valign="top">
+
+1724
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+user\_object\_store
+
+</td>
+<td valign="top">
+
+table
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+C1
+
+</td>
+<td valign="top">
+
+24369
+
+</td>
+<td valign="top">
+
+1857
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+user\_object\_store
+
+</td>
+<td valign="top">
+
+table
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+C2
+
+</td>
+<td valign="top">
+
+24372
+
+</td>
+<td valign="top">
+
+1858
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+user\_object\_store
+
+</td>
+<td valign="top">
+
+table
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+CUSTOMERS
+
+</td>
+<td valign="top">
+
+24442
+
+</td>
+<td valign="top">
+
+1873
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="6">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+columns
+
+</th>
+<th valign="top">
+
+primary\_key
+
+</th>
+<th valign="top">
+
+unique\_constraint
+
+</th>
+<th valign="top">
+
+foreign\_key
+
+</th>
+<th valign="top">
+
+dbspace\_online
+
+</th>
+<th valign="top">
+
+is\_dbspace\_preallocate
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+544K
+
+</td>
+<td valign="top">
+
+128K
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+Y
+
+</td>
+<td valign="top">
+
+T
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+192K
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+Y
+
+</td>
+<td valign="top">
+
+T
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+960K
+
+</td>
+<td valign="top">
+
+128K
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+Y
+
+</td>
+<td valign="top">
+
+T
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+849K
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+Y
+
+</td>
+<td valign="top">
+
+T
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+849K
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+Y
+
+</td>
+<td valign="top">
+
+T
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+Y
+
+</td>
+<td valign="top">
+
+T
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+...
+
+</td>
+<td valign="top">
+
+...
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+...
+
+</td>
+<td valign="top">
+
+...
+
+</td>
+</tr>
+</table>
+
+This example displays the size of all objects and subobjects owned by a specified user in a specified dbspace in the database:
+
+```
+sp_iqdbspaceinfo user_object_store,USER1;
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+dbspace\_name
+
+</th>
+<th valign="top">
+
+object\_type
+
+</th>
+<th valign="top">
+
+owner
+
+</th>
+<th valign="top">
+
+object\_name
+
+</th>
+<th valign="top">
+
+object\_id
+
+</th>
+<th valign="top">
+
+id
+
+</th>
+<th valign="top">
+
+columns
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+user\_object\_store
+
+</td>
+<td valign="top">
+
+table
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+Contacts
+
+</td>
+<td valign="top">
+
+3538
+
+</td>
+<td valign="top">
+
+732
+
+</td>
+<td valign="top">
+
+288K
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+user\_object\_store
+
+</td>
+<td valign="top">
+
+table
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+Customers
+
+</td>
+<td valign="top">
+
+3515
+
+</td>
+<td valign="top">
+
+731
+
+</td>
+<td valign="top">
+
+240K
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+user\_object\_store
+
+</td>
+<td valign="top">
+
+table
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+Departments
+
+</td>
+<td valign="top">
+
+3632
+
+</td>
+<td valign="top">
+
+738
+
+</td>
+<td valign="top">
+
+72K
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+user\_object\_store
+
+</td>
+<td valign="top">
+
+table
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+Employees
+
+</td>
+<td valign="top">
+
+3641
+
+</td>
+<td valign="top">
+
+739
+
+</td>
+<td valign="top">
+
+408K
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+user\_object\_store
+
+</td>
+<td valign="top">
+
+table
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+FinancialCodes
+
+</td>
+<td valign="top">
+
+3612
+
+</td>
+<td valign="top">
+
+736
+
+</td>
+<td valign="top">
+
+72K
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+user\_object\_store
+
+</td>
+<td valign="top">
+
+table
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+FinancialData
+
+</td>
+<td valign="top">
+
+3621
+
+</td>
+<td valign="top">
+
+737
+
+</td>
+<td valign="top">
+
+96K
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+...
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top">
+
+indexes
+
+</th>
+<th valign="top">
+
+metadata
+
+</th>
+<th valign="top">
+
+primary\_key
+
+</th>
+<th valign="top">
+
+unique\_constraint
+
+</th>
+<th valign="top">
+
+foreign\_key
+
+</th>
+<th valign="top">
+
+dbspace\_online
+
+</th>
+<th valign="top">
+
+is\_dbspace\_preallocate
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+5.45M
+
+</td>
+<td valign="top">
+
+24K
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+48K
+
+</td>
+<td valign="top">
+
+Y
+
+</td>
+<td valign="top">
+
+T
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+48K
+
+</td>
+<td valign="top">
+
+4.63M
+
+</td>
+<td valign="top">
+
+24K
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+Y
+
+</td>
+<td valign="top">
+
+T
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+1.78M
+
+</td>
+<td valign="top">
+
+24K
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+48K
+
+</td>
+<td valign="top">
+
+Y
+
+</td>
+<td valign="top">
+
+T
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+8.03M
+
+</td>
+<td valign="top">
+
+24K
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+48K
+
+</td>
+<td valign="top">
+
+Y
+
+</td>
+<td valign="top">
+
+T
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+1.53M
+
+</td>
+<td valign="top">
+
+24K
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+Y
+
+</td>
+<td valign="top">
+
+T
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+2.19M
+
+</td>
+<td valign="top">
+
+24K
+
+</td>
+<td valign="top">
+
+0B
+
+</td>
+<td valign="top">
+
+48K
+
+</td>
+<td valign="top">
+
+Y
+
+</td>
+<td valign="top">
+
+T
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+...
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 

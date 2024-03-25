@@ -117,5 +117,5 @@ When the bounds are reversed, the buckets are open-closed intervals. For example
 **Related Information**  
 
 
-[WIDTH_BUCKET Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/69892e4fa52c4ad885c269d8009f06c3.html "For a given expression, the WIDTH_BUCKET function returns the bucket number that the result of this expression will be assigned after it is evaluated.") :arrow_upper_right:
+[WIDTH_BUCKET Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/69892e4fa52c4ad885c269d8009f06c3.html "For a given expression, the WIDTH_BUCKET function returns the bucket number that the result of this expression will be assigned after it is evaluated.") :arrow_upper_right:
 

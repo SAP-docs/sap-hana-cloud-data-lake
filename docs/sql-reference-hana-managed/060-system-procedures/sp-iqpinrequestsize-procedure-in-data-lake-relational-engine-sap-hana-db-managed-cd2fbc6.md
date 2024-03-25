@@ -17,7 +17,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sp_iqpinrequestsize();
+sp_iqpinrequestsize()
 ```
 
 

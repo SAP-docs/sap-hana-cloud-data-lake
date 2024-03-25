@@ -20,7 +20,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sa_audit_string( <string> );
+sa_audit_string( <string> )
 ```
 
 
@@ -99,5 +99,5 @@ CALL sa_audit_string ('Auditing test start');
 **Related Information**  
 
 
-[sa_audit_string System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3be55c396c5f1014a724eb3c15a43d25.html "Adds a string to auditing data.") :arrow_upper_right:
+[sa_audit_string System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3be55c396c5f1014a724eb3c15a43d25.html "Adds a string to auditing data.") :arrow_upper_right:
 

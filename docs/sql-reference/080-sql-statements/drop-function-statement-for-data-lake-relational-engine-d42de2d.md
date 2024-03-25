@@ -110,5 +110,5 @@ DROP FUNCTION IF EXISTS myfunction1;
 
 [ALTER FUNCTION Statement for Data Lake Relational Engine](alter-function-statement-for-data-lake-relational-engine-a61280a.md "Modifies an existing function. Include the entire modified function in the ALTER FUNCTION statement.")
 
-[DROP FUNCTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/58c58a93e1de4d409e3776c4b92790e1.html "Removes a user-defined function from the database.") :arrow_upper_right:
+[DROP FUNCTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/58c58a93e1de4d409e3776c4b92790e1.html "Removes a user-defined function from the database.") :arrow_upper_right:
 

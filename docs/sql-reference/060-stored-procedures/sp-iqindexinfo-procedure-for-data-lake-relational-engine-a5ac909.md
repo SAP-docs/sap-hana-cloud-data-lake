@@ -17,8 +17,11 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqindexinfo '{ database | [ table <table-name> | index <index-name> ] [...] } 
-   [ resources <resource-percent> ]';
+sp_iqindexinfo '
+   { DATABASE 
+   | table <table-name> 
+   | index <index-name> [...] }
+   [ resources <resource-percent> ]'
 ```
 
 
@@ -189,7 +192,7 @@ sp\_iqindexinfo shows the DBA on which dbspaces a given object resides. The DBA 
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure, along with the MANAGE ANY DBSPACE system privilee.
+Requires EXECUTE object-level privilege on the procedure, along with the MANAGE ANY DBSPACE system privilege.
 
 
 
@@ -203,10 +206,10 @@ None
 
 ## Examples
 
-Shows the DBA on which dbspaces a given object resides. Displays information about indexes in the Departments table:
+This example returns information on the dbspaces a given object resides in, along with information about indexes in the Departments table:
 
 ```
-sp_iqindexinfo 'table GROUPO.Departments';
+CALL sp_iqindexinfo 'table USER1.Departments';
 ```
 
 
@@ -246,12 +249,12 @@ MaxBlk
 <tr>
 <td valign="top">
 
-GROUPO.Departments
+USER1.Departments
 
 </td>
 <td valign="top">
 
-iq\_main
+user\_object\_store
 
 </td>
 <td valign="top">
@@ -278,12 +281,12 @@ iq\_main
 <tr>
 <td valign="top">
 
-GROUPO.Departments.ASIQ\_IDX\_T779\_C1\_FP
+USER1.Departments.ASIQ\_IDX\_T779\_C1\_FP
 
 </td>
 <td valign="top">
 
-iq\_main
+user\_object\_store
 
 </td>
 <td valign="top">
@@ -310,12 +313,12 @@ iq\_main
 <tr>
 <td valign="top">
 
-GROUPO.Departments.ASIQ\_IDX\_T779\_C2\_FP
+USER1.Departments.ASIQ\_IDX\_T779\_C2\_FP
 
 </td>
 <td valign="top">
 
-iq\_main
+user\_object\_store
 
 </td>
 <td valign="top">
@@ -342,12 +345,12 @@ iq\_main
 <tr>
 <td valign="top">
 
-GROUPO.Departments.ASIQ\_IDX\_T779\_C3\_FP
+USER1.Departments.ASIQ\_IDX\_T779\_C3\_FP
 
 </td>
 <td valign="top">
 
-iq\_main
+user\_object\_store
 
 </td>
 <td valign="top">
@@ -374,12 +377,12 @@ iq\_main
 <tr>
 <td valign="top">
 
-GROUPO.Departments.ASIQ\_IDX\_T779\_C3\_HG
+USER1.Departments.ASIQ\_IDX\_T779\_C3\_HG
 
 </td>
 <td valign="top">
 
-iq\_main
+user\_object\_store
 
 </td>
 <td valign="top">
@@ -406,12 +409,12 @@ iq\_main
 <tr>
 <td valign="top">
 
-GROUPO.Departments.ASIQ\_IDX\_T779\_I4\_HG
+USER1.Departments.ASIQ\_IDX\_T779\_I4\_HG
 
 </td>
 <td valign="top">
 
-iq\_main
+user\_object\_store
 
 </td>
 <td valign="top">

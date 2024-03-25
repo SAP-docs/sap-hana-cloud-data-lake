@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqspaceinfo ['main | [table <table-name> | index <index-name>] [...] '];
+sp_iqspaceinfo ['main | [table <table-name> | index <index-name>] [...] ']
 ```
 
 

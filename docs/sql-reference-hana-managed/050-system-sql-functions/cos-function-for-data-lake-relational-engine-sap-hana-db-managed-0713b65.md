@@ -63,5 +63,5 @@ SELECT COS( 0.52 ) FROM iq_dummy;
 **Related Information**  
 
 
-[COS Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5406e3184f21015956e83d802a05631.html "Returns the cosine of a number, expressed in radians.") :arrow_upper_right:
+[COS Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5406e3184f21015956e83d802a05631.html "Returns the cosine of a number, expressed in radians.") :arrow_upper_right:
 

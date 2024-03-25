@@ -61,7 +61,7 @@ UNLOAD <data-source> <data-target> [ <unload-option> ... ]
 
 <encoding> ::= <string>  
 
-<algorithm> ::= { 'AES' | 'AES256' | 'AES_FIPS' | 'AES256_FIPS' };
+<algorithm> ::= { 'AES' | 'AES256' | 'AES_FIPS' | 'AES256_FIPS' }
 ```
 
 
@@ -753,7 +753,7 @@ If this option is set to an empty string for ASCII extractions, the extracted da
 
 \(Not applicable to Parquet format\)All database data is translated from the database character encoding to the specified encoding. When ENCODING is not specified, the database's CHAR encoding is used. Character set translation is performed first, before compression or encryption is optionally applied. Specify the BYTE ORDER MARK clause to include a byte order mark in the data.
 
-See [Character Set Encodings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/8a8f277561e547b8a4a0fdfc7f7db7f7.html "A complete list of supported character set encodings for SAP HANA Cloud, data lake and their aliases.") :arrow_upper_right: for a complete list of supported character set encodings.
+See [Character Set Encodings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/8a8f277561e547b8a4a0fdfc7f7db7f7.html "A complete list of supported character set encodings for SAP HANA Cloud, data lake and their aliases.") :arrow_upper_right: for a complete list of supported character set encodings.
 
 
 
@@ -1256,17 +1256,17 @@ These examples unload the entire contents of table t1, using compression and par
 **Related Information**  
 
 
-[UNLOAD Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/5049a399ee2241dda78d47a0a3cc46e9.html "Exports data from data lake Relational Engine to either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, Google Cloud Storage) or to data lake Files containers (the managed object store).") :arrow_upper_right:
+[UNLOAD Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/5049a399ee2241dda78d47a0a3cc46e9.html "Exports data from data lake Relational Engine to either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, Google Cloud Storage) or to data lake Files containers (the managed object store).") :arrow_upper_right:
 
-[SAP HANA Cloud, Data Lake Relational Engine Load and Unload Management](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/e77c96193a604e05ba198e424de2ed6c.html "Data load (import) and export (unload) procedures for data lake Relational Engine, including loading from and unloading to data lake Files.") :arrow_upper_right:
+[SAP HANA Cloud, Data Lake Relational Engine Load and Unload Management](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/e77c96193a604e05ba198e424de2ed6c.html "Data load (import) and export (unload) procedures for data lake Relational Engine, including loading from and unloading to data lake Files.") :arrow_upper_right:
 
-[Unloading Data to the External Object Store](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/31a19ffdd4af430c8ebc962cbac2cf5a.html "Unload (extract) data from data lake Relational Engine to the external object store using either the UNLOAD statement, or the data extraction facility.") :arrow_upper_right:
+[Unloading Data to the External Object Store](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/31a19ffdd4af430c8ebc962cbac2cf5a.html "Unload (extract) data from data lake Relational Engine to the external object store using either the UNLOAD statement, or the data extraction facility.") :arrow_upper_right:
 
-[Unloading Data to Data Lake Files from Data Lake Relational Engine](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/128c5bced169487f98eb2e2a49e7fd45.html "Use the UNLOAD statement to unload data to data lake Files.") :arrow_upper_right:
+[Unloading Data to Data Lake Files from Data Lake Relational Engine](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/128c5bced169487f98eb2e2a49e7fd45.html "Use the UNLOAD statement to unload data to data lake Files.") :arrow_upper_right:
 
 [TEMP\_EXTRACT\_GZ\_COMPRESSION\_LEVEL Option for Data Lake Relational Engine](../090-database-options/temp-extract-gz-compression-level-option-for-data-lake-relational-engine-ee9f6aa.md "The compression level balances compression with speed when the TEMP_EXTRACT_COMPRESS option is set to ON.")
 
-[SAP HANA Cloud, Data Lake Terminology](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2023_4_QRC/en-US/d003004765fb4475b14d83e5c51b117f.html "Definitions of data lake terms used in this document.") :arrow_upper_right:
+[SAP HANA Cloud, Data Lake Terminology](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2024_1_QRC/en-US/d003004765fb4475b14d83e5c51b117f.html "Definitions of data lake terms used in this document.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

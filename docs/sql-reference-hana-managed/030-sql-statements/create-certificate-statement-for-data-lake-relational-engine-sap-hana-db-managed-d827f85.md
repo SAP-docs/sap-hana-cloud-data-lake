@@ -12,7 +12,7 @@ Adds or replaces a certificate in the database using the given file or string.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
@@ -20,7 +20,6 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
 CREATE [ OR REPLACE ] CERTIFICATE <certificate-name>
    [ PURPOSE { JWT | X509 } FOR PROVIDER <provider_name> ]
    FROM { <certificate-string> | <variable-name> }
-;
 ```
 
 
@@ -91,7 +90,7 @@ The CREATE CERTIFICATE statement is not used to create an actual certificate. Us
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -163,5 +162,5 @@ FROM '-----BEGIN CERTIFICATE-----
 
 [SYSCERTIFICATE System View for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../070-system-views/syscertificate-system-view-for-data-lake-relational-engine-sap-hana-db-managed-cad9c1f.md "Each row of the SYSCERTIFICATE system view stores a certificate in text PEM-format. This view includes certificates with and without an associated PSE.")
 
-[CREATE CERTIFICATE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/816b6bb36ce21014a7a7a27482e677e1.html "Adds or replaces a certificate in the database using the given file or string.") :arrow_upper_right:
+[CREATE CERTIFICATE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/816b6bb36ce21014a7a7a27482e677e1.html "Adds or replaces a certificate in the database using the given file or string.") :arrow_upper_right:
 

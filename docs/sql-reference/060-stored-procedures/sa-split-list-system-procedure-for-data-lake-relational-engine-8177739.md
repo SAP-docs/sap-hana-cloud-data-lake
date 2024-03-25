@@ -17,11 +17,8 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_split_list( 
-   <str>
-   [, <delim>
-   [, <maxlen> ] ]
-   );
+sa_split_list( <str>[, <delim>
+   [, <maxlen> ] ] )
 ```
 
 
@@ -170,7 +167,7 @@ None
 ## Examples
 
 ```
--- Setup for the following examples
+-- Setup for the following examples ---
 CREATE TABLE PRODUCTS (NAME VARCHAR(15), COLOR VARCHAR(10));
 INSERT INTO PRODUCTS  VALUES ('Tee Shirt','Black');
 INSERT INTO PRODUCTS VALUES ('Baseball Cap', 'Black');
@@ -351,5 +348,5 @@ six
 
 [LIST Function \[Aggregate\] for Data Lake Relational Engine](../050-system-sql-functions/list-function-aggregate-for-data-lake-relational-engine-a2984e5.md "Returns a delimited list of values for every row in a group.")
 
-[sa_split_list System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/204a6c1cac354d788d94946c8e9dbe21.html "Takes a string of values, separated by a delimiter, and returns a set of rows (one row for each value).") :arrow_upper_right:
+[sa_split_list System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/204a6c1cac354d788d94946c8e9dbe21.html "Takes a string of values, separated by a delimiter, and returns a set of rows (one row for each value).") :arrow_upper_right:
 

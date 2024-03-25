@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqdatatype [ <type-name> ], [ <type-owner> ], [ <type-type> ];
+sp_iqdatatype [ <type-name>[, <type-owner>[, <type-type> ] ] ]
 ```
 
 
@@ -151,7 +151,7 @@ Displays the number of digits after the decimal point for numeric data type colu
 <tr>
 <td valign="top">
 
-"default"
+default
 
 </td>
 <td valign="top">
@@ -163,7 +163,7 @@ The default value for the data type.
 <tr>
 <td valign="top">
 
-"check"
+check
 
 </td>
 <td valign="top">
@@ -210,70 +210,145 @@ None
 
 ## Examples
 
--   The following example displays information about the user-defined data type country\_t:
-
-    ```
-    sp_iqdatatype country_t
-    
-    type_name    creator    nulls    width    scale    "default"    "check"
-    country_t    DBA        U       15        0         (NULL)       (NULL)
-    ```
-
--   The following example displays information about all user-defined data types in the database:
-
-    ```
-    sp_iqdatatype;
-    ```
-
--   The following example displays information about the user-defined data type named country\_t:
+-   This example displays information about the user-defined data type country\_t:
 
     ```
     sp_iqdatatype country_t;
     ```
 
--   In the following example, no rows are returned, as the data type non\_existing\_type does not exist:
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    type\_name
+    
+    </th>
+    <th valign="top">
+
+    creator
+    
+    </th>
+    <th valign="top">
+
+    nulls
+    
+    </th>
+    <th valign="top">
+
+    width
+    
+    </th>
+    <th valign="top">
+
+    scale
+    
+    </th>
+    <th valign="top">
+
+    default
+    
+    </th>
+    <th valign="top">
+
+    check
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    country\_t
+    
+    </td>
+    <td valign="top">
+    
+    DBA
+    
+    </td>
+    <td valign="top">
+    
+    U
+    
+    </td>
+    <td valign="top">
+    
+    15
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    <td valign="top">
+    
+    NULL
+    
+    </td>
+    <td valign="top">
+    
+    NULL
+    
+    </td>
+    </tr>
+    </table>
+    
+-   This example displays information about all user-defined data types in the database:
+
+    ```
+    sp_iqdatatype;
+    ```
+
+-   This example displays information about the user-defined data type named country\_t:
+
+    ```
+    sp_iqdatatype country_t;
+    ```
+
+-   In this example, no rows are returned, as the data type non\_existing\_type does not exist:
 
     ```
     sp_iqdatatype non_existing_type;
     ```
 
--   The following example displays information about all user-defined data types owned by DBA:
+-   This example displays information about all user-defined data types owned by DBA:
 
     ```
     sp_iqdatatype NULL, DBA;
     ```
 
--   The following example displays information about the data type country\_t owned by DBA:
+-   This example displays information about the data type country\_t owned by DBA:
 
     ```
     sp_iqdatatype country_t, DBA;
     ```
 
--   In the following example, rowid is a system-defined data type. If there is no user-defined data type also named rowid, no rows are returned. \(By default, only user-defined data types are returned.\):
+-   In thisexample, rowid is a system-defined data type. If there is no user-defined data type also named rowid, no rows are returned. \(By default, only user-defined data types are returned.\):
 
     ```
     sp_iqdatatype rowid;
     ```
 
--   In the following example, no rows are returned, as the data type `rowid` is not a user-defined data type \(by default, only user-defined data types are returned\):
+-   In this example, no rows are returned, as the data type `rowid` is not a user-defined data type \(by default, only user-defined data types are returned\):
 
     ```
     sp_iqdatatype rowid, SYS;
     ```
 
--   The following example displays information about all system defined data types \(owned by dbo or SYS\):
+-   This example displays information about all system defined data types \(owned by dbo or SYS\):
 
     ```
     sp_iqdatatype NULL, NULL, SYSTEM;
     ```
 
--   The following example displays information about the system data type rowid:
+-   This example displays information about the system data type rowid:
 
     ```
     sp_iqdatatype rowid, NULL, SYSTEM;
     ```
 
--   The following example displays information about the user-defined and system data types:
+-   This example displays information about the user-defined and system data types:
 
     ```
     sp_iqdatatype NULL, NULL, 'ALL';

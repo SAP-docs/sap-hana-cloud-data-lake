@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-ALTER EVENT <event-name>;
+ALTER EVENT <event-name>
    [ DELETE TYPE | TYPE <event-type> ]
    { WHERE { <trigger-condition> | NULL }
     | { ADD | [ MODIFY ] | DELETE } SCHEDULE <schedule-spec> }
@@ -42,7 +42,7 @@ ALTER EVENT <event-name>;
    |  LogDiskSpace 
    |  "RAISERROR" 
    |  ServerIdle 
-   |  TempDiskSpace };
+   |  TempDiskSpace }
 ```
 
 ```
@@ -53,7 +53,7 @@ ALTER EVENT <event-name>;
    | > 
    | != 
    | <= 
-   | >= } <value>;
+   | >= } <value>
 ```
 
 ```
@@ -64,7 +64,7 @@ ALTER EVENT <event-name>;
    [ EVERY <period> { HOURS | MINUTES | SECONDS } ] 
    [ ON { ( <day-of-week>, … ) 
       | ( <day-of-month>, … ) } ] 
-   [ START DATE <start-date> ];
+   [ START DATE <start-date> ]
 ```
 
 

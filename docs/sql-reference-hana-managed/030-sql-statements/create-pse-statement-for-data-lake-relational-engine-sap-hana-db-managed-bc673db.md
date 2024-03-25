@@ -12,12 +12,12 @@ Create a personal security environment \(PSE\).
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
 ```
-CREATE PSE <pse-name>;
+CREATE PSE <pse-name>
 ```
 
 
@@ -73,7 +73,7 @@ PSEs are used for trust validation in data lake Relational Engine. They are some
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -120,5 +120,5 @@ CREATE PSE mypse1;
 
 [SYSPSE System View for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../070-system-views/syspse-system-view-for-data-lake-relational-engine-sap-hana-db-managed-0211aea.md "Provides information about personal security environments (PSE).")
 
-[CREATE PSE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/cda6e32786854f6c9f9cc1869c6ddca1.html "Create a personal security environment (PSE).") :arrow_upper_right:
+[CREATE PSE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/cda6e32786854f6c9f9cc1869c6ddca1.html "Create a personal security environment (PSE).") :arrow_upper_right:
 

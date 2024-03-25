@@ -99,5 +99,5 @@ DROP SCHEMA myschema1 RESTRICT;
 
 [CREATE SCHEMA Statement for Data Lake Relational Engine](create-schema-statement-for-data-lake-relational-engine-5e20f75.md "Creates a schema in the current instance.")
 
-[DROP SCHEMA Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/2529cf1872074bdf88e87d4052d2ae6a.html "") :arrow_upper_right:
+[DROP SCHEMA Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/2529cf1872074bdf88e87d4052d2ae6a.html "") :arrow_upper_right:
 

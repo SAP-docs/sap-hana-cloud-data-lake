@@ -18,9 +18,10 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 CREATE SERVER <server-name> 
-   CLASS '{ ASEODBC | HANAODBC | ODBC | IQODBC }' 
-   USING '<SQL_endpoint>' 
-   [ READ ONLY ];
+   CLASS '{ ASEODBC | HANAODBC| IQODBC }' 
+   USING '<SQL-endpoint>' 
+   [ READ ONLY ]
+
 ```
 
 
@@ -38,12 +39,22 @@ CREATE SERVER <server-name>
 <dl>
 <dt><b>
 
-*<SQL\_endpoint\>*
+*<SQL-endpoint\>*
 
 </b></dt>
 <dd>
 
-The ODBC connection parameters for the remote server are dictated by the ODBC driver being used. Only TLS connections are supported.
+The ODBC connection parameters for the remote server are dictated by the ODBC driver being used. Only TLS connections are supported
+
+
+
+</dd>
+<dd>
+
+
+<dl>
+
+</dl>
 
 
 
@@ -67,7 +78,7 @@ Specifies that the remote server is a read-only data source. Any update request 
 
 ## Remarks
 
-`CREATE SERVER` defines a remote server from the data lake Relational Engine catalogs.
+CREATE SERVER defines a remote server from the data lake Relational Engine catalogs.
 
 The value for TrustedFile must be /ase/python\_client/config/trusted.txt. This file is populated with the CREATE and DROP CERTIFICATE statement. The DigiCert Global Root G2 certificate is required to connect to SAP Cloud databases.
 
@@ -91,7 +102,6 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 ## Standards
 
 -   SQL – ISO/ANSI SQL compliant
--   SAP database products – supported by Open Client/Open Server
 
 
 
@@ -99,39 +109,77 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 ## Examples
 
-This example creates a remote SAP HANA server:
+These examples create remote SAP HANA servers:
 
 ```
-CREATE SERVER myHANAserver CLASS 'HANAODBC' USING 
-   'CREATE SERVER HC CLASS 'HANAODBC' USING
-'Driver=/datadrive/hdbclient/libodbcHDB.so;
-ConnectTimeout=0;
-CommunicationTimeout=15000;
-RECONNECT=0;
-ServerNode=629934bc-6f0c-4cbf-8c58-d6cd8aef3885.hana.xxxxx.com:443;
-ENCRYPT=TRUE;
-ssltruststore=629934bc-6f0c-4cbf-8c58-d6cd8aef3885.hana.xxxxx.com;
-ssltrustcert=Yes;
-UID=DBADMIN;PWD=xxx;'
+CREATE SERVER HDLRE2HANA CLASS 'HANAODBC' USING
+     'Driver=/datadrive/hdbclient/libodbcHDB.so;
+      ConnectTimeout=0;
+      CommunicationTimeout=15000;
+      RECONNECT=0;
+      ServerNode=629934bc-6f0c-4cbf-8c58-d6cd8aef3885.hana.xxxxx.com:443;
+      ENCRYPT=TRUE;
+      ssltruststore=629934bc-6f0c-4cbf-8c58-d6cd8aef3885.hana.xxxxx.com;
+      ssltrustcert=Yes;
+      UID=DBADMIN;
+      PWD=ABC12345'
 ```
 
-This example creates a remote SAP IQ server:
+```
+CREATE SERVER HDLRE2HANA CLASS 'HANAODBC' USING 
+     'Driver=libodbcHDB.so;
+      ServerNode=hana_box2:31315;
+      UID=DBADMIN;
+      PWD=Abcde12345'
+```
+
+To verify that the remote server is correctly configured, execute:
+
+```
+CALL SP_REMOTE_TABLE('<remote-server-name>')
+```
+
+These examples create remote SAP IQ servers:
 
 ```
 CREATE SERVER myIQserver CLASS 'IQODBC' USING
-   'DRIVER=libdbodbc17_r.so;
-    UID=HDLADMIN;PWD=xxx;
-    host=d0aeefbf-7075-49cd-b827-812cd947655e.xxx.com:443;
-   ENC=TLS(trusted_certificates=*;direct=yes;certificate_name=hanacloud.xxx.com)';
+     'DRIVER=libdbodbc17_r.so;
+      UID=HDLADMIN;
+      PWD=sql;
+      host=hana_box:443;
+      ENC=TLS(trusted_certificates=*;
+      direct=yes;
+      certificate_name=hanacloud.xxx.com)'
 ```
 
-This example creates a remote SAP ASE cloud server:
+```
+CREATE SERVER myIQserver CLASS 'IQODBC' USING
+     'DRIVER=libdbodbc17_r.so;
+      UID=HDLADMIN;
+      PWD=sql;
+      host=hana_box:2638'
+```
 
 ```
-CREATE SERVER myASEserver  CLASS 'ASEODBC' USING 
-   'Driver=libsybdrvodb.so;TrustedFile=/ase/python_client/config/trusted.txt;
-   Server=zasebenss001.ase.xxx.com;
-   Port=443;Encryption=ssl';
+CREATE SERVER myIQserver CLASS 'IQODBC' USING
+     'DRIVER=libdbodbc17_r.so;
+      UID=HDLADMIN;
+      PWD=sql;
+      host=hana_box:2638'
+```
+
+```
+CREATE SERVER myIQserver CLASS 'IQODBC' USING
+     'DRIVER=libdbodbc17_r.so;
+      UID=dba;
+      PWD=sql;
+      commlinks-tcpp(host=hana_box:2638)'
+```
+
+To verify that the remote server is correctly configured, execute:
+
+```
+CALL SP_REMOTE_TABLE('<remote-server-name>')
 ```
 
 **Related Information**  
@@ -144,4 +192,8 @@ CREATE SERVER myASEserver  CLASS 'ASEODBC' USING
 [CREATE EXTERNLOGIN Statement for Data Lake Relational Engine](create-externlogin-statement-for-data-lake-relational-engine-a61766a.md "Assigns an alternate login name and password to be used when communicating with a remote server.")
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
+
+[Create an SAP HANA On-Premise Remote Server](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/494a8b264b8e4dfa8fc9b095324191b3.html "Create a remote server to an SAP HANA on-premise database from data lake Relational Engine.") :arrow_upper_right:
+
+[Create an SAP IQ On-Premise Remote Server](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/7fa7b84a61bd4312a55f7a68be8dd4a9.html "Create a remote server to an SAP IQ on-premise database from data lake Relational Engine.") :arrow_upper_right:
 

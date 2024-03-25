@@ -441,7 +441,7 @@ TIMESTAMP
 </td>
 <td valign="top">
 
-Point in time, containing year, month, day, hour, minute, second, and fraction of a second. The fraction is stored to 6 or 7 decimal precision, depending on the value of the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option. For more information, see [Decimal Precision of the TIMESTAMP Data Type in Data Lake Relational Engine](../020-sql-data-types/decimal-precision-of-the-timestamp-data-type-in-data-lake-relational-engine-520ce6c.md). The day must be a nonzero value. A TIMESTAMP value requires 8 bytes of storage.
+Point in time, containing year, month, day, hour, minute, second, and fraction of a second. The fraction is stored to 6 or 7 decimal precision, depending on the value of the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option. For more information, see [TIMESTAMP Data Type Precision in Data Lake Relational Engine](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-520ce6c.md). The day must be a nonzero value. A TIMESTAMP value requires 8 bytes of storage.
 
 </td>
 </tr>

@@ -7,7 +7,7 @@ Allows a client application to determine the data lake Relational Engine user ac
 
 
 ```
-sp_iqclient_lookup [ '<IPaddress>' ], [ <Port> ], [ <UserID> ];
+sp_iqclient_lookup [ '<IPaddress>' [, <Port> [, <UserID> ] ] ]
 ```
 
 
@@ -54,39 +54,77 @@ The data lake Relational Engine user ID.
 
 
 
+<a name="loioa59e306484f21015ab9b8d3a215020f9__section_nzn_bxw_tzb"/>
+
+## Result Set
+
+
+<table>
+<tr>
+<th valign="top">
+
+Column Name
+
+</th>
+<th valign="top">
+
+Description
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Number
+
+</td>
+<td valign="top">
+
+The connection ID
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+IPaddress
+
+</td>
+<td valign="top">
+
+The IP address of the originating client application.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Port
+
+</td>
+<td valign="top">
+
+The port number of the originating application.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+UserID
+
+</td>
+<td valign="top">
+
+The data lake Relational Engine user ID.
+
+</td>
+</tr>
+</table>
+
+
+
 ## Remarks
-
-The `sp_iqclient_lookup` procedure takes the client IP address and port number and returns a single row containing Number \(the connection ID\), IPaddress, Port, and UserID:
-
-```
-sp_iqclient_lookup '158.76.235.71',3360;
-```
-
-```
-Number   IPaddress      Port    UserID
-------   ---------      ----    ------
-15       158.76.235.71  3360    rdeniro
-```
-
-Optionally, you can pass a third argument to select only the UserID. If no arguments are passed, `sp_iqclient_lookup` returns all current logins with their IP addresses and port numbers. For example:
-
-```
-sp_iqclient_lookup;
-```
-
-```
-Number   IPaddress        Port    UserID
-------   ---------        ----    ------
-11       162.66.131.36    2082    mbrando
-21       162.66.100.233   1863    apacino
-22       162.66.100.206   8080    jcaan
-23       162.66.100.119   6901    rduvall
-24       162.66.100.125   7001    dkeaton
-25       162.66.100.124   6347    jcazale
-
-(6 rows affected)
-(return status = 0)
-```
 
 If a client application is not using TCP/IP or for internal connections, the address appears as 127.0.0.1.
 
@@ -114,33 +152,156 @@ The `sp_iqclient_lookup` stored procedure may impact server performance, which v
 
 ## Examples
 
--   The following example shows IP addresses for UserID jcazale:
+-   This example shows IP addresses for UserID jcazale:
 
     ```
     sp_iqclient_lookup null, null, jcazale;
     ```
 
-    ```
-    Number   IPaddress        Port    UserID
-    ------   ----------       ----    ------
-    11       162.66.131.36    2082    jcazale
-    15       164.66.131.36    1078    jcazale
-    ```
 
--   The following example shows IP addresses from client IP 162.66.131.36:
+    <table>
+    <tr>
+    <th valign="top">
+
+    Number
+    
+    </th>
+    <th valign="top">
+
+    IPaddress
+    
+    </th>
+    <th valign="top">
+
+    Port
+    
+    </th>
+    <th valign="top">
+
+    UserID
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    11
+    
+    </td>
+    <td valign="top">
+    
+    162.66.131.36
+    
+    </td>
+    <td valign="top">
+    
+    2082
+    
+    </td>
+    <td valign="top">
+    
+    jcazale
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    15
+    
+    </td>
+    <td valign="top">
+    
+    164.66.131.36
+    
+    </td>
+    <td valign="top">
+    
+    1078
+    
+    </td>
+    <td valign="top">
+    
+    jcazale
+    
+    </td>
+    </tr>
+    </table>
+    
+-   This example shows IP addresses from client IP 162.66.131.36:
 
     ```
     sp_iqclient_lookup '162.66.131.36';
     ```
 
-    ```
-    Number   IPaddress        Port    UserID
-    ------   ----------       ----    ------
-    11       162.66.131.36    2082    jcazale
-    12       162.66.131.36    1078    jcaan
-    ```
 
-    > ### Note:  
-    > The result is empty when the user specifies an incorrect argument.
+    <table>
+    <tr>
+    <th valign="top">
 
+    Number
+    
+    </th>
+    <th valign="top">
+
+    IPaddress
+    
+    </th>
+    <th valign="top">
+
+    Port
+    
+    </th>
+    <th valign="top">
+
+    UserID
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    11
+    
+    </td>
+    <td valign="top">
+    
+    162.66.131.36
+    
+    </td>
+    <td valign="top">
+    
+    2082
+    
+    </td>
+    <td valign="top">
+    
+    jcazale
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    12
+    
+    </td>
+    <td valign="top">
+    
+    164.66.131.36
+    
+    </td>
+    <td valign="top">
+    
+    1078
+    
+    </td>
+    <td valign="top">
+    
+    jcazale
+    
+    </td>
+    </tr>
+    </table>
+    
 

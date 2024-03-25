@@ -27,7 +27,7 @@ DELETE
 <table-expression> ::=
    { <table-spec> 
    | <table-expression join-type table-spec> [ ON <condition> ] 
-   | <table-expression>, ... };
+   | <table-expression>, ... }
 ```
 
 
@@ -180,7 +180,7 @@ See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](gra
 
 [TRUNCATE Statement for Data Lake Relational Engine](truncate-statement-for-data-lake-relational-engine-a627e60.md "Deletes all rows from a table or materialized view without deleting the table definition.")
 
-[DELETE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/c2f536c346c44911be3623014bc53910.html "Deletes all the rows from the named table that satisfy the search condition. If no WHERE clause is specified, all rows from the named table are deleted.") :arrow_upper_right:
+[DELETE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/c2f536c346c44911be3623014bc53910.html "Deletes all the rows from the named table that satisfy the search condition. If no WHERE clause is specified, all rows from the named table are deleted.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

@@ -92,5 +92,5 @@ SELECT INSERTSTR( 0, 'office ', 'back' ) FROM iq_dummy;
 
 [STUFF Function \[String\] for Data Lake Relational Engine](stuff-function-string-for-data-lake-relational-engine-a58705b.md "Deletes a number of characters from one string and replaces them with another string.")
 
-[INSERTSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/064a64ca374142608c2c968248d9bbe7.html "Inserts a string into another string at a specified position.") :arrow_upper_right:
+[INSERTSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/064a64ca374142608c2c968248d9bbe7.html "Inserts a string into another string at a specified position.") :arrow_upper_right:
 

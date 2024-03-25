@@ -133,5 +133,5 @@ If arguments *<string-expression-1\>* and *<string-expression-2\>* are of binary
 
 [PATINDEX Function \[String\] for Data Lake Relational Engine](patindex-function-string-for-data-lake-relational-engine-a56c8f8.md "Returns the starting position of the first occurrence of a specified pattern.")
 
-[LOCATE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ea53f0bcd5e34cc8a53d2c6ea32d5b5c.html "Returns the position of one string within another.") :arrow_upper_right:
+[LOCATE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/ea53f0bcd5e34cc8a53d2c6ea32d5b5c.html "Returns the position of one string within another.") :arrow_upper_right:
 

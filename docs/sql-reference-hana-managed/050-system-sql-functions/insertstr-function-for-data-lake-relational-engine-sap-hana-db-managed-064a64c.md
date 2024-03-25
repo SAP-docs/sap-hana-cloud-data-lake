@@ -88,5 +88,5 @@ SELECT INSERTSTR( 0, 'office ', 'back' ) FROM iq_dummy;
 **Related Information**  
 
 
-[INSERTSTR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a558efff84f210159092915333b9e6df.html "Inserts a string into another string at a specified position.") :arrow_upper_right:
+[INSERTSTR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a558efff84f210159092915333b9e6df.html "Inserts a string into another string at a specified position.") :arrow_upper_right:
 

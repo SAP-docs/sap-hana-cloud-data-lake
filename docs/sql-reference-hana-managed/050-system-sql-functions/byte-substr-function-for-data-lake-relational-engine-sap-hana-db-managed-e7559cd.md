@@ -87,5 +87,5 @@ SELECT BYTE_SUBSTR( 'Test Message', 1, 4 );
 **Related Information**  
 
 
-[BYTE_SUBSTR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/81f42f4e6ce21014ab50bd987169f496.html "Returns a substring of a string. The substring is determined using bytes, not characters.") :arrow_upper_right:
+[BYTE_SUBSTR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/81f42f4e6ce21014ab50bd987169f496.html "Returns a substring of a string. The substring is determined using bytes, not characters.") :arrow_upper_right:
 

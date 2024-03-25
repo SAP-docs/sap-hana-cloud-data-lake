@@ -18,7 +18,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 ```
 sp_iqlocks ( [ <connection>,] [ [ <owner>.]<table_name>,]
- <max_locks>,] [ <sort_order> ] );
+ <max_locks>,] [ <sort_order> ] )
 ```
 
 
@@ -86,8 +86,6 @@ All parameters are optional to restrict results:
 <a name="loioa5af357c84f21015bd5cb5d281321779__section_rsk_nch_nbb"/>
 
 ## Result Set
-
-sp\_iqlocks displays the following information, sorted as specified in the *<sort\_order\>* parameter:
 
 
 <table>
@@ -459,25 +457,344 @@ None
 
 ## Examples
 
-The example shows the sp\_iqlocks procedure call and its output in the data lake Relational Engine database. The procedure is called with all default options, so that the output shows all locks, sorted by connection:
+This example returns all locks. Since no value is specified, the output is default sorted by connection.
 
 ```
 call sp_iqlocks();
 ```
 
-```
-conn_name         conn_id      user_id      table_type  creator      table_name  
-=========         =======      =======      ==========  =======      ==========  
-SQL_DBC_13cd6038  3            HDLADMIN     BASE        HDLADMIN     rv_locks2  
-SQL_DBC_13cd6038  3            HDLADMIN     BASE        HDLADMIN     rv_locks2 
-SQL_DBC_13cd6038  3            HDLADMIN     BASE        HDLADMIN     rv_locks2  
-RVL_CONN_T775     1000000407                BASE        HDLADMIN     rv_locks2 
 
-index_id  lock_class  lock_duration  lock_type  row_identifier   row_range
-========  ==========  =============  =========  ==============   ========= 
-          Schema      Transaction    Shared                        
-          Row         Transaction    Row        1                4
-          Row         Transaction    Row        281474976710656  1
-          Table       Transaction    Intent
-```
+<table>
+<tr>
+<th valign="top">
+
+conn\_name
+
+</th>
+<th valign="top">
+
+conn\_id
+
+</th>
+<th valign="top">
+
+user\_id
+
+</th>
+<th valign="top">
+
+table\_type
+
+</th>
+<th valign="top">
+
+creator
+
+</th>
+<th valign="top">
+
+table\_name
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+SQL\_DBC\_13cd6038
+
+</td>
+<td valign="top">
+
+3
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+rv\_locks2
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SQL\_DBC\_13cd6038
+
+</td>
+<td valign="top">
+
+3
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+rv\_locks2
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SQL\_DBC\_13cd6038
+
+</td>
+<td valign="top">
+
+3
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+rv\_locks2
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+RVL\_CONN\_T775
+
+</td>
+<td valign="top">
+
+1000000407
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+BASE
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+rv\_locks2
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="6">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+index\_id
+
+</th>
+<th valign="top">
+
+lock\_class
+
+</th>
+<th valign="top">
+
+lock\_duration
+
+</th>
+<th valign="top">
+
+lock\_type
+
+</th>
+<th valign="top">
+
+row\_identifier
+
+</th>
+<th valign="top">
+
+row\_range
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Schema
+
+</td>
+<td valign="top">
+
+Transaction
+
+</td>
+<td valign="top">
+
+Shared
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Row
+
+</td>
+<td valign="top">
+
+Transaction
+
+</td>
+<td valign="top">
+
+Row
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+4
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Row
+
+</td>
+<td valign="top">
+
+Transaction
+
+</td>
+<td valign="top">
+
+Row
+
+</td>
+<td valign="top">
+
+281474976710656
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+Table
+
+</td>
+<td valign="top">
+
+Transaction
+
+</td>
+<td valign="top">
+
+Intent
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+</table>
 

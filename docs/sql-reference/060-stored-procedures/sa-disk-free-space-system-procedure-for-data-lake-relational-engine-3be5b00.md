@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_disk_free_space( [ <p_dbspace_name> ] );
+sa_disk_free_space( [ <p_dbspace_name> ] )
 ```
 
 

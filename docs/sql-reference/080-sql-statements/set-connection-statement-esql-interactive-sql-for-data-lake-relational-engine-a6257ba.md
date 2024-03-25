@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-SET CONNECTION [<connection-name>];
+SET CONNECTION [<connection-name>]
 ```
 
 

@@ -26,7 +26,7 @@ Syntax 1
 <dd>
 
 ```
-sp_iqcolumn ( [ <table_name> ],[ <table_owner> ], [ <table_loc> ] );
+sp_iqcolumn [ <table_name> [, <table_owner> [, <table_loc> ] ] ]
 ```
 
 
@@ -39,8 +39,8 @@ Syntax 2
 <dd>
 
 ```
-sp_iqcolumn [ table_name='<table_name>' ],
-   [ table_owner='<tableowner>' ],[ table_loc='<table_loc>' ];
+sp_iqcolumn [ table_name='<table_name>' 
+   [, table_owner='<tableowner>'[, table_loc='<table_loc>' ]
 ```
 
 
@@ -326,34 +326,608 @@ None
 
 ## Examples
 
--   The following variations in syntax both return all of the columns in the table Departments:
+-   This example returns all of the columns in the table Departments. The output is the same for both syntax.
 
     ```
-    sp_iqcolumn Departments;
-    ```
-
-    ```
-    call sp_iqcolumn (table_name='Departments');
+    CALL sp_iqcolumn Departments;
     ```
 
     ```
-    table_name   table_owner  column_name     domain_name  width  scale  nulls  default
-    Departments  GROUPO       DepartmentID    integer       4        0   N      (NULL)
-    Departments  GROUPO       DepartmentName  char         40        0   N      (NULL)
-    Departments  GROUPO       DepartmentHead  integer       4        0   Y      (NULL)
+    CALL sp_iqcolumn table_name='Departments';
+    ```
+
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    table\_name
     
-    cardinality  location  isPartitioned  remarks  check
-    5            Main       N             (NULL)   (NULL)
-    0            Main       N             (NULL)   (NULL)
-    0            Main       N             (NULL)   (NULL)
+    </th>
+    <th valign="top">
+
+    table\_owner
+    
+    </th>
+    <th valign="top">
+
+    column\_name
+    
+    </th>
+    <th valign="top">
+
+    domain\_name
+    
+    </th>
+    <th valign="top">
+
+    width
+    
+    </th>
+    <th valign="top">
+
+    scale
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Departments
+    
+    </td>
+    <td valign="top">
+    
+    USER1
+    
+    </td>
+    <td valign="top">
+    
+    DepartmentID
+    
+    </td>
+    <td valign="top">
+    
+    integer
+    
+    </td>
+    <td valign="top">
+    
+    4
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Departments
+    
+    </td>
+    <td valign="top">
+    
+    USER1
+    
+    </td>
+    <td valign="top">
+    
+    DepartmentName
+    
+    </td>
+    <td valign="top">
+    
+    char
+    
+    </td>
+    <td valign="top">
+    
+    40
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Departments
+    
+    </td>
+    <td valign="top">
+    
+    USER1
+    
+    </td>
+    <td valign="top">
+    
+    DepartmentHead
+    
+    </td>
+    <td valign="top">
+    
+    integer
+    
+    </td>
+    <td valign="top">
+    
+    4
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    </tr>
+    </table>
+    
+
+    <table>
+    <tr>
+    <th valign="top" colspan="7">
+
+    \(Continued\)
+    
+    </th>
+    </tr>
+    <tr>
+    <th valign="top">
+
+    nulls
+    
+    </th>
+    <th valign="top">
+
+    default
+    
+    </th>
+    <th valign="top">
+
+    cardinality
+    
+    </th>
+    <th valign="top">
+
+    location
+    
+    </th>
+    <th valign="top">
+
+    isPartitioned
+    
+    </th>
+    <th valign="top">
+
+    remarks
+    
+    </th>
+    <th valign="top">
+
+    check
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    5
+    
+    </td>
+    <td valign="top">
+    
+    Main
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    <td valign="top">
+    
+    Main
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Y
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    <td valign="top">
+    
+    Main
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    </table>
+    
+-   This example returns all of the columns in all of the tables owned by table owner USER2:
+
+    ```
+    sp_iqcolumn NULL, USER2;
     ```
 
--   The following variation in syntax returns all of the columns in all of the tables owned by table owner DBA:
-
     ```
-    sp_iqcolumn table_owner='DBA';
+    sp_iqcolumn table_owner='USER2';
     ```
 
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    table\_name
+    
+    </th>
+    <th valign="top">
+
+    table\_owner
+    
+    </th>
+    <th valign="top">
+
+    column\_name
+    
+    </th>
+    <th valign="top">
+
+    domain\_name
+    
+    </th>
+    <th valign="top">
+
+    width
+    
+    </th>
+    <th valign="top">
+
+    scale
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Orders
+    
+    </td>
+    <td valign="top">
+    
+    USER2
+    
+    </td>
+    <td valign="top">
+    
+    OrderID
+    
+    </td>
+    <td valign="top">
+    
+    integer
+    
+    </td>
+    <td valign="top">
+    
+    4
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Customer
+    
+    </td>
+    <td valign="top">
+    
+    USER2
+    
+    </td>
+    <td valign="top">
+    
+    CustomerID
+    
+    </td>
+    <td valign="top">
+    
+    integer
+    
+    </td>
+    <td valign="top">
+    
+    6
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Customer
+    
+    </td>
+    <td valign="top">
+    
+    USER2
+    
+    </td>
+    <td valign="top">
+    
+    CustomerName
+    
+    </td>
+    <td valign="top">
+    
+    varchar
+    
+    </td>
+    <td valign="top">
+    
+    40
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    </tr>
+    </table>
+    
+
+    <table>
+    <tr>
+    <th valign="top" colspan="7">
+
+    \(Continued\)
+    
+    </th>
+    </tr>
+    <tr>
+    <th valign="top">
+
+    nulls
+    
+    </th>
+    <th valign="top">
+
+    default
+    
+    </th>
+    <th valign="top">
+
+    cardinality
+    
+    </th>
+    <th valign="top">
+
+    location
+    
+    </th>
+    <th valign="top">
+
+    isPartitioned
+    
+    </th>
+    <th valign="top">
+
+    remarks
+    
+    </th>
+    <th valign="top">
+
+    check
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    5
+    
+    </td>
+    <td valign="top">
+    
+    Main
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    <td valign="top">
+    
+    Main
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Y
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    0
+    
+    </td>
+    <td valign="top">
+    
+    Main
+    
+    </td>
+    <td valign="top">
+    
+    N
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    <td valign="top">
+    
+    \(NULL\)
+    
+    </td>
+    </tr>
+    </table>
+    
 
 **Related Information**  
 

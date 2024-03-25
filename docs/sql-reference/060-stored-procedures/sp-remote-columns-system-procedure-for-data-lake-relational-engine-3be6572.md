@@ -22,7 +22,7 @@ sp_remote_columns (
     , <remote-table-name>
     [ , <remote-table-owner>
     [ , <table-qualifier> ] ]
-);
+)
 ```
 
 

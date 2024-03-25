@@ -82,5 +82,5 @@ SELECT Power( 2, 6 ) FROM iq_dummy;
 **Related Information**  
 
 
-[POWER Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a56f22b284f210159c928a9db0c5907e.html "Calculates one number raised to the power of another.") :arrow_upper_right:
+[POWER Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a56f22b284f210159c928a9db0c5907e.html "Calculates one number raised to the power of another.") :arrow_upper_right:
 

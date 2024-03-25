@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-DROP TEXT CONFIGURATION  [ { <owner> | <schema-name> }.]<text-config-name>;
+DROP TEXT CONFIGURATION  [ { <owner> | <schema-name> }.]<text-config-name>
 ```
 
 
@@ -41,14 +41,18 @@ Attempting to drop a text configuration object with dependent TEXT indexes resul
 
 ## Privileges
 
-Requires one of:
+To drop a text configuration requires one of the following:
 
--   You own the text configuration.
+-   You own the text configuration
 -   DROP ANY TEXT CONFIGURATION system privilege
 -   DROP ANY OBJECT system privilege
--   DROP object-level privilege on the text configuration
--   DROP object-level privilege on the schema containing the text configuration
--   DROP object-level privilege on the schema containing the text configuration if the schema is owned by another user.
+
+To drop a text configuration in a schema requires one of the following:
+
+-   You own the schema
+-   DROP ANY TEXT CONFIGURATION object-level privilege on the schema
+-   DROP ANY OBJECT object-level privilege on the schema
+-   DROP object-level privilege on the schema
 
 See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md) or [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md) for assistance with granting privileges.
 

@@ -119,5 +119,5 @@ VARCHAR
 
 [Date Parts in Data Lake Relational Engine](date-parts-in-data-lake-relational-engine-a52b8dd.md "Many of the date functions use dates built from date parts.")
 
-[DATENAME Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/b6977f358a8549aab30b4f2c48dd3c83.html "Returns the name of the specified part (such as the month “June”) of a date/time value, as a character string.") :arrow_upper_right:
+[DATENAME Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/b6977f358a8549aab30b4f2c48dd3c83.html "Returns the name of the specified part (such as the month “June”) of a date/time value, as a character string.") :arrow_upper_right:
 

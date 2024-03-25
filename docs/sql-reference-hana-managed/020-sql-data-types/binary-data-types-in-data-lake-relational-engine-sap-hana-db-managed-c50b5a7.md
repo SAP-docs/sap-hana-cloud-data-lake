@@ -316,5 +316,5 @@ The CONVERT function uses little-endian semantics in data lake Relational Engine
 **Related Information**  
 
 
-[Binary Data Types in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a517b59284f2101595fc9d23db89a857.html "Use binary data types for storing raw binary data, such as pictures, in a hexadecimal-like notation.") :arrow_upper_right:
+[Binary Data Types in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a517b59284f2101595fc9d23db89a857.html "Use binary data types for storing raw binary data, such as pictures, in a hexadecimal-like notation.") :arrow_upper_right:
 

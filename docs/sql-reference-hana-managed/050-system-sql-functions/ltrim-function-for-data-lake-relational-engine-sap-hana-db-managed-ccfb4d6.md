@@ -74,5 +74,5 @@ SELECT LTRIM ('babababAabend','ab') "ltrim" FROM iq_dummy;
 **Related Information**  
 
 
-[LTRIM Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a561eaf184f2101596bab303110c20fb.html "Returns a string, trimmed of all the leading characters present in the trim character set.") :arrow_upper_right:
+[LTRIM Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a561eaf184f2101596bab303110c20fb.html "Returns a string, trimmed of all the leading characters present in the trim character set.") :arrow_upper_right:
 

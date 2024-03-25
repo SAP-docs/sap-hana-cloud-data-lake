@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_conn_info( [ <connidparm> ] );
+sa_conn_info( [ <connidparm> ] )
 ```
 
 
@@ -390,7 +390,7 @@ For more information based on any of these properties, you can execute something
 ```
 SELECT *, DB_NAME( DBNumber ),
    CONNECTION_PROPERTY( 'LastStatement', Number )
-   FROM sa_conn_info( );
+   FROM sa_conn_info( )
 ```
 
 The value of LockRowID can be used to look up a lock in the output of the sa\_locks procedure.
@@ -403,9 +403,7 @@ Every lock has an associated table, so the value of LockTable can be used to una
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure.
-
-To obtain a list of all connection IDs, you'll also need the MONITOR system privilege.
+Requires EXECUTE object-level privilege on the procedure. To obtain a list of all connection IDs, you also need the MONITOR system privilege.
 
 
 

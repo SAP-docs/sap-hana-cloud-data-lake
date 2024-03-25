@@ -198,5 +198,5 @@ CREATE TABLE IF NOT EXISTS ExternalSchema1.ExternalTable1
 
 [REFRESH \(Remote\) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](refresh-remote-table-statement-for-data-lake-relational-engine-sql-on-files-e275657.md "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.")
 
-[CREATE (Remote) TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/24e694b566814ad285cb32fe3e5d3928.html "Create a remote table managed by SQL on Files.") :arrow_upper_right:
+[CREATE (Remote) TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/24e694b566814ad285cb32fe3e5d3928.html "Create a remote table managed by SQL on Files.") :arrow_upper_right:
 

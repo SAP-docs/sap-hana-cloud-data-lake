@@ -15,7 +15,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
 
 
 ```
-NOTIFY TRACE EVENT <trace-event-name> ( [ <param1> [ ,... ] ] );
+NOTIFY TRACE EVENT <trace-event-name> ( [ <param1> [ ,... ] ] )
 ```
 
 
@@ -117,5 +117,5 @@ NOTIFY TRACE EVENT my_event( 3, 'Hello world 3' );
 **Related Information**  
 
 
-[NOTIFY TRACE EVENT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/8171e4fe6ce21014b5a9e34baa895aac.html "Logs a user-defined trace event to a trace session.") :arrow_upper_right:
+[NOTIFY TRACE EVENT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8171e4fe6ce21014b5a9e34baa895aac.html "Logs a user-defined trace event to a trace session.") :arrow_upper_right:
 

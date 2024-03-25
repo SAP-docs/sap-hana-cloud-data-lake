@@ -94,5 +94,5 @@ You can use combinations of `ROUND`, `FLOOR`, and `CEILING` to provide similar f
 
 [ROUND Function \[Numeric\] for Data Lake Relational Engine](round-function-numeric-for-data-lake-relational-engine-a57bbb0.md "Rounds the numeric-expression to the specified integer-expression number of places after the decimal point.")
 
-[TRUNCNUM Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/38464172958846abbb04ad86a7c02f65.html "Truncates a number at a specified number of places after the decimal point.") :arrow_upper_right:
+[TRUNCNUM Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/38464172958846abbb04ad86a7c02f65.html "Truncates a number at a specified number of places after the decimal point.") :arrow_upper_right:
 

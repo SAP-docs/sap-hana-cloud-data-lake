@@ -10,7 +10,7 @@ Inserts a single row or a selection of rows, from elsewhere in the current datab
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
@@ -25,7 +25,7 @@ Syntax 1
 
 ```
 INSERT [ INTO ] [ <schema-name>.]<table-name> 
-   [ ( <column-name> [, …] ) ] VALUES [ ( { <expression> | DEFAULT }[, ...] ) ];
+   [ ( <column-name> [, …] ) ] VALUES [ ( { <expression> | DEFAULT }[, ...] ) ]
 ```
 
 
@@ -39,7 +39,7 @@ Syntax 1a
 
 ```
 INSERT [ INTO ] [ <schema-name>.]<table-name> 
-   DEFAULT VALUES;
+   DEFAULT VALUES
 ```
 
 
@@ -54,7 +54,7 @@ Syntax 2
 ```
 INSERT [ INTO ] [ <schema-name>.]<table-name> [ ( <column-name> [, …] ) ]
    ... <insert-load-options> <insert-select-load-options>
-   ... <select-statement>;
+   ... <select-statement>
 ```
 
 
@@ -70,7 +70,7 @@ Syntax 3
 INSERT [ INTO ] [ <schema-name>.]<table-name>[ ( <column-name> [, …] ) ]
     ... <insert-select-load-options> <insert-select-load-options>
     ... LOCATION '<servername.dbname>' [ <location-options> ]
-   ... { <select-statement> | '<select statement>' };
+   ... { <select-statement> | '<select statement>' }
 ```
 
 
@@ -82,7 +82,7 @@ INSERT [ INTO ] [ <schema-name>.]<table-name>[ ( <column-name> [, …] )�
 <insert-load-options> ::=
    [ LIMIT <number-of-rows> ] 
    [ NOTIFY <number-of-rows> ] 
-   [ SKIP <number-of-rows> ];
+   [ SKIP <number-of-rows> ]
 ```
 
 ```
@@ -90,14 +90,14 @@ INSERT [ INTO ] [ <schema-name>.]<table-name>[ ( <column-name> [, …] )�
    [ WORD SKIP <number> ]
    [ IGNORE CONSTRAINT <constraint-type> [, …] ] 
    [ MESSAGE LOG '<string>' ROW LOG '<string>' [ ONLY LOG <logwhat> [, …] ] ] 
-   [ LOG DELIMITED BY '<string>' ];
+   [ LOG DELIMITED BY '<string>' ]
 ```
 
 ```
 <location-options> ::=
    { PACKETSIZE <interger>
    | QUOTED_IDENTIFIER { ON | OFF }
-   | ISOLATION LEVEL <integer> };
+   | ISOLATION LEVEL <integer> }
 ```
 
 ```
@@ -107,7 +107,7 @@ INSERT [ INTO ] [ <schema-name>.]<table-name>[ ( <column-name> [, …] )�
    | NULL <integer> 
    | FOREIGN KEY <integer> 
    | DATA VALUE <integer> 
-   | ALL <integer> };
+   | ALL <integer> }
 ```
 
 ```
@@ -118,7 +118,7 @@ INSERT [ INTO ] [ <schema-name>.]<table-name>[ ( <column-name> [, …] )�
    | UNIQUE
    | DATA VALUE
    | FOREIGN KEY
-   | WORD };
+   | WORD }
 ```
 
 
@@ -298,20 +298,16 @@ Specifies an isolation level for the connection to a remote server. The levels a
 
 ## Remarks
 
-Syntax 1 and 1a allows the insertion of a single row with the specified expression values. If the list of column names is not specified, the values are inserted into the table columns in the order they were created \(the same order as retrieved with SELECT \*\). The row is inserted into the table at an arbitrary position. \(In relational databases, tables are not ordered.\)
+**Syntax 1 and 1a** - Allows the insertion of a single row with the specified expression values. If the list of column names is not specified, the values are inserted into the table columns in the order they were created \(the same order as retrieved with SELECT \*\). The row is inserted into the table at an arbitrary position. \(In relational databases, tables are not ordered.\)
 
-Syntax 2 allows the user to perform a mass insertion into a table using the results of a fully general SELECT statement. Insertions are done in an arbitrary order unless the SELECT statement contains an ORDER BY clause. The columns from the select list are matched ordinally with the columns specified in the column list, or sequentially in the order in which the columns were created.
+**Syntax 2** - Allows the user to perform a mass insertion into a table using the results of a fully general SELECT statement. Insertions are done in an arbitrary order unless the SELECT statement contains an ORDER BY clause. The columns from the select list are matched ordinally with the columns specified in the column list, or sequentially in the order in which the columns were created.
 
 > ### Note:  
 > The NUMBER\(\*\) function is useful for generating primary keys with Syntax 2 of the INSERT statement.
 
-Syntax 3 INSERT...LOCATION is a variation of Syntax 2 that allows you to insert data from an SAP Adaptive Server Enterprisedata lake Relational Engine or data lake Relational Engine database. The *<servername.dbname\>* specified in the LOCATION clause identifies the remote server and database for the table in the FROM clause.
+**Syntax 3** - INSERT...LOCATION is a variation of Syntax 2 that allows you to insert data from an SAP Adaptive Server Enterprisedata lake Relational Engine or data lake Relational Engine database. The *<servername.dbname\>* specified in the LOCATION clause identifies the remote server and database for the table in the FROM clause.
 
-The external login is defined on the IQ server as:
-
-```
-CREATE EXTERNLOGIN russid TO ase1 REMOTE LOGIN ase1user IDENTIFIED BY mydatabase;
-```
+In data lake Relational Engine, a timestamp data type column can support 6 or 7 decimal precision. See [TIMESTAMP Data Type Precision in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-sap-hana-db-managed-5cbca14.md). If you attempt to insert 7 decimal precision data into a 6 decimal precision column in the data lake Relational Engine, then the value will be truncated to 6 decimal places and precision is lost. To prevent this behavior, set the TIMESTAMP\_RTRUNCATION database option to ON. See [TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-sap-hana-db-managed-7ea796c.md). When enabled, the INSERT operation fails if precision will be lost on a timestamp column.
 
 Character strings inserted into tables are always stored in the case they are entered, regardless of whether the database is case-sensitive or not. Thus, a string “Value” inserted into a table is always held in the database with an uppercase V and the remainder of the letters lowercase. SELECT statements return the string as 'Value.' If the database is not case-sensitive, however, all comparisons make 'Value' the same as 'value,' 'VALUE," and so on. Further, if a single-column primary key already contains an entry Value, an INSERT of value is rejected, as it would make the primary key not unique.
 
@@ -361,7 +357,7 @@ The result of a SELECT…FROM may be slightly different from the result of an IN
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -435,5 +431,7 @@ Requires one of:
 **Related Information**  
 
 
-[INSERT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a61fdeff84f21015aa66b9add387d7f9.html "Inserts a single row or a selection of rows, from elsewhere in the current database, into the table. This command can also insert a selection of rows from another database into the table.") :arrow_upper_right:
+[TIMESTAMP Data Type Precision in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-sap-hana-db-managed-5cbca14.md "Precision conflicts between TIMESTAMP data types result in data loss.")
+
+[INSERT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a61fdeff84f21015aa66b9add387d7f9.html "Inserts a single row or a selection of rows, from elsewhere in the current database, into the table. This command can also insert a selection of rows from another database into the table.") :arrow_upper_right:
 

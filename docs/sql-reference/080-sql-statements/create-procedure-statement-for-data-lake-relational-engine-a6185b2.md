@@ -21,18 +21,18 @@ CREATE [ OR REPLACE ] [ TEMPORARY ] PROCEDURE [ { <owner> | <schema-name> 
    [ SQL SECURITY { INVOKER | DEFINER } ]
    [ RESULT ( <result-column>, …) | NO RESULT SET ]  
    [ ON EXCEPTION RESUME ]
-   { <compound statement> | AT <location-string> };
+   { <compound statement> | AT <location-string> }
 ```
 
 ```
 <parameter> ::=
    { { IN | OUT | INOUT } <parameter-name> <data-type> [ DEFAULT <expression> ] 
    | SQLCODE 
-   | SQLSTATE };
+   | SQLSTATE }
 ```
 
 ```
-<result-column> ::= <column-name> <data-type>;
+<result-column> ::= <column-name> <data-type>
 ```
 
 
@@ -398,5 +398,5 @@ Automatic commit
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[CREATE PROCEDURE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/d172ce3def5648e299ecb61779eab7da.html "Creates a new user-defined SQL procedure in the database.") :arrow_upper_right:
+[CREATE PROCEDURE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/d172ce3def5648e299ecb61779eab7da.html "Creates a new user-defined SQL procedure in the database.") :arrow_upper_right:
 

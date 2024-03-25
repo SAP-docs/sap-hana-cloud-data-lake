@@ -30,7 +30,7 @@ sp_read_etd(
 [,timestamp_start=<timestamp-with-timezone>]
 [,timestamp_end=<timestamp-with-timezone>]
 [,regex ]=<regular-expression>[,...]]
-);
+)
 ```
 
 
@@ -646,5 +646,5 @@ FROM dbo.sp_read_etd( 'trace1.etd', regex = '.*abc.*' );
 **Related Information**  
 
 
-[sp_read_etd System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/54317f64bd364214b86e0e6b5aba2300.html "Reads the specified event trace data (ETD) file and returns the contents of the file as a set of rows.") :arrow_upper_right:
+[sp_read_etd System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/54317f64bd364214b86e0e6b5aba2300.html "Reads the specified event trace data (ETD) file and returns the contents of the file as a set of rows.") :arrow_upper_right:
 

@@ -23,7 +23,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 ALTER TABLE [ { <owner> | <schema-name> }.]<table-name> ALTER OWNER TO { <new-owner> | <new-schema-name> }
    [ { PRESERVE | DROP } PERMISSIONS ] 
-   [ { PRESERVE | DROP } FOREIGN KEYS ];
+   [ { PRESERVE | DROP } FOREIGN KEYS ]
 ```
 
 
@@ -44,7 +44,7 @@ ALTER TABLE [ { <owner> | <schema-name> }.]<table-name>
             | <hash-range-partitioning-scheme>
    | SUBPARTITION BY RANGE <range-partition-decl>
    | ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>
-   | UNPARTITION;
+   | UNPARTITION
 ```
 
 
@@ -127,7 +127,7 @@ Defines a table column. Two columns in the same table cannot have the same name.
 
 ```
 <column definition> ::= 
-   <column-name> <data-type> [ NOT NULL | NULL  ] 
+   <data-type> [ NOT NULL | NULL  ] 
     [ IN <dbspace-name> ] 
     [ DEFAULT <default-value> | IDENTITY ];
 ```
@@ -1333,17 +1333,17 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [FP\_NBIT\_ROLLOVER\_MAX\_MB Option for Data Lake Relational Engine](../090-database-options/fp-nbit-rollover-max-mb-option-for-data-lake-relational-engine-a873d4b.md "Sets a threshold for the total dictionary size for implicit NBit rollovers to Flat FP.")
 
-[Restrictions on Table Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a872506a84f21015aa20de6d7665a803.html "Some restrictions apply to table partitions.") :arrow_upper_right:
+[Restrictions on Table Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a872506a84f21015aa20de6d7665a803.html "When working with table partitions, there are some restrictions on the table types, partition keys, and operations you can use.") :arrow_upper_right:
 
-[Hash-Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a871ecd884f21015b8f5876892d31447.html "Hash-range partitioning is a composite partitioning scheme that subpartitions a hash-partitioned table by range.") :arrow_upper_right:
+[Hash-Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a871ecd884f21015b8f5876892d31447.html "Hash-range partitioning is a composite partitioning scheme that subpartitions a hash-partitioned table by range.") :arrow_upper_right:
 
-[Hash Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a871bc0984f210159faaedf3f3eb5b29.html "Hash partitioning maps data to partitions based on partition-key values processed by an internal hashing function.") :arrow_upper_right:
+[Hash Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a871bc0984f210159faaedf3f3eb5b29.html "Hash partitioning maps data to partitions based on partition-key values processed by an internal hashing function.") :arrow_upper_right:
 
-[Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a8721b7584f21015a062c99a1c19e6cb.html "Range partitioning divides large tables by a range of partition-key values established for each partition.") :arrow_upper_right:
+[Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a8721b7584f21015a062c99a1c19e6cb.html "Range partitioning divides large tables by a range of partition-key values established for each partition.") :arrow_upper_right:
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[ALTER TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/593f8b1caaaf4d31abc4a5a095d86254.html "Modifies a table definition.") :arrow_upper_right:
+[ALTER TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/593f8b1caaaf4d31abc4a5a095d86254.html "Modifies a table definition.") :arrow_upper_right:
 

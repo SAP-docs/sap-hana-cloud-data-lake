@@ -19,7 +19,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 <label> ::= 
     <sql-statement(s)>
-    GOTO <label_name>;
+    GOTO <label_name>
 ```
 
 

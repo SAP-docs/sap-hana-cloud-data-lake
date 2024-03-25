@@ -88,7 +88,7 @@ TIMESTAMP
 </td>
 <td valign="top">
 
-Point in time, containing year, month, day, hour, minute, second, and fraction of a second. The fraction is stored to 6 or 7 decimal precision, depending on the value of the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option. For more information, see [Decimal Precision of the TIMESTAMP Data Type in Data Lake Relational Engine](decimal-precision-of-the-timestamp-data-type-in-data-lake-relational-engine-520ce6c.md). The day must be a nonzero value. A TIMESTAMP value requires 8 bytes of storage.
+Point in time, containing year, month, day, hour, minute, second, and fraction of a second. The fraction is stored to 6 or 7 decimal precision, depending on the value of the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option. For more information, see [TIMESTAMP Data Type Precision in Data Lake Relational Engine](timestamp-data-type-precision-in-data-lake-relational-engine-520ce6c.md). The day must be a nonzero value. A TIMESTAMP value requires 8 bytes of storage.
 
 </td>
 </tr>
@@ -238,7 +238,7 @@ If a string contains only a partial date specification, default values are used 
 
 [Retrieve Dates and Times in Data Lake Relational Engine](retrieve-dates-and-times-in-data-lake-relational-engine-a5209f7.md "There are three ways in which you can retrieve dates and times from the database.")
 
-[Decimal Precision of the TIMESTAMP Data Type in Data Lake Relational Engine](decimal-precision-of-the-timestamp-data-type-in-data-lake-relational-engine-520ce6c.md "Decimal precision for TIMESTAMP data type columns is controlled by the TIMESTAMP_COLUMNS_AS_DATETIMEX database option.")
+[TIMESTAMP Data Type Precision in Data Lake Relational Engine](timestamp-data-type-precision-in-data-lake-relational-engine-520ce6c.md "Precision conflicts between TIMESTAMP data types result in data loss.")
 
 [TIMESTAMP\_COLUMNS\_AS\_DATETIMEX Option for Data Lake Relational Engine](../090-database-options/timestamp-columns-as-datetimex-option-for-data-lake-relational-engine-082fdf9.md "Controls whether DATETIMEX data type columns are automatically created when TIMESTAMPS data type columns are requested.")
 

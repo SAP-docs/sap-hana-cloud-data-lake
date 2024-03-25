@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqindexrebuildwidedata [<table.name>];
+sp_iqindexrebuildwidedata [ <table_name> ]
 ```
 
 
@@ -30,12 +30,12 @@ sp_iqindexrebuildwidedata [<table.name>];
 <dl>
 <dt><b>
 
-*<table.name\>*
+*<table\_name\>*
 
 </b></dt>
 <dd>
 
-Include the optional *<table.name\>* parameter to generate a list of wide columns for that table. Omit the *<table.name\>* parameter to generate a list of wide columns for all tables in the database.
+Include the optional *<table\_name\>* parameter to generate a list of wide columns for that table. Omit the *<table\_name\>* parameter to generate a list of wide columns for all tables in the database.
 
 
 
@@ -44,20 +44,27 @@ Include the optional *<table.name\>* parameter to generate a list of wide column
 
 
 
+<a name="loioa87db4e784f2101596f1b7355fcd2137__section_iyd_vfx_c1c"/>
+
+## Result Set
+
+See Examples.
+
+
+
 <a name="loioa87db4e784f2101596f1b7355fcd2137__section_xj5_z1z_mbb"/>
 
 ## Remarks
 
-CHAR, VARCHAR, BINARY, and VARBINARY columns wider than 255 characters, as well as all LONG VARCHAR and LONG BINARY columns in databases migrated to data lake Relational Engine 16.1 must be rebuilt before the database engine can perform read/write activities on them. sp\_iqindexrebuildwidedata identifies these columns and generates a list of statements that you can use to rebuild the columns with the sp\_iqrebuildindex procedure.
+CHAR, VARCHAR, BINARY, and VARBINARY columns wider than 255 characters, as well as all LONG VARCHAR and LONG BINARY columns in databases migrated to data lake Relational Engine must be rebuilt before the database engine can perform read/write activities on them. sp\_iqindexrebuildwidedata identifies these columns and generates a list of statements that you can use to rebuild the columns with the sp\_iqrebuildindex procedure.
 
 
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure. If you own the object referenced by the procedure, no additional privilege is required.
+Requires EXECUTE object-level privilege on the procedure along with one of the following:
 
-For objects owned by others, you need one of the following privileges:
-
+-   You own the object referenced by the procedure.
 -   INSERT ANY TABLE system privilege
 -   INSERT object-level privilege on the table
 
@@ -74,12 +81,84 @@ None
 This example generates wide-column rebuild statements for table T2:
 
 ```
-sp_iqindexrebuildwidedata T2;
+CALL sp_iqindexrebuildwidedata T2;
 ```
 
-```
 
-Owner  Table  Column  Domain    Width    IndexType            sp_iqrebuild
-DBA    T2     C1      char      1020     Long varchar FP      sp_iqrebuildindex '"DBA.T2"'  'column "C1"  0';  
-```
+<table>
+<tr>
+<th valign="top">
+
+Owner
+
+</th>
+<th valign="top">
+
+Table
+
+</th>
+<th valign="top">
+
+Column
+
+</th>
+<th valign="top">
+
+Domain
+
+</th>
+<th valign="top">
+
+Width
+
+</th>
+<th valign="top">
+
+IndexType
+
+</th>
+<th valign="top">
+
+sp\_iqrebuild
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+T2
+
+</td>
+<td valign="top">
+
+C1
+
+</td>
+<td valign="top">
+
+char
+
+</td>
+<td valign="top">
+
+1020
+
+</td>
+<td valign="top">
+
+Long varchar FP
+
+</td>
+<td valign="top">
+
+sp\_iqrebuildindex '"USER1.T2"' 'column"C1" 0';
+
+</td>
+</tr>
+</table>
 

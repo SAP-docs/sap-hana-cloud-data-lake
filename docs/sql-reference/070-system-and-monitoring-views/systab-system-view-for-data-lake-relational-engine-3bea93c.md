@@ -634,5 +634,5 @@ The UTC time at which the data in the table was last modified. This column is on
 **Related Information**  
 
 
-[SYSTAB System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/9f67d02bffc5494fa10c6e2c245cd3ee.html "Each row of the SYSTAB system view describes one table or view in the database. Additional information for views can be found in the SYSVIEW system view. The underlying system table for this view is ISYSTAB.") :arrow_upper_right:
+[SYSTAB System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/9f67d02bffc5494fa10c6e2c245cd3ee.html "Each row of the SYSTAB system view describes one table or view in the database. Additional information for views can be found in the SYSVIEW system view. The underlying system table for this view is ISYSTAB.") :arrow_upper_right:
 

@@ -22,7 +22,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 [ <variable> = ] CALL { <owner> | <schema-name> }<procedure-name> ( [ <expression> ] [ , … ] ) 
-    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ];
+    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ]
 ```
 
 
@@ -31,7 +31,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 [ <variable> = ] CALL { <owner> | <schema-name> }<procedure-name> ( [ <parameter-name> = <expression> ] [ , … ] ) 
-    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ];
+    [ AS USER { <string> | <variable> } IDENTIFIED BY { <string> | <variable> } ]
 ```
 
 
@@ -164,7 +164,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[CALL Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/04d3a41e1d0c48aaaa788980a565bbe0.html "Invokes a procedure.") :arrow_upper_right:
+[CALL Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/04d3a41e1d0c48aaaa788980a565bbe0.html "Invokes a procedure.") :arrow_upper_right:
 
 [CREATE PROCEDURE Statement for Data Lake Relational Engine](create-procedure-statement-for-data-lake-relational-engine-a6185b2.md "Creates a new user-defined SQL procedure in the database.")
 

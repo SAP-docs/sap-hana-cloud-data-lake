@@ -23,7 +23,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 GRANT CHANGE PASSWORD ( { <target_user_list> | ANY | ANY WITH ROLES <target_role_list> } )
    TO <user_id>[, …]
-   [ { WITH ADMIN [ ONLY ] OPTION | WITH NO ADMIN OPTION } ];
+   [ { WITH ADMIN [ ONLY ] OPTION | WITH NO ADMIN OPTION } ]
 ```
 
 

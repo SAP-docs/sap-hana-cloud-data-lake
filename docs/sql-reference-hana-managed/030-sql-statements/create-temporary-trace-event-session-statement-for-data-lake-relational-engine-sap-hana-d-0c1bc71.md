@@ -19,7 +19,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
 ```
 CREATE [ OR REPLACE ] TEMPORARY TRACE EVENT SESSION <session-name> 
    <event-definition> [ ,... ]
-   [ <target-definition> ];
+   [ <target-definition> ]
 ```
 
 
@@ -294,5 +294,5 @@ CREATE OR REPLACE TEMPORARY TRACE EVENT SESSION my_session_hdladmin ADD TRACE EV
 
 [DROP TRACE EVENT SESSION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-trace-event-session-statement-for-data-lake-relational-engine-sap-hana-db-managed-1b596ab.md "Drops a trace event session.")
 
-[CREATE TEMPORARY TRACE EVENT SESSION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/816cf4d46ce2101485eddafc5b7ce186.html "Creates a user trace event session.") :arrow_upper_right:
+[CREATE TEMPORARY TRACE EVENT SESSION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/816cf4d46ce2101485eddafc5b7ce186.html "Creates a user trace event session.") :arrow_upper_right:
 

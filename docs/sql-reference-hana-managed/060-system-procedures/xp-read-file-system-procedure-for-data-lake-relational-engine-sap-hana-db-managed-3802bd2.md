@@ -20,7 +20,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-xp_read_file( <filename>[, <lazy> ] );
+xp_read_file( <filename>[, <lazy> ] )
 ```
 
 
@@ -155,5 +155,5 @@ NULL
 **Related Information**  
 
 
-[xp_read_file System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3beb56b86c5f101495dbf54443bd191d.html "Reads a file and returns the contents of the file as a LONG BINARY variable.") :arrow_upper_right:
+[xp_read_file System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3beb56b86c5f101495dbf54443bd191d.html "Reads a file and returns the contents of the file as a LONG BINARY variable.") :arrow_upper_right:
 

@@ -17,12 +17,12 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-CREATE LOGIN POLICY <policy-name> <policy-option>;
+CREATE LOGIN POLICY <policy-name> <policy-option>
 ```
 
 ```
 <policy-option> ::=
-   [<policy-option-name> = <policy-option-value>...];
+   [<policy-option-name> = <policy-option-value>...]
 ```
 
 ```
@@ -43,7 +43,7 @@ CREATE LOGIN POLICY <policy-name> <policy-option>;
 
 ```
 <policy-option-value> ::=
-   { UNLIMITED | DEFAULT | NULL | <value> };
+   { UNLIMITED | DEFAULT | NULL | <value> }
 ```
 
 
@@ -82,7 +82,7 @@ The name of the login policy.
 </b></dt>
 <dd>
 
-The name of the policy option. See [Login Policy Options](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right: for details about each option.
+The name of the policy option. See [Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right: for details about each option.
 
 
 
@@ -93,7 +93,7 @@ The name of the policy option. See [Login Policy Options](https://help.sap.com/v
 </b></dt>
 <dd>
 
-The value assigned to the login policy option. If you specify UNLIMITED, then no limits are used. If you specify DEFAULT, then the default limits are used. See [Login Policy Options](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right: for supported values for each option.
+The value assigned to the login policy option. If you specify UNLIMITED, then no limits are used. If you specify DEFAULT, then the default limits are used. See [Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right: for supported values for each option.
 
 NULL and UNLIMITED are not valid for some options.
 
@@ -114,8 +114,8 @@ All new instances include a CUSTOMER\_root login policy, which cannot be modifie
 
 For details on available login policy options for CUSTOMER\_root and user-defined logins and LDAP user authentication, see:
 
--   [Login Policy Options](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
--   [LDAP Login Policy Options](https://help.sap.com/viewer/745778e524f74bb4af87460cca5e62c4/2023_4_QRC/en-US/a450848584f210159c6ab461ae64c77f.html "Available login policy options for LDAP user authentication.") :arrow_upper_right:
+-   [Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
+-   [LDAP Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a450848584f210159c6ab461ae64c77f.html "Available login policy options for LDAP user authentication.") :arrow_upper_right:
 
 
 

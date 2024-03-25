@@ -149,5 +149,5 @@ Moira
 **Related Information**  
 
 
-[CHARINDEX Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a53cde2984f210158cbd968731b1879c.html "Returns the position of the first occurrence of a specified string in another string.") :arrow_upper_right:
+[CHARINDEX Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a53cde2984f210158cbd968731b1879c.html "Returns the position of the first occurrence of a specified string in another string.") :arrow_upper_right:
 

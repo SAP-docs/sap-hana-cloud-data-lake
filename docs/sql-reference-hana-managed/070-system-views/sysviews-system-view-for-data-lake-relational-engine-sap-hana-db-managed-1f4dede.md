@@ -39,5 +39,5 @@ To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE priv
 **Related Information**  
 
 
-[SYSVIEWS System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3beb3c476c5f10149333ff887924c019.html "Each row of the SYS.SYSVIEWS view describes one view, including its view definition.") :arrow_upper_right:
+[SYSVIEWS System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3beb3c476c5f10149333ff887924c019.html "Each row of the SYS.SYSVIEWS view describes one view, including its view definition.") :arrow_upper_right:
 

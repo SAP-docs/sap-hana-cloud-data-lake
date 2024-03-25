@@ -112,7 +112,7 @@ SELECT [ { ALL | DISTINCT } ] [ <row-limitation-option1> ] <select-list>
 ```
 <materialized_view_staleness_option> ::=
    { materialized_view_staleness_check
-    | materialized_view_staleness_limit };
+    | materialized_view_staleness_limit }
 ```
 
 
@@ -848,7 +848,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[SELECT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7123f8b4e1f14a8f9efd257794202198.html "Retrieves information from the database.") :arrow_upper_right:
+[SELECT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7123f8b4e1f14a8f9efd257794202198.html "Retrieves information from the database.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

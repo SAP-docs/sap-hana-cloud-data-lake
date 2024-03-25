@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-SAVE TRANSACTION [ <savepoint-name> ];
+SAVE TRANSACTION [ <savepoint-name> ]
 ```
 
 

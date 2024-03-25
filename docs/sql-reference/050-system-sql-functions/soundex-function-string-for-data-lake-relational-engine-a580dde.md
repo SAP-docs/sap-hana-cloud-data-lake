@@ -83,5 +83,5 @@ SELECT SOUNDEX( 'Smith' ), SOUNDEX( 'Smythe' ) FROM iq_dummy;
 
 [DIFFERENCE Function \[String\] for Data Lake Relational Engine](difference-function-string-for-data-lake-relational-engine-a54d8aa.md "Compares two strings, evaluates the similarity between them, and returns a value from 0 to 4.")
 
-[SOUNDEX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/74cbdbe37b6244ce8ac19780a8962f9e.html "Returns a number representing the sound of a string.") :arrow_upper_right:
+[SOUNDEX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/74cbdbe37b6244ce8ac19780a8962f9e.html "Returns a number representing the sound of a string.") :arrow_upper_right:
 

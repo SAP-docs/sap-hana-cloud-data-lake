@@ -63,5 +63,5 @@ SELECT ACOS( 0.52 ) FROM iq_dummy;
 **Related Information**  
 
 
-[ACOS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/0fc7b1b85c8d4b6280000fc7e92152ee.html "Returns the arc-cosine, in radians, of a numeric expression.") :arrow_upper_right:
+[ACOS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/0fc7b1b85c8d4b6280000fc7e92152ee.html "Returns the arc-cosine, in radians, of a numeric expression.") :arrow_upper_right:
 

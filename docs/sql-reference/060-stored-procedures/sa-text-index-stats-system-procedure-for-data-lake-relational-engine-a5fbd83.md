@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_text_index_stats( );
+sa_text_index_stats( )
 ```
 
 
@@ -292,15 +292,17 @@ The `pending_length`, `deleted_length`, and `last_refresh` values are NULL for I
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure, along with one of the following system privileges:
+Requires EXECUTE object-level privilege on the procedure.
 
--   MANAGE ANY STATISTICS
--   CREATE ANY INDEX
--   ALTER ANY INDEX
--   DROP ANY INDEX
--   CREATE ANY OBJECT
--   ALTER ANY OBJECT
--   DROP ANY OBJECT
+Also requires one of the following:
+
+-   MANAGE ANY STATISTICS system privileges
+-   CREATE ANY INDEX system privileges
+-   ALTER ANY INDEX system privileges
+-   DROP ANY INDEX system privileges
+-   CREATE ANY OBJECT system privileges
+-   ALTER ANY OBJECT system privileges
+-   DROP ANY OBJECT system privileges
 
 
 
@@ -360,11 +362,6 @@ table\_name
 index\_name
 
 </th>
-<th valign="top">
-
-text\_config\_name
-
-</th>
 </tr>
 <tr>
 <td valign="top">
@@ -402,17 +399,24 @@ PRODUCTS
 myTxtIdx
 
 </td>
-<td valign="top">
-
-default\_char
-
-</td>
 </tr>
 </table>
 
 
 <table>
 <tr>
+<th valign="top" colspan="6">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+text\_config\_name
+
+</th>
 <th valign="top">
 
 doc\_count
@@ -440,6 +444,11 @@ last\_refresh
 </th>
 </tr>
 <tr>
+<td valign="top">
+
+default\_char
+
+</td>
 <td valign="top">
 
 4

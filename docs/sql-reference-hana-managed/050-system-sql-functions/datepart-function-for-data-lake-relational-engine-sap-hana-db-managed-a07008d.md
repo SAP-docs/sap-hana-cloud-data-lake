@@ -107,5 +107,5 @@ The DATE, TIME, and DTTM indexes do not support some date parts \(Calyearofweek,
 
 [DATE\_FIRST\_DAY\_OF\_WEEK Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/date-first-day-of-week-option-for-data-lake-relational-engine-sap-hana-db-managed-7b332a7.md "Determines the first day of the week.")
 
-[DATEPART Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a547b06f84f210158ab3bd499f292d99.html "Returns an integer value for the specified part of a date/time value.") :arrow_upper_right:
+[DATEPART Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a547b06f84f210158ab3bd499f292d99.html "Returns an integer value for the specified part of a date/time value.") :arrow_upper_right:
 

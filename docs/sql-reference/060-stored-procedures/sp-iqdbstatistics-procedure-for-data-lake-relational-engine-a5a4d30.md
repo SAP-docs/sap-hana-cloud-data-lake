@@ -7,8 +7,24 @@ Reports results of the most recent sp\_iqcheckdb.
 
 
 ```
-sp_iqdbstatistics;
+sp_iqdbstatistics
 ```
+
+
+
+<a name="loioa5a4d30384f2101589ee88c96ba8bea6__section_hrt_f41_vzb"/>
+
+## Parameters
+
+None
+
+
+
+<a name="loioa5a4d30384f2101589ee88c96ba8bea6__section_hm3_4bw_c1c"/>
+
+## Result Set
+
+See Examples.
 
 
 
@@ -38,7 +54,7 @@ None
 
 ## Examples
 
-The following example shows the output from sp\_iqdbstatistics. For this example, the most recent execution of sp\_iqcheckdb was the command sp\_iqcheckdb 'allocation database':
+This example shows the output from sp\_iqdbstatistics. For this example, the most recent execution of sp\_iqcheckdb was the command sp\_iqcheckdb 'allocation database':
 
 ```
             DB Statistics                     Value               Flags

@@ -75,5 +75,5 @@ SELECT LCASE( 'LOWER CasE' ) FROM iq_dummy;
 **Related Information**  
 
 
-[LCASE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a55c82d484f210158fe3bfeba4f0e0bd.html "Converts all characters in a string to lowercase.") :arrow_upper_right:
+[LCASE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a55c82d484f210158fe3bfeba4f0e0bd.html "Converts all characters in a string to lowercase.") :arrow_upper_right:
 

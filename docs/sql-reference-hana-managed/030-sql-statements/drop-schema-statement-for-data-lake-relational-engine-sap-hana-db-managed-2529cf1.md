@@ -70,7 +70,7 @@ If you drop a schema, then any schema synonym that references it is also dropped
     -   DROP ANY OBJECT system privilege
 
 
-See [GRANT System Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a3dfcb0284f21015b74ac3cded42ee69.html "Grants specific system privileges to users or roles, with or without administrative rights.") :arrow_upper_right: or [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right: for assistance with granting privileges.
+See [GRANT System Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a3dfcb0284f21015b74ac3cded42ee69.html "Grants specific system privileges to users or roles, with or without administrative rights.") :arrow_upper_right: or [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right: for assistance with granting privileges.
 
 
 
@@ -97,5 +97,5 @@ DROP SCHEMA myschema1 RESTRICT;
 
 [CREATE SCHEMA for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-schema-for-data-lake-relational-engine-sap-hana-db-managed-7988025.md "Creates a schema in the current instance.")
 
-[DROP SCHEMA Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/0c4b7140839a4678aa4a99b88b2d57e2.html "Removes a schema from the database.") :arrow_upper_right:
+[DROP SCHEMA Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/0c4b7140839a4678aa4a99b88b2d57e2.html "Removes a schema from the database.") :arrow_upper_right:
 

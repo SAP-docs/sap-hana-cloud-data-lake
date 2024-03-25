@@ -70,7 +70,7 @@ The system procedure performs the following tasks:
 
 ## Privileges
 
-You're a member of the container group administrator role.
+You're a member of the container group administrator role \(SYSHDL\_ROLE\).
 
 
 
@@ -87,7 +87,7 @@ CALL SYSHDL.CREATE_CONTAINER('CONTAINER1', 'USER1');
 **Related Information**  
 
 
-[Manage Relational Containers in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/0b494fedebb243fc9bd92c87bac7ddd4.html "Relational containers are managed from the SAP HANA database instance, but are stored in the data lake Relational Engine instance.") :arrow_upper_right:
+[Manage Relational Containers in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/0b494fedebb243fc9bd92c87bac7ddd4.html "Relational containers are managed from the SAP HANA database instance, but are stored in the data lake Relational Engine instance.") :arrow_upper_right:
 
-[Creating a Relational Container in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/ab555a3a98204db88d1aab58b51f15ce.html "Create a relational container in the data lake Relational Engine container group.") :arrow_upper_right:
+[Creating a Relational Container in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/ab555a3a98204db88d1aab58b51f15ce.html "Create a relational container in the data lake Relational Engine container group.") :arrow_upper_right:
 

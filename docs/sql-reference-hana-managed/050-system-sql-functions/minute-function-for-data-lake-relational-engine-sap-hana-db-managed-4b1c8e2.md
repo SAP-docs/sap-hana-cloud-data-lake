@@ -63,5 +63,5 @@ SELECT MINUTE( '1998-07-13 12:22:34' ) FROM iq_dummy;
 **Related Information**  
 
 
-[MINUTE Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a5640f2284f21015825db935889f60d9.html "Returns a number from 0 to 59 corresponding to the minute component of the specified date/time value.") :arrow_upper_right:
+[MINUTE Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5640f2284f21015825db935889f60d9.html "Returns a number from 0 to 59 corresponding to the minute component of the specified date/time value.") :arrow_upper_right:
 

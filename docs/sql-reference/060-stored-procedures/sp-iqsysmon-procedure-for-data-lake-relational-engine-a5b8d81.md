@@ -26,7 +26,7 @@ Batch Mode Syntax 1
 <dd>
 
 ```
-sp_iqsysmon start_monitor;
+sp_iqsysmon start_monitor
 ```
 
 
@@ -39,7 +39,7 @@ Batch Mode Syntax 2
 <dd>
 
 ```
-sp_iqsysmon stop_monitor [, 'section(s)' ];
+sp_iqsysmon stop_monitor [, 'section(s)' ]
 ```
 
 
@@ -52,7 +52,7 @@ Syntax 3
 <dd>
 
 ```
-sp_iqsysmon '<time-period>' [, 'section(s)' ];
+sp_iqsysmon '<time-period>' [, 'section(s)' ]
 ```
 
 

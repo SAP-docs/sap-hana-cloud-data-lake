@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_eng_properties( );
+sa_eng_properties( )
 ```
 
 
@@ -164,9 +164,36 @@ PropName
 </th>
 <th valign="top">
 
-...
+PropDescription
 
 </th>
+<th valign="top">
+
+Value
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+ActiveReq
+
+</td>
+<td valign="top">
+
+Active requests
+
+</td>
+<td valign="top">
+
+1
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -176,12 +203,17 @@ PropName
 </td>
 <td valign="top">
 
-IdleWrite
+AvailIO
 
 </td>
 <td valign="top">
 
-...
+Number of available I/O control blocks
+
+</td>
+<td valign="top">
+
+248
 
 </td>
 </tr>
@@ -193,16 +225,70 @@ IdleWrite
 </td>
 <td valign="top">
 
-IdleChkPt
+BytesReceived
 
 </td>
+<td valign="top">
+
+Bytes received by server
+
+</td>
+<td valign="top">
+
+507280567
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+3
+
+</td>
+<td valign="top">
+
+BytesReceivedUncomp
+
+</td>
+<td valign="top">
+
+Bytes received after decompression
+
+</td>
+<td valign="top">
+
+507280567
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+4
+
+</td>
+<td valign="top">
+
+BytesSent
+
+</td>
+<td valign="top">
+
+Bytes sent to client
+
+</td>
+<td valign="top">
+
+643008254
+
+</td>
+</tr>
+<tr>
 <td valign="top">
 
 ...
 
 </td>
-</tr>
-<tr>
 <td valign="top">
 
 ...

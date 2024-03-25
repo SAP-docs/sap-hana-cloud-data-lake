@@ -19,7 +19,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 CREATE EXISTING [ LOCAL TEMPORARY ] TABLE [ { <owner> | <schema-name> }.]<table_name> 
    [ ( <column-definition>, … ) ] 
-   AT '<location-string>';
+   AT '<location-string>'
 ```
 
 
@@ -220,5 +220,5 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[CREATE EXISTING TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/ee4c9163f3a647b3938c7b0c08a9dd44.html "Creates a new proxy table that represents an existing table on a remote server.") :arrow_upper_right:
+[CREATE EXISTING TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/ee4c9163f3a647b3938c7b0c08a9dd44.html "Creates a new proxy table that represents an existing table on a remote server.") :arrow_upper_right:
 

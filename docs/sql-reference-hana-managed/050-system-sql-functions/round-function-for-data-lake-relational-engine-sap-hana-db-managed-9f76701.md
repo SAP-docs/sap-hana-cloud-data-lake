@@ -264,5 +264,5 @@ When `ROUND_TO_EVEN` database option is set ON, the `ROUND` function rounds data
 **Related Information**  
 
 
-[ROUND Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57bbb0684f21015822ddb659e37c042.html "Rounds the numeric-expression to the specified integer-expression number of places after the decimal point.") :arrow_upper_right:
+[ROUND Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a57bbb0684f21015822ddb659e37c042.html "Rounds the numeric-expression to the specified integer-expression number of places after the decimal point.") :arrow_upper_right:
 

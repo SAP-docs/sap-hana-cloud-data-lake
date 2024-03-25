@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 DROP ROLE [ FROM USER ] <role_name>
-   [ WITH REVOKE ];
+   [ WITH REVOKE ]
 ```
 
 

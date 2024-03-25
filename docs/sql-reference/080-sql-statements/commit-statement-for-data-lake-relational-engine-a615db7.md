@@ -26,7 +26,7 @@ Syntax 1 – Ends a Transaction and Makes All Changes Permanent
 <dd>
 
 ```
-COMMIT [ WORK ];
+COMMIT [ WORK ]
 ```
 
 
@@ -39,7 +39,7 @@ Syntax 2 – Constructs Nested Transactions
 <dd>
 
 ```
-COMMIT TRAN[SACTION ] [ <transaction-name> ];
+COMMIT TRAN[SACTION ] [ <transaction-name> ]
 ```
 
 

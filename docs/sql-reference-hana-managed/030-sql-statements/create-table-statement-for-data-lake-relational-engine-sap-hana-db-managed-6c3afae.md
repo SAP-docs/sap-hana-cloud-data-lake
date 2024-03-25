@@ -10,7 +10,7 @@ Creates a new table in the database or on a remote server.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
@@ -25,7 +25,7 @@ CREATE [ { GLOBAL | LOCAL } TEMPORARY ] TABLE
    [PARTITION BY 
      { <range-partitioning-scheme>
      | <hash-partitioning-scheme> 
-     | <hash-range-partitioning-scheme> ] };
+     | <hash-range-partitioning-scheme> ] }
 ```
 
 
@@ -78,7 +78,7 @@ Defines a table column. Allowable data types are described in *Data Types*. Two 
 <column-definition> ::=
    <column-name> <data-type> 
     [ [ NOT ] NULL ] 
-    [ { DEFAULT <default-value> | IDENTITY } ];
+    [ { DEFAULT <default-value> | IDENTITY } ]
 ```
 
 
@@ -90,7 +90,7 @@ Defines a table column. Allowable data types are described in *Data Types*. Two 
 </b></dt>
 <dd>
 
-For a list of supported data types, see [Available Data Types for CREATE TABLE in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/4ef997d6e54344e6831f93d730075e51.html "A list of available data types when using the CREATE TABLE statement in data lake Relational Engine.") :arrow_upper_right:.
+For a list of supported data types, see [Available Data Types for CREATE TABLE in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/4ef997d6e54344e6831f93d730075e51.html "A list of available data types when using the CREATE TABLE statement in data lake Relational Engine.") :arrow_upper_right:.
 
 
 
@@ -134,7 +134,7 @@ Specifies a default value to be assigned to the column if an INSERT statement do
 <special-value> ::=
    CURRENT 
    { DATE | TIME | TIMESTAMP | USER | PUBLISHER }
-   | USER;
+   | USER
 ```
 
 
@@ -199,11 +199,11 @@ Helps ensure the integrity of data in the database. There are four types of inte
     Column identifiers in column check constraints that start with the symbol ‘@’ are placeholders for the actual column name. The following two statements are exactly the same:
 
     ```
-    CREATE TABLE t1(c1 INTEGER CHECK (@foo < 5));
+    CREATE TABLE t1(c1 INTEGER CHECK (@foo < 5))
     ```
 
     ```
-    CREATE TABLE t1(c1 INTEGER CHECK (c1 < 5));
+    CREATE TABLE t1(c1 INTEGER CHECK (c1 < 5))
     ```
 
     Column identifiers appearing in table check constraints that start with the symbol ‘@’are not placeholders.
@@ -279,7 +279,7 @@ Column and table constraints help ensure the integrity of data in the database.
         | PRIMARY KEY  
         | REFERENCES <table-name> [ ( <column-name> ) ] [ ON { UPDATE | DELETE } RESTRICT ] }
       | CHECK ( <condition> )
-   };
+   }
 ```
 
 > ### Note:  
@@ -382,7 +382,7 @@ Defines foreign-key references to a primary key or a unique constraint in anothe
 <foreign-key-constraint> ::=
    FOREIGN KEY [ <role-name> ] [ ( <column-name> [ , <column-name> ] … ) ] 
    …REFERENCES <table-name> [ ( <column-name> [ , <column-name> ] … ) ]
-   [ ON { UPDATE | DELETE } RESTRICT ];
+   [ ON { UPDATE | DELETE } RESTRICT ]
 ```
 
 If the primary table column names are not specified, the primary table columns are the columns in the table's primary key. If foreign key column names are not specified, the foreign-key columns have the same names as the columns in the primary table. If foreign-key column names are specified, then the primary key column names must be specified, and the column names are paired according to position in the lists.
@@ -513,7 +513,7 @@ Creates a proxy table that maps to a remote location specified by the location-s
 ```
 <location-string> ::=
    { <remote-server-name>. [ <db-name> ].[ <owner> ].<object-name>
-      | <remote-server-name>; [ <db-name> ]; [ <owner> ];<object-name> };
+      | <remote-server-name>; [ <db-name> ]; [ <owner> ];<object-name> }
 ```
 
 Proxy table names must be 30 characters or less. The AT clause supports semicolon \(;\) delimiters. If a semicolon is present anywhere in the location-string clause, the semicolon is the field delimiter. If no semicolon is present, a period is the field delimiter. This allows file names and extensions to be used in the database and owner fields.
@@ -522,7 +522,7 @@ Semicolon field delimiters are used primarily with server classes not currently 
 
 ```
 CREATE TABLE proxy_a1
-AT 'myasa;mydb;;a1';
+AT 'myasa;mydb;;a1'
 ```
 
 Foreign-key definitions are ignored on remote tables. Foreign-key definitions on local tables that refer to remote tables are also ignored. Primary key definitions are sent to the remote server if the server supports primary keys.
@@ -574,7 +574,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 
 ```
 <range-partitioning-scheme> ::=
-   RANGE ( <column_name> ) ( <range-partition-decl> [,...] );
+   RANGE ( <column_name> ) ( <range-partition-decl> [,...] )
 ```
 
 
@@ -589,7 +589,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 ```
 range-partition-decl:
   <partition-name> VALUES <= ( {<constant-expression> |  MAX } ) 
-;
+
 ```
 
 
@@ -697,7 +697,7 @@ Maps data to partitions based on partition-key values processed by an internal h
 
 ```
 <hash-partitioning-scheme> ::=
-   HASH ( <column_name> [,... ] );
+   HASH ( <column_name> [,... ] )
 ```
 
 Restrictions:
@@ -719,8 +719,8 @@ Maps data to partitions based on partition-key values processed by an internal h
 
 ```
 <hash-range-partitioning-scheme> ::=
-   PARTITION BY HASH  ( <column_name> [,... ] );
-    SUBPARTITION BY <range-partition-scheme>;
+   PARTITION BY HASH  ( <column_name> [,... ] )
+    SUBPARTITION BY <range-partition-scheme>
 ```
 
 The hash partition specifies how the data is logically distributed and colocated; the range subpartition specifies how the data is physically placed. The new range subpartition is logically partitioned by hash with the same hash partition keys as the existing hash-range partitioned table. The range subpartition key is restricted to one column.
@@ -791,7 +791,7 @@ Data lake Relational Engine does not support the CREATE TABLE ENCRYPTED clause f
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -874,5 +874,5 @@ Automatic commit
 
 [Data Types Compatibility with SAP HANA Database for the CREATE TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](data-types-compatibility-with-sap-hana-database-for-the-create-table-statement-for-data-l-e77d888.md "The data lake Relational Engine CREATE TABLE statement lets you create a data lake Relational Engine physical table.")
 
-[CREATE TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a619764084f21015b8039a8346dc622c.html "Creates a new table in the database or on a remote server.") :arrow_upper_right:
+[CREATE TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a619764084f21015b8039a8346dc622c.html "Creates a new table in the database or on a remote server.") :arrow_upper_right:
 

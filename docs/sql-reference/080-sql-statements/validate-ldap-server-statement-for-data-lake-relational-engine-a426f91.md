@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 VALIDATE LDAP SERVER [ { <ldapua-server-name> | <ldapua-server-attributes> } ]
-   [ CHECK <userid> [ <user-dn-string> ] ];
+   [ CHECK <userid> [ <user-dn-string> ] ]
 ```
 
 ```
@@ -29,7 +29,7 @@ VALIDATE LDAP SERVER [ { <ldapua-server-name> | <ldapua-server-attributes> } ]
          | IDENTIFIED BY { '<password>' | NULL }
       | AUTHENTICATION URL { '<URL_string>' | NULL } 
       | CONNECTION TIMEOUT <timeout_value> 
-      | CONNECTION RETRIES <retry_value>  };
+      | CONNECTION RETRIES <retry_value>  }
 ```
 
 

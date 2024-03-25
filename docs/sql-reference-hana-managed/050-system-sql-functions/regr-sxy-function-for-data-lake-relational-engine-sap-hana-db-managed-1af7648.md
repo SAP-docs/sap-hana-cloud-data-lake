@@ -135,5 +135,5 @@ SELECT REGR_SXY( Salary, ( YEAR( NOW() ) - YEAR( BirthDate ) ) )FROM Employees;
 
 [WINDOW Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/window-clause-for-data-lake-relational-engine-sap-hana-db-managed-c83b61b.md "Defines all or part of a window for use with window functions such as AVG and RANK in a SELECT statement.")
 
-[REGR_SYY Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a57806cb84f21015933dc43a04d2cc9f.html "Returns values that can evaluate the statistical validity of a regression model.") :arrow_upper_right:
+[REGR_SYY Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a57806cb84f21015933dc43a04d2cc9f.html "Returns values that can evaluate the statistical validity of a regression model.") :arrow_upper_right:
 

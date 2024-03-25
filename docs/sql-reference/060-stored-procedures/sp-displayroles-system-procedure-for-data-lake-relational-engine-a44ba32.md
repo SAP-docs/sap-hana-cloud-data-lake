@@ -17,10 +17,8 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_displayroles(
-   [ <user_role_name> ], 
-   [ <display_mode> ],
-   [ <grant_type> ] );
+sp_displayroles( [ <user_role_name>[, <display_mode> 
+   [, <grant_type> ] ] ] )
 ```
 
 
@@ -202,9 +200,7 @@ For:
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
-
-To return the system privileges or roles for another user ID or a role, require the MANAGE ROLES system privilege.
+Requires EXECUTE object-level privilege on the procedure. To return the system privileges or roles for another user ID or a role, also require the MANAGE ROLES system privilege.
 
 
 
@@ -453,5 +449,5 @@ NO ADMIN
 **Related Information**  
 
 
-[sp_displayroles System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/8c15112761fa4dba8aa2d0cb3a89db92.html "Displays all roles granted to a user-defined role or a user, or displays the entire hierarchical tree of roles.") :arrow_upper_right:
+[sp_displayroles System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/8c15112761fa4dba8aa2d0cb3a89db92.html "Displays all roles granted to a user-defined role or a user, or displays the entire hierarchical tree of roles.") :arrow_upper_right:
 

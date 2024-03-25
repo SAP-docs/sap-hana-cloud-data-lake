@@ -103,5 +103,5 @@ LPAD returns an empty string value if *<n\>* is less than 1.
 **Related Information**  
 
 
-[LPAD Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/7bf4b4293b56487bbabf9c2f3d01b364.html "Left-pads a string with spaces, or a specified pattern, to make a string of a specified number of characters in length.") :arrow_upper_right:
+[LPAD Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/7bf4b4293b56487bbabf9c2f3d01b364.html "Left-pads a string with spaces, or a specified pattern, to make a string of a specified number of characters in length.") :arrow_upper_right:
 

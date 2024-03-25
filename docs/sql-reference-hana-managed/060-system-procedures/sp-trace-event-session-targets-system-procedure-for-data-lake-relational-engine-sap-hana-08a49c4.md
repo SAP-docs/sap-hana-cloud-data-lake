@@ -24,7 +24,7 @@ sp_trace_event_session_targets(
    [ <session_name>  
    [, <include_server_sessions>
    [, <include_audit_events> ] ] ]
-);
+)
 ```
 
 
@@ -156,7 +156,7 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -165,7 +165,7 @@ Connected to SAP HANA database as a SAP HANA database user and using the SAP HAN
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -224,5 +224,5 @@ SELECT * FROM dbo.sp_trace_event_session_targets( );
 **Related Information**  
 
 
-[sp_trace_event_session_targets System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/8179bf806ce210148693c5362783c940.html "Lists the targets of a trace session.") :arrow_upper_right:
+[sp_trace_event_session_targets System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8179bf806ce210148693c5362783c940.html "Lists the targets of a trace session.") :arrow_upper_right:
 

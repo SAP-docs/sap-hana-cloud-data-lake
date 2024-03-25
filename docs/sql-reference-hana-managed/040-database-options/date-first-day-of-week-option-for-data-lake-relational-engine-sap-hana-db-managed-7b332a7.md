@@ -12,7 +12,7 @@ Determines the first day of the week.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -22,7 +22,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be 
 ## Syntax
 
 ```
-DATE_FIRST_DAY_OF_WEEK = { 0 | 1 | 2 | 3 | 4 | 5 | 6 };
+DATE_FIRST_DAY_OF_WEEK = { 0 | 1 | 2 | 3 | 4 | 5 | 6 }
 ```
 
 
@@ -193,7 +193,7 @@ The SAP SQL Anywhere option FIRST\_DAY\_OF\_WEEK performs the same function, but
 **Related Information**  
 
 
-[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
+[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
 
 [DATEPART Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../050-system-sql-functions/datepart-function-for-data-lake-relational-engine-sap-hana-db-managed-a07008d.md "Returns an integer value for the specified part of a date/time value.")
 
@@ -201,5 +201,5 @@ The SAP SQL Anywhere option FIRST\_DAY\_OF\_WEEK performs the same function, but
 
 [DOW Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../050-system-sql-functions/dow-function-for-data-lake-relational-engine-sap-hana-db-managed-aae6da5.md "Returns a number from 1 to 7 representing the day of the week of the specified date, with Sunday=1, Monday=2, and so on.")
 
-[DATE_FIRST_DAY_OF_WEEK Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a632279984f21015b47581522c9e7a93.html "Determines the first day of the week.") :arrow_upper_right:
+[DATE_FIRST_DAY_OF_WEEK Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a632279984f21015b47581522c9e7a93.html "Determines the first day of the week.") :arrow_upper_right:
 

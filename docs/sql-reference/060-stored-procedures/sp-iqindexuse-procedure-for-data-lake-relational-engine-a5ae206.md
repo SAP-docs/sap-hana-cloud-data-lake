@@ -17,8 +17,16 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqindexuse; 
+sp_iqindexuse
 ```
+
+
+
+<a name="loioa5ae206484f210158d7db008e8f2fa2e__section_nbx_vwv_c1c"/>
+
+## Parameters
+
+None
 
 
 
@@ -182,7 +190,11 @@ None
 
 ## Examples
 
-The following shows sample output from the sp\_iqindexuse procedure:
+This example returns sample output from the sp\_iqindexuse procedure:
+
+```
+CALL sp_iqindexuse; 
+```
 
 
 <table>
@@ -379,6 +391,13 @@ HG
 
 
 <table>
+<tr>
+<th valign="top" colspan="4">
+
+\(Continued\)
+
+</th>
+</tr>
 <tr>
 <th valign="top">
 

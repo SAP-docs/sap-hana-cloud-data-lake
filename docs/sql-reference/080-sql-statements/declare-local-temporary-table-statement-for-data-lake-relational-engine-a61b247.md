@@ -21,7 +21,7 @@ DECLARE LOCAL TEMPORARY TABLE <table-name>
    … ( <column-definition> [ <column-constraint> ] …
    [ , <column-definition> [ <column-constraint> ] … ]
    [ , <table-constraint> ] … )
-   …[ ON COMMIT { DELETE | PRESERVE } ROWS ];
+   …[ ON COMMIT { DELETE | PRESERVE } ROWS ]
 ```
 
 

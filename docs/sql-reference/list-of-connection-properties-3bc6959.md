@@ -3660,7 +3660,7 @@ TLSSuites
 </td>
 <td valign="top">
 
-A colon-separated list of TLS cipher suites offered by the server for the current connection. Displays 'None' if not a secure connection. For the list of supported cipher suites see [TLS Support](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2023_4_QRC/en-US/3bcc73636c5f1014842cdeb27af3fed0.html "Transport Layer Security (TLS) encryption versions 1.0, 1.1, 1.2, and 1.3 are supported.") :arrow_upper_right:.
+A colon-separated list of TLS cipher suites offered by the server for the current connection. Displays 'None' if not a secure connection. For the list of supported cipher suites see [TLS Support](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/3bcc73636c5f1014842cdeb27af3fed0.html "Transport Layer Security (TLS) encryption versions 1.2 and 1.3 are supported.") :arrow_upper_right:.
 
 </td>
 </tr>

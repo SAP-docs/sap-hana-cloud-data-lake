@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqstatistics [ <stat_name> ];
+sp_iqstatistics [ <stat_name> ]
 ```
 
 

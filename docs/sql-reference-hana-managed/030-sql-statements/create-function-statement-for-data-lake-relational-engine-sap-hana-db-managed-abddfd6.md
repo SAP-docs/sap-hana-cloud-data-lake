@@ -10,7 +10,7 @@ Creates a user-defined function in the database. A function can be created for a
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -23,7 +23,7 @@ CREATE [ OR REPLACE ] [ TEMPORARY ] FUNCTION [ <schema-name>.]<function-name>
    [ ON EXCEPTION RESUME ]
    [ [ NOT ] DETERMINISTIC ]
    { <compound-statement> 
-      | AS <sql-statement> <sql-statement>... };
+      | AS <sql-statement> <sql-statement>... }
 ```
 
 
@@ -181,7 +181,7 @@ The privileges required depend on your data lake Relational Engine \(SAP HANA DB
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -220,7 +220,7 @@ Function ownership determines the privilege required.
 
 
 
-For information on using a function created when connected as a data lake Relational Engine user, see [User-Defined Functions in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/abea6df6284d46c8b2265c477be1f704.html "User-defined functions are a class of procedures that return a single value to the calling environment.") :arrow_upper_right:.
+For information on using a function created when connected as a data lake Relational Engine user, see [User-Defined Functions in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/abea6df6284d46c8b2265c477be1f704.html "User-defined functions are a class of procedures that return a single value to the calling environment.") :arrow_upper_right:.
 
 
 
@@ -372,5 +372,5 @@ Automatic commit
 
 [DROP FUNCTION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-function-statement-for-data-lake-relational-engine-sap-hana-db-managed-58c58a9.md "Removes a user-defined function from the database.")
 
-[CREATE FUNCTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a61796cb84f2101594a2b0b5a6993b95.html "Creates a user-defined function in the database. A function can be created for another user by specifying an owner name. Subject to permissions, a user-defined function can be used in exactly the same way as other non-aggregate functions.") :arrow_upper_right:
+[CREATE FUNCTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a61796cb84f2101594a2b0b5a6993b95.html "Creates a user-defined function in the database. A function can be created for another user by specifying an owner name. Subject to permissions, a user-defined function can be used in exactly the same way as other non-aggregate functions.") :arrow_upper_right:
 

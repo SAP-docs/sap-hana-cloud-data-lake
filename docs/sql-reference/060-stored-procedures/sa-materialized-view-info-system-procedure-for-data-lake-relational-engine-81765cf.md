@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_materialized_view_info( [ '<view-name>' [, '{ <owner-name> | <schema-name> }'] ] );
+sa_materialized_view_info( [ '<view-name>' [, '{ <owner-name> | <schema-name> }'] ] )
 ```
 
 
@@ -636,9 +636,7 @@ The results of the sa\_materialized\_view\_info system procedure can be combined
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
-
-Also requires one of the following:
+Requires EXECUTE object-level privilege on the procedure, along with one of the following:
 
 -   You own the underlying table of the view
 -   SELECT ANY TABLE system privilege
@@ -722,12 +720,12 @@ N
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 </tr>
@@ -759,7 +757,7 @@ F
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 </tr>
@@ -786,12 +784,12 @@ N
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 </tr>
@@ -939,12 +937,12 @@ N
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 </tr>
@@ -1008,5 +1006,5 @@ F
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine](../080-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-faab95d.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_materialized_view_info System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7897509ad128448889f704a5f1a80aa6.html "Returns information about the specified materialized views.") :arrow_upper_right:
+[sa_materialized_view_info System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7897509ad128448889f704a5f1a80aa6.html "Returns information about the specified materialized views.") :arrow_upper_right:
 

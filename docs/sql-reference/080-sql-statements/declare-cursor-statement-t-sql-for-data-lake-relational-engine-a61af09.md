@@ -19,7 +19,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 DECLARE <cursor-name>
    … CURSOR FOR <select-statement>
-   …[ FOR { READ ONLY | UPDATE } ];
+   …[ FOR { READ ONLY | UPDATE } ]
 ```
 
 

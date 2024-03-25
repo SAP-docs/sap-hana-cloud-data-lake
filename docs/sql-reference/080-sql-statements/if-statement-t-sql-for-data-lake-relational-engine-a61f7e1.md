@@ -19,7 +19,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
  IF <expression>
    ... <statement>
-   ... [ ELSE [ IF <expression> <statement> ]... ]; 
+   ... [ ELSE [ IF <expression> <statement> ]... ] 
 ```
 
 

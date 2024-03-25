@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-GRANT X509 LOGIN TO { <external_identity> | ANY } FOR PROVIDER <x509_provider_name> AS USER <userid>;
+GRANT X509 LOGIN TO { <external_identity> | ANY } FOR PROVIDER <x509_provider_name> AS USER <userid>
 ```
 
 

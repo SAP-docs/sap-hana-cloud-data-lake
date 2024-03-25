@@ -24,7 +24,7 @@ sp_trace_event_session_events(
    [ <event_name> 
    [, <include_server_sessions>
    [, <include_audit_events> ] ] ]
-  );
+  )
 ```
 
 
@@ -191,5 +191,5 @@ CALL sp_trace_event_session_events( );
 **Related Information**  
 
 
-[sp_trace_event_session_events System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/8179ac5d6ce210149cfcd3fb6d77cbca.html "Lists the trace events that are part of a specific trace event session.") :arrow_upper_right:
+[sp_trace_event_session_events System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8179ac5d6ce210149cfcd3fb6d77cbca.html "Lists the trace events that are part of a specific trace event session.") :arrow_upper_right:
 

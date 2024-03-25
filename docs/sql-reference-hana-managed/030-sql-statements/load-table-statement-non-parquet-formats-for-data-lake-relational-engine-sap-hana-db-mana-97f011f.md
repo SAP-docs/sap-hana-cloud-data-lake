@@ -14,7 +14,7 @@ For information on loading data from Parquet files, see [LOAD TABLE Statement \(
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
@@ -25,7 +25,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
     [ CONNECTION_STRING <connection-string> ]
     [ WITH CREDENTIAL <purpose-def> ]
     [ COMPRESSED | NOT COMPRESSED | AUTO COMPRESSED 
-    DELIMITED BY ',';
+    DELIMITED BY ','
     [ ENCODING '<encoding> '12345 ', c2, c3, FILLER(1))' ]
     [ BYTE ORDER MARK { ON | OFF } ]
     [ ENCRYPTED KEY '<key>' | NOT ENCRYPTED ]
@@ -59,13 +59,13 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
 
 ```
 <load-column> ::=
-   { LOAD [ INTO ] TABLE [ <column-name> [ <column-spec> ] [ <nulls-spec> ]   
+   { <column-name> [ <column-spec> ] [ <nulls-spec> ]   
    | FILLER ( [ <filler-type> ] ) 
-   | <column-name> VALUE <default-value>}
+   | <column-name> VALUE <default-value> }
 ```
 
 ```
-<column-spec>LOAD [ INTO  ::=
+<column-spec> ::=
    { ASCII ( <input-width> )
    | PREFIX { 1 | 2 | 4 }
    | BINARY [ <data-type> ] [ WITH NULL BYTE ]
@@ -80,7 +80,12 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
    | ENCRYPTED ( <data-type> '<key-string>' [, '<algorithm-string>' ] )
    | VALUE <default-value>
    | MISSING DEFAULT <default-value> }
-   [ <nulls-spec> :: = NULL ( { BLANKS | ZEROS | '<literal>' } [, ...] ) ]
+   [ <nulls-spec> ]
+```
+
+```
+<nulls-spec> :: = 
+   NULL ( { BLANKS | ZEROS | '<literal>' } [, ...] )
 ```
 
 ```
@@ -658,7 +663,7 @@ The AUTO COMPRESSED clause is the default behavior, where data lake Relational E
 
 The ENCODING clause specifies the character set encoding of the input file. If the character set encoding is different from that of the database, character set conversion is performed during the load. If the data cannot be converted into the database character set, a conversion error is returned. If the ENCODING clause is not specified, the character set of the database is used. The clause applies to all files being loaded by the current LOAD TABLE statement. It's not possible to set different encoding options to individual files. The ENCODING clause does not work with binary load. An error occurs if either FORMAT BINARY is specified, or if a BINARY clause is specified in the column specification.
 
-See [Character Set Encodings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2023_4_QRC/en-US/8a8f277561e547b8a4a0fdfc7f7db7f7.html "A complete list of supported character set encodings for SAP HANA Cloud, data lake and their aliases.") :arrow_upper_right: for a complete list of supported character set encodings.
+See [Character Set Encodings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/8a8f277561e547b8a4a0fdfc7f7db7f7.html "A complete list of supported character set encodings for SAP HANA Cloud, data lake and their aliases.") :arrow_upper_right: for a complete list of supported character set encodings.
 
 
 
@@ -803,7 +808,7 @@ The setting for the DEFAULTS option applies to all column default values, includ
 </b></dt>
 <dd>
 
-Indicates that input strings are enclosed in quote characters. QUOTES is an optional clause and is ON by default. The first such character encountered in a string is treated as the quote character for the string. String data must be terminated with a matching quote.
+Indicates that input strings may be enclosed in quote characters. QUOTES is an optional clause and is ON by default. If the quote character is detected as the first character, it is treated as the quote character for the string. String data must be terminated with a matching quote. Use the QUOTE *<enclosure-character\>* option below to specify what enclosure character to place around string values.
 
 With QUOTES ON, column or row delimiter characters can be included in the column value. Leading and ending quote characters are assumed not to be part of the value and are excluded from the loaded data value.
 
@@ -1950,7 +1955,7 @@ Another important part of the *<load-column\>* is the FILLER option. This option
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -2512,23 +2517,23 @@ Assume the credentials supplied to the LOAD TABLE statement enable read access t
 **Related Information**  
 
 
-[LOAD TABLE Statement (Non-Parquet Formats) for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/7ca3f60902f3473296cb309533d89210.html "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or Google Cloud Storage) or from data lake Files containers (the managed object store).") :arrow_upper_right:
+[LOAD TABLE Statement (Non-Parquet Formats) for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/7ca3f60902f3473296cb309533d89210.html "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or Google Cloud Storage) or from data lake Files containers (the managed object store).") :arrow_upper_right:
 
-[SAP HANA Cloud, Data Lake Relational Engine Load and Unload Management](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/e77c96193a604e05ba198e424de2ed6c.html "Data load (import) and export (unload) procedures for data lake Relational Engine, including loading from and unloading to data lake Files.") :arrow_upper_right:
+[SAP HANA Cloud, Data Lake Relational Engine Load and Unload Management](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/e77c96193a604e05ba198e424de2ed6c.html "Data load (import) and export (unload) procedures for data lake Relational Engine, including loading from and unloading to data lake Files.") :arrow_upper_right:
 
-[Loading Data from Azure Blob Storage](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/e52d8274e0364e868fd02ec3c2b3ed9c.html "Use the data lake Relational Engine LOAD TABLE statement to load data into a data lake Relational Engine table from Azure Blob storage.") :arrow_upper_right:
+[Loading Data from Azure Blob Storage](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/e52d8274e0364e868fd02ec3c2b3ed9c.html "Use the data lake Relational Engine LOAD TABLE statement to load data into a data lake Relational Engine table from Azure Blob storage.") :arrow_upper_right:
 
-[Loading Data from the Amazon S3 Bucket](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/9e9a558cf14a44bc812e2562afcd116f.html "Use the LOAD TABLE statement to load data into a data lake Relational Engine table from your Amazon S3 bucket.") :arrow_upper_right:
+[Loading Data from the Amazon S3 Bucket](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/9e9a558cf14a44bc812e2562afcd116f.html "Use the LOAD TABLE statement to load data into a data lake Relational Engine table from your Amazon S3 bucket.") :arrow_upper_right:
 
-[Loading Data from Google Cloud Storage](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/a723d42f6c3d4d5ab9f2a1424130d10c.html "Use the LOAD TABLE statement to load data into a data lake Relational Engine table from your Google Cloud Storage bucket.") :arrow_upper_right:
+[Loading Data from Google Cloud Storage](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/a723d42f6c3d4d5ab9f2a1424130d10c.html "Use the LOAD TABLE statement to load data into a data lake Relational Engine table from your Google Cloud Storage bucket.") :arrow_upper_right:
 
-[Loading Data From Data Lake Files to Data Lake Relational Engine](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/ac82036515a749bea5a55a64b43031a4.html "Specify the location in your LOAD TABLE statement to load data into data lake Relational Engine from data lake Files.") :arrow_upper_right:
+[Loading Data From Data Lake Files to Data Lake Relational Engine](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/ac82036515a749bea5a55a64b43031a4.html "Specify the location in your LOAD TABLE statement to load data into data lake Relational Engine from data lake Files.") :arrow_upper_right:
 
-[Loading Parquet Files](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2023_4_QRC/en-US/a054ac0ce09e47799e5f24860378056b.html "Parquet is an efficient, open-source, column-oriented format file designed for Apache Hadoop. You can load tables in Parquet format using the data lake Relational Engine LOAD TABLE statement.") :arrow_upper_right:
+[Loading Parquet Files](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/a054ac0ce09e47799e5f24860378056b.html "Parquet is an efficient, open-source, column-oriented format file designed for Apache Hadoop. You can load tables in Parquet format using the data lake Relational Engine LOAD TABLE statement.") :arrow_upper_right:
 
 [TEMP\_EXTRACT\_MAX\_PARALLEL\_DEGREE Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/temp-extract-max-parallel-degree-option-for-data-lake-relational-engine-sap-hana-db-manag-8b1135e.md "Sets the maximum parallel degree for the data extraction facility. The TEMP_EXTRACT_MAX_PARALLEL_DEGREE option limits the maximum number of threads that run in parallel to extract data.")
 
 [TEMP\_EXTRACT\_VARYING Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/temp-extract-varying-option-for-data-lake-relational-engine-sap-hana-db-managed-a975dc5.md "Used in conjunction with TEMP_EXTRACT_LENGTH_PREFIX, the TEMP_EXTRACT_VARYING option outputs varchar or varbinary column data in a variable-length format in the extracted file. The prefix field specified by TEMP_EXTRACT_LENGTH_PREFIX option holds the length of column data.")
 
-[SAP HANA Cloud, Data Lake Terminology](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2023_4_QRC/en-US/d003004765fb4475b14d83e5c51b117f.html "Definitions of data lake terms used in this document.") :arrow_upper_right:
+[SAP HANA Cloud, Data Lake Terminology](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2024_1_QRC/en-US/d003004765fb4475b14d83e5c51b117f.html "Definitions of data lake terms used in this document.") :arrow_upper_right:
 

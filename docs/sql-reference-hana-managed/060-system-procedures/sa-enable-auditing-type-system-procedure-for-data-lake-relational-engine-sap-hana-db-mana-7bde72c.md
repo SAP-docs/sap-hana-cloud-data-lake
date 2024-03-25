@@ -20,7 +20,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sa_enable_auditing_type( <types> );
+sa_enable_auditing_type( <types> )
 ```
 
 
@@ -49,7 +49,40 @@ all
 </b></dt>
 <dd>
 
-enables all types of auditing.
+Enables all types of auditing
+
+
+
+</dd><dt><b>
+
+authenticationProvider
+
+</b></dt>
+<dd>
+
+Enables auditing of \{ALTER|CREATE|DROP\} \{JWT|LDAP|X509\} PROVIDER statements
+
+
+
+</dd><dt><b>
+
+backup
+
+</b></dt>
+<dd>
+
+Enables auditing of \{BACKUP|RESTORE\} \{DATABASE|TABLE\} statements
+
+
+
+</dd><dt><b>
+
+certificate
+
+</b></dt>
+<dd>
+
+Enables auditing of \{CREATE|DROP\} CERTIFICATE statements
 
 
 
@@ -60,7 +93,7 @@ connect
 </b></dt>
 <dd>
 
-enables auditing of both successful and failed connection attempts.
+Enables auditing CONNECTION statements \(successful\)
 
 
 
@@ -71,18 +104,84 @@ connectFailed
 </b></dt>
 <dd>
 
-enables auditing of failed connection attempts.
+Enables auditing of CONNECTION statements \(failed\)
 
 
 
 </dd><dt><b>
 
-DDL
+database
 
 </b></dt>
 <dd>
 
-enables auditing of DDL statements.
+Enables auditing of \{START|STOP\} DATABASE statements
+
+
+
+</dd><dt><b>
+
+delete
+
+</b></dt>
+<dd>
+
+Enables auditing of DELETE and TRUNCATE statements
+
+
+
+</dd><dt><b>
+
+grant
+
+</b></dt>
+<dd>
+
+Enables auditing of \{GRANT|REVOKE\} ANY statements
+
+
+
+</dd><dt><b>
+
+insert
+
+</b></dt>
+<dd>
+
+Enables auditing of INSERT statements
+
+
+
+</dd><dt><b>
+
+load
+
+</b></dt>
+<dd>
+
+Enables auditing of LOAD and UNLOAD statements
+
+
+
+</dd><dt><b>
+
+loginPolicy
+
+</b></dt>
+<dd>
+
+Enables auditing when a user is locked out in accordance with their login policy \(because of failed logins or an expired password\)
+
+
+
+</dd><dt><b>
+
+loginPolicyDDL
+
+</b></dt>
+<dd>
+
+Enables auditing of \{CREATE|ALTER|DROP\} LOGIN POLICY
 
 
 
@@ -93,29 +192,62 @@ options
 </b></dt>
 <dd>
 
-enables auditing of public options.
+Enables auditing of events that set any public option
 
 
 
 </dd><dt><b>
 
-permission
+otherDDL
 
 </b></dt>
 <dd>
 
-enables auditing of permission checks and user checks.
+Enables auditing of any DDLs not covered by other SYS\_Audit events for specific DDLs
 
 
 
 </dd><dt><b>
 
-permissionDenied
+procedure
 
 </b></dt>
 <dd>
 
-enables auditing of failed permission and user checks.
+Enables auditing of calls to procedures. The statements inside the procedure aren't audited unless you enable the related auditing type \(such as 'insert' or 'select'\).
+
+
+
+</dd><dt><b>
+
+select
+
+</b></dt>
+<dd>
+
+Enables auditing of any SELECT that is directly executed, or directly executed within a procedure or function
+
+
+
+</dd><dt><b>
+
+setUser
+
+</b></dt>
+<dd>
+
+Enables auditing of SETUSER statements
+
+
+
+</dd><dt><b>
+
+string
+
+</b></dt>
+<dd>
+
+Enables auditing of comments added by sa\_audit\_string
 
 
 
@@ -126,18 +258,29 @@ triggers
 </b></dt>
 <dd>
 
-enables auditing of a trigger event.
+Enables auditing of the start and end of a trigger
 
 
 
 </dd><dt><b>
 
-xp\_cmdshell
+update
 
 </b></dt>
 <dd>
 
-enables auditing of xp\_cmdshell invocations.
+Audits all UPDATE statements
+
+
+
+</dd><dt><b>
+
+user
+
+</b></dt>
+<dd>
+
+Enables auditing of \{ALTER|CREATE|DROP\} \{USER|ROLE\} statements
 
 
 
@@ -228,5 +371,5 @@ CALL sa_enable_auditing_type( 'DDL' );
 
 [sa\_disable\_auditing\_type System Procedure for Data Lake Relational Engine \(SAP HANA DB-Managed\)](sa-disable-auditing-type-system-procedure-for-data-lake-relational-engine-sap-hana-db-man-fd63ea1.md "Disables auditing of specific events.")
 
-[sa_enable_auditing_type System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/3be5b83e6c5f1014876dd3101b181f8a.html "Specifies which events to include in auditing.") :arrow_upper_right:
+[sa_enable_auditing_type System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3be5b83e6c5f1014876dd3101b181f8a.html "Specifies which events to include in auditing.") :arrow_upper_right:
 

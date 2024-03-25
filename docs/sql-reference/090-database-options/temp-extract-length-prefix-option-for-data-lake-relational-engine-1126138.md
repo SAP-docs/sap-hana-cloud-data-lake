@@ -21,7 +21,7 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-TEMP_EXTRACT_LENGTH_PREFIX = <value>;
+TEMP_EXTRACT_LENGTH_PREFIX = <value>
 ```
 
 
@@ -151,7 +151,7 @@ When you specify any other valid value for TEMP\_EXTRACT\_LENGTH\_PREFIX, the da
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[TEMP_EXTRACT_LENGTH_PREFIX Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/7b609716b74d46c588d7f5a8c64738e7.html "Adds a prefix field of specified length (byte) for a varchar or varbinary column in the generated output file. This PREFIX field in the extract file holds the length of the column data.") :arrow_upper_right:
+[TEMP_EXTRACT_LENGTH_PREFIX Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7b609716b74d46c588d7f5a8c64738e7.html "Adds a prefix field of specified length (byte) for a varchar or varbinary column in the generated output file. This PREFIX field in the extract file holds the length of the column data.") :arrow_upper_right:
 
 [TEMP\_EXTRACT\_VARYING Option for Data Lake Relational Engine](temp-extract-varying-option-for-data-lake-relational-engine-ceb244e.md "Used in conjunction with TEMP_EXTRACT_LENGTH_PREFIX, the TEMP_EXTRACT_VARYING option outputs varchar or varbinary column data in a variable-length format in the extracted file. The prefix field specified by TEMP_EXTRACT_LENGTH_PREFIX option holds the length of column data.")
 

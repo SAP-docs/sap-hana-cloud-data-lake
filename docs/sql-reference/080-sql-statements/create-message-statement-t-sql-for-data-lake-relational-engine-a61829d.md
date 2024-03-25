@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 CREATE MESSAGE <message-number>
-... AS '<message-text>';
+... AS '<message-text>'
 ```
 
 

@@ -20,7 +20,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sp_iqunpinrequest(<pin_id>);
+sp_iqunpinrequest(<pin_id>)
 ```
 
 

@@ -12,12 +12,12 @@ Groups SQL statements together.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
 ```
-[ <statement-label> : ];
+[ <statement-label> : ]
         … BEGIN [ [ NOT ] ATOMIC ]
         … [ <local-declaration> ; … ]
         … <statement-list>
@@ -26,7 +26,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
 ```
 
 ```
-<local-declaration> ::=;
+<local-declaration> ::=
         { <variable-declaration> 
         | <cursor-declaration> 
         | <exception-declaration> 
@@ -34,13 +34,13 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
 ```
 
 ```
-<variable-declaration> ::=;
+<variable-declaration> ::=
         DECLARE <variable-name> [ , … ] <data-type> 
         [{ = | DEFAULT} <initial-value> ]
 ```
 
 ```
-<initial-value> ::=;
+<initial-value> ::=
         { <special-value> 
         | <string> 
         | [ - ] <number> 
@@ -50,7 +50,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
 ```
 
 ```
-<special-value> ::=;
+<special-value> ::=
    { CURRENT { DATABASE 
              | DATE 
              | PUBLISHER 
@@ -125,7 +125,7 @@ An atomic statement is a statement executed completely or not at all. For exampl
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -208,5 +208,5 @@ CREATE PROCEDURE TopCustomer (OUT TopCompany CHAR(35), OUT TopValue INT)
 **Related Information**  
 
 
-[BEGIN … END Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a6142def84f2101591f2a40a1dd6cb20.html "Groups SQL statements together.") :arrow_upper_right:
+[BEGIN … END Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a6142def84f2101591f2a40a1dd6cb20.html "Groups SQL statements together.") :arrow_upper_right:
 

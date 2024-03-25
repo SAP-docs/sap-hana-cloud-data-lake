@@ -66,7 +66,7 @@ INT
 
 For invalid hexadecimal input, data lake Relational Engine returns an error unless the CONVERSION\_ERROR option is OFF. When CONVERSION\_ERROR is OFF, invalid hexadecimal input returns NULL.
 
-See [CONVERSION_ERROR Option \[TSQL\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a63018a284f210159f458fb9eec74501.html "Controls reporting of data type conversion failures on fetching information from the database.") :arrow_upper_right:.
+See [CONVERSION_ERROR Option \[TSQL\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a63018a284f210159f458fb9eec74501.html "Controls reporting of data type conversion failures on fetching information from the database.") :arrow_upper_right:.
 
 
 
@@ -99,5 +99,5 @@ SELECT HEXTOINT ( '1A4' ) FROM iq_dummy;
 **Related Information**  
 
 
-[HEXTOINT Function \[Data Type Conversion\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a555d0f984f210158262871887ce5bc9.html "Returns the unsigned BIGINT equivalent of a hexadecimal string.") :arrow_upper_right:
+[HEXTOINT Function \[Data Type Conversion\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a555d0f984f210158262871887ce5bc9.html "Returns the unsigned BIGINT equivalent of a hexadecimal string.") :arrow_upper_right:
 

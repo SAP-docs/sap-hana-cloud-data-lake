@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_get_ldapserver_status;
+sa_get_ldapserver_status
 ```
 
 

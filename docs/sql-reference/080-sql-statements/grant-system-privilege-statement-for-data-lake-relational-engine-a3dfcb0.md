@@ -19,7 +19,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 GRANT <system_privilege_name> [, …]
    TO <grantee> [, …]
-   [ { WITH NO ADMIN | WITH ADMIN [ ONLY ] } OPTION ];
+   [ { WITH NO ADMIN | WITH ADMIN [ ONLY ] } OPTION ]
 ```
 
 

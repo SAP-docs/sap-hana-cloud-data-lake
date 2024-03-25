@@ -22,13 +22,16 @@ CREATE [ UNIQUE ] [ <index-type> ] INDEX [ IF NOT EXISTS ] <index-name>
    … ( <column-name> [ , <column-name> ] … )
    … [ NOTIFY <integer> ]
    … [ DELIMITED BY '<separators-string>' ]
-   … [ LIMIT <maxwordsize-integer> ];
+   … [ LIMIT <maxwordsize-integer> ]
 ```
 
 ```
 <index-type> ::=
-   { CMP | DATE | DTTM | HG | HNG | TEXT | TIME | WD };
+   { CMP | DATE | DTTM | HG | HNG | TIME | WD }
 ```
+
+> ### Tip:  
+> Looking for TEXT index information? See [CREATE TEXT INDEX Statement for Data Lake Relational Engine](create-text-index-statement-for-data-lake-relational-engine-a602ced.md).
 
 
 
@@ -57,9 +60,11 @@ For columns in data lake Relational Engine tables, you can specify an *<index-ty
 -   DTTM – Datetime
 -   HG – High\_Group \(default\)
 -   HNG
--   TEXT
 -   TIME
 -   WD – Word
+
+> ### Tip:  
+> Looking for TEXT index information? See [CREATE TEXT INDEX Statement for Data Lake Relational Engine](create-text-index-statement-for-data-lake-relational-engine-a602ced.md).
 
 If you do not specify an *<index-type\>*, an HG index is created by default.
 
@@ -397,7 +402,7 @@ Requires one of:
 -   REFERENCES object-level privilege on the table.
 -   CREATE ANY INDEX system privilege
 -   CREATE ANY OBJECT system privilege
--   CREATE ANY or REVERENCE object-level privilege on the schema containing the underlying table if the schema is owned by another user.
+-   CREATE ANY or REFERENCE object-level privilege on the schema containing the underlying table if the schema is owned by another user.
 
 See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md) or [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md) for assistance with granting privileges.
 
@@ -460,6 +465,8 @@ Automatic commit
 **Related Information**  
 
 
+[CREATE INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/afc9ba646bb842d6b4c5975aa7d17d16.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
+
 [ALTER INDEX Statement for Data Lake Relational Engine](alter-index-statement-for-data-lake-relational-engine-a612b20.md "Renames indexes in base or global temporary tables, foreign key role names of indexes and foreign keys explicitly created by a user, or changes the clustered nature of an index on a catalog store table. You can't rename indexes created to enforce key constraints.")
 
 [DROP INDEX Statement for Data Lake Relational Engine](drop-index-statement-for-data-lake-relational-engine-82d6c17.md "Removes an index from the database.")
@@ -474,5 +481,5 @@ Automatic commit
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
 
-[CREATE INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/afc9ba646bb842d6b4c5975aa7d17d16.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
+[CREATE TEXT INDEX Statement for Data Lake Relational Engine](create-text-index-statement-for-data-lake-relational-engine-a602ced.md "Creates a TEXT index and specifies the text configuration object to use.")
 

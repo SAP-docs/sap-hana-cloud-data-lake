@@ -20,7 +20,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sp_iqpintableversion ( '<table-id>[, <table-id>[,...] ]'[, {'<owner-cookie>' | NULL } [, <track-updates> ] ]  );
+sp_iqpintableversion ( '<table-id>[, <table-id>[,...] ]'[, {'<owner-cookie>' | NULL } [, <track-updates> ] ]  )
 ```
 
 
@@ -174,7 +174,7 @@ This example pins two tables, C1 and C2, in a single request.
 This example pins the currently visible version of table id 1836, without an optional name, and track updates made to the table. Since the pin request operation is transactional, a COMMIT is required if AUTO COMMIT is disabled.
 
 ```
-CALL sp_iqpintableversion('1835', NULL, 1);
+CALL sp_iqpintableversion('1836', NULL, 1);
 COMMIT:
 ```
 

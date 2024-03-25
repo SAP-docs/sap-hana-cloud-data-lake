@@ -20,7 +20,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 sp_trace_events(
    [ <event_name> 
    [, <include_audit_events> ] ]
-);
+)
 ```
 
 
@@ -705,7 +705,7 @@ event for current http logging
 **Related Information**  
 
 
-[sp_trace_events System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/9897bebbf9314d72a926d9adae52ead8.html "Returns information about the trace events in the database.") :arrow_upper_right:
+[sp_trace_events System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/9897bebbf9314d72a926d9adae52ead8.html "Returns information about the trace events in the database.") :arrow_upper_right:
 
 [CREATE TEMPORARY TRACE EVENT SESSION Statement for Data Lake Relational Engine](../080-sql-statements/create-temporary-trace-event-session-statement-for-data-lake-relational-engine-816cf4d.md "Creates a user trace event session.")
 

@@ -20,7 +20,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 PREPARE <statement-name> 
    FROM <statement> [ FOR { READ ONLY | UPDATE [ OF <column-name-list> ] } ] 
    ... [ DESCRIBE <describe-type> INTO [ [ SQL ] DESCRIPTOR ] <descriptor> ]
-   ... [ WITH EXECUTE ];
+   ... [ WITH EXECUTE ]
 ```
 
 ```
@@ -30,7 +30,7 @@ PREPARE <statement-name>
    | INPUT 
    | OUTPUT 
    | SELECT LIST } ... { LONG NAMES [ [ OWNER.]TABLE.]COLUMN ] 
-   | WITH VARIABLE RESULT };
+   | WITH VARIABLE RESULT }
 ```
 
 

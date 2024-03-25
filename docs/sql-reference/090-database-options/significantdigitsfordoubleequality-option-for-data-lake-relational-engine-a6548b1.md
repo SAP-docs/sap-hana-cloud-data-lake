@@ -21,7 +21,7 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-SIGNIFICANTDIGITSFORDOUBLEEQUALITY = <number_expression>;
+SIGNIFICANTDIGITSFORDOUBLEEQUALITY = <number_expression>
 ```
 
 
@@ -156,5 +156,5 @@ SIGNIFICANTDIGITSFORDOUBLEEQUALITY affects equality tests between two complex ar
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[SIGNIFICANTDIGITSFORDOUBLEEQUALITY Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/c76c789fc5c64cc8bcdbb0a22e3ad765.html "Specifies the number of significant digits to the right of the decimal in exponential notation that are used in equality tests between two complex arithmetic expressions.") :arrow_upper_right:
+[SIGNIFICANTDIGITSFORDOUBLEEQUALITY Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/c76c789fc5c64cc8bcdbb0a22e3ad765.html "Specifies the number of significant digits to the right of the decimal in exponential notation that are used in equality tests between two complex arithmetic expressions.") :arrow_upper_right:
 

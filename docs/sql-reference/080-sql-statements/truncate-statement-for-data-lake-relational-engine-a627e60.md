@@ -20,7 +20,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 TRUNCATE 
    { TABLE [ { <owner> | <schema-name> }.]<table-name>
       [ { PARTITION <partition-name> | SUBPARTITION <subpartition-name> } ]
-   | MATERIALIZED VIEW [ { <owner> | <schema-name> }.]<materialized-view-name> };
+   | MATERIALIZED VIEW [ { <owner> | <schema-name> }.]<materialized-view-name> }
 ```
 
 
@@ -136,7 +136,7 @@ TRUNCATE TABLE Sale
 **Related Information**  
 
 
-[TRUNCATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/817f97c16ce21014ba1dcdaaf046de69.html "Deletes all rows from a materialized view without deleting the table definition.") :arrow_upper_right:
+[TRUNCATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/817f97c16ce21014ba1dcdaaf046de69.html "Deletes all rows from a materialized view without deleting the table definition.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

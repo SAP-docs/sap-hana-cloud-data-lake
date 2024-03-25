@@ -113,5 +113,5 @@ Foreign Key (partitioned_object_id) references SYS.ISYSOBJECT;
 **Related Information**  
 
 
-[SYSSUBPARTITIONKEY System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/2f22651a93ca4950bf80048c3907a3af.html "Presents group information from the ISYSSUBPARTITIONKEY system table in a readable format.") :arrow_upper_right:
+[SYSSUBPARTITIONKEY System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/2f22651a93ca4950bf80048c3907a3af.html "Presents group information from the ISYSSUBPARTITIONKEY system table in a readable format.") :arrow_upper_right:
 

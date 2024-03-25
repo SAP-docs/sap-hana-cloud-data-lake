@@ -141,5 +141,5 @@ Once the limit is exceeded, the refresh request is dropped. If the AUTO material
 **Related Information**  
 
 
-[MATERIALIZED_VIEW_AUTO_REFRESH_MAX_RETRY_ATTEMPTS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/35a8282ba03846b5a1f414244a91f046.html "Controls the number of consecutive failures of the same refresh request that can occur before it is no longer requeued by the materialized view auto refresh manager.") :arrow_upper_right:
+[MATERIALIZED_VIEW_AUTO_REFRESH_MAX_RETRY_ATTEMPTS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/35a8282ba03846b5a1f414244a91f046.html "Controls the number of consecutive failures of the same refresh request that can occur before it is no longer requeued by the materialized view auto refresh manager.") :arrow_upper_right:
 

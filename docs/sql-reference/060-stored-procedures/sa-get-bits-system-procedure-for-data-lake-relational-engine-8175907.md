@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_get_bits( <bit_string> [, <only_on_bits> ] );
+sa_get_bits( <bit_string> [, <only_on_bits> ] )
 ```
 
 
@@ -342,5 +342,5 @@ bit\_val
 **Related Information**  
 
 
-[sa_get_bits System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/dc051ed9b19649ec91efd03e157132cb.html "Takes a bit string and returns a row for each bit in the string. By default, only rows with a bit value of 1 are returned.") :arrow_upper_right:
+[sa_get_bits System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/dc051ed9b19649ec91efd03e157132cb.html "Takes a bit string and returns a row for each bit in the string. By default, only rows with a bit value of 1 are returned.") :arrow_upper_right:
 

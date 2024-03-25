@@ -266,5 +266,5 @@ When `ROUND_TO_EVEN` database option is set ON, the `ROUND` function rounds data
 
 [TRUNCNUM Function \[Numeric\] for Data Lake Relational Engine](truncnum-function-numeric-for-data-lake-relational-engine-a58baf5.md "Truncates a number at a specified number of places after the decimal point.")
 
-[ROUND Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/9f767014ddd542479d75822573eec6cd.html "Rounds the numeric-expression to the specified integer-expression number of places after the decimal point.") :arrow_upper_right:
+[ROUND Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/9f767014ddd542479d75822573eec6cd.html "Rounds the numeric-expression to the specified integer-expression number of places after the decimal point.") :arrow_upper_right:
 

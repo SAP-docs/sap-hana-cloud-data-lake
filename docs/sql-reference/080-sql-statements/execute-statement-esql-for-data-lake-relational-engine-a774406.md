@@ -29,7 +29,7 @@ Syntax 1 – Executes a Previously Prepared Named Dynamic Statement
 EXECUTE <statement-name>
    ... [ { USING DESCRIPTOR <sqlda-name> | USING <host-variable-list> } ]
    ... [ { INTO DESCRIPTOR <into-sqlda-name> | INTO <into-host-variable-list> } ]
-   ... [ ARRAY :<nnn> ];
+   ... [ ARRAY :<nnn> ]
 ```
 
 
@@ -42,7 +42,7 @@ Syntax 2 – Short Form to PREPARE and EXECUTE a Statement Not Containing Bind V
 <dd>
 
 ```
-EXECUTE IMMEDIATE <statement>;
+EXECUTE IMMEDIATE <statement>
 ```
 
 

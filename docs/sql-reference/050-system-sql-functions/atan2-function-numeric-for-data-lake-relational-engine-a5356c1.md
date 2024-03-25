@@ -76,5 +76,5 @@ SELECT ATAN2( 0.52, 060 ) FROM iq_dummy;
 
 [Trigonometry Functions in Data Lake Relational Engine](trigonometry-functions-in-data-lake-relational-engine-caafd14.md "Some numeric functions return trigonometric information.")
 
-[ATAN2 Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/8081001d5f8e4323a5f13cc57fb91cf1.html "Returns the arc-tangent, in radians, of the ratio of two numbers.") :arrow_upper_right:
+[ATAN2 Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/8081001d5f8e4323a5f13cc57fb91cf1.html "Returns the arc-tangent, in radians, of the ratio of two numbers.") :arrow_upper_right:
 

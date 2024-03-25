@@ -26,7 +26,7 @@ ALTER LDAP SERVER <ldapua-server-name>
       | CONNECTION TIMEOUT <timeout_value> 
       | CONNECTION RETRIES <retry_value> 
       | TLS OFF }  ]
-   [ WITH ( { SUSPEND | ACTIVATE | REFRESH } ) ];
+   [ WITH ( { SUSPEND | ACTIVATE | REFRESH } ) ]
 ```
 
 

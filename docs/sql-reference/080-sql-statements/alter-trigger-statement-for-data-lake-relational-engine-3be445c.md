@@ -26,7 +26,7 @@ Syntax 1 - Change the definition of a trigger
 <dd>
 
 ```
-ALTER TRIGGER <trigger-name>; 
+ALTER TRIGGER <trigger-name>
    <trigger-type>
    { <trigger-event>[, ...  ] | UPDATE OF <column-name>[, ...] }
    [ ORDER <integer> ] ON <table-name>

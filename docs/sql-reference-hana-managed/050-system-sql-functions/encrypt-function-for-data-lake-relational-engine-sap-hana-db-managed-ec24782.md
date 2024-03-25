@@ -75,8 +75,8 @@ The encryption key \(string\) that is required to decrypt the *<string-expressio
 
 Specify keys in PEM format for RSA.
 
-> ### Caution:  
-> For strongly encrypted databases, store a copy of the key in a safe location. If you lose the encryption key, there is no way to access the data, even with the assistance of Technical Support. The database must be discarded and you must create a new database.
+> ### Note:  
+> For strongly encrypted data, store a copy of the key in a safe location. If you lose the encryption key, there is no way to access the data, even with the assistance of Technical Support.
 
 
 
@@ -147,6 +147,9 @@ AES\_FIPS
 <dd>
 
 The data is encrypted using the FIPS-certified version of the AES 128-bit algorithm.
+
+> ### Note:  
+> For instances in the Government Cloud \(US\) region, AES\_FIPS is the default. Specifying non-FIPS algorithms results in FIPS equivalents being used. If no FIPS equivalents are available, then the function returns an error.
 
 For AES\_FIPS, *<padding\>* can be PKCS5, ZEROES, and NONE \(if FORMAT=RAW\).
 
@@ -347,13 +350,13 @@ LONG BINARY
 
 ## Remarks
 
-The LONG BINARY value returned by this function is up to 31 bytes longer than the input *<string-expression\>*. The value returned by this function is not human-readable. Use the DECRYPT function to decrypt a *<string-expression\>* that was encrypted with the ENCRYPT function. For AES, to successfully decrypt a *<string-expression\>*, use the same encryption key and algorithm that were used to encrypt the data. If you specify an incorrect encryption key, then an error is generated. A lost key results in inaccessible data, from which there is no recovery.
+The LONG BINARY value returned by this function is up to 31 bytes longer than the input *<string-expression\>*. The value returned by this function isn't human-readable. Use the DECRYPT function to decrypt a *<string-expression\>* that was encrypted with the ENCRYPT function. For AES, to successfully decrypt a *<string-expression\>*, use the same encryption key and algorithm that were used to encrypt the data. If you specify an incorrect encryption key, then an error is generated. A lost key results in inaccessible data, from which there's no recovery.
 
-If you are storing encrypted values in a table, then the column should be BINARY or LONG BINARY so that character set conversion is not performed on the data.
+If you're storing encrypted values in a table, then the column should be BINARY or LONG BINARY so that character set conversion isn't performed on the data.
 
 When FORMAT=RAW, the data is encrypted using raw encryption. Specify the encryption key, initialization vector, and, optionally, the padding format. These same values must be specified when decrypting the data. The decryption can be performed outside of the database server or by using the DECRYPT function.
 
-Do not use raw encryption when the data is to be encrypted and decrypted only within the database server because you must specify the initialization vector and the padding, and the encryption key cannot be verified during decryption.
+Don't use raw encryption when the data is to be encrypted and decrypted only within the database server because you must specify the initialization vector and the padding, and the encryption key can't be verified during decryption.
 
 
 
@@ -380,5 +383,5 @@ Not in the standard.
 **Related Information**  
 
 
-[ENCRYPT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/81f72ceb6ce210149256a7523672a8bb.html "Encrypts the specified value using the supplied encryption key and returns a LONG BINARY value.") :arrow_upper_right:
+[ENCRYPT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/81f72ceb6ce210149256a7523672a8bb.html "Encrypts the specified value using the supplied encryption key and returns a LONG BINARY value.") :arrow_upper_right:
 

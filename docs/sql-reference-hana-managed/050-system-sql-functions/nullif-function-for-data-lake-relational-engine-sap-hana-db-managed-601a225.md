@@ -101,5 +101,5 @@ ELSE <expression1> END
 **Related Information**  
 
 
-[NULLIF Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a569fd1184f210159b61c1d4823ce243.html "Provides an abbreviated CASE expression by comparing expressions.") :arrow_upper_right:
+[NULLIF Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a569fd1184f210159b61c1d4823ce243.html "Provides an abbreviated CASE expression by comparing expressions.") :arrow_upper_right:
 

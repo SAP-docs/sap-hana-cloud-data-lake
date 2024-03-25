@@ -21,7 +21,7 @@ sp_trace_event_session_target_options(
    [ <session_name>  
    [, <include_server_sessions>
    [, <include_audit_events> ] ] ]
-  );
+  )
 ```
 
 
@@ -304,5 +304,5 @@ compressed
 **Related Information**  
 
 
-[sp_trace_event_session_target_options System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/aae165896e5d4689b72835021f67795e.html "Lists the target options for a trace event session.") :arrow_upper_right:
+[sp_trace_event_session_target_options System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/aae165896e5d4689b72835021f67795e.html "Lists the target options for a trace event session.") :arrow_upper_right:
 

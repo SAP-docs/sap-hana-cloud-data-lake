@@ -100,5 +100,5 @@ If the first expression is the NULL value, then the value of the second expressi
 **Related Information**  
 
 
-[IFNULL Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a557e29b84f21015b460f69ff0fed6da.html "Returns the first non-null expression, or NULL.") :arrow_upper_right:
+[IFNULL Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a557e29b84f21015b460f69ff0fed6da.html "Returns the first non-null expression, or NULL.") :arrow_upper_right:
 

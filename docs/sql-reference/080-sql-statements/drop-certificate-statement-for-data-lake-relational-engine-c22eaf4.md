@@ -1,6 +1,6 @@
 <!-- loioc22eaf42bb524cc58ef660f84743c934 -->
 
-# DROP CERTIFICATE for Data Lake Relational Engine
+# DROP CERTIFICATE STATEMENT for Data Lake Relational Engine
 
 Drops a certificate from the database.
 
@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-DROP CERTIFICATE [IF EXISTS ] <certificate-name>;
+DROP CERTIFICATE [IF EXISTS ] <certificate-name>
 ```
 
 
@@ -68,7 +68,7 @@ None
 Requires one of the following:
 
 -   To manage self-owned certificates requires the MANAGE ONWER CERTIFICATES system privilege.
--   To manage certificates owned by other requires the MANAGE CREDENTIAL system privilege.
+-   To manage certificates owned by other requires the MANAGE CERTIFICATES system privilege.
 
 See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md) for assistance with granting privileges.
 
@@ -106,5 +106,5 @@ DROP CERTIFICATE mycert1;
 
 [CREATE CERTIFICATE Statement for Data Lake Relational Engine](create-certificate-statement-for-data-lake-relational-engine-816b6bb.md "Adds or replaces a certificate in the database using the given file or string.")
 
-[DROP CERTIFICATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/5823712c23734d86b5498688b5a0b0df.html "Drops a certificate from the database.") :arrow_upper_right:
+[DROP CERTIFICATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/5823712c23734d86b5498688b5a0b0df.html "Drops a certificate from the database.") :arrow_upper_right:
 

@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iq_reset_identity ( <table_name>, <table_owner>, <value> );
+sp_iq_reset_identity ( <table_name>, <table_owner>, <value> )
 ```
 
 
@@ -93,69 +93,14 @@ You need to specify *<table\_name\>*, *<table owner\>*, and *<value\>*.
 
 ## Privileges
 
-To run this procedure, you need the EXECUTE privilege on the procedure. If you own the object referenced by the procedure, no additional privilege is required. 
+To run this procedure, you need the EXECUTE privilege on the procedure. 
 
-For objects owned by others, you need one of the following privileges:
+You also need one of the following:
 
-
-<table>
-<tr>
-<th valign="top">
-
-Privilege Name
-
-</th>
-<th valign="top">
-
-Privilege Type
-
-</th>
-<th valign="top">
-
-Grant Statement
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
--   ALTER ANY TABLE
--   ALTER ANY OBJECT
-
-
-
-</td>
-<td valign="top">
-
-System privileges
-
-</td>
-<td valign="top">
-
-[GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md)
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
--   ALTER privilege on the table
-
-
-
-</td>
-<td valign="top">
-
-Object-level privilege
-
-</td>
-<td valign="top">
-
-[GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md)
-
-</td>
-</tr>
-</table>
+-   You own the object referenced by the procedure.
+-   ALTER ANY TABLE system privilege
+-   ALTER ANY OBJECT system privilege
+-   ALTER object-level privilege on the table
 
 
 
@@ -169,11 +114,14 @@ None
 
 ## Examples
 
+```
+-- Setup for the following example ---
+CREATE TABLE mytable(C1 INT IDENTITY);
+```
+
 This example uses the sp\_iq\_reset\_identity system procedure to reset the Identity column with a starting seed of 50:
 
 ```
-CREATE TABLE mytable(C1 INT IDENTITY);
-
 CALL sp_iq_reset_identity('mytable', 'hdladmin', 50);
 ```
 

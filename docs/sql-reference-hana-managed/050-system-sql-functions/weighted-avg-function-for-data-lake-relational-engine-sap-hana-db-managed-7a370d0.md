@@ -305,5 +305,5 @@ Francis
 
 [EXP\_WEIGHTED\_AVG Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](exp-weighted-avg-function-for-data-lake-relational-engine-sap-hana-db-managed-ac831a0.md "Calculates an exponential weighted moving average. Weightings determine the relative importance of each quantity that makes up the average.")
 
-[WEIGHTED_AVG Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a590e30584f210158df8d2242a037242.html "Calculates an arithmetically (or linearly) weighted average.") :arrow_upper_right:
+[WEIGHTED_AVG Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a590e30584f210158df8d2242a037242.html "Calculates an arithmetically (or linearly) weighted average.") :arrow_upper_right:
 

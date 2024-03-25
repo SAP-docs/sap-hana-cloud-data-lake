@@ -16,17 +16,12 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 
-> ### Note:  
-> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
-
-
-
 
 
 ### Syntax 1
 
 ```
-sp_iqindex ( [ <table_name> ],[ <column_name> ],[ <table_owner> ] );
+sp_iqindex ( [ <table_name> [, <column_name> [, <table_owner> ] ] ] )
 ```
 
 
@@ -35,25 +30,52 @@ sp_iqindex ( [ <table_name> ],[ <column_name> ],[ <table_owner> ] );
 
 ```
 sp_iqindex [ table_name='<tablename>' ],
-[ column_name='<columnname>' ],[ table_owner='<tableowner>' ];
+   [ column_name='<columnname>' [, table_owner='<tableowner>' ]
 ```
 
 
 
-### Syntax 3
+<a name="loioa5aa7eac84f2101592f0d75aa7289f67__section_x1s_ynh_vzb"/>
 
-```
-sp_iqindex_alt ( [ <table_name> ],[ <column_name> ],[ <table_owner> ] );
-```
+## Parameters
 
 
+<dl>
+<dt><b>
 
-### Syntax 4
+*<table\_name\>*
 
-```
-sp_iqindex_alt [ table_name='<tablename>' ],
-[ column_name='<columnname>' ],[ table_owner='<tableowner>' ];
-```
+</b></dt>
+<dd>
+
+Specifies the name of the indexed table.
+
+
+
+</dd><dt><b>
+
+*<table\_owner\>*
+
+</b></dt>
+<dd>
+
+Specifies the owner of the indexed table.
+
+
+
+</dd><dt><b>
+
+*<column\_name\>*
+
+</b></dt>
+<dd>
+
+Specifies the indexed column in the table.
+
+
+
+</dd>
+</dl>
 
 
 
@@ -183,23 +205,17 @@ Displays information about indexes in the database. Specifying one of the parame
 
 sp\_iqindex always produces one line per index. sp\_iqindex\_alt produces one line per index per column if there is a multicolumn index.
 
-
-
-### Syntax 1
+**Syntax 1**
 
 If you do not specify either of the first two parameters, but specify the next parameter in the sequence, you must substitute NULL for the omitted parameters. For example, sp\_iqindex NULL,NULL,DBA and sp\_iqindex Departments,NULL,DBA.
 
+**Syntax 2**
 
+You can specify the parameters in any order, enclosed in single quotes.
 
-### Syntax 2
+Both syntax produces the same output.
 
-You can specify the parameters in any order. Enclose them in single quotes.
-
-
-
-### Syntax 3 and 4
-
-Produces slightly different output when a multicolumn index is present. Allows the same options as Syntax 1 and 2.
+A slightly different output is presented when a multicolumn index is present.
 
 
 
@@ -223,684 +239,678 @@ None
 
 ## Examples
 
--   The following variations in syntax both return all indexes on columns with the name DepartmentID:
+These variations in syntax both return all indexes on columns with the name DepartmentID:
 
-    ```
-    call sp_iqindex (NULL,'DepartmentID');
-    ```
+```
+call sp_iqindex (NULL,'DepartmentID');
+```
 
-    ```
-    sp_iqindex column_name='DepartmentID';
-    ```
-
-
-    <table>
-    <tr>
-    <th valign="top">
-
-    table\_ name
-    
-    </th>
-    <th valign="top">
-
-    table\_ owner
-    
-    </th>
-    <th valign="top">
-
-    column\_ name
-    
-    </th>
-    <th valign="top">
-
-    index\_ type
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    Departments
-    
-    </td>
-    <td valign="top">
-    
-    GROUPO
-    
-    </td>
-    <td valign="top">
-    
-    DepartmentID
-    
-    </td>
-    <td valign="top">
-    
-    `FP`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    Departments
-    
-    </td>
-    <td valign="top">
-    
-    GROUPO
-    
-    </td>
-    <td valign="top">
-    
-    DepartmentID
-    
-    </td>
-    <td valign="top">
-    
-    `HG`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    Employees
-    
-    </td>
-    <td valign="top">
-    
-    GROUPO
-    
-    </td>
-    <td valign="top">
-    
-    DepartmentID
-    
-    </td>
-    <td valign="top">
-    
-    `FP`
-    
-    </td>
-    </tr>
-    </table>
-    
-
-    <table>
-    <tr>
-    <th valign="top">
-
-    \(Continued\)
-
-    index\_name
-    
-    </th>
-    <th valign="top">
-
-    unique\_ index
-    
-    </th>
-    <th valign="top">
-
-    location
-    
-    </th>
-    <th valign="top">
-
-    dbspace\_id
-    
-    </th>
-    <th valign="top">
-
-    remarks
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    ASIQ\_IDX\_T201\_C1\_FP
-    
-    </td>
-    <td valign="top">
-    
-    N
-    
-    </td>
-    <td valign="top">
-    
-    Main
-    
-    </td>
-    <td valign="top">
-    
-    16387
-    
-    </td>
-    <td valign="top">
-    
-    \(NULL\)
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    ASIQ\_IDX\_T201\_C1\_HG
-    
-    </td>
-    <td valign="top">
-    
-    U
-    
-    </td>
-    <td valign="top">
-    
-    Main
-    
-    </td>
-    <td valign="top">
-    
-    16387
-    
-    </td>
-    <td valign="top">
-    
-    \(NULL\)
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    ASIQ\_IDX\_T202\_C5\_FP
-    
-    </td>
-    <td valign="top">
-    
-    N
-    
-    </td>
-    <td valign="top">
-    
-    Main
-    
-    </td>
-    <td valign="top">
-    
-    16387
-    
-    </td>
-    <td valign="top">
-    
-    \(NULL\)
-    
-    </td>
-    </tr>
-    </table>
-    
--   The following variations in syntax both return all indexes in the table Departments that is owned by table owner GROUPO:
-
-    ```
-    sp_iqindex Departments,NULL,GROUPO;
-    ```
-
-    ```
-    sp_iqindex table_name='Departments',table_owner='DBA';
-    ```
+```
+sp_iqindex column_name='DepartmentID';
+```
 
 
-    <table>
-    <tr>
-    <th valign="top">
+<table>
+<tr>
+<th valign="top">
 
-    table\_ name
-    
-    </th>
-    <th valign="top">
+table\_ name
 
-    table\_ owner
-    
-    </th>
-    <th valign="top">
+</th>
+<th valign="top">
 
-    column\_ name
-    
-    </th>
-    <th valign="top">
+table\_ owner
 
-    index\_ type
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    Departments
-    
-    </td>
-    <td valign="top">
-    
-    GROUPO
-    
-    </td>
-    <td valign="top">
-    
-    DepartmentHeadID
-    
-    </td>
-    <td valign="top">
-    
-    `FP`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    Departments
-    
-    </td>
-    <td valign="top">
-    
-    GROUPO
-    
-    </td>
-    <td valign="top">
-    
-    DepartmentID
-    
-    </td>
-    <td valign="top">
-    
-    `FP`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    Departments
-    
-    </td>
-    <td valign="top">
-    
-    GROUPO
-    
-    </td>
-    <td valign="top">
-    
-    DepartmentID
-    
-    </td>
-    <td valign="top">
-    
-    `HG`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    Departments
-    
-    </td>
-    <td valign="top">
-    
-    GROUPO
-    
-    </td>
-    <td valign="top">
-    
-    DepartmentName
-    
-    </td>
-    <td valign="top">
-    
-    `FP`
-    
-    </td>
-    </tr>
-    </table>
-    
+</th>
+<th valign="top">
 
-    <table>
-    <tr>
-    <th valign="top">
+column\_ name
 
-    \(Continued\)
+</th>
+<th valign="top">
 
-    index\_name
-    
-    </th>
-    <th valign="top">
+index\_ type
 
-    unique\_ index
-    
-    </th>
-    <th valign="top">
+</th>
+<th valign="top">
 
-    location
-    
-    </th>
-    <th valign="top">
+index\_name
 
-    dbspace\_id
-    
-    </th>
-    <th valign="top">
+</th>
+</tr>
+<tr>
+<td valign="top">
 
-    remarks
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    ASIQ\_IDX\_T201\_C3\_FP
-    
-    </td>
-    <td valign="top">
-    
-    N
-    
-    </td>
-    <td valign="top">
-    
-    Main
-    
-    </td>
-    <td valign="top">
-    
-    16387
-    
-    </td>
-    <td valign="top">
-    
-    \(NULL\)
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    ASIQ\_IDX\_T201\_C1\_FP
-    
-    </td>
-    <td valign="top">
-    
-    N
-    
-    </td>
-    <td valign="top">
-    
-    Main
-    
-    </td>
-    <td valign="top">
-    
-    16387
-    
-    </td>
-    <td valign="top">
-    
-    \(NULL\)
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    ASIQ\_IDX\_T201\_C1\_HG
-    
-    </td>
-    <td valign="top">
-    
-    U
-    
-    </td>
-    <td valign="top">
-    
-    Main
-    
-    </td>
-    <td valign="top">
-    
-    16387
-    
-    </td>
-    <td valign="top">
-    
-    \(NULL\)
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    ASIQ\_IDX\_T201\_C2\_FP
-    
-    </td>
-    <td valign="top">
-    
-    N
-    
-    </td>
-    <td valign="top">
-    
-    Main
-    
-    </td>
-    <td valign="top">
-    
-    16387
-    
-    </td>
-    <td valign="top">
-    
-    \(NULL\)
-    
-    </td>
-    </tr>
-    </table>
-    
--   The following variations in syntax for sp\_iqindex\_alt both return indexes on the table Employees that contain the column City. The index emp\_loc is a multicolumn index on the columns City and State. sp\_iqindex\_alt displays one row per column for a multicolumn index:
+Departments
 
-    ```
-    sp_iqindex_alt Employees,City;
-    ```
+</td>
+<td valign="top">
 
-    ```
-    sp_iqindex_alt table_name='Employees',
-                   column_name='City';
-    ```
+USER1
+
+</td>
+<td valign="top">
+
+DepartmentID
+
+</td>
+<td valign="top">
+
+`FP`
+
+</td>
+<td valign="top">
+
+ASIQ\_IDX\_T201\_C1\_FP
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Departments
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+DepartmentID
+
+</td>
+<td valign="top">
+
+`HG`
+
+</td>
+<td valign="top">
+
+ASIQ\_IDX\_T201\_C1\_HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Employees
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+DepartmentID
+
+</td>
+<td valign="top">
+
+`FP`
+
+</td>
+<td valign="top">
+
+ASIQ\_IDX\_T202\_C5\_FP
+
+</td>
+</tr>
+</table>
 
 
-    <table>
-    <tr>
-    <th valign="top">
+<table>
+<tr>
+<th valign="top" colspan="4">
 
-    table\_ name
-    
-    </th>
-    <th valign="top">
+\(Continued\)
 
-    table\_ owner
-    
-    </th>
-    <th valign="top">
+</th>
+</tr>
+<tr>
+<th valign="top">
 
-    column\_ name
-    
-    </th>
-    <th valign="top">
+unique\_ index
 
-    index\_ type
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    Employees
-    
-    </td>
-    <td valign="top">
-    
-    GROUPO
-    
-    </td>
-    <td valign="top">
-    
-    City
-    
-    </td>
-    <td valign="top">
-    
-    `FP`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    Employees
-    
-    </td>
-    <td valign="top">
-    
-    GROUPO
-    
-    </td>
-    <td valign="top">
-    
-    City
-    
-    </td>
-    <td valign="top">
-    
-    `HG`
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    Employees
-    
-    </td>
-    <td valign="top">
-    
-    GROUPO
-    
-    </td>
-    <td valign="top">
-    
-    State
-    
-    </td>
-    <td valign="top">
-    
-    `HG`
-    
-    </td>
-    </tr>
-    </table>
-    
+</th>
+<th valign="top">
 
-    <table>
-    <tr>
-    <th valign="top">
+location
 
-    \(Continued\)
+</th>
+<th valign="top">
 
-    index\_name
-    
-    </th>
-    <th valign="top">
+dbspace\_id
 
-    unique\_ index
-    
-    </th>
-    <th valign="top">
+</th>
+<th valign="top">
 
-    dbspace\_id
-    
-    </th>
-    <th valign="top">
+remarks
 
-    remarks
-    
-    </th>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    ASIQ\_IDX\_T452\_C7\_FP
-    
-    </td>
-    <td valign="top">
-    
-    N
-    
-    </td>
-    <td valign="top">
-    
-    16387
-    
-    </td>
-    <td valign="top">
-    
-    \(NULL\)
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    emp\_loc
-    
-    </td>
-    <td valign="top">
-    
-    N
-    
-    </td>
-    <td valign="top">
-    
-    16387
-    
-    </td>
-    <td valign="top">
-    
-    \(NULL\)
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    emp\_loc
-    
-    </td>
-    <td valign="top">
-    
-    N
-    
-    </td>
-    <td valign="top">
-    
-    16387
-    
-    </td>
-    <td valign="top">
-    
-    \(NULL\)
-    
-    </td>
-    </tr>
-    </table>
-    
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+<td valign="top">
+
+16387
+
+</td>
+<td valign="top">
+
+\(NULL\)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+U
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+<td valign="top">
+
+16387
+
+</td>
+<td valign="top">
+
+\(NULL\)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+<td valign="top">
+
+16387
+
+</td>
+<td valign="top">
+
+\(NULL\)
+
+</td>
+</tr>
+</table>
+
+These variations in syntax both return all indexes in the table Departments that is owned by table owner GROUPO:
+
+```
+sp_iqindex Departments,NULL,GROUPO;
+```
+
+```
+sp_iqindex table_name='Departments',table_owner='DBA';
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+table\_ name
+
+</th>
+<th valign="top">
+
+table\_ owner
+
+</th>
+<th valign="top">
+
+column\_ name
+
+</th>
+<th valign="top">
+
+index\_ type
+
+</th>
+<th valign="top">
+
+index\_name
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Departments
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+DepartmentHeadID
+
+</td>
+<td valign="top">
+
+`FP`
+
+</td>
+<td valign="top">
+
+ASIQ\_IDX\_T201\_C3\_FP
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Departments
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+DepartmentID
+
+</td>
+<td valign="top">
+
+`FP`
+
+</td>
+<td valign="top">
+
+ASIQ\_IDX\_T201\_C1\_FP
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Departments
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+DepartmentID
+
+</td>
+<td valign="top">
+
+`HG`
+
+</td>
+<td valign="top">
+
+ASIQ\_IDX\_T201\_C1\_HG
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Departments
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+DepartmentName
+
+</td>
+<td valign="top">
+
+`FP`
+
+</td>
+<td valign="top">
+
+ASIQ\_IDX\_T201\_C2\_FP
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="4">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+unique\_ index
+
+</th>
+<th valign="top">
+
+location
+
+</th>
+<th valign="top">
+
+dbspace\_id
+
+</th>
+<th valign="top">
+
+remarks
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+<td valign="top">
+
+16387
+
+</td>
+<td valign="top">
+
+\(NULL\)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+<td valign="top">
+
+16387
+
+</td>
+<td valign="top">
+
+\(NULL\)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+U
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+<td valign="top">
+
+16387
+
+</td>
+<td valign="top">
+
+\(NULL\)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+Main
+
+</td>
+<td valign="top">
+
+16387
+
+</td>
+<td valign="top">
+
+\(NULL\)
+
+</td>
+</tr>
+</table>
+
+These variations in syntax for both return indexes on the table Employees that contain the column City. The index emp\_loc is a multicolumn index on the columns City and State. sp\_iqindex\_alt displays one row per column for a multicolumn index:
+
+```
+sp_iqindex_alt Employees,City;
+```
+
+```
+sp_iqindex_alt table_name='Employees', column_name='City';
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+table\_ name
+
+</th>
+<th valign="top">
+
+table\_ owner
+
+</th>
+<th valign="top">
+
+column\_ name
+
+</th>
+<th valign="top">
+
+index\_ type
+
+</th>
+<th valign="top">
+
+index\_name
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Employees
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+City
+
+</td>
+<td valign="top">
+
+`FP`
+
+</td>
+<td valign="top">
+
+ASIQ\_IDX\_T452\_C7\_FP
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Employees
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+City
+
+</td>
+<td valign="top">
+
+`HG`
+
+</td>
+<td valign="top">
+
+emp\_loc
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Employees
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+State
+
+</td>
+<td valign="top">
+
+`HG`
+
+</td>
+<td valign="top">
+
+emp\_loc
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="2">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
+<th valign="top">
+
+unique\_ index
+
+</th>
+<th valign="top">
+
+remarks
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+\(NULL\)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+\(NULL\)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+\(NULL\)
+
+</td>
+</tr>
+</table>
+
 -   The output from sp\_iqindex for the same table and column is slightly different:
 
     ```
@@ -934,6 +944,11 @@ None
     index\_ type
     
     </th>
+    <th valign="top">
+
+    index\_name
+    
+    </th>
     </tr>
     <tr>
     <td valign="top">
@@ -943,7 +958,7 @@ None
     </td>
     <td valign="top">
     
-    GROUPO
+    USER1
     
     </td>
     <td valign="top">
@@ -956,6 +971,11 @@ None
     `FP`
     
     </td>
+    <td valign="top">
+    
+    ASIQ\_IDX\_T452\_C7\_FP
+    
+    </td>
     </tr>
     <tr>
     <td valign="top">
@@ -965,7 +985,7 @@ None
     </td>
     <td valign="top">
     
-    GROUPO
+    USER1
     
     </td>
     <td valign="top">
@@ -978,19 +998,24 @@ None
     `HG`
     
     </td>
+    <td valign="top">
+    
+    emp\_loc
+    
+    </td>
     </tr>
     </table>
     
 
     <table>
     <tr>
-    <th valign="top">
+    <th valign="top" colspan="4">
 
     \(Continued\)
-
-    index\_name
     
     </th>
+    </tr>
+    <tr>
     <th valign="top">
 
     unique\_ index
@@ -1015,11 +1040,6 @@ None
     <tr>
     <td valign="top">
     
-    ASIQ\_IDX\_T452\_C7\_FP
-    
-    </td>
-    <td valign="top">
-    
     N
     
     </td>
@@ -1040,11 +1060,6 @@ None
     </td>
     </tr>
     <tr>
-    <td valign="top">
-    
-    emp\_loc
-    
-    </td>
     <td valign="top">
     
     N

@@ -101,5 +101,5 @@ TIMESTAMP when the second argument you specify is an integer.
 **Related Information**  
 
 
-[DAYS Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a54a45b584f21015a4c2ab2c117fc738.html "Returns the number of days since an arbitrary starting date, returns the number of days between two specified dates, or adds the specified integer-expression number of days to a given date.") :arrow_upper_right:
+[DAYS Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a54a45b584f21015a4c2ab2c117fc738.html "Returns the number of days since an arbitrary starting date, returns the number of days between two specified dates, or adds the specified integer-expression number of days to a given date.") :arrow_upper_right:
 

@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_refresh_materialized_views( [ <ignore_errors> ] );
+sa_refresh_materialized_views( [ <ignore_errors> ] )
 ```
 
 
@@ -108,5 +108,5 @@ CALL sa_refresh_materialized_views( 1 );
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine](../080-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-faab95d.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_refresh_materialized_views System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3b20ca4caa7e4ecb9000e15b95d23644.html "Initializes all materialized views that are in an uninitialized state.") :arrow_upper_right:
+[sa_refresh_materialized_views System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3b20ca4caa7e4ecb9000e15b95d23644.html "Initializes all materialized views that are in an uninitialized state.") :arrow_upper_right:
 

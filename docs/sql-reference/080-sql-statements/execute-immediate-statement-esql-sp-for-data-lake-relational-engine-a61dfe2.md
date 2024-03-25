@@ -30,7 +30,7 @@ EXECUTE IMMEDIATE
    [ { WITH QUOTES { ON | OFF }
      | WITH ESCAPES { ON | OFF } 
      | WITH RESULT SET { ON | OFF } }
-   ] <string-expression>;
+   ] <string-expression>
 ```
 
 
@@ -43,7 +43,7 @@ Syntax 2
 <dd>
 
 ```
-EXECUTE ( <string-expression> );
+EXECUTE ( <string-expression> )
 ```
 
 

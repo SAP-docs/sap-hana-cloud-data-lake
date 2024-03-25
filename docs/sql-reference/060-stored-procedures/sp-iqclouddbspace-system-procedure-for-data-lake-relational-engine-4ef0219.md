@@ -17,8 +17,16 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqclouddbspace();
+sp_iqclouddbspace()
 ```
+
+
+
+<a name="loio4ef0219c16ec4f578395e34785797cfe__sp_iqclouddbspace_param1"/>
+
+## Parameters
+
+None
 
 
 
@@ -101,6 +109,14 @@ The size of a database page in bytes. This is calculated based on the compressio
 </td>
 </tr>
 </table>
+
+
+
+<a name="loio4ef0219c16ec4f578395e34785797cfe__sp_iqclouddbspace_remarks1"/>
+
+## Remarks
+
+None
 
 
 
@@ -187,5 +203,5 @@ user\_object\_store
 **Related Information**  
 
 
-[sp_iqclouddbspace System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/4240c9a98ce04c2cb85a37ada268acb4.html "Displays detailed information about the user_object_store dbspace.") :arrow_upper_right:
+[sp_iqclouddbspace System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/4240c9a98ce04c2cb85a37ada268acb4.html "Displays detailed information about the user_object_store dbspace.") :arrow_upper_right:
 

@@ -63,5 +63,5 @@ SELECT MONTH( '1998-07-13' ) FROM iq_dummy;
 **Related Information**  
 
 
-[MONTH Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a565928184f21015aecd84c01c4c2078.html "Returns a number from 1 to 12 corresponding to the month of the given date.") :arrow_upper_right:
+[MONTH Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a565928184f21015aecd84c01c4c2078.html "Returns a number from 1 to 12 corresponding to the month of the given date.") :arrow_upper_right:
 

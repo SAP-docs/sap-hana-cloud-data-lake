@@ -21,7 +21,7 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-TEMP_EXTRACT_COMPRESS = { ON | OFF };
+TEMP_EXTRACT_COMPRESS = { ON | OFF }
 ```
 
 
@@ -145,5 +145,5 @@ In parallel mode, the TEMP\_EXTRACT\_FILE\_EXTENSION option must be set to gz or
 
 [TEMP\_EXTRACT\_FILE\_EXTENSION Option for Data Lake Relational Engine](temp-extract-file-extension-option-for-data-lake-relational-engine-896be73.md "Sets the file name extension for the generated output file of the data parallel extraction facility. When you specify the TEMP_EXTRACT_FILE_EXTENSION option, each file name generated becomes prefix thread_ID_filecount.file extension.")
 
-[TEMP_EXTRACT_COMPRESS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/aa37821e445f4177b189aad7442f104d.html "Writes the output file for exports in gzip format. This results in a significant savings of storagespace when exporting tables.") :arrow_upper_right:
+[TEMP_EXTRACT_COMPRESS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/aa37821e445f4177b189aad7442f104d.html "Writes the output file for exports in gzip format. This results in a significant savings of storagespace when exporting tables.") :arrow_upper_right:
 

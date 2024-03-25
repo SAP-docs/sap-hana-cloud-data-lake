@@ -21,8 +21,7 @@ REVOKE [ ADMIN OPTION FOR ] CHANGE PASSWORD
    [ ( { <target_user_list> 
        | ANY 
        | ANY WITH ROLES <target_role_list> } ) ]
-   FROM <user_ID> [,...];
-
+   FROM <user_ID> [,...]
 ```
 
 

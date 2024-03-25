@@ -170,5 +170,5 @@ All the positions or offsets, returned or specified, in the `PATINDEX` function 
 **Related Information**  
 
 
-[PATINDEX Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a56c8f8684f210158653d0c858b0e559.html "Returns the starting position of the first occurrence of a specified pattern.") :arrow_upper_right:
+[PATINDEX Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a56c8f8684f210158653d0c858b0e559.html "Returns the starting position of the first occurrence of a specified pattern.") :arrow_upper_right:
 

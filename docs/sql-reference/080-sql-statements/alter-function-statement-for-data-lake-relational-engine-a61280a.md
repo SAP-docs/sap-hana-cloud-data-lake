@@ -34,7 +34,7 @@ ALTER FUNCTION [ { <owner> | <schema-name> }.]<function-name>
    [ [ NOT ] DETERMINISTIC ]
    { <compound-statement> 
       | AS <sql-statement> <sql-statement>... }
-;
+
 ```
 
 
@@ -48,7 +48,7 @@ Obfuscate a function definition
 
 ```
 ALTER FUNCTION [ { <owner> | <schema-name> }.]<function-name> 
-SET HIDDEN;
+SET HIDDEN
 ```
 
 
@@ -62,7 +62,7 @@ Recompile a function
 
 ```
 ALTER FUNCTION [ { <owner> | <schema-name> }.]<function-name>
-RECOMPILE;
+RECOMPILE
 ```
 
 
@@ -248,5 +248,5 @@ SQL – vendor extension to ISO/ANSI SQL grammar
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[ALTER FUNCTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/3d7a54b993a74668b60ab048e299fbec.html "Modifies an existing function. Include the entire modified function in the ALTER FUNCTION statement.") :arrow_upper_right:
+[ALTER FUNCTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3d7a54b993a74668b60ab048e299fbec.html "Modifies an existing function. Include the entire modified function in the ALTER FUNCTION statement.") :arrow_upper_right:
 

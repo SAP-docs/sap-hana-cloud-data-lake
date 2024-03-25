@@ -18,7 +18,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 ```
 sa_nchar_terms
-   ( '<char-string>' [ , '<text-config-name>' [, '<owner>' ] ] ] );
+   ( '<char-string>' [ , '<text-config-name>' [, '<owner>' ] ] ] )
 ```
 
 

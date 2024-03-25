@@ -17,7 +17,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be us
 
 
 ```
-DROP USER <user-name>;
+DROP USER <user-name>
 ```
 
 
@@ -47,7 +47,7 @@ When dropping a user, any permissions granted by this user are also removed. If 
 <dl>
 <dt><b>
 
-Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure:
+Connected to SAP HANA database as a SAP HANA database user.:
 
 </b></dt>
 <dd>
@@ -93,5 +93,5 @@ DROP USER SQLTester;
 
 [CREATE USER Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-user-statement-for-data-lake-relational-engine-sap-hana-db-managed-a21f652.md "Creates a user.")
 
-[DROP USER Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a61d9fe384f21015af5de6ef9830eeb0.html "Removes a user.") :arrow_upper_right:
+[DROP USER Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a61d9fe384f21015af5de6ef9830eeb0.html "Removes a user.") :arrow_upper_right:
 

@@ -12,7 +12,7 @@ Retrieves information from the database.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when connected as follows:
 
--   Connected to SAP HANA database as a SAP HANA database user, and using either the REMOTE\_EXECUTE procedure or the REMOTE\_EXEUCTE\_QUERY function.
+-   Connected to SAP HANA database as a SAP HANA database user.
 
 When using the REMOTE\_EXECUTE procedure, the SELECT statement can only be included as part of the definition within the CREATE VIEW Statement. It can't be run on its own in a REMOTE\_EXECUTE procedure.
 
@@ -118,7 +118,7 @@ SELECT [ { ALL | DISTINCT } ] [ <row-limitation-option1> ] <select-list>
 ```
 <materialized_view_staleness_option> ::=
    { materialized_view_staleness_check
-    | materialized_view_staleness_limit };
+    | materialized_view_staleness_limit }
 ```
 
 
@@ -856,5 +856,5 @@ To SELECT from tables, views, and materialized views requires one of:
 
 [LOAD TABLE Statement \(Non-Parquet Formats\) for Data Lake Relational Engine \(SAP HANA DB-Managed\)](load-table-statement-non-parquet-formats-for-data-lake-relational-engine-sap-hana-db-mana-97f011f.md "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or Google Cloud Storage) or from data lake Files containers (the managed object store).")
 
-[SELECT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a624e72e84f210159276a39335acd358.html "Retrieves information from the database.") :arrow_upper_right:
+[SELECT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a624e72e84f210159276a39335acd358.html "Retrieves information from the database.") :arrow_upper_right:
 

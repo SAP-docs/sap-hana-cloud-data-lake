@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_find_top_statements( <stmt_text>, <stmt_hash> );
+sp_find_top_statements( <stmt_text>, <stmt_hash> )
 ```
 
 
@@ -65,11 +65,6 @@ Column name
 </th>
 <th valign="top">
 
-Data type
-
-</th>
-<th valign="top">
-
 Description
 
 </th>
@@ -77,12 +72,7 @@ Description
 <tr>
 <td valign="top">
 
-*stmt\_hash*
-
-</td>
-<td valign="top">
-
-UNSIGNED BIGINT
+stmt\_hash
 
 </td>
 <td valign="top">
@@ -94,12 +84,7 @@ Returns the statement identifier.
 <tr>
 <td valign="top">
 
-*owner\_name*
-
-</td>
-<td valign="top">
-
-CHAR\(128\)
+owner\_name
 
 </td>
 <td valign="top">
@@ -111,12 +96,7 @@ Returns the name of the owner of the stored procedure. The value is NULL if the 
 <tr>
 <td valign="top">
 
-*proc\_name*
-
-</td>
-<td valign="top">
-
-CHAR\(128\)
+proc\_name
 
 </td>
 <td valign="top">
@@ -128,12 +108,7 @@ Returns the name of the procedure that the statement belongs to. The value is NU
 <tr>
 <td valign="top">
 
-*reusable\_stmt\_id*
-
-</td>
-<td valign="top">
-
-UNSIGNED INTEGER
+reusable\_stmt\_id
 
 </td>
 <td valign="top">
@@ -145,12 +120,7 @@ Returns a unique identifier assigned to the statement within a procedure \(not n
 <tr>
 <td valign="top">
 
-*plan\_hash*
-
-</td>
-<td valign="top">
-
-UNSIGNED BIGINT
+plan\_hash
 
 </td>
 <td valign="top">
@@ -162,12 +132,7 @@ Returns the plan identifier.
 <tr>
 <td valign="top">
 
-*max\_seconds*
-
-</td>
-<td valign="top">
-
-DOUBLE
+max\_seconds
 
 </td>
 <td valign="top">
@@ -179,12 +144,7 @@ Returns the maximum runtime observed for the statement when executed with the cu
 <tr>
 <td valign="top">
 
-*sum\_runtime*
-
-</td>
-<td valign="top">
-
-DOUBLE
+sum\_runtime
 
 </td>
 <td valign="top">
@@ -196,12 +156,7 @@ Returns the total runtime for the statement with the current plan.
 <tr>
 <td valign="top">
 
-*sum\_square\_runtime*
-
-</td>
-<td valign="top">
-
-DOUBLE
+sum\_square\_runtime
 
 </td>
 <td valign="top">
@@ -213,12 +168,7 @@ Returns the sum of the squares of the observed runtimes. This value is used for 
 <tr>
 <td valign="top">
 
-*max\_blocking\_time*
-
-</td>
-<td valign="top">
-
-DOUBLE
+max\_blocking\_time
 
 </td>
 <td valign="top">
@@ -230,12 +180,7 @@ Returns the maximum observed blocking time for the statement when executed with 
 <tr>
 <td valign="top">
 
-*sum\_blocking\_time*
-
-</td>
-<td valign="top">
-
-DOUBLE
+sum\_blocking\_time
 
 </td>
 <td valign="top">
@@ -247,12 +192,7 @@ Returns the total blocking time for the statement executions using the current p
 <tr>
 <td valign="top">
 
-*num\_exec*
-
-</td>
-<td valign="top">
-
-UNSIGNED BIGINT
+num\_exec
 
 </td>
 <td valign="top">
@@ -264,12 +204,7 @@ Returns the number of times the statement was executed using the current plan.
 <tr>
 <td valign="top">
 
-*total\_num\_rows*
-
-</td>
-<td valign="top">
-
-UNSIGNED BIGINT
+total\_num\_rows
 
 </td>
 <td valign="top">
@@ -281,12 +216,7 @@ Returns the total number of rows returned or modified by the statement over all 
 <tr>
 <td valign="top">
 
-*last\_max\_time\_utc*
-
-</td>
-<td valign="top">
-
-TIMESTAMP
+last\_max\_time\_utc
 
 </td>
 <td valign="top">
@@ -298,12 +228,7 @@ Returns the date and time in Coordinated Universal Time \(UTC\) that the maximum
 <tr>
 <td valign="top">
 
-*last\_time\_utc*
-
-</td>
-<td valign="top">
-
-TIMESTAMP
+last\_time\_utc
 
 </td>
 <td valign="top">
@@ -315,12 +240,7 @@ Returns the date and time in Coordinated Universal Time \(UTC\) that the stateme
 <tr>
 <td valign="top">
 
-*temp\_space\_used\_mb*
-
-</td>
-<td valign="top">
-
-DOUBLE
+temp\_space\_used\_mb
 
 </td>
 <td valign="top">
@@ -332,12 +252,7 @@ Temporary memory consumption in MB.
 <tr>
 <td valign="top">
 
-*cache\_page\_hit* 
-
-</td>
-<td valign="top">
-
-UNSIGNED BIGINT
+cache\_page\_hit
 
 </td>
 <td valign="top">
@@ -349,12 +264,7 @@ Number of pages found in the cache for the statement with the highest execution 
 <tr>
 <td valign="top">
 
-*cache\_page\_miss*
-
-</td>
-<td valign="top">
-
-UNSIGNED BIGINT
+cache\_page\_miss
 
 </td>
 <td valign="top">
@@ -366,12 +276,7 @@ Number of pages not found in the cache for the statement with the highest execut
 <tr>
 <td valign="top">
 
-*max\_cpu\_usage\_perc*
-
-</td>
-<td valign="top">
-
-UNSIGNED BIGINT
+max\_cpu\_usage\_perc
 
 </td>
 <td valign="top">
@@ -383,12 +288,7 @@ Highest CPU usage \(as percentage\) observed for the statement with the highest 
 <tr>
 <td valign="top">
 
-*max\_num\_cpu*
-
-</td>
-<td valign="top">
-
-UNSIGNED BIGINT
+max\_num\_cpu
 
 </td>
 <td valign="top">
@@ -400,12 +300,7 @@ Maximum number of CPUs observed for the statement with the highest execution tim
 <tr>
 <td valign="top">
 
-*max\_thread\_count*
-
-</td>
-<td valign="top">
-
-UNSIGNED BIGINT
+max\_thread\_count
 
 </td>
 <td valign="top">
@@ -417,12 +312,7 @@ Maximum number of active parallel threads for the statement with the highest exe
 <tr>
 <td valign="top">
 
-*max\_conn\_id*
-
-</td>
-<td valign="top">
-
-UNSIGNED BIGINT
+max\_conn\_id
 
 </td>
 <td valign="top">
@@ -434,12 +324,7 @@ Connection ID of the statement with the highest execution time.
 <tr>
 <td valign="top">
 
-*max\_txn\_id*
-
-</td>
-<td valign="top">
-
-UNSIGNED BIGINT
+max\_txn\_id
 
 </td>
 <td valign="top">
@@ -507,6 +392,104 @@ owner\_name
 proc\_name
 
 </th>
+</tr>
+<tr>
+<td valign="top">
+
+8825406443833030000
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+9223372054034640000
+
+</td>
+<td valign="top">
+
+dbo
+
+</td>
+<td valign="top">
+
+sp\_list\_mutexes\_semaphores
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+9223372099131800000
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+9223372058329610000
+
+</td>
+<td valign="top">
+
+dbo
+
+</td>
+<td valign="top">
+
+sa\_materialized\_view\_info
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<th valign="top" colspan="4">
+
+\(Continued\)
+
+</th>
+</tr>
+<tr>
 <th valign="top">
 
 reusable\_stmt\_id
@@ -531,21 +514,6 @@ max\_seconds
 <tr>
 <td valign="top">
 
-8825406443833030000
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
 NULL
 
 </td>
@@ -566,21 +534,6 @@ NULL
 </td>
 </tr>
 <tr>
-<td valign="top">
-
-9223372054034640000
-
-</td>
-<td valign="top">
-
-dbo
-
-</td>
-<td valign="top">
-
-sp\_list\_mutexes\_semaphores
-
-</td>
 <td valign="top">
 
 4
@@ -605,21 +558,6 @@ sp\_list\_mutexes\_semaphores
 <tr>
 <td valign="top">
 
-9223372099131800000
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
 NULL
 
 </td>
@@ -642,21 +580,6 @@ NULL
 <tr>
 <td valign="top">
 
-9223372058329610000
-
-</td>
-<td valign="top">
-
-dbo
-
-</td>
-<td valign="top">
-
-sa\_materialized\_view\_info
-
-</td>
-<td valign="top">
-
 5
 
 </td>
@@ -677,21 +600,6 @@ sa\_materialized\_view\_info
 </td>
 </tr>
 <tr>
-<td valign="top">
-
-…
-
-</td>
-<td valign="top">
-
-…
-
-</td>
-<td valign="top">
-
-…
-
-</td>
 <td valign="top">
 
 …

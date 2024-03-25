@@ -17,8 +17,16 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_iqcolumnuse;
+sp_iqcolumnuse
 ```
+
+
+
+<a name="loioa59fb88884f2101590c4b062754a459a__section_xdx_gcy_tzb"/>
+
+## Parameters
+
+None
 
 
 
@@ -150,6 +158,10 @@ None
 
 The following example shows sample output from the sp\_iqcolumnuse procedure \(the long numbers are temporary IDs\):
 
+```
+CALL sp_iqcolumnuse;
+```
+
 
 <table>
 <tr>
@@ -168,148 +180,6 @@ ColumnName
 Owner
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
-orders
-
-</td>
-<td valign="top">
-
-o\_orderdate
-
-</td>
-<td valign="top">
-
-HDLADMIN
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-orders
-
-</td>
-<td valign="top">
-
-o\_shippriority
-
-</td>
-<td valign="top">
-
-HDLADMIN
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-lineitem
-
-</td>
-<td valign="top">
-
-l\_orderkey
-
-</td>
-<td valign="top">
-
-HDLADMIN
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-lineitem
-
-</td>
-<td valign="top">
-
-l\_extendedp..
-
-</td>
-<td valign="top">
-
-HDLADMIN
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-lineitem
-
-</td>
-<td valign="top">
-
-l\_discount
-
-</td>
-<td valign="top">
-
-HDLADMIN
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-lineitem
-
-</td>
-<td valign="top">
-
-l\_shipdate
-
-</td>
-<td valign="top">
-
-HDLADMIN
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-\#tmp1
-
-</td>
-<td valign="top">
-
-expression
-
-</td>
-<td valign="top">
-
-HDLADMIN
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-\#tmp1
-
-</td>
-<td valign="top">
-
-expression
-
-</td>
-<td valign="top">
-
-HDLADMIN
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
 <th valign="top">
 
 UID
@@ -329,6 +199,21 @@ NRef
 <tr>
 <td valign="top">
 
+orders
+
+</td>
+<td valign="top">
+
+o\_orderdate
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
 151
 
 </td>
@@ -344,6 +229,21 @@ NRef
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+orders
+
+</td>
+<td valign="top">
+
+o\_shippriority
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
 <td valign="top">
 
 154
@@ -363,6 +263,21 @@ NRef
 <tr>
 <td valign="top">
 
+lineitem
+
+</td>
+<td valign="top">
+
+l\_orderkey
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
 186
 
 </td>
@@ -378,6 +293,21 @@ NRef
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+lineitem
+
+</td>
+<td valign="top">
+
+l\_extendedp..
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
 <td valign="top">
 
 191
@@ -397,6 +327,21 @@ NRef
 <tr>
 <td valign="top">
 
+lineitem
+
+</td>
+<td valign="top">
+
+l\_discount
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
 192
 
 </td>
@@ -412,6 +357,21 @@ NRef
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+lineitem
+
+</td>
+<td valign="top">
+
+l\_shipdate
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
 <td valign="top">
 
 196
@@ -431,6 +391,21 @@ NRef
 <tr>
 <td valign="top">
 
+\#tmp1
+
+</td>
+<td valign="top">
+
+expression
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
 10000000001218
 
 </td>
@@ -446,6 +421,21 @@ NRef
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+\#tmp1
+
+</td>
+<td valign="top">
+
+expression
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
 <td valign="top">
 
 10000000001222

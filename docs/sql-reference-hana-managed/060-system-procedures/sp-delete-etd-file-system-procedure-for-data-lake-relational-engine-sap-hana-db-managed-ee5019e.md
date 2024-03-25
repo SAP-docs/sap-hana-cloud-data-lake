@@ -20,7 +20,7 @@ This data lake Relational Engine \(SAP HANA DB-Managed\) system procedure can be
 
 
 ```
-sp_delete_etd_file( <file-name-pattern> );
+sp_delete_etd_file( <file-name-pattern> )
 ```
 
 
@@ -68,7 +68,7 @@ None
 Requires all of the following:
 
 -   EXECUTE object-level privilege on the procedure
--   MANAGE\_AUDITING system privilege
+-   MANAGE AUDITING system privilege
 
 
 
@@ -103,5 +103,5 @@ CALL sp_delete_etd_file'my_session_20201126_*';
 
 [sp\_list\_etd\_files System Procedure for Data Lake Relational Engine \(SAP HANA DB-Managed\)](sp-list-etd-files-system-procedure-for-data-lake-relational-engine-sap-hana-db-managed-0f76c83.md "Lists the event trace data (ETD) files logged to the file container by database auditing.")
 
-[sp_delete_etd_file System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/d2e6eeca3f2448159215eead4f812adf.html "Deletes specified files from the audit directory in the file container.") :arrow_upper_right:
+[sp_delete_etd_file System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/d2e6eeca3f2448159215eead4f812adf.html "Deletes specified files from the audit directory in the file container.") :arrow_upper_right:
 

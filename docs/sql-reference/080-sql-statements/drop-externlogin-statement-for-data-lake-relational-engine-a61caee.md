@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 DROP EXTERNLOGIN <login-name> 
-   TO <remote-server>;
+   TO <remote-server>
 ```
 
 

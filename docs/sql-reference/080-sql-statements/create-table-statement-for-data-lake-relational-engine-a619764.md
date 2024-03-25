@@ -27,7 +27,7 @@ CREATE [ { GLOBAL | LOCAL } TEMPORARY ] TABLE
    [PARTITION BY 
      { <range-partitioning-scheme>
      | <hash-partitioning-scheme> 
-     | <hash-range-partitioning-scheme> ] };
+     | <hash-range-partitioning-scheme> ] }
 ```
 
 
@@ -80,7 +80,7 @@ Defines a table column. Allowable data types are described in *Data Types*. Two 
 <column-definition> ::=
    <column-name> <data-type> 
     [ [ NOT ] NULL ] 
-    [ { DEFAULT <default-value> | IDENTITY } ];
+    [ { DEFAULT <default-value> | IDENTITY } ]
 ```
 
 
@@ -136,7 +136,7 @@ Specifies a default value to be assigned to the column if an INSERT statement do
 <special-value> ::=
    CURRENT 
    { DATE | TIME | TIMESTAMP | USER | PUBLISHER }
-   | USER;
+   | USER
 ```
 
 
@@ -201,11 +201,11 @@ Helps ensure the integrity of data in the database. There are four types of inte
     Column identifiers in column check constraints that start with the symbol ‘@’ are placeholders for the actual column name. The following two statements are exactly the same:
 
     ```
-    CREATE TABLE t1(c1 INTEGER CHECK (@foo < 5));
+    CREATE TABLE t1(c1 INTEGER CHECK (@foo < 5))
     ```
 
     ```
-    CREATE TABLE t1(c1 INTEGER CHECK (c1 < 5));
+    CREATE TABLE t1(c1 INTEGER CHECK (c1 < 5))
     ```
 
     Column identifiers appearing in table check constraints that start with the symbol ‘@’are not placeholders.
@@ -281,7 +281,7 @@ Column and table constraints help ensure the integrity of data in the database.
         | PRIMARY KEY  
         | REFERENCES <table-name> [ ( <column-name> ) ] [ ON { UPDATE | DELETE } RESTRICT ] }
       | CHECK ( <condition> )
-   };
+   }
 ```
 
 > ### Note:  
@@ -384,7 +384,7 @@ Defines foreign-key references to a primary key or a unique constraint in anothe
 <foreign-key-constraint> ::=
    FOREIGN KEY [ <role-name> ] [ ( <column-name> [ , <column-name> ] … ) ] 
    …REFERENCES <table-name> [ ( <column-name> [ , <column-name> ] … ) ]
-   [ ON { UPDATE | DELETE } RESTRICT ];
+   [ ON { UPDATE | DELETE } RESTRICT ]
 ```
 
 If the primary table column names are not specified, the primary table columns are the columns in the table's primary key. If foreign key column names are not specified, the foreign-key columns have the same names as the columns in the primary table. If foreign-key column names are specified, then the primary key column names must be specified, and the column names are paired according to position in the lists.
@@ -515,7 +515,7 @@ Creates a proxy table that maps to a remote location specified by the location-s
 ```
 <location-string> ::=
    { <remote-server-name>. [ <db-name> ].[ <owner> ].<object-name>
-      | <remote-server-name>; [ <db-name> ]; [ <owner> ];<object-name> };
+      | <remote-server-name>; [ <db-name> ]; [ <owner> ];<object-name> }
 ```
 
 Proxy table names must be 30 characters or less. The AT clause supports semicolon \(;\) delimiters. If a semicolon is present anywhere in the location-string clause, the semicolon is the field delimiter. If no semicolon is present, a period is the field delimiter. This allows file names and extensions to be used in the database and owner fields.
@@ -524,7 +524,7 @@ Semicolon field delimiters are used primarily with server classes not currently 
 
 ```
 CREATE TABLE proxy_a1
-AT 'myasa;mydb;;a1';
+AT 'myasa;mydb;;a1'
 ```
 
 Foreign-key definitions are ignored on remote tables. Foreign-key definitions on local tables that refer to remote tables are also ignored. Primary key definitions are sent to the remote server if the server supports primary keys.
@@ -576,7 +576,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 
 ```
 <range-partitioning-scheme> ::=
-   RANGE ( <column_name> ) ( <range-partition-decl> [,...] );
+   RANGE ( <column_name> ) ( <range-partition-decl> [,...] )
 ```
 
 
@@ -591,7 +591,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 ```
 range-partition-decl:
   <partition-name> VALUES <= ( {<constant-expression> |  MAX } ) 
-;
+
 ```
 
 
@@ -699,7 +699,7 @@ Maps data to partitions based on partition-key values processed by an internal h
 
 ```
 <hash-partitioning-scheme> ::=
-   HASH ( <column_name> [,... ] );
+   HASH ( <column_name> [,... ] )
 ```
 
 Restrictions:
@@ -721,8 +721,8 @@ Maps data to partitions based on partition-key values processed by an internal h
 
 ```
 <hash-range-partitioning-scheme> ::=
-   PARTITION BY HASH  ( <column_name> [,... ] );
-    SUBPARTITION BY <range-partition-scheme>;
+   PARTITION BY HASH  ( <column_name> [,... ] )
+    SUBPARTITION BY <range-partition-scheme>
 ```
 
 The hash partition specifies how the data is logically distributed and colocated; the range subpartition specifies how the data is physically placed. The new range subpartition is logically partitioned by hash with the same hash partition keys as the existing hash-range partitioned table. The range subpartition key is restricted to one column.
@@ -951,15 +951,15 @@ Automatic commit
 
 [IDENTITY\_INSERT Option for Data Lake Relational Engine](../090-database-options/identity-insert-option-for-data-lake-relational-engine-a63914e.md "Enables users to insert values into or to update an IDENTITY or AUTOINCREMENT column.")
 
-[Restrictions on Table Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a872506a84f21015aa20de6d7665a803.html "Some restrictions apply to table partitions.") :arrow_upper_right:
+[Restrictions on Table Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a872506a84f21015aa20de6d7665a803.html "When working with table partitions, there are some restrictions on the table types, partition keys, and operations you can use.") :arrow_upper_right:
 
-[Hash-Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a871ecd884f21015b8f5876892d31447.html "Hash-range partitioning is a composite partitioning scheme that subpartitions a hash-partitioned table by range.") :arrow_upper_right:
+[Hash-Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a871ecd884f21015b8f5876892d31447.html "Hash-range partitioning is a composite partitioning scheme that subpartitions a hash-partitioned table by range.") :arrow_upper_right:
 
-[Hash Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a871bc0984f210159faaedf3f3eb5b29.html "Hash partitioning maps data to partitions based on partition-key values processed by an internal hashing function.") :arrow_upper_right:
+[Hash Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a871bc0984f210159faaedf3f3eb5b29.html "Hash partitioning maps data to partitions based on partition-key values processed by an internal hashing function.") :arrow_upper_right:
 
-[Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2023_4_QRC/en-US/a8721b7584f21015a062c99a1c19e6cb.html "Range partitioning divides large tables by a range of partition-key values established for each partition.") :arrow_upper_right:
+[Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a8721b7584f21015a062c99a1c19e6cb.html "Range partitioning divides large tables by a range of partition-key values established for each partition.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[CREATE TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2023_4_QRC/en-US/6c3afae6093f4327a6aa7fb91c1caafe.html "Creates a new table in the database or on a remote server.") :arrow_upper_right:
+[CREATE TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/6c3afae6093f4327a6aa7fb91c1caafe.html "Creates a new table in the database or on a remote server.") :arrow_upper_right:
 

@@ -11,5 +11,5 @@ The `SUBSTRING64` function returns a variable-length character string of the lar
 **Related Information**  
 
 
-[SUBSTRING64 Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a588072e84f21015ad978a0d7bc662d8.html "The SUBSTRING64 function returns a variable-length character string of the large object column or variable parameter.") :arrow_upper_right:
+[SUBSTRING64 Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a588072e84f21015ad978a0d7bc662d8.html "The SUBSTRING64 function returns a variable-length character string of the large object column or variable parameter.") :arrow_upper_right:
 

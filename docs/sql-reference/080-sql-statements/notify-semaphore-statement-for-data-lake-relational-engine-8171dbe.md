@@ -18,8 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 NOTIFY SEMAPHORE [<owner>.]<semaphore-name> 
-   [ INCREMENT BY <number> ];
-
+   [ INCREMENT BY <number> ]
 ```
 
 

@@ -23,7 +23,7 @@ ALTER SEQUENCE [<owner>.]<sequence-name>
    [ { MINVALUE <signed-integer> | NO MINVALUE } ]
    [ { MAXVALUE <signed-integer> | NO MAXVALUE } ]
    [ { CACHE <integer> | NO CACHE } ]
-   [ { CYCLE | NO CYCLE } ];
+   [ { CYCLE | NO CYCLE } ]
 ```
 
 

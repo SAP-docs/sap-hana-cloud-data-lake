@@ -17,7 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-DROP LOGIN POLICY <policy-name>;
+DROP LOGIN POLICY <policy-name>
 ```
 
 

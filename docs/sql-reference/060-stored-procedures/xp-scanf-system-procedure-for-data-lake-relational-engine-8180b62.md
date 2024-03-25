@@ -21,7 +21,7 @@ xp_scanf(
 <input_buffer>
 , <format>
 [ , <param1> [, <param2> ... ] ]
-);
+)
 ```
 
 

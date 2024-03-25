@@ -77,5 +77,5 @@ SELECT BYTE_LENGTH( 'Test Message' ) FROM iq_dummy;
 **Related Information**  
 
 
-[BYTE_LENGTH Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a53816b784f210159b849878d71ab1a8.html "Returns the number of bytes in a string.") :arrow_upper_right:
+[BYTE_LENGTH Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a53816b784f210159b849878d71ab1a8.html "Returns the number of bytes in a string.") :arrow_upper_right:
 

@@ -18,8 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 WAITFOR SEMAPHORE [<owner>.]<semaphore-name> 
-   [ TIMEOUT <in-milliseconds> ]; 
-
+   [ TIMEOUT <in-milliseconds> ]
 ```
 
 

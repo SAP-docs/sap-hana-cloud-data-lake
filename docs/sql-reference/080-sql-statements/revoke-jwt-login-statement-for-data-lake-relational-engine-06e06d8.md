@@ -18,7 +18,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 ```
 REVOKE JWT LOGIN FROM <external_identity> [, ...] 
-   FOR PROVIDER <jwt_provider_name>;
+   FOR PROVIDER <jwt_provider_name>
 ```
 
 

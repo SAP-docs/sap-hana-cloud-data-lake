@@ -24,7 +24,7 @@ DECLARE <cursor-name>
    CURSOR FOR
    { <select-statement> FOR { READ ONLY | UPDATE }
    | <statement-name>   
-   | USING <variable-name> };
+   | USING <variable-name> }
 ```
 
 

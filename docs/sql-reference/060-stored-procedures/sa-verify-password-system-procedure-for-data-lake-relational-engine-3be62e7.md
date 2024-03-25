@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_verify_password( <curr_pswd> );
+sa_verify_password( <curr_pswd> )
 ```
 
 
@@ -44,7 +44,7 @@ Use this CHAR\(128\) parameter to specify the password of the current database u
 
 ## Result Set
 
-The function returns an INTEGER value.
+None
 
 
 
@@ -72,9 +72,9 @@ The following example attempts to validate the current connection's password whe
 
 ```
 IF USER_NAME() = 'HDLADMIN' THEN
-    SELECT sa_verify_password( 'sql' );
-ELSEIF USER_NAME() = 'User1' THEN
-    SELECT sa_verify_password( 'user' );
+    SELECT sa_verify_password( 'password1' );
+ELSEIF USER_NAME() = 'uSER1' THEN
+    SELECT sa_verif_password ('password2' );
 END IF;
 ```
 

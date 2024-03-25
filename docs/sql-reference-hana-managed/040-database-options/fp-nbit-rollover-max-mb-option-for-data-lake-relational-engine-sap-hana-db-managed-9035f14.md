@@ -43,5 +43,5 @@ FP\_NBIT\_AUTOSIZE\_LIMIT and FP\_NBIT\_LOOKUP\_MB establish a ceiling for sizin
 
 [FP\_NBIT\_LOOKUP\_MB Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](fp-nbit-lookup-mb-option-for-data-lake-relational-engine-sap-hana-db-managed-3a6a1e3.md "Limits the total dictionary size per column for implicit NBit FP columns.")
 
-[FP_NBIT_ROLLOVER_MAX_MB Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/a873d4b984f2101592ac80c2eed3effc.html "Sets a threshold for the total dictionary size for implicit NBit rollovers to Flat FP.") :arrow_upper_right:
+[FP_NBIT_ROLLOVER_MAX_MB Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a873d4b984f2101592ac80c2eed3effc.html "Sets a threshold for the total dictionary size for implicit NBit rollovers to Flat FP.") :arrow_upper_right:
 

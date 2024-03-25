@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sp_tsql_environment( );
+sp_tsql_environment( )
 ```
 
 
@@ -51,21 +51,21 @@ Below is the list of the options set by sp\_tsql\_environment procedure:
 ```
 if db_property( 'IQStore' ) = 'Off' then
     -- SAP IQ datastore
-    SET TEMPORARY OPTION close_on_endtrans='OFF';
-end if;
-SET TEMPORARY OPTION ansinull='OFF';
-SET TEMPORARY OPTION tsql_variables='ON';
-SET TEMPORARY OPTION ansi_blanks='ON';
-SET TEMPORARY OPTION chained='OFF';
-SET TEMPORARY OPTION quoted_identifier='OFF';
-SET TEMPORARY OPTION allow_nulls_by_default='OFF';
-SET TEMPORARY OPTION on_tsql_error='CONTINUE';
-SET TEMPORARY OPTION isolation_level='1';
-SET TEMPORARY OPTION date_format='YYYY-MM-DD';
-SET TEMPORARY OPTION timestamp_format='YYYY-MM-DD HH:NN:SS.SSS';
-SET TEMPORARY OPTION time_format='HH:NN:SS.SSS';
-SET TEMPORARY OPTION date_order='MDY';
-SET TEMPORARY OPTION escape_character='OFF';
+    SET TEMPORARY OPTION close_on_endtrans='OFF'
+end if
+SET TEMPORARY OPTION ansinull='OFF'
+SET TEMPORARY OPTION tsql_variables='ON'
+SET TEMPORARY OPTION ansi_blanks='ON'
+SET TEMPORARY OPTION chained='OFF'
+SET TEMPORARY OPTION quoted_identifier='OFF'
+SET TEMPORARY OPTION allow_nulls_by_default='OFF'
+SET TEMPORARY OPTION on_tsql_error='CONTINUE'
+SET TEMPORARY OPTION isolation_level='1'
+SET TEMPORARY OPTION date_format='YYYY-MM-DD'
+SET TEMPORARY OPTION timestamp_format='YYYY-MM-DD HH:NN:SS.SSS'
+SET TEMPORARY OPTION time_format='HH:NN:SS.SSS'
+SET TEMPORARY OPTION date_order='MDY'
+SET TEMPORARY OPTION escape_character='OFF'
 ```
 
 

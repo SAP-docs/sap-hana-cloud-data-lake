@@ -12,7 +12,7 @@ Controls the maximum number of materialized view refresh requests that can be co
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user and using the SAP HANA database REMOTE\_EXECUTE procedure.
+-   Connected to SAP HANA database as a SAP HANA database user..
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -183,7 +183,7 @@ Once the limit is reached, refresh requests will be queued and will remain queue
 **Related Information**  
 
 
-[MATERIALIZED_VIEW_AUTO_REFRESH_MAX_CONCURRENT_REQUESTS Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2023_4_QRC/en-US/d4bd911e17014fa7be4c4719c5cb638b.html "Controls the maximum number of materialized view refresh requests that can be concurrently running in data lake Relational Engine.") :arrow_upper_right:
+[MATERIALIZED_VIEW_AUTO_REFRESH_MAX_CONCURRENT_REQUESTS Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/d4bd911e17014fa7be4c4719c5cb638b.html "Controls the maximum number of materialized view refresh requests that can be concurrently running in data lake Relational Engine.") :arrow_upper_right:
 
 [SET OPTION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/set-option-statement-for-data-lake-relational-engine-sap-hana-db-managed-84a37a4.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
