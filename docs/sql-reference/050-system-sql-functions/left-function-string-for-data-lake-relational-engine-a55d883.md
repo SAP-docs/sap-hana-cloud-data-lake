@@ -77,7 +77,7 @@ If the string contains multibyte characters, and the proper collation is being u
 
 <a name="loioa55d883284f210158c5ec15e3e69239f__LEFT_example1"/>
 
-## Example
+## Examples
 
 The following statement returns the value "choco":
 
@@ -102,5 +102,5 @@ SELECT LEFT( 'chocolate', 5 ) FROM iq_dummy;
 
 [UPPER Function \[String\] for Data Lake Relational Engine](upper-function-string-for-data-lake-relational-engine-a58cbc0.md "Converts all characters in a string to uppercase.")
 
-[LEFT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7d6ec6d7cc0f4bebb844b85a3965a81a.html "Returns a specified number of characters from the beginning of a string.") :arrow_upper_right:
+[LEFT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/7d6ec6d7cc0f4bebb844b85a3965a81a.html "Returns a specified number of characters from the beginning of a string.") :arrow_upper_right:
 

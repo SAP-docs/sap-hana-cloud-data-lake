@@ -52,7 +52,7 @@ SMALLINT
 
 <a name="loio13ca8f80a24a45b3ae7e434753dd97c8__section_g5w_54g_trb"/>
 
-## Example
+## Examples
 
 The following statement returns the value 21:
 
@@ -63,5 +63,5 @@ SELECT HOUR( '1998-07-09 21:12:13' ) FROM iq_dummy;
 **Related Information**  
 
 
-[HOUR Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a55651ad84f210158eceac6470043938.html "Returns a number from 0 to 23 corresponding to the hour component of the specified date/time.") :arrow_upper_right:
+[HOUR Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a55651ad84f210158eceac6470043938.html "Returns a number from 0 to 23 corresponding to the hour component of the specified date/time.") :arrow_upper_right:
 

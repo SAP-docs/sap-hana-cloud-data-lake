@@ -367,7 +367,7 @@ If the USING FILE clause is specified, then you must have the READ FILE system p
 
 <a name="loio817205cf6ce21014a949c790fd6b0608__openxml_op_example1"/>
 
-## Example
+## Examples
 
 The following query generates a result set from the XML document supplied as the first argument to the OPENXML operator:
 

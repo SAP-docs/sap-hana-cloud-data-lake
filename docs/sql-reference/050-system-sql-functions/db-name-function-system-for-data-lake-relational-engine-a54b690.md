@@ -61,7 +61,7 @@ If no *<database-id\>* is supplied, the name of the current database is returned
 
 <a name="loioa54b690484f21015b21ebe23e239b7fb__iq_refbb_476"/>
 
-## Example
+## Examples
 
 Returns the database name iqdemo, when executed against the iq\_dummy database:
 

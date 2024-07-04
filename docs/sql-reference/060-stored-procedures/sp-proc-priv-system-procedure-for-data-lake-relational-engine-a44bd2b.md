@@ -127,7 +127,7 @@ If sp\_proc\_priv is invoked with a procedure name parameter, it returns the sys
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -135,13 +135,13 @@ Requires EXECUTE object-level privilege on the procedure.
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-The following statement returns associated privileges with the stored procedure .
+This example returns associated privileges with the stored procedure.
 
 ```
 CALL sp_proc_priv ('sp_iqrowdensity');
@@ -175,7 +175,7 @@ MONITOR, MANAGE ANY DBSPACE, CREATE ANY INDEX, ALTER ANY INDEX, CREATE ANY OBJEC
 </tr>
 </table>
 
-The following statement returns all stored procedures and the associated privileges.
+This example returns all stored procedures and the associated privileges.
 
 ```
 CALL sp_proc_priv ( );

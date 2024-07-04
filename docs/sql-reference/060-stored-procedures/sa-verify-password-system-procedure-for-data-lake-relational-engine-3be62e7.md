@@ -44,7 +44,7 @@ Use this CHAR\(128\) parameter to specify the password of the current database u
 
 ## Result Set
 
-None
+None.
 
 
 
@@ -56,25 +56,27 @@ If the password matches, 0 is returned and no error occurs. If the password does
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
 ## Side Effects
 
-None
+None.
 
 
 
-## Example
+<a name="loio3be62e786c5f1014a0b4f62cf1cc25f5__section_j5c_h2w_4bc"/>
 
-The following example attempts to validate the current connection's password when the current user is HDLADMIN or User1. An error occurs if the current password does not match.
+## Examples
+
+This example validates the current connection's password when the current user is HDLADMIN or User1. An error occurs if the current password does not match.
 
 ```
 IF USER_NAME() = 'HDLADMIN' THEN
     SELECT sa_verify_password( 'password1' );
-ELSEIF USER_NAME() = 'uSER1' THEN
-    SELECT sa_verif_password ('password2' );
+ELSEIF USER_NAME() = 'USER1' THEN
+    SELECT sa_verify_password ('password2' );
 END IF;
 ```
 

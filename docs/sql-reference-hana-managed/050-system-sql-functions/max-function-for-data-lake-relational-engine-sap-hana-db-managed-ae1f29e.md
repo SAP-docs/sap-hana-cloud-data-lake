@@ -72,7 +72,7 @@ Rows where *<expression\>* is NULL are ignored. Returns NULL for a group contain
 
 <a name="loioae1f29e228714cf085d6eb1d0ee075f8__section_svc_r3n_vrb"/>
 
-## Example
+## Examples
 
 The following statement returns the value 138948.000, representing the maximum salary in the Employees table:
 
@@ -84,5 +84,5 @@ FROM Employees;
 **Related Information**  
 
 
-[MAX Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5626d6684f210158cafad316e131142.html "Returns the maximum expression value found in each group of rows.") :arrow_upper_right:
+[MAX Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a5626d6684f210158cafad316e131142.html "Returns the maximum expression value found in each group of rows.") :arrow_upper_right:
 

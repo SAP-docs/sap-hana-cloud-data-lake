@@ -119,5 +119,5 @@ REFRESH TABLE ExternalSchema1.ExternalTable1 IN FILES_SERVICE;
 
 [CREATE \(Remote\) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](create-remote-table-statement-for-data-lake-relational-engine-sql-on-files-beffc07.md "Create a remote table managed by SQL on Files.")
 
-[REFRESH (Remote) TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/054b15028fcc43dba2b047f8dbe6b42b.html "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.") :arrow_upper_right:
+[REFRESH (Remote) TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/054b15028fcc43dba2b047f8dbe6b42b.html "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.") :arrow_upper_right:
 

@@ -375,7 +375,7 @@ To define an event and its associated handler, use the CREATE EVENT statement.
 
 <a name="loioa54fb34184f21015a526eae095389392__event_condition_example1"/>
 
-## Example
+## Examples
 
 The following event definition uses the EVENT\_CONDITION function:
 

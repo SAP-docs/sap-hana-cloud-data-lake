@@ -207,5 +207,5 @@ line_num row_value
 **Related Information**  
 
 
-[STACK_TRACE Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/81fd67bc6ce2101497f0d65edc4451bd.html "Returns information about the stack trace for the current statement.") :arrow_upper_right:
+[STACK_TRACE Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/81fd67bc6ce2101497f0d65edc4451bd.html "Returns information about the stack trace for the current statement.") :arrow_upper_right:
 

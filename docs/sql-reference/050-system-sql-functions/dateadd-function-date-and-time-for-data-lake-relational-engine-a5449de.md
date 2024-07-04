@@ -136,5 +136,5 @@ DATEADD is a Transact-SQL compatible data manipulation function.
 
 [Date Parts in Data Lake Relational Engine](date-parts-in-data-lake-relational-engine-a52b8dd.md "Many of the date functions use dates built from date parts.")
 
-[DATEADD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/202015428c2c49239a2aec8d572a0613.html "Returns the date produced by adding the specified number of the specified date parts to a date.") :arrow_upper_right:
+[DATEADD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/202015428c2c49239a2aec8d572a0613.html "Returns the date produced by adding the specified number of the specified date parts to a date.") :arrow_upper_right:
 

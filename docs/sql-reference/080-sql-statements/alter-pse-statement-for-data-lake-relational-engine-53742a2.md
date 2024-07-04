@@ -48,7 +48,7 @@ Adds or drops certificate\(s\) to and from the PSE.
 ```
 <certificate-clause> ::= { ADD | DROP } CERTIFICATE ( 
    { <certificate-name>[, <certificate-name>[,...] ]
-   | <certificate-id>[, <certificate-id>[,...] ] } );
+   | <certificate-id>[, <certificate-id>[,...] ] } )
 ```
 
 
@@ -61,7 +61,7 @@ Adds or drops certificate\(s\) to and from the PSE.
 <dd>
 
 ```
-<certificate-name> ::= <simple-identifier>;
+<certificate-name> ::= <simple-identifier>
 ```
 
 
@@ -74,7 +74,7 @@ Adds or drops certificate\(s\) to and from the PSE.
 <dd>
 
 ```
-<certificate-id> ::= <object-id>;
+<certificate-id> ::= <object-id>
 ```
 
 
@@ -94,7 +94,7 @@ Adds or drops certificate\(s\) to and from the PSE.
 Set the own certificate and private key.
 
 ```
-<set-own-certificate-clause> ::= SET OWN CERTIFICATE <certificate-content>;
+<set-own-certificate-clause> ::= SET OWN CERTIFICATE <certificate-content>
 ```
 
 
@@ -125,7 +125,7 @@ The *<certificate-content\>* string may contain one or more certificates in the 
 Removes the own certificate, any intermediate chain certificates, and the private key.
 
 ```
-<unset-own-certificate-clause> ::= UNSETSET OWN CERTIFICATE;
+<unset-own-certificate-clause> ::= UNSETSET OWN CERTIFICATE
 ```
 
 
@@ -208,5 +208,5 @@ ALTER PSE mypse1 DROP CERTIFICATE Digicert;
 
 [DROP PSE Statement for Data Lake Relational Engine](drop-pse-statement-for-data-lake-relational-engine-2918c50.md "Removes a personal security environment (PSE) from the database.")
 
-[ALTER PSE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/056ee2c16cd548e3a811170533f684e7.html "Modifies an existing personal security environment (PSE).") :arrow_upper_right:
+[ALTER PSE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/056ee2c16cd548e3a811170533f684e7.html "Modifies an existing personal security environment (PSE).") :arrow_upper_right:
 

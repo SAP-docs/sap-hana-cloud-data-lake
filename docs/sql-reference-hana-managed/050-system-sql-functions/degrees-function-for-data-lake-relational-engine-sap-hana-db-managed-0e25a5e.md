@@ -54,7 +54,7 @@ DOUBLE
 
 <a name="loio0e25a5ef993c45a582df334ea2178db7__section_w5s_q1m_srb"/>
 
-## Example
+## Examples
 
 The following statement returns the value 29.793805:
 
@@ -65,5 +65,5 @@ SELECT DEGREES( 0.52 ) FROM iq_dummy;
 **Related Information**  
 
 
-[DEGREES Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a54c87d684f21015a9b9f518179a73ff.html "Converts a number from radians to degrees.") :arrow_upper_right:
+[DEGREES Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a54c87d684f21015a9b9f518179a73ff.html "Converts a number from radians to degrees.") :arrow_upper_right:
 

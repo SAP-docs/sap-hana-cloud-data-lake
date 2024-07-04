@@ -93,7 +93,7 @@ None
 **Related Information**  
 
 
-[FOR Statement for Data Lake Relational Engine](for-statement-for-data-lake-relational-engine-a61e906.md "Repeats the execution of a statement list once for each row in a cursor.")
+[FOR Clause for Data Lake Relational Engine](for-clause-for-data-lake-relational-engine-a61e906.md "Repeats the execution of a statement list once for each row in a cursor.")
 
 [LEAVE Statement for Data Lake Relational Engine](leave-statement-for-data-lake-relational-engine-a6206e0.md "Continues execution by leaving a compound statement or LOOP.")
 

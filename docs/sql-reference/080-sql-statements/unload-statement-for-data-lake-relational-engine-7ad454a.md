@@ -382,7 +382,7 @@ The credentials required to write to Azure BLOB storage, Amazon S3 or S3-complia
    { <non-default-hdlfs-instance> 
    | <azure_connection> 
    | <s3_connection>  
-   | <google_connection>};
+   | <google_connection>}
 ```
 
 
@@ -395,11 +395,11 @@ The credentials required to write to Azure BLOB storage, Amazon S3 or S3-complia
 <dd>
 
 ```
-<non-default-hdlfs-instance> ::= 'ENDPOINT=<endpoint>;
-	CA_CERTIFICATE=<certificate-content>;
-	CLIENT_CERTIFICATE=<certificate-content>;
-	CLIENT_KEY=<client-certificate-key>;
-	KEY_PASSWORD= <certificate_key_password>';
+<non-default-hdlfs-instance> ::= 'ENDPOINT=<endpoint>
+	CA_CERTIFICATE=<certificate-content>
+	CLIENT_CERTIFICATE=<certificate-content>
+	CLIENT_KEY=<client-certificate-key>
+	KEY_PASSWORD= <certificate_key_password>'
 ```
 
 This clause is optional for data lake Files containers. If you don't specify it, the UNLOAD statement will connect to the default data lake Files container provisioned within your data lake instance. If you do, the UNLOAD statement can connect to an alternate, non-default data lake Files container within a separate data lake instance.
@@ -476,10 +476,10 @@ If specified, this value will be the password used to decrypt the client key. If
 <dd>
 
 ```
-<azure_connection> ::= 'DEFAULTENDPOINTSPROTOCOL=<endpoint_protocol>;
-	ACCOUNTNAME=<account_name>;
-	ACCOUNTKEY=<account_key>;
-	ENDPOINTSUFFIX=core.windows.net';
+<azure_connection> ::= 'DEFAULTENDPOINTSPROTOCOL=<endpoint_protocol>
+	ACCOUNTNAME=<account_name>
+	ACCOUNTKEY=<account_key>
+	ENDPOINTSUFFIX=core.windows.net'
 ```
 
 You can find the *<azure\_connection\_string\>* values in the Azure portal. From your storage account, navigate to *Settings* \> *Access Keys*. Locate the *Connection string* section and copy the connection string to the clipboard. For *<azure\_connection\_string\>* examples, see the *Examples* section at the end of this topic.
@@ -494,12 +494,12 @@ You can find the *<azure\_connection\_string\>* values in the Azure portal. From
 <dd>
 
 ```
-<s3_connection> ::= 'ENDPOINT=<endpoint>; 
-	ENDPOINT_TYPE={PATH | VIRTUAL_HOST}; 
-	ACCESS_KEY_ID=<access key string>; 
-	SECRET_ACCESS_KEY=<secret key string>; 
-	REGION=<region string>; 
-	SESSION_TOKEN=<session token>';
+<s3_connection> ::= 'ENDPOINT=<endpoint>
+	ENDPOINT_TYPE={PATH | VIRTUAL_HOST} 
+	ACCESS_KEY_ID=<access key string> 
+	SECRET_ACCESS_KEY=<secret key string> 
+	REGION=<region string> 
+	SESSION_TOKEN=<session token>'
 ```
 
 You can find your Amazon S3 option values in the AWS Management Console.
@@ -651,7 +651,7 @@ If specified, the Amazon S3 client SDK will use its value when creating Amazon S
  <aws_connection> ::=
 	ACCESS_KEY_ID '<access_key_id>'
 	SECRET_ACCESS_KEY '<secret_access_key>' 
-	REGION '<AWS_region>';
+	REGION '<AWS_region>'
 ```
 
 You can find *<access\_key\_id\>*, *<secret\_access\_key\>*, and *<AWS\_region\>* in the IAM console. For *<aws\_connection\>* examples, see the *Examples* section at the end of this topic.
@@ -666,9 +666,9 @@ You can find *<access\_key\_id\>*, *<secret\_access\_key\>*, and *<AWS\_region\>
 <dd>
 
 ```
-<google_connection> ::= 'CLIENT_EMAIL='<client_email>';
-	PRIVATE_KEY='<private_key>';
-     PRIVATE_KEY_ID='<private_key_id>';
+<google_connection> ::= 'CLIENT_EMAIL='<client_email>'
+	PRIVATE_KEY='<private_key>'
+     PRIVATE_KEY_ID='<private_key_id>'
 ```
 
 You can find your *<google\_connection\>* keys in Google Cloud Console, on the *Service Accounts* page. *<google\_connection\>* accepts ‘key=value’ pairs separated by ‘;’. For *<google\_connection\>* examples, see the *Examples* section at the end of this topic.
@@ -753,7 +753,7 @@ If this option is set to an empty string for ASCII extractions, the extracted da
 
 \(Not applicable to Parquet format\)All database data is translated from the database character encoding to the specified encoding. When ENCODING is not specified, the database's CHAR encoding is used. Character set translation is performed first, before compression or encryption is optionally applied. Specify the BYTE ORDER MARK clause to include a byte order mark in the data.
 
-See [Character Set Encodings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/8a8f277561e547b8a4a0fdfc7f7db7f7.html "A complete list of supported character set encodings for SAP HANA Cloud, data lake and their aliases.") :arrow_upper_right: for a complete list of supported character set encodings.
+See [Character Set Encodings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/8a8f277561e547b8a4a0fdfc7f7db7f7.html "A complete list of supported character set encodings for SAP HANA Cloud, data lake and their aliases.") :arrow_upper_right: for a complete list of supported character set encodings.
 
 
 
@@ -1256,17 +1256,17 @@ These examples unload the entire contents of table t1, using compression and par
 **Related Information**  
 
 
-[UNLOAD Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/5049a399ee2241dda78d47a0a3cc46e9.html "Exports data from data lake Relational Engine to either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, Google Cloud Storage) or to data lake Files containers (the managed object store).") :arrow_upper_right:
+[UNLOAD Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/5049a399ee2241dda78d47a0a3cc46e9.html "Exports data from data lake Relational Engine to either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, Google Cloud Storage) or to data lake Files containers (the managed object store).") :arrow_upper_right:
 
-[SAP HANA Cloud, Data Lake Relational Engine Load and Unload Management](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/e77c96193a604e05ba198e424de2ed6c.html "Data load (import) and export (unload) procedures for data lake Relational Engine, including loading from and unloading to data lake Files.") :arrow_upper_right:
+[SAP HANA Cloud, Data Lake Relational Engine Load and Unload Management](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_3_QRC/en-US/e77c96193a604e05ba198e424de2ed6c.html "Data load (import) and export (unload) procedures for data lake Relational Engine, including loading from and unloading to data lake Files.") :arrow_upper_right:
 
-[Unloading Data to the External Object Store](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/31a19ffdd4af430c8ebc962cbac2cf5a.html "Unload (extract) data from data lake Relational Engine to the external object store using either the UNLOAD statement, or the data extraction facility.") :arrow_upper_right:
+[Unloading Data to the External Object Store](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_3_QRC/en-US/31a19ffdd4af430c8ebc962cbac2cf5a.html "Unload (extract) data from data lake Relational Engine to the external object store using either the UNLOAD statement, or the data extraction facility.") :arrow_upper_right:
 
-[Unloading Data to Data Lake Files from Data Lake Relational Engine](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/128c5bced169487f98eb2e2a49e7fd45.html "Use the UNLOAD statement to unload data to data lake Files.") :arrow_upper_right:
+[Unloading Data to Data Lake Files from Data Lake Relational Engine](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_3_QRC/en-US/128c5bced169487f98eb2e2a49e7fd45.html "Use the UNLOAD statement to unload data to data lake Files.") :arrow_upper_right:
 
 [TEMP\_EXTRACT\_GZ\_COMPRESSION\_LEVEL Option for Data Lake Relational Engine](../090-database-options/temp-extract-gz-compression-level-option-for-data-lake-relational-engine-ee9f6aa.md "The compression level balances compression with speed when the TEMP_EXTRACT_COMPRESS option is set to ON.")
 
-[SAP HANA Cloud, Data Lake Terminology](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2024_1_QRC/en-US/d003004765fb4475b14d83e5c51b117f.html "Definitions of data lake terms used in this document.") :arrow_upper_right:
+[SAP HANA Cloud, Data Lake Terminology](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2024_3_QRC/en-US/d003004765fb4475b14d83e5c51b117f.html "Definitions of data lake terms used in this document.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

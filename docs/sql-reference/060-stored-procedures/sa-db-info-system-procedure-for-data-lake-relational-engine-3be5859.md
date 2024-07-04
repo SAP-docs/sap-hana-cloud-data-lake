@@ -179,19 +179,19 @@ If *<dbidparm\>* is greater than zero, then properties for the supplied database
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure. To execute this procedure for other databases, also requires the MONITOR system privilege.
+Requires EXECUTE object-level privilege on this procedure. To execute this procedure for other databases, also requires the MONITOR system privilege.
 
 
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-This example uses the sa\_db\_info system procedure to return a row for each database that is running on the server:
+This example returns a row for each database that is running on the server:
 
 ```
 CALL sa_db_info( );

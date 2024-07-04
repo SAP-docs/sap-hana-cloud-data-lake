@@ -477,8 +477,8 @@ X is the number of fields for the event, Y is the field name, YY is the field ty
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
--   MANAGE\_AUDITING system privilege
+-   EXECUTE object-level privilege on this procedure
+-   MANAGE AUDITING system privilege
 
 
 
@@ -490,7 +490,7 @@ To call the SP\_READ\_ETD system procedure, use the OPENXML operator to retrieve
 
 ```
 SELECT T1.timestamp, T2.ID, T2.INFO
-FROM dbo.sp_read_etd( 'audit_log_20210305_174604.081_auditdb_eng.etd' ), event_names = 'nop' ) AS T1,
+FROM sp_read_etd( 'audit_log_20210305_174604.081_auditdb_eng.etd' ), event_names = 'nop' ) AS T1,
      OPENXML ( T1.event_data, '/event_data' )
          WITH ( 
                 ID LONG VARCHAR 'field[@name="id"]/text()', 
@@ -559,7 +559,7 @@ Use the OPENXML operator and LIST function to retrieve *<event\_data\>* for vari
 ```
 SELECT 
     T1.timestamp, T1.event_name, list( id.FIELD + '=' + id.TEXT ) as data 
-FROM dbo.sp_read_etd( 'trace3.etd' ) ) AS T1,
+FROM sp_read_etd( 'trace3.etd' ) ) AS T1,
     OPENXML ( T1.event_data, '/event_data/field' )
         WITH ( FIELD LONG VARCHAR '@name', TEXT LONG VARCHAR 'text()' ) AS id,
 GROUP BY T1.timestamp, T1.event_name, T1.event_data;
@@ -625,11 +625,11 @@ Use a regular expression to filter event fields containing string values. The fo
 
 ```
 SELECT * 
-FROM dbo.sp_read_etd( 'trace1.etd', regex = '.*abc.*' );
+FROM sp_read_etd( 'trace1.etd', regex = '.*abc.*' );
 ```
 
 **Related Information**  
 
 
-[sp_read_etd System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3be64fbd6c5f1014abaea34c00918824.html "Reads the specified event trace data (ETD) file and returns the contents of the file as a set of rows.") :arrow_upper_right:
+[sp_read_etd System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/3be64fbd6c5f1014abaea34c00918824.html "Reads the specified event trace data (ETD) file and returns the contents of the file as a set of rows.") :arrow_upper_right:
 

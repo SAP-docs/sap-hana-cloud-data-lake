@@ -80,5 +80,5 @@ CHAR returns NULL for integer expressions with values greater than 255 or less t
 **Related Information**  
 
 
-[CHAR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/6c2f4cf7004b4f2cace1afa4889a44d0.html "Returns the character with the ASCII value of a number.") :arrow_upper_right:
+[CHAR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/6c2f4cf7004b4f2cace1afa4889a44d0.html "Returns the character with the ASCII value of a number.") :arrow_upper_right:
 

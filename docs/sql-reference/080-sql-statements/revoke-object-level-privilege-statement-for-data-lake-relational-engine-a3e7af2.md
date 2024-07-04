@@ -117,14 +117,12 @@ To revoke the BACKUP TABLE object-level privilege requires one of:
 -   BACKUP OWNER TABLE or BACKUP ANY TABLE system privilege if you own the table.
 -   BACKUP ANY TABLE system privilege granted with the WITH ADMIN option if the table is owned by another user.
 -   BACKUP TABLE object-level privilege granted with the WITH GRANT option on the table being backed up regardless of ownership.
--   BACKUP OWNER TABLE system privilege plus BACKUP TABLE object-level privilege granted with the WITH GRANT option on the schema that contains the table being backed up if the schema is owned by another user.
 
 To revoke the RESTORE TABLE object-level privilege requires one of:
 
 -   RESTORE OWNER TABLE or RESTORE ANY TABLE system privilege if you own the table.
 -   RESTORE ANY TABLE system privilege if the table is owned by another user.
 -   RESTORE TABLE object-level privilege granted with the WITH GRANT option on the table being restored regardless of ownership.
--   RESTORE OWNER TABLE system privilege plus RESTORE TABLE object-level privilege granted with the WITH GRANT option on the schema to contain the table being restored if the schema is owned by another user.
 
 To revoke any other object-level privilege requires one of:
 
@@ -165,7 +163,7 @@ REVOKE UPDATE ON SCHEMA myschema1 FROM user1;
 **Related Information**  
 
 
-[REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
+[GRANT Object-Level Privilege Statement for Data Lake Relational Engine](grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md "Grants database object-level privileges on individual objects and schemas to a user or role.")
 
-[REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
+[REVOKE Object-Level Privilege Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/f14139fa124d4e5da23c1da6a5009417.html "Removes object-level privileges that were given using the GRANT statement.") :arrow_upper_right:
 

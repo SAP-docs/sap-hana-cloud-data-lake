@@ -119,5 +119,5 @@ The DATE, TIME, and DTTM indexes do not support some date parts \(Calyearofweek,
 
 [Date Parts in Data Lake Relational Engine](date-parts-in-data-lake-relational-engine-a52b8dd.md "Many of the date functions use dates built from date parts.")
 
-[DATEPART Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/a07008d5cbc347329b60d52b3e243ed6.html "Returns an integer value for the specified part of a date/time value.") :arrow_upper_right:
+[DATEPART Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/a07008d5cbc347329b60d52b3e243ed6.html "Returns an integer value for the specified part of a date/time value.") :arrow_upper_right:
 

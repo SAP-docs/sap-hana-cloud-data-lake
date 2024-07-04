@@ -174,5 +174,5 @@ All the positions or offsets, returned or specified, in the `PATINDEX` function 
 
 [LOCATE Function \[String\] for Data Lake Relational Engine](locate-function-string-for-data-lake-relational-engine-a55fae8.md "Returns the position of one string within another.")
 
-[PATINDEX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/073fd346f10a409b98efefed3192ff77.html "Returns the starting position of the first occurrence of a specified pattern.") :arrow_upper_right:
+[PATINDEX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/073fd346f10a409b98efefed3192ff77.html "Returns the starting position of the first occurrence of a specified pattern.") :arrow_upper_right:
 

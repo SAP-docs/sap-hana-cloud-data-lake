@@ -198,5 +198,5 @@ CREATE PROCEDURE TopCustomer (OUT TopCompany CHAR(35), OUT TopValue INT)
 
 [SIGNAL Statement for Data Lake Relational Engine](signal-statement-for-data-lake-relational-engine-a6266b2.md "Lets you raise an exception condition.")
 
-[BEGIN … END Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/cfaf187bc70744e192136ee62c3b65b6.html "Groups SQL statements together.") :arrow_upper_right:
+[BEGIN … END Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/cfaf187bc70744e192136ee62c3b65b6.html "Groups SQL statements together.") :arrow_upper_right:
 

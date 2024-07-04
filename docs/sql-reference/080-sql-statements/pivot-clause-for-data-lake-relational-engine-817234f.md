@@ -6,13 +6,11 @@ Pivots a table expression in the FROM clause of a SELECT statement \(FROM *<pivo
 
 
 
-<a name="loio817234f06ce210149f3fe4ad7428edfd__section_ovp_dvr_znb"/>
+<a name="loio817234f06ce210149f3fe4ad7428edfd__pivot_clause_usage1"/>
 
 ## Usage
 
-This data lake Relational Engine SQL statement can be used when connected as follows:
-
--   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+This SQL statement clause can only be used within the FROM clause in a SELECT statement.
 
 
 
@@ -57,6 +55,8 @@ FROM <pivot-source-table>
 > Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
+
+<a name="loio817234f06ce210149f3fe4ad7428edfd__pivot_clause_parameters1"/>
 
 ## Parameters
 
@@ -124,23 +124,35 @@ If an alias is not specified, then the implicit alias is the string representing
 
 
 
+<a name="loio817234f06ce210149f3fe4ad7428edfd__pivot_clause_remarks1"/>
+
 ## Remarks
 
 The definition of a pivoted derived table contains an input table expression, *<pivot-source-table\>*. The columns and values to pivot on are defined in the FOR and IN clauses. The grouping columns of the pivoted derived tables are a subset of the columns of *<pivot-source-table\>*. A pivoted derived table is computed by grouping *<pivot-source-table\>* on the grouping columns and then computing the aggregate functions specified in the aggregate clause. The pivoted derived table has a column for each value of the grouping columns. There are extra columns added to the pivoted derived table, one for each pair of an item in the aggregate clause and an item in the IN clause. The values of the new columns are the aggregate functions specified in the aggregate clause. The names of these new columns are generated from the aliases specified in the aggregate clause for aggregate functions, and the aliases and values specified in the IN clause. In total, if *<A\>* aggregate functions are specified, and the IN clause has *<I\>* elements, then there are *<A\>* x *<I\>* extra columns.
 
 
 
+<a name="loio817234f06ce210149f3fe4ad7428edfd__pivot_clause_privileges1"/>
+
 ## Privileges
 
-You must have SELECT privileges on the objects referenced in *<pivot-source-table\>*.
 
 
+### 
+
+Beyond the privileges required by the SELECT statement, you also require SELECT object-level privilege on the objects referenced in *<pivot-source-table\>*.
+
+
+
+<a name="loio817234f06ce210149f3fe4ad7428edfd__pivot_clause_side_effect1"/>
 
 ## Side Effects
 
 None.
 
 
+
+<a name="loio817234f06ce210149f3fe4ad7428edfd__pivot_clause_standards1"/>
 
 ## Standards
 
@@ -162,7 +174,9 @@ Not in the standard.
 
 
 
-## Example
+<a name="loio817234f06ce210149f3fe4ad7428edfd__section_fgr_h4s_wbc"/>
+
+## Examples
 
 The following example selects data from the Employees table and pivots it on the DepartmentID column, where the Department ID is 100, 200, 300, 400, or 500.
 
@@ -348,5 +362,5 @@ In the results, the aggregate alias and the values for DepartmentID are included
 **Related Information**  
 
 
-[REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
+[PIVOT Clause for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/71337123850742e79ab57ded4fdef45f.html "Pivots a table expression in the FROM clause of a SELECT statement (FROM pivoted-derived-table) into a pivoted derived table. Pivoted derived tables offer an easy way to rotate row values from a column in a table expression into multiple columns, and perform aggregation where needed on the columns included in the result set.") :arrow_upper_right:
 

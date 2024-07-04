@@ -180,5 +180,5 @@ Requires one of:
 **Related Information**  
 
 
-[CALL Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a614c16084f21015bc34dd15aeb50bde.html "Invokes a procedure.") :arrow_upper_right:
+[CALL Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a614c16084f21015bc34dd15aeb50bde.html "Invokes a procedure.") :arrow_upper_right:
 

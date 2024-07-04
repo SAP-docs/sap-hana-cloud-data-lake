@@ -82,7 +82,7 @@ SMALLINT
 </td>
 <td valign="top">
 
-The ODBC data type. This value corresponds to the value for data\_type in the Transact-SQL compatibility dbo.SYSTYPES table.
+The ODBC data type. This value corresponds to the value for data\_type in the Transact-SQL compatibility SYSTYPES table.
 
 </td>
 </tr>
@@ -108,5 +108,5 @@ The number of significant digits that can be stored using this data type. The co
 **Related Information**  
 
 
-[SYSDOMAIN System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/6fc892a4edc44df8a31252f36cb1c8d9.html "The SYSDOMAIN system view records information about built-in data types (also called domains). The contents of this view does not change during normal operation. The underlying system table for this view is ISYSDOMAIN.") :arrow_upper_right:
+[SYSDOMAIN System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/6fc892a4edc44df8a31252f36cb1c8d9.html "The SYSDOMAIN system view records information about built-in data types (also called domains). The contents of this view does not change during normal operation. The underlying system table for this view is ISYSDOMAIN.") :arrow_upper_right:
 

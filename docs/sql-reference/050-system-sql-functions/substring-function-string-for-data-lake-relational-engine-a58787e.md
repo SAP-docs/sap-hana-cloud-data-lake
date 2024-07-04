@@ -95,7 +95,7 @@ When the `ansi_substring` database option is set to ON \(default\), negative val
 
 <a name="loioa58787e784f21015acc5ecadf5b1a9a0__SUBSTRING_examples1"/>
 
-## Example
+## Examples
 
 -   The following statement returns ***back***:
 
@@ -126,5 +126,5 @@ When the `ansi_substring` database option is set to ON \(default\), negative val
 
 [CHARINDEX Function \[String\] for Data Lake Relational Engine](charindex-function-string-for-data-lake-relational-engine-a53cde2.md "Returns the position of the first occurrence of a specified string in another string.")
 
-[SUBSTRING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/f114d3543b9c48f69b269b951d549034.html "Returns a substring of a string.") :arrow_upper_right:
+[SUBSTRING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/f114d3543b9c48f69b269b951d549034.html "Returns a substring of a string.") :arrow_upper_right:
 

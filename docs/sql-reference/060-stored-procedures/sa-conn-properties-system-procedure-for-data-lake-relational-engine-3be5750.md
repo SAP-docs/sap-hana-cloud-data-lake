@@ -162,19 +162,19 @@ If *<connidparm\>* is less than zero, then property values for the current conne
 
 ## Privileges
 
-Require EXECUTE object-level privilege on the procedure. To obtain a list of all connection IDs, you also need the MONITOR system privilege.
+Requires EXECUTE object-level privilege on this procedure. To obtain a list of all connection IDs, you also need the MONITOR system privilege.
 
 
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-This example uses the sa\_conn\_properties system procedure to return a result set summarizing connection property information for all connections.
+This example returns a result set summarizing connection property information for all connections.
 
 ```
 CALL sa_conn_properties( );
@@ -272,7 +272,7 @@ ClientStmtCacheMisses
 </tr>
 </table>
 
-This example uses the sa\_conn\_properties system procedure to return a list of all connections, in decreasing order by CPU time\*:
+This example returns a list of all connections, in decreasing order by CPU time:
 
 ```
 SELECT Number AS connection_number,

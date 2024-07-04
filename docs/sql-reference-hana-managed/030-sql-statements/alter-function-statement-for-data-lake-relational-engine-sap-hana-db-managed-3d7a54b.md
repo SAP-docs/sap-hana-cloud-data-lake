@@ -250,7 +250,7 @@ Requires one of:
 -   ALTER ANY OBJECT system privilege
 -   ALTER object-level privilege on the schema containing the function if the schema is owned by another user.
 
-For information on using a function created when connected as a data lake Relational Engine user, see [User-Defined Functions in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/abea6df6284d46c8b2265c477be1f704.html "User-defined functions are a class of procedures that return a single value to the calling environment.") :arrow_upper_right:.
+For information on using a function created when connected as a data lake Relational Engine user, see [User-Defined Functions in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/abea6df6284d46c8b2265c477be1f704.html "User-defined functions are a class of procedures that return a single value to the calling environment.") :arrow_upper_right:.
 
 
 
@@ -280,5 +280,5 @@ SQL – vendor extension to ISO/ANSI SQL grammar
 
 [DROP FUNCTION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-function-statement-for-data-lake-relational-engine-sap-hana-db-managed-58c58a9.md "Removes a user-defined function from the database.")
 
-[ALTER FUNCTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a61280af84f21015a184bc25f16886f8.html "Modifies an existing function. Include the entire modified function in the ALTER FUNCTION statement.") :arrow_upper_right:
+[ALTER FUNCTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a61280af84f21015a184bc25f16886f8.html "Modifies an existing function. Include the entire modified function in the ALTER FUNCTION statement.") :arrow_upper_right:
 

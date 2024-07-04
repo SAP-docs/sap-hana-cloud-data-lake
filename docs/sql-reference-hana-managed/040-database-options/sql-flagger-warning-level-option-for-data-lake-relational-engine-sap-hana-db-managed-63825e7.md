@@ -12,7 +12,7 @@ Controls the response to any SQL that is not part of the specified standard.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user..
+-   Connected to SAP HANA database as a SAP HANA database user.
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -203,7 +203,7 @@ For compatibility with previous data lake Relational Engine versions, the follow
 
 [SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md "Grant database options temporarily for the current connection only on a data lake Relational Engine relational container.")
 
-[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
+[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
 
-[SQL_FLAGGER_WARNING_LEVEL Option \[TSQL\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a6569c9384f210158c51a77b49a3bc20.html "Controls the response to any SQL that is not part of the specified standard.") :arrow_upper_right:
+[SQL_FLAGGER_WARNING_LEVEL Option \[TSQL\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a6569c9384f210158c51a77b49a3bc20.html "Controls the response to any SQL that is not part of the specified standard.") :arrow_upper_right:
 

@@ -168,7 +168,7 @@ Using sp\_iqrebuildindex to increase the number of distinct values beyond curren
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[FP_NBIT_ENFORCE_LIMITS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/2e6a10d296ec4bd6a7209e65e0171171.html "Enforces sizing limits for explicit and implicit NBit columns.") :arrow_upper_right:
+[FP_NBIT_ENFORCE_LIMITS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/2e6a10d296ec4bd6a7209e65e0171171.html "Enforces sizing limits for explicit and implicit NBit columns.") :arrow_upper_right:
 
 [FP\_NBIT\_AUTOSIZE\_LIMIT Option for Data Lake Relational Engine](fp-nbit-autosize-limit-option-for-data-lake-relational-engine-a873755.md "Limits the number of distinct values in columns that implicitly load as NBit FP.")
 
@@ -178,7 +178,7 @@ Using sp\_iqrebuildindex to increase the number of distinct values beyond curren
 
 [FP\_NBIT\_ROLLOVER\_MAX\_MB Option for Data Lake Relational Engine](fp-nbit-rollover-max-mb-option-for-data-lake-relational-engine-a873d4b.md "Sets a threshold for the total dictionary size for implicit NBit rollovers to Flat FP.")
 
-[sp\_iqrebuildindex Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqrebuildindex-procedure-for-data-lake-relational-engine-a5b342e.md "Rebuilds column indexes.")
+[sp\_iqrebuildindex System Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqrebuildindex-system-procedure-for-data-lake-relational-engine-a5b342e.md "Rebuilds column indexes.")
 
-[sp\_iqindexmetadata Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqindexmetadata-procedure-for-data-lake-relational-engine-a5ad0e4.md "Displays index metadata for a given index.")
+[sp\_iqindexmetadata System Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqindexmetadata-system-procedure-for-data-lake-relational-engine-a5ad0e4.md "Displays index metadata for a given index.")
 

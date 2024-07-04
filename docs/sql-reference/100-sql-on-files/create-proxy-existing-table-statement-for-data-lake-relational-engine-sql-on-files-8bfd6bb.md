@@ -138,5 +138,5 @@ CREATE EXISTING TABLE sof_employee
 **Related Information**  
 
 
-[CREATE (Proxy) EXISTING TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/569aa95237b54d28883feeceef487e21.html "Create a new proxy table that represents an existing table on a SQL on Files external catalog.") :arrow_upper_right:
+[CREATE (Proxy) EXISTING TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/569aa95237b54d28883feeceef487e21.html "Create a new proxy table that represents an existing table on a SQL on Files external catalog.") :arrow_upper_right:
 

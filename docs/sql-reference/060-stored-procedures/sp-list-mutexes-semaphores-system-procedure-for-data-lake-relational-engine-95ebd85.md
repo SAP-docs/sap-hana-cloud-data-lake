@@ -16,7 +16,7 @@ sp_list_mutexes_semaphores
 
 ## Parameters
 
-None
+None.
 
 
 
@@ -217,13 +217,17 @@ A comma-separated list of connection IDs for connections that are currently wait
 
 ## Remarks
 
-None
+None.
 
 
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure, along with the MONITOR and UPDATE ANY MUTEX SEMAPHORE system privileges.
+Requires all of the following:
+
+-   EXECUTE object-level privilege on this procedure
+-   MONITOR system privilege
+-   UPDATE ANY MUTEX SEMAPHORE system privilege
 
 
 
@@ -251,7 +255,7 @@ Not in the standard.
 
 ## Examples
 
-The following statement returns information about all of the mutexes and semaphores in the database:
+This example returns information about all mutexes and semaphores in the database:
 
 ```
 CALL sp_list_mutexes_semaphores();
@@ -262,7 +266,11 @@ CALL sp_list_mutexes_semaphores();
 <tr>
 <th valign="top">
 
-mutex\_semaphore\_id
+mutex\_
+
+semaphore\_
+
+id
 
 </th>
 <th valign="top">
@@ -282,7 +290,55 @@ type
 </th>
 <th valign="top">
 
-is\_temp
+is\_
+
+temp
+
+</th>
+<th valign="top">
+
+is\_
+
+temp
+
+</th>
+<th valign="top">
+
+is\_
+
+dropped
+
+</th>
+<th valign="top">
+
+start\_
+
+with
+
+</th>
+<th valign="top">
+
+current\_
+
+count
+
+</th>
+<th valign="top">
+
+currently\_
+
+owned\_
+
+by
+
+</th>
+<th valign="top">
+
+currently\_
+
+waited\_
+
+for
 
 </th>
 </tr>
@@ -312,6 +368,36 @@ MUTEX:C
 N
 
 </td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -337,6 +423,36 @@ MUTEX:C
 <td valign="top">
 
 N
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
 
 </td>
 </tr>
@@ -366,115 +482,6 @@ MUTEX:C
 N
 
 </td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="6">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-is\_temp
-
-</th>
-<th valign="top">
-
-is\_dropped
-
-</th>
-<th valign="top">
-
-start\_with
-
-</th>
-<th valign="top">
-
-current\_count
-
-</th>
-<th valign="top">
-
-currently\_owned\_by
-
-</th>
-<th valign="top">
-
-currently\_waited\_for
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-N
-
-</td>
-<td valign="top">
-
-N
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-N
-
-</td>
-<td valign="top">
-
-N
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 N

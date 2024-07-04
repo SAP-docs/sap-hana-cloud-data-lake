@@ -134,15 +134,11 @@ For example, the following call fails because table Z1 is in the default relatio
 CALL sa_ansi_standard_packages( 'SQL:2003', 'SELECT * FROM syshdl_container1.Z1');
 ```
 
-acuse
-
 However, the following call succeeds because table Y1 is in the user-create schema syshdl\_container1\_myschema1:
 
 ```
 CALL sa_ansi_standard_packages( 'SQL:2003', 'SELECT * FROM syshdl_container1_myschema1.Y1');
 ```
-
-acuse
 
 
 
@@ -154,7 +150,7 @@ acuse
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -165,5 +161,5 @@ None
 **Related Information**  
 
 
-[sa_ansi_standard_packages System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3be553e66c5f1014ae7590829b8dfdbf.html "Returns information about the non-core SQL extensions used in a SQL statement.") :arrow_upper_right:
+[sa_ansi_standard_packages System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/3be553e66c5f1014ae7590829b8dfdbf.html "Returns information about the non-core SQL extensions used in a SQL statement.") :arrow_upper_right:
 

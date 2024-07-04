@@ -83,5 +83,5 @@ To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE priv
 **Related Information**  
 
 
-[SYSREMARK System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3be9c0156c5f1014b7d8d601763e6946.html "Each row in the SYSREMARK system view describes a remark (or comment) for an object. The underlying system table for this view is ISYSREMARK.") :arrow_upper_right:
+[SYSREMARK System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/3be9c0156c5f1014b7d8d601763e6946.html "Each row in the SYSREMARK system view describes a remark (or comment) for an object. The underlying system table for this view is ISYSREMARK.") :arrow_upper_right:
 

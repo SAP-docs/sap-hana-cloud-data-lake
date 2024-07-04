@@ -125,7 +125,7 @@ October 1 to December 31
 
 <a name="loio57330a53cc29480ebf71c3bc97486052__section_ykg_yn5_vrb"/>
 
-## Example
+## Examples
 
 With the `DATE_ORDER` option set to the default of *<ymd\>*, the following statement returns the value 2:
 
@@ -136,5 +136,5 @@ SELECT QUARTER ( '1987/05/02' ) FROM iq_dummy;
 **Related Information**  
 
 
-[QUARTER Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a571b27b84f21015b649cee091ad3bd6.html "Returns a number indicating the quarter of the year from the supplied date expression.") :arrow_upper_right:
+[QUARTER Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a571b27b84f21015b649cee091ad3bd6.html "Returns a number indicating the quarter of the year from the supplied date expression.") :arrow_upper_right:
 

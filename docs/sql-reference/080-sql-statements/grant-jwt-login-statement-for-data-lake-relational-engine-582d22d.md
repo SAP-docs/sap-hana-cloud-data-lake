@@ -43,7 +43,7 @@ GRANT JWT LOGIN TO <external_identity> FOR PROVIDER <jwt_provider_name> AS USER 
 Specifies the external identity to map to the data lake Relational Engine user.
 
 ```
-<external_identity> ::= <simple_identifier>;
+<external_identity> ::= <simple_identifier>
 ```
 
 
@@ -58,7 +58,7 @@ Specifies the external identity to map to the data lake Relational Engine user.
 Specifies the JWT provider.
 
 ```
-<jwt_provider_name> ::= <simple_identifier>;
+<jwt_provider_name> ::= <simple_identifier>
 ```
 
 
@@ -73,7 +73,7 @@ Specifies the JWT provider.
 Specifies the data lake Relational Engine user to which the external identities are mapped.
 
 ```
-<userid> ::= <simple_identifier>;
+<userid> ::= <simple_identifier>
 ```
 
 
@@ -95,7 +95,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 <a name="loio582d22d53e994855a9c7fa7b9a3fda25__section_gwx_f3p_p4b"/>
 
-## Example
+## Examples
 
 ```
 GRANT JWT LOGIN TO external_user FOR PROVIDER my_jwt_provider AS USER HDLUSER;

@@ -145,7 +145,7 @@ This function returns line numbers as found in the proc\_defn column of the SYSP
 
 ## Privileges
 
-You must have EXECUTE privilege on the system procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -156,5 +156,5 @@ None.
 **Related Information**  
 
 
-[sa_error_stack_trace System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8175645e6ce21014bb799dc7da2f9b46.html "Returns the stack trace of the error that invoked the error handler.") :arrow_upper_right:
+[sa_error_stack_trace System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/8175645e6ce21014bb799dc7da2f9b46.html "Returns the stack trace of the error that invoked the error handler.") :arrow_upper_right:
 

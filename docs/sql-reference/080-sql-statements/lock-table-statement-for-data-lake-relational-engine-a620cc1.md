@@ -73,7 +73,7 @@ Must be a base table, not a view.
 
 ```
 <table-list> ::=
-   [ <owner>.]<table-name> [,...];
+   [ <owner>.]<table-name> [,...]
 ```
 
 
@@ -107,7 +107,7 @@ SHARE
 </b></dt>
 <dd>
 
-Prevents other transactions from modifying the table, but allows them read access. In this mode, you can change data in the table as long as no other transaction has locked the row being modified, either indirectly, or explicitly by using `LOCK TABLE`.
+Prevents other transactions from modifying the table, but allows them read access. In this mode, you can change data in the table as long as no other transaction has locked the row being modified, either indirectly, or explicitly by using LOCK TABLE.
 
 > ### Note:  
 > SHARE mode is supported only on multiplex coordinator nodes.
@@ -121,13 +121,13 @@ WRITE
 </b></dt>
 <dd>
 
-Prevents other transactions from modifying a list of tables. Unconditionally commits the connections outermost transaction. The transaction’s snapshot version is established not by the `LOCK TABLE IN WRITE MODE` statement, but by the execution of the next command processed by data lake Relational Engine.
+Prevents other transactions from modifying a list of tables. Unconditionally commits the connections outermost transaction. The transaction’s snapshot version is established not by the LOCK TABLE IN WRITE MODE statement, but by the execution of the next command processed by data lake Relational Engine.
 
 WRITE mode locks are released when the transaction commits or rolls back, or when the connection disconnects.
 
 > ### Note:  
 > -   WRITE mode is supported on multiplex Coordinator as well as Writer nodes.
-> -   When the lock mode is set to WRITE – specifying the <code>[ WAIT <i class="varname">&lt;time&gt;</i> ]</code> clause is mandatory.
+> -   When the lock mode is set to WRITE – specifying the \[ WAIT *<time\>* \] clause is mandatory.
 
 
 
@@ -155,7 +155,7 @@ WAIT *<time\>*
 Specifies maximum blocking time for all lock types. This clause is mandatory when lock mode is WRITE. When a time argument is given, the server locks the specified tables only if available within the specified time. The time argument can be specified in the format hh:nn:ss:sss. If a date part is specified, the server ignores it and converts the argument into a timestamp. When no time argument is given, the server waits indefinitely until a WRITE lock is available or an interrupt occurs.
 
 > ### Note:  
-> It is mandatory to specify the '<code>[ WAIT <i class="varname">&lt;time&gt;</i> ]</code>' clause when the lock mode is set to WRITE.
+> It is mandatory to specify the '\[ WAIT *<time\>* \]' clause when the lock mode is set to WRITE.
 
 
 
@@ -168,33 +168,33 @@ Specifies maximum blocking time for all lock types. This clause is mandatory whe
 
 ## Remarks
 
--   Running `LOCK TABLE` holds the lock only on a single table per connection – running it consecutively on another table from this connection will automatically release the lock on the previous table and apply the lock on the current table.
+-   Running LOCK TABLE holds the lock only on a single table per connection – running it consecutively on another table from this connection will automatically release the lock on the previous table and apply the lock on the current table.
 
-    In the following example, `LOCK TABLE` holds the WRITE lock on the `Customers` table, and automatically releases the table lock acquired earlier on the `Employees` table:
+    In the following example, LOCK TABLE holds the WRITE lock on the Customers table, and automatically releases the table lock acquired earlier on the Employees table:
 
     ```
     LOCK TABLE Employees IN WRITE MODE WAIT
     LOCK TABLE Customers IN WRITE MODE WAIT;
     ```
 
--   `LOCK TABLE` statements run on tables in the data lake data lake Relational Engine main store on the coordinator do not affect access to those tables from connections on secondary servers. For example, on a coordinator connection, issue the command:
+-   LOCK TABLE statements run on tables in the data lake data lake Relational Engine main store on the coordinator do not affect access to those tables from connections on secondary servers. For example, on a coordinator connection, issue the command:
 
     ```
     LOCK TABLE coord1 WITH HOLD IN EXCLUSIVE MODE;
     ```
 
-    Note that when the command above runs on table `coord1` from the coordinator, you can access it from secondary nodes, that is, the `select` query works fine. However, you cannot modify `coord1`, and running an `insert` query returns the error: `table 'coord1' not found`. To sum it up, you can access `coord1` but modifying it throws an error.
+    Note that when the command above runs on table coord1 from the coordinator, you can access it from secondary nodes, that is, the select query works fine. However, you cannot modify coord1, and running an insert query returns the error: table 'coord1' not found. To sum it up, you can access coord1 but modifying it throws an error.
 
-    -   `sp_iqlocks` on the coordinator confirms that the table `coord1` has an exclusive \(E\) lock.
+    -   sp\_iqlocks on the coordinator confirms that the table coord1 has an exclusive \(E\) lock.
 
-        The result of `sp_iqlocks` run on a connection on a secondary server does not show the exclusive lock on table `coord1`. The user on this connection can see updates to table `coord1` on the coordinator.
+        The result of sp\_iqlocks run on a connection on a secondary server does not show the exclusive lock on table coord1. The user on this connection can see updates to table coord1 on the coordinator.
 
-        Other connections on the coordinator can see the exclusive lock on table `coord1` and attempting to select from table `coord1` from another connection on the coordinator returns ***User DBA has the row in coord1 locked.***
+        Other connections on the coordinator can see the exclusive lock on table coord1 and attempting to select from table coord1 from another connection on the coordinator returns ***User DBA has the row in coord1 locked.***
 
 
--   `LOCK TABLE <table> IN EXCLUSIVE MODE` locks all views referencing the table.
+-   LOCK TABLE *<table-name\>* IN EXCLUSIVE MODE locks all views referencing the table.
 
--   The Transact-SQL \(T-SQL\) stored procedure dialect does not support `LOCK TABLE`. For example, this statement returns ***Syntax error near LOCK***:
+-   The Transact-SQL \(T-SQL\) stored procedure dialect does not support LOCK TABLE. For example, this statement returns ***Syntax error near LOCK***:
 
     ```
     CREATE PROCEDURE tproc()
@@ -206,7 +206,7 @@ Specifies maximum blocking time for all lock types. This clause is mandatory whe
     END;
     ```
 
--   The Watcom-SQL stored procedure dialect supports `LOCK TABLE`. The default command delimiter is a semicolon \(;\). For example:
+-   The Watcom-SQL stored procedure dialect supports LOCK TABLE. The default command delimiter is a semicolon \(;\). For example:
 
     ```
     CREATE PROCEDURE tproc()
@@ -296,20 +296,20 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 ## Examples
 
--   This example obtains a WRITE lock on the `Customers` and `Employees` tables, if available within 5 minutes and 3 seconds:
+-   This example obtains a WRITE lock on the Customers and Employees tables, if available within 5 minutes and 3 seconds:
 
     ```
     LOCK TABLE Customers, Employees IN WRITE MODE WAIT
     '00:05:03';
     ```
 
--   This example waits indefinitely until the WRITE lock on the `Customers` and `Employees` tables is available, or an interrupt occurs:
+-   This example waits indefinitely until the WRITE lock on the Customers and Employees tables is available, or an interrupt occurs:
 
     ```
     LOCK TABLE Customers, Employees IN WRITE MODE WAIT;
     ```
 
--   This example holds a WRITE lock on the `Customers` table and automatically releases the table lock acquired earlier on the `Employees` table:
+-   This example holds a WRITE lock on the Customers table and automatically releases the table lock acquired earlier on the Employees table:
 
     ```
     LOCK TABLE Employees IN WRITE MODE WAIT

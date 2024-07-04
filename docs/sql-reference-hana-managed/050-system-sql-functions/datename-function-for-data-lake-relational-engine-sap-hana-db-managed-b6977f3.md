@@ -105,5 +105,5 @@ VARCHAR
 **Related Information**  
 
 
-[DATENAME Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5472b7084f21015892b91f8f67b6ef9.html "Returns the name of the specified part (such as the month “June”) of a date/time value, as a character string.") :arrow_upper_right:
+[DATENAME Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a5472b7084f21015892b91f8f67b6ef9.html "Returns the name of the specified part (such as the month “June”) of a date/time value, as a character string.") :arrow_upper_right:
 

@@ -266,5 +266,5 @@ FROM mytable;
 **Related Information**  
 
 
-[CSCONVERT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/81f552706ce21014b4d1b57dec4dfd29.html "Converts strings between character sets.") :arrow_upper_right:
+[CSCONVERT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/81f552706ce21014b4d1b57dec4dfd29.html "Converts strings between character sets.") :arrow_upper_right:
 

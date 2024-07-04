@@ -2,7 +2,7 @@
 
 # sp\_iqclouddbspace System Procedure for Data Lake Relational Engine
 
-Displays detailed information about the user\_object\_store dbspace.
+Displays information about the user\_object\_store dbspace.
 
 
 
@@ -26,7 +26,7 @@ sp_iqclouddbspace()
 
 ## Parameters
 
-None
+None.
 
 
 
@@ -116,7 +116,7 @@ The size of a database page in bytes. This is calculated based on the compressio
 
 ## Remarks
 
-None
+The sizes that this procedure outputs are estimations based on heuristics, not an accurate number. They are an estimation only.
 
 
 
@@ -128,7 +128,7 @@ None
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -203,5 +203,5 @@ user\_object\_store
 **Related Information**  
 
 
-[sp_iqclouddbspace System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/4240c9a98ce04c2cb85a37ada268acb4.html "Displays detailed information about the user_object_store dbspace.") :arrow_upper_right:
+[sp_iqclouddbspace System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/4240c9a98ce04c2cb85a37ada268acb4.html "Displays information about the user_object_store dbspace.") :arrow_upper_right:
 

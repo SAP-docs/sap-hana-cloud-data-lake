@@ -152,5 +152,5 @@ SELECT a, CAST(REPLACE(a,'C','ZZ') AS CHAR(5)) FROM aa;
 **Related Information**  
 
 
-[REPLACE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a579952184f210159e17940c17a6d8f7.html "Replaces all occurrences of a substring with another substring.") :arrow_upper_right:
+[REPLACE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a579952184f210159e17940c17a6d8f7.html "Replaces all occurrences of a substring with another substring.") :arrow_upper_right:
 

@@ -26,7 +26,7 @@ sp_tsql_environment( )
 
 ## Parameters
 
-None
+None.
 
 
 
@@ -34,7 +34,7 @@ None
 
 ## Result Set
 
-None
+None.
 
 
 
@@ -72,19 +72,21 @@ SET TEMPORARY OPTION escape_character='OFF'
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
 ## Side Effects
 
-None
+None.
 
 
 
-## Example
+<a name="loio3be686266c5f1014ad21c9c116ab5a77__section_mjt_dgw_4bc"/>
 
-The example below calls the sp\_tsql\_environment procedure:
+## Examples
+
+This example sets connection options.
 
 ```
 CALL sp_tsql_environment();

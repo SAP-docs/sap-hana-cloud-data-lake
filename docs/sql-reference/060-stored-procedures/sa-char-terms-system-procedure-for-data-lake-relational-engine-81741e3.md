@@ -118,15 +118,15 @@ Use this system procedure to find out how a string is interpreted when the setti
 
 <a name="loio81741e316ce21014a988e4845b1f1a41__section_u51_bkf_3jb"/>
 
-## Privilege
+## Privileges
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -134,7 +134,7 @@ None
 
 ## Examples
 
-This example uses the sa\_char\_terms system procedure to return the terms in the CHAR string "It's a work-at-home day!" using the default CHAR text configuration object, default\_char:
+This example returns the terms in the CHAR string "It's a work-at-home day!" using the default CHAR text configuration object, default\_char:
 
 ```
 CALL sa_char_terms ('It''s a work-at-home day!', 'default_char', 'sys');

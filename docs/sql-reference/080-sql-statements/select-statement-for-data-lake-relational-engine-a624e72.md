@@ -6,7 +6,7 @@ Retrieves information from the database.
 
 
 
-<a name="loioa624e72e84f210159276a39335acd358__section_azh_5fj_znb"/>
+<a name="loioa624e72e84f210159276a39335acd358__section_wy5_jds_wbc"/>
 
 ## Usage
 
@@ -17,30 +17,41 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-SELECT [ { ALL | DISTINCT } ] [ <row-limitation-option1> ] <select-list>
-   … [ INTO { <host-variable-list> 
-              | <variable-list> 
-              | [ { <owner> | <schema-name> }.]<table-name > } ]
-   … [ INTO LOCAL TEMPORARY TABLE <table-name> ]
-   … [ FROM <object-list> ]
-   … [ WHERE <search-condition> ]
-   … [ { GROUP BY <expression> [, ...]
-        | ROLLUP ( <expression> [, ...] )
-        | CUBE ( <expression> [, ...] ) } ]
-   … [ HAVING <search-condition> ]
-   … [ <order-by-clause> [,...] ]
-   … [ FOR XML <xml-mode> ]
-   … [ nopagenumber ]
-   … [ <row-limitation-option2> ]
-   … [ OPTION ( query-hint, ... ) ]
+SELECT 
+   [ WITH <temporary-views> ]
+   [ { ALL | DISTINCT } ] [ <row-limitation-option1> ] <select-list>
+   [ <row-limitation-option2> ]
+   [ INTO <variable-list>]
+   [ INTO LOCAL TEMPORARY TABLE <table-name> ]
+   [ FROM { <owner> | <schema-name> } [,...] ]
+   [ WHERE <search-condition> ]
+   [ { GROUP BY <expression> [, ...]
+      | ROLLUP ( <expression> [, ...] )
+      | CUBE ( <expression> [, ...] ) } ]
+   [ HAVING <search-condition> ]
+   [ ORDER BY { <expression> | <integer> } [ { ASC | DESC } ] [,...] ]
+   [ FOR XML <xml-mode> ]
+   [ nopagenumber ]
+   [ OPTION ( query-hint, ... ) ]
 ```
 
 ```
-<select-list> ::=
-   { <column-name>
-    | <expression> [ [ AS ] <alias-name> ]
-    | * }
+<temporary-views> :
+   { <regular-view>, ...
+    | RECURSIVE { <regular-view> | <recursive-view> }, ...
 ```
+
+```
+<regular-view> ::=
+   <view-name> [ ( column-name, ... ) ] AS ( query-block )
+```
+
+```
+<recursive-view> ::=
+   <view-name> [ ( column-name, ... ) ] AS ( <initial-query-block> UNION ALL <recursive-query-block> )
+```
+
+For information on *<query-block\>*, see [Language Elements in SQL Syntax in Data Lake Relational Engine](language-elements-in-sql-syntax-in-data-lake-relational-engine-a61107a.md)
 
 ```
 <row-limitation-option1> ::=
@@ -49,24 +60,11 @@ SELECT [ { ALL | DISTINCT } ] [ <row-limitation-option1> ] <select-list>
 ```
 
 ```
-<limit-expression> ::=
-    <simple-expression>
-```
-
-```
-<startat-expression> ::=
-    <simple-expression>
-```
-
-```
-<row-limitation-option2> ::=
-   LIMIT { [ <offset-expression>, ] <limit-expression> 
-   | <limit-expression> OFFSET <offset-expression> }
-```
-
-```
-<offset-expression> ::=
-   <simple-expression>
+<limit-expression> | <offset-expression> | <offset-expression> ::=
+   { <integer>
+    | <variable>
+    | ( <simple-expression> )
+    | ( <simple-expression> { + | - | * } <simple-expression> ) }
 ```
 
 ```
@@ -78,8 +76,23 @@ SELECT [ { ALL | DISTINCT } ] [ <row-limitation-option1> ] <select-list>
 ```
 
 ```
-<order-by-clause> ::=
-   [ ORDER BY { <expression> | <integer> } [ { ASC | DESC } ]
+<select-list> ::=
+   { <column-name>
+    | <expression> [ [ AS ] <alias-name> ]
+    | * }
+```
+
+```
+<row-limitation-option2> ::=
+   LIMIT { [ <offset-expression>, ] <limit-expression> 
+   | <limit-expression> OFFSET <offset-expression> }
+```
+
+```
+<variable-list> ::=
+   { <host-variable-list> 
+   | <variable-list> 
+   | [ { <owner> | <schema-name> }.]<table-name > } 
 ```
 
 ```
@@ -89,11 +102,6 @@ SELECT [ { ALL | DISTINCT } ] [ <row-limitation-option1> ] <select-list>
     | FORCE NO OPTIMIZATION
     | <option-name>=<option-value>
     | <materialized_view_staleness_options_list> }
-```
-
-```
-<option-name> ::= 
-   <identifier>
 ```
 
 ```
@@ -110,9 +118,7 @@ SELECT [ { ALL | DISTINCT } ] [ <row-limitation-option1> ] <select-list>
 ```
 
 ```
-<materialized_view_staleness_option> ::=
-   { materialized_view_staleness_check
-    | materialized_view_staleness_limit }
+<window-expression> ::= See  <?sap-ot O2O class="- topic/xref " href="a588f918af8b441a939c39e987597230.xml" text="" desc="" xtrc="xref:3" xtrf="file:/home/builder/src/dita-all/vmv1718848528851/loiof2afefd1e3ee48ae9c5d1f9daa6239f6_en-US/src/content/localization/en-us/a624e72e84f210159276a39335acd358.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
 ```
 
 
@@ -129,6 +135,56 @@ SELECT [ { ALL | DISTINCT } ] [ <row-limitation-option1> ] <select-list>
 
 <dl>
 <dt><b>
+
+WITH or WITH RECURSIVE clause
+
+</b></dt>
+<dd>
+
+Define one or more common table expressions, also known as temporary views, to be used elsewhere in the remainder of the statement. These expressions may be non-recursive, or may be self-recursive. Recursive common table expressions may appear alone, or intermixed with non-recursive table expressions, only if the RECURSIVE keyword is specified. Mutually recursive common table expressions are not supported.
+
+This clause is permitted only if the SELECT query block appears in one of the following locations:
+
+-   Within a top-level SELECT query block including the top-level SELECT query block of a view definition
+
+-   Within a top-level SELECT statement within an INSERT query block
+
+-   Within a nested SELECT query block defining a derived table in any type of SQL statement
+
+
+Recursive expressions consist of an initial subquery and a recursive subquery. The initial-query implicitly defines the schema of the view. The recursive subquery must contain a reference to the view within the FROM clause. During each iteration, this reference refers only to the rows added to the view in the previous iteration. The reference must not appear on the null-supplying side of an outer join. A recursive common table expression must not use aggregate functions and must not contain a GROUP BY, ORDER BY, or DISTINCT clause.
+
+The WITH clause is not supported with remote tables. The WITH clause may also be used in INTERSECT, UNION, and EXCEPT query blocks.
+
+This functionality is available only in the Watcom SQL dialect.
+
+```
+WITH RECURSIVE
+  manager ( EmployeeID, ManagerID,
+            GivenName, Surname, mgmt_level ) AS
+( ( SELECT EmployeeID, ManagerID,       -- initial subquery
+           GivenName, Surname, 0
+    FROM Employees AS e
+    WHERE ManagerID = EmployeeID )
+  UNION ALL
+  ( SELECT e.EmployeeID, e.ManagerID,   -- recursive subquery
+           e.GivenName, e.Surname, m.mgmt_level + 1
+    FROM Employees AS e JOIN manager AS m
+     ON   e.ManagerID =  m.EmployeeID
+      AND e.ManagerID <> e.EmployeeID
+      AND m.mgmt_level < 20 ) )
+SELECT 'Manager', * FROM manager
+WHERE mgmt_level > 0
+UNION ALL
+SELECT 'Employee', * FROM manager
+WHERE mgmt_level = 0
+ORDER BY mgmt_level, Surname, GivenName;
+
+```
+
+
+
+</dd><dt><b>
 
 ALL or DISTINCT
 
@@ -234,7 +290,7 @@ Creates a local, temporary table and populates it with the results of the query.
 
 </dd><dt><b>
 
-FROM *<object-list\>*
+FROM
 
 </b></dt>
 <dd>
@@ -243,8 +299,10 @@ Retrieves rows and views specified in the *<object-list\>*.
 
 ```
 <object-list> ::=
-   [ { <owner> | <schema-name> }.] <object-name> [,...];
+   [ { <owner> | <schema-name> }.] <object-name> [,...]
 ```
+
+See also [FROM Clause for Data Lake Relational Engine](from-clause-for-data-lake-relational-engine-a7749cf.md)
 
 Joins can be specified using join operators. For more information, see *FROM Clause*. A SELECT statement with no FROM clause can be used to display the values of expressions not derived from tables. For example, the following displays the value of the @@version global variable:
 
@@ -351,13 +409,52 @@ FOR XML
 </b></dt>
 <dd>
 
-This clause specifies that the result set is to be returned as an XML document. The format of the XML depends on the mode you specify. Cursors declared with FOR XML are implicitly READ ONLY.
+Specifies that the result set is to be returned as an XML document. The format of the XML depends on the mode you specify. Cursors declared with FOR XML are implicitly READ ONLY.
 
-When you specify RAW mode, each row in the result set is represented as an XML <row\> element, and each column is represented as an attribute of the <row\> element.
+```
+<xml-mode> ::=
+   { RAW [ , ELEMENTS ] 
+   | AUTO [ , ELEMENTS ] 
+   | EXPLICIT }
+```
 
-AUTO mode returns the query results as nested XML elements. Each table referenced in the select-list is represented as an element in the XML. The order of nesting for the elements is based on the order that tables are referenced in the select-list.
 
-EXPLICIT mode allows you to control the form of the generated XML document. Using EXPLICIT mode offers more flexibility in naming elements and specifying the nesting structure than either RAW or AUTO mode.
+<dl>
+<dt><b>
+
+RAW
+
+</b></dt>
+<dd>
+
+Each row in the result set is represented as an XML <row\> element, and each column is represented as an attribute of the <row\> element.
+
+
+
+</dd><dt><b>
+
+AUTO
+
+</b></dt>
+<dd>
+
+Returns the query results as nested XML elements. Each table referenced in the select-list is represented as an element in the XML. The order of nesting for the elements is based on the order that tables are referenced in the select-list.
+
+
+
+</dd><dt><b>
+
+EXPLICIT
+
+</b></dt>
+<dd>
+
+Allows control of the form of the generated XML document. Using EXPLICIT mode offers more flexibility in naming elements and specifying the nesting structure than either RAW or AUTO mode.
+
+
+
+</dd>
+</dl>
 
 
 
@@ -391,12 +488,9 @@ The LIMIT keyword is disabled by default. Use the RESERVED\_KEYWORDS option to e
 Use a global database option to override for a given statement.
 
 ```
-<materialized_view_staleness_options_list > ::=
-   <materialized_view_staleness_option> [, <materialized_view_staleness_option>, ...]
-
 <materialized_view_staleness_option> ::=
-   materialized_view_staleness_check = <materialized_view_staleness_check_value>
-   | materialized_view_staleness_limit = <materialized_view_staleness_limit_value>;
+   { materialized_view_staleness_check = <materialized_view_staleness_check_value>
+   | materialized_view_staleness_limit = <materialized_view_staleness_limit_value> }
 ```
 
 
@@ -553,7 +647,7 @@ ROLLUP syntax:
 ```
 SELECT … [ GROUPING ( <column-name >) …] …
 GROUP BY [ <expression> [, …]
-| ROLLUP ( <expression> [, …] ) ];
+| ROLLUP ( <expression> [, …] ) ]
 ```
 
 GROUPING takes a column name as a parameter and returns a Boolean value:
@@ -641,7 +735,7 @@ CUBE syntax:
 ```
 SELECT … [ GROUPING ( <column-name> ) …] …
 GROUP BY [ <expression> [, …]
-| CUBE ( <expression> [, …] ) ];
+| CUBE ( <expression> [, …] ) ]
 ```
 
 GROUPING takes a column name as a parameter and returns a Boolean value:
@@ -738,14 +832,16 @@ In these circumstances, subtle differences between the semantics of SQL Anywhere
 
 ## Privileges
 
-To SELECT from tables, views, and materialized views requires one of:
+
+
+### 
+
+To SELECT from tables, views, and materialized views requires one of the following:
 
 -   You own the object
 -   SELECT ANY TABLE system privilege
 -   SELECT object-level privilege on the object
 -   SELECT object-level privilege on the schema containing the object if the schema is owned by another user.
-
-See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md) or [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md) for assistance with granting privileges.
 
 
 
@@ -848,7 +944,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[SELECT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7123f8b4e1f14a8f9efd257794202198.html "Retrieves information from the database.") :arrow_upper_right:
+[SELECT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/7123f8b4e1f14a8f9efd257794202198.html "Retrieves information from the database.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
@@ -860,7 +956,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [FETCH Statement \[ESQL\] \[SP\] for Data Lake Relational Engine](fetch-statement-esql-sp-for-data-lake-relational-engine-a61e5e2.md "Retrieves one row from the named cursor. The cursor must have been previously opened.")
 
-[FROM Clause for Data Lake Relational Engine](from-clause-for-data-lake-relational-engine-a7749cf.md "Specifies the database tables or views involved in a SELECT statement.")
+[FROM Clause for Data Lake Relational Engine](from-clause-for-data-lake-relational-engine-a7749cf.md "Specifies the objects involved in a SELECT, DELETE or UPDATE statement.")
 
 [MAX\_CUBE\_RESULT Option for Data Lake Relational Engine](../090-database-options/max-cube-result-option-for-data-lake-relational-engine-a63df9a.md "Sets the maximum number of rows that the IQ optimizer considers for a GROUP BY CUBE operation.")
 

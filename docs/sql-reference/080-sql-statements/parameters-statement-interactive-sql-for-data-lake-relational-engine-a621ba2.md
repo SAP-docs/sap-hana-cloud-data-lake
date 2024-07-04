@@ -36,7 +36,7 @@ PARAMETERS <parameter1>, <parameter2>, …
 Parameters are referenced by putting the named parameter into the command file where you want the parameter to be substituted:
 
 ```
-{parameter1};
+{parameter1}
 ```
 
 There can be no spaces between the braces and the parameter name.

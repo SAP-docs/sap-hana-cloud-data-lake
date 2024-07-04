@@ -41,7 +41,7 @@ FROM
 </b></dt>
 <dd>
 
-Specifies the name of a text configuration object to use as the template for creating the new text configuration object. The names of the default text configuration objects are DEFAULT\_CHAR and DEFAULT\_NCHAR. DEFAULT\_CHAR is supported for data lake Relational Engine tables only; DEFAULT\_NCHAR is supported on SAP SQL Anywhere tables only.
+Specifies the name of a text configuration object to use as the template for creating the new text configuration object. The names of the default text configuration objects are DEFAULT\_CHAR and DEFAULT\_NCHAR. DEFAULT\_CHAR is supported for data lake Relational Engine tables only; DEFAULT\_NCHAR is supported on SAP SQL Anywhere tables only. When creating the first text configuration, to satisfy the *<existing-config-name\>* parameter requirement , use DEFAULT\_CHAR.
 
 
 
@@ -71,8 +71,8 @@ To view the list of all text configuration objects and their settings in the dat
 
 -   To create a text configuration in a schema requires one of the following:
     -   You own the schema.
-    -   CREATE ANY TEXT CONFIGURATION object-level privilege on the schema
-    -   CREATE ANY OBJECT object-level privilege on the schema
+    -   CREATE ANY TEXT CONFIGURATION system privilege
+    -   CREATE ANY OBJECT system privilege
     -   CREATE ANY object-level privilege on the schema
 
 

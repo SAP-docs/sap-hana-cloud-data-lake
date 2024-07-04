@@ -197,5 +197,5 @@ SELECT connection_property('Timestamp_rtruncation');
 
 [Date and Time Data Types in Data Lake Relational Engine](../020-sql-data-types/date-and-time-data-types-in-data-lake-relational-engine-a51e8fb.md "Use date and time data types for storing dates and times.")
 
-[TIMESTAMP_RTRUNCATION Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7ea796c77e5047c78acff41829be70aa.html "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.") :arrow_upper_right:
+[TIMESTAMP_RTRUNCATION Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/7ea796c77e5047c78acff41829be70aa.html "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.") :arrow_upper_right:
 

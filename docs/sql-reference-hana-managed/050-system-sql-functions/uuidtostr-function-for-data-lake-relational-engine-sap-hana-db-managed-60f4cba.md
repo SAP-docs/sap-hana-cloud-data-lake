@@ -61,7 +61,7 @@ Converts a unique identifier to a string value in the format *<xxxxxxxx-xxxx-xxx
 
 <a name="loio60f4cba865204365bd10f0d9cfb44fc6__section_wsh_lgv_vrb"/>
 
-## Example
+## Examples
 
 To convert a unique identifier value into a readable format, execute a query similar to:
 
@@ -76,5 +76,5 @@ SELECT UUIDTOSTR(pk) FROM T3;
 **Related Information**  
 
 
-[UUIDTOSTR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a58e3ffd84f2101593c5c09c7d64fec4.html "Converts a unique identifier value (UUID, also known as GUID) to a string value.") :arrow_upper_right:
+[UUIDTOSTR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a58e3ffd84f2101593c5c09c7d64fec4.html "Converts a unique identifier value (UUID, also known as GUID) to a string value.") :arrow_upper_right:
 

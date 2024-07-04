@@ -179,7 +179,7 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </b></dt>
 <dd>
 
--   Requires EXECUTE object-level privilege on the procedure.
+-   Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -192,7 +192,7 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -204,7 +204,7 @@ CREATE TABLE PRODUCTS (NAME VARCHAR(15), COLOR VARCHAR(10));
 INSERT INTO PRODUCTS  VALUES ('Tee Shirt','Black');
 INSERT INTO PRODUCTS VALUES ('Baseball Cap', 'Black');
 INSERT INTO PRODUCTS VALUES ('Visor', 'Black');
-INSERT INTO PRODUCTS VALUES ('Shorts', 'Black');;
+INSERT INTO PRODUCTS VALUES ('Shorts', 'Black');
 ```
 
 This example returns a list of black colored products.
@@ -233,7 +233,7 @@ Tee Shirt,Baseball Cap,Visor,Shorts
 </tr>
 </table>
 
-This example uses the sa\_split\_list system procedure to return the original result set from the aggregated list.
+This example returns the original result set from the aggregated list.
 
 ```
 CALL sa_split_list( 'Tee Shirt,Baseball Cap,Visor,Shorts' );
@@ -380,5 +380,5 @@ six
 
 [LIST Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../050-system-sql-functions/list-function-for-data-lake-relational-engine-sap-hana-db-managed-7b4801a.md "Returns a delimited list of values for every row in a group.")
 
-[sa_split_list System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8177739d6ce21014b82ebbcba7441f0b.html "Takes a string of values, separated by a delimiter, and returns a set of rows (one row for each value).") :arrow_upper_right:
+[sa_split_list System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/8177739d6ce21014b82ebbcba7441f0b.html "Takes a string of values, separated by a delimiter, and returns a set of rows (one row for each value).") :arrow_upper_right:
 

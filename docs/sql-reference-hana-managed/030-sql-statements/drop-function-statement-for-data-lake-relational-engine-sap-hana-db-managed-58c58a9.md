@@ -89,7 +89,7 @@ Connected directly to data lake Relational Engine **coordinator** as a data lake
 </b></dt>
 <dd>
 
--   Requires one of:
+-   Requires one of the following:
     -   You own the procedure.
     -   DROP ANY PROCEDURE system privilege
     -   DROP ANY OBJECT system privilege
@@ -102,7 +102,7 @@ Connected directly to data lake Relational Engine **coordinator** as a data lake
 </dd>
 </dl>
 
-See [GRANT System Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a3dfcb0284f21015b74ac3cded42ee69.html "Grants specific system privileges to users or roles, with or without administrative rights.") :arrow_upper_right: or [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right: for assistance with granting privileges.
+See [GRANT System Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a3dfcb0284f21015b74ac3cded42ee69.html "Grants specific system privileges to users or roles, with or without administrative rights.") :arrow_upper_right: or [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right: for assistance with granting privileges.
 
 
 
@@ -139,5 +139,5 @@ DROP FUNCTION IF EXISTS myfunction1;
 
 [ALTER FUNCTION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](alter-function-statement-for-data-lake-relational-engine-sap-hana-db-managed-3d7a54b.md "Modifies an existing function. Include the entire modified function in the ALTER FUNCTION statement.")
 
-[DROP FUNCTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/d42de2d8355a4762b5a47e810d55653f.html "Removes a user-defined function from the database.") :arrow_upper_right:
+[DROP FUNCTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/d42de2d8355a4762b5a47e810d55653f.html "Removes a user-defined function from the database.") :arrow_upper_right:
 

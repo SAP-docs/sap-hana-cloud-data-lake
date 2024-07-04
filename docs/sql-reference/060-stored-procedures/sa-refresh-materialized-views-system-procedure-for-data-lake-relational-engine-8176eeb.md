@@ -48,7 +48,7 @@ Use this optional INTEGER parameter to specify whether to return errors during t
 
 ## Results Set
 
-None
+None.
 
 
 
@@ -72,8 +72,8 @@ You can also use the REFRESH MATERIALIZED VIEW statement to initialize a materia
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure.
--   ALTER ANY MATERIALIZED VIEW system privilege
+-   EXECUTE object-level privilege on this procedure
+-   SELECT object-level privilege on SYSOBJECT
 
 
 
@@ -81,7 +81,7 @@ Requires all of the following:
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -89,7 +89,7 @@ None
 
 ## Examples
 
-This example uses the sa\_refresh\_materialized\_views system procedure to initialize all materialized views that are in an uninitialized state. Errors are ignored.
+This example initializes all materialized views that are in an uninitialized state. Errors are ignored.
 
 ```
 CALL sa_refresh_materialized_views( 1 );
@@ -102,11 +102,11 @@ CALL sa_refresh_materialized_views( 1 );
 
 [sa\_materialized\_view\_can\_have\_refresh\_build\_type System Procedure for Data Lake Relational Engine](sa-materialized-view-can-have-refresh-build-type-system-procedure-for-data-lake-relationa-7d2d2da.md "Checks whether the materialized view supports the specified refresh and build type properties.")
 
-[sp\_iqmaterializedviewstaleness Procedure for Data Lake Relational Engine](sp-iqmaterializedviewstaleness-procedure-for-data-lake-relational-engine-a762f3b.md "Displays staleness information about the visible version of a materialized view.")
+[sp\_iqmaterializedviewstaleness System Procedure for Data Lake Relational Engine](sp-iqmaterializedviewstaleness-system-procedure-for-data-lake-relational-engine-a762f3b.md "Displays staleness information about the visible version of a materialized view.")
 
 [CREATE MATERIALIZED VIEW Statement for Data Lake Relational Engine](../080-sql-statements/create-materialized-view-statement-for-data-lake-relational-engine-d5c757e.md "Creates a materialized view.")
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine](../080-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-faab95d.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_refresh_materialized_views System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3b20ca4caa7e4ecb9000e15b95d23644.html "Initializes all materialized views that are in an uninitialized state.") :arrow_upper_right:
+[sa_refresh_materialized_views System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/3b20ca4caa7e4ecb9000e15b95d23644.html "Initializes all materialized views that are in an uninitialized state.") :arrow_upper_right:
 

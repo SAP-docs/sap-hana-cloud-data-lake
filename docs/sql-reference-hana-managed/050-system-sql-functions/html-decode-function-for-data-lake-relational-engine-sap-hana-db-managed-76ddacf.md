@@ -197,5 +197,5 @@ SELECT HTML_DECODE('&lt;p&gt;It cost &euro;85.000,000.&lt;/p&gt;');
 **Related Information**  
 
 
-[HTML_DECODE Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/81f8bbdd6ce21014a76ca7e38126b096.html "Decodes special character entities that appear in HTML literal strings.") :arrow_upper_right:
+[HTML_DECODE Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/81f8bbdd6ce21014a76ca7e38126b096.html "Decodes special character entities that appear in HTML literal strings.") :arrow_upper_right:
 

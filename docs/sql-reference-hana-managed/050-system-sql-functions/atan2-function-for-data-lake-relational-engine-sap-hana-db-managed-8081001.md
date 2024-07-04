@@ -63,7 +63,7 @@ DOUBLE
 
 <a name="loio8081001d5f8e4323a5f13cc57fb91cf1__section_l2w_n3k_srb"/>
 
-## Example
+## Examples
 
 The following statement returns the value 0.00866644968879073143:
 
@@ -74,5 +74,5 @@ SELECT ATAN2( 0.52, 060 ) FROM iq_dummy;
 **Related Information**  
 
 
-[ATAN2 Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5356c1b84f210159f68d03274510fe6.html "Returns the arc-tangent, in radians, of the ratio of two numbers.") :arrow_upper_right:
+[ATAN2 Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a5356c1b84f210159f68d03274510fe6.html "Returns the arc-tangent, in radians, of the ratio of two numbers.") :arrow_upper_right:
 

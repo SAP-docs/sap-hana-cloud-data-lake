@@ -140,7 +140,7 @@ Data lake Relational Engine does not provide support for 64-bit integer, as SAP 
 
 <a name="loioa62daafc84f21015b621feed0116ead6__iq_refso_362"/>
 
-## Example
+## Examples
 
 In this example, the HEXTOINT function returns a different value based on whether ASE\_BEHAVIOR\_FUNCTION is ON or OFF.
 

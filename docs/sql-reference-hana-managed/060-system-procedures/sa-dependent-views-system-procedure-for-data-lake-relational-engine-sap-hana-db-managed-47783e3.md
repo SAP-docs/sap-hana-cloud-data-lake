@@ -169,10 +169,12 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </b></dt>
 <dd>
 
-Requires EXECUTE object-level privilege on the procedure, along with one of the following:
+Requires EXECUTE object-level privilege on this procedure. Also requires one of the following:
 
+-   You own the underlying table of the view
+-   SELECT ANY TABLE system privilege
 -   SELECT object-level privilege on the view and its underlying tables
--   SELECT object-level privilege on the schema of the view and its underlying tables
+-   SELECT object-level privilege on the schema of the view and its underlying tables if the schema is owned by another user
 
 
 
@@ -185,7 +187,7 @@ Requires EXECUTE object-level privilege on the procedure, along with one of the 
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -195,7 +197,7 @@ None
 
 ### 
 
-This example uses sa\_dependent\_views to list the id's of the views dependent on the table mytable. Mytable is in the user-created schema myschema1 in relational containerSYSHDL\_CONTAINER1.
+This example returns the id's of the views dependent on the table mytable. mytable is in the user-created schema myschema1 in relational containerSYSHDL\_CONTAINER1.
 
 ```
 CALL sa_dependent_views( 'mytable','SYSHDL_CONTAINER1_MYSCHEMA1' );
@@ -256,5 +258,5 @@ dep\_view\_id
 **Related Information**  
 
 
-[sa_dependent_views System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3be595096c5f101489d8d608a7ef882e.html "Returns the list of all dependent views for a given table or view.") :arrow_upper_right:
+[sa_dependent_views System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/3be595096c5f101489d8d608a7ef882e.html "Returns the list of all dependent views for a given table or view.") :arrow_upper_right:
 

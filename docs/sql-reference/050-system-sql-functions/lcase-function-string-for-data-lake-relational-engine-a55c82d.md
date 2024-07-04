@@ -64,7 +64,7 @@ The result data type is a LONG VARCHAR. If you use LCASE in a SELECT INTO statem
 
 <a name="loioa55c82d484f210158fe3bfeba4f0e0bd__LCASE_example1"/>
 
-## Example
+## Examples
 
 The following statement returns the value "lower case":
 
@@ -89,5 +89,5 @@ SELECT LCASE( 'LOWER CasE' ) FROM iq_dummy;
 
 [UPPER Function \[String\] for Data Lake Relational Engine](upper-function-string-for-data-lake-relational-engine-a58cbc0.md "Converts all characters in a string to uppercase.")
 
-[LCASE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/d968d3bd4e5c4662962a776072f95601.html "Converts all characters in a string to lowercase.") :arrow_upper_right:
+[LCASE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/d968d3bd4e5c4662962a776072f95601.html "Converts all characters in a string to lowercase.") :arrow_upper_right:
 

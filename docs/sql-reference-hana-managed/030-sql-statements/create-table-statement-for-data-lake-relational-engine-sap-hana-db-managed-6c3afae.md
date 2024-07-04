@@ -90,7 +90,7 @@ Defines a table column. Allowable data types are described in *Data Types*. Two 
 </b></dt>
 <dd>
 
-For a list of supported data types, see [Available Data Types for CREATE TABLE in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/4ef997d6e54344e6831f93d730075e51.html "A list of available data types when using the CREATE TABLE statement in data lake Relational Engine.") :arrow_upper_right:.
+For a list of supported data types, see [Available Data Types for CREATE TABLE in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/4ef997d6e54344e6831f93d730075e51.html "A list of available data types when using the CREATE TABLE statement in data lake Relational Engine.") :arrow_upper_right:.
 
 
 
@@ -308,7 +308,7 @@ Column and table constraints help ensure the integrity of data in the database.
      [ IN <dbspace-name> ]
      | <foreign-key-constraint>
      | CHECK ( <condition> )
-   };
+   }
 ```
 
 
@@ -874,5 +874,5 @@ Automatic commit
 
 [Data Types Compatibility with SAP HANA Database for the CREATE TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](data-types-compatibility-with-sap-hana-database-for-the-create-table-statement-for-data-l-e77d888.md "The data lake Relational Engine CREATE TABLE statement lets you create a data lake Relational Engine physical table.")
 
-[CREATE TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a619764084f21015b8039a8346dc622c.html "Creates a new table in the database or on a remote server.") :arrow_upper_right:
+[CREATE TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a619764084f21015b8039a8346dc622c.html "Creates a new table in the database or on a remote server.") :arrow_upper_right:
 

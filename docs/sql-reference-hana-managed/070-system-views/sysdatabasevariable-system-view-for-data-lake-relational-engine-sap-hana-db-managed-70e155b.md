@@ -246,5 +246,5 @@ To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE priv
 **Related Information**  
 
 
-[SYSDATABASEVARIABLE System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/4e5f2244dbb9401592a7e6346198afa0.html "Each row in the SYSDATABASEVARIABLE system view describes one database-scope variable in the database. The underlying system table for this view is ISYSDATABASEVARIABLE.") :arrow_upper_right:
+[SYSDATABASEVARIABLE System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/4e5f2244dbb9401592a7e6346198afa0.html "Each row in the SYSDATABASEVARIABLE system view describes one database-scope variable in the database. The underlying system table for this view is ISYSDATABASEVARIABLE.") :arrow_upper_right:
 

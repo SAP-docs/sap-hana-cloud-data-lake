@@ -62,7 +62,7 @@ The ISNULL function is the same as the COALESCE function.
 
 <a name="loioa55a73cd84f21015ae0b9236251e12e7__ISNULL_example1"/>
 
-## Example
+## Examples
 
 The following statement returns the value -66:
 
@@ -75,5 +75,5 @@ SELECT ISNULL( NULL ,-66, 55, 45, NULL, 16 ) FROM iq_dummy;
 
 [COALESCE Function \[Miscellaneous\] for Data Lake Relational Engine](coalesce-function-miscellaneous-for-data-lake-relational-engine-a53d627.md "Returns the first non-NULL expression from a list.")
 
-[ISNULL Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/4140080f259d4f1a9fc85ce11cab8d55.html "Returns the value of the first non-NULL expression in the parameter list.") :arrow_upper_right:
+[ISNULL Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/4140080f259d4f1a9fc85ce11cab8d55.html "Returns the value of the first non-NULL expression in the parameter list.") :arrow_upper_right:
 

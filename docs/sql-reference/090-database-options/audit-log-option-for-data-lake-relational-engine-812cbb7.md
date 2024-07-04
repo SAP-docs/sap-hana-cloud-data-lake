@@ -21,7 +21,9 @@ This data lake Relational Engine database option can be used when connected as f
 ## Syntax
 
 ```
-AUDIT_LOG = [ FILE ( filename_prefix='<path-and-filename>'; [ <target-parameter> [;...] ])];
+AUDIT_LOG = 'FILE ( filename_prefix=<path-and-filename>;
+   [ flush_on_write = { ON | OFF }; ]
+   [ compressed = { ON | OFF } ] )'
 ```
 
 
@@ -30,98 +32,43 @@ AUDIT_LOG = [ FILE ( filename_prefix='<path-and-filename>'; [ <target-parameter>
 
 ## Allowed Values
 
-```
-<target-parameter> : 
-  <target-parameter-name> = <target-parameter-value>[;...]
 
-<target-parameter-name>
-   flush_on_write;
-  | compressed; 
-};
+<dl>
+<dt><b>
 
-```
+*<path-and-filename\>*
 
+</b></dt>
+<dd>
 
-
-<a name="loio812cbb736ce2101490b7fab431caa9ff__audit_log_parameters1"/>
-
-## Parameters
+A log file name prefix with or without a path. All log files have the extension `.etd`. If a full path is not specified, then the directory where the database is located is used as the root directory.
 
 
-<table>
-<tr>
-<th valign="top">
 
-Parameter name
+</dd><dt><b>
 
-</th>
-<th valign="top">
+flush\_on\_write
 
-Value
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-*filename\_prefix* 
-
-</td>
-<td valign="top">
-
-\(Required\) A log file name prefix with or without a path. All log files have the extension `.etd`. If a full path is not specified, then the directory where the database is located is used as the root directory.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-*max\_size* 
-
-</td>
-<td valign="top">
-
-The maximum size of the file in bytes. The default is 0, which means there is no limit on the file size, and the file grows as long as disk space is available. Once the specified size is reached, a new file is started.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-*num\_files* 
-
-</td>
-<td valign="top">
-
-The number of files where event tracing information is written. This setting is used only if *<max\_size\>* is set. If all the files reach the maximum specified size, then the database server overwrites the oldest file.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-*flush\_on\_write* 
-
-</td>
-<td valign="top">
+</b></dt>
+<dd>
 
 A Boolean value that controls whether disk buffers are flushed for each event that is logged. The default is ON. When this parameter is turned on, the performance of the database server may be reduced if many trace events are being logged.
 
-</td>
-</tr>
-<tr>
-<td valign="top">
 
-*compressed* 
 
-</td>
-<td valign="top">
+</dd><dt><b>
+
+compressed
+
+</b></dt>
+<dd>
 
 A Boolean value that controls compression of the log file to conserve disk space. The default is OFF.
 
-</td>
-</tr>
-</table>
+
+
+</dd>
+</dl>
 
 
 
@@ -251,11 +198,13 @@ If a FILE target is specified, then the database uses an internal trace event se
 The following statement sets the audit log to an ETD file target with the prefix '`audit_log`'.
 
 ```
-SET OPTION PUBLIC.audit_log = 'FILE(filename_prefix=audit_log)';
+SET OPTION PUBLIC.audit_log = 'FILE(filename_prefix=my_audit_log; flush_on_write = ON; compressed = OFF)';
 ```
 
 **Related Information**  
 
+
+[AUDIT_LOG Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/cb45fed1ddb94d34afb66328c1f412d8.html "Specifies the type and location of the audit log.") :arrow_upper_right:
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 

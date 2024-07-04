@@ -142,7 +142,7 @@ Not in the standard.
 
 <a name="loiod827f8589599403c94bd8700114c9e46__section_k5r_12b_fzb"/>
 
-## Example
+## Examples
 
 This example creates a certificate with a JWT purpose.
 
@@ -162,5 +162,5 @@ FROM '-----BEGIN CERTIFICATE-----
 
 [SYSCERTIFICATE System View for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../070-system-views/syscertificate-system-view-for-data-lake-relational-engine-sap-hana-db-managed-cad9c1f.md "Each row of the SYSCERTIFICATE system view stores a certificate in text PEM-format. This view includes certificates with and without an associated PSE.")
 
-[CREATE CERTIFICATE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/816b6bb36ce21014a7a7a27482e677e1.html "Adds or replaces a certificate in the database using the given file or string.") :arrow_upper_right:
+[CREATE CERTIFICATE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/816b6bb36ce21014a7a7a27482e677e1.html "Adds or replaces a certificate in the database using the given file or string.") :arrow_upper_right:
 

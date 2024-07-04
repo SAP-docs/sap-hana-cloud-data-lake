@@ -86,5 +86,5 @@ DROP TRACE EVENT my_event;
 
 [CREATE TEMPORARY TRACE EVENT Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-temporary-trace-event-statement-for-data-lake-relational-engine-sap-hana-db-manage-648c6bf.md "Creates a user trace event that persists until the database is stopped.")
 
-[DROP TRACE EVENT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/816f81ae6ce210149309e843cf27de9d.html "Drops a user-defined trace event.") :arrow_upper_right:
+[DROP TRACE EVENT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/816f81ae6ce210149309e843cf27de9d.html "Drops a user-defined trace event.") :arrow_upper_right:
 

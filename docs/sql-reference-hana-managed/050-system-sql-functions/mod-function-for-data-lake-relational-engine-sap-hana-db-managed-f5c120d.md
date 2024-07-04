@@ -73,7 +73,7 @@ Division involving a negative *<dividend\>* gives a negative or zero result. The
 
 <a name="loiof5c120d23a114a08951fed08d45fecc1__section_m1l_xfn_vrb"/>
 
-## Example
+## Examples
 
 The following statement returns the value 2:
 
@@ -84,5 +84,5 @@ SELECT MOD( 5, 3 ) FROM iq_dummy;
 **Related Information**  
 
 
-[MOD Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5650e7684f21015b1dcafaf320a4d00.html "Returns the remainder when one whole number is divided by another.") :arrow_upper_right:
+[MOD Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a5650e7684f21015b1dcafaf320a4d00.html "Returns the remainder when one whole number is divided by another.") :arrow_upper_right:
 

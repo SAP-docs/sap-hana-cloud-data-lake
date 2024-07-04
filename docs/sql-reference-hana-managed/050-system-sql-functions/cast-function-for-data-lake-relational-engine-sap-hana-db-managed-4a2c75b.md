@@ -115,5 +115,5 @@ B NUMERIC(15,2);
 
 [TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-sap-hana-db-managed-7ea796c.md "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.")
 
-[CAST Function \[Data Type Conversion\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a53996d784f21015a34086a244c40db1.html "Returns the value of an expression converted to a supplied data type.") :arrow_upper_right:
+[CAST Function \[Data Type Conversion\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a53996d784f21015a34086a244c40db1.html "Returns the value of an expression converted to a supplied data type.") :arrow_upper_right:
 

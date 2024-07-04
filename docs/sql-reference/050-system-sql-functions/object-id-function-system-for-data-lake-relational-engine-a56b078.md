@@ -45,7 +45,7 @@ The name of the object.
 
 <a name="loioa56b078284f210158dec9fd05131e60d__iq_refbb_824"/>
 
-## Example
+## Examples
 
 The following statement returns the object ID 100209 of the *<Customers\>* table:
 

@@ -172,3 +172,5 @@ GRANT ALTER ANY PROCEDURE TO Sally WITH NO ADMIN OPTION
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](revoke-system-privilege-statement-for-data-lake-relational-engine-sap-hana-db-managed-2a45ac0.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
+[GRANT System Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a3dfcb0284f21015b74ac3cded42ee69.html "Grants specific system privileges to users or roles, with or without administrative rights.") :arrow_upper_right:
+

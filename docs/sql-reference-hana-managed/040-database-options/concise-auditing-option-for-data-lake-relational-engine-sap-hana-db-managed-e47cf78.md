@@ -12,7 +12,7 @@ Controls whether concise auditing or legacy auditing is used.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user..
+-   Connected to SAP HANA database as a SAP HANA database user.
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -47,11 +47,13 @@ ON
 
 ## Privileges
 
-Privilege Category: PUBLIC
+Privilege Category: SECURITY
 
 
 
 ### 
+
+The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method:
 
 
 <dl>
@@ -72,11 +74,6 @@ Connected to SAP HANA database as a SAP HANA database user:
     -   See [REMOTE\_EXECUTE Guidance and Examples for Setting Permanent Database Options](remote-execute-guidance-and-examples-for-setting-permanent-database-options-0023bea.md).
 
 
--   To set a database option temporarily, use the SET\_TEMPORARY\_OPTION procedure, which requires you be a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
-
-    -   See [SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md).
-
-
 
 
 
@@ -87,7 +84,10 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </b></dt>
 <dd>
 
--   Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this database option.
+Requires all of:
+
+-   MANAGE AUDITING system privilege
+-   SET ANY CUSTOMER SECURITY OPTION system privilege
 
 
 
@@ -137,12 +137,12 @@ Yes
 </td>
 <td valign="top">
 
-Yes
+No
 
 </td>
 <td valign="top">
 
-Yes
+No
 
 </td>
 </tr>
@@ -154,12 +154,12 @@ Allowed to set temporarily?
 </td>
 <td valign="top">
 
-Yes
+No
 
 </td>
 <td valign="top">
 
-Yes \(current connection only\)
+No
 
 </td>
 <td valign="top">
@@ -183,7 +183,7 @@ Concise auditing behavior was introduced in QRC 1/2024. Setting this option to O
 **Related Information**  
 
 
-[Auditing Database Events](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/4c20fb59d0e848e09ffb191c9d2c0b16.html "Auditing tracks all of the activity performed on a data lake Relational Engine database.") :arrow_upper_right:
+[Auditing Database Events](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/4c20fb59d0e848e09ffb191c9d2c0b16.html "Auditing tracks all of the activity performed on a data lake Relational Engine database.") :arrow_upper_right:
 
-[CONCISE_AUDITING Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/742c50f6746f4fb488ed6498e203def4.html "Controls whether concise auditing or legacy auditing is used.") :arrow_upper_right:
+[CONCISE_AUDITING Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/742c50f6746f4fb488ed6498e203def4.html "Controls whether concise auditing or legacy auditing is used.") :arrow_upper_right:
 

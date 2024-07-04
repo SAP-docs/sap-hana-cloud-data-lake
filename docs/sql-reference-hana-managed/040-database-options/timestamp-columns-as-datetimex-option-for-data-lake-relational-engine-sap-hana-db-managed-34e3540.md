@@ -6,14 +6,13 @@ Controls whether DATETIMEX data type columns are automatically created when TIME
 
 
 
-<a name="loio34e354059097469d9864ff18b541f343__section_qbq_5wh_q1c"/>
+<a name="loio34e354059097469d9864ff18b541f343__section_fcx_cxv_4bc"/>
 
 ## Usage
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user..
--   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user. This option cannot be set when connected to SAP HANA database as a SAP HANA database user.
 
 
 
@@ -99,42 +98,7 @@ Privilege Category: SYSTEM
 ### 
 
 > ### Restriction:  
-> This database option cannot be set temporarily, regardless of connection method.
-
-The privileges required depend on your data lake Relational Engine \(SAP HANA DB-Managed\) connection method and whether you are setting the option temporarily or permanently:
-
-
-<dl>
-<dt><b>
-
-Connected to SAP HANA database as a SAP HANA database user
-
-</b></dt>
-<dd>
-
-To set a database option permanently, use REMOTE\_EXECUTE.
-
--   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
--   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
-
--   See [REMOTE\_EXECUTE Guidance and Examples for Setting Permanent Database Options](remote-execute-guidance-and-examples-for-setting-permanent-database-options-0023bea.md).
-
-
-
-
-</dd><dt><b>
-
-Connected directly to data lake Relational Engine as a data lake Relational Engine user:
-
-</b></dt>
-<dd>
-
--   Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this database option.
-
-
-
-</dd>
-</dl>
+> This option can only be set when directly connected as the HDLADMIN user.
 
 
 
@@ -237,9 +201,9 @@ SET OPTION PUBLIC.TIMESTAMP_COLUMNS_AS_DATETIMEX = { ON | OFF };
 
 [SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md "Grant database options temporarily for the current connection only on a data lake Relational Engine relational container.")
 
-[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
+[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
 
 [TIMESTAMP Data Type Precision in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-sap-hana-db-managed-5cbca14.md "Precision conflicts between TIMESTAMP data types result in data loss.")
 
-[TIMESTAMP_COLUMNS_AS_DATETIMEX Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/082fdf9f04bc43acbc014a0842c43ea9.html "Controls whether DATETIMEX data type columns are automatically created when TIMESTAMPS data type columns are requested.") :arrow_upper_right:
+[TIMESTAMP_COLUMNS_AS_DATETIMEX Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/082fdf9f04bc43acbc014a0842c43ea9.html "Controls whether DATETIMEX data type columns are automatically created when TIMESTAMPS data type columns are requested.") :arrow_upper_right:
 

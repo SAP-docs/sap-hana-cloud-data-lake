@@ -134,7 +134,7 @@ No
 
 For the catalog store only, PREFETCH controls whether rows are fetched to the client side before being made available to the client application. Fetching a number of rows at a time, even when the client application requests rows one at a time \(for example, when looping over the rows of a cursor\) minimizes response time and improves overall throughput by limiting the number of requests to the database.
 
-The setting of PREFETCH is ignored by Open Client and JDBC connections, and for the IQ store.
+The setting of PREFETCH is ignored by Open Client and JDBC connections, and for the main and temporary stores.
 
 **Related Information**  
 

@@ -157,8 +157,9 @@ Start and stop trace event sessions manually by using the STATE clause of the AL
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   MANAGE ANY TRACE SESSION system privilege
+-   MANAGE AUDITING system privilege
 
 
 
@@ -166,7 +167,7 @@ Requires all of the following:
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -174,7 +175,7 @@ None
 
 ## Examples
 
-This statement returns a list of trace event sessions for the current database:
+This example returns a list of trace event sessions for the current database:
 
 ```
 CALL sp_trace_event_sessions( );
@@ -292,7 +293,7 @@ NULL
 </tr>
 </table>
 
-This statement returns information on the trace event session my\_session:
+This example returns information on the trace event session my\_session:
 
 ```
 CALL sp_trace_event_sessions('my_session' );
@@ -359,5 +360,5 @@ NULL
 **Related Information**  
 
 
-[sp_trace_event_sessions System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3a8340e1d6cd40ebbb3717c9530a2047.html "Returns a list of the trace event sessions that are defined for the database.") :arrow_upper_right:
+[sp_trace_event_sessions System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/3a8340e1d6cd40ebbb3717c9530a2047.html "Returns a list of the trace event sessions that are defined for the database.") :arrow_upper_right:
 

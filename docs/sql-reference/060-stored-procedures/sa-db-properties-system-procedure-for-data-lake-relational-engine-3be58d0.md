@@ -17,7 +17,7 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 
 ```
-sa_db_properties(  )
+sa_db_properties()
 ```
 
 
@@ -142,25 +142,23 @@ The database property value.
 
 If you specify a database ID, the sa\_db\_properties system procedure returns the database ID number and the PropNum, PropName, PropDescription, and Value for each available database property. Values are returned for all database properties and statistics related to databases. Valid properties with NULL values are also returned.
 
-If *<dbidparm\>* is greater than zero, then database properties for the supplied database are returned. If *<dbidparm\>* is less than zero, then database properties for the current database are returned. If *<dbidparm\>* is not supplied or is NULL, then database properties for all databases running on the database server are returned.
-
 
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure. To execute this procedure for other databases, also requires MONITOR system privilege.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-This example uses the sa\_db\_properties system procedure to return a result set summarizing database properties for the database.
+This example returns a result set summarizing database properties for the database.
 
 ```
 CALL sa_db_properties( );

@@ -174,7 +174,7 @@ This option can only be set temporarily for the current connection. When you iss
 **Related Information**  
 
 
-[Transactional DDL in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/b2cc85f7c63242aca62bf0ee446b6524.html "Transactional DDL lets you execute an arbitrary number of DDL statements as a single transaction and then decide whether to commit or roll back the transaction as a whole.") :arrow_upper_right:
+[Transactional DDL in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/b2cc85f7c63242aca62bf0ee446b6524.html "Transactional DDL lets you execute an arbitrary number of DDL statements as a single transaction and then decide whether to commit or roll back the transaction as a whole.") :arrow_upper_right:
 
 [AUTO\_COMMIT Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](auto-commit-option-for-data-lake-relational-engine-sap-hana-db-managed-cf5e812.md "Causes an automatic commit after every DML request.")
 

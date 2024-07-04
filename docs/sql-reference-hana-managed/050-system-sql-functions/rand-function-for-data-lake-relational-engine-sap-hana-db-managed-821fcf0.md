@@ -86,5 +86,5 @@ When no argument is called, `RAND` is a non-deterministic function. Successive c
 **Related Information**  
 
 
-[RAND Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a572b2db84f210159574b044cfd9dcb6.html "Returns a DOUBLE precision, random number x, where 0 <= x <1, with an optional seed.") :arrow_upper_right:
+[RAND Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a572b2db84f210159574b044cfd9dcb6.html "Returns a DOUBLE precision, random number x, where 0 <= x <1, with an optional seed.") :arrow_upper_right:
 

@@ -148,7 +148,7 @@ If ANSI\_UPDATE\_CONSTRAINTS is set to CURSORS or STRICT, cursors containing an 
 
 <a name="loioa62d1d0684f21015aea99796080bc84e__iq_refso_347"/>
 
-## Example
+## Examples
 
 This code has a different effect, depending on the setting of ANSI\_UPDATE\_CONSTRAINTS:
 

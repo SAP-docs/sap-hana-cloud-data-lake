@@ -74,7 +74,7 @@ Interactive SQL determines the code page that is used for a particular OUTPUT or
 
 <a name="loioa63407dc84f210158c18c91e4587106b__iq_refso_493"/>
 
-## Example
+## Examples
 
 Set the encoding to UTF-16 \(for reading Unicode files\):
 

@@ -70,7 +70,7 @@ Standard deviations are computed according to the following formula, which assum
 
 <a name="loioa584728f84f210158226d1181b68d335__STDDEV_SAMP_example1"/>
 
-## Example
+## Examples
 
 The following statement lists the average and variance in the number of items per order in different time periods:
 
@@ -179,5 +179,5 @@ Variance
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[STDDEV_SAMP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/ae8f4df1cf8d477e881f9e3360210ae0.html "Computes the standard deviation of a sample consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
+[STDDEV_SAMP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/ae8f4df1cf8d477e881f9e3360210ae0.html "Computes the standard deviation of a sample consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
 

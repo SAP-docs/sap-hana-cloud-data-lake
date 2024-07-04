@@ -68,7 +68,7 @@ DENSE\_RANK is allowed only in the select list of a SELECT or INSERT statement o
 
 <a name="loioa54d078b84f21015b96984e51c0cb74a__DENSE_RANK_examples1"/>
 
-## Example
+## Examples
 
 The following statement illustrates the use of the DENSE\_RANK function:
 
@@ -92,5 +92,5 @@ supplier#021     10,000             5
 
 [RANK Function \[Analytical\] for Data Lake Relational Engine](rank-function-analytical-for-data-lake-relational-engine-a57337e.md "Ranks items in a group.")
 
-[DENSE_RANK Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/f68bfad26916474fba05b8e4555bf58e.html "Ranks items in a group.") :arrow_upper_right:
+[DENSE_RANK Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/f68bfad26916474fba05b8e4555bf58e.html "Ranks items in a group.") :arrow_upper_right:
 

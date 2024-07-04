@@ -43,7 +43,7 @@ DROP { JWT | x509 } PROVIDER <provider_name> [ CASCADE ]
 Specifies the identifier of a provider to drop.
 
 ```
-<provider_name> ::= <simple_identifier>;
+<provider_name> ::= <simple_identifier>
 ```
 
 
@@ -78,7 +78,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 <a name="loioc20d71c4c669410780a5cab922e71c5d__section_gwx_f3p_p4b"/>
 
-## Example
+## Examples
 
 This example drops the JWT provider myjwtprovider1.
 
@@ -101,5 +101,5 @@ DROP X509 PROVIDER myx509provider2;
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[X.509 Certificate-Based User Authentication](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/c9bf672bbc2849568a1ff1d2fbc9a78d.html "Data lake Relational Engine supports X.509 client certificates for user authentication.") :arrow_upper_right:
+[X.509 Certificate-Based User Authentication](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/c9bf672bbc2849568a1ff1d2fbc9a78d.html "Data lake Relational Engine supports X.509 client certificates for user authentication.") :arrow_upper_right:
 

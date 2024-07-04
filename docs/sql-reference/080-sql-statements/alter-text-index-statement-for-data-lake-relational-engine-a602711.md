@@ -29,7 +29,7 @@ ALTER TEXT INDEX [ { <owner> | <schema-name> }.]<text-index-name>
 
 
 
-<a name="loioa602711784f21015955aed036a843754__IQ_Parameters"/>
+<a name="loioa602711784f21015955aed036a843754__alter_text_index_parameters1"/>
 
 ## Parameters
 
@@ -51,11 +51,15 @@ Renames the TEXT index.
 
 
 
-<a name="loioa602711784f21015955aed036a843754__IQ_Permissions"/>
+<a name="loioa602711784f21015955aed036a843754__alter_text_index_privileges1"/>
 
 ## Privileges
 
-Requires one of:
+
+
+### 
+
+Requires one of the following:
 
 -   You own the underlying table of the index.
 -   ALTER ANY INDEX system privilege
@@ -68,7 +72,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 
 
-<a name="loioa602711784f21015955aed036a843754__IQ_Side_Effects"/>
+<a name="loioa602711784f21015955aed036a843754__alter_text_index_side_effects1"/>
 
 ## Side Effects
 
@@ -76,7 +80,7 @@ Automatic commit
 
 
 
-<a name="loioa602711784f21015955aed036a843754__IQ_Examples"/>
+<a name="loioa602711784f21015955aed036a843754__alter_text_index_examples1"/>
 
 ## Examples
 

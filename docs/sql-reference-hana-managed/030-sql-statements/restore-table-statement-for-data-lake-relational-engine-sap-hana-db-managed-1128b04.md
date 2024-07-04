@@ -23,6 +23,11 @@ RESTORE TABLE <schema-name>.<table_name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loio1128b04e1d5b4d36a35367e1f3c8cbf4__section_y3w_pnw_brb"/>
 
 ## Parameters
@@ -84,17 +89,17 @@ Connection information for the object store in use:
    { <non-default-hdlfs-instance> 
    | <azure_connection> 
    | <s3_connection>
-   | <google_connection> };
+   | <google_connection> }
 ```
 
 ***<non-default-hdlfs-instance\>***
 
 ```
-<non-default-hdlfs-instance> ::= 'ENDPOINT=<endpoint>;
-	CA_CERTIFICATE=<certificate-content>;
-	CLIENT_CERTIFICATE=<certificate-content>;
-	CLIENT_KEY=<client-certificate-key>;
-	KEY_PASSWORD= <certificate_key_password>';
+<non-default-hdlfs-instance> ::= 'ENDPOINT=<endpoint>
+	CA_CERTIFICATE=<certificate-content>
+	CLIENT_CERTIFICATE=<certificate-content>
+	CLIENT_KEY=<client-certificate-key>
+	KEY_PASSWORD= <certificate_key_password>'
 ```
 
 This clause is optional for data lake Files containers. If you don't specify it, the LOAD statement will connect to the default data lake Files container provisioned within your data lake instance. If you do, the LOAD statement can connect to an alternate, non-default data lake Files container within a separate data lake instance.
@@ -164,10 +169,10 @@ If specified, this value will be the password used to decrypt the client key. If
 ***<azure\_connection\>***
 
 ```
-<azure_connection> ::= 'DEFAULTENDPOINTSPROTOCOL=<endpoint-protocol>;
-	ACCOUNTNAME=<account-name>;
-	ACCOUNTKEY=<account-key>;
-	ENDPOINTSUFFIX=core.windows.net';
+<azure_connection> ::= 'DEFAULTENDPOINTSPROTOCOL=<endpoint-protocol>
+	ACCOUNTNAME=<account-name>
+	ACCOUNTKEY=<account-key>
+	ENDPOINTSUFFIX=core.windows.net'
 ```
 
 Find your *<azure\_connection\_string\>*, including the access keys from your storage account, in the Azure portal. Locate the *Connection string* section and copy the connection string to the clipboard.
@@ -175,9 +180,9 @@ Find your *<azure\_connection\_string\>*, including the access keys from your st
 ***<google\_connection\>***
 
 ```
-<google_connection> ::= 'CLIENT_EMAIL='<client-email>';
-	PRIVATE_KEY='<private-key>';
-     PRIVATE_KEY_ID='<private-key-id>';
+<google_connection> ::= 'CLIENT_EMAIL='<client-email>'
+	PRIVATE_KEY='<private-key>'
+     PRIVATE_KEY_ID='<private-key-id>'
 ```
 
 Find your *<google\_connection\_string\>* comprising the fields *<client\_email\>*, *<private\_key\>*, *<private\_key\_id\>* in the Google Cloud Storage Platform console on the *Service Accounts* page.
@@ -185,12 +190,12 @@ Find your *<google\_connection\_string\>* comprising the fields *<client\_email\
 ***<s3\_connection\>***
 
 ```
-<s3_connection> ::= 'ENDPOINT=<endpoint>; 
-	ENDPOINT_TYPE={PATH | VIRTUAL_HOST}; 
-	ACCESS_KEY_ID=<access-key-string>; 
-	SECRET_ACCESS_KEY=<secret-key-string>; 
-	REGION=<region-string>; 
-	SESSION_TOKEN=<session-token>';
+<s3_connection> ::= 'ENDPOINT=<endpoint> 
+	ENDPOINT_TYPE={PATH | VIRTUAL_HOST} 
+	ACCESS_KEY_ID=<access-key-string> 
+	SECRET_ACCESS_KEY=<secret-key-string> 
+	REGION=<region-string> 
+	SESSION_TOKEN=<session-token>'
 ```
 
 Find your Amazon S3 option values in the AWS Management Console.
@@ -335,7 +340,7 @@ If specified, the Amazon S3 client SDK will use its value when creating Amazon S
  <aws_connection> ::=
 	ACCESS_KEY_ID '<access_key_id>'
 	SECRET_ACCESS_KEY '<secret_access_key>' 
-	REGION '<AWS_region>';
+	REGION '<AWS_region>'
 ```
 
 Find your AWS *<access\_key\_id\>*, *<secret\_access\_key\>*, and *<AWS\_region\>* in the AWS Management Console.
@@ -514,7 +519,7 @@ RESTORE TABLE HDL_T100
 
 [BACKUP TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](backup-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-825d3ab.md "Backup data lake Relational Engine tables.")
 
-[Table-Level Backup and Restore of Data in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/5483df1be61442c18d65e0ee66fe27a1.html "Data lake Relational Engine provides table-level backup and restore functionality that enables you to backup and restore individual tables by creating an image of data (FP index in binary format) for all columns in a data lake Relational Engine table.") :arrow_upper_right:
+[Table-Level Backup and Restore of Data in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/5483df1be61442c18d65e0ee66fe27a1.html "Data lake Relational Engine provides table-level backup and restore functionality that enables you to backup and restore individual tables by creating an image of data (FP index in binary format) for all columns in a data lake Relational Engine table.") :arrow_upper_right:
 
-[RESTORE TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a407d9655299472ba67454d6ed26a19b.html "Restore backed up tables in data lake Relational Engine.") :arrow_upper_right:
+[RESTORE TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a407d9655299472ba67454d6ed26a19b.html "Restore backed up tables in data lake Relational Engine.") :arrow_upper_right:
 

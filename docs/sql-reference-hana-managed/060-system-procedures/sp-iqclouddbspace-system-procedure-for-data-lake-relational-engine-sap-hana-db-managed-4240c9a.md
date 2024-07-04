@@ -2,7 +2,7 @@
 
 # sp\_iqclouddbspace System Procedure for Data Lake Relational Engine \(SAP HANA DB-Managed\)
 
-Displays detailed information about the user\_object\_store dbspace.
+Displays information about the user\_object\_store dbspace.
 
 
 
@@ -27,7 +27,7 @@ sp_iqclouddbspace()
 
 ## Parameters
 
-None
+None.
 
 
 
@@ -117,7 +117,7 @@ The size of a database page in bytes. This is calculated based on the compressio
 
 ## Remarks
 
-None
+The sizes that this procedure outputs are estimations based on heuristics, not an accurate number. They are an estimation only.
 
 
 
@@ -157,7 +157,7 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </b></dt>
 <dd>
 
--   Requires EXECUTE object-level privilege on the procedure.
+-   Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -237,7 +237,5 @@ user\_object\_store
 **Related Information**  
 
 
-[Cloud Dbspaces](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2024_1_QRC/en-US/493eb818429e4996b3da4153192a9efa.html "In a cloud dbspace, the database engine stores a user dbspace in object storage solutions such as Microsoft Azure Blob Storage, AWS Simple Storage Service (S3), or Google Cloud Storage. In a cloud dbspace, database pages are physically stored as objects as opposed to regular file system blocks.") :arrow_upper_right:
-
-[sp_iqclouddbspace System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/4ef0219c16ec4f578395e34785797cfe.html "Displays detailed information about the user_object_store dbspace.") :arrow_upper_right:
+[sp_iqclouddbspace System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/4ef0219c16ec4f578395e34785797cfe.html "Displays information about the user_object_store dbspace.") :arrow_upper_right:
 

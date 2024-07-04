@@ -133,7 +133,7 @@ If there are no non-core extensions used for the statement, the result set is em
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -141,7 +141,7 @@ Requires EXECUTE object-level privilege on the procedure.
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -149,7 +149,7 @@ None
 
 ## Examples
 
-This example uses the sa\_ansi\_standard\_packages system procedure to return information about the non-core SQL extensions used in the SELECT SQL statement:
+This example returns information about the non-core SQL extensions used in the SELECT SQL statement:
 
 ```
 CALL sa_ansi_standard_packages( 'SQL:2003', 
@@ -234,5 +234,5 @@ Extended grouping capabilities
 **Related Information**  
 
 
-[sa_ansi_standard_packages System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/534a9382c24b4f368bf19a9e82500a72.html "Returns information about the non-core SQL extensions used in a SQL statement.") :arrow_upper_right:
+[sa_ansi_standard_packages System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/534a9382c24b4f368bf19a9e82500a72.html "Returns information about the non-core SQL extensions used in a SQL statement.") :arrow_upper_right:
 

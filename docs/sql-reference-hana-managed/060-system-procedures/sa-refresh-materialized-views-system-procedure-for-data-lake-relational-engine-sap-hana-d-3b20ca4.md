@@ -51,7 +51,7 @@ Use this optional INTEGER parameter to specify whether to return errors during t
 
 ## Results Set
 
-None
+None.
 
 
 
@@ -75,8 +75,8 @@ You can also use the REFRESH MATERIALIZED VIEW statement to initialize a materia
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure.
--   ALTER ANY MATERIALIZED VIEW system privilege
+-   EXECUTE object-level privilege on this procedure
+-   SELECT object-level privilege on SYSOBJECT
 
 
 
@@ -84,13 +84,13 @@ Requires all of the following:
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-This example uses the sa\_refresh\_materialized\_views system procedure to initialize all materialized views that are in an uninitialized state. Errors are ignored.
+This example initializes all materialized views that are in an uninitialized state. Errors are ignored.
 
 ```
 CALL sa_refresh_materialized_views( 1 );
@@ -109,5 +109,5 @@ CALL sa_refresh_materialized_views( 1 );
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-817277b.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_refresh_materialized_views System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8176eeb16ce21014bfc7bbd9e39afbab.html "Initializes all materialized views that are in an uninitialized state.") :arrow_upper_right:
+[sa_refresh_materialized_views System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/8176eeb16ce21014bfc7bbd9e39afbab.html "Initializes all materialized views that are in an uninitialized state.") :arrow_upper_right:
 

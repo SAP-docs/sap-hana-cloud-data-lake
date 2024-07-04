@@ -298,7 +298,7 @@ Enables auditing of \{ALTER|CREATE|DROP\} \{USER|ROLE\} statements
 
 ## Result Set
 
-None
+None.
 
 
 
@@ -330,7 +330,7 @@ Specify the location where events are logged with the audit\_log database option
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   SET ANY CUSTOMER SECURITY OPTION system privilege
 
 
@@ -339,13 +339,13 @@ Requires all of the following:
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-This example uses the sa\_enable\_auditing\_type system procedure to enable all auditing:
+This example enables all auditing:
 
 ```
 CALL sa_enable_auditing_type( 'all' );
@@ -371,5 +371,5 @@ CALL sa_enable_auditing_type( 'DDL' );
 
 [sa\_disable\_auditing\_type System Procedure for Data Lake Relational Engine \(SAP HANA DB-Managed\)](sa-disable-auditing-type-system-procedure-for-data-lake-relational-engine-sap-hana-db-man-fd63ea1.md "Disables auditing of specific events.")
 
-[sa_enable_auditing_type System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3be5b83e6c5f1014876dd3101b181f8a.html "Specifies which events to include in auditing.") :arrow_upper_right:
+[sa_enable_auditing_type System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/3be5b83e6c5f1014876dd3101b181f8a.html "Specifies which events to include in auditing.") :arrow_upper_right:
 

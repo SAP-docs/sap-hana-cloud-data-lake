@@ -122,7 +122,7 @@ Syntax 2 – The *<window-spec\>* parameter represents usage as a window functio
 
 <a name="loioa57748fd84f21015bfd08e9110638b53__REGR_SXY_example1"/>
 
-## Example
+## Examples
 
 The following example returns the value 5533938.004400015:
 
@@ -135,5 +135,5 @@ SELECT REGR_SXY( Salary, ( YEAR( NOW() ) - YEAR( BirthDate ) ) )FROM Employees;
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[REGR_SXY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/1af764816b5444808ebdd1d7a87d2518.html "Returns the sum of products of the dependent and independent variables. Use REGR_SXY to evaluate the statistical validity of a regression model.") :arrow_upper_right:
+[REGR_SXY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/1af764816b5444808ebdd1d7a87d2518.html "Returns the sum of products of the dependent and independent variables. Use REGR_SXY to evaluate the statistical validity of a regression model.") :arrow_upper_right:
 

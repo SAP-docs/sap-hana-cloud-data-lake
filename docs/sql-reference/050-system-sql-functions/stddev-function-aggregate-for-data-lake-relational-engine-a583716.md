@@ -67,7 +67,7 @@ The formula used to calculate `STDDEV` is:
 
 <a name="loioa583716084f2101595c8e7a0abc4d989__STDDEV_example1"/>
 
-## Example
+## Examples
 
 -   Given this data:
 
@@ -227,5 +227,5 @@ The formula used to calculate `STDDEV` is:
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[STDDEV Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/0dde65ab55a549d3b058038134cae149.html "Returns the standard deviation of a set of numbers.") :arrow_upper_right:
+[STDDEV Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/0dde65ab55a549d3b058038134cae149.html "Returns the standard deviation of a set of numbers.") :arrow_upper_right:
 

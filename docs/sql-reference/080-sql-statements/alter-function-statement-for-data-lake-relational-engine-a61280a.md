@@ -248,5 +248,5 @@ SQL – vendor extension to ISO/ANSI SQL grammar
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[ALTER FUNCTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3d7a54b993a74668b60ab048e299fbec.html "Modifies an existing function. Include the entire modified function in the ALTER FUNCTION statement.") :arrow_upper_right:
+[ALTER FUNCTION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/3d7a54b993a74668b60ab048e299fbec.html "Modifies an existing function. Include the entire modified function in the ALTER FUNCTION statement.") :arrow_upper_right:
 

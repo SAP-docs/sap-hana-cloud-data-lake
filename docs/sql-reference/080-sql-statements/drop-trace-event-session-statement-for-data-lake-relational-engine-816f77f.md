@@ -92,5 +92,5 @@ DROP TRACE EVENT SESSION my_session;
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[DROP TRACE EVENT SESSION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/1b596abba6ea4afeb9284194d73b4dd2.html "Drops a trace event session.") :arrow_upper_right:
+[DROP TRACE EVENT SESSION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/1b596abba6ea4afeb9284194d73b4dd2.html "Drops a trace event session.") :arrow_upper_right:
 

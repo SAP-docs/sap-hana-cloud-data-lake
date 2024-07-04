@@ -403,19 +403,19 @@ Every lock has an associated table, so the value of LockTable can be used to una
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure. To obtain a list of all connection IDs, you also need the MONITOR system privilege.
+Requires EXECUTE object-level privilege on this procedure. To obtain a list of all connection IDs, you also need the MONITOR system privilege.
 
 
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-This example uses the sa\_conn\_info system procedure to return a result set summarizing connection properties for all connections to the server.
+This example returns a result set summarizing connection properties for all connections to the server.
 
 ```
 CALL sa_conn_info( );
@@ -533,10 +533,9 @@ User1
 </tr>
 </table>
 
-This example uses the sa\_conn\_info system to return the number of blocked connections.
+This example returns the number of blocked connections.
 
 ```
-SELECT COUNT(*) FROM sa_conn_info()
-WHERE blockedOn = connection_property('number');
+SELECT COUNT(*) FROM sa_conn_info() WHERE blockedOn = connection_property('number');
 ```
 

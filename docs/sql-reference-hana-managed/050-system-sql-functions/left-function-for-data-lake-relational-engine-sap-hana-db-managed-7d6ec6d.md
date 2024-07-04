@@ -77,7 +77,7 @@ If the string contains multibyte characters, and the proper collation is being u
 
 <a name="loio7d6ec6d7cc0f4bebb844b85a3965a81a__section_dky_cdh_trb"/>
 
-## Example
+## Examples
 
 The following statement returns the value "choco":
 
@@ -88,5 +88,5 @@ SELECT LEFT( 'chocolate', 5 ) FROM iq_dummy;
 **Related Information**  
 
 
-[LEFT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a55d883284f210158c5ec15e3e69239f.html "Returns a specified number of characters from the beginning of a string.") :arrow_upper_right:
+[LEFT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a55d883284f210158c5ec15e3e69239f.html "Returns a specified number of characters from the beginning of a string.") :arrow_upper_right:
 

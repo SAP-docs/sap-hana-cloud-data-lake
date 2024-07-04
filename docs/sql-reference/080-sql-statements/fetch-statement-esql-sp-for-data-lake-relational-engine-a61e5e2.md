@@ -196,7 +196,7 @@ ARRAY *<fetch-count\>*
 \(Embedded SQL only\) Allows wide fetches, which retrieve more than one row at a time, and which might improve performance. To use wide fetches in Embedded SQL, include the `FETCH` statement in your code, where `ARRAY nnn` is the last item of the `FETCH` statement:
 
 ```
-EXEC SQL FETCH . . . ARRAY nnn;
+EXEC SQL FETCH . . . ARRAY nnn
 ```
 
 The fetch count nnn can be a host variable. The SQLDA must contain nnn \* \(columns per row\) variables. The first row is placed in SQLDA variables 0 to \(columns per row\) -1, and so on.

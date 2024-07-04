@@ -60,7 +60,7 @@ VARCHAR
 
 <a name="loioa570a7e184f2101584578b1e641ba61b__iq_refbb_885"/>
 
-## Example
+## Examples
 
 The following statement returns the property associated with property number 126:
 

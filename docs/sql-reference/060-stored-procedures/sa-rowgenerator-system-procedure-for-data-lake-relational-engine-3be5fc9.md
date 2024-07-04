@@ -142,7 +142,7 @@ SELECT row_num FROM sa_rowgenerator( 1, 255 )
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -150,7 +150,7 @@ Requires EXECUTE object-level privilege on the procedure.
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -158,7 +158,7 @@ None
 
 ## Examples
 
-This example uses the sa\_rowgenerator system procedure to return 5 rows.
+This example returns a result set containing 5 rows.
 
 ```
 CALL sa_rowgenerator( 1, 5, 1 );
@@ -303,5 +303,5 @@ SELECT DATEADD ( day, row_num, '1900-01-01' ) AS d, DATEPART ( week, d ) w
 **Related Information**  
 
 
-[sa_rowgenerator System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7b99d032cfbe4f80bde904bee1902662.html "Returns a result set with rows between a specified start and end value.") :arrow_upper_right:
+[sa_rowgenerator System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/7b99d032cfbe4f80bde904bee1902662.html "Returns a result set with rows between a specified start and end value.") :arrow_upper_right:
 

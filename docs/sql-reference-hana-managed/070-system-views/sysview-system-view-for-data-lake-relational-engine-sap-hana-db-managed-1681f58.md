@@ -28,7 +28,7 @@ ALTER VIEW "SYS"."SYSVIEWS"( vcreator,
 
 You can find additional information about views in the SYS.SYSSYSTAB system view.
 
-You can also use the dbo.sa\_materialized\_view\_info system procedure for a readable format of the information for materialized views.
+You can also use the sa\_materialized\_view\_info system procedure for a readable format of the information for materialized views.
 
 
 <table>
@@ -164,7 +164,7 @@ TIMESTAMP
 </td>
 <td valign="top">
 
-Internal use only. The local time at which the materialized view became stale. This value corresponds to the time at which one of the underlying base tables was detected as having changed. A value of 0 indicates that the view is either fresh, or that it has become stale but the database server has not marked it as such because the view has not been used since it became stale. Use the dbo.sa\_materialized\_view\_info system procedure to determine the status of a materialized view.
+Internal use only. The local time at which the materialized view became stale. This value corresponds to the time at which one of the underlying base tables was detected as having changed. A value of 0 indicates that the view is either fresh, or that it has become stale but the database server has not marked it as such because the view has not been used since it became stale. Use the sa\_materialized\_view\_info system procedure to determine the status of a materialized view.
 
 </td>
 </tr>
@@ -215,7 +215,7 @@ TIMESTAMP WITH TIME ZONE
 </td>
 <td valign="top">
 
-Internal use only The UTC time at which the materialized view became stale. This value corresponds to the time at which one of the underlying base tables was detected as having changed. A value of 0 indicates that the view is either fresh, or that it has become stale but the database server has not marked it as such because the view has not been used since it became stale. Use the dbo.sa\_materialized\_view\_info system procedure to determine the status of a materialized view. This column contains 0 when mv\_last\_refreshed\_at is 0 and NULL when mv\_last\_refreshed\_at is NULL.
+Internal use only The UTC time at which the materialized view became stale. This value corresponds to the time at which one of the underlying base tables was detected as having changed. A value of 0 indicates that the view is either fresh, or that it has become stale but the database server has not marked it as such because the view has not been used since it became stale. Use the sa\_materialized\_view\_info system procedure to determine the status of a materialized view. This column contains 0 when mv\_last\_refreshed\_at is 0 and NULL when mv\_last\_refreshed\_at is NULL.
 
 </td>
 </tr>
@@ -248,5 +248,5 @@ To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE priv
 **Related Information**  
 
 
-[SYSVIEWS System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3beb3c476c5f10149333ff887924c019.html "Each row of the SYS.SYSVIEWS view describes one view, including its view definition.") :arrow_upper_right:
+[SYSVIEWS System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/3beb3c476c5f10149333ff887924c019.html "Each row of the SYS.SYSVIEWS view describes one view, including its view definition.") :arrow_upper_right:
 

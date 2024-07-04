@@ -53,7 +53,7 @@ If null, then deletes all ETD files.
 
 ## Result Set
 
-None
+None.
 
 
 
@@ -67,8 +67,9 @@ None
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   MANAGE AUDITING system privilege
+-   MANAGE ANY TRACE SESSION system privilege
 
 
 
@@ -76,7 +77,7 @@ Requires all of the following:
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -84,18 +85,28 @@ None
 
 ## Examples
 
-Assume you want to delete these three ETD files. Assume you set filename\_prefix to 'my\_session' in the CREATE TEMPORARY TRACE EVENT SESSION statement. The file names start with the string '`my_session_20201126_`':
+Assume you have the following three ETD files. Assume you set filename\_prefix to 'my\_audit\_log'.
 
 ```
-my_session_20201126_181818.173_auditdb_eng.etd 635  2020-09-13 18:40:21.000+00:00
-my_session_20201126_184000.000_auditdb_eng.etd 710  2020-11-26 18:50:52.000+00:00
-my_session_20201126_185000.000_auditdb_eng.etd  260 2020-11-26 18:50:52.000+00:00
+my_audit_log_20240523_191748.050_mpx-writer-0-0.etd
+my_audit_log_20240523_191747.520_mpx-coord-0.etd
+my_audit_log_20240523_191741.417_mpx-writer-0-0.etd
+my_audit_log_20240523_191740.725_mpx-coord-0.etd
+my_audit_log_20240524_190814.286_mpx-writer-0-0.etd
+my_audit_log_20240524_190813.734_mpx-coord-0.etd
+
 ```
 
-Execute:
+This example deletes only the file named my\_audit\_log\_20240523\_191748.050\_mpx-writer-0-0.etd.
 
 ```
-CALL sp_delete_etd_file'my_session_20201126_*';
+CALL sp_delete_etd_file ('my_audit_log_20240523_191748.050_mpx-writer-0-0.etd');
+```
+
+This example deletes all the files for 20240523, execute:
+
+```
+CALL sp_delete_etd_file ('my_audit_log_20240523_*');
 ```
 
 **Related Information**  
@@ -103,5 +114,5 @@ CALL sp_delete_etd_file'my_session_20201126_*';
 
 [sp\_list\_etd\_files System Procedure for Data Lake Relational Engine \(SAP HANA DB-Managed\)](sp-list-etd-files-system-procedure-for-data-lake-relational-engine-sap-hana-db-managed-0f76c83.md "Lists the event trace data (ETD) files logged to the file container by database auditing.")
 
-[sp_delete_etd_file System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/d2e6eeca3f2448159215eead4f812adf.html "Deletes specified files from the audit directory in the file container.") :arrow_upper_right:
+[sp_delete_etd_file System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/d2e6eeca3f2448159215eead4f812adf.html "Deletes specified files from the audit directory in the file container.") :arrow_upper_right:
 

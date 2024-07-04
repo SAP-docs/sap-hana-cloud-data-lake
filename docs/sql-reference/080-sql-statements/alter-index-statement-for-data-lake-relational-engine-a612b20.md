@@ -139,5 +139,5 @@ Automatic commit. Clears the Results tab in the Results pane in Interactive SQL.
 
 [DROP INDEX Statement for Data Lake Relational Engine](drop-index-statement-for-data-lake-relational-engine-82d6c17.md "Removes an index from the database.")
 
-[ALTER INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/daf745a457cc4f3ba56275c28dc14929.html "Renames indexes in base or global temporary tables, foreign key role names of indexes and foreign keys explicitly created by a user, or changes the clustered nature of an index on a catalog store table. You can't rename indexes created to enforce key constraints.") :arrow_upper_right:
+[ALTER INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/daf745a457cc4f3ba56275c28dc14929.html "Renames indexes in base or global temporary tables, foreign key role names of indexes and foreign keys explicitly created by a user, or changes the clustered nature of an index on a catalog store table. You can't rename indexes created to enforce key constraints.") :arrow_upper_right:
 

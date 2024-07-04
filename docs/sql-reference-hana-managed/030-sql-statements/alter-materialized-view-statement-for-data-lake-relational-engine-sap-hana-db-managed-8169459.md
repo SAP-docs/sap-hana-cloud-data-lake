@@ -133,7 +133,7 @@ Splits an existing range partition or subpartition.
 
 ```
 <split-object> ::= <range-partition-decl> 
-        INTO ( <range-partition-decl>, <range-partition-decl> );
+        INTO ( <range-partition-decl>, <range-partition-decl> )
 ```
 
 When splitting a partition or subpartition, the names of the new partitions must be unique and cannot include the name of the original partition. All data from the original partition must fit into only one of the resulting partitions. Data cannot move between partitions.
@@ -204,7 +204,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 
 ```
 <range-partitioning-scheme> ::=
-   RANGE ( <column-name> ) ( <range-partition-decl> [,...] );
+   RANGE ( <column-name> ) ( <range-partition-decl> [,...] )
 ```
 
 
@@ -218,7 +218,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 
 ```
 <range-partition-decl> ::=
-   <partition-name> VALUES <= ( { <constant-expression> | MAX } [,...] );
+   <partition-name> VALUES <= ( { <constant-expression> | MAX } [,...] )
 ```
 
 
@@ -317,7 +317,7 @@ Maps data to partitions based on partition-key values processed by an internal h
 
 ```
 <hash-partitioning-scheme> ::=
-   HASH ( <column-name> [,... ] );
+   HASH ( <column-name> [,... ] )
 ```
 
 Restrictions:
@@ -339,7 +339,7 @@ Maps data to partitions based on partition-key values processed by an internal h
 ```
 <hash-range-partitioning-scheme> ::=
    PARTITION BY HASH  ( <column-name> [,... ] )
-    SUBPARTITION BY <range-partition-scheme>;
+    SUBPARTITION BY <range-partition-scheme>
 ```
 
 The hash partition specifies how the data is logically distributed and colocated; the range subpartition specifies how the data is physically placed. The new range subpartition is logically partitioned by hash with the same hash partition keys as the existing hash-range partitioned table. The range subpartition key is restricted to one column.
@@ -371,7 +371,7 @@ Subpartitions an existing hash-partition table.
 <dd>
 
 ```
-SUBPARTITION BY <range-partition-decl>;
+SUBPARTITION BY <range-partition-decl>
 ```
 
 Subpartitions on a range-partitioned table are not supported.
@@ -388,7 +388,7 @@ Subpartitions on a range-partitioned table are not supported.
 Adds a new partition to an existing range-partition table or a new subpartition to an existing hash range-partition table.
 
 ```
-ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>;
+ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>
 ```
 
 The value of the *<range-partition-decl\>* must exceed the existing partition boundary. Only one partition or subpartition can be added per ADD clause. Use SPLIT PARTITION to add a range within the existing boundary.
@@ -426,9 +426,9 @@ The only operations a user can perform on a materialized view to change its data
 Before you can execute DDL statements on base tables of `INCREMENTAL` refresh materialized views, you must first truncate the materialized view. Once the DDL statements are complete, you must manually refresh the materialized view.
 
 ```
-TRUNCATE MATERIALIZED VIEW <materialized view name>;
-<Execute DDL statements on the base table>;
-REFRESH MATERIALIZED VIEW <materialized view name>;
+TRUNCATE MATERIALIZED VIEW <materialized view name>
+<Execute DDL statements on the base table>
+REFRESH MATERIALIZED VIEW <materialized view name>
 ```
 
 Failure to truncate before executing DDL statements generates a message indicating that the table referenced by the DDL has versions pinned by pin requests, and the DDL fails. Pin Requests Management is an internal feature that facilitates INCREMENTAL refreshes.
@@ -664,7 +664,7 @@ Not in the standard.
 
 [DROP MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-50e7633.md "Removes a data type from the database.")
 
-[Refresh and Build Types for Materialized Views in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/30ca3ca6ffbc4e6e804959f02571e62c.html "You can control when (refresh type): MANUAL or AUTO and how (build type): FULL or INCREMENTAL a materialized view is refreshed.") :arrow_upper_right:
+[Refresh and Build Types for Materialized Views in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/30ca3ca6ffbc4e6e804959f02571e62c.html "You can control when (refresh type): MANUAL or AUTO and how (build type): FULL or INCREMENTAL a materialized view is refreshed.") :arrow_upper_right:
 
-[ALTER MATERIALIZED VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/d958953e260d44209300f5454e01029f.html "Alters a materialized view.") :arrow_upper_right:
+[ALTER MATERIALIZED VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/d958953e260d44209300f5454e01029f.html "Alters a materialized view.") :arrow_upper_right:
 

@@ -123,7 +123,7 @@ Syntax 2 – The *<window-spec\>* parameter represents usage as a window functio
 
 <a name="loioe582164fac45433190299553edc9fb6c__section_pzj_nf5_vrb"/>
 
-## Example
+## Examples
 
 The following example returns the value 26, 708, 672,843.3002:
 
@@ -136,5 +136,5 @@ SELECT REGR_SYY( Salary, ( YEAR( NOW() ) - YEAR( BirthDate ) ) )FROM Employees;
 
 [WINDOW Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/window-clause-for-data-lake-relational-engine-sap-hana-db-managed-c83b61b.md "Defines all or part of a window for use with window functions such as AVG and RANK in a SELECT statement.")
 
-[REMAINDER Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5788e7284f21015a4caecc7b2f96b10.html "Returns the remainder when one whole number is divided by another.") :arrow_upper_right:
+[REMAINDER Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a5788e7284f21015a4caecc7b2f96b10.html "Returns the remainder when one whole number is divided by another.") :arrow_upper_right:
 

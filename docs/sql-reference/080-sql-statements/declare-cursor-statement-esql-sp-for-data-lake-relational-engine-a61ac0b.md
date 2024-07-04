@@ -161,8 +161,6 @@ begin
 end;
 ```
 
-A parameter to the procedure. For example:
-
 Nested inside another `BEGIN…END` after the variable has been assigned a value. For example:
 
 ```
@@ -203,29 +201,29 @@ Data lake Relational Engine supports updatable cursors on single tables.
 
 Data lake Relational Engine supports one type of cursor sensitivity, which is defined in terms of which changes to underlying data are visible. All data lake Relational Engine cursors are asensitive, which means that changes might be reflected in the membership, order, or values of the result set seen through the cursor, or might not be reflected at all.
 
-With an asensitive cursor, changes effected by positioned `UPDATE` and positioned `DELETE`statements are visible in the cursor result set, except where client-side caching prevents seeing these changes. Inserted rows are not visible.
+With an asensitive cursor, changes effected by positioned `UPDATE` and positioned `DELETE` statements are visible in the cursor result set, except where client-side caching prevents seeing these changes. Inserted rows aren't visible.
 
 Rows that are updated so that they no longer meet the requirements of the `WHERE` clause of the open cursor are still visible.
 
-When using cursors, there is always a trade-off between efficiency and consistency. Asensitive cursors provide efficient performance at the expense of consistency.
+When using cursors, there's always a trade-off between efficiency and consistency. Asensitive cursors provide efficient performance at the expense of consistency.
 
-`LONG VARCHAR` and `LONG BINARY` data types are not supported in updatable cursors.
+`LONG VARCHAR` and `LONG BINARY` data types aren't supported in updatable cursors.
 
-Scalar user-defined functions and user-defined aggregate functions are not supported in updatable cursors.
+Scalar user-defined functions and user-defined aggregate functions aren't supported in updatable cursors.
 
 Supported query specifications for updatable cursors in data lake Relational Engine are:
 
--   Expressions in the select list against columns that are not functionally dependent on columns being updated
--   Arbitrary subqueries with asensitive behavior, that is, changes to data referenced by subqueries are not visible in the cursor result set
--   `ORDER BY` clause; the `ORDER BY` columns may be updated, but the result set does not reorder
+-   Expressions in the select list against columns that aren't functionally dependent on columns being updated
+-   Arbitrary subqueries with asensitive behavior, that is, changes to data referenced by subqueries aren't visible in the cursor result set
+-   `ORDER BY` clause; the `ORDER BY` columns may be updated, but the result set doesn't reorder
 -   Columns that meet these requirements:
     -   No CAST on a column
     -   Base columns of a base table in the `SELECT` clause
-    -   There are no expressions or functions on that column in the `SELECT` clause and it is not duplicated in the select list \(for example, `SELECT c1, c1`\).
+    -   There are no expressions or functions on that column in the `SELECT` clause and it isn't duplicated in the select list \(for example, `SELECT c1, c1`\).
     -   Base columns of a base table restricted to those listed in the <code>FOR UPDATE OF <i class="varname">&lt;column-name-list&gt;</i></code> clause, if the clause is specified.
 
 
-Data lake Relational Engine does not permit updatable cursors on queries that contain any operator that precludes a one-to-one mapping of result set rows to rows in a base table; specifically:
+Data lake Relational Engine doesn’t permit updatable cursors on queries that contain any operator that precludes a one-to-one mapping of result set rows to rows in a base table; specifically:
 
 -   `SELECT DISTINCT`
 -   Operator that has a `UNION`
@@ -237,7 +235,7 @@ See the description of the *UPDATE \(positioned\) Statement \[ESQL\] \[SP\]* for
 
 Data lake Relational Engine supports inserts only on updatable cursors where all nonnullable, nonidentity columns are both selected and updatable.
 
-In data lake Relational Engine, `COMMIT` and `ROLLBACK` are not allowed inside an open updatable cursor, even if the cursor is opened as a hold cursor. Data lake Relational Engine does support `ROLLBACK TO SAVEPOINT` inside an updatable cursor.
+In data lake Relational Engine, `COMMIT` and `ROLLBACK` aren't allowed inside an open updatable cursor, even if the cursor is opened as a hold cursor. Data lake Relational Engine does support `ROLLBACK TO SAVEPOINT` inside an updatable cursor.
 
 Any failure that occurs after the cursor is open results in a rollback of all operations that have been performed through this open cursor.
 
@@ -254,12 +252,12 @@ A declared cursor is read-only and not updatable in cases where:
 
 If data lake Relational Engine fails to set an updatable cursor when requested, see the `.iqmsg` file for related information.
 
-There is a limitation regarding updatable cursors and ODBC. A maximum of 65535 rows or records can be updated, deleted, or inserted at a time using these ODBC functions:
+There's a limitation regarding updatable cursors and ODBC. A maximum of 65535 rows or records can be updated, deleted, or inserted at a time using these ODBC functions:
 
 -   `SQLSetPos` `SQL_UPDATE`, `SQL_DELETE`, and `SQL_ADD`
 -   `SQLBulkOperations` `SQL_ADD`, `SQL_UPDATE_BY_BOOKMARK`, and `SQL_DELETE_BY_BOOKMARK`
 
-There is an implementation-specific limitation to the maximum value in the statement attribute that controls the number of effected rows to the largest value of an `UNSIGNED SMALL INT`, which is 65535:
+There's an implementation-specific limitation to the maximum value in the statement attribute that controls the number of effected rows to the largest value of an `UNSIGNED SMALL INT`, which is 65535:
 
 ```
 SQLSetStmtAttr(HANDLE,SQL_ATTR_ROW_ARRAY_SIZE, VALUE,0);

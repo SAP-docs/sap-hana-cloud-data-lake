@@ -116,7 +116,7 @@ Syntax 2 – The *<window-spec\>* parameter represents usage as a window functio
 
 <a name="loioa574c56884f21015b7b6f6bde76a2e6a__REGR_COUNT_example1"/>
 
-## Example
+## Examples
 
 The following example returns a value that indicates the number of non-NULL pairs that were used to fit the regression line:
 
@@ -131,5 +131,5 @@ This function returns the value 75.
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[REGR_COUNT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/6ae6fc4e7e5e41489f2f3481cc6f8a3d.html "Returns an integer that represents the number of non-NULL number pairs used to fit the regression line.") :arrow_upper_right:
+[REGR_COUNT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/6ae6fc4e7e5e41489f2f3481cc6f8a3d.html "Returns an integer that represents the number of non-NULL number pairs used to fit the regression line.") :arrow_upper_right:
 

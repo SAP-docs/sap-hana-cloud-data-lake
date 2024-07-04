@@ -141,7 +141,7 @@ No errors are generated if no existing tables satisfy the specified criteria for
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure, along with one of the following:
+Requires EXECUTE object-level privilege on this procedure. Also requires one of the following:
 
 -   You own the underlying table of the view
 -   SELECT ANY TABLE system privilege
@@ -154,7 +154,7 @@ Requires EXECUTE object-level privilege on the procedure, along with one of the 
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -166,7 +166,7 @@ None
 
 ### 
 
-This example assumes the following objects exist:
+These examples assume the following objects exist:
 
 ```
 --- Setup for the following examples ---
@@ -176,7 +176,7 @@ CREATE VIEW V_mytable_B AS SELECT ColB FROM mytable;
 CREATE VIEW V_mytable AS SELECT * FROM mytable;
 ```
 
-This example uses sa\_dependent\_views to list the id's of the views dependent on the table mytable.
+This example returns the id's of the views dependent on the table mytable.
 
 ```
 CALL sa_dependent_views( 'mytable' );
@@ -276,5 +276,5 @@ V\_mytable
 **Related Information**  
 
 
-[sa_dependent_views System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/47783e3af31b4f27a28b41ad534f8332.html "Returns the list of all dependent views for a given table or view.") :arrow_upper_right:
+[sa_dependent_views System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/47783e3af31b4f27a28b41ad534f8332.html "Returns the list of all dependent views for a given table or view.") :arrow_upper_right:
 

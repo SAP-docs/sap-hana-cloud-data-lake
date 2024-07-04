@@ -46,7 +46,7 @@ CREATE MATERIALIZED VIEW [ { <owner> | <schema-name> }.]<view-name> [ ( <alt-col
 Specifies alternate names for the columns in the materialized view.
 
 ```
-<alt-column-names> ::= ( <column-name>[, <column-name>...);
+<alt-column-names> ::= ( <column-name>[, <column-name>...)
 ```
 
 If you specify alternate columns names, the number of columns listed in *<alt-column-names\>* must match the number of columns in *<select-statement\>*. If you do not specify alternate column names, the names are set to those in *<select-statement\>*.
@@ -242,11 +242,11 @@ CREATE MATERIALIZED VIEW V_BAR3 AS SELECT DISTINCT C1, C2, C3 FROM BAR CHECK AUT
 
 [DROP MATERIALIZED VIEW Statement for Data Lake Relational Engine](drop-materialized-view-statement-for-data-lake-relational-engine-35de0ef.md "Removes a data type from the database.")
 
-[What You Need to Know Before Using Materialized Views in Data Lake Relational Engine](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/4343df4878d64ea2b27837eaa29f4abb.html "There are some requirements and restrictions that must be met when creating, initializing, refreshing, and using materialized views.") :arrow_upper_right:
+[What You Need to Know Before Using Materialized Views in Data Lake Relational Engine](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_3_QRC/en-US/4343df4878d64ea2b27837eaa29f4abb.html "There are some requirements and restrictions that must be met when creating, initializing, refreshing, and using materialized views.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[Refresh and Build Types for Materialized Views in Data Lake Relational Engine](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/967c517f00ef459e9023edf6ca98c336.html "You can control when (refresh type): MANUAL or AUTO and how (build type): FULL or INCREMENTAL a materialized view is refreshed.") :arrow_upper_right:
+[Refresh and Build Types for Materialized Views in Data Lake Relational Engine](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_3_QRC/en-US/967c517f00ef459e9023edf6ca98c336.html "You can control when (refresh type): MANUAL or AUTO and how (build type): FULL or INCREMENTAL a materialized view is refreshed.") :arrow_upper_right:
 
-[CREATE MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/816c0ee26ce21014b50bcd040d5dae25.html "Creates a materialized view.") :arrow_upper_right:
+[CREATE MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/816c0ee26ce21014b50bcd040d5dae25.html "Creates a materialized view.") :arrow_upper_right:
 

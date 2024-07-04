@@ -98,7 +98,7 @@ SELECT * FROM USER2.SCHEMA_2.T2;
 
 
 
-## Example
+## Examples
 
 This example creates the schema named my\_schema, owned by the current user.
 
@@ -116,4 +116,8 @@ CREATE SCHEMA user_1.my_schema1;
 
 
 [DROP SCHEMA Statement for Data Lake Relational Engine](drop-schema-statement-for-data-lake-relational-engine-0c4b714.md "Removes a schema from the database.")
+
+[SET SCHEMA Statement for Data Lake Relational Engine](set-schema-statement-for-data-lake-relational-engine-b23679a.md "Sets the default schema for the connection")
+
+[CREATE SCHEMA for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/7988025f66db454aae19ae0c7a4fe042.html "Creates a schema in the current instance.") :arrow_upper_right:
 

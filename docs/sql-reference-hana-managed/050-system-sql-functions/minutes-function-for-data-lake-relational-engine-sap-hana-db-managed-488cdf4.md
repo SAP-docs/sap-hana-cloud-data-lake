@@ -100,5 +100,5 @@ The second syntax returns the number of whole minutes from the first date/time t
 **Related Information**  
 
 
-[MINUTES Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5648d4484f21015975efebd7ac03399.html "Returns the number of minutes since an arbitrary date and time, the number of whole minutes between two specified times, or adds the specified integer-expression number of minutes to a time.") :arrow_upper_right:
+[MINUTES Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a5648d4484f21015975efebd7ac03399.html "Returns the number of minutes since an arbitrary date and time, the number of whole minutes between two specified times, or adds the specified integer-expression number of minutes to a time.") :arrow_upper_right:
 

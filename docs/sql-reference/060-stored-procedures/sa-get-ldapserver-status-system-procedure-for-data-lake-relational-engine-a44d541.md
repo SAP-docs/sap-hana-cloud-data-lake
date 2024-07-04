@@ -26,7 +26,7 @@ sa_get_ldapserver_status
 
 ## Parameters
 
-None
+None.
 
 
 
@@ -143,7 +143,7 @@ To see SYSLDAPSERVER column values before a checkpoint occurs and the contents o
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -151,5 +151,5 @@ Requires EXECUTE object-level privilege on the procedure.
 
 ## Side Effects
 
-None
+None.
 

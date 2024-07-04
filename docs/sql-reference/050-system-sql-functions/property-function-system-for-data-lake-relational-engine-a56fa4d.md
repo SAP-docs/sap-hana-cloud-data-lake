@@ -73,7 +73,7 @@ Each property has both a number and a name, but the number is subject to change 
 
 <a name="loioa56fa4db84f2101581d1eea9ca3957e2__iq_refbb_873"/>
 
-## Example
+## Examples
 
 The following statement returns the name of the current database server:
 

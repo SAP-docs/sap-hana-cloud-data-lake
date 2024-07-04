@@ -12,7 +12,7 @@ Specify a higher prefetch lookahead value or lets the system set automatically b
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user..
+-   Connected to SAP HANA database as a SAP HANA database user.
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -229,7 +229,7 @@ No
 
 [SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md "Grant database options temporarily for the current connection only on a data lake Relational Engine relational container.")
 
-[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
+[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
 
-[LOAD_PREFETCH_LOOKAHEAD Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/912d8f5b53a54ea5ad4c23fbf5198644.html "Specify a higher prefetch lookahead value or lets the system set automatically based on the IO latency to improve performance with the LOAD statement.") :arrow_upper_right:
+[LOAD_PREFETCH_LOOKAHEAD Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/912d8f5b53a54ea5ad4c23fbf5198644.html "Specify a higher prefetch lookahead value or lets the system set automatically based on the IO latency to improve performance with the LOAD statement.") :arrow_upper_right:
 

@@ -28,7 +28,7 @@ DROP TEXT INDEX <text-index-name>
 
 
 
-<a name="loioa60331d484f21015b12ac440f67fd4d1__IQ_Parameters"/>
+<a name="loioa60331d484f21015b12ac440f67fd4d1__drop_text_index_parameters1"/>
 
 ## Parameters
 
@@ -50,7 +50,7 @@ Specifies the table on which the TEXT index is built.
 
 
 
-<a name="loioa60331d484f21015b12ac440f67fd4d1__IQ_Usage"/>
+<a name="loioa60331d484f21015b12ac440f67fd4d1__drop_text_index_remarks1"/>
 
 ## Remarks
 
@@ -58,23 +58,27 @@ You must drop dependent TEXT indexes before you can drop a text configuration ob
 
 
 
-<a name="loioa60331d484f21015b12ac440f67fd4d1__IQ_Permissions"/>
+<a name="loioa60331d484f21015b12ac440f67fd4d1__drop_text_index_privileges1"/>
 
 ## Privileges
 
--   Requires one of:
-    -   You own the underlying table of the index.
-    -   DROP ANY INDEX system privilege
-    -   DROP ANY OBJECT system privilege
-    -   REFERENCES or DROP object-level privilege on the underlying table of the index.
-    -   REFERENCES object-level privilege on the schema containing the underlying table of the index if the schema is owned by another user.
 
+
+### 
+
+Requires one of the following:
+
+-   You own the underlying table of the index.
+-   DROP ANY INDEX system privilege
+-   DROP ANY OBJECT system privilege
+-   REFERENCES or DROP object-level privilege on the underlying table of the index.
+-   REFERENCES object-level privilege on the schema containing the underlying table of the index if the schema is owned by another user.
 
 See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md) or [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md) for assistance with granting privileges.
 
 
 
-<a name="loioa60331d484f21015b12ac440f67fd4d1__IQ_Side_Effects"/>
+<a name="loioa60331d484f21015b12ac440f67fd4d1__drop_text_index_side_effects1"/>
 
 ## Side Effects
 
@@ -82,7 +86,7 @@ Automatic commit
 
 
 
-<a name="loioa60331d484f21015b12ac440f67fd4d1__IQ_Examples"/>
+<a name="loioa60331d484f21015b12ac440f67fd4d1__drop_text_index_examples1"/>
 
 ## Examples
 

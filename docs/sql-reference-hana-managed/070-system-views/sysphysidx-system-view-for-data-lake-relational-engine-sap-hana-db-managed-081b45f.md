@@ -253,5 +253,5 @@ To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE priv
 **Related Information**  
 
 
-[SYSPHYSIDX System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3be96a6e6c5f1014b5218fc23d4599d6.html "Each row in the SYSPHYSIDX system view defines a physical index in the database. The underlying system table for this view is ISYSPHYSIDX.") :arrow_upper_right:
+[SYSPHYSIDX System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/3be96a6e6c5f1014b5218fc23d4599d6.html "Each row in the SYSPHYSIDX system view defines a physical index in the database. The underlying system table for this view is ISYSPHYSIDX.") :arrow_upper_right:
 

@@ -107,5 +107,5 @@ DROP PSE mypse1 CASCADE;
 
 [ALTER PSE Statement for Data Lake Relational Engine](alter-pse-statement-for-data-lake-relational-engine-53742a2.md "Modifies an existing personal security environment (PSE).")
 
-[DROP PSE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/daf65f665de04d3e9ae628fc2cc97cfe.html "Removes a personal security environment (PSE) from the database.") :arrow_upper_right:
+[DROP PSE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/daf65f665de04d3e9ae628fc2cc97cfe.html "Removes a personal security environment (PSE) from the database.") :arrow_upper_right:
 

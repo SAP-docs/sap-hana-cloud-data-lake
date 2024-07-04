@@ -253,13 +253,16 @@ All arguments are optional and can generate these reports:
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure. No addition privilege is required to see self-owned objects.
+Requires EXECUTE object-level privilege on this procedure.
 
-To see object-level privileges granted to other users or on objects owned by other users, also requires the MANAGE ANY OBJECT PRIVILEGE system privilege.
+Also requires one of the following:
+
+-   You own the object.
+-   MANAGE ANY OBJECT PRIVILEGE system privilege
 
 To see object-level privileges granted on objects owned by a role or granted to a role also requires one of the following:
 
--   You are a role administrator on the role
+-   You are a role administrator on the role.
 -   MANAGE ANY OBJECT PRIVILEGE system privilege
 
 
@@ -268,38 +271,42 @@ To see object-level privileges granted on objects owned by a role or granted to 
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-The following GRANT statements are executed:
+```
+--- Setup for the following examples ---
+GRANT MONITOR TO ROLE2;
+GRANT CHECKPOINT TO ROLE1;
+GRANT ROLE ROLE2 TO ROLE1 WITH ADMIN OPTION;
+GRANT ROLE ROLE3 TO ROLE2 WITH NO ADMIN OPTION;
+GRANT ROLE ROLE4 TO ROLE3 WITH ADMIN ONLY OPTION;
+```
+
+ROLE5 owns a table named TABLE1 and a procedure named test\_proc in the database.
+
+USER5, which has administrative rights over ROLE5, grants the following privileges:
 
 ```
-GRANT MONITOR TO r2;GRANT CHECKPOINT TO r1;
-GRANT ROLE r2 TO r1 WITH ADMIN OPTION;
-GRANT ROLE r3 TO r2 WITH NO ADMIN OPTION;
-GRANT ROLE r4 TO r3 WITH ADMIN ONLY OPTION;
+GRANT SELECT ON ROLE5.TABLE1 TO ROLE2 WITH GRANT OPTION;
+GRANT SELECT (c1), UPDATE (c1) ON ROLE5.TABLE1 TO ROLE6 WITH GRANT OPTION;
+GRANT EXECUTE ON ROLE5.test_proc TO ROLE3;
 ```
 
--   r5 owns a table named test\_tab and a procedure named test\_proc in the database.
--   u5, which has administrative rights over r5, grants the following privileges:
+With administrative rights USER6 grants the following privileges on TABLE1 to ROLE3:
 
-    ```
-    GRANT SELECT ON r5.test_tab TO r2 WITH GRANT OPTION;
-    GRANT SELECT (c1), UPDATE (c1) ON r5.test_tab TO r6 WITH GRANT OPTION;
-    GRANT EXECUTE ON r5.test_proc TO r3;
-    ```
+```
+GRANT SELECT (c1), REFERENCES (c1) ON ROLE5.TABLE1 TO ROLE3;
+```
 
--   u6, which has administrative rights over r6, grants the following privileges:
+This example returns the privileges granted to ROLE1:
 
-    ```
-    GRANT SELECT (c1), REFERENCES (c1) ON r5.test_tab TO r3;
-    ```
-
-
-Executing sp\_objectpermission\( 'r1' \) produces output similar to:
+```
+CALL sp_objectpermission( 'ROLE1' );
+```
 
 
 <table>
@@ -316,93 +323,21 @@ grantee
 </th>
 <th valign="top">
 
-object\_name
+object\_
+
+name
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
-u5
-
-</td>
-<td valign="top">
-
-r2
-
-</td>
-<td valign="top">
-
-test\_tab
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-u6
-
-</td>
-<td valign="top">
-
-r3
-
-</td>
-<td valign="top">
-
-test\_tab
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-u6
-
-</td>
-<td valign="top">
-
-r3
-
-</td>
-<td valign="top">
-
-test\_tab
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-u6
-
-</td>
-<td valign="top">
-
-r3
-
-</td>
-<td valign="top">
-
-test\_proc
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
 <th valign="top">
-
-\(Continued\)
 
 owner
 
 </th>
 <th valign="top">
 
-object\_type
+object\_
+
+type
 
 </th>
 <th valign="top">
@@ -410,90 +345,16 @@ object\_type
 grantor
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
-r5
-
-</td>
-<td valign="top">
-
-TABLE
-
-</td>
-<td valign="top">
-
-u5
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-r5
-
-</td>
-<td valign="top">
-
-COLUMN
-
-</td>
-<td valign="top">
-
-u6
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-r5
-
-</td>
-<td valign="top">
-
-COLUMN
-
-</td>
-<td valign="top">
-
-u6
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-r5
-
-</td>
-<td valign="top">
-
-PROCEDURE
-
-</td>
-<td valign="top">
-
-u6
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
 <th valign="top">
-
-\(Continued\)
 
 grantable
 
 </th>
 <th valign="top">
 
-column\_name
+column\_
+
+name
 
 </th>
 <th valign="top">
@@ -503,6 +364,36 @@ privilege
 </th>
 </tr>
 <tr>
+<td valign="top">
+
+USER5
+
+</td>
+<td valign="top">
+
+ROLE2
+
+</td>
+<td valign="top">
+
+TABLE1
+
+</td>
+<td valign="top">
+
+ROLE5
+
+</td>
+<td valign="top">
+
+TABLE
+
+</td>
+<td valign="top">
+
+USER5
+
+</td>
 <td valign="top">
 
 Y
@@ -522,6 +413,36 @@ SELECT
 <tr>
 <td valign="top">
 
+USER6
+
+</td>
+<td valign="top">
+
+ROLE3
+
+</td>
+<td valign="top">
+
+TABLE1
+
+</td>
+<td valign="top">
+
+ROLE5
+
+</td>
+<td valign="top">
+
+COLUMN
+
+</td>
+<td valign="top">
+
+USER6
+
+</td>
+<td valign="top">
+
 N
 
 </td>
@@ -537,6 +458,36 @@ SELECT
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+USER6
+
+</td>
+<td valign="top">
+
+ROLE3
+
+</td>
+<td valign="top">
+
+TABLE1
+
+</td>
+<td valign="top">
+
+ROLE5
+
+</td>
+<td valign="top">
+
+COLUMN
+
+</td>
+<td valign="top">
+
+USER6
+
+</td>
 <td valign="top">
 
 Y
@@ -556,6 +507,36 @@ REFERENCES
 <tr>
 <td valign="top">
 
+USER6
+
+</td>
+<td valign="top">
+
+ROLE3
+
+</td>
+<td valign="top">
+
+TABLE1
+
+</td>
+<td valign="top">
+
+ROLE5
+
+</td>
+<td valign="top">
+
+PROCEDURE
+
+</td>
+<td valign="top">
+
+USER6
+
+</td>
+<td valign="top">
+
 N
 
 </td>
@@ -572,7 +553,11 @@ EXECUTE
 </tr>
 </table>
 
-Executing sp\_objectpermission\( 'test\_tab', 'r5', 'table' \) produces output similar to:
+This example returns the privileges granted to ROLE5 on the table TABLE1.
+
+```
+CALL sp_objectpermission( 'TABLE1', 'ROLE5', 'table');
+```
 
 
 <table>
@@ -589,110 +574,21 @@ grantee
 </th>
 <th valign="top">
 
-object\_name
+object\_
+
+name
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
-u5
-
-</td>
-<td valign="top">
-
-r2
-
-</td>
-<td valign="top">
-
-test\_tab
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-u5
-
-</td>
-<td valign="top">
-
-r6
-
-</td>
-<td valign="top">
-
-test\_tab
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-u5
-
-</td>
-<td valign="top">
-
-r6
-
-</td>
-<td valign="top">
-
-test\_tab
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-u6
-
-</td>
-<td valign="top">
-
-r3
-
-</td>
-<td valign="top">
-
-test\_tab
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-u6
-
-</td>
-<td valign="top">
-
-r3
-
-</td>
-<td valign="top">
-
-test\_tab
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
 <th valign="top">
-
-\(Continued\)
 
 owner
 
 </th>
 <th valign="top">
 
-object\_type
+object\_
+
+type
 
 </th>
 <th valign="top">
@@ -700,102 +596,11 @@ object\_type
 grantor
 
 </th>
-</tr>
-<tr>
-<td valign="top">
-
-r5
-
-</td>
-<td valign="top">
-
-TABLE
-
-</td>
-<td valign="top">
-
-u5
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-r5
-
-</td>
-<td valign="top">
-
-COLUMN
-
-</td>
-<td valign="top">
-
-u5
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-r5
-
-</td>
-<td valign="top">
-
-COLUMN
-
-</td>
-<td valign="top">
-
-u5
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-r5
-
-</td>
-<td valign="top">
-
-COLUMN
-
-</td>
-<td valign="top">
-
-u6
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-r5
-
-</td>
-<td valign="top">
-
-COLUMN
-
-</td>
-<td valign="top">
-
-u6
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
 <th valign="top">
 
-\(Continued\)
+column\_
 
-column\_name
+name
 
 </th>
 <th valign="top">
@@ -810,6 +615,36 @@ grantable
 </th>
 </tr>
 <tr>
+<td valign="top">
+
+USER5
+
+</td>
+<td valign="top">
+
+ROLE2
+
+</td>
+<td valign="top">
+
+TABLE1
+
+</td>
+<td valign="top">
+
+ROLE5
+
+</td>
+<td valign="top">
+
+TABLE
+
+</td>
+<td valign="top">
+
+USER5
+
+</td>
 <td valign="top">
 
 NULL
@@ -827,6 +662,36 @@ Y
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+USER5
+
+</td>
+<td valign="top">
+
+ROLE6
+
+</td>
+<td valign="top">
+
+TABLE1
+
+</td>
+<td valign="top">
+
+ROLE5
+
+</td>
+<td valign="top">
+
+COLUMN
+
+</td>
+<td valign="top">
+
+USER5
+
+</td>
 <td valign="top">
 
 c1
@@ -844,6 +709,36 @@ Y
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+USER5
+
+</td>
+<td valign="top">
+
+ROLE6
+
+</td>
+<td valign="top">
+
+TABLE1
+
+</td>
+<td valign="top">
+
+ROLE5
+
+</td>
+<td valign="top">
+
+COLUMN
+
+</td>
+<td valign="top">
+
+USER5
+
+</td>
 <td valign="top">
 
 c1
@@ -863,6 +758,36 @@ Y
 <tr>
 <td valign="top">
 
+USER6
+
+</td>
+<td valign="top">
+
+ROLE3
+
+</td>
+<td valign="top">
+
+TABLE1
+
+</td>
+<td valign="top">
+
+ROLE5
+
+</td>
+<td valign="top">
+
+COLUMN
+
+</td>
+<td valign="top">
+
+USER6
+
+</td>
+<td valign="top">
+
 c1
 
 </td>
@@ -878,6 +803,36 @@ N
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+USER6
+
+</td>
+<td valign="top">
+
+ROLE3
+
+</td>
+<td valign="top">
+
+TABLE1
+
+</td>
+<td valign="top">
+
+ROLE5
+
+</td>
+<td valign="top">
+
+COLUMN
+
+</td>
+<td valign="top">
+
+USER6
+
+</td>
 <td valign="top">
 
 c1

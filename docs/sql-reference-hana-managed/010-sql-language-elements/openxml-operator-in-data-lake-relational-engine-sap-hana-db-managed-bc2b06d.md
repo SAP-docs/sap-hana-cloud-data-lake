@@ -372,7 +372,7 @@ To use REMOTE\_EXECUTE requires one of the following:
 
 <a name="loiobc2b06da6caf497f9601f2d2d6e9e063__section_e2c_vnl_bwb"/>
 
-## Example
+## Examples
 
 The following query generates a result set from the XML document supplied as the first argument to the OPENXML operator:
 

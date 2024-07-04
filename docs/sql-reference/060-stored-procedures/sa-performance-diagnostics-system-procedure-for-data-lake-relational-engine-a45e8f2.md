@@ -26,7 +26,7 @@ sa_performance_diagnostics( )
 
 ## Parameters
 
-None
+None.
 
 
 
@@ -633,9 +633,9 @@ CALL sa_server_option( 'RequestTiming','ON' )
 
 ## Privileges
 
-Requires all of:
+Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   MONITOR system privilege
 
 
@@ -644,7 +644,7 @@ Requires all of:
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -652,7 +652,7 @@ None
 
 ## Examples
 
-This example uses the sa\_performance\_diagnostics system procedure to return a summary of request timing information for all connections.
+This example returns a summary of request timing information for all connections.
 
 ```
 CALL sa_performance_diagnostics( );
@@ -678,17 +678,56 @@ Userid
 </th>
 <th valign="top">
 
-DBNumber
+DB
+
+Number
 
 </th>
 <th valign="top">
 
-LoginTime
+Login
+
+Time
 
 </th>
 <th valign="top">
 
-TransactionStartTime
+Transaction
+
+StartTime
+
+</th>
+<th valign="top">
+
+LastReq
+
+Time
+
+</th>
+<th valign="top">
+
+Req
+
+Type
+
+</th>
+<th valign="top">
+
+Req
+
+Status
+
+</th>
+<th valign="top">
+
+ReqTime
+
+Unscheduled
+
+</th>
+<th valign="top">
+
+...
 
 </th>
 </tr>
@@ -723,6 +762,31 @@ USER3
 NULL
 
 </td>
+<td valign="top">
+
+26:20.3
+
+</td>
+<td valign="top">
+
+PREFETCH
+
+</td>
+<td valign="top">
+
+Idle
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+...
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -753,6 +817,31 @@ USER2
 <td valign="top">
 
 NULL
+
+</td>
+<td valign="top">
+
+26:20.2
+
+</td>
+<td valign="top">
+
+PREFETCH
+
+</td>
+<td valign="top">
+
+Idle
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+...
 
 </td>
 </tr>
@@ -787,6 +876,31 @@ HDLADMIN
 NULL
 
 </td>
+<td valign="top">
+
+42:34.5
+
+</td>
+<td valign="top">
+
+FETCH
+
+</td>
+<td valign="top">
+
+Executing
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+...
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -817,6 +931,31 @@ USER1
 <td valign="top">
 
 NULL
+
+</td>
+<td valign="top">
+
+26:19.8
+
+</td>
+<td valign="top">
+
+PREFETCH
+
+</td>
+<td valign="top">
+
+Idle
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+...
 
 </td>
 </tr>
@@ -851,179 +990,6 @@ USER1
 NULL
 
 </td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="6">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-LastReqTime
-
-</th>
-<th valign="top">
-
-ReqType
-
-</th>
-<th valign="top">
-
-ReqStatus
-
-</th>
-<th valign="top">
-
-ReqTimeUnscheduled
-
-</th>
-<th valign="top">
-
-ReqTimeActive
-
-</th>
-<th valign="top">
-
-ReqTimeBlockIO
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-26:20.3
-
-</td>
-<td valign="top">
-
-PREFETCH
-
-</td>
-<td valign="top">
-
-Idle
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-26:20.2
-
-</td>
-<td valign="top">
-
-PREFETCH
-
-</td>
-<td valign="top">
-
-Idle
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-42:34.5
-
-</td>
-<td valign="top">
-
-FETCH
-
-</td>
-<td valign="top">
-
-Executing
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0.001257
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-26:19.8
-
-</td>
-<td valign="top">
-
-PREFETCH
-
-</td>
-<td valign="top">
-
-Idle
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 26:19.4
@@ -1046,667 +1012,7 @@ Idle
 </td>
 <td valign="top">
 
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="6">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-ReqTimeBlockLock
-
-</th>
-<th valign="top">
-
-ReqTimeBlockContention
-
-</th>
-<th valign="top">
-
-ReqCountUnscheduled
-
-</th>
-<th valign="top">
-
-ReqCountActive
-
-</th>
-<th valign="top">
-
-ReqCountBlockIO
-
-</th>
-<th valign="top">
-
-ReqCountBlockLock
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-3
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="7">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-ReqCountBlockContention
-
-</th>
-<th valign="top">
-
-LastIdle
-
-</th>
-<th valign="top">
-
-BlockedOn
-
-</th>
-<th valign="top">
-
-UncommitOp
-
-</th>
-<th valign="top">
-
-CurrentProcedure
-
-</th>
-<th valign="top">
-
-EventName
-
-</th>
-<th valign="top">
-
-CurrentLineNumber
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-5520
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="2">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-LastStatement
-
-</th>
-<th valign="top">
-
-LastPlanText
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-select top 1 "srvname" from "SYS"."SYSSERVER" where "srvclass" = 'files\_service'
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-select top 1 "srvname" from "SYS"."SYSSERVER" where "srvclass" = 'files\_service'
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-call "sa\_performance\_diagnostics"\(\)
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-select top 1 "srvname" from "SYS"."SYSSERVER" where "srvclass" = 'files\_service'
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-select top 1 "srvname" from "SYS"."SYSSERVER" where "srvclass" = 'files\_service'
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="1">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-AppInfo
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-IP=XXX.XX.XX.XXX;HOST=hana-XXXXXX-XXXX-svc-XXXXXX-1696253332-XXXXXXX;OSUSER=root;OS='Linux 5.15.114-gardenlinux-cloud-amd64 \#1 SMP Debian 5.15.114-0gardenlinux3 \(2023-06-01\) x86\_64';EXE=/usr/local/bin/node;PID=0x4d;THREAD=0x7f2c08797700;VERSION=17.1.6.3265;API=CAPI\_Node.js;TIMEZONEADJUSTMENT=0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-IP=XXX.XX.XX.XXX;HOST=hana-XXXXXX-XXXX-svc-XXXXXX-1696253332-XXXXXXX;OSUSER=root;OS='Linux 5.15.114-gardenlinux-cloud-amd64 \#1 SMP Debian 5.15.114-0gardenlinux3 \(2023-06-01\) x86\_64';EXE=/usr/local/bin/node;PID=0x4d;THREAD=0x7f2c127ab700;VERSION=17.1.6.3265;API=CAPI\_Node.js;TIMEZONEADJUSTMENT=0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-IP=XXX.XX.XX.XXX;HOST=hana-XXXXXX-XXXX-svc-XXXXXX-1696253332-XXXXXXX;OSUSER=root;OS='Linux 5.15.114-gardenlinux-cloud-amd64 \#1 SMP Debian 5.15.114-0gardenlinux3 \(2023-06-01\) x86\_64';EXE=/usr/local/bin/node;PID=0x4d;THREAD=0x7f2c0c79f700;VERSION=17.1.6.3265;API=CAPI\_Node.js;TIMEZONEADJUSTMENT=0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-IP=XXX.XX.XX.XXX;HOST=hana-XXXXXX-XXXX-svc-XXXXXX-1696253332-XXXXXXX;OSUSER=root;OS='Linux 5.15.114-gardenlinux-cloud-amd64 \#1 SMP Debian 5.15.114-0gardenlinux3 \(2023-06-01\) x86\_64';EXE=/usr/local/bin/node;PID=0x4d;THREAD=0x7f2c0478f700;VERSION=17.1.6.3265;API=CAPI\_Node.js;TIMEZONEADJUSTMENT=0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-IP=XXX.XX.XX.XXX;HOST=hana-XXXXXX-XXXX-svc-XXXXXX-1696253332-XXXXXXX;OSUSER=root;OS='Linux 5.15.114-gardenlinux-cloud-amd64 \#1 SMP Debian 5.15.114-0gardenlinux3 \(2023-06-01\) x86\_64';EXE=/usr/local/bin/node;PID=0x4d;THREAD=0x7f2c15fb2700;VERSION=17.1.6.3265;API=CAPI\_Node.js;TIMEZONEADJUSTMENT=0
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="2">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-SnapshotCount
-
-</th>
-<th valign="top">
-
-LockCount
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
+...
 
 </td>
 </tr>

@@ -326,7 +326,7 @@ Avoid partitioned sort-merge push-down join if the join keys include all the par
 
 
 
-## Example
+## Examples
 
 The following example requests a hash join:
 

@@ -58,7 +58,7 @@ Specifies the identifier of a JWT provider to be modified.
 Specifies the issuer name. Tokens with an "iss" claim matching this name are mapped to this JWT provider.
 
 ```
-<issuer_clause> ::= WITH ISSUER <sting_literal>;
+<issuer_clause> ::= WITH ISSUER <sting_literal>
 ```
 
 
@@ -72,7 +72,7 @@ Specifies the issuer name. Tokens with an "iss" claim matching this name are map
 
 ```
 <claims_clause> ::= 
-   { <external_id_clause> | <claim_compare_clause> } [ <claims_clause> ];
+   { <external_id_clause> | <claim_compare_clause> } [...]
 ```
 
 
@@ -102,7 +102,7 @@ Adds a claim that must be verified in JWT token which represents external identi
 A claim can only be used for one compare operation, either = or HAS MEMBER. Claim and value comparisons are case-sensitive.
 
 ```
-<claim_compare_clause> ::= { <claim_equals_clause> | <claim_has_member_clause> };
+<claim_compare_clause> ::= { <claim_equals_clause> | <claim_has_member_clause> }
 ```
 
 
@@ -120,7 +120,7 @@ A claim can only be used for one compare operation, either = or HAS MEMBER. Clai
 <claim_equals_clause> ::= CLAIM <claim_name> = <claim_value>
 
 <claim_name> ::= <string_literal>
-<claim_value> ::= <string_literal>;
+<claim_value> ::= <string_literal>
 ```
 
 
@@ -138,7 +138,7 @@ A claim can only be used for one compare operation, either = or HAS MEMBER. Clai
 <claim_has_member_clause> ::= CLAIM <claim_name> HAS MEMBER <claim_value>
 
 <claim_name> ::= <string_literal>
-<claim_value> ::= <string_literal>;
+<claim_value> ::= <string_literal>
 ```
 
 
@@ -163,7 +163,7 @@ A claim can only be used for one compare operation, either = or HAS MEMBER. Clai
 Sets priority for a provider entry to allow existence of multiple providers with the same issuer. The default value is 100.
 
 ```
-<priority_clause> ::= PRIORITY <number>;
+<priority_clause> ::= PRIORITY <number>
 ```
 
 *<number\>* is a value between 1-250.
@@ -182,7 +182,7 @@ Providers with the same issuer must have different priorities. During authentica
 Unsets one or more claims. You cannot unset the *<external\_id\_clause\>*. If an external id claim is set using *<claim\_compare\_clause\>*, that claim can be unset successfully.
 
 ```
-CLAIM <claim_name> [<unset_claims_clause>];
+CLAIM <claim_name> [<unset_claims_clause>]
 ```
 
 

@@ -48,7 +48,7 @@ The VARCHAR\(128\) string of characters to add.
 
 ## Result Set
 
-None
+None.
 
 
 
@@ -70,7 +70,7 @@ If auditing is turned on, then this system procedure adds a comment to the audit
 
 Require all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   MANAGE AUDITING system privilege
 
 
@@ -79,7 +79,7 @@ Require all of the following:
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -87,7 +87,7 @@ None
 
 ## Examples
 
-This example uses the sa\_audit\_string system procedure to add text to the audit string.
+This example adds text to the audit string.
 
 ```
 CALL sa_audit_string ('Auditing test start');
@@ -96,7 +96,7 @@ CALL sa_audit_string ('Auditing test start');
 **Related Information**  
 
 
-[sa_dependent_views System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/47783e3af31b4f27a28b41ad534f8332.html "Returns the list of all dependent views for a given table or view.") :arrow_upper_right:
+[sa_dependent_views System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/47783e3af31b4f27a28b41ad534f8332.html "Returns the list of all dependent views for a given table or view.") :arrow_upper_right:
 
-[sa_audit_string System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/94b152d9c67043c2828e4f3de384856b.html "Adds a string to auditing data.") :arrow_upper_right:
+[sa_audit_string System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/94b152d9c67043c2828e4f3de384856b.html "Adds a string to auditing data.") :arrow_upper_right:
 

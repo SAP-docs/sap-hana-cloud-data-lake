@@ -122,7 +122,7 @@ Syntax 2 – The *<window-spec\>* parameter represents usage as a window functio
 
 <a name="loioa574426e84f210159d5d8adecd1f70f2__REGR_AVGY_examples1"/>
 
-## Example
+## Examples
 
 The following example calculates the average of the independent variable, employee salary:
 
@@ -135,5 +135,5 @@ This function returns the value 49988.6232.
 **Related Information**  
 
 
-[REGR_AVGY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/a54d2f0bde2f44d6bb973767b6fc47f4.html "Computes the average of the dependent variable of the regression line.") :arrow_upper_right:
+[REGR_AVGY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/a54d2f0bde2f44d6bb973767b6fc47f4.html "Computes the average of the dependent variable of the regression line.") :arrow_upper_right:
 

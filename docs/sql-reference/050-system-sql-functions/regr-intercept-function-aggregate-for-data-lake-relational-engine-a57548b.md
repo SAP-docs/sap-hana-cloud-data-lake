@@ -122,7 +122,7 @@ Syntax 2 – The *<window-spec\>* parameter represents usage as a window functio
 
 <a name="loioa57548bd84f21015a72397703df578ba__REGR_INTERCEPT_examples1"/>
 
-## Example
+## Examples
 
 The following example returns the value 1874.5805688517603:
 
@@ -135,5 +135,5 @@ SELECT REGR_INTERCEPT( Salary, ( YEAR( NOW() ) - YEAR( BirthDate ) ) )FROM Emplo
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[REGR_INTERCEPT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/150d7d8e1d9a456a867139f014feba18.html "Computes the y-intercept of the linear regression line that best fits the dependent and independent variables.") :arrow_upper_right:
+[REGR_INTERCEPT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/150d7d8e1d9a456a867139f014feba18.html "Computes the y-intercept of the linear regression line that best fits the dependent and independent variables.") :arrow_upper_right:
 

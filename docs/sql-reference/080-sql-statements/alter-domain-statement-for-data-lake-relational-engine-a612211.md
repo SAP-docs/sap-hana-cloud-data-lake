@@ -95,7 +95,7 @@ ALTER DOMAIN Address RENAME MailingAddress;
 **Related Information**  
 
 
-[CREATE DOMAIN Statementfor Data Lake Relational Engine](create-domain-statementfor-data-lake-relational-engine-a616d8e.md "Creates a user-defined data type in the database.")
+[CREATE DOMAIN Statement for Data Lake Relational Engine](create-domain-statement-for-data-lake-relational-engine-a616d8e.md "Creates a user-defined data type in the database.")
 
 [DROP DOMAIN Statement for Data Lake Relational Engine](drop-domain-statement-for-data-lake-relational-engine-b9516c8.md "Removes a domain (data type) from the database.")
 

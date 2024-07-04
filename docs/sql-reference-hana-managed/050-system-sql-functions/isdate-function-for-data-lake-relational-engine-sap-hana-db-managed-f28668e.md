@@ -60,7 +60,7 @@ If a conversion is possible, the function returns 1; otherwise, it returns 0. If
 
 <a name="loiof28668e5060b4c6db2bc8832b9a5f4cd__section_ept_qnh_trb"/>
 
-## Example
+## Examples
 
 The following example tests whether the birth\_date column holds valid dates, returning invalid dates as NULL, and valid dates in date format:
 
@@ -87,5 +87,5 @@ select
 **Related Information**  
 
 
-[ISDATE Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a559f0f684f21015b95ee838e6da62dc.html "Tests whether a string argument can be converted to a date.") :arrow_upper_right:
+[ISDATE Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a559f0f684f21015b95ee838e6da62dc.html "Tests whether a string argument can be converted to a date.") :arrow_upper_right:
 

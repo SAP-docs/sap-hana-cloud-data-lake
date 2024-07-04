@@ -2,7 +2,7 @@
 
 # CREATE TEXT INDEX Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)
 
-Creates a TEXT index.
+Creates a TEXT index and specifies the text configuration object to use.
 
 
 
@@ -22,6 +22,11 @@ CREATE TEXT INDEX <text-index-name>
    [ CONFIGURATION [ <owner>]<text-configuration-name>]
    [ IMMEDIATE REFRESH ]
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 
@@ -75,13 +80,31 @@ You cannot create a TEXT index on views or temporary tables, or on an IN SYSTEM 
 
 ## Privileges
 
--   You own the underlying table of the index.
--   REFERENCES object-level privilege on the table.
--   CREATE ANY INDEX system privilege
--   CREATE ANY OBJECT system privilege
--   CREATE ANY or REFERENCES object-level privilege on the schema containing the underlying table if the schema owned by another user.
 
-See [GRANT System Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a3dfcb0284f21015b74ac3cded42ee69.html "Grants specific system privileges to users or roles, with or without administrative rights.") :arrow_upper_right: or [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right: for assistance with granting privileges.
+
+### 
+
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user.:
+
+</b></dt>
+<dd>
+
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
+
+
+</dd>
+</dl>
 
 
 
@@ -91,9 +114,11 @@ Automatic commit
 
 
 
+<a name="loio11447f8825504a4b8cc578f3204aec12__section_ikq_bzc_ybc"/>
+
 ## Examples
 
-The following example creates a TEXT index, myTxtIdx, on the CompanyName column of the Customers table.
+The following example creates a TEXT index, `myTxtIdx`, on the `CompanyName` column of the `Customers` table:
 
 ```
 CREATE TEXT INDEX myTxtIdx ON Customers (CompanyName );
@@ -102,7 +127,9 @@ CREATE TEXT INDEX myTxtIdx ON Customers (CompanyName );
 **Related Information**  
 
 
-[CREATE INDEX Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a617ca4484f21015b2cdfdebbf4a5eee.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
+[ALTER TEXT INDEX Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](alter-text-index-statement-for-data-lake-relational-engine-sap-hana-db-managed-979f1f1.md "Renames, moves or alters the definition of a TEXT index.")
 
-[CREATE TEXT INDEX Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a602ced184f210158c90b4b833754412.html "Creates a TEXT index and specifies the text configuration object to use.") :arrow_upper_right:
+[DROP TEXT INDEX for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-text-index-for-data-lake-relational-engine-sap-hana-db-managed-986e405.md "Removes a TEXT index from the database.")
+
+[CREATE TEXT INDEX Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a602ced184f210158c90b4b833754412.html "Creates a TEXT index and specifies the text configuration object to use.") :arrow_upper_right:
 

@@ -96,7 +96,7 @@ Add trace events to the session.
 
 ```
 <event-definition> ::=
-   ADD TRACE EVENT <trace-event-name> [ ( WHERE <search-condition> ) ];
+   ADD TRACE EVENT <trace-event-name> [ ( WHERE <search-condition> ) ]
 ```
 
 
@@ -128,7 +128,7 @@ Adds the target file to the trace event session definition.
 
 ```
 <target-definition> :
-   ADD TARGET FILE ( SET <target-parameter-name>=<target-parameter-value> [ ,... ] );
+   ADD TARGET FILE ( SET <target-parameter-name> [,... ] )
 ```
 
 
@@ -142,64 +142,50 @@ Adds the target file to the trace event session definition.
 
 ```
 <target-parameter-name> :
-{ filename_prefix
- | flush_on_write
- | ["compressed"] };
+{ filename_prefix = <path-and-filename>
+ | flush_on_write = = { ON | OFF }
+ | ["compressed"] = = { ON | OFF }
 ```
 
-The following target parameters are supported:
 
-
-<table>
-<tr>
-<th valign="top">
-
-*<target-parameter-name\>* 
-
-</th>
-<th valign="top">
-
-*<target-parameter-value\>* 
-
-</th>
-</tr>
-<tr>
-<td valign="top">
+<dl>
+<dt><b>
 
 filename\_prefix
 
-</td>
-<td valign="top">
+</b></dt>
+<dd>
 
-\(Required\) An ETD file name prefix with or without a path. ETD files have the extension `.etd`.
+A log file name prefix with or without a path. All log files have the extension `.etd`. If a full path is not specified, then the directory where the database is located is used as the root directory.
 
-</td>
-</tr>
-<tr>
-<td valign="top">
+
+
+</dd><dt><b>
 
 flush\_on\_write
 
-</td>
-<td valign="top">
+</b></dt>
+<dd>
 
-A boolean \(true or false\) value that controls whether disk buffers are flushed for each event that is logged. The default is false. When flushing is enabled, the performance of the database server may be reduced if many trace events are being logged.
+A Boolean value that controls whether disk buffers are flushed for each event that is logged. The default is ON. When this parameter is turned on, the performance of the database server may be reduced if many trace events are being logged.
 
-</td>
-</tr>
-<tr>
-<td valign="top">
 
-\[compressed\]
 
-</td>
-<td valign="top">
+</dd><dt><b>
 
-A boolean \(true or false\) value that controls compression of the ETD file to conserve disk space. The default is false. Use brackets with this parameter name because it is a keyword in other contexts.
+compressed
 
-</td>
-</tr>
-</table>
+</b></dt>
+<dd>
+
+A Boolean value that controls compression of the log file to conserve disk space. The default is OFF.
+
+
+
+</dd>
+</dl>
+
+The following target parameters are supported:
 
 
 
@@ -263,7 +249,7 @@ Not in the standard.
 
 <a name="loio816cf4d46ce2101485eddafc5b7ce186__create_temp_trace_event_sess_example1"/>
 
-## Example
+## Examples
 
 The following statement creates a trace event called my\_event, and then creates a trace event session that records information about the user-defined event my\_event and the system-defined event SYS\_ConsoleLog\_Information to a file named my\_trace\_file.
 
@@ -286,7 +272,7 @@ CREATE OR REPLACE TEMPORARY TRACE EVENT SESSION my_session_hdladmin ADD TRACE EV
 **Related Information**  
 
 
-[CREATE TEMPORARY TRACE EVENT SESSION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/0c1bc711bafd418da40a48480179d22e.html "Creates a user trace event session.") :arrow_upper_right:
+[CREATE TEMPORARY TRACE EVENT SESSION Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/0c1bc711bafd418da40a48480179d22e.html "Creates a user trace event session.") :arrow_upper_right:
 
 [DROP TRACE EVENT SESSION Statement for Data Lake Relational Engine](drop-trace-event-session-statement-for-data-lake-relational-engine-816f77f.md "Drops a trace event session.")
 

@@ -165,5 +165,5 @@ For compatibility with previous data lake Relational Engine versions, the follow
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[SQL_FLAGGER_WARNING_LEVEL Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/63825e7a03534b5ca6f606ebf42ff67b.html "Controls the response to any SQL that is not part of the specified standard.") :arrow_upper_right:
+[SQL_FLAGGER_WARNING_LEVEL Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/63825e7a03534b5ca6f606ebf42ff67b.html "Controls the response to any SQL that is not part of the specified standard.") :arrow_upper_right:
 

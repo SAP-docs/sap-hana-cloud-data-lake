@@ -30,6 +30,111 @@ ALTER PSE <pse-name>
 
 
 
+<a name="loio056ee2c16cd548e3a811170533f684e7__section_ah4_cct_wbc"/>
+
+## Parameters
+
+
+<dl>
+<dt><b>
+
+*<certificate-clause\>*
+
+</b></dt>
+<dd>
+
+Adds or drops certificate\(s\) to and from the PSE.
+
+```
+<certificate-clause> ::= { ADD | DROP } CERTIFICATE ( 
+   { <certificate-name>[, <certificate-name>[,...] ]
+   | <certificate-id>[, <certificate-id>[,...] ] } )
+```
+
+
+<dl>
+<dt><b>
+
+*<certificate-name\>*
+
+</b></dt>
+<dd>
+
+```
+<certificate-name> ::= <simple-identifier>
+```
+
+
+
+</dd><dt><b>
+
+*<certificate-id\>*
+
+</b></dt>
+<dd>
+
+```
+<certificate-id> ::= <object-id>
+```
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+*<set-own-certificate-clause\>*
+
+</b></dt>
+<dd>
+
+Set the own certificate and private key.
+
+```
+<set-own-certificate-clause> ::= SET OWN CERTIFICATE <certificate-content>
+```
+
+
+<dl>
+<dt><b>
+
+*<certificate-content\>*
+
+</b></dt>
+<dd>
+
+The *<certificate-content\>* string may contain one or more certificates in the PEM format and the private key of the own certificate. One of the certificates is the own certificate and the other certificate\(s\) are intermediate chain certificates completing the trust chain from the own certificate to the root certificate, which the peer trusts. The own certificate and the order of the certificates forming a chain can be identified by the issuer or subject relationship. If the PSE already has an own certificate assigned, it is replaced.
+
+
+
+</dd>
+</dl>
+
+
+
+</dd><dt><b>
+
+*<unset-own-certificate-clause\>*
+
+</b></dt>
+<dd>
+
+Removes the own certificate, any intermediate chain certificates, and the private key.
+
+```
+<unset-own-certificate-clause> ::= UNSETSET OWN CERTIFICATE
+```
+
+
+
+</dd>
+</dl>
+
+
+
 <a name="loio056ee2c16cd548e3a811170533f684e7__section_ptt_5b3_fzb"/>
 
 ## Remarks
@@ -123,5 +228,5 @@ ALTER PSE mypse1 DROP CERTIFICATE Digicert;
 
 [DROP PSE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-pse-statement-for-data-lake-relational-engine-sap-hana-db-managed-daf65f6.md "Removes a personal security environment (PSE) from the database.")
 
-[ALTER PSE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/53742a28df0f40deb5cd7a9784fc1a55.html "Modifies an existing personal security environment (PSE).") :arrow_upper_right:
+[ALTER PSE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/53742a28df0f40deb5cd7a9784fc1a55.html "Modifies an existing personal security environment (PSE).") :arrow_upper_right:
 

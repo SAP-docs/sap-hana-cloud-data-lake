@@ -71,7 +71,7 @@ Using the value of *<integer-expression\>* as *<n\>* returns the *<n\>*th argume
 
 <a name="loioa53342da84f21015892d9495d775376f__ARGN_examples1"/>
 
-## Example
+## Examples
 
 The following statement returns the value 6:
 
@@ -82,5 +82,5 @@ SELECT ARGN( 6, 1,2,3,4,5,6 ) FROM iq_dummy;
 **Related Information**  
 
 
-[ARGN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/fa3998bd27284db3b8f25033b4130aba.html "Returns a selected argument from a list of arguments.") :arrow_upper_right:
+[ARGN Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/fa3998bd27284db3b8f25033b4130aba.html "Returns a selected argument from a list of arguments.") :arrow_upper_right:
 

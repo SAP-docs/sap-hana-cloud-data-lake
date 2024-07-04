@@ -92,5 +92,5 @@ You can use combinations of `ROUND`, `FLOOR`, and `CEILING` to provide similar f
 **Related Information**  
 
 
-[TRUNCNUM Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a58baf5b84f21015961fcdf7ec6e1b8b.html "Truncates a number at a specified number of places after the decimal point.") :arrow_upper_right:
+[TRUNCNUM Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a58baf5b84f21015961fcdf7ec6e1b8b.html "Truncates a number at a specified number of places after the decimal point.") :arrow_upper_right:
 

@@ -494,21 +494,19 @@ To grant the BACKUP TABLE object-level privilege requires one of:
 -   BACKUP OWNER TABLE or BACKUP ANY TABLE system privilege if you own the table.
 -   BACKUP ANY TABLE system privilege granted with the WITH ADMIN option if the table is owned by another user.
 -   BACKUP TABLE object-level privilege granted with the WITH GRANT option on the table being backed up regardless of ownership.
--   BACKUP OWNER TABLE system privilege plus BACKUP TABLE object-level privilege granted with the WITH GRANT option on the schema that contains the table being backed up if the schema is owned by another user.
 
 To grant the RESTORE TABLE object-level privilege requires one of:
 
 -   RESTORE OWNER TABLE or RESTORE ANY TABLE system privilege if you own the table.
 -   RESTORE ANY TABLE system privilege if the table is owned by another user.
 -   RESTORE TABLE object-level privilege granted with the WITH GRANT option on the table being restored regardless of ownership.
--   RESTORE OWNER TABLE system privilege plus RESTORE TABLE object-level privilege granted with the WITH GRANT option on the schema to contain the table being restored if the schema is owned by another user.
 
 To grant any other object-level privilege requires one of:
 
 -   You own the object.
--   You have the MANAGE ANY OBJECT PRIVILEGE system privilege.
--   You have been granted the specific object-level privilege with the WITH GRANT OPTION clause on the object if the object is owned by another user.
--   You have been granted the specific object-level privilege with the WITH GRANT OPTION clause on the schema containing the object if the schema is owned by another user.
+-   You've the MANAGE ANY OBJECT PRIVILEGE system privilege.
+-   You've been granted the specific object-level privilege with the WITH GRANT OPTION clause on the object if the object is owned by another user.
+-   You've been granted the specific object-level privilege with the WITH GRANT OPTION clause on the schema containing the object if the schema is owned by another user.
 
 See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md) and [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md) for assistance granting privileges.
 
@@ -544,5 +542,5 @@ GRANT UPDATE ON SCHEMA myschema1 TO user1;
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
 
-[REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
+[GRANT Object-Level Privilege Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/c71353ef634f4d3992e2151d1bc97157.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right:
 

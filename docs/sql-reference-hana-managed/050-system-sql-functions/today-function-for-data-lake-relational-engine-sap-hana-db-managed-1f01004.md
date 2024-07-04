@@ -39,7 +39,7 @@ Each instance of the TODAY function in a request is evaluated at most once. Mult
 
 <a name="loio1f010045110b4fbfaebefa285ec75b87__section_gkz_sjv_vrb"/>
 
-## Example
+## Examples
 
 The following statement returns the current day according to the system clock:
 
@@ -50,5 +50,5 @@ SELECT TODAY( * ) FROM iq_dummy;
 **Related Information**  
 
 
-[TODAY Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a58aae9284f21015a550a97595a91cc9.html "Returns the current date. This is the historical syntax for CURRENT DATE.") :arrow_upper_right:
+[TODAY Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a58aae9284f21015a550a97595a91cc9.html "Returns the current date. This is the historical syntax for CURRENT DATE.") :arrow_upper_right:
 

@@ -310,7 +310,7 @@ Column and table constraints help ensure the integrity of data in the database.
      [ IN <dbspace-name> ]
      | <foreign-key-constraint>
      | CHECK ( <condition> )
-   };
+   }
 ```
 
 
@@ -951,15 +951,15 @@ Automatic commit
 
 [IDENTITY\_INSERT Option for Data Lake Relational Engine](../090-database-options/identity-insert-option-for-data-lake-relational-engine-a63914e.md "Enables users to insert values into or to update an IDENTITY or AUTOINCREMENT column.")
 
-[Restrictions on Table Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a872506a84f21015aa20de6d7665a803.html "When working with table partitions, there are some restrictions on the table types, partition keys, and operations you can use.") :arrow_upper_right:
+[Restrictions on Table Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_3_QRC/en-US/a872506a84f21015aa20de6d7665a803.html "When working with table partitions, there are some restrictions on the table types, partition keys, and operations you can use.") :arrow_upper_right:
 
-[Hash-Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a871ecd884f21015b8f5876892d31447.html "Hash-range partitioning is a composite partitioning scheme that subpartitions a hash-partitioned table by range.") :arrow_upper_right:
+[Hash-Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_3_QRC/en-US/a871ecd884f21015b8f5876892d31447.html "Hash-range partitioning is a composite partitioning scheme that subpartitions a hash-partitioned table by range.") :arrow_upper_right:
 
-[Hash Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a871bc0984f210159faaedf3f3eb5b29.html "Hash partitioning maps data to partitions based on partition-key values processed by an internal hashing function.") :arrow_upper_right:
+[Hash Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_3_QRC/en-US/a871bc0984f210159faaedf3f3eb5b29.html "Hash partitioning maps data to partitions based on partition-key values processed by an internal hashing function.") :arrow_upper_right:
 
-[Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a8721b7584f21015a062c99a1c19e6cb.html "Range partitioning divides large tables by a range of partition-key values established for each partition.") :arrow_upper_right:
+[Range Partitions](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_3_QRC/en-US/a8721b7584f21015a062c99a1c19e6cb.html "Range partitioning divides large tables by a range of partition-key values established for each partition.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[CREATE TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/6c3afae6093f4327a6aa7fb91c1caafe.html "Creates a new table in the database or on a remote server.") :arrow_upper_right:
+[CREATE TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/6c3afae6093f4327a6aa7fb91c1caafe.html "Creates a new table in the database or on a remote server.") :arrow_upper_right:
 

@@ -64,7 +64,7 @@ However, the SQL preprocessor reads the given file, inserting its contents into 
 Two file names are specially recognized: SQLCA and SQLDA. Any C program using Embedded SQL must contain this statement before any Embedded SQL statements:
 
 ```
-EXEC SQL INCLUDE SQLCA;
+EXEC SQL INCLUDE SQLCA
 ```
 
 This statement must appear at a position in the C program where static variable declarations are allowed. Many Embedded SQL statements require variables \(invisible to the programmer\) which are declared by the SQL preprocessor at the position of the SQLCA include statement. The SQLDA file must be included if any SQLDAs are used.

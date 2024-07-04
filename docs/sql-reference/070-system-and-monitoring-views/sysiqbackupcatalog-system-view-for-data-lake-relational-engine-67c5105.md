@@ -331,5 +331,5 @@ Primary key (bu_id);
 **Related Information**  
 
 
-[SYSIQBACKUPCATALOG System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/c24ea83905bc44a58a4a04e32863b8ea.html "Maintains complete and up-to-date information of all data lake Relational Engine backups.") :arrow_upper_right:
+[SYSIQBACKUPCATALOG System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/c24ea83905bc44a58a4a04e32863b8ea.html "Maintains complete and up-to-date information of all data lake Relational Engine backups.") :arrow_upper_right:
 

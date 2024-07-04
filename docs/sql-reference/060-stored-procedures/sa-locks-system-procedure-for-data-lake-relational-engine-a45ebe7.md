@@ -38,7 +38,7 @@ sa_locks(
 </b></dt>
 <dd>
 
-\(Optional\) This INTEGER parameter specifies a connection ID number. The procedure returns lock information only about the specified connection. The default value is 0 \(or NULL\), in which case information is returned about all connections.
+This INTEGER parameter specifies a connection ID number. The procedure returns lock information only about the specified connection. The default value is 0 \(or NULL\), in which case information is returned about all connections.
 
 
 
@@ -49,7 +49,7 @@ sa_locks(
 </b></dt>
 <dd>
 
-\(Optional\) This CHAR\(128\) parameter specifies a user ID. The procedure returns information only about the tables owned by the specified user. The default value for the creator parameter is NULL. When this parameter is set to NULL, sa\_locks returns the following information:
+This CHAR\(128\) parameter specifies a user ID. The procedure returns information only about the tables owned by the specified user. The default value for the creator parameter is NULL. When this parameter is set to NULL, sa\_locks returns the following information:
 
 -   If *<table\_name\>* is unspecified – locking information is returned for all tables in the database
 -   If *<table\_name\>* is specified – locking information is returned for tables with the specified name that were created by the current user
@@ -63,7 +63,7 @@ sa_locks(
 </b></dt>
 <dd>
 
-\(Optional\) This CHAR\(128\) parameter specifies a table name. The procedure returns information only about the specified tables. The default value is NULL, in which case information is returned about all tables.
+This CHAR\(128\) parameter specifies a table name. The procedure returns information only about the specified tables. The default value is NULL, in which case information is returned about all tables.
 
 
 
@@ -74,7 +74,7 @@ sa_locks(
 </b></dt>
 <dd>
 
-\(Optional\) This INTEGER parameter specifies the maximum number of locks for which to return information. The default value is 1000. The value -1 means return all lock information
+This INTEGER parameter specifies the maximum number of locks for which to return information. The default value is 1000. The value -1 means return all lock information
 
 
 
@@ -85,7 +85,7 @@ sa_locks(
 </b></dt>
 <dd>
 
-\(Optional\) This CHAR\(5\) parameter limits your results to the type of object associated with the lock. Specify *ALL* to return lock information for all object types. Specify *TABLE* to return lock information for tables, global temporary tables, and materialized views. Specify *MUTEX* to return mutex information. If you do not specify *<object\_type\>*, the procedure returns lock information for all object types.
+This CHAR\(5\) parameter limits your results to the type of object associated with the lock. Specify *ALL* to return lock information for all object types. Specify *TABLE* to return lock information for tables, global temporary tables, and materialized views. Specify *MUTEX* to return mutex information. If you do not specify *<object\_type\>*, the procedure returns lock information for all object types.
 
 
 
@@ -432,9 +432,9 @@ The result set of the sa\_locks system procedure contains the row\_identifier co
 
 ## Privileges
 
-Require all of:
+Require all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   MONITOR system privilege
 
 
@@ -443,13 +443,13 @@ Require all of:
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-This example uses the sa\_locks system procedure to return the locks that are currently held in the database, including information about the connection holding the lock, the lock duration, and the lock type.
+This example returns the locks that are currently held in the database, including information about the connection holding the lock, the lock duration, and the lock type.
 
 ```
 CALL sa_locks( ); 
@@ -460,7 +460,9 @@ CALL sa_locks( );
 <tr>
 <th valign="top">
 
-conn\_name
+conn\_
+
+name
 
 </th>
 <th valign="top">
@@ -475,7 +477,9 @@ user\_id
 </th>
 <th valign="top">
 
-table\_type
+table\_
+
+type
 
 </th>
 <th valign="top">
@@ -488,6 +492,41 @@ creator
 table\_name
 
 </th>
+<th valign="top">
+
+index\_
+
+id
+
+</th>
+<th valign="top">
+
+lock\_
+
+class
+
+</th>
+<th valign="top">
+
+lock\_
+
+duration
+
+</th>
+<th valign="top">
+
+lock\_
+
+type
+
+</th>
+<th valign="top">
+
+row\_
+
+identifier
+
+</th>
 </tr>
 <tr>
 <td valign="top">
@@ -518,6 +557,31 @@ dbo
 <td valign="top">
 
 iqmonSystemOverview
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+Schema
+
+</td>
+<td valign="top">
+
+Transaction
+
+</td>
+<td valign="top">
+
+Shared
+
+</td>
+<td valign="top">
+
+NULL
 
 </td>
 </tr>
@@ -552,6 +616,31 @@ dbo
 iqmonSystemOverview
 
 </td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+Schema
+
+</td>
+<td valign="top">
+
+Transaction
+
+</td>
+<td valign="top">
+
+Shared
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -582,6 +671,31 @@ dbo
 <td valign="top">
 
 iqmonThreadManager
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+Schema
+
+</td>
+<td valign="top">
+
+Transaction
+
+</td>
+<td valign="top">
+
+Shared
+
+</td>
+<td valign="top">
+
+NULL
 
 </td>
 </tr>
@@ -616,78 +730,6 @@ dbo
 iqmonThreadManager
 
 </td>
-</tr>
-<tr>
-<td valign="top">
-
-
-
-</td>
-<td valign="top">
-
-
-
-</td>
-<td valign="top">
-
-
-
-</td>
-<td valign="top">
-
-
-
-</td>
-<td valign="top">
-
-
-
-</td>
-<td valign="top">
-
-
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="5">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-index\_id
-
-</th>
-<th valign="top">
-
-lock\_class
-
-</th>
-<th valign="top">
-
-lock\_duration
-
-</th>
-<th valign="top">
-
-lock\_type
-
-</th>
-<th valign="top">
-
-row\_identifier
-
-</th>
-</tr>
-<tr>
 <td valign="top">
 
 NULL
@@ -711,114 +753,6 @@ Shared
 <td valign="top">
 
 NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-Schema
-
-</td>
-<td valign="top">
-
-Transaction
-
-</td>
-<td valign="top">
-
-Shared
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-Schema
-
-</td>
-<td valign="top">
-
-Transaction
-
-</td>
-<td valign="top">
-
-Shared
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-Schema
-
-</td>
-<td valign="top">
-
-Transaction
-
-</td>
-<td valign="top">
-
-Shared
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-
-
-</td>
-<td valign="top">
-
-
-
-</td>
-<td valign="top">
-
-
-
-</td>
-<td valign="top">
-
-
-
-</td>
-<td valign="top">
-
-
 
 </td>
 </tr>

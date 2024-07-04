@@ -60,7 +60,7 @@ Data lake Relational Engine does not support the PERCENTILE\_CONT or PERCENTILE\
 **Related Information**  
 
 
-[GROUP BY Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/group-by-clause-for-data-lake-relational-engine-sap-hana-db-managed-86be6d9.md)
+ <?sap-ot O2O class="- topic/link " href="86be6d9a901f4b1ca1977a88cc39b545.xml" text="" desc="" xtrc="link:1" xtrf="file:/home/builder/src/dita-all/vmv1718848528851/loioebf3112b870e474d9a791e9427bc62e1_en-US/src/content/localization/en-us/259511aa310241949d6e8389561dc62c.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
 
-[GROUPING Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a554461384f21015aca0af2a35f9c2a7.html "Identifies whether a column in a ROLLUP or CUBE operation result set is NULL because it is part of a subtotal row, or NULL because of the underlying data.") :arrow_upper_right:
+[GROUPING Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a554461384f21015aca0af2a35f9c2a7.html "Identifies whether a column in a ROLLUP or CUBE operation result set is NULL because it is part of a subtotal row, or NULL because of the underlying data.") :arrow_upper_right:
 

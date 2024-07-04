@@ -92,5 +92,5 @@ DOUBLE
 
 [CEIL Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](ceil-function-for-data-lake-relational-engine-sap-hana-db-managed-cf884ae.md "Returns the smallest integer greater than or equal to the specified expression.")
 
-[CEILING Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a53acd1c84f21015822dd5e02d6dc9cc.html "Returns the ceiling (smallest integer not less than) of a number.") :arrow_upper_right:
+[CEILING Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a53acd1c84f21015822dd5e02d6dc9cc.html "Returns the ceiling (smallest integer not less than) of a number.") :arrow_upper_right:
 

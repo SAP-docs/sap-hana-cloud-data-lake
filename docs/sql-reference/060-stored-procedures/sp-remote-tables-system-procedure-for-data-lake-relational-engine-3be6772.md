@@ -202,7 +202,7 @@ The procedure accepts five parameters. If a table or schema name is given, the l
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -210,25 +210,25 @@ Requires EXECUTE object-level privilege on the procedure.
 
 ## Examples
 
-The following example returns information about the tables owned by the remote schema RemoteSchema in a SQL on Files remote server named RemoteSOF.
+This example returns information about the tables owned by the remote schema RemoteSchema in a SQL on Files remote server named RemoteSOF.
 
 ```
 CALL sp_remote_tables( 'RemoteSOF', null, 'RemoteSchema' );
 ```
 
-The following example returns a list of all the remote tables in the remote server named RemoteSOF:
+This example returns a list of all the remote tables in the remote server named RemoteSOF:
 
 ```
 CALL sp_remote_tables( 'RemoteSOF', null, 'null' );
 ```
 
-The following example returns information about the tables owned by USER1 in a data lake Relational Engine remote server named MyRemoteServerr.
+This example returns information about the tables owned by USER1 in a data lake Relational Engine remote server named MyRemoteServerr.
 
 ```
 CALL sp_remote_tables( 'MyRemoteServer', null, 'USER1' );
 ```
 
-The following example returns a list of all the tables owned by Fred in the my\_customers database in a remote server named RemoteASE:
+This example returns a list of all the tables owned by Fred in the my\_customers database in a remote server named RemoteASE:
 
 ```
 CALL sp_remote_tables( 'RemoteASE', null, 'Fred', 'my_customers' );

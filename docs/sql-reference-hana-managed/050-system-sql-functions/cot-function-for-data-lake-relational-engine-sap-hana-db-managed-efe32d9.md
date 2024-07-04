@@ -52,7 +52,7 @@ This function converts its argument to DOUBLE, performs the computation in doubl
 
 <a name="loioefe32d94c2374ba4a64f6cac2dfe2cbc__section_b5f_spl_srb"/>
 
-## Example
+## Examples
 
 The following statement returns the value 1.74653:
 
@@ -63,5 +63,5 @@ SELECT COT( 0.52 ) FROM iq_dummy;
 **Related Information**  
 
 
-[COT Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a540f97a84f21015bfc68a88c0565f03.html "Returns the cotangent of a number, expressed in radians.") :arrow_upper_right:
+[COT Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a540f97a84f21015bfc68a88c0565f03.html "Returns the cotangent of a number, expressed in radians.") :arrow_upper_right:
 

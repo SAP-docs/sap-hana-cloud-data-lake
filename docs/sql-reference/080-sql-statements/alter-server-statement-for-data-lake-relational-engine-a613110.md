@@ -19,7 +19,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 ```
 ALTER SERVER <server-name> 
    [ CLASS '{ ASEODBC | HANAODBC| IQODBC }' ]
-   [ USING '<SQL-endpoint> ]
+   [ USING '<SQL-endpoint>;[ UseCloudConnector=[ ON | OFF ];LocationID=<cloud-connector-location-id> ] ]
    [ CAPABILITY '<cap-name>' { ON | OFF } ]
    [ CONNECTION CLOSE [ CURRENT | ALL | <connection-id> ] ]
 ```
@@ -44,7 +44,7 @@ ALTER SERVER <server-name>
 </b></dt>
 <dd>
 
-The ODBC connection parameters for the remote server are dictated by the ODBC driver being used. Only TLS connections are supported
+The ODBC connection parameters for the remote server are dictated by the ODBC driver being used. Only TLS connections are supportedunless you are connecting through Cloud Connector using the UseCloudConnector and LocationID options. SAP recommends using TLS connections. If connecting to an on-premise database that is not using TLS through Cloud Connector, note that the connections between the on-premise database and the on-premise Cloud Connector client, as well as the cloud connectivity proxy and the data lake Relational Engine instance are not encrypted. However, the connection between the cloud connectivity proxy to the on-premise Cloud Connector client is always encrypted.
 
 
 
@@ -53,7 +53,29 @@ The ODBC connection parameters for the remote server are dictated by the ODBC dr
 
 
 <dl>
+<dt><b>
 
+UseCloudConnector \[ ON | OFF \]
+
+</b></dt>
+<dd>
+
+\(Optional\) Enables the dedicated connectivity proxy for the data lake Relational Engine instance. This allows communication between data lake Relational Engine and on-premise databases. The default value is OFF.
+
+
+
+</dd><dt><b>
+
+LocationID *<cloud-connector-location-id\>*
+
+</b></dt>
+<dd>
+
+\(Optional\) Specifies the location ID of the cloud connector that will be used to open the connection. The default value is an empty string which means it will use the cloud connector which is connected without a location ID.
+
+
+
+</dd>
 </dl>
 
 
@@ -85,11 +107,11 @@ When a user creates a connection to a remote server, the remote connection is no
 These SQL statements are equivalent and close the current connection to the remote server:
 
 ```
-ALTER SERVER <server-name> CONNECTION CLOSE;
+ALTER SERVER <server-name> CONNECTION CLOSE
 ```
 
 ```
-ALTER SERVER <server-name> CONNECTION CLOSE CURRENT;
+ALTER SERVER <server-name> CONNECTION CLOSE CURRENT
 ```
 
 You can close both ODBC and JDBC connections to a remote server using this syntax. You do not need the MANAGE ANY REMOTE SERVER system privilege to execute either of these statements.
@@ -164,4 +186,8 @@ Automatic commit
 [DROP SERVER Statement for Data Lake Relational Engine](drop-server-statement-for-data-lake-relational-engine-a61d0df.md "Drops a remote server from the data lake Relational Engine system tables.")
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
+
+[HANA ODBC Connection Properties](https://help.sap.com/docs/SAP_HANA_CLIENT/f1b440ded6144a54ada97ff95dac7adf/7cab593774474f2f8db335710b2f5c50.html)
+
+[\(IQ ODBC\) Connection Parameters](https://help.sap.com/docs/SAP_IQ/8e6989ea146b41d78f671443295cd7a0/a6d47d6e84f210158d4980b069eff5dd.html)
 

@@ -211,5 +211,5 @@ DATEDIFF(MINUTE,
 
 [Date Parts in Data Lake Relational Engine](date-parts-in-data-lake-relational-engine-a52b8dd.md "Many of the date functions use dates built from date parts.")
 
-[DATEDIFF Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7bf7fa8d313a453c8bc224f2f29c65b5.html "Returns the interval between two dates.") :arrow_upper_right:
+[DATEDIFF Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/7bf7fa8d313a453c8bc224f2f29c65b5.html "Returns the interval between two dates.") :arrow_upper_right:
 

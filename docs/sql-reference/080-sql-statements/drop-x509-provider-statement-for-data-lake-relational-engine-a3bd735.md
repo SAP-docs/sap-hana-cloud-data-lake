@@ -43,7 +43,7 @@ DROP X509 PROVIDER <x509_provider_name> [ CASCADE ]
 Specifies an existing X.509 provider to drop.
 
 ```
-<x509_provider_name> ::= <simple_identifier>;
+<x509_provider_name> ::= <simple_identifier>
 ```
 
 

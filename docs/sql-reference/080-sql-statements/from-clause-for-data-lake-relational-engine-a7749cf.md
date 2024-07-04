@@ -2,7 +2,17 @@
 
 # FROM Clause for Data Lake Relational Engine
 
-Specifies the database tables or views involved in a `SELECT` statement.
+Specifies the objects involved in a `SELECT`, `DELETE` or `UPDATE` statement.
+
+
+
+<a name="loioa7749cf084f21015b73b899c1520fb06__section_cwy_t1s_wbc"/>
+
+## Usage
+
+This data lake Relational Engine SQL statement clause can be used when connected as follows:
+
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
@@ -167,7 +177,7 @@ Specifies the database tables or views involved in a `SELECT` statement.
 
 
 
-<a name="loioa7749cf084f21015b73b899c1520fb06__IQ_Parameters"/>
+<a name="loioa7749cf084f21015b73b899c1520fb06__from_clause_parameters1"/>
 
 ## Parameters
 
@@ -350,7 +360,7 @@ Use this parameter to return a result set from an XML document, by using the OPE
 
 
 
-<a name="loioa7749cf084f21015b73b899c1520fb06__IQ_Usage"/>
+<a name="loioa7749cf084f21015b73b899c1520fb06__from_clause_remarks1"/>
 
 ## Remarks
 
@@ -404,15 +414,17 @@ Depending on the query, data lake Relational Engine allows between 16 and 64 tab
 > 
 > If you have a query that does not require a `FROM` clause, you can force the query to be processed by data lake Relational Engine by adding the clause `FROM iq_dummy`, where `iq_dummy` is a one-row, one-column table that you create in your database.
 
-Must be connected to the database.
 
 
-
-<a name="loioa7749cf084f21015b73b899c1520fb06__IQ_Permissions"/>
+<a name="loioa7749cf084f21015b73b899c1520fb06__from_clause_privileges1"/>
 
 ## Privileges
 
-The privileges required depend on the clause used.
+
+
+### 
+
+Besides the privileges required to use the `SELECT`, `DELETE` or `UPDATE` statements, the following clauses require additional privileges:
 
 
 <table>
@@ -475,7 +487,7 @@ See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](gra
 
 
 
-<a name="loioa7749cf084f21015b73b899c1520fb06__IQ_Standards"/>
+<a name="loioa7749cf084f21015b73b899c1520fb06__from_clause_standards1"/>
 
 ## Standards
 
@@ -484,7 +496,7 @@ See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](gra
 
 
 
-<a name="loioa7749cf084f21015b73b899c1520fb06__IQ_Examples"/>
+<a name="loioa7749cf084f21015b73b899c1520fb06__from_clause_examples1"/>
 
 ## Examples
 
@@ -566,9 +578,11 @@ See [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](gra
 
 [SELECT Statement for Data Lake Relational Engine](select-statement-for-data-lake-relational-engine-a624e72.md "Retrieves information from the database.")
 
-[FROM Clause for Full Text Searches](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a5f8ddf384f210159ed4b49306dfae5f.html "Specifies the database tables or views involved in a SELECT statement.") :arrow_upper_right:
+[UPDATE Statement for Data Lake Relational Engine](update-statement-for-data-lake-relational-engine-a628441.md "Modifies existing rows of a single table, or a view that contains only one table.")
 
-[FROM Clause for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/ccd090fa57a84916b181a47c6ba634e1.html "Specifies the database tables or views involved in a SELECT statement.") :arrow_upper_right:
+[FROM Clause for Full Text Searches](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_3_QRC/en-US/a5f8ddf384f210159ed4b49306dfae5f.html "Specifies the database tables or views involved in a SELECT statement.") :arrow_upper_right:
+
+[FROM Clause for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/ccd090fa57a84916b181a47c6ba634e1.html "Specifies the objects involved in a SELECT, DELETE or UPDATE statement.") :arrow_upper_right:
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
 

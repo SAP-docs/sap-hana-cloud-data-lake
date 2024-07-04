@@ -60,7 +60,7 @@ This function converts its argument to DOUBLE, performs the computation in doubl
 
 <a name="loioa560332084f21015bf3b92161333e171__LOG_examples1"/>
 
-## Example
+## Examples
 
 The following statement returns the value 3.912023:
 
@@ -75,5 +75,5 @@ SELECT LOG( 50 ) FROM iq_dummy;
 
 [LOG10 Function \[Numeric\] for Data Lake Relational Engine](log10-function-numeric-for-data-lake-relational-engine-a560b1f.md "Returns the base 10 logarithm of a number.")
 
-[LOG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/4bedccf5149e42c2bdb12854c1587418.html "Returns the natural logarithm of a number.") :arrow_upper_right:
+[LOG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/4bedccf5149e42c2bdb12854c1587418.html "Returns the natural logarithm of a number.") :arrow_upper_right:
 

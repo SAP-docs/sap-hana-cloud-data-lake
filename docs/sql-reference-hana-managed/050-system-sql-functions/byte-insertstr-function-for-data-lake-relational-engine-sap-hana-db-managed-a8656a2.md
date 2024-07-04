@@ -65,5 +65,5 @@ LONG BINARY
 **Related Information**  
 
 
-[BYTE_INSERTSTR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/81f411c06ce21014834ca45160d818e3.html "Inserts a string into another string at a position specified in bytes.") :arrow_upper_right:
+[BYTE_INSERTSTR Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/81f411c06ce21014834ca45160d818e3.html "Inserts a string into another string at a position specified in bytes.") :arrow_upper_right:
 

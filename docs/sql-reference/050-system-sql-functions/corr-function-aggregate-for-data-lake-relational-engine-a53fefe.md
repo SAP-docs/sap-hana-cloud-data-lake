@@ -121,7 +121,7 @@ Syntax 2 – The *<window-spec\>* parameter represents usage as a window functio
 
 <a name="loioa53fefea84f21015a7ac9e118cc9795c__CORR_examples1"/>
 
-## Example
+## Examples
 
 The following example performs a correlation to discover whether age is associated with income level. This function returns the value 0.440227:
 
@@ -134,5 +134,5 @@ SELECT CORR( Salary, ( YEAR( NOW( ) ) - YEAR( BirthDate ) ) ) FROM Employees;
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[CORR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/ea68d7a3796040bf9adb352e0756650e.html "Returns the correlation coefficient of a set of number pairs.") :arrow_upper_right:
+[CORR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/ea68d7a3796040bf9adb352e0756650e.html "Returns the correlation coefficient of a set of number pairs.") :arrow_upper_right:
 

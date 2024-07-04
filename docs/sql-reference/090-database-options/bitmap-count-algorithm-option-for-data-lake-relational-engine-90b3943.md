@@ -131,9 +131,9 @@ No
 **Related Information**  
 
 
-[sp\_iqfile Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqfile-procedure-for-data-lake-relational-engine-a5a8f31.md "Displays detailed information about each dbfile in a dbspace.")
+[sp\_iqfile System Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqfile-system-procedure-for-data-lake-relational-engine-a5a8f31.md "Displays detailed information about each dbfile in a dbspace.")
 
-[sp\_iqdbspace Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqdbspace-procedure-for-data-lake-relational-engine-a5a34b5.md "Displays detailed information about each data lake Relational Engine dbspace.")
+[sp\_iqdbspace System Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqdbspace-system-procedure-for-data-lake-relational-engine-a5a34b5.md "Displays detailed information about each data lake Relational Engine dbspace.")
 
 [Set a Database Option](set-a-database-option-0dcb893.md "You set options with the SET OPTION statement.")
 

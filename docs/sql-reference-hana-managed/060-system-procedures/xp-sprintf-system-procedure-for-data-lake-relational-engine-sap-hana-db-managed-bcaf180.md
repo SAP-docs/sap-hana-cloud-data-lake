@@ -71,6 +71,14 @@ The input strings that are used in the result string. You can specify up to 50 o
 
 
 
+<a name="loiobcaf180e679e43d78733830fb7e4c2fa__section_jyg_xqg_sbc"/>
+
+## Result Set
+
+None
+
+
+
 <a name="loiobcaf180e679e43d78733830fb7e4c2fa__section_wxy_x42_srb"/>
 
 ## Remarks
@@ -87,30 +95,33 @@ The result placed in the output parameter is truncated to 254 characters.
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
-## Example
-
-The following statements put the string Hello World! into the result variable.
+## Examples
 
 ```
-CREATE VARIABLE result CHAR( 254 )
-CALL xp_sprintf( result, '%s %s', 'Hello', 'World!' )
-SELECT result
+--- Setup for the following examples ---
+CREATE VARIABLE result CHAR( 254 );
 ```
 
-The following statements format the year, month, and day into a date string.
+This example puts the string Hello World! into the result variable.
 
 ```
-CREATE VARIABLE result CHAR( 254 )
-CALL xp_sprintf( result, '%s/%s/%s', 2014, 11, 23 )
-SELECT result
+CALL xp_sprintf( result, '%s %s', 'Hello', 'World!' );
+SELECT result;
+```
+
+This example formats the year, month, and day into a date string.
+
+```
+CALL xp_sprintf( result, '%s/%s/%s', 2014, 11, 23 );
+SELECT result;
 ```
 
 **Related Information**  
 
 
-[xp_sprintf System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8180c9106ce21014894dc48bcbd02bb5.html "Builds a result string from a set of input strings.") :arrow_upper_right:
+[xp_sprintf System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/8180c9106ce21014894dc48bcbd02bb5.html "Builds a result string from a set of input strings.") :arrow_upper_right:
 

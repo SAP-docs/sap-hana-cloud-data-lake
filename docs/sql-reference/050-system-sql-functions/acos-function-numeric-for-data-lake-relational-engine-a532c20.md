@@ -52,7 +52,7 @@ DOUBLE
 
 <a name="loioa532c20484f21015a4a5f8c26e3af9c7__ACOS_example1"/>
 
-## Example
+## Examples
 
 The following statement returns the value 1.023945:
 
@@ -63,5 +63,5 @@ SELECT ACOS( 0.52 ) FROM iq_dummy;
 **Related Information**  
 
 
-[ACOS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/0fc7b1b85c8d4b6280000fc7e92152ee.html "Returns the arc-cosine, in radians, of a numeric expression.") :arrow_upper_right:
+[ACOS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/0fc7b1b85c8d4b6280000fc7e92152ee.html "Returns the arc-cosine, in radians, of a numeric expression.") :arrow_upper_right:
 

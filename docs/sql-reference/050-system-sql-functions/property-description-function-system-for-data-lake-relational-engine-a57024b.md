@@ -73,7 +73,7 @@ Each property has both a number and a name, but the number is subject to change 
 
 <a name="loioa57024b884f21015a1819d79e3571f53__iq_refbb_879"/>
 
-## Example
+## Examples
 
 The following statement returns the description "Number of index insertions":
 

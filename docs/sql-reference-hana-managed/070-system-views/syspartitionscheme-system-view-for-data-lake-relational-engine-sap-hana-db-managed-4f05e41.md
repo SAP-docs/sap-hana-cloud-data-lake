@@ -138,5 +138,5 @@ To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE priv
 **Related Information**  
 
 
-[SYSPARTITIONSCHEME System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5d551b784f21015b3eabb10e5074fd2.html "Presents group information from ISYSPARTITIONSCHEME in a readable format.") :arrow_upper_right:
+[SYSPARTITIONSCHEME System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a5d551b784f21015b3eabb10e5074fd2.html "Presents group information from ISYSPARTITIONSCHEME in a readable format.") :arrow_upper_right:
 

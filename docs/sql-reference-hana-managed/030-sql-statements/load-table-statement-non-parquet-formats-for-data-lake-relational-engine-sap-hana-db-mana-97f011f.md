@@ -169,7 +169,7 @@ The data source referenced by the filename is in a data lake Files container. Th
 This example loads from a CSV file in the default data lake Files container:
 
 ```
-LOAD TABLE t1(c1) FROM 'hdlfs:///employeelist.csv'
+LOAD TABLE t1(c1) FROM 'hdlfs:///employeelist.csv';
 ```
 
 To connect to a non-default data lake Files container \(one outside of your data lake instance\), use this instead:
@@ -314,11 +314,11 @@ Specifies connection information.
 <dd>
 
 ```
-<non-default-hdlfs-instance> ::= 'ENDPOINT=<endpoint>;
-	CA_CERTIFICATE=<certificate-content>;
-	CLIENT_CERTIFICATE=<certificate-content>;
-	CLIENT_KEY=<client-certificate-key>;
-	KEY_PASSWORD= <certificate_key_password>';
+<non-default-hdlfs-instance> ::= 'ENDPOINT=<endpoint>
+	CA_CERTIFICATE=<certificate-content>
+	CLIENT_CERTIFICATE=<certificate-content>
+	CLIENT_KEY=<client-certificate-key>
+	KEY_PASSWORD= <certificate_key_password>'
 ```
 
 This clause is optional for data lake Files containers. If you don't specify it, the LOAD statement will connect to the default data lake Files container provisioned within your data lake instance. If you do, the LOAD statement can connect to an alternate, non-default data lake Files container within a separate data lake instance.
@@ -395,9 +395,9 @@ If specified, this value will be the password used to decrypt the client key. If
 <dd>
 
 ```
-<azure-connection> ::= 'DEFAULTENDPOINTSPROTOCOL=<endpoint-protocol>;
-	ACCOUNTNAME=<account-name>;
-	ACCOUNTKEY=<account-key>;
+<azure-connection> ::= 'DEFAULTENDPOINTSPROTOCOL=<endpoint-protocol>
+	ACCOUNTNAME=<account-name>
+	ACCOUNTKEY=<account-key>
 	ENDPOINTSUFFIX=core.windows.net'
 ```
 
@@ -413,11 +413,11 @@ You can find *<azure-connection-string\>* in Azure portal. From your storage acc
 <dd>
 
 ```
-<s3-connection> ::= 'ENDPOINT=<endpoint>; 
-	ENDPOINT_TYPE={PATH | VIRTUAL-HOST}; 
-	ACCESS_KEY_ID=<access-key-string>; 
-	SECRET_ACCESS_KEY=<secret-key string>; 
-	REGION=<region-string>; 
+<s3-connection> ::= 'ENDPOINT=<endpoint> 
+	ENDPOINT_TYPE={PATH | VIRTUAL-HOST} 
+	ACCESS_KEY_ID=<access-key-string> 
+	SECRET_ACCESS_KEY=<secret-key string> 
+	REGION=<region-string> 
 	SESSION_TOKEN=<session-token>'
 ```
 
@@ -585,8 +585,8 @@ You can find *<access-key-id\>*, *<secret-access-key\>*, and *<AWS-region\>* in 
 <dd>
 
 ```
-<google-connection> ::= 'CLIENT_EMAIL='<client-email>';
-   PRIVATE_KEY='<private-key>';
+<google-connection> ::= 'CLIENT_EMAIL='<client-email>'
+   PRIVATE_KEY='<private-key>'
    PRIVATE_KEY_ID='<private-key-id>'
 ```
 
@@ -663,7 +663,7 @@ The AUTO COMPRESSED clause is the default behavior, where data lake Relational E
 
 The ENCODING clause specifies the character set encoding of the input file. If the character set encoding is different from that of the database, character set conversion is performed during the load. If the data cannot be converted into the database character set, a conversion error is returned. If the ENCODING clause is not specified, the character set of the database is used. The clause applies to all files being loaded by the current LOAD TABLE statement. It's not possible to set different encoding options to individual files. The ENCODING clause does not work with binary load. An error occurs if either FORMAT BINARY is specified, or if a BINARY clause is specified in the column specification.
 
-See [Character Set Encodings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/8a8f277561e547b8a4a0fdfc7f7db7f7.html "A complete list of supported character set encodings for SAP HANA Cloud, data lake and their aliases.") :arrow_upper_right: for a complete list of supported character set encodings.
+See [Character Set Encodings in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/8a8f277561e547b8a4a0fdfc7f7db7f7.html "A complete list of supported character set encodings for SAP HANA Cloud, data lake and their aliases.") :arrow_upper_right: for a complete list of supported character set encodings.
 
 
 
@@ -815,7 +815,7 @@ With QUOTES ON, column or row delimiter characters can be included in the column
 To include a quote character in a value with QUOTES ON, use two quotes. For example, this line includes a value in the third column that is a single quote character:
 
 ```
-'123 High Street, Anytown', '(715)398-2354',''''
+'123 High Street, Anytown', '(715)398-2354','''';
 ```
 
 With STRIP turned on \(the default\), trailing blanks are stripped from values before they are inserted. Trailing blanks are stripped only for non-quoted strings. Quoted strings retain their trailing blanks. Leading blank or TAB characters are trimmed only when the setting is ON.
@@ -967,14 +967,14 @@ BCP
     LOAD TABLE x( c1, c2 null(blanks), c3 )
         FROM 'bcp_file.bcp'
         FORMAT BCP
-        ...
+        ...;
     ```
 
     ```
     LOAD TABLE x( c1 encrypted(bigint,'KEY-ONE','aes'), c2, c3 )
         FROM 'bcp_file.bcp'
         FORMAT BCP
-        ...
+        ...;
     ```
 
 
@@ -1359,7 +1359,7 @@ Specifies whether to ignore CHECK, UNIQUE, NULL, DATA VALUE, and FOREIGN KEY int
 -   ALL *<limit\>* – if the CONVERSION\_ERROR database option is ON, an error is reported and the statement rolls back. If *<limit\>* specifies zero, then the cumulative total of all integrity constraint violations to ignore is infinite. If *<limit\>* is nonzero, then load rolls back when the cumulative total of all ignored UNIQUE, NULL, DATA VALUE, and FOREIGN KEY integrity constraint violations exceeds the value of *<limit\>*. For example, if you specify this IGNORE CONSTRAINT option, the total number of integrity constraint violations cannot exceed 200, whereas the total number of NULL and UNIQUE constraint violations cannot exceed 50 and 100, respectively:
 
     ```
-    IGNORE CONSTRAINT NULL 50, UNIQUE 100, ALL 200
+    IGNORE CONSTRAINT NULL 50, UNIQUE 100, ALL 200;
     ```
 
     Whenever any of these limits is exceeded, the LOAD TABLE statement rolls back.
@@ -2517,23 +2517,23 @@ Assume the credentials supplied to the LOAD TABLE statement enable read access t
 **Related Information**  
 
 
-[LOAD TABLE Statement (Non-Parquet Formats) for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/7ca3f60902f3473296cb309533d89210.html "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or Google Cloud Storage) or from data lake Files containers (the managed object store).") :arrow_upper_right:
+[LOAD TABLE Statement (Non-Parquet Formats) for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/7ca3f60902f3473296cb309533d89210.html "Imports data into a data lake Relational Engine database table from either the external object store (Azure BLOB storage, an Amazon S3 bucket, an S3-compliant bucket, or Google Cloud Storage) or from data lake Files containers (the managed object store).") :arrow_upper_right:
 
-[SAP HANA Cloud, Data Lake Relational Engine Load and Unload Management](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/e77c96193a604e05ba198e424de2ed6c.html "Data load (import) and export (unload) procedures for data lake Relational Engine, including loading from and unloading to data lake Files.") :arrow_upper_right:
+[SAP HANA Cloud, Data Lake Relational Engine Load and Unload Management](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_3_QRC/en-US/e77c96193a604e05ba198e424de2ed6c.html "Data load (import) and export (unload) procedures for data lake Relational Engine, including loading from and unloading to data lake Files.") :arrow_upper_right:
 
-[Loading Data from Azure Blob Storage](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/e52d8274e0364e868fd02ec3c2b3ed9c.html "Use the data lake Relational Engine LOAD TABLE statement to load data into a data lake Relational Engine table from Azure Blob storage.") :arrow_upper_right:
+[Loading Data from Azure Blob Storage](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_3_QRC/en-US/e52d8274e0364e868fd02ec3c2b3ed9c.html "Use the data lake Relational Engine LOAD TABLE statement to load data into a data lake Relational Engine table from Azure Blob storage.") :arrow_upper_right:
 
-[Loading Data from the Amazon S3 Bucket](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/9e9a558cf14a44bc812e2562afcd116f.html "Use the LOAD TABLE statement to load data into a data lake Relational Engine table from your Amazon S3 bucket.") :arrow_upper_right:
+[Loading Data from the Amazon S3 Bucket](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_3_QRC/en-US/9e9a558cf14a44bc812e2562afcd116f.html "Use the LOAD TABLE statement to load data into a data lake Relational Engine table from your Amazon S3 bucket.") :arrow_upper_right:
 
-[Loading Data from Google Cloud Storage](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/a723d42f6c3d4d5ab9f2a1424130d10c.html "Use the LOAD TABLE statement to load data into a data lake Relational Engine table from your Google Cloud Storage bucket.") :arrow_upper_right:
+[Loading Data from Google Cloud Storage](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_3_QRC/en-US/a723d42f6c3d4d5ab9f2a1424130d10c.html "Use the LOAD TABLE statement to load data into a data lake Relational Engine table from your Google Cloud Storage bucket.") :arrow_upper_right:
 
-[Loading Data From Data Lake Files to Data Lake Relational Engine](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/ac82036515a749bea5a55a64b43031a4.html "Specify the location in your LOAD TABLE statement to load data into data lake Relational Engine from data lake Files.") :arrow_upper_right:
+[Loading Data From Data Lake Files to Data Lake Relational Engine](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_3_QRC/en-US/ac82036515a749bea5a55a64b43031a4.html "Specify the location in your LOAD TABLE statement to load data into data lake Relational Engine from data lake Files.") :arrow_upper_right:
 
-[Loading Parquet Files](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/a054ac0ce09e47799e5f24860378056b.html "Parquet is an efficient, open-source, column-oriented format file designed for Apache Hadoop. You can load tables in Parquet format using the data lake Relational Engine LOAD TABLE statement.") :arrow_upper_right:
+[Loading Parquet Files](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_3_QRC/en-US/a054ac0ce09e47799e5f24860378056b.html "Parquet is an efficient, open-source, column-oriented format file designed for Apache Hadoop. You can load tables in Parquet format using the data lake Relational Engine LOAD TABLE statement.") :arrow_upper_right:
 
 [TEMP\_EXTRACT\_MAX\_PARALLEL\_DEGREE Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/temp-extract-max-parallel-degree-option-for-data-lake-relational-engine-sap-hana-db-manag-8b1135e.md "Sets the maximum parallel degree for the data extraction facility. The TEMP_EXTRACT_MAX_PARALLEL_DEGREE option limits the maximum number of threads that run in parallel to extract data.")
 
 [TEMP\_EXTRACT\_VARYING Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/temp-extract-varying-option-for-data-lake-relational-engine-sap-hana-db-managed-a975dc5.md "Used in conjunction with TEMP_EXTRACT_LENGTH_PREFIX, the TEMP_EXTRACT_VARYING option outputs varchar or varbinary column data in a variable-length format in the extracted file. The prefix field specified by TEMP_EXTRACT_LENGTH_PREFIX option holds the length of column data.")
 
-[SAP HANA Cloud, Data Lake Terminology](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2024_1_QRC/en-US/d003004765fb4475b14d83e5c51b117f.html "Definitions of data lake terms used in this document.") :arrow_upper_right:
+[SAP HANA Cloud, Data Lake Terminology](https://help.sap.com/viewer/a896c6a184f21015b5bcf4c7a967df07/2024_3_QRC/en-US/d003004765fb4475b14d83e5c51b117f.html "Definitions of data lake terms used in this document.") :arrow_upper_right:
 

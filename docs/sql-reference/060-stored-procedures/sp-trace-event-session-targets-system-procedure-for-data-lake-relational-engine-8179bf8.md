@@ -149,7 +149,7 @@ A target is the location where the trace event session information is being logg
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   MANAGE ANY TRACE SESSION system privileges
 -   MANAGE AUDITING system privileges
 
@@ -163,16 +163,73 @@ None.
 
 
 
-## Example
+<a name="loio8179bf806ce210148693c5362783c940__sp_trace_event_session_targets_example1"/>
 
-The following statement returns information about all trace event sessions in the database:
+## Examples
+
+This example returns information about all trace event sessions in the database:
 
 ```
-SELECT * FROM dbo.sp_trace_event_session_targets( );
+SELECT * FROM sp_trace_event_session_targets( );
 ```
+
+
+<table>
+<tr>
+<th valign="top">
+
+session\_name
+
+</th>
+<th valign="top">
+
+is\_server
+
+</th>
+<th valign="top">
+
+target\_type
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+my\_session
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+FILE
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+audit
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+FILE
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 
 
-[sp_trace_event_session_targets System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/08a49c4ce49d4d44b534b74d5e9aac35.html "Lists the targets of a trace session.") :arrow_upper_right:
+[sp_trace_event_session_targets System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/08a49c4ce49d4d44b534b74d5e9aac35.html "Lists the targets of a trace session.") :arrow_upper_right:
 

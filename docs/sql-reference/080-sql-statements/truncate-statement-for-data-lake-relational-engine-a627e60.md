@@ -99,7 +99,7 @@ TRUNCATE is equivalent to a DELETE statement without a WHERE clause, except that
 The TRUNCATE statement is entered into the transaction log as a single statement, like data definition statements. Each deleted row is not entered into the transaction log.
 
 > ### Note:  
-> If the table you are truncating contains an identity column, the TRUNCATE statement does **not** reset the identity number sequence. If you need to reset the identity number sequence, call the stored procedure sp\_iq\_reset\_identity. See [sp\_iq\_reset\_identity Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iq-reset-identity-procedure-for-data-lake-relational-engine-a5b4402.md).
+> If the table you are truncating contains an identity column, the TRUNCATE statement does **not** reset the identity number sequence. If you need to reset the identity number sequence, call the stored procedure sp\_iq\_reset\_identity. See [sp\_iq\_reset\_identity System Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iq-reset-identity-system-procedure-for-data-lake-relational-engine-a5b4402.md).
 
 
 
@@ -130,13 +130,13 @@ The TRUNCATE statement is entered into the transaction log as a single statement
 The following example delete all rows from the Sale table:
 
 ```
-TRUNCATE TABLE Sale
+TRUNCATE TABLE Sale;
 ```
 
 **Related Information**  
 
 
-[TRUNCATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/817f97c16ce21014ba1dcdaaf046de69.html "Deletes all rows from a materialized view without deleting the table definition.") :arrow_upper_right:
+[TRUNCATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/817f97c16ce21014ba1dcdaaf046de69.html "Deletes all rows from a materialized view without deleting the table definition.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

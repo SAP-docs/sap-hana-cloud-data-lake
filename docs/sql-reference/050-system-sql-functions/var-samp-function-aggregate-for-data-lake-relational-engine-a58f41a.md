@@ -70,7 +70,7 @@ Variances are computed according to the following formula, which assumes a norma
 
 <a name="loioa58f41a384f2101582a6bccb68243889__VAR_SAMP_example1"/>
 
-## Example
+## Examples
 
 The following statement lists the average and variance in the number of items per order in different time periods:
 
@@ -179,5 +179,5 @@ Variance
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[VAR_SAMP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/4e77eae4118f432c95bd09f867eb3f06.html "Computes the statistical variance of a sample consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
+[VAR_SAMP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/4e77eae4118f432c95bd09f867eb3f06.html "Computes the statistical variance of a sample consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
 

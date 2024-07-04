@@ -106,7 +106,7 @@ If the current server time is greater than the time specified, processing is sus
 `WAITFOR` provides an alternative to the following statement, and might be useful for customers who choose not to enable Java in the database:
 
 ```
-call java.lang.Thread.sleep( <time_to_wait_in_millisecs> );
+call java.lang.Thread.sleep( <time_to_wait_in_millisecs> )
 ```
 
 In many cases, scheduled events are a better choice than using `WAITFOR TIME`, because scheduled events execute on their own connection.

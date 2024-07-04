@@ -63,7 +63,7 @@ Computes the population standard deviation of the provided *<value expression\>*
 
 <a name="loiob943ce2c21964c07baa10bd8d387f972__section_csf_x55_vrb"/>
 
-## Example
+## Examples
 
 The following statement lists the average and variance in the number of items per order in different time periods:
 
@@ -170,5 +170,5 @@ Variance
 **Related Information**  
 
 
-[STDDEV_POP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a583f35984f21015b952ffc0a8c12597.html "Computes the standard deviation of a population consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
+[STDDEV_POP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a583f35984f21015b952ffc0a8c12597.html "Computes the standard deviation of a population consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
 

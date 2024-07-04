@@ -73,6 +73,14 @@ The input strings that are used in the result string. You can specify up to 50 o
 
 
 
+<a name="loio8180c9106ce21014894dc48bcbd02bb5__xp_sprintfs_results1"/>
+
+## Result Set
+
+None
+
+
+
 <a name="loio8180c9106ce21014894dc48bcbd02bb5__xp_sprintfs_remarks1"/>
 
 ## Remarks
@@ -89,30 +97,35 @@ The result placed in the output parameter is truncated to 254 characters.
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
-## Example
+<a name="loio8180c9106ce21014894dc48bcbd02bb5__xp_sprintfs_examples1"/>
 
-The following statements put the string Hello World! into the result variable.
-
-```
-CREATE VARIABLE result CHAR( 254 )
-CALL xp_sprintf( result, '%s %s', 'Hello', 'World!' )
-SELECT result
-```
-
-The following statements format the year, month, and day into a date string.
+## Examples
 
 ```
-CREATE VARIABLE result CHAR( 254 )
-CALL xp_sprintf( result, '%s/%s/%s', 2014, 11, 23 )
-SELECT result
+--- Setup for the following examples ---
+CREATE VARIABLE result CHAR( 254 );
+```
+
+This example puts the string Hello World! into the result variable.
+
+```
+CALL xp_sprintf( result, '%s %s', 'Hello', 'World!' );
+SELECT result;
+```
+
+This example formats the year, month, and day into a date string.
+
+```
+CALL xp_sprintf( result, '%s/%s/%s', 2014, 11, 23 );
+SELECT result;
 ```
 
 **Related Information**  
 
 
-[xp_sprintf System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/bcaf180e679e43d78733830fb7e4c2fa.html "Builds a result string from a set of input strings.") :arrow_upper_right:
+[xp_sprintf System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/bcaf180e679e43d78733830fb7e4c2fa.html "Builds a result string from a set of input strings.") :arrow_upper_right:
 

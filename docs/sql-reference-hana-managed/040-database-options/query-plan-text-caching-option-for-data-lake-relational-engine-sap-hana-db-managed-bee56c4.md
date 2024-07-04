@@ -12,7 +12,7 @@ Allows you to specify whether or not data lake Relational Engine generates and c
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user..
+-   Connected to SAP HANA database as a SAP HANA database user.
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -192,5 +192,5 @@ IQ query plans vary in size and can become very large for complex queries. Cachi
 
 [QUERY\_PLAN\_TEXT\_ACCESS Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](query-plan-text-access-option-for-data-lake-relational-engine-sap-hana-db-managed-1766309.md "Enables or prevents users from accessing query plans from the Interactive SQL client or from using SQL functions to get plans.")
 
-[QUERY_PLAN_TEXT_CACHING Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a64fc89984f210159c879335f5b3713d.html "Allows you to specify whether or not data lake Relational Engine generates and caches IQ plans for queries executed by the user.") :arrow_upper_right:
+[QUERY_PLAN_TEXT_CACHING Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a64fc89984f210159c879335f5b3713d.html "Allows you to specify whether or not data lake Relational Engine generates and caches IQ plans for queries executed by the user.") :arrow_upper_right:
 

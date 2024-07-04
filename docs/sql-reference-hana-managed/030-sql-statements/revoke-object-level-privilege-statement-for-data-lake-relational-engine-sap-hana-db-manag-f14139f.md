@@ -77,7 +77,7 @@ Specifies the object or schema privilege being revoked.
    | USAGE
 ```
 
-For an explanation of each object-level privilege, see [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right:.
+For an explanation of each object-level privilege, see [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right:.
 
 
 
@@ -183,4 +183,6 @@ REVOKE UPDATE ON SCHEMA myschema1 FROM user1;
 
 
 [GRANT Object-Level Privilege Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](grant-object-level-privilege-statement-for-data-lake-relational-engine-sap-hana-db-manage-c71353e.md "Grants database object-level privileges on individual objects and schemas to a user or role.")
+
+[REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a3e7af2384f21015a1f8b6d3c8794f47.html "Removes object-level privileges that were given using the GRANT statement.") :arrow_upper_right:
 

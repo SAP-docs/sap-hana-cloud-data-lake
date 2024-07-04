@@ -84,7 +84,7 @@ The current connection is used if the second argument is omitted.
 
 <a name="loioa53eeaf984f21015974f97e3388d1738__iq_refbb_329"/>
 
-## Example
+## Examples
 
 The following statement returns 4, the number of prepared statements being maintained:
 
@@ -107,5 +107,5 @@ SELECT connection_property( 'PrepStmt' )FROM iq_dummy;
 
 [PROPERTY\_NUMBER Function \[System\] for Data Lake Relational Engine](property-number-function-system-for-data-lake-relational-engine-a57131a.md "Returns the property number of the property with the supplied property name.")
 
-[sp\_iqshowpsexe Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqshowpsexe-procedure-for-data-lake-relational-engine-a5b64f1.md "Displays information about the settings of database options that control the priority of tasks and resource usage for connections.")
+[sp\_iqshowpsexe System Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqshowpsexe-system-procedure-for-data-lake-relational-engine-a5b64f1.md "Displays information about the settings of database options that control the priority of tasks and resource usage for connections.")
 

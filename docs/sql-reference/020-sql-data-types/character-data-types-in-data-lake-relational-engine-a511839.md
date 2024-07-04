@@ -46,7 +46,7 @@ Stores character data of arbitrary length. The maximum size in bytes is 2 GB min
 
 Multibyte characters can be stored as LONG VARCHAR, but the length is in bytes, not characters.
 
-VARCHARhas no blank padding is added to the storage of these strings.
+VARCHAR has no blank padding added to the storage of these strings.
 
 </td>
 </tr>
@@ -73,7 +73,7 @@ VARCHAR
 Stores arbitrary length character data.
 
 ```
-VARCHAR [ ( <max-length> [ BYTE | CHAR | CHARACTER ] ) ];
+VARCHAR [ ( <max-length> [ BYTE | CHAR | CHARACTER ] ) ]
 ```
 
 
@@ -94,7 +94,7 @@ If CHAR or CHARACTER \(character-length semantics\) is specified as part of the 
 </dd>
 </dl>
 
-VARCHARhas no blank padding added to the storage of these strings.
+VARCHAR has no blank padding added to the storage of these strings.
 
 All index types, except DATE, TIME, and DATETIME/TIMESTAMP are supported for VARCHAR data to a maximum of to 255 bytes in length. For VARCHAR using character-length semantic, the maximum byte length depends on the number of bytes used per character. The limit becomes 255 divided by the number of bytes per character.
 

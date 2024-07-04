@@ -85,5 +85,5 @@ To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE priv
 **Related Information**  
 
 
-[SYSMVOPTIONNAME System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3be941066c5f1014b6f8dbc61db5c4f3.html "Each row in the SYSMVOPTIONNAME system view gives the name of an option that is stored for each materialized view at the time of its creation. The value for the option can be found in the SYSMVOPTION system view. The underlying system table for this view is ISYSMVOPTIONNAME.") :arrow_upper_right:
+[SYSMVOPTIONNAME System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/3be941066c5f1014b6f8dbc61db5c4f3.html "Each row in the SYSMVOPTIONNAME system view gives the name of an option that is stored for each materialized view at the time of its creation. The value for the option can be found in the SYSMVOPTION system view. The underlying system table for this view is ISYSMVOPTIONNAME.") :arrow_upper_right:
 

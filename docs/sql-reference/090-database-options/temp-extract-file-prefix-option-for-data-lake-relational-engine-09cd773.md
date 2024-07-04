@@ -148,7 +148,7 @@ To enable parallel extract, set TEMP\_EXTRACT\_FILE\_PREFIX but not TEMP\_EXTRAC
 
 
 
-## Example
+## Examples
 
 For example, the parameters below generate files `extract_file1_1.csv`, `extract_file2_1.csv`, `extract_file3_1.csv`, and `extract_file4_1.csv`, and set the parallel degree 4.
 
@@ -178,7 +178,7 @@ SET OPTION PUBLIC.Temp_Extract_Max_Parallel_Degree = 4;
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[TEMP_EXTRACT_FILE_PREFIX Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/af977f36d280410dba64b6bfe2608179.html "Sets the prefix of file name for the generated output file of the data parallel extraction facility. thread_ID starts from 1. filecount starts from 1 for each thread ID. Thefilecount part increments when the size of the output file reaches the file size limit specified by the TEMP_EXTRACT_SIZE option.") :arrow_upper_right:
+[TEMP_EXTRACT_FILE_PREFIX Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/af977f36d280410dba64b6bfe2608179.html "Sets the prefix of file name for the generated output file of the data parallel extraction facility. thread_ID starts from 1. filecount starts from 1 for each thread ID. Thefilecount part increments when the size of the output file reaches the file size limit specified by the TEMP_EXTRACT_SIZE option.") :arrow_upper_right:
 
 [TEMP\_EXTRACT\_FILE\_EXTENSION Option for Data Lake Relational Engine](temp-extract-file-extension-option-for-data-lake-relational-engine-896be73.md "Sets the file name extension for the generated output file of the data parallel extraction facility. When you specify the TEMP_EXTRACT_FILE_EXTENSION option, each file name generated becomes prefix thread_ID_filecount.file extension.")
 

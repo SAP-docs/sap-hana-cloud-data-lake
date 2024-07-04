@@ -188,7 +188,12 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </b></dt>
 <dd>
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
+
+Also requires one of the following:
+
+-   You own the materialized view
+-   SELECT object-level privilege on the materialized view.
 
 
 
@@ -201,7 +206,7 @@ Requires EXECUTE object-level privilege on the procedure.
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -296,5 +301,5 @@ NULL
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-817277b.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sp_iqmaterializedviewstaleness Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a762f3bcb4b14014821890ed5e6a25b8.html "Displays staleness information about the visible version of a materialized view.") :arrow_upper_right:
+[sp_iqmaterializedviewstaleness System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a762f3bcb4b14014821890ed5e6a25b8.html "Displays staleness information about the visible version of a materialized view.") :arrow_upper_right:
 

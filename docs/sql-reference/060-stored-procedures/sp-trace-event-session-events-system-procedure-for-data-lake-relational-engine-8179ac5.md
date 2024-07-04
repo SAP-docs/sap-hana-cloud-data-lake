@@ -149,7 +149,7 @@ Use this system procedure to determine which trace events \(both system defined 
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   MANAGE ANY TRACE SESSION system privilege
 -   MANAGE AUDITING system privilege
 
@@ -163,16 +163,73 @@ None.
 
 
 
-## Example
+<a name="loio8179ac5d6ce210149cfcd3fb6d77cbca__sp_trace_event_session_events_example"/>
 
-This statement returns information about the events that are part of all the event tracing sessions for the current database:
+## Examples
+
+This example returns information about the events that are part of all the event tracing sessions for the current database:
 
 ```
 CALL sp_trace_event_session_events( );
 ```
 
+
+<table>
+<tr>
+<th valign="top">
+
+session\_name
+
+</th>
+<th valign="top">
+
+is\_server
+
+</th>
+<th valign="top">
+
+event\_name
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+my\_session
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+SYS\_ConsoleLog\_Information
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+my\_session
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+my\_event
+
+</td>
+</tr>
+</table>
+
 **Related Information**  
 
 
-[sp_trace_event_session_events System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/f906a7948fa14abcadfd72ef71b410f7.html "Lists the trace events that are part of a specific trace event session.") :arrow_upper_right:
+[sp_trace_event_session_events System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/f906a7948fa14abcadfd72ef71b410f7.html "Lists the trace events that are part of a specific trace event session.") :arrow_upper_right:
 

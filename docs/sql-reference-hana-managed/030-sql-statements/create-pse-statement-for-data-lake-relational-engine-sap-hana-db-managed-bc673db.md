@@ -120,5 +120,5 @@ CREATE PSE mypse1;
 
 [SYSPSE System View for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../070-system-views/syspse-system-view-for-data-lake-relational-engine-sap-hana-db-managed-0211aea.md "Provides information about personal security environments (PSE).")
 
-[CREATE PSE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/cda6e32786854f6c9f9cc1869c6ddca1.html "Create a personal security environment (PSE).") :arrow_upper_right:
+[CREATE PSE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/cda6e32786854f6c9f9cc1869c6ddca1.html "Create a personal security environment (PSE).") :arrow_upper_right:
 

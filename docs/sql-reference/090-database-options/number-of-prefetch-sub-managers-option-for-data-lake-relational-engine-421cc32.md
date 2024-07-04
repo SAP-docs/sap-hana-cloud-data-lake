@@ -2,7 +2,7 @@
 
 # NUMBER\_OF\_PREFETCH\_SUB\_MANAGERS Option for Data Lake Relational Engine
 
-Use this option to assign the number of sub-managers to assist with performance tuning in the pre-data lake Relational Engine v16.1 SP04 prefetch manager.
+Use this option to assign the number of sub-managers to assist with performance tuning in prefetch manager.
 
 
 

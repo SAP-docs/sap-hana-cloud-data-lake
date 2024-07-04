@@ -105,5 +105,5 @@ ELSE <expression1> END
 
 [NULLIF Function for Abbreviated CASE Expressions in Data Lake Relational Engine](../010-sql-language-elements/nullif-function-for-abbreviated-case-expressions-in-data-lake-relational-engine-a4f7256.md "The NULLIF function provides a way to write some CASE statements in short form.")
 
-[NULLIF Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/601a225cec8f4647a3a612f92994e087.html "Provides an abbreviated CASE expression by comparing expressions.") :arrow_upper_right:
+[NULLIF Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/601a225cec8f4647a3a612f92994e087.html "Provides an abbreviated CASE expression by comparing expressions.") :arrow_upper_right:
 

@@ -69,7 +69,7 @@ When executing a SQL statement that references a database object, if a schema na
 
 <a name="loio819f6ce2e6ef4d78ba11c7fcc194ea6e__section_bft_rjr_btb"/>
 
-## Example
+## Examples
 
 The following example creates a new schema called SCHEMA\_1, and then sets the default schema to it.
 
@@ -102,4 +102,13 @@ This clears the current SET SCHEMA value in effect, SCHEMA1.
 ```
 SET SCHEMA;
 ```
+
+**Related Information**  
+
+
+[CREATE SCHEMA for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-schema-for-data-lake-relational-engine-sap-hana-db-managed-7988025.md "Creates a schema in the current instance.")
+
+[DROP SCHEMA Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-schema-statement-for-data-lake-relational-engine-sap-hana-db-managed-2529cf1.md "")
+
+[SET SCHEMA Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/b23679a94d9f45a4b169f484005f46da.html "Sets the default schema for the connection") :arrow_upper_right:
 

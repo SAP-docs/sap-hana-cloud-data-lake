@@ -70,11 +70,19 @@ Use one or more of these CHAR\(254\) parameters to store the substrings extracte
 
 
 
+<a name="loio8180b6266ce210149e59fb0a2855a1a2__section_ggd_y5t_3bc"/>
+
+## Results Set
+
+None
+
+
+
 <a name="loio8180b6266ce210149e59fb0a2855a1a2__section_y2d_bct_tnb"/>
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -85,4 +93,20 @@ Requires EXECUTE object-level privilege on the procedure.
 The xp\_scanf system procedure extracts substrings from an input string using the specified format, and puts the results in the specified parameter values.
 
 Only the %s string format is supported. Other format specifiers such as %d and %f are not supported and scanning the input string stops if they are encountered.
+
+
+
+<a name="loio8180b6266ce210149e59fb0a2855a1a2__section_jg1_1vt_3bc"/>
+
+## Examples
+
+This example extracts the substrings Hello and World! from the input buffer Hello World!, and puts them into variables string1 and string2, and then selects them.
+
+```
+
+CREATE VARIABLE string1 CHAR( 254 ); 
+CREATE VARIABLE string2 CHAR( 254 );
+CALL xp_scanf( 'Hello World!', '%s %s', string1, string2 );
+SELECT string1, string2;
+```
 

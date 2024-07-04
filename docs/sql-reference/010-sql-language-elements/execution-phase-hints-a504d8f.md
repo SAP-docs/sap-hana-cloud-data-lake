@@ -27,7 +27,7 @@ An execution phase hint accepts a value that identifies in which execution phase
 
 <a name="loioa504d8f884f21015a156e4bf2c0253dc__iq_refbb_117"/>
 
-## Example
+## Examples
 
 The following example shows a condition hint string that indicates that the condition should be moved into the “Delayed” phase of execution, and it indicates that if possible the condition should be evaluated using an HG index:
 

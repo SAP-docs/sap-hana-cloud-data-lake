@@ -31,5 +31,5 @@ ALTER VIEW "SYS"."SYSPROCAUTH"( grantee,
 **Related Information**  
 
 
-[SYSPROCAUTH System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/864e74005ce74c6b809f4914f4aecd14.html "Each row in the SYSPROCAUTH view describes a set of privileges granted on a procedure. As an alternative, you can also use the SYSPROCPERM system view.") :arrow_upper_right:
+[SYSPROCAUTH System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/864e74005ce74c6b809f4914f4aecd14.html "Each row in the SYSPROCAUTH view describes a set of privileges granted on a procedure. As an alternative, you can also use the SYSPROCPERM system view.") :arrow_upper_right:
 

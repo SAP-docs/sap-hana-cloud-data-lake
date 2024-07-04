@@ -67,7 +67,7 @@ The formula used to calculate `STDDEV` is:
 
 <a name="loio0dde65ab55a549d3b058038134cae149__section_ic3_jv5_vrb"/>
 
-## Example
+## Examples
 
 -   Given this data:
 
@@ -225,5 +225,5 @@ The formula used to calculate `STDDEV` is:
 **Related Information**  
 
 
-[STDDEV_POP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a583f35984f21015b952ffc0a8c12597.html "Computes the standard deviation of a population consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
+[STDDEV_POP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a583f35984f21015b952ffc0a8c12597.html "Computes the standard deviation of a population consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
 

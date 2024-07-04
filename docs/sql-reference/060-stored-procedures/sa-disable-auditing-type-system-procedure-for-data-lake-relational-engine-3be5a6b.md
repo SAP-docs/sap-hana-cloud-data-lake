@@ -300,7 +300,7 @@ Disables auditing of \{ALTER|CREATE|DROP\} \{USER|ROLE\} statements
 
 ## Result Set
 
-None
+None.
 
 
 
@@ -332,7 +332,7 @@ Specify the location where events are logged with the audit\_log database option
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   SET ANY CUSTOMER SECURITY OPTION system privilege
 -   MANAGE AUDITING system privilege
 
@@ -342,7 +342,7 @@ Requires all of the following:
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -350,7 +350,7 @@ None
 
 ## Examples
 
-This example uses the sa\_disable\_auditing\_type system procedure to disable all auditing:
+This example disables all auditing:
 
 ```
 CALL sa_disable_auditing_type( 'all' );
@@ -375,5 +375,5 @@ CALL sa_disable_auditing_type( 'insert,select' );
 
 [sa\_enable\_auditing\_type System Procedure for Data Lake Relational Engine](sa-enable-auditing-type-system-procedure-for-data-lake-relational-engine-3be5b83.md "Specifies which events to include in auditing.")
 
-[sa_disable_auditing_type System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/fd63ea1f8fb64064aee60207c5efbecb.html "Disables auditing of specific events.") :arrow_upper_right:
+[sa_disable_auditing_type System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/fd63ea1f8fb64064aee60207c5efbecb.html "Disables auditing of specific events.") :arrow_upper_right:
 

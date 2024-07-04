@@ -636,7 +636,7 @@ The results of the sa\_materialized\_view\_info system procedure can be combined
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure, along with one of the following:
+Requires EXECUTE object-level privilege on this procedure, along with one of the following:
 
 -   You own the underlying table of the view
 -   SELECT ANY TABLE system privilege
@@ -657,7 +657,7 @@ All metadata for the specified materialized views, and all dependencies, are loa
 
 ## Examples
 
-This example uses the sa\_materialized\_view\_info system procedure to return information about all materialized views in the database:
+This example returns information about all materialized views in the database:
 
 ```
 CALL sa_materialized_view_info();
@@ -668,12 +668,16 @@ CALL sa_materialized_view_info();
 <tr>
 <th valign="top">
 
-OwnerName
+Owner
+
+Name
 
 </th>
 <th valign="top">
 
-ViewName
+View
+
+Name
 
 </th>
 <th valign="top">
@@ -683,17 +687,44 @@ Status
 </th>
 <th valign="top">
 
-DataStatus
+Data
+
+Status
 
 </th>
 <th valign="top">
 
-ViewLastRefreshed
+ViewLast
+
+Refreshed
 
 </th>
 <th valign="top">
 
-DataLastModified
+DataLast
+
+Modified
+
+</th>
+<th valign="top">
+
+AvailFor
+
+Optimization
+
+</th>
+<th valign="top">
+
+Refresh
+
+Type
+
+</th>
+<th valign="top">
+
+Build
+
+Type
 
 </th>
 </tr>
@@ -726,6 +757,21 @@ NULL
 <td valign="top">
 
 NULL
+
+</td>
+<td valign="top">
+
+D
+
+</td>
+<td valign="top">
+
+A
+
+</td>
+<td valign="top">
+
+F
 
 </td>
 </tr>
@@ -760,6 +806,21 @@ F
 NULL
 
 </td>
+<td valign="top">
+
+D
+
+</td>
+<td valign="top">
+
+A
+
+</td>
+<td valign="top">
+
+F
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -792,70 +853,6 @@ NULL
 NULL
 
 </td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="3">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-AvailForOptimization
-
-</th>
-<th valign="top">
-
-RefreshType
-
-</th>
-<th valign="top">
-
-BuildType
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-D
-
-</td>
-<td valign="top">
-
-A
-
-</td>
-<td valign="top">
-
-F
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-D
-
-</td>
-<td valign="top">
-
-A
-
-</td>
-<td valign="top">
-
-F
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 D
@@ -885,12 +882,16 @@ CALL sa_materialized_view_info('V_BAR1', 'USER1);
 <tr>
 <th valign="top">
 
-OwnerName
+Owner
+
+Name
 
 </th>
 <th valign="top">
 
-ViewName
+View
+
+Name
 
 </th>
 <th valign="top">
@@ -900,17 +901,44 @@ Status
 </th>
 <th valign="top">
 
-DataStatus
+Data
+
+Status
 
 </th>
 <th valign="top">
 
-ViewLastRefreshed
+ViewLast
+
+Refreshed
 
 </th>
 <th valign="top">
 
-DataLastModified
+DataLast
+
+Modified
+
+</th>
+<th valign="top">
+
+AvailFor
+
+Optimization
+
+</th>
+<th valign="top">
+
+Refresh
+
+Type
+
+</th>
+<th valign="top">
+
+Build
+
+Type
 
 </th>
 </tr>
@@ -945,36 +973,6 @@ NULL
 NULL
 
 </td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="3">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-AvailForOptimization
-
-</th>
-<th valign="top">
-
-RefreshType
-
-</th>
-<th valign="top">
-
-BuildType
-
-</th>
-</tr>
-<tr>
 <td valign="top">
 
 D
@@ -1000,11 +998,11 @@ F
 
 [sa\_refresh\_materialized\_views System Procedure for Data Lake Relational Engine](sa-refresh-materialized-views-system-procedure-for-data-lake-relational-engine-8176eeb.md "Initializes all materialized views that are in an uninitialized state.")
 
-[sp\_iqmaterializedviewstaleness Procedure for Data Lake Relational Engine](sp-iqmaterializedviewstaleness-procedure-for-data-lake-relational-engine-a762f3b.md "Displays staleness information about the visible version of a materialized view.")
+[sp\_iqmaterializedviewstaleness System Procedure for Data Lake Relational Engine](sp-iqmaterializedviewstaleness-system-procedure-for-data-lake-relational-engine-a762f3b.md "Displays staleness information about the visible version of a materialized view.")
 
 [CREATE MATERIALIZED VIEW Statement for Data Lake Relational Engine](../080-sql-statements/create-materialized-view-statement-for-data-lake-relational-engine-d5c757e.md "Creates a materialized view.")
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine](../080-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-faab95d.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_materialized_view_info System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7897509ad128448889f704a5f1a80aa6.html "Returns information about the specified materialized views.") :arrow_upper_right:
+[sa_materialized_view_info System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/7897509ad128448889f704a5f1a80aa6.html "Returns information about the specified materialized views.") :arrow_upper_right:
 

@@ -65,9 +65,9 @@ SQL – ISO/ANSI SQL compliant. SQL/OLAP feature T611.
 
 <a name="loioa57c3ea884f21015b4f8c850a5a5357f__ROW_NUMBER_example1"/>
 
-## Example
+## Examples
 
-The following example returns salary data from the Employees table, partitions the result set by department ID, and orders the data according to employee start date. The `ROW_NUMBER` function assigns each row a row number, and restarts the row numbering for each window partition:
+The following example returns salary data from the Employees table, partitions the result set by department ID, and orders the data according to employee start date. The `ROW_NUMBER` function assigns each row a row number, and restarts the row numbering for each window partition:S
 
 ```
 SELECT DepartmentID dID, StartDate, Salary, ROW_NUMBER()OVER(PARTITION 
@@ -95,5 +95,5 @@ dID        StartDate    Salary      Row_number()
 **Related Information**  
 
 
-[ROW_NUMBER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/2ebca29e7b31469497df90d36ea7422e.html "A ranking function that returns a unique row number for each row in a window partition, restarting the row numbering at the start of every window partition.") :arrow_upper_right:
+[ROW_NUMBER Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/2ebca29e7b31469497df90d36ea7422e.html "A ranking function that returns a unique row number for each row in a window partition, restarting the row numbering at the start of every window partition.") :arrow_upper_right:
 

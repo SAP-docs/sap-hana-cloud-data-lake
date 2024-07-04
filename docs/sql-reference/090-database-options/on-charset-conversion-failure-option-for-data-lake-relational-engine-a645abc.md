@@ -153,5 +153,5 @@ Single-byte to single-byte converters are not able to report substitutions and i
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[ON_CHARSET_CONVERSION_FAILURE Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/6ed545d21d7a4c159cabfdd39fcc9c73.html "Controls the action taken, if an error is encountered during character conversion.") :arrow_upper_right:
+[ON_CHARSET_CONVERSION_FAILURE Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/6ed545d21d7a4c159cabfdd39fcc9c73.html "Controls the action taken, if an error is encountered during character conversion.") :arrow_upper_right:
 

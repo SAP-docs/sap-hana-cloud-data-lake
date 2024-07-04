@@ -119,5 +119,5 @@ DROP IF EXISTS TABLE departments;
 
 [ALTER TABLE Statement for Data Lake Relational Engine](alter-table-statement-for-data-lake-relational-engine-39f1ec0.md "Modifies a table definition.")
 
-[DROP TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/1e62d1971ef24618818f5c5926cdcd26.html "Removes a table from the database.") :arrow_upper_right:
+[DROP TABLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/1e62d1971ef24618818f5c5926cdcd26.html "Removes a table from the database.") :arrow_upper_right:
 

@@ -247,7 +247,7 @@ None
 
 <a name="loioa5107a2e84f2101595bd9bacac97b5be__iq_refbb_150"/>
 
-## Example
+## Examples
 
 The following INSERT statement inserts a NULL into the date\_returned column of the Borrowed\_book table:
 

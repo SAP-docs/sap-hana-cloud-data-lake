@@ -288,33 +288,35 @@ Requires the HDL\_FILES\_SERVICE\_ADMIN role.
 
 
 
-## Example
+<a name="loio3be657216c5f10148af686ed9c86d496__section_r2h_cfw_4bc"/>
 
-The following example returns information about the columns in the ULProduct table on the remote SQL on Files server named `RemoteSOF` owned by the remote schema RemoteSchema.
+## Examples
+
+This example returns information about the columns in the ULProduct table on the remote SQL on Files server named `RemoteSOF` owned by the remote schema RemoteSchema.
 
 ```
 CALL sp_remote_columns( 'RemoteSOF', 'ULProduct', 'RemoteSchema', null );
 ```
 
-The following example returns information about the columns in the SOFobjects table using the remote server named RemoteSOF. The table owner is unspecified.
+This example returns information about the columns in the SOFobjects table using the remote server named RemoteSOF. The table owner is unspecified.
 
 ```
 CALL sp_remote_columns( 'RemoteSOF', 'SOFobjects', null );
 ```
 
-The following example returns information about the columns in the ULProduct table on the remote data lake Relational Engine database server named RemoteHDL. The table owner is HDLADMIN.
+This example returns information about the columns in the ULProduct table on the remote data lake Relational Engine database server named RemoteHDL. The table owner is HDLADMIN.
 
 ```
 CALL sp_remote_columns( 'RemoteHDL', 'ULProduct', 'HDLADMIN, null );
 ```
 
-The following example returns information about the columns in the SYSOBJECTS table in the database Production using the remote server named RemoteHDL. The table owner is unspecified.
+This example returns information about the columns in the SYSOBJECTS table in the database Production using the remote server named RemoteHDL. The table owner is unspecified.
 
 ```
 CALL sp_remote_columns( 'RemoteHDL', 'sysobjects', null, 'Production' );
 ```
 
-The following example returns information about the columns in the Customers table in the Microsoft Access database `c:\users\me\documents\MyAccesDB.accdb` using the remote server MyAccessDB. The Microsoft Access database does not have a table owner so NULL is specified.
+This example returns information about the columns in the Customers table in the Microsoft Access database `c:\users\me\documents\MyAccesDB.accdb` using the remote server MyAccessDB. The Microsoft Access database does not have a table owner so NULL is specified.
 
 ```
 CALL sp_remote_columns( 'MyAccessDB', 'Customers', null, 'c:\\users\\me\\documents\\MyAccesDB.accdb' );

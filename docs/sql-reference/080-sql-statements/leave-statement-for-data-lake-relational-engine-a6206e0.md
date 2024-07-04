@@ -99,5 +99,5 @@ None
 
 [BEGIN … END Statement for Data Lake Relational Engine](begin-end-statement-for-data-lake-relational-engine-a6142de.md "Groups SQL statements together.")
 
-[FOR Statement for Data Lake Relational Engine](for-statement-for-data-lake-relational-engine-a61e906.md "Repeats the execution of a statement list once for each row in a cursor.")
+[FOR Clause for Data Lake Relational Engine](for-clause-for-data-lake-relational-engine-a61e906.md "Repeats the execution of a statement list once for each row in a cursor.")
 

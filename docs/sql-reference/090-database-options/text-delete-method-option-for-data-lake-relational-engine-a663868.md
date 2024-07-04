@@ -6,54 +6,17 @@ Specifies the algorithm used during a delete in a TEXT index.
 
 
 
-<a name="loioa663868b84f21015a23cbc124262f0e9__section_d3p_24q_znb"/>
+<a name="loioa663868b84f21015a23cbc124262f0e9__section_rv2_mvs_swb"/>
 
 ## Usage
 
-This data lake Relational Engine database option can be used when connected as follows:
-
--   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
-
-
-
-<a name="loioa663868b84f21015a23cbc124262f0e9__section_zx3_g24_hrb"/>
-
-## Syntax
-
-```
-TEXT_DELETE_METHOD = <value>;
-```
-
-
-
-## Allowed Values
-
-0 to 2
+This data lake Relational Engine database option is set by the system and cannot be changed.
 
 
 
 ## Default
 
 0
-
-
-
-<a name="loioa663868b84f21015a23cbc124262f0e9__section_k3c_gxb_3qb"/>
-
-## Privileges
-
-Privilege Category: PUBLIC
-
-Requires the SET ANY CUSTOMER PUBLIC OPTION system privilege to set this database option.
-
-
-
-## Scope
-
--   Option can be set at the database \(PUBLIC\) or user level. At the database level, the value becomes the default for any new user, but has no impact on existing users. At the user level, overrides the PUBLIC value for that user only. No system privilege is required to set option for self. System privilege is required to set at database level or at user level for any user other than self.
-
--   Can be set temporary for an individual connection or for the PUBLIC role. Takes effect immediately.
-
 
 **Related Information**  
 

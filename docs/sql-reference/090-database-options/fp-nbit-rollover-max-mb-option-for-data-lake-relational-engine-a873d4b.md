@@ -63,9 +63,9 @@ FP\_NBIT\_AUTOSIZE\_LIMIT and FP\_NBIT\_LOOKUP\_MB establish a ceiling for sizin
 
 [FP\_NBIT\_ROLLOVER\_MAX\_MB Option for Data Lake Relational Engine](fp-nbit-rollover-max-mb-option-for-data-lake-relational-engine-a873d4b.md "Sets a threshold for the total dictionary size for implicit NBit rollovers to Flat FP.")
 
-[sp\_iqrebuildindex Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqrebuildindex-procedure-for-data-lake-relational-engine-a5b342e.md "Rebuilds column indexes.")
+[sp\_iqrebuildindex System Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqrebuildindex-system-procedure-for-data-lake-relational-engine-a5b342e.md "Rebuilds column indexes.")
 
-[sp\_iqindexmetadata Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqindexmetadata-procedure-for-data-lake-relational-engine-a5ad0e4.md "Displays index metadata for a given index.")
+[sp\_iqindexmetadata System Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqindexmetadata-system-procedure-for-data-lake-relational-engine-a5ad0e4.md "Displays index metadata for a given index.")
 
-[FP_NBIT_ROLLOVER_MAX_MB Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/9035f14a9b62495a9278924113575b2c.html "Sets a threshold for the total dictionary size for implicit NBit rollovers to Flat FP.") :arrow_upper_right:
+[FP_NBIT_ROLLOVER_MAX_MB Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/9035f14a9b62495a9278924113575b2c.html "Sets a threshold for the total dictionary size for implicit NBit rollovers to Flat FP.") :arrow_upper_right:
 

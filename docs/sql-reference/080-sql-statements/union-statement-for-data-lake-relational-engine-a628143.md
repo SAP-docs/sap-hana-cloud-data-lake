@@ -58,7 +58,7 @@ Only integers are allowed in the order by list. These integers specify the posit
 
 ```
 <order-by-clause> ::=
-   ORDER BY <integer> [ { ASC | DESC } ];
+   ORDER BY <integer> [ { ASC | DESC } ]
 ```
 
 
@@ -121,7 +121,7 @@ FROM Customers;
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
 
-[FROM Clause for Data Lake Relational Engine](from-clause-for-data-lake-relational-engine-a7749cf.md "Specifies the database tables or views involved in a SELECT statement.")
+[FROM Clause for Data Lake Relational Engine](from-clause-for-data-lake-relational-engine-a7749cf.md "Specifies the objects involved in a SELECT, DELETE or UPDATE statement.")
 
 [SELECT Statement for Data Lake Relational Engine](select-statement-for-data-lake-relational-engine-a624e72.md "Retrieves information from the database.")
 

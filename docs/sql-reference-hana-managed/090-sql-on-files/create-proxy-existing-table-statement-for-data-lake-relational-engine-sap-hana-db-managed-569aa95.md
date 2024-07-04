@@ -143,5 +143,5 @@ CREATE EXISTING TABLE sof_employee
 
 [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](../030-sql-statements/remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md "To run data lake Relational Engine SQL statements using the SAP HANA database REMOTE_EXECUTE or REMOTE_EXECUTE_DDL procedure, you embed the SQL syntax within the procedure.")
 
-[CREATE (Proxy) EXISTING TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8bfd6bbf659b4c9ea03236eb2767ec80.html "Create a new proxy table that represents an existing table on a SQL on Files external catalog.") :arrow_upper_right:
+[CREATE (Proxy) EXISTING TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/8bfd6bbf659b4c9ea03236eb2767ec80.html "Create a new proxy table that represents an existing table on a SQL on Files external catalog.") :arrow_upper_right:
 

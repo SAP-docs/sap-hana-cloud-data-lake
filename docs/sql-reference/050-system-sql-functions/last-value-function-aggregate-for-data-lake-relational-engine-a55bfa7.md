@@ -529,5 +529,5 @@ SELECT LAST_VALUE (COL1+2 ORDER BY COL2) from T1;
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[LAST_VALUE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/8cf5191242464c6bb1965cbb657bdab1.html "Returns the last value from a set of values.") :arrow_upper_right:
+[LAST_VALUE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/8cf5191242464c6bb1965cbb657bdab1.html "Returns the last value from a set of values.") :arrow_upper_right:
 

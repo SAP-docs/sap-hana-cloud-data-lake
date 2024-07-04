@@ -90,7 +90,7 @@ The *<window-spec\>* parameter represents usage as a window function in a `SELEC
 
 <a name="loioa551b4fb84f210158a07f463ff01b5e2__EXP_WEIGHTED_AVG_examples1"/>
 
-## Example
+## Examples
 
 The following example returns an exponential weighted average of salaries for employees in Florida with the salary of recently hired employees contributing the most weight to the average. There are three rows used in the weighting:
 
@@ -311,5 +311,5 @@ Francis
 
 [WEIGHTED\_AVG Function \[Aggregate\] for Data Lake Relational Engine](weighted-avg-function-aggregate-for-data-lake-relational-engine-a590e30.md "Calculates an arithmetically (or linearly) weighted average.")
 
-[EXP_WEIGHTED_AVG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/ac831a074ab343628271364a30d557bf.html "Calculates an exponential weighted moving average. Weightings determine the relative importance of each quantity that makes up the average.") :arrow_upper_right:
+[EXP_WEIGHTED_AVG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/ac831a074ab343628271364a30d557bf.html "Calculates an exponential weighted moving average. Weightings determine the relative importance of each quantity that makes up the average.") :arrow_upper_right:
 

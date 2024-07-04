@@ -138,7 +138,6 @@ Automatic commit
 ## Standards
 
 -   SQL – vendor extension to ISO/ANSI SQL grammar
--   
 
 
 
@@ -174,5 +173,5 @@ Automatic commit
 
 [System Views in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../070-system-views/system-views-in-data-lake-relational-engine-sap-hana-db-managed-92e2e6c.md "System views allow you to query for information about the system state using SELECT statements. The results appear as tables.")
 
-[CREATE VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a61a051684f210158cced2d83231bd8a.html "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.") :arrow_upper_right:
+[CREATE VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a61a051684f210158cced2d83231bd8a.html "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.") :arrow_upper_right:
 

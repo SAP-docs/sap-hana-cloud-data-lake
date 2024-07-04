@@ -142,7 +142,7 @@ Not less than
 
 <a name="loioa4fabf2584f21015a9d8c032cbfdc9a7__iq_refbb_79"/>
 
-## Example
+## Examples
 
 For example, the following query retrieves the names and birth years of the oldest employees:
 

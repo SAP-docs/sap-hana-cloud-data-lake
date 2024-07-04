@@ -30,5 +30,5 @@ ALTER VIEW "SYS"."SYSVIEWS"( vcreator,
 **Related Information**  
 
 
-[SYSVIEWS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/1f4dedee333d46d1bd4c31ea6c2a440e.html "Each row of the SYS.SYSVIEWS view describes one view, including its view definition.") :arrow_upper_right:
+[SYSVIEWS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/1f4dedee333d46d1bd4c31ea6c2a440e.html "Each row of the SYS.SYSVIEWS view describes one view, including its view definition.") :arrow_upper_right:
 

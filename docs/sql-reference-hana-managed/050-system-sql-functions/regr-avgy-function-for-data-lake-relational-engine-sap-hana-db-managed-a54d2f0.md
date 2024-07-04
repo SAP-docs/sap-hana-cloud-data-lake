@@ -122,7 +122,7 @@ Syntax 2 – The *<window-spec\>* parameter represents usage as a window functio
 
 <a name="loioa54d2f0bde2f44d6bb973767b6fc47f4__section_g5f_bk5_vrb"/>
 
-## Example
+## Examples
 
 The following example calculates the average of the independent variable, employee salary:
 
@@ -137,5 +137,5 @@ This function returns the value 49988.6232.
 
 [WINDOW Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/window-clause-for-data-lake-relational-engine-sap-hana-db-managed-c83b61b.md "Defines all or part of a window for use with window functions such as AVG and RANK in a SELECT statement.")
 
-[REGR_AVGY Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a574426e84f210159d5d8adecd1f70f2.html "Computes the average of the dependent variable of the regression line.") :arrow_upper_right:
+[REGR_AVGY Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a574426e84f210159d5d8adecd1f70f2.html "Computes the average of the dependent variable of the regression line.") :arrow_upper_right:
 

@@ -163,7 +163,7 @@ BACKUP TABLE
 </td>
 <td valign="top">
 
-User can backup the named table, regardless of table ownership. Additional BACKUP TABLE system privileges are required to backup a table. See [BACKUP TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/5c2f08fec3194c57ae23a640fc0cf73f.html "Backup data lake Relational Engine tables.") :arrow_upper_right:.
+User can backup the named table, regardless of table ownership. Additional BACKUP TABLE system privileges are required to backup a table. See [BACKUP TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/5c2f08fec3194c57ae23a640fc0cf73f.html "Backup data lake Relational Engine tables.") :arrow_upper_right:.
 
 </td>
 </tr>
@@ -344,7 +344,7 @@ RESTORE TABLE
 </td>
 <td valign="top">
 
-User can restore the named table, regardless of table ownership. Additional RESTORE TABLE system privileges are required to restore a table. See [RESTORE TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a407d9655299472ba67454d6ed26a19b.html "Restore backed up tables in data lake Relational Engine.") :arrow_upper_right:
+User can restore the named table, regardless of table ownership. Additional RESTORE TABLE system privileges are required to restore a table. See [RESTORE TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a407d9655299472ba67454d6ed26a19b.html "Restore backed up tables in data lake Relational Engine.") :arrow_upper_right:
 
 </td>
 </tr>
@@ -476,7 +476,7 @@ The named user, role, or schema is also given privileges to grant the same privi
 
 Some object-level privileges support a per column clause when being granted on a table. This will not be the case for schema-level privileges. For example, for a table you can grant SELECT on a specific column using GRANT SELECT ON T\(c1\) TO user.
 
-A database schema is a way to logically group objects, but not all objects support schema. For more information, see [Objects Supporting Schemas](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/b9403c88a15146ff84a2f37266f75c69.html "") :arrow_upper_right:.
+A database schema is a way to logically group objects, but not all objects support schema. For more information, see [Objects Supporting Schemas](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/b9403c88a15146ff84a2f37266f75c69.html "") :arrow_upper_right:.
 
 If the user is granted a privilege on one of the objects in the schema directly as opposed to on the schema itself and the privilege is granted with the WITH GRANT OPTION, then the re-grant of the privilege to another user is limited to the object. The privilege cannot be re-granted on the schema containing the object. For example, table1 is in schema1. User1 is granted SELECT on table1 with WITH GRANT OPTION. User1 can re-grant SELECT on table1 to user2, but cannot re-grant SELECT on schema1, which contains table1.
 
@@ -521,9 +521,9 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 Requires one of:
 
 -   You own the object.
--   You have the MANAGE ANY OBJECT PRIVILEGE system privilege.
--   You have been granted the specific object-level privilege with the WITH GRANT OPTION clause on the object if the object is owned by another user.
--   You have been granted the specific object-level privilege with the WITH GRANT OPTION clause on the schema containing the object if the schema is owned by another user.
+-   You've the MANAGE ANY OBJECT PRIVILEGE system privilege.
+-   You've been granted the specific object-level privilege with the WITH GRANT OPTION clause on the object if the object is owned by another user.
+-   You've been granted the specific object-level privilege with the WITH GRANT OPTION clause on the schema containing the object if the schema is owned by another user.
 
 
 
@@ -543,4 +543,6 @@ Requires one of:
 
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](revoke-object-level-privilege-statement-for-data-lake-relational-engine-sap-hana-db-manag-f14139f.md "Removes object-level privileges that were given using the GRANT statement.")
+
+[GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right:
 

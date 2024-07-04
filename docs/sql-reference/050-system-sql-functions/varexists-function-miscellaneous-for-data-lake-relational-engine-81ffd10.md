@@ -97,5 +97,5 @@ END IF;
 **Related Information**  
 
 
-[VAREXISTS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/bf6a50154e834de2b212bb738f57143a.html "Returns 1 if a user-defined variable exists with the specified name. Returns 0 if no such variable exists.") :arrow_upper_right:
+[VAREXISTS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/bf6a50154e834de2b212bb738f57143a.html "Returns 1 if a user-defined variable exists with the specified name. Returns 0 if no such variable exists.") :arrow_upper_right:
 

@@ -134,7 +134,7 @@ The sa\_get\_bits system procedure can be used to convert a bit string into a re
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -142,7 +142,7 @@ Requires EXECUTE object-level privilege on the procedure.
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -150,7 +150,7 @@ None
 
 ## Examples
 
-For example uses the sa\_get\_bits system procedure to return only rows with ON bits.
+For example returns only rows with ON bits.
 
 ```
 CALL sa_get_bits('00110011');
@@ -342,5 +342,5 @@ bit\_val
 **Related Information**  
 
 
-[sa_get_bits System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/dc051ed9b19649ec91efd03e157132cb.html "Takes a bit string and returns a row for each bit in the string. By default, only rows with a bit value of 1 are returned.") :arrow_upper_right:
+[sa_get_bits System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/dc051ed9b19649ec91efd03e157132cb.html "Takes a bit string and returns a row for each bit in the string. By default, only rows with a bit value of 1 are returned.") :arrow_upper_right:
 

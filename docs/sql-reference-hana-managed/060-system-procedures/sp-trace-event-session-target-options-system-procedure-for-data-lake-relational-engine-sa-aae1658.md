@@ -195,7 +195,7 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   execute\_priv1 Execute priv for all proceduresEXECUTE object-level privilege on this procedure
 -   MANAGE ANY TRACE SESSION system privilege
 -   MANAGE AUDITING system privilege
 
@@ -216,16 +216,15 @@ None.
 
 ## Examples
 
-The following outputs assume the existence of a trace session named my\_session. To create this session, execute:
-
 ```
+--- Setup for the following examples ---
 CREATE OR REPLACE TEMPORARY TRACE EVENT SESSION my_session
    ADD TRACE EVENT my_event, 
    ADD TRACE EVENT SYS_ConsoleLog_Information 
    ADD TARGET FILE (SET filename_prefix='my_trace_file', [compressed]=1);
 ```
 
-This example shows the target options for the trace session my\_session:
+This example returns the target options for the trace session my\_session:
 
 ```
 CALL sp_trace_event_session_target_options('my_session');
@@ -319,5 +318,5 @@ compressed
 **Related Information**  
 
 
-[sp_trace_event_session_target_options System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8179b61a6ce210148e4db24e40891e7d.html "Lists the target options for a trace event session.") :arrow_upper_right:
+[sp_trace_event_session_target_options System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/8179b61a6ce210148e4db24e40891e7d.html "Lists the target options for a trace event session.") :arrow_upper_right:
 

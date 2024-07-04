@@ -403,5 +403,5 @@ To use SAP HANA database REMOTE\_EXECUTE\_QUERY requires the REMOTE EXECUTE priv
 **Related Information**  
 
 
-[SYSTABLEPERM System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3beab25c6c5f1014b1f7d85f1fe9e90a.html "Privileges on tables and views are stored in the SYS.SYSTABLEPERM system view. Each row in this view corresponds to one table, one user ID granting the privilege (grantor) and one user ID granted the privilege (grantee).") :arrow_upper_right:
+[SYSTABLEPERM System View for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/3beab25c6c5f1014b1f7d85f1fe9e90a.html "Privileges on tables and views are stored in the SYS.SYSTABLEPERM system view. Each row in this view corresponds to one table, one user ID granting the privilege (grantor) and one user ID granted the privilege (grantee).") :arrow_upper_right:
 

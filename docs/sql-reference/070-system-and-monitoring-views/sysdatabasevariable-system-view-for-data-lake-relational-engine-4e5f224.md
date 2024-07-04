@@ -237,5 +237,5 @@ Updates to database-scope variable values, for example using the SET statement, 
 **Related Information**  
 
 
-[SYSDATABASEVARIABLE System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/70e155b239d843ad931a10abffaab86c.html "Each row in the SYSDATABASEVARIABLE system view describes one database-scope variable in the database. The underlying system table for this view is ISYSDATABASEVARIABLE.") :arrow_upper_right:
+[SYSDATABASEVARIABLE System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/70e155b239d843ad931a10abffaab86c.html "Each row in the SYSDATABASEVARIABLE system view describes one database-scope variable in the database. The underlying system table for this view is ISYSDATABASEVARIABLE.") :arrow_upper_right:
 

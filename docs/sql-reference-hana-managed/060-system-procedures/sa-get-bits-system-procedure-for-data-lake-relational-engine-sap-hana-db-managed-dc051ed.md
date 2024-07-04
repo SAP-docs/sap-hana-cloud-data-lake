@@ -160,7 +160,7 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </b></dt>
 <dd>
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -173,7 +173,7 @@ Requires EXECUTE object-level privilege on the procedure.
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -181,7 +181,7 @@ None
 
 ## Examples
 
-For example uses the sa\_get\_bits system procedure to return only rows with ON bits.
+For example returns only rows with ON bits.
 
 ```
 CALL sa_get_bits('00110011');
@@ -375,5 +375,5 @@ bit\_val
 
 [CREATE VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/create-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-4d41128.md "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.")
 
-[sa_get_bits System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/817590756ce21014a0abf2e01acdf61e.html "Takes a bit string and returns a row for each bit in the string. By default, only rows with a bit value of 1 are returned.") :arrow_upper_right:
+[sa_get_bits System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/817590756ce21014a0abf2e01acdf61e.html "Takes a bit string and returns a row for each bit in the string. By default, only rows with a bit value of 1 are returned.") :arrow_upper_right:
 

@@ -75,7 +75,7 @@ The name of the capability.
 
 ## Remarks
 
-The SYS.SYSCAPABILITYNAME system view is defined using a combination of dbo.sa\_rowgenerator and the following server properties:
+The SYS.SYSCAPABILITYNAME system view is defined using a combination of sa\_rowgenerator and the following server properties:
 
 -   RemoteCapability
 -   MaxRemoteCapability

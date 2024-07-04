@@ -128,22 +128,22 @@ If the *<p\_dbspace\_name\>* parameter is not specified or is NULL, then the res
 
 ## Privileges
 
-Requires all of:
+Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   MANAGE ANY DBSPACE system privilege.
 
 
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-This example uses the sa\_disk\_free\_space system procedure to return a result set containing information about available space.
+This example returns a result set containing information about available space.
 
 ```
 CALL sa_disk_free_space( );

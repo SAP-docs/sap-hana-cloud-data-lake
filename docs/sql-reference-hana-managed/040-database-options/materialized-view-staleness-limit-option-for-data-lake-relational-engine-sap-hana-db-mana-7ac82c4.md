@@ -12,7 +12,7 @@ Controls the maximum stale time limit, in the specified units of time.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user..
+-   Connected to SAP HANA database as a SAP HANA database user.
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -190,7 +190,7 @@ This option is not supported if MATERIALIZED\_VIEW\_STALENESS\_CHECK is set to 0
 
 <a name="loio7ac82c4f1cfb46bbb18966f957d91b3d__section_x2j_lh2_qrb"/>
 
-## Example
+## Examples
 
 This example sets the staleness check to 30 minutes.
 
@@ -205,5 +205,5 @@ SET TEMPORARY OPTION materialized_view_staleness_limit='30 Minutes';
 
 [SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md "Grant database options temporarily for the current connection only on a data lake Relational Engine relational container.")
 
-[MATERIALIZED_VIEW_STALENESS_LIMIT Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/f444eb30bf634e93a0e63edb1a85ffa8.html "Controls the maximum stale time limit, in the specified units of time.") :arrow_upper_right:
+[MATERIALIZED_VIEW_STALENESS_LIMIT Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/f444eb30bf634e93a0e63edb1a85ffa8.html "Controls the maximum stale time limit, in the specified units of time.") :arrow_upper_right:
 

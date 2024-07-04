@@ -73,5 +73,5 @@ The `BIT_LENGTH` function supports all data lake Relational Engine data types an
 **Related Information**  
 
 
-[BIT_LENGTH Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a537928a84f210158191ea44ca58ee8e.html "Returns an unsigned 64-bit value containing the bit length of the column parameter.") :arrow_upper_right:
+[BIT_LENGTH Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a537928a84f210158191ea44ca58ee8e.html "Returns an unsigned 64-bit value containing the bit length of the column parameter.") :arrow_upper_right:
 

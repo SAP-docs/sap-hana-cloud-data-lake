@@ -22,6 +22,11 @@ DROP MATERIALIZED VIEW [ IF EXISTS ] [ <schema-name>.]<mat-view-name>
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loio50e76331a4664b5bb2c4454e80b5f8f4__section_nhz_wkk_dzb"/>
 
 ## Parameters
@@ -122,5 +127,5 @@ DROP IF EXISTS MATERIALIZD VIEW mymatview1;
 
 [ALTER MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](alter-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-8169459.md "Alters a materialized view.")
 
-[DROP MATERIALIZED VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/35de0ef70fde42bfb4c5c4b311cf8c69.html "Removes a data type from the database.") :arrow_upper_right:
+[DROP MATERIALIZED VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/35de0ef70fde42bfb4c5c4b311cf8c69.html "Removes a data type from the database.") :arrow_upper_right:
 

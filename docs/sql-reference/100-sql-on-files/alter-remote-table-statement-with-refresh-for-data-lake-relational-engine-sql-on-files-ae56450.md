@@ -145,5 +145,5 @@ ALTER TABLE ExternalSchema1.ExternalTable1 IN FILES_SERVICE
 
 [DROP \(Remote\) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](drop-remote-table-statement-for-data-lake-relational-engine-sql-on-files-f81d073.md "Drop a remote table from a SQL on Files external catalog.")
 
-[ALTER (Remote) TABLE Statement with REFRESH for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/ff7b384154d0499594c61f49329dce04.html "Alter the refresh mode of a table.") :arrow_upper_right:
+[ALTER (Remote) TABLE Statement with REFRESH for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/ff7b384154d0499594c61f49329dce04.html "Alter the refresh mode of a table.") :arrow_upper_right:
 

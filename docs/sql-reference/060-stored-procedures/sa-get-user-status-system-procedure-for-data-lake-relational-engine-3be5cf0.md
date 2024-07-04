@@ -26,7 +26,7 @@ sa_get_user_status( )
 
 ## Parameters
 
-None
+None.
 
 
 
@@ -269,19 +269,19 @@ If the user is authenticated using LDAP User Authentication, the output includes
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure. To view information about other users, also requires the MANAGE ANY USER system privilege.
+Requires EXECUTE object-level privilege on this procedure. To view information about other users, also requires the MANAGE ANY USER system privilege.
 
 
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-This example uses the sa\_get\_user\_status system procedure to return the status of all database users.
+This example returns the status of all database users.
 
 ```
 CALL sa_get_user_status;
@@ -292,12 +292,16 @@ CALL sa_get_user_status;
 <tr>
 <th valign="top">
 
-user\_id
+user\_
+
+id
 
 </th>
 <th valign="top">
 
-user\_name
+user\_
+
+name
 
 </th>
 <th valign="top">
@@ -307,12 +311,18 @@ connections
 </th>
 <th valign="top">
 
-failed\_logins
+failed\_
+
+logins
 
 </th>
 <th valign="top">
 
-last\_login\_time
+last\_
+
+login\_
+
+time
 
 </th>
 <th valign="top">
@@ -322,7 +332,54 @@ locked
 </th>
 <th valign="top">
 
-reason\_locked
+reason\_
+
+locked
+
+</th>
+<th valign="top">
+
+user\_
+
+dn
+
+</th>
+<th valign="top">
+
+user\_dn\_
+
+cached\_at
+
+</th>
+<th valign="top">
+
+password\_
+
+change\_
+
+state
+
+</th>
+<th valign="top">
+
+password\_
+
+change\_
+
+first\_
+
+user
+
+</th>
+<th valign="top">
+
+password\_
+
+change\_
+
+second\_
+
+user
 
 </th>
 </tr>
@@ -349,12 +406,37 @@ SYS
 </td>
 <td valign="top">
 
+NULL
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
  
 
 </td>
 <td valign="top">
 
 0
+
+</td>
+<td valign="top">
+
+NULL
 
 </td>
 <td valign="top">
@@ -386,7 +468,7 @@ PUBLIC
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 <td valign="top">
@@ -399,31 +481,14 @@ PUBLIC
 NULL
 
 </td>
-</tr>
-<tr>
 <td valign="top">
 
-3
+NULL
 
 </td>
 <td valign="top">
 
-dbo
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-03:00.0
+NULL
 
 </td>
 <td valign="top">
@@ -436,16 +501,26 @@ dbo
 NULL
 
 </td>
+<td valign="top">
+
+NULL
+
+</td>
 </tr>
 <tr>
 <td valign="top">
 
-4
+103
 
 </td>
 <td valign="top">
 
-diagnostics
+HDLADMIN
+
+</td>
+<td valign="top">
+
+1
 
 </td>
 <td valign="top">
@@ -455,12 +530,7 @@ diagnostics
 </td>
 <td valign="top">
 
-0
-
-</td>
-<td valign="top">
-
- 
+4:01:00 PM
 
 </td>
 <td valign="top">
@@ -473,11 +543,36 @@ diagnostics
 NULL
 
 </td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
 </tr>
 <tr>
 <td valign="top">
 
-5
+121
 
 </td>
 <td valign="top">
@@ -487,7 +582,7 @@ USER1
 </td>
 <td valign="top">
 
-0
+1
 
 </td>
 <td valign="top">
@@ -497,7 +592,7 @@ USER1
 </td>
 <td valign="top">
 
- 
+3:58:00 PM
 
 </td>
 <td valign="top">
@@ -510,11 +605,36 @@ USER1
 NULL
 
 </td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
 </tr>
 <tr>
 <td valign="top">
 
-6
+122
 
 </td>
 <td valign="top">
@@ -534,7 +654,7 @@ USER2
 </td>
 <td valign="top">
 
- 
+NULL
 
 </td>
 <td valign="top">
@@ -547,83 +667,6 @@ USER2
 NULL
 
 </td>
-</tr>
-<tr>
-<td valign="top">
-
-101
-
-</td>
-<td valign="top">
-
-…
-
-</td>
-<td valign="top">
-
-…
-
-</td>
-<td valign="top">
-
-…
-
-</td>
-<td valign="top">
-
-…
-
-</td>
-<td valign="top">
-
-…
-
-</td>
-<td valign="top">
-
-…
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="5">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-user\_dn
-
-</th>
-<th valign="top">
-
-user\_dn\_cached\_at
-
-</th>
-<th valign="top">
-
-password\_change\_state
-
-</th>
-<th valign="top">
-
-password\_change\_first\_user
-
-</th>
-<th valign="top">
-
-password\_change\_second\_user
-
-</th>
-</tr>
-<tr>
 <td valign="top">
 
 NULL
@@ -647,195 +690,6 @@ NULL
 <td valign="top">
 
 NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-…
-
-</td>
-<td valign="top">
-
-…
-
-</td>
-<td valign="top">
-
-…
-
-</td>
-<td valign="top">
-
-…
-
-</td>
-<td valign="top">
-
-…
 
 </td>
 </tr>

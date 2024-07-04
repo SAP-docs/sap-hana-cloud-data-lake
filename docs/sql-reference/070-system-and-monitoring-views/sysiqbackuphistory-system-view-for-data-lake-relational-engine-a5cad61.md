@@ -276,5 +276,5 @@ Primary key (bu_id);
 **Related Information**  
 
 
-[sp\_iqbackupdetails Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqbackupdetails-procedure-for-data-lake-relational-engine-a59ba29.md "Shows all the dbfiles included in a particular backup.")
+[sp\_iqbackupdetails System Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqbackupdetails-system-procedure-for-data-lake-relational-engine-a59ba29.md "Shows all the dbfiles included in a particular backup.")
 

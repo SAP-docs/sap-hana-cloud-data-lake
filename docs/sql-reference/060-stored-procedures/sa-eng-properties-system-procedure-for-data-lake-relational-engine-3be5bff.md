@@ -26,7 +26,7 @@ sa_eng_properties( )
 
 ## Parameters
 
-None
+None.
 
 
 
@@ -131,19 +131,19 @@ Returns the PropNum, PropName, PropDescription, and Value for each available ser
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-This example uses the sa\_eng\_properties system procedure to return a set of available server properties.
+This example returns a list of available server properties.
 
 ```
 CALL sa_eng_properties( );

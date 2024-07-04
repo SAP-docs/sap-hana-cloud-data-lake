@@ -33,6 +33,10 @@ DROP USER <user-name>
 
 When dropping a user, any permissions granted by this user are also removed. If the user being deleted owns any objects in the database, an error message appears, and the command fails.
 
+The user being removed can't be connected to the current multiplex node when the statement is executed. If the user is connected to the database on a different multiplex node, the connection is dropped.
+
+The user being removed cannot be connected to the current MPX node when the statement is executed. If the user is connected to the database on a different MPX node, the connection is be dropped.
+
 
 
 <a name="loioa61d9fe384f21015af5de6ef9830eeb0__drop_user_priv1"/>
@@ -77,5 +81,5 @@ DROP USER SQLTester;
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[DROP USER Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/d94380cc72f2455b9c92809eee051a5a.html "Removes a user.") :arrow_upper_right:
+[DROP USER Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/d94380cc72f2455b9c92809eee051a5a.html "Removes a user.") :arrow_upper_right:
 

@@ -55,5 +55,5 @@ The attributes of the data type can be overridden if needed by explicitly provid
 **Related Information**  
 
 
-[CREATE DOMAIN Statementfor Data Lake Relational Engine](../080-sql-statements/create-domain-statementfor-data-lake-relational-engine-a616d8e.md "Creates a user-defined data type in the database.")
+[CREATE DOMAIN Statement for Data Lake Relational Engine](../080-sql-statements/create-domain-statement-for-data-lake-relational-engine-a616d8e.md "Creates a user-defined data type in the database.")
 

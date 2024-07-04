@@ -446,5 +446,5 @@ You can specify elements of *<window-spec\>* either in the function syntax \(inl
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[FIRST_VALUE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/9994e0a4b12c4073a74b5a37d5e25f2e.html "Returns the first value from a set of values.") :arrow_upper_right:
+[FIRST_VALUE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/9994e0a4b12c4073a74b5a37d5e25f2e.html "Returns the first value from a set of values.") :arrow_upper_right:
 

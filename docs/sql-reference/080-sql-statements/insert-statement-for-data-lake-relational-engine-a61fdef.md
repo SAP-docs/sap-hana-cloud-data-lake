@@ -70,7 +70,7 @@ Syntax 3
 
 ```
 INSERT [ INTO ] [ { <owner> | <schema-name> }.]<table-name>[ ( <column-name> [, …] ) ]
-    ... <insert-select-load-options> <insert-select-load-options>
+    ... <insert-load-options> <insert-select-load-options>
     ... LOCATION '<servername.dbname>' [ <location-options> ]
    ... { <select-statement> | '<select statement>' }
 ```
@@ -307,7 +307,7 @@ Specifies an isolation level for the connection to a remote server. The levels a
 > ### Note:  
 > The NUMBER\(\*\) function is useful for generating primary keys with Syntax 2 of the INSERT statement.
 
-**Syntax 3** - INSERT...LOCATION is a variation of Syntax 2 that allows you to insert data from an SAP Adaptive Server Enterprisedata lake Relational Engine or data lake Relational Engine database. The *<servername.dbname\>* specified in the LOCATION clause identifies the remote server and database for the table in the FROM clause.
+**Syntax 3** - INSERT...LOCATION is a variation of Syntax 2 that allows you to insert data from an SAP Adaptive Server Enterprise or data lake Relational Engine database. The *<servername.dbname\>* specified in the LOCATION clause identifies the remote server and database for the table in the FROM clause.
 
 In data lake Relational Engine, a timestamp data type column can support 6 or 7 decimal precision. See [TIMESTAMP Data Type Precision in Data Lake Relational Engine](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-520ce6c.md). If you attempt to insert 7 decimal precision data into a 6 decimal precision column in the data lake Relational Engine, then the value will be truncated to 6 decimal places and precision is lost. To prevent this behavior, set the TIMESTAMP\_RTRUNCATION database option to ON. See [TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine](../090-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-dbb08c7.md). When enabled, the INSERT operation fails if precision will be lost on a timestamp column.
 
@@ -428,9 +428,9 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [TIMESTAMP Data Type Precision in Data Lake Relational Engine](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-520ce6c.md "Precision conflicts between TIMESTAMP data types result in data loss.")
 
-[INSERT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/cbe6857cc94b4923a6ee5917651f5084.html "Inserts a single row or a selection of rows, from elsewhere in the current database, into the table. This command can also insert a selection of rows from another database into the table.") :arrow_upper_right:
+[INSERT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/cbe6857cc94b4923a6ee5917651f5084.html "Inserts a single row or a selection of rows, from elsewhere in the current database, into the table. This command can also insert a selection of rows from another database into the table.") :arrow_upper_right:
 
 [TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine](../090-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-dbb08c7.md "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.")
 
-[TIMESTAMP_RTRUNCATION Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7ea796c77e5047c78acff41829be70aa.html "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.") :arrow_upper_right:
+[TIMESTAMP_RTRUNCATION Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/7ea796c77e5047c78acff41829be70aa.html "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.") :arrow_upper_right:
 

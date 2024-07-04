@@ -35,7 +35,7 @@ BINARY
 Binary data of a specified maximum *<length\>* in bytes.
 
 ```
-BINARY [ ( <length> ) ];
+BINARY [ ( <length> ) ]
 ```
 
 If *<length\>* is omitted, then the default is 1 byte. The maximum size allowed is 32,767 bytes.
@@ -155,7 +155,7 @@ VARBINARY
 Binary data up to a specified *<max-length\>* in bytes.
 
 ```
-VARBINARY [ ( <length> ) ];
+VARBINARY [ ( <length> ) ]
 ```
 
 If *<length\>* is omitted, then the default is 1 byte. The maximum size allowed is \(32 K – 1\) bytes. Use the variable-length binary type VARBINARY for data that is expected to vary greatly in length.
@@ -316,5 +316,5 @@ The CONVERT function uses little-endian semantics in data lake Relational Engine
 **Related Information**  
 
 
-[Binary Data Types in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/c50b5a76f7684960a88e942bd46d6221.html "Use binary data types for storing raw binary data, such as pictures, in a hexadecimal-like notation.") :arrow_upper_right:
+[Binary Data Types in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/c50b5a76f7684960a88e942bd46d6221.html "Use binary data types for storing raw binary data, such as pictures, in a hexadecimal-like notation.") :arrow_upper_right:
 

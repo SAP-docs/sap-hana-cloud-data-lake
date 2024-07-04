@@ -26,7 +26,7 @@ DROP VARIABLE con_var
 
 <a name="loioa50e731a84f21015928ca9f6e50336cc__iq_refbb_139"/>
 
-## Example
+## Examples
 
 The following batch of SQL statements illustrates the use of connection-level variables:
 

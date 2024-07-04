@@ -72,7 +72,7 @@ An error is returned if a BINARY or VARBINARY value exceeds 8 bytes and a CHAR o
 
 <a name="loioa55548d184f21015b2d58684e0bb094a__HEXTOBIGINT_example1"/>
 
-## Example
+## Examples
 
 The following statements return the value 4294967287:
 
@@ -93,5 +93,5 @@ SELECT HEXTOBIGINT ( 'fffffff7' ) FROM iq_dummy;
 
 [CONVERSION\_ERROR Option \[TSQL\] for Data Lake Relational Engine](../090-database-options/conversion-error-option-tsql-for-data-lake-relational-engine-a63018a.md "Controls reporting of data type conversion failures on fetching information from the database.")
 
-[HEXTOBIGINT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/afd4faa8d87d4e4c90a0159fb250d01d.html "Returns the BIGINT equivalent of a hexadecimal string.") :arrow_upper_right:
+[HEXTOBIGINT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/afd4faa8d87d4e4c90a0159fb250d01d.html "Returns the BIGINT equivalent of a hexadecimal string.") :arrow_upper_right:
 

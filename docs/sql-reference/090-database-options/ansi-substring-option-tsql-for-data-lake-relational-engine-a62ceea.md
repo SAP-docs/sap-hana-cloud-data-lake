@@ -142,7 +142,7 @@ Avoid using non-positive start offsets or negative lengths with the SUBSTRING fu
 
 <a name="loioa62ceea984f210159d1a91e2823fa668__iq_refso_343"/>
 
-## Example
+## Examples
 
 These examples show the difference in the values returned by the SUBSTRING function based on the setting of the ANSI\_SUBSTRING option:
 

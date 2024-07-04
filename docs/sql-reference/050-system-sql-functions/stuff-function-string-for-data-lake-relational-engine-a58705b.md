@@ -100,7 +100,7 @@ The `STUFF` function will return a NULL result in the following situations:
 
 <a name="loioa58705b984f21015b314be7887f1392a__STUFF_example1"/>
 
-## Example
+## Examples
 
 The following statement returns the value “chocolate pie”:
 
@@ -116,5 +116,5 @@ FROM iq_dummy;
 
 [REPLACE Function \[String\] for Data Lake Relational Engine](replace-function-string-for-data-lake-relational-engine-a579952.md "Replaces all occurrences of a substring with another substring.")
 
-[STUFF Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/61e8de5f839d426fb531c723d03acddb.html "Deletes a number of characters from one string and replaces them with another string.") :arrow_upper_right:
+[STUFF Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/61e8de5f839d426fb531c723d03acddb.html "Deletes a number of characters from one string and replaces them with another string.") :arrow_upper_right:
 

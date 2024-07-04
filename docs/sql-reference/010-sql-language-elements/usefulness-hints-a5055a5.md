@@ -10,7 +10,7 @@ The value for a usefulness hint can be any numeric value between 0.0 and 10.0. W
 
 <a name="loioa5055a5684f21015995cabd277d60373__iq_refbb_118"/>
 
-## Example
+## Examples
 
 The following example shows a condition hint string that indicates that the condition should be moved into the “Delayed” phase of execution, and that its usefulness should be set to 3.25 within that “Delayed” phase:
 

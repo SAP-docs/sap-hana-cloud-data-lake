@@ -182,7 +182,7 @@ The value extraction from a path segments happens in the following steps:
 
 Note that using a DATE, TIME, or TIMESTAMP format cannot be configured for `FROM DIRECTORY` mapped columns. The default values always apply.
 
-See [Structuring a Data Lake Files Folder Hierarchy for Big Data](https://help.sap.com/viewer/3ef213750ce94aac885ac4fc54ea212f/2024_1_QRC/en-US/c712a4dff1ad429cad9a2a3e42336e42.html "Structure data for optimal performance by understanding how SQL on Files tables handle predicates.") :arrow_upper_right: for further examples and guidance on how to use `FROM DIRECTORY` mapping effectively.
+See [Structuring a Data Lake Files Folder Hierarchy for Big Data](https://help.sap.com/viewer/3ef213750ce94aac885ac4fc54ea212f/2024_3_QRC/en-US/c712a4dff1ad429cad9a2a3e42336e42.html "Structure data for optimal performance by understanding how SQL on Files tables handle predicates.") :arrow_upper_right: for further examples and guidance on how to use `FROM DIRECTORY` mapping effectively.
 
 
 
@@ -859,5 +859,5 @@ ALTER TABLE external_schema.external_table IN FILES_SERVICE ADD DATASOURCE
 
 [ALTER \(Remote\) TABLE DROP DATASOURCE Statement for Data Lake Relational Engine \[SQL on Files\]](alter-remote-table-drop-datasource-statement-for-data-lake-relational-engine-sql-on-files-a9da29f.md "Remove a data source from a SQL on Files table.")
 
-[ALTER (Remote) TABLE ADD DATASOURCE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/e6e7243b09c34d48adf387e96f43c014.html "Attach an external data source, such as a file or directory, to a SQL on Files remote table.") :arrow_upper_right:
+[ALTER (Remote) TABLE ADD DATASOURCE Statement for Data Lake Relational Engine (SAP HANA DB-Managed) \[SQL on Files\]](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/e6e7243b09c34d48adf387e96f43c014.html "Attach an external data source, such as a file or directory, to a SQL on Files remote table.") :arrow_upper_right:
 

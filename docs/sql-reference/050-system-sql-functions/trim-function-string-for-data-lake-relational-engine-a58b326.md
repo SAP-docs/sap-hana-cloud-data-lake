@@ -63,7 +63,7 @@ Trimmed string.
 
 <a name="loioa58b326684f210158b01c6a84254a2f2__TRIM_examples1"/>
 
-## Example
+## Examples
 
 The following statement removes all leading and trailing `a` and `b` characters from the given string and returns the value `END`.
 
@@ -78,5 +78,5 @@ SELECT TRIM ('babababENDbababa','ab') "trim" FROM iq_dummy;
 
 [RTRIM Function \[String\] for Data Lake Relational Engine](rtrim-function-string-for-data-lake-relational-engine-a57d411.md "Returns a string, trimmed of all the trailing characters present in the trim character set.")
 
-[TRIM Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/d07890fd143c474c99313bda01aae897.html "Returns a string, trimmed of all the leading and trailing characters present in the trim character set.") :arrow_upper_right:
+[TRIM Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/d07890fd143c474c99313bda01aae897.html "Returns a string, trimmed of all the leading and trailing characters present in the trim character set.") :arrow_upper_right:
 

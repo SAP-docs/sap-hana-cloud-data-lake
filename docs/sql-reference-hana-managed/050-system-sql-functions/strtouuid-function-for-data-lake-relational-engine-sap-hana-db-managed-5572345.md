@@ -63,7 +63,7 @@ You can use `STRTOUUID` to insert UUID values into a data lake Relational Engine
 
 <a name="loio5572345aa04d4c2fbd9b9589ed18e296__section_hdk_ks5_vrb"/>
 
-## Example
+## Examples
 
 ```
 CREATE TABLE T (
@@ -77,5 +77,5 @@ INSERT INTO T (pk, c1)
 **Related Information**  
 
 
-[STRTOUUID Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a58683c184f21015bb5cb68f114bbcb9.html "Converts a string value to a unique identifier (UUID or GUID) value.") :arrow_upper_right:
+[STRTOUUID Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a58683c184f21015bb5cb68f114bbcb9.html "Converts a string value to a unique identifier (UUID or GUID) value.") :arrow_upper_right:
 

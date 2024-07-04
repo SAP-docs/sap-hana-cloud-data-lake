@@ -68,7 +68,7 @@ Syntax 3
 
 ```
 INSERT [ INTO ] [ <schema-name>.]<table-name>[ ( <column-name> [, …] ) ]
-    ... <insert-select-load-options> <insert-select-load-options>
+    ... <insert-load-options> <insert-select-load-options>
     ... LOCATION '<servername.dbname>' [ <location-options> ]
    ... { <select-statement> | '<select statement>' }
 ```
@@ -305,7 +305,7 @@ Specifies an isolation level for the connection to a remote server. The levels a
 > ### Note:  
 > The NUMBER\(\*\) function is useful for generating primary keys with Syntax 2 of the INSERT statement.
 
-**Syntax 3** - INSERT...LOCATION is a variation of Syntax 2 that allows you to insert data from an SAP Adaptive Server Enterprisedata lake Relational Engine or data lake Relational Engine database. The *<servername.dbname\>* specified in the LOCATION clause identifies the remote server and database for the table in the FROM clause.
+**Syntax 3** - INSERT...LOCATION is a variation of Syntax 2 that allows you to insert data from an SAP Adaptive Server Enterprise or data lake Relational Engine database. The *<servername.dbname\>* specified in the LOCATION clause identifies the remote server and database for the table in the FROM clause.
 
 In data lake Relational Engine, a timestamp data type column can support 6 or 7 decimal precision. See [TIMESTAMP Data Type Precision in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-sap-hana-db-managed-5cbca14.md). If you attempt to insert 7 decimal precision data into a 6 decimal precision column in the data lake Relational Engine, then the value will be truncated to 6 decimal places and precision is lost. To prevent this behavior, set the TIMESTAMP\_RTRUNCATION database option to ON. See [TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-sap-hana-db-managed-7ea796c.md). When enabled, the INSERT operation fails if precision will be lost on a timestamp column.
 
@@ -431,7 +431,5 @@ Requires one of:
 **Related Information**  
 
 
-[TIMESTAMP Data Type Precision in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-sap-hana-db-managed-5cbca14.md "Precision conflicts between TIMESTAMP data types result in data loss.")
-
-[INSERT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a61fdeff84f21015aa66b9add387d7f9.html "Inserts a single row or a selection of rows, from elsewhere in the current database, into the table. This command can also insert a selection of rows from another database into the table.") :arrow_upper_right:
+[INSERT Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a61fdeff84f21015aa66b9add387d7f9.html "Inserts a single row or a selection of rows, from elsewhere in the current database, into the table. This command can also insert a selection of rows from another database into the table.") :arrow_upper_right:
 

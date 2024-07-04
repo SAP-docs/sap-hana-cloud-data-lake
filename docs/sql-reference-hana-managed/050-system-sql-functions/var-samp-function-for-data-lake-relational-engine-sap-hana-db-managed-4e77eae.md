@@ -70,7 +70,7 @@ Variances are computed according to the following formula, which assumes a norma
 
 <a name="loio4e77eae4118f432c95bd09f867eb3f06__section_y4g_qfv_vrb"/>
 
-## Example
+## Examples
 
 The following statement lists the average and variance in the number of items per order in different time periods:
 
@@ -177,5 +177,5 @@ Variance
 **Related Information**  
 
 
-[VAR_SAMP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a58f41a384f2101582a6bccb68243889.html "Computes the statistical variance of a sample consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
+[VAR_SAMP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a58f41a384f2101582a6bccb68243889.html "Computes the statistical variance of a sample consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
 

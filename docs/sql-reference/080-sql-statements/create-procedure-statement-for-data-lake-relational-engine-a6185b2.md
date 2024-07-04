@@ -398,5 +398,5 @@ Automatic commit
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[CREATE PROCEDURE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/d172ce3def5648e299ecb61779eab7da.html "Creates a new user-defined SQL procedure in the database.") :arrow_upper_right:
+[CREATE PROCEDURE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/d172ce3def5648e299ecb61779eab7da.html "Creates a new user-defined SQL procedure in the database.") :arrow_upper_right:
 

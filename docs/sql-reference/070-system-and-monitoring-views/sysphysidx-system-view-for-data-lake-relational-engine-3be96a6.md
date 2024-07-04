@@ -244,5 +244,5 @@ For system use only.
 **Related Information**  
 
 
-[SYSPHYSIDX System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/081b45f1908b4c548c200032f5d7123f.html "Each row in the SYSPHYSIDX system view defines a physical index in the database. The underlying system table for this view is ISYSPHYSIDX.") :arrow_upper_right:
+[SYSPHYSIDX System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/081b45f1908b4c548c200032f5d7123f.html "Each row in the SYSPHYSIDX system view defines a physical index in the database. The underlying system table for this view is ISYSPHYSIDX.") :arrow_upper_right:
 

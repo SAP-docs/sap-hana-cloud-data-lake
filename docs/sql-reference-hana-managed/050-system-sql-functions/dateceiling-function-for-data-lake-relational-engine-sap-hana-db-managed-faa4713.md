@@ -229,5 +229,5 @@ If data lake Relational Engine rounds to a multiple of the week date part, the d
 **Related Information**  
 
 
-[DATECEILING Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a545210684f21015bfabb0f3f2ce3eae.html "Calculates a new date, time, or datetime value by increasing the provided value up to the nearest larger value of the specified granularity.") :arrow_upper_right:
+[DATECEILING Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a545210684f21015bfabb0f3f2ce3eae.html "Calculates a new date, time, or datetime value by increasing the provided value up to the nearest larger value of the specified granularity.") :arrow_upper_right:
 

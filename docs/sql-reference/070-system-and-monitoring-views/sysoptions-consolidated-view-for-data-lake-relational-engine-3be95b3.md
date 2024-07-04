@@ -28,5 +28,5 @@ ALTER VIEW "SYS"."SYSOPTIONS"( user_name,"option",setting )
 **Related Information**  
 
 
-[SYSOPTIONS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/dba073ed1197467fba29d62c6e157c85.html "Each row in the SYSOPTIONS view describes one option created using the SET command. Each user can have their own setting for each option. In addition, settings for the PUBLIC user define the default settings to be used for users that do not have their own setting.") :arrow_upper_right:
+[SYSOPTIONS System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/dba073ed1197467fba29d62c6e157c85.html "Each row in the SYSOPTIONS view describes one option created using the SET command. Each user can have their own setting for each option. In addition, settings for the PUBLIC user define the default settings to be used for users that do not have their own setting.") :arrow_upper_right:
 

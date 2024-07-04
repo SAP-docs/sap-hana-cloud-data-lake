@@ -52,7 +52,7 @@ DOUBLE
 
 <a name="loio68228a301678465d9f7020fc48a58d73__section_lbz_4w5_vrb"/>
 
-## Example
+## Examples
 
 The following statement returns the value 3:
 
@@ -63,5 +63,5 @@ SELECT SQRT( 9 ) FROM iq_dummy;
 **Related Information**  
 
 
-[SQRT Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5826d0c84f210159ad8a785b1b1ac0b.html "Returns the square root of a number.") :arrow_upper_right:
+[SQRT Function \[Numeric\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a5826d0c84f210159ad8a785b1b1ac0b.html "Returns the square root of a number.") :arrow_upper_right:
 

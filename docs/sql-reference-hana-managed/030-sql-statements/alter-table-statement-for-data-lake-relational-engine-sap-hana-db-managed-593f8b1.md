@@ -64,7 +64,7 @@ Adds a new column or column constraint to the table object.
 ```
 <create-column> ::= 
    <column-name> <column-definition> [ <column-constraint> ]
-   | <table-constraint>;
+   | <table-constraint>
 ```
 
 
@@ -82,7 +82,7 @@ Defines a table column. Two columns in the same table cannot have the same name.
 <column definition> ::= 
    <data-type> [ NOT NULL | NULL  ] 
     [ IN <dbspace-name> ] 
-    [ DEFAULT <default-value> | IDENTITY ];
+    [ DEFAULT <default-value> | IDENTITY ]
 ```
 
 
@@ -119,7 +119,7 @@ Specifies a default value to be assigned to the column if an INSERT statement do
    | NULL 
    | TIMESTAMP 
    | LAST USER 
-   | USER;
+   | USER
 ```
 
 
@@ -178,7 +178,7 @@ Changes the column definition.
 <column-alteration> ::= 
    { <column-data-type> | <alterable-column-attribute> } [ <alterable-column-attribute> … ]  
     | ADD [ CONSTRAINT[ <constraint-name> ] CHECK ( <condition> )  
-    | DROP { DEFAULT | CHECK | CONSTRAINT <constraint-name> };
+    | DROP { DEFAULT | CHECK | CONSTRAINT <constraint-name> }
 ```
 
 ```
@@ -186,7 +186,7 @@ Changes the column definition.
    [ NOT ] NULL 
    | DEFAULT <default-value>  
    | [ CONSTRAINT <constraint-name> ] CHECK { NULL | ( <condition> ) 
-     };
+     }
 ```
 
 
@@ -277,7 +277,7 @@ Drops a table object.
    | UNIQUE ( <index-columns-list> )  
    | PRIMARY KEY 
    | FOREIGN KEY <fkey-name>
-   | { PARTITION | SUBPARTITION } <range-partition-name>;
+   | { PARTITION | SUBPARTITION } <range-partition-name>
 ```
 
 
@@ -387,7 +387,7 @@ Renames an object in the table.
    <new-table-name>  
    | <column-name> TO <new-column-name>   
    | CONSTRAINT <constraint-name> TO <new-constraint-name> 
-   | { PARTITION | SUBPARTITION } <range-partition-name> TO <new-range-partition-name>;
+   | { PARTITION | SUBPARTITION } <range-partition-name> TO <new-range-partition-name>
 ```
 
 
@@ -461,7 +461,7 @@ Splits an existing range partition or subpartition.
 
 ```
 <split-object> ::= <range-partition-decl> 
-        INTO ( <range-partition-decl>, <range-partition-decl> );
+        INTO ( <range-partition-decl>, <range-partition-decl> )
 ```
 
 When splitting a partition or subpartition, the names of the new partitions must be unique and cannot include the name of the original partition. All data from the original partition must fit into only one of the resulting partitions. Data cannot move between partitions.
@@ -548,7 +548,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 
 ```
 <range-partitioning-scheme> ::=
-   RANGE ( <column_name> ) ( <range-partition-decl> [,...] );
+   RANGE ( <column_name> ) ( <range-partition-decl> [,...] )
 ```
 
 
@@ -562,7 +562,7 @@ Partitions rows by a range of values in the partitioning column. Range partition
 
 ```
 <range-partition-decl> ::=
-   <partition-name> VALUES <= ( { <constant-expression> | MAX } [,...] );
+   <partition-name> VALUES <= ( { <constant-expression> | MAX } [,...] )
 ```
 
 
@@ -661,14 +661,14 @@ Maps data to partitions based on partition-key values processed by an internal h
 
 ```
 <hash-partitioning-scheme> ::=
-   HASH ( <column_name> [,... ] );
+   HASH ( <column_name> [,... ] )
 ```
 
 In a hash-partitioning declaration, the partition-key is a column or group of columns, whose composite value determines the partition where each row of data is stored:
 
 ```
 hash-partitioning-scheme: 
-  HASH  ( <partition-key> [ , <partition-key>, … ] );
+  HASH  ( <partition-key> [ , <partition-key>, … ] )
 ```
 
 Restrictions:
@@ -691,7 +691,7 @@ Maps data to partitions based on partition-key values processed by an internal h
 ```
 <hash-range-partitioning-scheme> ::=
    PARTITION BY HASH  ( <column_name> [,... ] )
-    SUBPARTITION BY <range-partition-scheme>;
+    SUBPARTITION BY <range-partition-scheme>
 ```
 
 The hash partition specifies how the data is logically distributed and colocated; the range subpartition specifies how the data is physically placed. The new range subpartition is logically partitioned by hash with the same hash partition keys as the existing hash-range partitioned table. The range subpartition key is restricted to one column.
@@ -734,7 +734,7 @@ Subpartitions an existing hash-partition table.
 <dd>
 
 ```
-SUBPARTITION BY <range-partition-decl>;
+SUBPARTITION BY <range-partition-decl>
 ```
 
 Subpartitions on a range-partitioned table are not supported.
@@ -760,7 +760,7 @@ Subpartitions on a range-partitioned table are not supported.
 Adds a new partition to an existing range-partition table or a new subpartition to an existing hash range-partition table.
 
 ```
-ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>;
+ADD { PARTITION | SUBPARTITION } BY RANGE <range-partition-decl>
 ```
 
 The value of the *<range-partition-decl\>* must exceed the existing partition boundary. Only one partition or subpartition can be added per ADD clause. Use SPLIT PARTITION to add a range within the existing boundary.
@@ -1017,9 +1017,9 @@ To move a table between relational containers \(for example, from SYSHDL\_CONTAI
 
 [DROP TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-1e62d19.md "Removes a table from the database.")
 
-[Moving a Table Between Schemas and Relational Containers](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/7cc5b90e27e145aa9542a7a494bd61ef.html "Move a data lake Relational Engine physical table between schemas in the same relational container or between relational containers.") :arrow_upper_right:
+[Moving a Table Between Schemas and Relational Containers](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/7cc5b90e27e145aa9542a7a494bd61ef.html "Move a data lake Relational Engine physical table between schemas in the same relational container or between relational containers.") :arrow_upper_right:
 
 [Data Types Compatibility with SAP HANA Database for the CREATE TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](data-types-compatibility-with-sap-hana-database-for-the-create-table-statement-for-data-l-e77d888.md "The data lake Relational Engine CREATE TABLE statement lets you create a data lake Relational Engine physical table.")
 
-[ALTER TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/39f1ec0fd2c9451c8b64df54efe48a03.html "Modifies a table definition.") :arrow_upper_right:
+[ALTER TABLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/39f1ec0fd2c9451c8b64df54efe48a03.html "Modifies a table definition.") :arrow_upper_right:
 

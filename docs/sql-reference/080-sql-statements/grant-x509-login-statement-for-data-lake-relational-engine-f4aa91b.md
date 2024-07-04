@@ -43,7 +43,7 @@ GRANT X509 LOGIN TO { <external_identity> | ANY } FOR PROVIDER <x509_provider_na
 Specifies the external identity to map to the data lake Relational Engine user.
 
 ```
-<external_identity> ::= <string_literal>;
+<external_identity> ::= <string_literal>
 ```
 
 
@@ -58,7 +58,7 @@ Specifies the external identity to map to the data lake Relational Engine user.
 Specifies the existing X.509 provider to use for authentication.
 
 ```
-<x509_provider_name> ::= <simple_identifier>;
+<x509_provider_name> ::= <simple_identifier>
 ```
 
 
@@ -73,7 +73,7 @@ Specifies the existing X.509 provider to use for authentication.
 Specifies the existing data lake Relational Engine user to which the external identities are mapped.
 
 ```
-<userid> ::= <simple_identifier>;
+<userid> ::= <simple_identifier>
 ```
 
 

@@ -152,7 +152,7 @@ SET OPTION RESERVED_KEYWORDS = 'LIMIT';
 
 You cannot turn on the keywords SET, OPTION, and OPTIONS. The following determine whether a word is identified as a keyword \(in order of precedence\):
 
--   It appears in the SAP SQL Anywhere list of reserved words
+-   It appears in the data lake Relational Engine list of reserved words
 -   It is turned on with the RESERVED\_KEYWORDS option
 -   It is turned off with the NON\_KEYWORDS option
 
@@ -173,5 +173,5 @@ SET OPTION RESERVED_KEYWORDS = ;
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[RESERVED_KEYWORDS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/991b4fb75bed4696885132f2c32419be.html "Turns on individual keywords that are disabled by default.") :arrow_upper_right:
+[RESERVED_KEYWORDS Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/991b4fb75bed4696885132f2c32419be.html "Turns on individual keywords that are disabled by default.") :arrow_upper_right:
 

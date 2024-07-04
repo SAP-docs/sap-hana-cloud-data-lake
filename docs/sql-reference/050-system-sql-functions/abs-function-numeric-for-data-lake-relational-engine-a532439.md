@@ -116,7 +116,7 @@ NUMERIC
 
 <a name="loioa532439384f21015be5cb176f7ecbae4__ABS_examples1"/>
 
-## Example
+## Examples
 
 The following statement returns the value 66:
 
@@ -127,5 +127,5 @@ SELECT ABS( -66 ) FROM iq_dummy;
 **Related Information**  
 
 
-[ABS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/45f984dcb7e440c4b082a7ef7662f923.html "Returns the absolute value of a numeric expression.") :arrow_upper_right:
+[ABS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/45f984dcb7e440c4b082a7ef7662f923.html "Returns the absolute value of a numeric expression.") :arrow_upper_right:
 

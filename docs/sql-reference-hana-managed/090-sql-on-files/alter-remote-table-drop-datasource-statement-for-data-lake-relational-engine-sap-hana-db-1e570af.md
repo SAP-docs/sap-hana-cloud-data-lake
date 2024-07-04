@@ -103,5 +103,5 @@ ALTER TABLE ExternalSchema1.ExternalTable1 IN FILES_SERVICE
 
 [ALTER \(Remote\) TABLE ADD DATASOURCE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\) \[SQL on Files\]](alter-remote-table-add-datasource-statement-for-data-lake-relational-engine-sap-hana-db-m-e6e7243.md "Attach an external data source, such as a file or directory, to a SQL on Files remote table.")
 
-[ALTER (Remote) TABLE DROP DATASOURCE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a9da29fdd7a141eea66117b22cca84c7.html "Remove a data source from a SQL on Files table.") :arrow_upper_right:
+[ALTER (Remote) TABLE DROP DATASOURCE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a9da29fdd7a141eea66117b22cca84c7.html "Remove a data source from a SQL on Files table.") :arrow_upper_right:
 

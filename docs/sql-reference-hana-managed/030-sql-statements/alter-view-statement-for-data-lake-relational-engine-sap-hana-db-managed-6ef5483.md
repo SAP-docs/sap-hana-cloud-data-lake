@@ -214,5 +214,5 @@ ALTER VIRTUAL TABLE SYSHDL_CONTAINER1.V_VIEW_T1 REFRESH DEFINITION;
 
 [DROP VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-3c389d9.md "Removes a view from the database.")
 
-[ALTER VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a613cd2484f2101580a1c565befd8049.html "Replaces a view definition with a modified version.") :arrow_upper_right:
+[ALTER VIEW Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a613cd2484f2101580a1c565befd8049.html "Replaces a view definition with a modified version.") :arrow_upper_right:
 

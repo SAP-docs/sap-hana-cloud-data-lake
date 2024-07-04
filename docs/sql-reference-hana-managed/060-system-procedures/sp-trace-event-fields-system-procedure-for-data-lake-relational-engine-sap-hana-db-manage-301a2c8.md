@@ -200,7 +200,7 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   MANAGE ANY TRACE SESSION system privilege
 -   MANAGE AUDITING system privilege
 
@@ -221,7 +221,7 @@ None.
 
 ## Examples
 
-This statement returns information about the fields for all trace event sessions in the database:
+This example returns information about the fields for all trace event sessions in the database:
 
 ```
 CALL sp_trace_event_fields( );
@@ -474,7 +474,7 @@ conn\_id
 </tr>
 </table>
 
-This statement returns information about the fields for the trace event SYS\_RLL\_ReqStatementDrop:
+This example returns information about the fields for the trace event SYS\_RLL\_ReqStatementDrop:
 
 ```
 CALL sp_trace_event_fields('SYS_RLL_ReqStatementDrop');
@@ -568,5 +568,5 @@ NULL
 **Related Information**  
 
 
-[sp_trace_event_fields System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8179a2a56ce210148a18fd12322fa8f2.html "Returns information about the fields of the specified trace event.") :arrow_upper_right:
+[sp_trace_event_fields System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/8179a2a56ce210148a18fd12322fa8f2.html "Returns information about the fields of the specified trace event.") :arrow_upper_right:
 

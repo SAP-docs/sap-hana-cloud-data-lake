@@ -90,7 +90,7 @@ Buckets are numbered from 0 to \(n+1\). Bucket 0 holds the count of values less 
 
 <a name="loioa591658384f21015a3a2e821679c9000__WIDTH_BUCKET_examples1"/>
 
-## Example
+## Examples
 
 The following example creates a 10-bucket histogram on the `credit_limit` column for customers in Massachusetts in the sample table and returns the bucket number \(“Credit Group”\) for each customer. Customers with credit limits greater than the maximum value are assigned to the overflow bucket, 11:
 
@@ -117,5 +117,5 @@ When the bounds are reversed, the buckets are open-closed intervals. For example
 **Related Information**  
 
 
-[WIDTH_BUCKET Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/69892e4fa52c4ad885c269d8009f06c3.html "For a given expression, the WIDTH_BUCKET function returns the bucket number that the result of this expression will be assigned after it is evaluated.") :arrow_upper_right:
+[WIDTH_BUCKET Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/69892e4fa52c4ad885c269d8009f06c3.html "For a given expression, the WIDTH_BUCKET function returns the bucket number that the result of this expression will be assigned after it is evaluated.") :arrow_upper_right:
 

@@ -152,7 +152,12 @@ This procedure returns a table with a list of errors that prevents the specified
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure, along with one of the following:
+Requires all of the following:
+
+-   EXECUTE object-level privilege on this procedure
+-   ALTER ANY MATERIALIZED VIEW system privilege
+
+You also require one of the following:
 
 -   You own the underlying table of the view
 -   SELECT ANY TABLE system privilege
@@ -212,11 +217,11 @@ The materialized view mv1 cannot be changed to incremental or immediate because 
 
 [sa\_refresh\_materialized\_views System Procedure for Data Lake Relational Engine](sa-refresh-materialized-views-system-procedure-for-data-lake-relational-engine-8176eeb.md "Initializes all materialized views that are in an uninitialized state.")
 
-[sp\_iqmaterializedviewstaleness Procedure for Data Lake Relational Engine](sp-iqmaterializedviewstaleness-procedure-for-data-lake-relational-engine-a762f3b.md "Displays staleness information about the visible version of a materialized view.")
+[sp\_iqmaterializedviewstaleness System Procedure for Data Lake Relational Engine](sp-iqmaterializedviewstaleness-system-procedure-for-data-lake-relational-engine-a762f3b.md "Displays staleness information about the visible version of a materialized view.")
 
 [CREATE MATERIALIZED VIEW Statement for Data Lake Relational Engine](../080-sql-statements/create-materialized-view-statement-for-data-lake-relational-engine-d5c757e.md "Creates a materialized view.")
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine](../080-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-faab95d.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_materialized_view_can_have_refresh_build_type System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/46d97724fd354bb68d1c4081bd2576b0.html "Checks whether the materialized view supports the specified refresh and build type properties.") :arrow_upper_right:
+[sa_materialized_view_can_have_refresh_build_type System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/46d97724fd354bb68d1c4081bd2576b0.html "Checks whether the materialized view supports the specified refresh and build type properties.") :arrow_upper_right:
 

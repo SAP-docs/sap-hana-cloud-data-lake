@@ -80,5 +80,5 @@ CHAR returns NULL for integer expressions with values greater than 255 or less t
 **Related Information**  
 
 
-[CHAR function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a53b50f084f210159a74ba4e4e50f914.html "Returns the character with the ASCII value of a number.") :arrow_upper_right:
+[CHAR function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a53b50f084f210159a74ba4e4e50f914.html "Returns the character with the ASCII value of a number.") :arrow_upper_right:
 

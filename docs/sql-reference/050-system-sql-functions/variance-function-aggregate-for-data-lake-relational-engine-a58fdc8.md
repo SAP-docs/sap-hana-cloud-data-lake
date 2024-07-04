@@ -209,5 +209,5 @@ The formula used to calculate `VARIANCE` is
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[VARIANCE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/974f709b109d4fb1bfe049dc4b05d7de.html "Returns the variance of a set of numbers.") :arrow_upper_right:
+[VARIANCE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/974f709b109d4fb1bfe049dc4b05d7de.html "Returns the variance of a set of numbers.") :arrow_upper_right:
 

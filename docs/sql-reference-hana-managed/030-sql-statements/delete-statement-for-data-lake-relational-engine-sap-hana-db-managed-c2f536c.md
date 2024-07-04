@@ -185,5 +185,5 @@ Requires one of:
 **Related Information**  
 
 
-[DELETE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a61b555884f21015bfb8d2d61d09b74c.html "Deletes all the rows from the named table that satisfy the search condition. If no WHERE clause is specified, all rows from the named table are deleted.") :arrow_upper_right:
+[DELETE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a61b555884f21015bfb8d2d61d09b74c.html "Deletes all the rows from the named table that satisfy the search condition. If no WHERE clause is specified, all rows from the named table are deleted.") :arrow_upper_right:
 

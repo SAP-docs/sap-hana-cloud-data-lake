@@ -383,5 +383,5 @@ Not in the standard.
 **Related Information**  
 
 
-[ENCRYPT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/81f72ceb6ce210149256a7523672a8bb.html "Encrypts the specified value using the supplied encryption key and returns a LONG BINARY value.") :arrow_upper_right:
+[ENCRYPT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/81f72ceb6ce210149256a7523672a8bb.html "Encrypts the specified value using the supplied encryption key and returns a LONG BINARY value.") :arrow_upper_right:
 

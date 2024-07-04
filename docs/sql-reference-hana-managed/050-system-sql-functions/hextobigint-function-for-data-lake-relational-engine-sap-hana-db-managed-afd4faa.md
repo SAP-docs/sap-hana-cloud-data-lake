@@ -72,7 +72,7 @@ An error is returned if a BINARY or VARBINARY value exceeds 8 bytes and a CHAR o
 
 <a name="loioafd4faa8d87d4e4c90a0159fb250d01d__section_rq1_tpg_trb"/>
 
-## Example
+## Examples
 
 The following statements return the value 4294967287:
 
@@ -91,5 +91,5 @@ SELECT HEXTOBIGINT ( 'fffffff7' ) FROM iq_dummy;
 **Related Information**  
 
 
-[HEXTOBIGINT Function \[Data Type Conversion\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a55548d184f21015b2d58684e0bb094a.html "Returns the BIGINT equivalent of a hexadecimal string.") :arrow_upper_right:
+[HEXTOBIGINT Function \[Data Type Conversion\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a55548d184f21015b2d58684e0bb094a.html "Returns the BIGINT equivalent of a hexadecimal string.") :arrow_upper_right:
 

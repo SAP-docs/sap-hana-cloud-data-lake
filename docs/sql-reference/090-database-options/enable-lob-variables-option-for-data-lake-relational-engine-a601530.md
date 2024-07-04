@@ -142,7 +142,7 @@ When ENABLE\_LOB\_VARIABLES is ON, large object variables of any size retain the
 
 <a name="loioa601530984f21015b564e47a01f5fe91__iq_iquda_145"/>
 
-## Example
+## Examples
 
 Retain the data type and size of large object variables greater than 32 KB:
 

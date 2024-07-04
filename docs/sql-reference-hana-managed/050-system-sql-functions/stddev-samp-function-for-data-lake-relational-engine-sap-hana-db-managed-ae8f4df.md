@@ -70,7 +70,7 @@ Standard deviations are computed according to the following formula, which assum
 
 <a name="loioae8f4df1cf8d477e881f9e3360210ae0__section_mrg_l55_vrb"/>
 
-## Example
+## Examples
 
 The following statement lists the average and variance in the number of items per order in different time periods:
 
@@ -177,5 +177,5 @@ Variance
 **Related Information**  
 
 
-[STDDEV_SAMP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a584728f84f210158226d1181b68d335.html "Computes the standard deviation of a sample consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
+[STDDEV_SAMP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a584728f84f210158226d1181b68d335.html "Computes the standard deviation of a sample consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
 

@@ -95,7 +95,7 @@ Returns a string. The current database is used if the second argument is omitted
 
 <a name="loioa54c05bf84f210159e15ebbba6819ce4__iq_refbb_482"/>
 
-## Example
+## Examples
 
 The following statement returns the page size of the current database, in bytes:
 

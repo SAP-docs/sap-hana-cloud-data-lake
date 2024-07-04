@@ -52,7 +52,7 @@ In an `UPDATE` statement, if the `NUMBER (*)` function is used in the `SET` clau
 
 <a name="loio473f30fba028466f85cbeb5397f95320__section_h2m_vmn_vrb"/>
 
-## Example
+## Examples
 
 This statement returns the following numbered list:
 
@@ -111,5 +111,5 @@ WHERE DepartmentID > 10;
 **Related Information**  
 
 
-[NUMBER Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a56a888784f21015bbaed2c2a214738e.html "Generates numbers starting at 1 for each successive row in the results of the query.") :arrow_upper_right:
+[NUMBER Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a56a888784f21015bbaed2c2a214738e.html "Generates numbers starting at 1 for each successive row in the results of the query.") :arrow_upper_right:
 

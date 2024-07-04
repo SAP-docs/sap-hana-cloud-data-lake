@@ -103,7 +103,7 @@ The default value of *<default\>* is NULL. The data type of *<default\>* must be
 
 <a name="loio0561e5415d37410b837052f20b4239b9__section_xfy_tjh_trb"/>
 
-## Example
+## Examples
 
 The following example returns salary data from the Employees table, partitions the data by department ID, and orders the data according to employee start date. The LAG function returns the salary from the previous row \(a physical offset of one row\) and displays it under the LAG \(Salary\) column:
 
@@ -135,5 +135,5 @@ dID        StartDate    Salary      Lag(Salary)
 **Related Information**  
 
 
-[LAG Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a55b772a84f2101583fef0038bcd8bb0.html "An interrow function that returns the value of an attribute in a previous row in the table or table partition.") :arrow_upper_right:
+[LAG Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a55b772a84f2101583fef0038bcd8bb0.html "An interrow function that returns the value of an attribute in a previous row in the table or table partition.") :arrow_upper_right:
 

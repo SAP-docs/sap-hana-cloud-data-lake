@@ -18,10 +18,10 @@ This data lake Relational Engine procedure can be used when connected as follows
 
 ```
 sa_stack_trace(
-[ <stack_frames>
-[, <detail_level>
-[, <connection_id> ] ] ]
-)
+    [ <stack_frames>
+    [, <detail_level>
+    [, <connection_id> ] ] ]
+    )
 ```
 
 
@@ -249,11 +249,13 @@ Each record in the result set represents a single call on the stack. If the comp
 
 This function returns line numbers as found in the proc\_defn column of the SYSPROCEDURE system table for the procedure. These line numbers might differ from those of the source definition used to create the procedure.
 
+When this statement is executed outside of the context of a stored procedure, the result set is empty.
+
 
 
 ## Privileges
 
-You must have EXECUTE privilege on the system procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -263,7 +265,9 @@ None.
 
 
 
-## Example
+<a name="loio81777c8f6ce21014bdaf977b02167984__section_ypp_22w_4bc"/>
+
+## Examples
 
 This example shows how to obtain the result set columns from the sa\_stack\_trace system procedure:
 
@@ -271,9 +275,7 @@ This example shows how to obtain the result set columns from the sa\_stack\_trac
 SELECT StackLevel, UserName, ProcName, LineNumber FROM sa_stack_trace();
 ```
 
-When this statement is executed outside of the context of a stored procedure, the result set is empty.
-
-The following example shows the implementation of a general stack trace procedure that sends its results to the client window:
+This example shows the implementation of a general stack trace procedure that sends its results to the client window:
 
 ```
 CREATE OR REPLACE PROCEDURE StackDump( MSG CHAR(128) )
@@ -317,20 +319,21 @@ CREATE OR REPLACE PROCEDURE Proc3()
 BEGIN
     CALL StackDump('Snapshot from Proc3');
 END;
- 
-CALL Proc1();
-
 ```
 
-Results:
+To see the output, execute:
 
 ```
 CALL Proc1();
--- Stack Trace: Snapshot from Proc3
--- 1 DBA proc3 3 call StackDump('Snapshot from Proc3')
--- 2 DBA proc2 3 call Proc3()
--- 3 DBA proc1 3 call Proc2()
--- Procedure completed
+```
+
+```
+Statement: CALL HDLADMIN.proc1()
+Client elapsed time: 8.00 ms
+Stack Trace: Snapshot from Proc3
+1 DBA proc3 3 call StackDump('Snapshot from Proc3')
+2 DBA proc2 3 call Proc3()
+3 DBA proc1 3 call Proc2()
 ```
 
 **Related Information**  

@@ -139,9 +139,9 @@ No
 
 ## Remarks
 
-Auditing is the recording of details about many database events to the file container. Databases with auditing on can’t be started in read-only mode. If you require auditing for a larger set of auditing types than available in the DBO.SA\_ENABLE\_AUDITING\_TYPE system procedure, consider creating trace sessions instead.
+Auditing is the recording of details about many database events to the file container. Databases with auditing on can’t be started in read-only mode. If you require auditing for a larger set of auditing types than available in the SA\_ENABLE\_AUDITING\_TYPE system procedure, consider creating trace sessions instead.
 
-For the AUDITING option to work, you must set the auditing option to ON, and use the DBO.SA\_ENABLE\_AUDITING\_TYPE system procedure to indicate the types of information to audit, including any combination of permission checks, connection attempts, DDL statements, public options, triggers. Auditing won’t take place if either of these conditions is true:
+For the AUDITING option to work, you must set the auditing option to ON, and use the SA\_ENABLE\_AUDITING\_TYPE system procedure to indicate the types of information to audit, including any combination of permission checks, connection attempts, DDL statements, public options, triggers. Auditing won’t take place if either of these conditions is true:
 
 -   The AUDITING option is set to OFF
 -   Auditing options have been disabled.
@@ -163,7 +163,7 @@ SET OPTION PUBLIC.auditing = 'On';
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[AUDITING Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/05093562ca224fc2a9bbd3d9d587362c.html "Enables and disables auditing in the database.") :arrow_upper_right:
+[AUDITING Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/05093562ca224fc2a9bbd3d9d587362c.html "Enables and disables auditing in the database.") :arrow_upper_right:
 
-[Auditing Database Events](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/4c20fb59d0e848e09ffb191c9d2c0b16.html "Auditing tracks all of the activity performed on a data lake Relational Engine database.") :arrow_upper_right:
+[Auditing Database Events](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/4c20fb59d0e848e09ffb191c9d2c0b16.html "Auditing tracks all of the activity performed on a data lake Relational Engine database.") :arrow_upper_right:
 

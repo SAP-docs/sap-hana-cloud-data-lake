@@ -12,7 +12,7 @@ Specifies whether or not to include additional query information in the Query De
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user..
+-   Connected to SAP HANA database as a SAP HANA database user.
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -200,7 +200,7 @@ When QUERY\_PLAN is ON \(the default\), especially if QUERY\_DETAIL is also ON, 
 
 [QUERY\_PLAN\_AS\_HTML Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](query-plan-as-html-option-for-data-lake-relational-engine-sap-hana-db-managed-486458a.md "Generates graphical query plans in HTML format for viewing in a Web browser.")
 
-[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
+[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
 
-[QUERY_DETAIL Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a64c3ef384f21015ac76f94d8db150c5.html "Specifies whether or not to include additional query information in the Query Detail section of the query plan.") :arrow_upper_right:
+[QUERY_DETAIL Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a64c3ef384f21015ac76f94d8db150c5.html "Specifies whether or not to include additional query information in the Query Detail section of the query plan.") :arrow_upper_right:
 

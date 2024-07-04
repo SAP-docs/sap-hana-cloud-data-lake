@@ -68,7 +68,7 @@ The CHAR\_LENGTH function supports LONG VARCHAR columns and LONG VARCHAR variabl
 
 <a name="loioa53bd3d384f21015bcf88da636a1a768__CHAR_LENGTH_example1"/>
 
-## Example
+## Examples
 
 The following statement returns the value 8:
 
@@ -81,7 +81,7 @@ SELECT CHAR_LENGTH( 'Chemical' ) FROM iq_dummy;
 
 [String Functions in Data Lake Relational Engine](string-functions-in-data-lake-relational-engine-a52d1d9.md "String functions perform conversion, extraction, or manipulation operations on strings, or return information about strings.")
 
-[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
+[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_3_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
 
-[CHAR_LENGTH Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/c440e3a7627544838259dcfab11a5bd1.html "Returns the number of characters in a string.") :arrow_upper_right:
+[CHAR_LENGTH Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/c440e3a7627544838259dcfab11a5bd1.html "Returns the number of characters in a string.") :arrow_upper_right:
 

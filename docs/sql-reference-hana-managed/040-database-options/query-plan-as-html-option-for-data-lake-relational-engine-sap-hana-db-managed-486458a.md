@@ -12,7 +12,7 @@ Generates graphical query plans in HTML format for viewing in a Web browser.
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user..
+-   Connected to SAP HANA database as a SAP HANA database user.
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -202,7 +202,7 @@ This feature is supported with newer versions of many commonly used browsers. So
 
 [QUERY\_NAME Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](query-name-option-for-data-lake-relational-engine-sap-hana-db-managed-46c2fe6.md "Gives a name to an executed query in its query plan.")
 
-[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
+[Manage Database Options in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/964f12eb2961478b8205f5bfd8ee2ec6.html "Data lake Relational Engine database options are configurable settings that change the way the data lake Relational Engine instance behaves or performs.") :arrow_upper_right:
 
-[QUERY_PLAN_AS_HTML Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a64e45dd84f21015ac0fcd5c96f8f9af.html "Generates graphical query plans in HTML format for viewing in a Web browser.") :arrow_upper_right:
+[QUERY_PLAN_AS_HTML Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a64e45dd84f21015ac0fcd5c96f8f9af.html "Generates graphical query plans in HTML format for viewing in a Web browser.") :arrow_upper_right:
 

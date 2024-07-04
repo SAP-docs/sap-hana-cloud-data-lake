@@ -66,7 +66,7 @@ The `BYTE_LENGTH` function supports both `LONG BINARY` columns and variables and
 
 <a name="loioda0bd303497b4828b0c89f22e692a6c5__section_hsg_vfl_srb"/>
 
-## Example
+## Examples
 
 Returns the value 12:
 
@@ -77,5 +77,5 @@ SELECT BYTE_LENGTH( 'Test Message' ) FROM iq_dummy;
 **Related Information**  
 
 
-[BYTE_LENGTH Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a53816b784f210159b849878d71ab1a8.html "Returns the number of bytes in a string.") :arrow_upper_right:
+[BYTE_LENGTH Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a53816b784f210159b849878d71ab1a8.html "Returns the number of bytes in a string.") :arrow_upper_right:
 

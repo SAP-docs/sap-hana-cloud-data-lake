@@ -144,7 +144,6 @@ Automatic commit
 ## Standards
 
 -   SQL – vendor extension to ISO/ANSI SQL grammar
--   
 
 
 
@@ -186,5 +185,5 @@ Automatic commit
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
 
-[CREATE VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/4d411288dcae4da3a64d44865a0574e9.html "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.") :arrow_upper_right:
+[CREATE VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/4d411288dcae4da3a64d44865a0574e9.html "Creates a view on the database. Views are used to give a different perspective on the data even though it is not stored that way.") :arrow_upper_right:
 

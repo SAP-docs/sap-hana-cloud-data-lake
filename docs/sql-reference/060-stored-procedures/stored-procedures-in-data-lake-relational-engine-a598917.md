@@ -14,7 +14,7 @@ Data lake Relational Engine includes the following kinds of system procedures:
 **Related Information**  
 
 
-[sp\_iqsetcompression Procedure for Data Lake Relational Engine](sp-iqsetcompression-procedure-for-data-lake-relational-engine-a5fcfb3.md "Sets compression of data in columns of LONG BINARY (BLOB) and LONG VARCHAR (CLOB) data types.")
+[sp\_iqsetcompression System Procedure for Data Lake Relational Engine](sp-iqsetcompression-system-procedure-for-data-lake-relational-engine-a5fcfb3.md "Sets compression of data in columns of LONG BINARY (BLOB) and LONG VARCHAR (CLOB) data types.")
 
-[sp\_iqshowcompression Procedure for Data Lake Relational Engine](sp-iqshowcompression-procedure-for-data-lake-relational-engine-a5fd29b.md "Displays compression settings for columns of LONG BINARY (BLOB) and LONG VARCHAR (CLOB) data types.")
+[sp\_iqshowcompression System Procedure for Data Lake Relational Engine](sp-iqshowcompression-system-procedure-for-data-lake-relational-engine-a5fd29b.md "Displays compression settings for columns of LONG BINARY (BLOB) and LONG VARCHAR (CLOB) data types.")
 

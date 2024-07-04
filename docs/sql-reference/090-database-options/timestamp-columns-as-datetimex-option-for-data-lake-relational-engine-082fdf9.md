@@ -96,7 +96,8 @@ Privilege Category: SYSTEM
 
 ### 
 
-Requires the SET ANY CUSTOMER SYSTEM OPTION system privilege to set this database option.
+> ### Restriction:  
+> This option can only be set when directly connected as the HDLADMIN user.
 
 
 
@@ -203,7 +204,7 @@ SET OPTION PUBLIC.TIMESTAMP_COLUMNS_AS_DATETIMEX = { ON | OFF };
 
 [GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md "Grants specific system privileges to users or roles, with or without administrative rights.")
 
-[TIMESTAMP_COLUMNS_AS_DATETIMEX Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/34e354059097469d9864ff18b541f343.html "Controls whether DATETIMEX data type columns are automatically created when TIMESTAMPS data type columns are requested.") :arrow_upper_right:
+[TIMESTAMP_COLUMNS_AS_DATETIMEX Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/34e354059097469d9864ff18b541f343.html "Controls whether DATETIMEX data type columns are automatically created when TIMESTAMPS data type columns are requested.") :arrow_upper_right:
 
 [Date and Time Data Types in Data Lake Relational Engine](../020-sql-data-types/date-and-time-data-types-in-data-lake-relational-engine-a51e8fb.md "Use date and time data types for storing dates and times.")
 

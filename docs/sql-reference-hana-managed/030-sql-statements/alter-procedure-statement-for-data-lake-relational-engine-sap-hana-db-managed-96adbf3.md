@@ -163,7 +163,7 @@ Requires one of:
 -   ALTER ANY OBJECT system privilege
 -   ALTER object-level privilege on the schema containing the procedure if the schema is owned by another user.
 
-For information on using a procedure created when connected as a data lake Relational Engine user, see [User-Defined Procedures in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/44dbf05fa907437b9145f1541cdbb920.html "User-defined procedures perform one or more specific tasks in data lake Relational Engine.") :arrow_upper_right:.
+For information on using a procedure created when connected as a data lake Relational Engine user, see [User-Defined Procedures in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/44dbf05fa907437b9145f1541cdbb920.html "User-defined procedures perform one or more specific tasks in data lake Relational Engine.") :arrow_upper_right:.
 
 
 
@@ -186,5 +186,5 @@ For information on using a procedure created when connected as a data lake Relat
 
 [DROP PROCEDURE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-procedure-statement-for-data-lake-relational-engine-sap-hana-db-managed-86898fa.md "Removes a user-defined procedure from the database.")
 
-[ALTER PROCEDURE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a612e25a84f210158dbcdec111da3e96.html "Replaces an existing procedure with a modified version. Include the entire modified procedure in the ALTER PROCEDURE statement, and reassign user permissions on the procedure.") :arrow_upper_right:
+[ALTER PROCEDURE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a612e25a84f210158dbcdec111da3e96.html "Replaces an existing procedure with a modified version. Include the entire modified procedure in the ALTER PROCEDURE statement, and reassign user permissions on the procedure.") :arrow_upper_right:
 

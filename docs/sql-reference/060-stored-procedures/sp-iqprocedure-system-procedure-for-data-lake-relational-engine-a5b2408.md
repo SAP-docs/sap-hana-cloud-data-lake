@@ -320,7 +320,7 @@ The sp\_iqprocedure stored procedure displays information about procedures in a 
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
@@ -328,7 +328,7 @@ Requires EXECUTE object-level privilege on the procedure.
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -336,37 +336,243 @@ None
 
 ## Examples
 
--   Displays information about the user-defined procedure sp\_test:
+This example returns information about all user-defined procedures.
 
-    ```
-    sp_iqprocedure sp_test
-    ```
+```
+CALL sp_iqprocedure;
+```
 
-    ```
-    proc_name    proc_owner    proc_defn       replicate     srvid     remarks
-    
-    sp_test      DBA        create procedure   N             (NULL)    (NULL)
-                            DBA.sp_test(in n1
-                            integer)
-                            begin message'sp_test'end
-    ```
 
--   Displays information about all procedures owned by user HDLADMIN:
+<table>
+<tr>
+<th valign="top">
 
-    ```
-    sp_iqprocedure NULL, HDLADMIN;
-    ```
+proc\_name
 
-    ```
-    
-    proc_name    proc_owner    proc_defn                    replicate     srvid     remarks
-    
-    sp_test      HDLADMIN      create procedure             N             (NULL)    (NULL)
-                               HDLADMIN.sp_test(in n1
-                               integer)
-                               begin message'sp_test'end
-    sp_dept      HDLADMIN      create procedure             N             (NULL)    (NULL)
-                               HDLADMIN.sp_dept() begin end
-    ```
+</th>
+<th valign="top">
 
+proc\_owner
+
+</th>
+<th valign="top">
+
+proc\_defn
+
+</th>
+<th valign="top">
+
+replicate
+
+</th>
+<th valign="top">
+
+srvid
+
+</th>
+<th valign="top">
+
+remarks
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+Proc1
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+CREATE PROCEDURE "HDLADMIN"."Proc1"\(\)…
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Proc2
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+CREATE PROCEDURE "HDLADMIN"."Proc2"\(\)…
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Proc3
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+CREATE PROCEDURE "HDLADMIN"."Proc3"\(\)…
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+my\_proc1
+
+</td>
+<td valign="top">
+
+HDLADMIN
+
+</td>
+<td valign="top">
+
+CREATE PROCEDURE "HDLADMIN"."my\_proc1…
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+my\_proc2
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+CREATE PROCEDURE "USER1"."my\_proc2"\(…
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+my\_proc3
+
+</td>
+<td valign="top">
+
+USER1
+
+</td>
+<td valign="top">
+
+CREATE PROCEDURE "USER1"."my\_proc3"\(…
+
+</td>
+<td valign="top">
+
+N
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+</tr>
+</table>
+
+This example returns information about all procedures owned by user USER1:
+
+```
+CALL sp_iqprocedure (NULL, 'USER1');
+```
 

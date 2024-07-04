@@ -119,10 +119,11 @@ This operation is transactional. A user must commit the transaction to persist t
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 Also requires one of the following:
 
+-   You own the underlying table
 -   SELECT ANY TABLE system privilege
 -   SELECT object-level privilege on the tables of the pin request
 -   SELECT object-level privilege on the schema containing the object in the relational container.
@@ -136,7 +137,7 @@ Also requires one of the following:
 
 <a name="loio8be5b10546044be286c45b54dadb9764__section_gsh_yyb_4zb"/>
 
-## Example
+## Examples
 
 This example looks up the table ID of table A1 and uses the value to pin the current version for table A1.
 
@@ -163,6 +164,24 @@ This example pins two tables, C1 and C2, in a single request.
     SELECT table_id FROM SYSTAB WHERE table_name = 'C2';
     ```
 
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    table\_id
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    1759
+    
+    </td>
+    </tr>
+    </table>
+    
 2.  Assuming the table ID for tables C1 and C2 are 1864 and 1865 respectively, pin the current visible version for both tables in a single pin request, To help identify the contents of the pinned request, you could specify an optional name to the request, such as C1-C2. Since the pin request operation is transactional, a COMMIT is required if AUTO COMMIT is disabled.
 
     ```
@@ -170,6 +189,24 @@ This example pins two tables, C1 and C2, in a single request.
     COMMIT;
     ```
 
+
+    <table>
+    <tr>
+    <th valign="top">
+
+    pin\_id
+    
+    </th>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    1891981313
+    
+    </td>
+    </tr>
+    </table>
+    
 
 This example pins the currently visible version of table id 1836, without an optional name, and track updates made to the table. Since the pin request operation is transactional, a COMMIT is required if AUTO COMMIT is disabled.
 

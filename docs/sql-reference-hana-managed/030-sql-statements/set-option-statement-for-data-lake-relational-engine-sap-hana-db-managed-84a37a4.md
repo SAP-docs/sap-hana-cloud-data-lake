@@ -34,6 +34,17 @@ SET [ EXISTING ] [ TEMPORARY ] OPTION
 <dl>
 <dt><b>
 
+\{ *<user\_id\>* | PUBLIC \}.\]*<option-name\>*
+
+</b></dt>
+<dd>
+
+Specifying either a user ID or the PUBLIC user ID determines whether the option is set for an individual user, a role represented by *<user\_id\>*, or the PUBLIC user ID \(the role to which all users are a member\). If the option applies to a role ID, option settings are not inherited by members of the role — the change is applied only to the role ID. If no role is specified, the option change is applied to the currently logged-in user ID that issued the SET OPTION statement.
+
+
+
+</dd><dt><b>
+
 *<option-value\>*
 
 </b></dt>
@@ -45,6 +56,8 @@ If *<option-value\>* is omitted, the specified option setting is deleted from th
 
 > ### Note:  
 > For all database options that accept integer values, data lake Relational Engine truncates any decimal *<option-value\>* setting to an integer value. For example, the value 3.8 is truncated to 3.
+
+Changing the value of an option for the PUBLIC user ID sets the value of the option for any user that has not set its own value. Option values cannot be set for an individual user ID unless there is already a PUBLIC user ID setting for that option.
 
 
 
@@ -89,12 +102,6 @@ The classes of options are:
 
 -   General database options
 -   Transact-SQL compatibility database options
-
-Specifying either a user ID or the PUBLIC user ID determines whether the option is set for an individual user, a role represented by *<user\_id\>*, or the PUBLIC user ID \(the role to which all users are a member\). If the option applies to a role ID, option settings are not inherited by members of the role — the change is applied only to the role ID. If no role is specified, the option change is applied to the currently logged-in user ID that issued the SET OPTION statement. For example, this statement applies an option change to the PUBLIC user ID:
-
-```
-SET OPTION Public.login_mode = standard;
-```
 
 In Embedded SQL, only database options can be set temporarily.
 
@@ -172,5 +179,5 @@ Temporarily setting an option for the PUBLIC user ID, as opposed to setting the 
 
 [SET\_TEMPORARY\_OPTION Procedure for SAP HANA Database](../080-sap-hana-database-for-data-lake-relational-engine/set-temporary-option-procedure-for-sap-hana-database-abcd703.md "Grant database options temporarily for the current connection only on a data lake Relational Engine relational container.")
 
-[SET OPTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a625da7584f21015a300a0dd2457eb57.html "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.") :arrow_upper_right:
+[SET OPTION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a625da7584f21015a300a0dd2457eb57.html "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.") :arrow_upper_right:
 

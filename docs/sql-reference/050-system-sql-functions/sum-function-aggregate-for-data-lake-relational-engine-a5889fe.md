@@ -77,7 +77,7 @@ Returns NULL for a group containing no rows.
 
 <a name="loioa5889fe484f21015b024abf6dcede473__SUM_example1"/>
 
-## Example
+## Examples
 
 The following statement returns the value 3749146.740:
 
@@ -95,5 +95,5 @@ FROM Employees;
 
 [COUNT Function \[Aggregate\] for Data Lake Relational Engine](count-function-aggregate-for-data-lake-relational-engine-a54290f.md "Counts the number of rows in a group, depending on the specified parameters.")
 
-[SUM Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/d656f224db9a4567a7ba604993702e94.html "Returns the total of the specified expression for each group of rows.") :arrow_upper_right:
+[SUM Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/d656f224db9a4567a7ba604993702e94.html "Returns the total of the specified expression for each group of rows.") :arrow_upper_right:
 

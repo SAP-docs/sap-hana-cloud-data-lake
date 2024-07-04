@@ -75,5 +75,5 @@ SELECT BYTE_REPLACE( 'abc.def.abc.ghi', 'abc', 'xx' );
 **Related Information**  
 
 
-[BYTE_REPLACE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/4d5eb9fb4c7241bd97a13cc36f4caa1c.html "Replaces a string with another string, and returns the new result.") :arrow_upper_right:
+[BYTE_REPLACE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/4d5eb9fb4c7241bd97a13cc36f4caa1c.html "Replaces a string with another string, and returns the new result.") :arrow_upper_right:
 

@@ -44,7 +44,7 @@ REVOKE JWT LOGIN FROM <external_identity> [, ...]
 Specifies the external identity to map to the data lake Relational Engine user.
 
 ```
-<external_identity> ::= <simple_identifier>;
+<external_identity> ::= <simple_identifier>
 ```
 
 
@@ -59,7 +59,7 @@ Specifies the external identity to map to the data lake Relational Engine user.
 Specifies the JWT provider with external identities to unmap from the user.
 
 ```
-<jwt_provider_name> ::= <simple_identifier>;
+<jwt_provider_name> ::= <simple_identifier>
 ```
 
 
@@ -81,7 +81,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 <a name="loio06e06d8484ab4d97bfd83494bbcf8e06__section_gwx_f3p_p4b"/>
 
-## Example
+## Examples
 
 ```
 REVOKE JWT LOGIN FROM SQLTester FOR PROVIDER my_jwt_provider;

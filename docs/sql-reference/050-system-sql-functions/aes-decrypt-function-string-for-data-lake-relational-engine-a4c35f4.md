@@ -49,7 +49,7 @@ To successfully decrypt a *<string-expression\>*, you must use the same encrypti
 
 <a name="loioa4c35f4384f21015b35996b31b9cb1e5__AES_DECRYPT_example1"/>
 
-## Example
+## Examples
 
 Decrypt the password of a user from the `user_info` table.
 
@@ -65,5 +65,5 @@ FROM user_info;
 
 [REPLACE Function \[String\] for Data Lake Relational Engine](replace-function-string-for-data-lake-relational-engine-a579952.md "Replaces all occurrences of a substring with another substring.")
 
-[AES_DECRYPT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/a5dc84d0179147499830ee226710f968.html "Decrypts the string using the supplied key, and returns, by default, a VARBINARY or LONG BINARY, or the original plaintext type.") :arrow_upper_right:
+[AES_DECRYPT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/a5dc84d0179147499830ee226710f968.html "Decrypts the string using the supplied key, and returns, by default, a VARBINARY or LONG BINARY, or the original plaintext type.") :arrow_upper_right:
 

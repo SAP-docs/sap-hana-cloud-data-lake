@@ -113,7 +113,7 @@ Syntax 2 – The *<window-spec\>* parameter represents usage as a window functio
 
 <a name="loio6d40c8333876450388dfaa9078b06644__section_fq4_hpl_srb"/>
 
-## Example
+## Examples
 
 The following example measures the strength of association between employee age and salary. This function returns the value 73785.840059:
 
@@ -126,5 +126,5 @@ SELECT COVAR_POP( Salary, ( YEAR( NOW( ) ) - YEAR( BirthDate ) ) ) FROM Employee
 
 [WINDOW Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/window-clause-for-data-lake-relational-engine-sap-hana-db-managed-c83b61b.md "Defines all or part of a window for use with window functions such as AVG and RANK in a SELECT statement.")
 
-[COVAR_POP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a541901c84f21015b699cc40f6738ebc.html "Returns the population covariance of a set of number pairs.") :arrow_upper_right:
+[COVAR_POP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a541901c84f21015b699cc40f6738ebc.html "Returns the population covariance of a set of number pairs.") :arrow_upper_right:
 

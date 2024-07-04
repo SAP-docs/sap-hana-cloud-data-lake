@@ -73,7 +73,7 @@ This average does not include rows where *<numeric-expression\>* is the NULL val
 
 <a name="loioa535f04784f2101590f89a693842c970__AVG_example1"/>
 
-## Example
+## Examples
 
 The following statement returns the value 49988.6:
 
@@ -84,5 +84,5 @@ SELECT AVG ( salary ) FROM Employees;
 **Related Information**  
 
 
-[AVG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/cfa9951f7f2849798b476c280c824ffb.html "Computes the average of a numeric expression for a set of rows, or computes the average of a set of unique values.") :arrow_upper_right:
+[AVG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/cfa9951f7f2849798b476c280c824ffb.html "Computes the average of a numeric expression for a set of rows, or computes the average of a set of unique values.") :arrow_upper_right:
 

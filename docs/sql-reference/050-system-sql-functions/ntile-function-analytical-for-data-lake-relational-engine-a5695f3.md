@@ -82,7 +82,7 @@ The `OVER` clause indicates that the function operates on a query result set. Th
 
 <a name="loioa5695f3f84f21015a23ae9730b31eef2__NTILE_example1"/>
 
-## Example
+## Examples
 
 The following example uses the `NTILE` function to determine the sale status of car dealers. The dealers are divided into four groups based on the number of cars each dealer sold. The dealers with `ntile = 1` are in the top 25% for car sales:
 
@@ -117,5 +117,5 @@ To find the top 10% of car dealers by sales, you specify `NTILE(10)` in the exam
 
 [YEAR Function \[Date and Time\] for Data Lake Relational Engine](year-function-date-and-time-for-data-lake-relational-engine-a591eb9.md "Returns a 4-digit number corresponding to the year of the given date/time.")
 
-[NTILE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/97741f155cc24e2ea035db70a29da3b0.html "Distributes query results into a specified number of buckets and assigns the bucket number to each row in the bucket.") :arrow_upper_right:
+[NTILE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/97741f155cc24e2ea035db70a29da3b0.html "Distributes query results into a specified number of buckets and assigns the bucket number to each row in the bucket.") :arrow_upper_right:
 

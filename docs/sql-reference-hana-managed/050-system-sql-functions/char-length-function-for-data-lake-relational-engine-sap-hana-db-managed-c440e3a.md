@@ -68,7 +68,7 @@ The CHAR\_LENGTH function supports LONG VARCHAR columns and LONG VARCHAR variabl
 
 <a name="loioc440e3a7627544838259dcfab11a5bd1__section_ilx_btl_srb"/>
 
-## Example
+## Examples
 
 The following statement returns the value 8:
 
@@ -79,5 +79,5 @@ SELECT CHAR_LENGTH( 'Chemical' ) FROM iq_dummy;
 **Related Information**  
 
 
-[CHAR_LENGTH Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a53bd3d384f21015bcf88da636a1a768.html "Returns the number of characters in a string.") :arrow_upper_right:
+[CHAR_LENGTH Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a53bd3d384f21015bcf88da636a1a768.html "Returns the number of characters in a string.") :arrow_upper_right:
 

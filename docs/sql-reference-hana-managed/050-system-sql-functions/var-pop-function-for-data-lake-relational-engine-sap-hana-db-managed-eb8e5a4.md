@@ -65,7 +65,7 @@ Population-based variances are computed according to the following formula:
 
 <a name="loioeb8e5a4d6b304dedab621a6bd58a471d__section_qkw_zfv_vrb"/>
 
-## Example
+## Examples
 
 The following statement lists the average and variance in the number of items per order in different time periods:
 
@@ -172,5 +172,5 @@ Variance
 **Related Information**  
 
 
-[VAR_POP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a58ec03e84f21015b373c5236f4567a1.html "Computes the statistical variance of a population consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
+[VAR_POP Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a58ec03e84f21015b373c5236f4567a1.html "Computes the statistical variance of a population consisting of a numeric-expression, as a DOUBLE.") :arrow_upper_right:
 

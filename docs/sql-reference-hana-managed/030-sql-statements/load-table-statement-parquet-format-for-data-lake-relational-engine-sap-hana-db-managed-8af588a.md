@@ -123,7 +123,7 @@ The data source referenced by the filename is in a data lake Files container. Th
 This example loads from a CSV file in the default data lake Files container:
 
 ```
-LOAD TABLE t1(c1) FROM 'hdlfs:///employeelist.csv'
+LOAD TABLE t1(c1) FROM 'hdlfs:///employeelist.csv';
 ```
 
 To connect to a non-default data lake Files container \(one outside of your data lake instance\), use this instead:
@@ -149,7 +149,7 @@ In Amazon S3, S3-compliant providers, and Google Cloud Storage, *<filename-strin
 > Container names, bucket names, and file names are case-sensitive in *<filename-string\>*.
 
 ```
-<filename-string> ::= bb:// | pb:// | s3:// | gs://; 
+<filename-string> ::= bb:// | pb:// | s3:// | gs:// 
 ```
 
 
@@ -255,7 +255,7 @@ Specifies connection information
    { <non-default-hdlfs-instance> 
    | <azure-connection> 
    | <s3-connection>  
-   | <google-connection>};
+   | <google-connection>}
 ```
 
 
@@ -268,11 +268,11 @@ Specifies connection information
 <dd>
 
 ```
-<non-default-hdlfs-instance> ::= 'ENDPOINT=<endpoint>;
-	CA_CERTIFICATE=<certificate-content>;
-	CLIENT_CERTIFICATE=<certificate-content>;
-	CLIENT_KEY=<client-certificate-key>;
-	KEY_PASSWORD= <certificate_key_password>';
+<non-default-hdlfs-instance> ::= 'ENDPOINT=<endpoint>
+	CA_CERTIFICATE=<certificate-content>
+	CLIENT_CERTIFICATE=<certificate-content>
+	CLIENT_KEY=<client-certificate-key>
+	KEY_PASSWORD= <certificate_key_password>'
 ```
 
 This clause is optional for data lake Files containers. If you don't specify it, the LOAD statement will connect to the default data lake Files container provisioned within your data lake instance. If you do, the LOAD statement can connect to an alternate, non-default data lake Files container within a separate data lake instance.
@@ -349,10 +349,10 @@ If specified, this value will be the password used to decrypt the client key. If
 <dd>
 
 ```
-<azure-connection> ::= 'DEFAULTENDPOINTSPROTOCOL=<endpoint-protocol>;
-	ACCOUNTNAME=<account-name>;
-	ACCOUNTKEY=<account-key>;
-	ENDPOINTSUFFIX=core.windows.net';
+<azure-connection> ::= 'DEFAULTENDPOINTSPROTOCOL=<endpoint-protocol>
+	ACCOUNTNAME=<account-name>
+	ACCOUNTKEY=<account-key>
+	ENDPOINTSUFFIX=core.windows.net'
 ```
 
 You can find *<azure-connection-string\>* in Azure portal. From your storage account, navigate to *Settings* \> *Access Keys*. Locate the *Connection string* section and copy the connection string to the clipboard. For *<azure-connection-string\>* examples, see the *Examples* section at the end of this topic.
@@ -367,12 +367,12 @@ You can find *<azure-connection-string\>* in Azure portal. From your storage acc
 <dd>
 
 ```
-<s3-connection> ::= 'ENDPOINT=<endpoint>; 
-	ENDPOINT_TYPE={PATH | VIRTUAL-HOST}; 
-	ACCESS_KEY_ID=<access-key-string>; 
-	SECRET_ACCESS_KEY=<secret-key string>; 
-	REGION=<region-string>; 
-	SESSION_TOKEN=<session-token>';
+<s3-connection> ::= 'ENDPOINT=<endpoint> 
+	ENDPOINT_TYPE={PATH | VIRTUAL-HOST} 
+	ACCESS_KEY_ID=<access-key-string> 
+	SECRET_ACCESS_KEY=<secret-key string> 
+	REGION=<region-string> 
+	SESSION_TOKEN=<session-token>'
 ```
 
 You can find your Amazon S3 option values in the AWS Management Console.
@@ -524,7 +524,7 @@ If specified, the Amazon S3 client SDK will use its value when creating Amazon S
  <aws-connection> ::=
 	ACCESS_KEY_ID '<access-key-id>'
 	SECRET_ACCESS_KEY '<secret-access-key>' 
-	REGION '<AWS-region>';
+	REGION '<AWS-region>'
 ```
 
 You can find *<access-key-id\>*, *<secret-access-key\>*, and *<AWS-region\>* in the IAM console. For *<aws-connection\>* examples, see the *Examples* section at the end of this topic.
@@ -539,9 +539,9 @@ You can find *<access-key-id\>*, *<secret-access-key\>*, and *<AWS-region\>* in 
 <dd>
 
 ```
-<google-connection> ::= 'CLIENT_EMAIL='<client-email>';
-   PRIVATE_KEY='<private-key>';
-   PRIVATE_KEY_ID='<private-key-id>';
+<google-connection> ::= 'CLIENT_EMAIL='<client-email>'
+   PRIVATE_KEY='<private-key>'
+   PRIVATE_KEY_ID='<private-key-id>'
 ```
 
 You can find your *<google-connection\>* keys in Google Cloud Console, on the *Service Accounts* page. *<google-connection\>* accepts 'key=value' pairs separated by ';'. For *<google-connection\>* examples, see the *Examples* section at the end of this topic.
@@ -662,7 +662,7 @@ For data lake Relational Engine, you need to set ESCAPES OFF.
 
 Specify `.parquet` or `.parq` as the file name extension.
 
-See [Loading Parquet Files](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/a054ac0ce09e47799e5f24860378056b.html "Parquet is an efficient, open-source, column-oriented format file designed for Apache Hadoop. You can load tables in Parquet format using the data lake Relational Engine LOAD TABLE statement.") :arrow_upper_right: in *SAP HANA Cloud, Data Lake Relational Engine Load and Unload Management* for more information.
+See [Loading Parquet Files](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_3_QRC/en-US/a054ac0ce09e47799e5f24860378056b.html "Parquet is an efficient, open-source, column-oriented format file designed for Apache Hadoop. You can load tables in Parquet format using the data lake Relational Engine LOAD TABLE statement.") :arrow_upper_right: in *SAP HANA Cloud, Data Lake Relational Engine Load and Unload Management* for more information.
 
 
 
@@ -1353,5 +1353,7 @@ Requires one of:
 **Related Information**  
 
 
-[Loading Parquet Files](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_1_QRC/en-US/a054ac0ce09e47799e5f24860378056b.html "Parquet is an efficient, open-source, column-oriented format file designed for Apache Hadoop. You can load tables in Parquet format using the data lake Relational Engine LOAD TABLE statement.") :arrow_upper_right:
+[Loading Parquet Files](https://help.sap.com/viewer/a8942f1c84f2101594aad09c82c80aea/2024_3_QRC/en-US/a054ac0ce09e47799e5f24860378056b.html "Parquet is an efficient, open-source, column-oriented format file designed for Apache Hadoop. You can load tables in Parquet format using the data lake Relational Engine LOAD TABLE statement.") :arrow_upper_right:
+
+[LOAD TABLE Statement (Parquet Format) for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/e048737551b84b2a8b66258adab4a9b3.html "Imports data from Parquet files into a data lake Relational Engine database table from either an external object store (Azure BLOB storage, an Amazon S3 bucket, S3-compliant bucket, or Google Cloud Storage) or from data lake Files containers (the managed object store).") :arrow_upper_right:
 

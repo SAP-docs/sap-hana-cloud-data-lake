@@ -22,6 +22,11 @@ DROP MATERIALIZED VIEW [ IF EXISTS ] [ { <owner> | <schema-name> }.]<mat-vie
 
 
 
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
 <a name="loio35de0ef70fde42bfb4c5c4b311cf8c69__drop_matview_param1"/>
 
 ## Parameters
@@ -111,5 +116,5 @@ DROP IF EXISTS MATERIALIZD VIEW mymatview1;
 
 [sa\_dependent\_views System Procedure for Data Lake Relational Engine](../060-stored-procedures/sa-dependent-views-system-procedure-for-data-lake-relational-engine-3be5950.md "Returns the list of all dependent views for a given table or view.")
 
-[DROP MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/50e76331a4664b5bb2c4454e80b5f8f4.html "Removes a data type from the database.") :arrow_upper_right:
+[DROP MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/50e76331a4664b5bb2c4454e80b5f8f4.html "Removes a data type from the database.") :arrow_upper_right:
 

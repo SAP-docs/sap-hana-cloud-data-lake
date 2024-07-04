@@ -778,7 +778,7 @@ SQL – vendor extension to ISO/ANSI SQL grammar
 
 <a name="loioa5805ddb84f2101591ffe19db63f3521__SORTKEY_example1"/>
 
-## Example
+## Examples
 
 The following statement queries the Employees table and returns the FirstName and Surname of all employees, sorted by the sort-key values for the Surname column using the dict collation \(Latin-1, English, French, German dictionary\):
 
@@ -789,5 +789,5 @@ SELECT Surname, GivenName FROM Employees ORDER BY SORTKEY( Surname, 'dict' );
 **Related Information**  
 
 
-[SORTKEY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/66b441998f6b490ca54f8314748c9331.html "Generates values that can be used to sort character strings based on alternate collation rules.") :arrow_upper_right:
+[SORTKEY Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/66b441998f6b490ca54f8314748c9331.html "Generates values that can be used to sort character strings based on alternate collation rules.") :arrow_upper_right:
 

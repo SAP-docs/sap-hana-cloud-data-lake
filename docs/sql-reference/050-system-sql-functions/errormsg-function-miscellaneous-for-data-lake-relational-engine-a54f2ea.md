@@ -78,7 +78,7 @@ The `ERRORMSG` function returns SAP SQL Anywhere and data lake Relational Engine
 
 <a name="loioa54f2ead84f210158668ce108de25460__ERRORMSG_example1"/>
 
-## Example
+## Examples
 
 The following statement returns the error message for SQLCODE -813:
 
@@ -89,5 +89,5 @@ select errormsg( -813 );
 **Related Information**  
 
 
-[ERRORMSG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/fd7c8d326bf546a7a367bfca738c4357.html "Provides the error message for the current error, or for a specified SQLSTATE or SQLCODE value.") :arrow_upper_right:
+[ERRORMSG Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/fd7c8d326bf546a7a367bfca738c4357.html "Provides the error message for the current error, or for a specified SQLSTATE or SQLCODE value.") :arrow_upper_right:
 

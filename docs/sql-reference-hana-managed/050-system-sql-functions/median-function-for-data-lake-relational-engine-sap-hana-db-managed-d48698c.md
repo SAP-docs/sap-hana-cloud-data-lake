@@ -101,7 +101,7 @@ SQL – Transact-SQL extension to ISO/ANSI SQL grammar
 
 <a name="loiod48698c99cd5450980130ce6dcd32356__section_o2t_vhn_vrb"/>
 
-## Example
+## Examples
 
 The following query returns the median salary for each department in Florida:
 
@@ -321,5 +321,5 @@ Evans
 
 [WINDOW Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/window-clause-for-data-lake-relational-engine-sap-hana-db-managed-c83b61b.md "Defines all or part of a window for use with window functions such as AVG and RANK in a SELECT statement.")
 
-[MEDIAN Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a562edfc84f210159175c2831fabbd47.html "Returns the median of an expression.") :arrow_upper_right:
+[MEDIAN Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a562edfc84f210159175c2831fabbd47.html "Returns the median of an expression.") :arrow_upper_right:
 

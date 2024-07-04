@@ -307,14 +307,14 @@ Gives notification messages after n records are successfully added for the index
     ORDER BY x,y;
     ```
 
-    In addition to the two previous examples, if the ROWID\(\) function is in the SELECT list expressions, multicolumn indexes will be used. For example:
+    If the ROWID\(\) function is in the SELECT list expressions, then multicolumn indexes are used. For example:
 
     ```
     SELECT rowid()+x, z FROM T 
     ORDER BY x,y,z;
     ```
 
-    In addition to the three previous examples, if ROWID\(\) is present at the end of an ORDER BY list, and if the columns of that list — except for ROWID\(\) — use multicolumn indexes in the exact order, multicolumn indexes will be used for the query. For example:
+    If ROWID\(\) is present at the end of an ORDER BY list, and if the columns of that list — except for ROWID\(\) — use multicolumn indexes in the exact order, then multicolumn indexes are used for the query. For example:
 
     ```
     SELECT z,y FROM T 
@@ -434,7 +434,7 @@ Automatic commit
 
 
 
-<a name="loioafc9ba646bb842d6b4c5975aa7d17d16__section_ks2_2qg_1rb"/>
+<a name="loioafc9ba646bb842d6b4c5975aa7d17d16__section_q2c_4dt_wbc"/>
 
 ## Examples
 
@@ -475,11 +475,11 @@ Automatic commit
 **Related Information**  
 
 
-[CREATE INDEX Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a617ca4484f21015b2cdfdebbf4a5eee.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
-
 [ALTER INDEX Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](alter-index-statement-for-data-lake-relational-engine-sap-hana-db-managed-daf745a.md "Renames indexes in base or global temporary tables, foreign key role names of indexes and foreign keys explicitly created by a user, or changes the clustered nature of an index on a catalog store table. You can't rename indexes created to enforce key constraints.")
 
 [DROP INDEX Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-index-statement-for-data-lake-relational-engine-sap-hana-db-managed-52fb1c7.md "Removes an index from the database.")
 
 [BEGIN PARALLEL IQ … END PARALLEL IQ Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](begin-parallel-iq-end-parallel-iq-statement-for-data-lake-relational-engine-sap-hana-db-m-6632c2b.md "Groups CREATE INDEX statements together for execution at the same time.")
+
+[CREATE INDEX Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a617ca4484f21015b2cdfdebbf4a5eee.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
 

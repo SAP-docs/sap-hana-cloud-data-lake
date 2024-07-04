@@ -6,13 +6,13 @@ Creates a TEXT index and specifies the text configuration object to use.
 
 
 
-<a name="loioa602ced184f210158c90b4b833754412__section_ovp_dvr_znb"/>
+<a name="loioa602ced184f210158c90b4b833754412__section_qc3_21d_ybc"/>
 
 ## Usage
 
-This data lake Relational Engine SQL statement can be used when connected as follows:
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement can be used when:
 
--   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
+-   Connected to SAP HANA database as a SAP HANA database user..
 
 
 
@@ -30,7 +30,7 @@ CREATE TEXT INDEX <text-index-name>
 
 
 
-<a name="loioa602ced184f210158c90b4b833754412__IQ_Parameters"/>
+<a name="loioa602ced184f210158c90b4b833754412__create_text_index_parameters1"/>
 
 ## Parameters
 
@@ -74,7 +74,7 @@ IMMEDIATE REFRESH
 
 
 
-<a name="loioa602ced184f210158c90b4b833754412__IQ_Usage"/>
+<a name="loioa602ced184f210158c90b4b833754412__create_text_index_remarks1"/>
 
 ## Remarks
 
@@ -82,9 +82,15 @@ You cannot create a TEXT index on views or temporary tables, or on an IN SYSTEM 
 
 
 
-<a name="loioa602ced184f210158c90b4b833754412__IQ_Permissions"/>
+<a name="loioa602ced184f210158c90b4b833754412__create_text_index_privileges1"/>
 
 ## Privileges
+
+
+
+### 
+
+Requires one of the following:
 
 -   You own the underlying table of the index.
 -   REFERENCES object-level privilege on the table.
@@ -96,7 +102,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 
 
-<a name="loioa602ced184f210158c90b4b833754412__side_effects"/>
+<a name="loioa602ced184f210158c90b4b833754412__create_text_index_side_effects"/>
 
 ## Side Effects
 
@@ -104,7 +110,7 @@ Automatic commit
 
 
 
-<a name="loioa602ced184f210158c90b4b833754412__IQ_Examples"/>
+<a name="loioa602ced184f210158c90b4b833754412__create_text_index_examples1"/>
 
 ## Examples
 
@@ -121,8 +127,6 @@ CONFIGURATION max_term_sixteen;
 **Related Information**  
 
 
-[CREATE INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/afc9ba646bb842d6b4c5975aa7d17d16.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
-
 [ALTER TEXT INDEX Statement for Data Lake Relational Engine](alter-text-index-statement-for-data-lake-relational-engine-a602711.md "Renames, moves or alters the definition of a TEXT index.")
 
 [DROP TEXT INDEX Statement for Data Lake Relational Engine](drop-text-index-statement-for-data-lake-relational-engine-a60331d.md "Removes a TEXT index from the database.")
@@ -130,4 +134,6 @@ CONFIGURATION max_term_sixteen;
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
 [REVOKE Object-Level Privilege Statement for Data Lake Relational Engine](revoke-object-level-privilege-statement-for-data-lake-relational-engine-a3e7af2.md "Removes object-level privileges that were given using the GRANT statement.")
+
+[CREATE TEXT INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/11447f8825504a4b8cc578f3204aec12.html "Creates a TEXT index and specifies the text configuration object to use.") :arrow_upper_right:
 

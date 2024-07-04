@@ -40,7 +40,7 @@ Specifies the name of the relational container to delete.
 
 The system procedure performs the following tasks:
 
--   Drops the empty data lake Relational Engine and SAP HANA database relational container defaultschemas.
+-   Drops the empty data lake Relational Engine and SAP HANA database relational container default schemas.
 -   Drops the SAP HANA database container administrator role for the relational container.
 -   Drops the REMOTE\_EXECUTE and REMOTE\_EXECUTE\_DDL procedures.
 -   Drops the SAP HANA database remote source for the relational container.
@@ -73,7 +73,7 @@ CALL SYSHDL.DELETE_CONTAINER('CONTAINER1');
 **Related Information**  
 
 
-[Manage Relational Containers in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/0b494fedebb243fc9bd92c87bac7ddd4.html "Relational containers are managed from the SAP HANA database instance, but are stored in the data lake Relational Engine instance.") :arrow_upper_right:
+[Manage Relational Containers in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/0b494fedebb243fc9bd92c87bac7ddd4.html "Relational containers are managed from the SAP HANA database instance, but are stored in the data lake Relational Engine instance.") :arrow_upper_right:
 
-[Deleting a Relational Container in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/047e3ffb996f45d4945310e2b64efd2f.html "Delete a relational container in the container group.") :arrow_upper_right:
+[Deleting a Relational Container in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/047e3ffb996f45d4945310e2b64efd2f.html "Delete a relational container in the container group.") :arrow_upper_right:
 

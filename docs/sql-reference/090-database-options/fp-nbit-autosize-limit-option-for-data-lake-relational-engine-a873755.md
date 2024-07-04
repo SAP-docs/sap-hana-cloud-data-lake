@@ -54,7 +54,7 @@ If FP\_ENFORCE\_LIMITS is set to ON and DML operations exceed the FP\_NBIT\_ROLL
 **Related Information**  
 
 
-[FP_NBIT_AUTOSIZE_LIMIT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/829744c675a441899d9aa46a28873eab.html "Limits the number of distinct values in columns that implicitly load as NBit FP.") :arrow_upper_right:
+[FP_NBIT_AUTOSIZE_LIMIT Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/829744c675a441899d9aa46a28873eab.html "Limits the number of distinct values in columns that implicitly load as NBit FP.") :arrow_upper_right:
 
 [FP\_NBIT\_ENFORCE\_LIMITS Option for Data Lake Relational Engine](fp-nbit-enforce-limits-option-for-data-lake-relational-engine-a874045.md "Enforces sizing limits for explicit and implicit NBit columns.")
 

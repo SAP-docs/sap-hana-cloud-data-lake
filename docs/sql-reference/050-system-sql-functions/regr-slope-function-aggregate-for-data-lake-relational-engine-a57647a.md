@@ -122,7 +122,7 @@ Syntax 2 – The *<window-spec\>* parameter represents usage as a window functio
 
 <a name="loioa57647a684f21015af3cb26e82eae9cd__REGR_SLOPE_examples1"/>
 
-## Example
+## Examples
 
 The following example returns the value 935.3429749445614:
 
@@ -135,5 +135,5 @@ SELECT REGR_SLOPE( Salary, ( YEAR( NOW() ) - YEAR( BirthDate ) ) )FROM Employees
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[REGR_SLOPE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/2b3cc76a26a04898952576a65be0272f.html "Computes the slope of the linear regression line, fitted to non-NULL pairs.") :arrow_upper_right:
+[REGR_SLOPE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/2b3cc76a26a04898952576a65be0272f.html "Computes the slope of the linear regression line, fitted to non-NULL pairs.") :arrow_upper_right:
 

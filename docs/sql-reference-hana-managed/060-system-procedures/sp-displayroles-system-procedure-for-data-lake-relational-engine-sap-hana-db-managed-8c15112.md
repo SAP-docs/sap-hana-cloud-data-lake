@@ -203,7 +203,7 @@ For:
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure. To return the system privileges or roles for another user ID or a role, also require the MANAGE ROLES system privilege.
+Requires EXECUTE object-level privilege on this procedure. To return system privileges and roles for a user other than self also require the MANAGE ROLES system privilege.
 
 
 
@@ -211,7 +211,7 @@ Requires EXECUTE object-level privilege on the procedure. To return the system p
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -219,7 +219,7 @@ None
 
 ## Examples
 
-This example uses sp\_displayroles to return all roles or system privileges granted to USER1:
+This example returns all roles or system privileges granted to USER1:
 
 ```
 CALL sp_displayroles( 'USER1', 'EXPAND_DOWN', 'ALL' );
@@ -296,7 +296,7 @@ NO ADMIN
 <tr>
 <td valign="top">
 
-CREATE ANY OBJECT
+CREATE ANY TABLE
 
 </td>
 <td valign="top">
@@ -318,7 +318,7 @@ ADMIN ONLY
 <tr>
 <td valign="top">
 
-NEW\_CONNECTIONS\_ROLE
+ROLE1
 
 </td>
 <td valign="top">
@@ -340,78 +340,12 @@ ADMIN
 <tr>
 <td valign="top">
 
-SYS\_DL\_CUSTOMER\_ROLE
+MANAGE ROLES
 
 </td>
 <td valign="top">
 
-NULL
-
-</td>
-<td valign="top">
-
-NO ADMIN
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-NEW\_USER\_COCKPIT\_ROLE
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-ADMIN
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-SET ANY CUSTOMER PUBLIC OPTION
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NO ADMIN
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-READ FILE
-
-</td>
-<td valign="top">
-
-NEW\_CONNECTIONS\_ROLE
+ROLE1
 
 </td>
 <td valign="top">
@@ -433,7 +367,7 @@ SET ANY CUSTOMER PUBLIC OPTION
 </td>
 <td valign="top">
 
-NEW\_CONNECTIONS\_ROLE
+ROLE1
 
 </td>
 <td valign="top">
@@ -449,8 +383,10 @@ NO ADMIN
 </tr>
 </table>
 
+The system privileges MONITOR and CREATE ANY TABLE and the roles PUBLIC and ROLE1 are directly granted to USER1 \(indicated by parent\_role\_name = NULL and role\_level = 1\). The system privileges MANAGE ROLES and SET ANY CUSTOMER PUBLIC OPTION are inherited from the ROLE1 grant \(as indicated by parent\_role\_name = ROLE1 and role\_level = 2
+
 **Related Information**  
 
 
-[sp_displayroles System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a44ba32684f2101598cba97bb3b1b4d4.html "Displays all roles granted to a user-defined role or a user, or displays the entire hierarchical tree of roles.") :arrow_upper_right:
+[sp_displayroles System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a44ba32684f2101598cba97bb3b1b4d4.html "Displays all roles granted to a user-defined role or a user, or displays the entire hierarchical tree of roles.") :arrow_upper_right:
 

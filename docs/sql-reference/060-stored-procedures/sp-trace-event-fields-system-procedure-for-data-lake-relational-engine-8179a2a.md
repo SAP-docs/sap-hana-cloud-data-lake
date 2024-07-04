@@ -188,7 +188,7 @@ If *<event\_name\>* is NULL, this procedure returns the fields for all trace eve
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   MANAGE ANY TRACE SESSION system privilege
 -   MANAGE AUDITING system privilege
 
@@ -206,7 +206,7 @@ None.
 
 ## Examples
 
-This statement returns information about the fields for all trace event sessions in the database:
+This example returns information about the fields for all trace event sessions in the database:
 
 ```
 CALL sp_trace_event_fields( );
@@ -459,7 +459,7 @@ conn\_id
 </tr>
 </table>
 
-This statement returns information about the fields for the trace event SYS\_RLL\_ReqStatementDrop:
+This example returns information about the fields for the trace event SYS\_RLL\_ReqStatementDrop:
 
 ```
 CALL sp_trace_event_fields('SYS_RLL_ReqStatementDrop');
@@ -553,5 +553,5 @@ NULL
 **Related Information**  
 
 
-[sp_trace_event_fields System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/301a2c803cd847d8a5eec27d96cff484.html "Returns information about the fields of the specified trace event.") :arrow_upper_right:
+[sp_trace_event_fields System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/301a2c803cd847d8a5eec27d96cff484.html "Returns information about the fields of the specified trace event.") :arrow_upper_right:
 

@@ -446,5 +446,5 @@ You can specify elements of *<window-spec\>* either in the function syntax \(inl
 
 [WINDOW Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/window-clause-for-data-lake-relational-engine-sap-hana-db-managed-c83b61b.md "Defines all or part of a window for use with window functions such as AVG and RANK in a SELECT statement.")
 
-[FIRST_VALUE Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5523f3c84f21015aa0092a61fcc2714.html "Returns the first value from a set of values.") :arrow_upper_right:
+[FIRST_VALUE Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a5523f3c84f21015aa0092a61fcc2714.html "Returns the first value from a set of values.") :arrow_upper_right:
 

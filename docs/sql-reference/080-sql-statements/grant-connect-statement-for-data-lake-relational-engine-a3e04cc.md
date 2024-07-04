@@ -17,9 +17,7 @@ This data lake Relational Engine SQL statement can be used when connected as fol
 
 
 ```
-GRANT CONNECT 
-   TO <userID>
-   IDENTIFIED BY <password>;
+GRANT CONNECT TO <grantee> IDENTIFIED BY <password>
 ```
 
 
@@ -37,7 +35,7 @@ GRANT CONNECT
 <dl>
 <dt><b>
 
-*<userID\>*
+*<grantee\>*
 
 </b></dt>
 <dd>
@@ -67,7 +65,7 @@ GRANT CONNECT can be used to create a new user or be used by any user to change 
 
 A user without a password cannot connect to the database. This is useful when you are creating groups and you do not want anyone to connect to the role user ID. To create a user without a password, do not include the IDENTIFIED BY clause.
 
-When specifying a password, it must be a valid identifier. Passwords have a maximum length of 255 bytes. If the VERIFY\_PASSWORD\_FUNCTION database option is set to a value other than the empty string, the GRANT CONNECT TO statement calls the function identified by the option value. The function returns NULL to indicate that the password conforms to rules. Since the VERIFY\_PASSWORD\_FUNCTION option is set, you can specify only one *<userid\>* and *<password\>* with the GRANT CONNECT statement.
+When specifying a password, it must be a valid identifier. Passwords have a maximum length of 255 bytes. The GRANT CONNECT TO statement calls the function identified by the option value. The function returns NULL to indicate that the password conforms to rules.
 
 Invalid names for database user IDs and passwords include those that:
 
@@ -100,25 +98,17 @@ Invalid names for database user IDs and passwords include those that:
 
 ## Examples
 
--   The following example creates two new users for the database named `Laurel` and `Hardy`:
+The following example creates user `Jane` with no password:
 
-    ```
-    GRANT CONNECT TO Laurel, Hardy
-    IDENTIFIED BY Stan, Ollie;
-    ```
+```
+GRANT CONNECT TO Jane;
+```
 
--   The following example creates user `Jane` with no password:
+The following example changes the password for `Bob` to `newpassword`:
 
-    ```
-    GRANT CONNECT TO Jane;
-    ```
-
--   The following example changes the password for `Bob` to `newpassword`:
-
-    ```
-    GRANT CONNECT TO Bob IDENTIFIED BY <newpassword>;
-    ```
-
+```
+GRANT CONNECT TO Bob IDENTIFIED BY <newpassword>;
+```
 
 **Related Information**  
 

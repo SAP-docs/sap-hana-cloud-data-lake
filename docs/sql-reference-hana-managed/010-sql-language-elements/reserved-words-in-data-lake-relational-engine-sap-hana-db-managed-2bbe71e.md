@@ -285,7 +285,7 @@ XML
 
 [RESERVED\_KEYWORDS Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/reserved-keywords-option-for-data-lake-relational-engine-sap-hana-db-managed-991b4fb.md "Turns on individual keywords that are disabled by default.")
 
-[Reserved Words in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a4ec20ca84f2101599e4ca641dea6f76.html "Some keywords in SQL are also reserved words.") :arrow_upper_right:
+[Reserved Words in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a4ec20ca84f2101599e4ca641dea6f76.html "Some keywords in SQL are also reserved words.") :arrow_upper_right:
 
 [Keywords in Data Lake Relational Engine \(SAP HANA DB-Managed\)](keywords-in-data-lake-relational-engine-sap-hana-db-managed-ea6e823.md "Each SQL statement contains one or more keywords.")
 

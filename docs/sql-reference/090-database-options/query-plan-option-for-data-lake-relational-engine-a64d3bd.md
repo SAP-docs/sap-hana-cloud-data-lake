@@ -151,3 +151,5 @@ When this option is turned ON, data lake Relational Engine produces textual quer
 
 [QUERY\_PLAN\_AS\_HTML Option for Data Lake Relational Engine](query-plan-as-html-option-for-data-lake-relational-engine-a64e45d.md "Generates graphical query plans in HTML format for viewing in a Web browser.")
 
+[Diagnostic Logs for Data Lake Relational Engine](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_3_QRC/en-US/02e694dff4c44c0db8e1b3783d599d6b.html "Diagnostic logs include server logs, console logs, and query plans. Use the data lake Relational Engine logs to diagnose performance issues, and query problems.") :arrow_upper_right:
+

@@ -33,9 +33,9 @@ Quarantined blocks are unavailable for allocation and if owned by a data structu
 **Related Information**  
 
 
-[sp\_iqcheckdb Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqcheckdb-procedure-for-data-lake-relational-engine-a59d2e0.md "Checks validity of the current database. Optionally corrects allocation problems for dbspaces or databases. sp_iqcheckdb does not check a partitioned table if partitioned data exists on offline dbspaces.")
+[sp\_iqcheckdb System Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqcheckdb-system-procedure-for-data-lake-relational-engine-a59d2e0.md "Checks validity of the current database. Optionally corrects allocation problems for dbspaces or databases. sp_iqcheckdb does not check a partitioned table if partitioned data exists on offline dbspaces.")
 
-[sp\_iqquarantinedblocks Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqquarantinedblocks-procedure-for-data-lake-relational-engine-649c0a5.md "Displays information about block numbers that cannot be reused because they hold corrupt objects, and will remain in use until the corruption is repaired..")
+[sp\_iqquarantinedblocks System Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqquarantinedblocks-system-procedure-for-data-lake-relational-engine-649c0a5.md "Displays information about block numbers that cannot be reused because they hold corrupt objects, and will remain in use until the corruption is repaired..")
 
-[sp\_iqquarantinedblocksclear Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqquarantinedblocksclear-procedure-for-data-lake-relational-engine-5a89726.md "Clears the system quarantine map, removing all physical block numbers for any quarantined data.")
+[sp\_iqquarantinedblocksclear System Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqquarantinedblocksclear-system-procedure-for-data-lake-relational-engine-5a89726.md "Clears the system quarantine map, removing all physical block numbers for any quarantined data.")
 

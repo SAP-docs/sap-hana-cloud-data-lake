@@ -22,6 +22,14 @@ sp_iqpinrequestsize()
 
 
 
+<a name="loiocd2fbc63744f47b28252976bc905b684__section_slj_1yc_fbc"/>
+
+## Parameters
+
+None.
+
+
+
 <a name="loiocd2fbc63744f47b28252976bc905b684__section_w2g_zdb_hwb"/>
 
 ## Result Set
@@ -86,7 +94,7 @@ sp\_iqpinrequestsize can only be run on the coordinator node. The coordinator en
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 

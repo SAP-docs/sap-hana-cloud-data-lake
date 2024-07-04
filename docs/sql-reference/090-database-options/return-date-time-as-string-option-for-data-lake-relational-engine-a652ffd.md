@@ -153,7 +153,7 @@ Interactive SQL automatically turns the RETURN\_DATE\_TIME\_AS\_STRING option ON
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[RETURN_DATE_TIME_AS_STRING Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/77c385f40ad1417d8f1ea8ca653456e9.html "Controls how a date, time, or timestamp value is passed to the client application when queried.") :arrow_upper_right:
+[RETURN_DATE_TIME_AS_STRING Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/77c385f40ad1417d8f1ea8ca653456e9.html "Controls how a date, time, or timestamp value is passed to the client application when queried.") :arrow_upper_right:
 
 [DATE\_FORMAT Option for Data Lake Relational Engine](date-format-option-for-data-lake-relational-engine-a632563.md "Sets the format used for dates retrieved from the database.")
 

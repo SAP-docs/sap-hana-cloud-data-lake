@@ -73,7 +73,7 @@ Division involving a negative *<dividend\>* gives a negative or zero result. The
 
 <a name="loioa5650e7684f21015b1dcafaf320a4d00__MOD_examples1"/>
 
-## Example
+## Examples
 
 The following statement returns the value 2:
 
@@ -86,5 +86,5 @@ SELECT MOD( 5, 3 ) FROM iq_dummy;
 
 [REMAINDER Function \[Numeric\] for Data Lake Relational Engine](remainder-function-numeric-for-data-lake-relational-engine-a5788e7.md "Returns the remainder when one whole number is divided by another.")
 
-[MOD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/f5c120d23a114a08951fed08d45fecc1.html "Returns the remainder when one whole number is divided by another.") :arrow_upper_right:
+[MOD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/f5c120d23a114a08951fed08d45fecc1.html "Returns the remainder when one whole number is divided by another.") :arrow_upper_right:
 

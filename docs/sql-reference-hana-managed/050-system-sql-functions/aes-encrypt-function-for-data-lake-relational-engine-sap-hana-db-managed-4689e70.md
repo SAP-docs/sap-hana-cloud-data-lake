@@ -52,5 +52,5 @@ The result data type of an `AES_ENCRYPT` function may be a `LONG BINARY`. If you
 
 [REPLACE Function for Data Lake Relational Engine \(SAP HANA DB-Managed\)](replace-function-for-data-lake-relational-engine-sap-hana-db-managed-b8f3ed4.md "Replaces all occurrences of a substring with another substring.")
 
-[AES_ENCRYPT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a4c3260684f210158f0fbe1e8ab4e780.html "Encrypts the specified values using the supplied encryption key, and returns a VARBINARY or LONG VARBINARY.") :arrow_upper_right:
+[AES_ENCRYPT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a4c3260684f210158f0fbe1e8ab4e780.html "Encrypts the specified values using the supplied encryption key, and returns a VARBINARY or LONG VARBINARY.") :arrow_upper_right:
 

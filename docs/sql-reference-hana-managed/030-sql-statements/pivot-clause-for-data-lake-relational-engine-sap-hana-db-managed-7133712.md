@@ -6,13 +6,18 @@ Pivots a table expression in the FROM clause of a SELECT statement \(FROM *<pivo
 
 
 
-```
-FROM <pivoted-derived-table>
-```
+<a name="loio71337123850742e79ab57ded4fdef45f__section_n2f_w4s_wbc"/>
+
+## Usage
+
+This SQL statement clause can only be used within the FROM clause in a SELECT statement.
+
+
 
 ```
-<pivoted-derived-table> :
-<pivot-source-table> PIVOT  ( <pivot-clause> ) [ AS ] <pivoted-correlation-name>
+FROM <pivot-source-table> 
+   PIVOT ( <pivot-clause> ) 
+   [ AS ] <pivoted-correlation-name>
 ```
 
 ```
@@ -26,24 +31,32 @@ FROM <pivoted-derived-table>
 
 ```
 <aggregate-clause> :
-<aggregate-function> ( [ <aggregate-expression> ] ) [ [ AS ] <aggregate-alias> ] [,...]
+   <aggregate-function> ( [ <aggregate-expression> ] ) 
+   [ [ AS ] <aggregate-alias> ] [,...]
 ```
 
 ```
 <pivot-for-clause> : 
-FOR <pivot-column>
-| FOR ( <pivot-column> [,...] )
+   { FOR <pivot-column>
+   | FOR ( <pivot-column> [,...] ) }
 ```
 
 ```
 <pivot-in-clause> : 
-IN ( <constant-expression> [ [ AS ] <constant-expression-alias> ] [,...] )
-| IN ( ( <constant-expression> [,...] ) [ [ AS ] <constant-expression-alias> ] [,...] )
+   { IN ( <constant-expression>
+      [ [ AS ] <constant-expression-alias> ] [,...] )
+   | IN ( ( <constant-expression> [,...] )
+      [ [ AS ] <constant-expression-alias> ] [,...] ) }
 ```
 
 
 
-<a name="loio71337123850742e79ab57ded4fdef45f__section_kpt_ljp_njb"/>
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
+<a name="loio71337123850742e79ab57ded4fdef45f__section_vvz_x4s_wbc"/>
 
 ## Parameters
 
@@ -111,7 +124,7 @@ If an alias is not specified, then the implicit alias is the string representing
 
 
 
-<a name="loio71337123850742e79ab57ded4fdef45f__section_lpt_ljp_njb"/>
+<a name="loio71337123850742e79ab57ded4fdef45f__section_l5n_y4s_wbc"/>
 
 ## Remarks
 
@@ -119,7 +132,50 @@ The definition of a pivoted derived table contains an input table expression, *<
 
 
 
-<a name="loio71337123850742e79ab57ded4fdef45f__section_npt_ljp_njb"/>
+<a name="loio71337123850742e79ab57ded4fdef45f__section_xtl_z4s_wbc"/>
+
+## Privileges
+
+
+
+### 
+
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user.:
+
+</b></dt>
+<dd>
+
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
+
+
+</dd><dt><b>
+
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+Beyond the privileges required by the SELECT statement, you also require SELECT object-level privilege on the objects referenced in *<pivot-source-table\>*.
+
+
+
+</dd>
+</dl>
+
+
+
+<a name="loio71337123850742e79ab57ded4fdef45f__section_lqb_bps_wbc"/>
 
 ## Side Effects
 
@@ -127,7 +183,7 @@ None.
 
 
 
-<a name="loio71337123850742e79ab57ded4fdef45f__section_opt_ljp_njb"/>
+<a name="loio71337123850742e79ab57ded4fdef45f__section_czn_bps_wbc"/>
 
 ## Standards
 
@@ -149,7 +205,9 @@ Not in the standard.
 
 
 
-## Example
+<a name="loio71337123850742e79ab57ded4fdef45f__section_k5x_bps_wbc"/>
+
+## Examples
 
 The following example selects data from the Employees table and pivots it on the DepartmentID column, where the Department ID is 100, 200, 300, 400, or 500.
 
@@ -331,4 +389,9 @@ UT
 </table>
 
 In the results, the aggregate alias and the values for DepartmentID are included in the column names of the result set \(for example, 100\_TotalSalary\) to clarify which value is being pivoted. The column names in this example mean "the total salary for department X". The salaries for employees in each State/DepartmentID tuple are aggregated \(in this case, summed together\).
+
+**Related Information**  
+
+
+[PIVOT Clause for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/817234f06ce210149f3fe4ad7428edfd.html "Pivots a table expression in the FROM clause of a SELECT statement (FROM pivoted-derived-table) into a pivoted derived table. Pivoted derived tables offer an easy way to rotate row values from a column in a table expression into multiple columns, and perform aggregation where needed on the columns included in the result set.") :arrow_upper_right:
 

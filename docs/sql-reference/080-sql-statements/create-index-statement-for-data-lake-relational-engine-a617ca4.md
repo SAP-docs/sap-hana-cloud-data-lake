@@ -309,14 +309,14 @@ Gives notification messages after n records are successfully added for the index
     ORDER BY x,y;
     ```
 
-    In addition to the two previous examples, if the ROWID\(\) function is in the SELECT list expressions, multicolumn indexes will be used. For example:
+    If the ROWID\(\) function is in the SELECT list expressions, then multicolumn indexes are used. For example:
 
     ```
     SELECT rowid()+x, z FROM T 
     ORDER BY x,y,z;
     ```
 
-    In addition to the three previous examples, if ROWID\(\) is present at the end of an ORDER BY list, and if the columns of that list — except for ROWID\(\) — use multicolumn indexes in the exact order, multicolumn indexes will be used for the query. For example:
+    If ROWID\(\) is present at the end of an ORDER BY list, and if the columns of that list — except for ROWID\(\) — use multicolumn indexes in the exact order, then multicolumn indexes are used for the query. For example:
 
     ```
     SELECT z,y FROM T 
@@ -424,7 +424,7 @@ Automatic commit
 
 
 
-<a name="loioa617ca4484f21015b2cdfdebbf4a5eee__IQ_Examples"/>
+<a name="loioa617ca4484f21015b2cdfdebbf4a5eee__create_index_examples1"/>
 
 ## Examples
 
@@ -465,7 +465,7 @@ Automatic commit
 **Related Information**  
 
 
-[CREATE INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/afc9ba646bb842d6b4c5975aa7d17d16.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
+[CREATE INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/afc9ba646bb842d6b4c5975aa7d17d16.html "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.") :arrow_upper_right:
 
 [ALTER INDEX Statement for Data Lake Relational Engine](alter-index-statement-for-data-lake-relational-engine-a612b20.md "Renames indexes in base or global temporary tables, foreign key role names of indexes and foreign keys explicitly created by a user, or changes the clustered nature of an index on a catalog store table. You can't rename indexes created to enforce key constraints.")
 
@@ -475,7 +475,7 @@ Automatic commit
 
 [INDEX\_PREFERENCE Option in Data Lake Relational Engine](../090-database-options/index-preference-option-in-data-lake-relational-engine-a639a2e.md "Controls the choice of indexes to use for queries.")
 
-[FROM Clause for Data Lake Relational Engine](from-clause-for-data-lake-relational-engine-a7749cf.md "Specifies the database tables or views involved in a SELECT statement.")
+[FROM Clause for Data Lake Relational Engine](from-clause-for-data-lake-relational-engine-a7749cf.md "Specifies the objects involved in a SELECT, DELETE or UPDATE statement.")
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

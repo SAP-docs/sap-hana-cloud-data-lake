@@ -80,7 +80,7 @@ The `PERCENTILE_CONT` function is allowed in a subquery, a `HAVING` clause, a vi
 
 <a name="loioa56d9fa784f21015b6c8d94588153331__PERCENTILE_CONT_exmple1"/>
 
-## Example
+## Examples
 
 The following example uses the `PERCENTILE_CONT` function to determine the 10th percentile value for car sales in a region.
 
@@ -125,5 +125,5 @@ South            470
 **Related Information**  
 
 
-[PERCENTILE_CONT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/126ea72fa1b94e76828493c4602e8942.html "Given a percentile, returns the value that corresponds to that percentile. Assumes a continuous distribution data model.") :arrow_upper_right:
+[PERCENTILE_CONT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/126ea72fa1b94e76828493c4602e8942.html "Given a percentile, returns the value that corresponds to that percentile. Assumes a continuous distribution data model.") :arrow_upper_right:
 

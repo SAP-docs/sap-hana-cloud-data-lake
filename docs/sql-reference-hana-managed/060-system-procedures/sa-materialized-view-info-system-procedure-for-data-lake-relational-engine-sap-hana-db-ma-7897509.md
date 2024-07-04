@@ -662,10 +662,12 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </b></dt>
 <dd>
 
-Requires EXECUTE object-level privilege on the procedure along with one of the following:
+RequiresEXECUTE object-level privilege on this procedure, along with one of the following:
 
+-   You own the underlying table of the view
+-   SELECT ANY TABLE system privilege
 -   SELECT object-level privilege on the view and its underlying tables
--   SELECT object-level privilege on the schema of the materialized view and its underlying tables
+-   SELECT object-level privilege on the schema of the materialized view and its underlying tables if the schema is owned by another user
 
 
 
@@ -684,7 +686,7 @@ All metadata for the specified materialized views, and all dependencies, are loa
 
 ## Examples
 
-This example uses the sa\_materialized\_view\_info system procedure to return information about all materialized views in the database:
+This example returns information about all materialized views in the database:
 
 ```
 CALL sa_materialized_view_info();
@@ -695,12 +697,16 @@ CALL sa_materialized_view_info();
 <tr>
 <th valign="top">
 
-OwnerName
+Owner
+
+Name
 
 </th>
 <th valign="top">
 
-ViewName
+View
+
+Name
 
 </th>
 <th valign="top">
@@ -710,17 +716,44 @@ Status
 </th>
 <th valign="top">
 
-DataStatus
+Data
+
+Status
 
 </th>
 <th valign="top">
 
-ViewLastRefreshed
+ViewLast
+
+Refreshed
 
 </th>
 <th valign="top">
 
-DataLastModified
+DataLast
+
+Modified
+
+</th>
+<th valign="top">
+
+AvailFor
+
+Optimization
+
+</th>
+<th valign="top">
+
+Refresh
+
+Type
+
+</th>
+<th valign="top">
+
+Build
+
+Type
 
 </th>
 </tr>
@@ -753,6 +786,21 @@ NULL
 <td valign="top">
 
 NULL
+
+</td>
+<td valign="top">
+
+D
+
+</td>
+<td valign="top">
+
+A
+
+</td>
+<td valign="top">
+
+F
 
 </td>
 </tr>
@@ -787,6 +835,21 @@ F
 NULL
 
 </td>
+<td valign="top">
+
+D
+
+</td>
+<td valign="top">
+
+A
+
+</td>
+<td valign="top">
+
+F
+
+</td>
 </tr>
 <tr>
 <td valign="top">
@@ -819,70 +882,6 @@ NULL
 NULL
 
 </td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="3">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-AvailForOptimization
-
-</th>
-<th valign="top">
-
-RefreshType
-
-</th>
-<th valign="top">
-
-BuildType
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-D
-
-</td>
-<td valign="top">
-
-A
-
-</td>
-<td valign="top">
-
-F
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-D
-
-</td>
-<td valign="top">
-
-A
-
-</td>
-<td valign="top">
-
-F
-
-</td>
-</tr>
-<tr>
 <td valign="top">
 
 D
@@ -912,12 +911,16 @@ CALL sa_materialized_view_info('V_BAR1', 'USER1);
 <tr>
 <th valign="top">
 
-OwnerName
+Owner
+
+Name
 
 </th>
 <th valign="top">
 
-ViewName
+View
+
+Name
 
 </th>
 <th valign="top">
@@ -927,17 +930,44 @@ Status
 </th>
 <th valign="top">
 
-DataStatus
+Data
+
+Status
 
 </th>
 <th valign="top">
 
-ViewLastRefreshed
+ViewLast
+
+Refreshed
 
 </th>
 <th valign="top">
 
-DataLastModified
+DataLast
+
+Modified
+
+</th>
+<th valign="top">
+
+AvailFor
+
+Optimization
+
+</th>
+<th valign="top">
+
+Refresh
+
+Type
+
+</th>
+<th valign="top">
+
+Build
+
+Type
 
 </th>
 </tr>
@@ -972,36 +1002,6 @@ NULL
 NULL
 
 </td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="3">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-AvailForOptimization
-
-</th>
-<th valign="top">
-
-RefreshType
-
-</th>
-<th valign="top">
-
-BuildType
-
-</th>
-</tr>
-<tr>
 <td valign="top">
 
 D
@@ -1033,5 +1033,5 @@ F
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-817277b.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_materialized_view_info System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/81765cf86ce21014a6c5cb4c15fd4d22.html "Returns information about the specified materialized views.") :arrow_upper_right:
+[sa_materialized_view_info System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/81765cf86ce21014a6c5cb4c15fd4d22.html "Returns information about the specified materialized views.") :arrow_upper_right:
 

@@ -201,5 +201,5 @@ GRANT ROLE Sales_Role TO Sally WITH ADMIN OPTION;
 
 [REVOKE ROLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](revoke-role-statement-for-data-lake-relational-engine-sap-hana-db-managed-189a04b.md "Removes a users membership in a role or his or her ability to administer the role.")
 
-[GRANT ROLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a3e379cc84f21015bccfaff98164bf01.html "Grants roles to users or other roles, with or without administrative rights.") :arrow_upper_right:
+[GRANT ROLE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a3e379cc84f21015bccfaff98164bf01.html "Grants roles to users or other roles, with or without administrative rights.") :arrow_upper_right:
 

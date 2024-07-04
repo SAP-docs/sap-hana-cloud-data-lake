@@ -151,7 +151,7 @@ REFRESH MATERIALIZED VIEW EmployeeConfid99 FORCE BUILD;
 
 [ALTER MATERIALIZED VIEW Statement for Data Lake Relational Engine](alter-materialized-view-statement-for-data-lake-relational-engine-d958953.md "Alters a materialized view.")
 
-[REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/817277ba6ce21014a14fa76ab2f0e6e1.html "Initializes or refreshes the data in a materialized view by executing its query definition.") :arrow_upper_right:
+[REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/817277ba6ce21014a14fa76ab2f0e6e1.html "Initializes or refreshes the data in a materialized view by executing its query definition.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

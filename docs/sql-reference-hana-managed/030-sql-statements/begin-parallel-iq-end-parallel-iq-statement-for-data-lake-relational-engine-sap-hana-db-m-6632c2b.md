@@ -125,9 +125,9 @@ END PARALLEL IQ
 **Related Information**  
 
 
-[Concurrent Column Indexing](https://help.sap.com/viewer/73fdfc5f80f6433681c19b2b5a2cda6b/2024_1_QRC/en-US/a7233eb384f21015a814a783690486c0.html "In some cases, you can create more than one column index simultaneously.") :arrow_upper_right:
+[Concurrent Column Indexing in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/73fdfc5f80f6433681c19b2b5a2cda6b/2024_3_QRC/en-US/a7233eb384f21015a814a783690486c0.html "Create more than one column index simultaneously.") :arrow_upper_right:
 
 [CREATE INDEX Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-index-statement-for-data-lake-relational-engine-sap-hana-db-managed-afc9ba6.md "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.")
 
-[BEGIN PARALLEL IQ … END PARALLEL IQ Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a614601884f21015b474d353173fad17.html "Groups CREATE INDEX statements together for execution at the same time.") :arrow_upper_right:
+[BEGIN PARALLEL IQ … END PARALLEL IQ Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a614601884f21015b474d353173fad17.html "Groups CREATE INDEX statements together for execution at the same time.") :arrow_upper_right:
 

@@ -129,7 +129,7 @@ CREATE\_HG\_WITH\_EXACT\_DISTINCTS determines whether the database engine create
 -   If CREATE\_HG\_WITH\_EXACT\_DISTINCTS='ON' – all subsequent HG indexes explicitly created with a CREATE INDEX command or implicitly creating or altering a table with a PRIMARY KEY or a FOREIGN KEY declaration, will be non-tiered HG indexes.
 -   If CREATE\_HG\_WITH\_EXACT\_DISTINCTS='OFF' – all subsequent HG indexes explicitly created with a CREATE INDEX command or implicitly creating or altering a table with a PRIMARY KEY or a FOREIGN KEY declaration, will be tiered HG.
 
-This option is ON by default in all newly created 16.1 databases. To take advantage of the tiered structure, set this option to OFF. Use sp\_iqrebuildindex to convert non-tiered HG indexes to tiered HG and vice versa.
+This option is ON by default in all newly created databases. To take advantage of the tiered structure, set this option to OFF. Use sp\_iqrebuildindex to convert non-tiered HG indexes to tiered HG and vice versa.
 
 **Related Information**  
 

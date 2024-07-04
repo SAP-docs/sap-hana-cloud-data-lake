@@ -102,5 +102,5 @@ DROP PROCEDURE myprocedure1;
 
 [CREATE PROCEDURE Statement for Data Lake Relational Engine](create-procedure-statement-for-data-lake-relational-engine-a6185b2.md "Creates a new user-defined SQL procedure in the database.")
 
-[DROP PROCEDURE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/86898fa1ad8546c58b0dfa704077a491.html "Removes a user-defined procedure from the database.") :arrow_upper_right:
+[DROP PROCEDURE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/86898fa1ad8546c58b0dfa704077a491.html "Removes a user-defined procedure from the database.") :arrow_upper_right:
 

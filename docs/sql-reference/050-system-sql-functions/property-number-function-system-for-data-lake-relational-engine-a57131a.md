@@ -60,7 +60,7 @@ INT
 
 <a name="loioa57131a184f2101585959e45321b1e95__iq_refbb_890"/>
 
-## Example
+## Examples
 
 The following statement returns an integer value:
 

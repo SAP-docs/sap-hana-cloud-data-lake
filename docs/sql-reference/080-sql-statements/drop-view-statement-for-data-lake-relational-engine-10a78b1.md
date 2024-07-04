@@ -111,5 +111,5 @@ DROP IF EXISTS VIEW myview1;
 
 [ALTER VIEW Statement for Data Lake Relational Engine](alter-view-statement-for-data-lake-relational-engine-a613cd2.md "Replaces a view definition with a modified version.")
 
-[DROP VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3c389d94400946ca86449766a70a2877.html "Removes a view from the database.") :arrow_upper_right:
+[DROP VIEW Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/3c389d94400946ca86449766a70a2877.html "Removes a view from the database.") :arrow_upper_right:
 

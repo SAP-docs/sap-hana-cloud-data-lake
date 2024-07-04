@@ -102,5 +102,5 @@ The second syntax returns the number of whole seconds from the first date/time t
 **Related Information**  
 
 
-[SECONDS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/18801f8db2164f1ea0dfdfbe99a38520.html "Returns the number of seconds since an arbitrary starting date and time, the number of seconds between two times, or adds an integer amount of seconds to a time.") :arrow_upper_right:
+[SECONDS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/18801f8db2164f1ea0dfdfbe99a38520.html "Returns the number of seconds since an arbitrary starting date and time, the number of seconds between two times, or adds an integer amount of seconds to a time.") :arrow_upper_right:
 

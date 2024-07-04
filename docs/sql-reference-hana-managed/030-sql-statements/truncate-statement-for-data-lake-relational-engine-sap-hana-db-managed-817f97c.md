@@ -96,7 +96,7 @@ The TRUNCATE statement deletes all rows from the materialized view.
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](refresh-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-817277b.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[TRUNCATE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a627e60884f21015aecdf8c062900097.html "Deletes all rows from a table or materialized view without deleting the table definition.") :arrow_upper_right:
-
 [DROP MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-50e7633.md "Removes a data type from the database.")
+
+[TRUNCATE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a627e60884f21015aecdf8c062900097.html "Deletes all rows from a table or materialized view without deleting the table definition.") :arrow_upper_right:
 

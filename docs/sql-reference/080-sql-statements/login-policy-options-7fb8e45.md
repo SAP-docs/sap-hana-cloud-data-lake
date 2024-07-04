@@ -6,6 +6,8 @@ Available options for CUSTOMER\_ROOT and user-defined login policies.
 
 
 
+CUSTOMER\_ROOT uses the default value for each option.
+
 
 <table>
 <tr>

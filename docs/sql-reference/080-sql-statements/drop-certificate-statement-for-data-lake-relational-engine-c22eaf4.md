@@ -1,6 +1,6 @@
 <!-- loioc22eaf42bb524cc58ef660f84743c934 -->
 
-# DROP CERTIFICATE STATEMENT for Data Lake Relational Engine
+# DROP CERTIFICATE Statement for Data Lake Relational Engine
 
 Drops a certificate from the database.
 
@@ -106,5 +106,5 @@ DROP CERTIFICATE mycert1;
 
 [CREATE CERTIFICATE Statement for Data Lake Relational Engine](create-certificate-statement-for-data-lake-relational-engine-816b6bb.md "Adds or replaces a certificate in the database using the given file or string.")
 
-[DROP CERTIFICATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/5823712c23734d86b5498688b5a0b0df.html "Drops a certificate from the database.") :arrow_upper_right:
+[DROP CERTIFICATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/5823712c23734d86b5498688b5a0b0df.html "Drops a certificate from the database.") :arrow_upper_right:
 

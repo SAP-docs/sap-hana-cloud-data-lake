@@ -86,5 +86,5 @@ SELECT BYTE_STUFF(0xfedcba9876543210, 6, 0, 0x123456);
 **Related Information**  
 
 
-[BYTE_STUFF Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/538f342383bd4520a088b814fc76ac65.html "Deletes multiple bytes from one string and replaces them with different bytes.") :arrow_upper_right:
+[BYTE_STUFF Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/538f342383bd4520a088b814fc76ac65.html "Deletes multiple bytes from one string and replaces them with different bytes.") :arrow_upper_right:
 

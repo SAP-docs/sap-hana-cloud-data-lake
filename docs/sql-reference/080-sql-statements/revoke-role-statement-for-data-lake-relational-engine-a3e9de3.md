@@ -63,7 +63,7 @@ Must be the name of an existing user or role that has a login password. Separate
 </b></dt>
 <dd>
 
-Specify the ADMIN OPTION FOR clause to revoke administration rights for the role, but leave exercise rights. Specify the EXERCISE OPTION FOR clause to revoke exercise rights for the role, but leave administration rights. If the clause is not specified, both rights are revoked.
+Specify the ADMIN OPTION FOR clause to revoke administration rights only for the role, but leave membership rights on the role. Specify the EXERCISE OPTION FOR clause to revoke membership rights from the role, but leave administration rights. If the clause is not specified, both rights are revoked.
 
 
 
@@ -123,5 +123,5 @@ REVOKE ROLE role1 FROM user1;
 
 [GRANT ROLE Statement for Data Lake Relational Engine](grant-role-statement-for-data-lake-relational-engine-a3e379c.md "Grants roles to users or other roles, with or without administrative rights.")
 
-[REVOKE ROLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/189a04b4a6cb4098bebcc34f16a78afb.html "Removes a users membership in a role or his or her ability to administer the role.") :arrow_upper_right:
+[REVOKE ROLE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/189a04b4a6cb4098bebcc34f16a78afb.html "Removes a users membership in a role or his or her ability to administer the role.") :arrow_upper_right:
 

@@ -86,5 +86,5 @@ SELECT BYTE_STUFF(0xfedcba9876543210, 6, 0, 0x123456);
 **Related Information**  
 
 
-[BYTE_STUFF Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/81f4257b6ce21014b495a59f54e5e617.html "Deletes multiple bytes from one string and replaces them with different bytes.") :arrow_upper_right:
+[BYTE_STUFF Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/81f4257b6ce21014b495a59f54e5e617.html "Deletes multiple bytes from one string and replaces them with different bytes.") :arrow_upper_right:
 

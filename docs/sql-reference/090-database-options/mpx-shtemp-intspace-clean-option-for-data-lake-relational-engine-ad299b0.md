@@ -79,5 +79,5 @@ When set to ON, MPX\_SHTEMP\_INTSPACE\_CLEAN changes all intermediate unallocate
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[sp\_iqsharedtempdistrib Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqsharedtempdistrib-procedure-for-data-lake-relational-engine-a23b73a.md "Shows the current shared temp space usage distribution. If run from the coordinator, sp_iqsharedtempdistrib displays shared temp space distribution for all nodes. If run from a worker node, displays shared temp space usage for only that node.")
+[sp\_iqsharedtempdistrib System Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqsharedtempdistrib-system-procedure-for-data-lake-relational-engine-a23b73a.md "Shows the current shared temp space usage distribution. If run from the coordinator, sp_iqsharedtempdistrib displays shared temp space distribution for all nodes. If run from a worker node, displays shared temp space usage for only that node.")
 

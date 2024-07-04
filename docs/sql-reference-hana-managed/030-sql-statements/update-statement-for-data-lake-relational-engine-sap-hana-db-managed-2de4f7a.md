@@ -65,7 +65,7 @@ Use the SET clause to set column names or variables to the specified expression.
 Use the SET clause to set the column to a computed column value by using this format:
 
 ```
-SET <column-name> = <expression>, ...;
+SET <column-name> = <expression>, ...
 ```
 
 Each specified column is set to the value of the expression. There are no restrictions on *<expression\>*. If *<expression\>* is a *<column-name\>*, then the previous value from that column is used.
@@ -75,7 +75,7 @@ If a column has a default defined, then use the SET clause to set a column to it
 You can also use the SET clause to assign a variable by using the following format:
 
 ```
-SET @<variable-name> = <expression>, ...;
+SET @<variable-name> = <expression>, ...
 ```
 
 The *<owner\>* specification is only for use with database-scope variables.
@@ -335,5 +335,5 @@ Requires one of:
 
 [TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-sap-hana-db-managed-7ea796c.md "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.")
 
-[UPDATE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a628441e84f21015a952a4b8bd52ee72.html "Modifies existing rows of a single table, or a view that contains only one table.") :arrow_upper_right:
+[UPDATE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a628441e84f21015a952a4b8bd52ee72.html "Modifies existing rows of a single table, or a view that contains only one table.") :arrow_upper_right:
 

@@ -41,7 +41,7 @@ CREATE X509 PROVIDER <x509_provider_name> <issuer_clause> [ <matching_rules_clau
 Specifies the unique name of an X.509 provider.
 
 ```
-<x509_provider_name> ::= <simple_identifier>;
+<x509_provider_name> ::= <simple_identifier>
 ```
 
 
@@ -58,7 +58,7 @@ Sets the issuer distinguished name for the provider.
 ```
 <issuer_clause> ::= WITH ISSUER <issuer_distinguished_name>
 
-<issuer_distinguished_name> ::= <string_literal>;
+<issuer_distinguished_name> ::= <string_literal>
 ```
 
 
@@ -76,10 +76,10 @@ Specifies one or more rules for matching external identities to database users. 
 <matching_rules_clause> ::= MATCHING RULES '<subject_distinguished_name_mapping>'
 [, '<subject_distinguished_name_mapping>' ... ]
 
-<subject_distinguished_name_mapping> ::= <string_literal>;
+<subject_distinguished_name_mapping> ::= <string_literal>
 ```
 
-Matching rules are tried in the same order they are defined in the provider, and the first one that matches is used. For additional information on matching rules, see [X.509 Certificate-Based User Authentication](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/c9bf672bbc2849568a1ff1d2fbc9a78d.html "Data lake Relational Engine supports X.509 client certificates for user authentication.") :arrow_upper_right:.
+Matching rules are tried in the same order they are defined in the provider, and the first one that matches is used. For additional information on matching rules, see [X.509 Certificate-Based User Authentication](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/c9bf672bbc2849568a1ff1d2fbc9a78d.html "Data lake Relational Engine supports X.509 client certificates for user authentication.") :arrow_upper_right:.
 
 
 
@@ -125,7 +125,7 @@ CREATE X509 PROVIDER MyProvider2
 
 [DROP PROVIDER Statement for Data Lake Relational Engine](drop-provider-statement-for-data-lake-relational-engine-c20d71c.md "Drops a JWT or x509 provider from the data lake Relational Engine database.")
 
-[X.509 Certificate-Based User Authentication](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/c9bf672bbc2849568a1ff1d2fbc9a78d.html "Data lake Relational Engine supports X.509 client certificates for user authentication.") :arrow_upper_right:
+[X.509 Certificate-Based User Authentication](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/c9bf672bbc2849568a1ff1d2fbc9a78d.html "Data lake Relational Engine supports X.509 client certificates for user authentication.") :arrow_upper_right:
 
 [SYSX509LOGINMAP System View for Data Lake Relational Engine](../070-system-and-monitoring-views/sysx509loginmap-system-view-for-data-lake-relational-engine-216c79a.md "The SYSX509LOGINMAP system view lists the X509 certificate-to-user mappings configured in the data lake Relational Engine database.")
 

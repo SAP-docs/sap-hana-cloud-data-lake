@@ -43,7 +43,7 @@ REVOKE X509 LOGIN FROM [ ( { <external_identity> [, ...] | ANY AS USER <userid> 
 Specifies the external identity that was used to map to a data lake Relational Engine user.
 
 ```
-<external_identity> ::= <string_literal>;
+<external_identity> ::= <string_literal>
 ```
 
 
@@ -58,7 +58,7 @@ Specifies the external identity that was used to map to a data lake Relational E
 Specifies the existing data lake Relational Engine user to remove X.509 mappings from.
 
 ```
-<userid> ::= <simple_identifier>;
+<userid> ::= <simple_identifier>
 ```
 
 
@@ -73,7 +73,7 @@ Specifies the existing data lake Relational Engine user to remove X.509 mappings
 Specifies the existing X.509 provider to unmap from the user.
 
 ```
-<x509_provider_name> ::= <simple_identifier>;
+<x509_provider_name> ::= <simple_identifier>
 ```
 
 

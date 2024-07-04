@@ -139,7 +139,7 @@ LOGIN POLICY Test1 FORCE PASSWORD CHANGE ON;
 
 [DROP USER Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-user-statement-for-data-lake-relational-engine-sap-hana-db-managed-d94380c.md "Removes a user.")
 
-[CREATE USER Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a619a5f184f210158155ea1a4fe03da8.html "Creates a user.") :arrow_upper_right:
+[CREATE USER Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a619a5f184f210158155ea1a4fe03da8.html "Creates a user.") :arrow_upper_right:
 
-[User ID and Password Restrictions and Considerations](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a46126b284f21015bae2a1c9bb31c205.html "A user must have a user ID and password to connect to the database.") :arrow_upper_right:
+[User ID and Password Restrictions and Considerations](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/a46126b284f21015bae2a1c9bb31c205.html "A user must have a user ID and password to connect to the database.") :arrow_upper_right:
 

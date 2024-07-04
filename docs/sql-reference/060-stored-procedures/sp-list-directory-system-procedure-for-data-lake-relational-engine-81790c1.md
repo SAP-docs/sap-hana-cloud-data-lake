@@ -202,7 +202,8 @@ These columns are useful for diagnostics:
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
+-   EXECUTE object-level privilege on the sp\_real\_list\_directory procedure
 -   READ FILE system privilege
 
 
@@ -233,7 +234,7 @@ Not in the standard.
 
 ## Examples
 
-The following example lists the files and subdirectories for diagnostic logs, one level down.
+This example returns the files and subdirectories for diagnostic logs, one level down.
 
 ```
 CALL sp_list_directory( '/diag/logs','1');
@@ -249,12 +250,16 @@ file\_path
 </th>
 <th valign="top">
 
-file\_type
+file\_
+
+type
 
 </th>
 <th valign="top">
 
-file\_size
+file\_
+
+size
 
 </th>
 <th valign="top">
@@ -372,7 +377,7 @@ drwxr-x---
 **Related Information**  
 
 
-[sp_list_directory System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3bdb623038354a3b9f12503766abe7c1.html "Returns information about the files and subdirectories in a specified directory.") :arrow_upper_right:
+[sp_list_directory System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/3bdb623038354a3b9f12503766abe7c1.html "Returns information about the files and subdirectories in a specified directory.") :arrow_upper_right:
 
-[sp_list_etd_files System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/0f76c8361cd84a2b8b35f74382b9265f.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
+[sp_list_etd_files System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/0f76c8361cd84a2b8b35f74382b9265f.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
 

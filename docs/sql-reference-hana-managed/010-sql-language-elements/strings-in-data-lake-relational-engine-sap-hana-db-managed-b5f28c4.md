@@ -58,5 +58,5 @@ For compatibility with SAP Adaptive Server Enterprise, you can set the `QUOTED_I
 **Related Information**  
 
 
-[Strings in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a4ed4ede84f21015a8499167b3f9d18a.html "Strings are either literal strings, or expressions with CHAR or VARCHAR data types.") :arrow_upper_right:
+[Strings in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a4ed4ede84f21015a8499167b3f9d18a.html "Strings are either literal strings, or expressions with CHAR or VARCHAR data types.") :arrow_upper_right:
 

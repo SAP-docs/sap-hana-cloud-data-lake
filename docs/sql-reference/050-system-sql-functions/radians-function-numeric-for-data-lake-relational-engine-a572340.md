@@ -52,7 +52,7 @@ DOUBLE
 
 <a name="loioa572340384f21015b1d3dab0d7a76062__RADIANS_examples1"/>
 
-## Example
+## Examples
 
 The following statement returns a value of approximately 0.5236:
 
@@ -63,5 +63,5 @@ SELECT RADIANS( 30 ) FROM iq_dummy;
 **Related Information**  
 
 
-[RADIANS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/dbeab0046dff49e89f016a8496e978f8.html "Converts a number from degrees to radians.") :arrow_upper_right:
+[RADIANS Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/dbeab0046dff49e89f016a8496e978f8.html "Converts a number from degrees to radians.") :arrow_upper_right:
 

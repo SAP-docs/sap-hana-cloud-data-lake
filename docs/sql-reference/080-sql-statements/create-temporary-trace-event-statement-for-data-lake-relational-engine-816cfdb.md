@@ -251,5 +251,5 @@ CREATE TEMPORARY TRACE EVENT my_event( id INTEGER, information LONG VARCHAR );
 
 [DROP TRACE EVENT Statement for Data Lake Relational Engine](drop-trace-event-statement-for-data-lake-relational-engine-816f81a.md "Drops a user-defined trace event.")
 
-[CREATE TEMPORARY TRACE EVENT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/648c6bf7ab2444cd8182c4a06d3dad86.html "Creates a user trace event that persists until the database is stopped.") :arrow_upper_right:
+[CREATE TEMPORARY TRACE EVENT Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/648c6bf7ab2444cd8182c4a06d3dad86.html "Creates a user trace event that persists until the database is stopped.") :arrow_upper_right:
 

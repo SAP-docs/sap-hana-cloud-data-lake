@@ -87,18 +87,18 @@ If the first expression is the NULL value, then the value of the second expressi
 -   The following statement returns the value expression: -66:
 
     ```
-    SELECT IFNULL( NULL, -66 ) FROM dbo.iq_dummy;
+    SELECT IFNULL( NULL, -66 ) FROM iq_dummy;
     ```
 
 -   The following statement returns NULL, because the first expression isn’t NULL and there’s no third:
 
     ```
-    SELECT IFNULL( -66, -66 ) FROM dbo.iq_dummy;
+    SELECT IFNULL( -66, -66 ) FROM iq_dummy;
     ```
 
 
 **Related Information**  
 
 
-[IFNULL Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a557e29b84f21015b460f69ff0fed6da.html "Returns the first non-null expression, or NULL.") :arrow_upper_right:
+[IFNULL Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a557e29b84f21015b460f69ff0fed6da.html "Returns the first non-null expression, or NULL.") :arrow_upper_right:
 

@@ -26,7 +26,7 @@ sa_list_statements( )
 
 ## Parameters
 
-None
+None.
 
 
 
@@ -201,19 +201,19 @@ The SQLStatement column is rewritten from the original text due to semantic tran
 
 ## Privileges
 
-None
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-This example uses the sa\_list\_statements system procedure to return the list of statements for the connection:
+This example returns the list of statements for the connection:
 
 ```
 CALL sa_list_statements();
@@ -229,17 +229,51 @@ handle
 </th>
 <th valign="top">
 
-statement\_number
+statement\_
+
+number
 
 </th>
 <th valign="top">
 
-num\_client\_prepares
+num\_client\_
+
+prepares
 
 </th>
 <th valign="top">
 
-num\_opens
+num\_
+
+opens
+
+</th>
+<th valign="top">
+
+schema\_
+
+version\_
+
+on\_create
+
+</th>
+<th valign="top">
+
+dropped\_
+
+by\_app
+
+</th>
+<th valign="top">
+
+invalid\_cached\_
+
+statement
+
+</th>
+<th valign="top">
+
+SQLStatement
 
 </th>
 </tr>
@@ -264,85 +298,6 @@ num\_opens
 0
 
 </td>
-</tr>
-<tr>
-<td valign="top">
-
-131098
-
-</td>
-<td valign="top">
-
-2
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-65552
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="4">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-schema\_version\_on\_create
-
-</th>
-<th valign="top">
-
-dropped\_by\_app
-
-</th>
-<th valign="top">
-
-invalid\_cached\_statement
-
-</th>
-<th valign="top">
-
-SQLStatement
-
-</th>
-</tr>
-<tr>
 <td valign="top">
 
 1629
@@ -367,6 +322,26 @@ call sa\_list\_statements\(\)
 <tr>
 <td valign="top">
 
+131098
+
+</td>
+<td valign="top">
+
+2
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
 1568
 
 </td>
@@ -387,6 +362,26 @@ call sa\_ansi\_standard\_packages\('SQL:2003' 'SELECT \* \\x0D\\x0A FROM t1'\)
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+65552
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+0
+
+</td>
 <td valign="top">
 
 1552
@@ -413,8 +408,6 @@ call sp\_iqsysmon\('00:00:10'\)
 This example returns the list of statements that contribute to the max\_statement\_count resource governor:
 
 ```
-SELECT *
-FROM sa_list_statements()
-WHERE dropped_by_app=0;
+SELECT * FROM sa_list_statements() WHERE dropped_by_app=0;
 ```
 

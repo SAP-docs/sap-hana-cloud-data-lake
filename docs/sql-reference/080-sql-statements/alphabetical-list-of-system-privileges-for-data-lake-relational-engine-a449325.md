@@ -108,7 +108,7 @@ ALTER ANY TABLE
 </td>
 <td valign="top">
 
--   Alter and comment on tables \(including proxy tables\) owned by any user.
+-   Alter sequence generators owned by anyAlter and comment on tables \(including proxy tables\) owned by any user.
 -   Truncate tables, table partitions, or views owned by any user.
 -   Comment on tables \(including proxy tables\) and columns in tables owned by any user.
 
@@ -175,7 +175,7 @@ ALTER TABLE FILES SERVICE
 </td>
 <td valign="top">
 
-Ater an external catalog table and add or drop a datasource in SQL on Files.
+Alter an external catalog table and add or drop a datasource in SQL on Files.
 
 </td>
 </tr>
@@ -211,11 +211,7 @@ CHANGE PASSWORD
 </td>
 <td valign="top">
 
-Manage user passwords for any user.
-
-This system privilege can apply to all users, or it can be limited to a set of specified users, or users who are granted one or more specified roles.
-
-This system privilege is not required to change a user's own password.
+Manage user passwords for any user. This system privilege can apply to all users, or it can be limited to a set of specified users, or users who are granted one or more specified roles.This system privilege is not required to change a user's own password.
 
 </td>
 </tr>
@@ -228,6 +224,18 @@ CHECKPOINT
 <td valign="top">
 
 Force the database server to execute a checkpoint.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+COMMENT ANY OBJECT
+
+</td>
+<td valign="top">
+
+Allows a user to comment on any type of object owned by any user that can be created using the CREATE ANY OBJECT system privilege.
 
 </td>
 </tr>
@@ -424,11 +432,7 @@ CREATE EXTERNAL REFERENCE
 </td>
 <td valign="top">
 
-Create external references in the database.
-
-You need the system privileges required to create specific database objects before you can create external references.
-
-For example, creating a self-owned text configuration object that uses an external term breaker requires both the CREATE TEXT CONFIGURATION and CREATE EXTERNAL REFERENCE system privileges.
+Create external references in the database. You need the system privileges required to create specific database objects before you can create external references. For example, creating a self-owned text configuration object that uses an external term breaker requires both the CREATE TEXT CONFIGURATION and CREATE EXTERNAL REFERENCE system privileges.
 
 </td>
 </tr>
@@ -838,18 +842,6 @@ Create, alter, drop, trigger, and comment on any event in the database.
 <tr>
 <td valign="top">
 
-MANAGE ANY EXTERNAL OBJECT
-
-</td>
-<td valign="top">
-
-Install, comment on, and remove external environment objects.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
 MANAGE ANY LDAP SERVER
 
 </td>
@@ -885,6 +877,18 @@ MANAGE ANY OBJECT PRIVILEGE
 -   Grant and revoke USAGE object-level privileges on sequence generators owned by any user.
 
 
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+MANAGE ANY OLD TABLE VERSION
+
+</td>
+<td valign="top">
+
+Unpin any pin requests.
 
 </td>
 </tr>
@@ -985,6 +989,18 @@ MANAGE EVENT
 <td valign="top">
 
 Create, alter, drop, trigger, and comment on events owned by self.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+MANAGE OLD TABLE VERSION
+
+</td>
+<td valign="top">
+
+Unpin only the requests created by self.
 
 </td>
 </tr>
@@ -1193,20 +1209,6 @@ SET ANY USER DEFINED OPTION
 <td valign="top">
 
 Set user-defined database options.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-SET USER
-
-</td>
-<td valign="top">
-
-Temporarily assume the roles and privileges of another user.
-
-This system privilege can apply to all users, or can be limited to a set of specified users, or users who are granted one or more specified roles.
 
 </td>
 </tr>

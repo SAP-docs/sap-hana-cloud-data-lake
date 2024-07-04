@@ -67,7 +67,7 @@ Use the SET clause to set column names or variables to the specified expression.
 Use the SET clause to set the column to a computed column value by using this format:
 
 ```
-SET <column-name> = <expression>, ...;
+SET <column-name> = <expression>, ...
 ```
 
 Each specified column is set to the value of the expression. There are no restrictions on *<expression\>*. If *<expression\>* is a *<column-name\>*, then the previous value from that column is used.
@@ -77,7 +77,7 @@ If a column has a default defined, then use the SET clause to set a column to it
 You can also use the SET clause to assign a variable by using the following format:
 
 ```
-SET @<variable-name> = <expression>, ...;
+SET @<variable-name> = <expression>, ...
 ```
 
 The *<owner\>* specification is only for use with database-scope variables.
@@ -330,7 +330,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 
 [TIMESTAMP Data Type Precision in Data Lake Relational Engine](../020-sql-data-types/timestamp-data-type-precision-in-data-lake-relational-engine-520ce6c.md "Precision conflicts between TIMESTAMP data types result in data loss.")
 
-[UPDATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/2de4f7ac0a4244d597b33cb572ca1d8f.html "Modifies existing rows of a single table, or a view that contains only one table.") :arrow_upper_right:
+[UPDATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/2de4f7ac0a4244d597b33cb572ca1d8f.html "Modifies existing rows of a single table, or a view that contains only one table.") :arrow_upper_right:
 
 [TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine](../090-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-dbb08c7.md "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.")
 

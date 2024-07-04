@@ -167,7 +167,11 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </b></dt>
 <dd>
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires all of the following:
+
+-   EXECUTE object-level privilege on this procedure
+-   MANAGE ANY TRACE SESSION system privilege
+-   MANAGE AUDITING system privilege
 
 
 
@@ -180,13 +184,13 @@ Requires EXECUTE object-level privilege on the procedure.
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-This statement returns a list of trace event sessions for the current database:
+This example returns a list of trace event sessions for the current database:
 
 ```
 CALL sp_trace_event_sessions( );
@@ -304,7 +308,7 @@ NULL
 </tr>
 </table>
 
-This statement returns information on the trace event session my\_session:
+This example returns information on the trace event session my\_session:
 
 ```
 CALL sp_trace_event_sessions('my_session' );
@@ -371,5 +375,5 @@ NULL
 **Related Information**  
 
 
-[sp_trace_event_sessions System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8179c9326ce210149a84c8b4621ed3d9.html "Returns a list of the trace event sessions that are defined for the database.") :arrow_upper_right:
+[sp_trace_event_sessions System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/8179c9326ce210149a84c8b4621ed3d9.html "Returns a list of the trace event sessions that are defined for the database.") :arrow_upper_right:
 

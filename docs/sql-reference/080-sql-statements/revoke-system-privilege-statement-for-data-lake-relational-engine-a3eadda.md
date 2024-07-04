@@ -109,7 +109,7 @@ See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-sys
 **Related Information**  
 
 
-[REVOKE Object-Level Privilege Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/f14139fa124d4e5da23c1da6a5009417.html "Removes object-level privileges that were given using the GRANT statement.") :arrow_upper_right:
+[GRANT System Privilege Statement for Data Lake Relational Engine](grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md "Grants specific system privileges to users or roles, with or without administrative rights.")
 
-[REVOKE System Privilege Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/2a45ac0bacf44b879b464c83767c2f48.html "Removes specific system privileges from specific users and the right to administer the privilege.") :arrow_upper_right:
+[REVOKE System Privilege Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/2a45ac0bacf44b879b464c83767c2f48.html "Removes specific system privileges from specific users and the right to administer the privilege.") :arrow_upper_right:
 

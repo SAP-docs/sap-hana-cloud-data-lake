@@ -164,7 +164,7 @@ CREATE CREDENTIAL FOR COMPONENT 'SAPHDLRELOADUNLOAD' PURPOSE 'AccessHDLFS' TYPE 
 
 [SYSCREDENTIAL System View for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../070-system-views/syscredential-system-view-for-data-lake-relational-engine-sap-hana-db-managed-02e7127.md "Provides information about credentials for users and components.")
 
-[Secure Internal Credential Store in Data Lake Relational Engine](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/2448dedf04dc4606bb6983ce99f1e163.html "The credentials required by data lake Relational Engine for outbound connections are securely stored in a database-internal credential store.") :arrow_upper_right:
+[Secure Internal Credential Store in Data Lake Relational Engine](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/2448dedf04dc4606bb6983ce99f1e163.html "The credentials required by data lake Relational Engine for outbound connections are securely stored in a database-internal credential store.") :arrow_upper_right:
 
-[CREATE CREDENTIAL Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/642b4974ed3d4f0d81f0ce6faaea50fe.html "Creates a component-specific or application-specific credential.") :arrow_upper_right:
+[CREATE CREDENTIAL Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/642b4974ed3d4f0d81f0ce6faaea50fe.html "Creates a component-specific or application-specific credential.") :arrow_upper_right:
 

@@ -165,5 +165,5 @@ Automatic commit
 **Related Information**  
 
 
-[CREATE PROCEDURE Statement \[T-SQL\] for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/873f31b35574493f8d3a7974681eccb3.html "Creates a new procedure that is compatible with SAP Adaptive Server Enterprise.") :arrow_upper_right:
+[CREATE PROCEDURE Statement \[T-SQL\] for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/873f31b35574493f8d3a7974681eccb3.html "Creates a new procedure that is compatible with SAP Adaptive Server Enterprise.") :arrow_upper_right:
 

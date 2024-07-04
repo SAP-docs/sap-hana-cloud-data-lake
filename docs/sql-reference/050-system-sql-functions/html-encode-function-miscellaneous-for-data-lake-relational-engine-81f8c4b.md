@@ -176,5 +176,5 @@ SELECT HTML_ENCODE('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">');
 **Related Information**  
 
 
-[HTML_ENCODE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/93a8ffefb9d74ce5a0354d391cafc925.html "Encodes special characters within strings to be inserted into HTML documents.") :arrow_upper_right:
+[HTML_ENCODE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/93a8ffefb9d74ce5a0354d391cafc925.html "Encodes special characters within strings to be inserted into HTML documents.") :arrow_upper_right:
 

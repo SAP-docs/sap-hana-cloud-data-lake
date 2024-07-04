@@ -32,7 +32,7 @@ The default for the TIMESTAMP\_COLUMNS\_AS\_DATETIMEX database option depends on
 
 [TIMESTAMP\_COLUMNS\_AS\_DATETIMEX Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/timestamp-columns-as-datetimex-option-for-data-lake-relational-engine-sap-hana-db-managed-34e3540.md "Controls whether DATETIMEX data type columns are automatically created when TIMESTAMPS data type columns are requested.")
 
-[TIMESTAMP Data Type Precision in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/520ce6c6c90f47769eb2f1ddafa8bf49.html "Precision conflicts between TIMESTAMP data types result in data loss.") :arrow_upper_right:
+[TIMESTAMP Data Type Precision in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/520ce6c6c90f47769eb2f1ddafa8bf49.html "Precision conflicts between TIMESTAMP data types result in data loss.") :arrow_upper_right:
 
 [TIMESTAMP\_RTRUNCATION Option for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../040-database-options/timestamp-rtruncation-option-for-data-lake-relational-engine-sap-hana-db-managed-7ea796c.md "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.")
 

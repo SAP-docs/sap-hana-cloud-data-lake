@@ -33,7 +33,7 @@ BINARY
 Binary data of a specified maximum *<length\>* in bytes.
 
 ```
-BINARY [ ( <length> ) ];
+BINARY [ ( <length> ) ]
 ```
 
 If *<length\>* is omitted, then the default is 1 byte. The maximum size allowed is 32,767 bytes.
@@ -153,7 +153,7 @@ VARBINARY
 Binary data up to a specified *<max-length\>* in bytes.
 
 ```
-VARBINARY [ ( <length> ) ];
+VARBINARY [ ( <length> ) ]
 ```
 
 If *<length\>* is omitted, then the default is 1 byte. The maximum size allowed is \(32 K – 1\) bytes. Use the variable-length binary type VARBINARY for data that is expected to vary greatly in length.
@@ -301,7 +301,7 @@ Stores character data of arbitrary length. The maximum size in bytes is 2 GB min
 
 Multibyte characters can be stored as LONG VARCHAR, but the length is in bytes, not characters.
 
-VARCHARhas no blank padding is added to the storage of these strings.
+VARCHAR has no blank padding added to the storage of these strings.
 
 </td>
 </tr>
@@ -328,7 +328,7 @@ VARCHAR
 Stores arbitrary length character data.
 
 ```
-VARCHAR [ ( <max-length> [ BYTE | CHAR | CHARACTER ] ) ];
+VARCHAR [ ( <max-length> [ BYTE | CHAR | CHARACTER ] ) ]
 ```
 
 
@@ -349,7 +349,7 @@ If CHAR or CHARACTER \(character-length semantics\) is specified as part of the 
 </dd>
 </dl>
 
-VARCHARhas no blank padding added to the storage of these strings.
+VARCHAR has no blank padding added to the storage of these strings.
 
 All index types, except DATE, TIME, and DATETIME/TIMESTAMP are supported for VARCHAR data to a maximum of to 255 bytes in length. For VARCHAR using character-length semantic, the maximum byte length depends on the number of bytes used per character. The limit becomes 255 divided by the number of bytes per character.
 
@@ -474,7 +474,7 @@ BIGINT
 A signed 64-bit integer, requiring 8 bytes of storage.
 
 ```
-[ UNSIGNED ] BIGINT;
+[ UNSIGNED ] BIGINT
 ```
 
 You can specify integers as UNSIGNED. By default the data type is signed. Its range is between -9223372036854775808 and 9223372036854775807 \(signed\) or from 0 to 18446744073709551615 \(unsigned\).
@@ -492,7 +492,7 @@ DECIMAL
 A signed decimal number with *<precision\>* total digits and with *<scale\>* of the digits after the decimal point.
 
 ```
-DECIMAL [ ( <precision> [ , <scale> ] ) ];
+DECIMAL [ ( <precision> [ , <scale> ] ) ]
 ```
 
 *<precision\>* can equal 1 to 126, inclusive, specifying the number of digits in the expression. *<scale\>* can equal 0 up to precision value, specifying the number of digits after the decimal point. The defaults are scale = 38 and precision = 126. Results are calculated based on the actual data type of the column to ensure accuracy, but you can set the maximum scale of the result returned to the application using the MAX\_CLIENT\_NUMERIC\_SCALE option.
@@ -524,7 +524,7 @@ FLOAT
 Stores a floating-point number, which can be single or double precision.
 
 ```
-FLOAT [ ( <precision> ) ];
+FLOAT [ ( <precision> ) ]
 ```
 
 If *<precision\>* supplied, then the FLOAT data type is the same as the REAL or DOUBLE data type, depending on the value of the precision. The cutoff between REAL and DOUBLE is platform-dependent, and it is the number of bits used in the mantissa of single-precision floating point number on the platform. If not supplied, then the FLOAT data type is the same as the REAL data type.
@@ -546,7 +546,7 @@ INT or INTEGER
 Stores integers that require 4 bytes of storage.
 
 ```
-[ UNSIGNED ] INT[EGER];
+[ UNSIGNED ] INT[EGER]
 ```
 
 A signed 32-bit integer with a range of values between -2147483648 and 2147483647 requiring 4 bytes of storage.
@@ -580,7 +580,7 @@ NUMERIC
 Same as DECIMAL.
 
 ```
-NUMERIC [ ( <precision> [ , <scale> ] ) ];
+NUMERIC [ ( <precision> [ , <scale> ] ) ]
 ```
 
 

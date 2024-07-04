@@ -120,8 +120,7 @@ The function returns NULL if the specified file does not exist.
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
--   EXECUTE object-level privilege on the xp\_read\_real\_file procedure
+-   EXECUTE object-level privilege on this procedure
 -   READ FILE system privilege
 
 
@@ -155,5 +154,5 @@ NULL
 **Related Information**  
 
 
-[xp_read_file System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/3beb56b86c5f101495dbf54443bd191d.html "Reads a file and returns the contents of the file as a LONG BINARY variable.") :arrow_upper_right:
+[xp_read_file System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/3beb56b86c5f101495dbf54443bd191d.html "Reads a file and returns the contents of the file as a LONG BINARY variable.") :arrow_upper_right:
 

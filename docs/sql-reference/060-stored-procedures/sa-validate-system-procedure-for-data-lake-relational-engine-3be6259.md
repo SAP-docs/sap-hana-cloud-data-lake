@@ -308,15 +308,15 @@ The specified table\(s\), materialized view\(s\), or index\(es\) is validated. T
 
 You can validate disk pages for databases that use global or write checksums. If a database has global checksums enabled, then all database pages are validated. If a database has used only write checksums, then only pages with checksums are validated.
 
-For databases with checksums enabled, a checksum is calculated for each database page and this value is stored when the page is written to disk. You can use the Validation utility \(dbvalid\), the VALIDATE statement, the sa\_validate system procedure, or the Validate Database Wizard in SQL Central to perform checksum validation, which consists of reading the database pages from disk and calculating the checksum for the page. If the calculated checksum does not match the stored checksum for a page, the page has been modified or corrupted while on disk or while writing to the page. If one or more pages has been corrupted, an error is returned and information about the invalid pages appears in the database server messages window.
+For databases with checksums enabled, a checksum is calculated for each database page and this value is stored when the page is written to disk. You can use the Validation utility \(dbvalid\), the VALIDATE statement, or the sa\_validate system procedure to perform checksum validation, which consists of reading the database pages from disk and calculating the checksum for the page. If the calculated checksum does not match the stored checksum for a page, the page has been modified or corrupted while on disk or while writing to the page. If one or more pages has been corrupted, an error is returned and information about the invalid pages appears in the database server messages window.
 
 
 
 ## Privileges
 
-Requires all of:
+Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   VALIDATE ANY OBJECT system privilege
 
 
@@ -331,7 +331,7 @@ Automatic commit for both *<isolation\_type\>* options.
 
 ## Examples
 
-This example uses the sa\_validate system procedure to validate the database
+This example validates the database.
 
 ```
 CALL sa_validate( );
@@ -376,7 +376,7 @@ NULL
 </tr>
 </table>
 
-This example uses the sa\_validate system procedure to validate the tables and materialized views owned by user USER1:
+This example validates the tables and materialized views owned by user USER1.
 
 ```
 CALL sa_validate('user1');

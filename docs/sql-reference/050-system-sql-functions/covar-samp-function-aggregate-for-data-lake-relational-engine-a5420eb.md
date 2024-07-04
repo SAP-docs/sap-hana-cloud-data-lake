@@ -113,7 +113,7 @@ Syntax 2 – The *<window-spec\>* parameter represents usage as a window functio
 
 <a name="loioa5420eb484f21015be7f881364efd165__COVAR_SAMP_examples1"/>
 
-## Example
+## Examples
 
 The following example measures the strength of association between employee age and salary. This function returns the value 74782.946005:
 
@@ -124,5 +124,5 @@ SELECT COVAR_SAMP( Salary, ( 2008 - YEAR( BirthDate ) ) ) FROM Employees;
 **Related Information**  
 
 
-[COVAR_SAMP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3a064918478c4d47ab0da64c2d61cc3e.html "Returns the sample covariance of a set of number pairs.") :arrow_upper_right:
+[COVAR_SAMP Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/3a064918478c4d47ab0da64c2d61cc3e.html "Returns the sample covariance of a set of number pairs.") :arrow_upper_right:
 

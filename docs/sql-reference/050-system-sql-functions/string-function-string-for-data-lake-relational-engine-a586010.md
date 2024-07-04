@@ -68,7 +68,7 @@ If all parameters are NULL, `STRING` returns NULL.
 
 <a name="loioa586010d84f210158657b25cdb264bf0__STRING_example1"/>
 
-## Example
+## Examples
 
 The following statement returns the value testing123:
 
@@ -80,5 +80,5 @@ FROM iq_dummy;
 **Related Information**  
 
 
-[STRING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/4b6311065965472286c536537d380f53.html "Concatenates one or more strings into one large string.") :arrow_upper_right:
+[STRING Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/4b6311065965472286c536537d380f53.html "Concatenates one or more strings into one large string.") :arrow_upper_right:
 

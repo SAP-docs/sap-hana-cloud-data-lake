@@ -82,7 +82,7 @@ The `OVER` clause indicates that the function operates on a query result set. Th
 
 <a name="loio97741f155cc24e2ea035db70a29da3b0__section_i42_qnn_vrb"/>
 
-## Example
+## Examples
 
 The following example uses the `NTILE` function to determine the sale status of car dealers. The dealers are divided into four groups based on the number of cars each dealer sold. The dealers with `ntile = 1` are in the top 25% for car sales:
 
@@ -115,5 +115,5 @@ To find the top 10% of car dealers by sales, you specify `NTILE(10)` in the exam
 **Related Information**  
 
 
-[NTILE Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5695f3f84f21015a23ae9730b31eef2.html "Distributes query results into a specified number of buckets and assigns the bucket number to each row in the bucket.") :arrow_upper_right:
+[NTILE Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a5695f3f84f21015a23ae9730b31eef2.html "Distributes query results into a specified number of buckets and assigns the bucket number to each row in the bucket.") :arrow_upper_right:
 

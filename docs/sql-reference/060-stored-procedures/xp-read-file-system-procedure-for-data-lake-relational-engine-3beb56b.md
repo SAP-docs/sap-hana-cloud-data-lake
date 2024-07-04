@@ -117,8 +117,7 @@ The function returns NULL if the specified file does not exist.
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
--   EXECUTE object-level privilege on the xp\_read\_real\_file procedure
+-   EXECUTE object-level privilege on this procedure
 -   READ FILE system privilege
 
 
@@ -154,7 +153,7 @@ NULL
 **Related Information**  
 
 
-[xp_read_file System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3802bd2d3a464336b1abe16107b12e47.html "Reads a file and returns the contents of the file as a LONG BINARY variable.") :arrow_upper_right:
+[xp_read_file System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/3802bd2d3a464336b1abe16107b12e47.html "Reads a file and returns the contents of the file as a LONG BINARY variable.") :arrow_upper_right:
 
-[xp_sprintf System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/bcaf180e679e43d78733830fb7e4c2fa.html "Builds a result string from a set of input strings.") :arrow_upper_right:
+[xp_sprintf System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/bcaf180e679e43d78733830fb7e4c2fa.html "Builds a result string from a set of input strings.") :arrow_upper_right:
 

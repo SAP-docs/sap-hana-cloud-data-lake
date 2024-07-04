@@ -63,5 +63,5 @@ None
 
 [DECLARE CURSOR Statement \[ESQL\] \[SP\] for Data Lake Relational Engine](declare-cursor-statement-esql-sp-for-data-lake-relational-engine-a61ac0b.md "Declares a cursor. Cursors are the primary means for manipulating the results of queries.")
 
-[sp\_iqcursorinfo Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqcursorinfo-procedure-for-data-lake-relational-engine-a5a1c74.md "Displays detailed information about cursors currently open on the server.")
+[sp\_iqcursorinfo System Procedure for Data Lake Relational Engine](../060-stored-procedures/sp-iqcursorinfo-system-procedure-for-data-lake-relational-engine-a5a1c74.md "Displays detailed information about cursors currently open on the server.")
 

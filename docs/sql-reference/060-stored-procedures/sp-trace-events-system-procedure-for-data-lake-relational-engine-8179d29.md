@@ -276,7 +276,7 @@ DEBUG
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   MANAGE ANY TRACE SESSION system privilege
 -   MANAGE AUDITING system privilege
 
@@ -294,7 +294,7 @@ None.
 
 ## Examples
 
-This statement returns a list of all trace events:
+This example returns a list of all trace events:
 
 ```
 CALL sp_trace_events( );
@@ -397,114 +397,6 @@ Warning Console Log messages
 <td valign="top">
 
 150
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-SYS\_ConsoleLog\_Information
-
-</td>
-<td valign="top">
-
-Informational Console Log messages
-
-</td>
-<td valign="top">
-
-200
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-SYS\_Mirroring\_Log
-
-</td>
-<td valign="top">
-
-event for current mirror logging
-
-</td>
-<td valign="top">
-
-250
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-SYS\_RLL\_ReqConnect
-
-</td>
-<td valign="top">
-
-Request of CONNECT
-
-</td>
-<td valign="top">
-
-200
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-SYS\_RLL\_ResConnect
-
-</td>
-<td valign="top">
-
-Response of CONNECT
-
-</td>
-<td valign="top">
-
-200
 
 </td>
 <td valign="top">
@@ -705,7 +597,7 @@ event for current http logging
 **Related Information**  
 
 
-[sp_trace_events System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/9897bebbf9314d72a926d9adae52ead8.html "Returns information about the trace events in the database.") :arrow_upper_right:
+[sp_trace_events System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/9897bebbf9314d72a926d9adae52ead8.html "Returns information about the trace events in the database.") :arrow_upper_right:
 
 [CREATE TEMPORARY TRACE EVENT SESSION Statement for Data Lake Relational Engine](../080-sql-statements/create-temporary-trace-event-session-statement-for-data-lake-relational-engine-816cf4d.md "Creates a user trace event session.")
 

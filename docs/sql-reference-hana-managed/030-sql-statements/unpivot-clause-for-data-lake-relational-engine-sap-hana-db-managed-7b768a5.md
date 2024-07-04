@@ -6,6 +6,14 @@ Unpivots compatible-type columns of a table expression in a FROM clause \(FROM *
 
 
 
+<a name="loio7b768a5d681f4b35a2b1bbcd78ae04aa__window_clause_usage1"/>
+
+## Usage
+
+This SQL statement clause can only be used within the FROM clause in a SELECT statement.
+
+
+
 ```
 FROM <unpivoted-derived-table>
 
@@ -26,6 +34,11 @@ FOR <unpivot-column>
 IN ( <unpivot-old-column> [[ AS ] <unpivot-old-column-alias> ] [,...] )
 | IN ( ( <unpivot-old-column> [,...] ) [[ AS ] <unpivot-old-column-alias> ] [,...] )
 ```
+
+
+
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
 
 
 

@@ -29,7 +29,7 @@ sp_iqpinrequestinfo()
 
 ## Parameters
 
-None
+None.
 
 
 
@@ -251,10 +251,208 @@ None
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
+
+
+
+<a name="loiobb623feb1ed64078904a91ea30f70d98__section_xby_lyc_fbc"/>
+
+## Examples
+
+This example returns information about current pin requests.
+
+```
+CALL sp_iqpinrequestinfo();
+```
+
+
+<table>
+<tr>
+<th valign="top">
+
+pin\_id
+
+</th>
+<th valign="top">
+
+creator
+
+</th>
+<th valign="top">
+
+owner\_
+
+cookie
+
+</th>
+<th valign="top">
+
+pinned\_
+
+cid
+
+</th>
+<th valign="top">
+
+orig\_
+
+pinned\_cid
+
+</th>
+<th valign="top">
+
+txn\_id
+
+</th>
+<th valign="top">
+
+commit\_id
+
+</th>
+<th valign="top">
+
+unpinned\_
+
+at
+
+</th>
+<th valign="top">
+
+ref\_
+
+count
+
+</th>
+<th valign="top">
+
+pin
+
+\_time
+
+</th>
+<th valign="top">
+
+frozen\_
+
+time
+
+</th>
+<th valign="top">
+
+num\_
+
+tables
+
+</th>
+<th valign="top">
+
+frozen
+
+</th>
+<th valign="top">
+
+track
+
+\_updates
+
+</th>
+<th valign="top">
+
+obsolete
+
+</th>
+<th valign="top">
+
+servers
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+1355750401
+
+</td>
+<td valign="top">
+
+103
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+1323853
+
+</td>
+<td valign="top">
+
+1323975
+
+</td>
+<td valign="top">
+
+1323980
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+0
+
+</td>
+<td valign="top">
+
+38:30.0
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+1
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+<td valign="top">
+
+F
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+</tr>
+</table>
 
 **Related Information**  
 
 
-[sp_iqpinrequestinfo Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/d7eb871b0ea94bc9a20dc8a35a7d08c7.html "Displays information for all persisted pin requests including those that have been unpinned and waiting to be deleted when nobody uses it.") :arrow_upper_right:
+[sp_iqpinrequestinfo System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/d7eb871b0ea94bc9a20dc8a35a7d08c7.html "Displays information for all persisted pin requests including those that have been unpinned and waiting to be deleted when nobody uses it.") :arrow_upper_right:
 

@@ -441,9 +441,9 @@ SELECT username, LENGTH(password), CAST(DECRYPT(password, priv, 'RSA') AS VARCHA
 **Related Information**  
 
 
-[ENCRYPT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/ec24782b83b94e6ebfa99014d36aa61d.html "Encrypts the specified value using the supplied encryption key and returns a LONG BINARY value.") :arrow_upper_right:
+[ENCRYPT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/ec24782b83b94e6ebfa99014d36aa61d.html "Encrypts the specified value using the supplied encryption key and returns a LONG BINARY value.") :arrow_upper_right:
 
 [DECRYPT Function \[String\] for Data Lake Relational Engine](decrypt-function-string-for-data-lake-relational-engine-81f6b4a.md "Decrypts the string using the supplied key and returns a LONG BINARY value.")
 
-[Encryption Algorithm Aliases](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a7a8e3a5458e43bf8e405b6bd9c66ad9.html "The encryption algorithms for data lake Relational Engine data at rest have multiple aliases for compatibility across systems.") :arrow_upper_right:
+[Encryption Algorithm Aliases](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/a7a8e3a5458e43bf8e405b6bd9c66ad9.html "The encryption algorithms for data lake Relational Engine data at rest have multiple aliases for compatibility across systems.") :arrow_upper_right:
 

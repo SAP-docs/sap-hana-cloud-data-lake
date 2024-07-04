@@ -183,7 +183,7 @@ This procedure returns option information for one, or all, trace event sessions 
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   CALL sp\_trace\_event\_session\_events\( \);
 -   MANAGE ANY TRACE SESSION system privilege
 -   MANAGE AUDITING system privilege
 
@@ -201,16 +201,15 @@ None.
 
 ## Examples
 
-The following outputs assume the existence of a trace session named my\_session. To create this session, execute:
-
 ```
+--- Setup for the following examples ---
 CREATE OR REPLACE TEMPORARY TRACE EVENT SESSION my_session
    ADD TRACE EVENT my_event, 
    ADD TRACE EVENT SYS_ConsoleLog_Information 
    ADD TARGET FILE (SET filename_prefix='my_trace_file', [compressed]=1);
 ```
 
-This example shows the target options for the trace session my\_session:
+This example returns the target options for the trace session my\_session:
 
 ```
 CALL sp_trace_event_session_target_options('my_session');
@@ -304,5 +303,5 @@ compressed
 **Related Information**  
 
 
-[sp_trace_event_session_target_options System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/aae165896e5d4689b72835021f67795e.html "Lists the target options for a trace event session.") :arrow_upper_right:
+[sp_trace_event_session_target_options System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/aae165896e5d4689b72835021f67795e.html "Lists the target options for a trace event session.") :arrow_upper_right:
 

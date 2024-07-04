@@ -79,5 +79,5 @@ CREATE SCHEMA Factory IN FILES_SERVICE;
 
 [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](../030-sql-statements/remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md "To run data lake Relational Engine SQL statements using the SAP HANA database REMOTE_EXECUTE or REMOTE_EXECUTE_DDL procedure, you embed the SQL syntax within the procedure.")
 
-[CREATE SCHEMA Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/af3fb5b713f34db2aaa8efbf0c2a9e45.html "Create a schema, which is a collection of tables, managed by SQL on Files.") :arrow_upper_right:
+[CREATE SCHEMA Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/af3fb5b713f34db2aaa8efbf0c2a9e45.html "Create a schema, which is a collection of tables, managed by SQL on Files.") :arrow_upper_right:
 

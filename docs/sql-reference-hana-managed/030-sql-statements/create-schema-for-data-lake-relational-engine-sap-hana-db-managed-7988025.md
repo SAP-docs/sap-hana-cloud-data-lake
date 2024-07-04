@@ -100,3 +100,5 @@ To use REMOTE\_EXECUTE requires one of the following:
 
 [DROP SCHEMA Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-schema-statement-for-data-lake-relational-engine-sap-hana-db-managed-2529cf1.md "")
 
+
+

@@ -129,5 +129,5 @@ SQL – Transact-SQL extension to ISO/ANSI SQL grammar
 **Related Information**  
 
 
-[STR_REPLACE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5857e0a84f210158b54cac40679f568.html "Takes three arguments as input of type BINARY or STRING and replaces any instances of the second string expression (string_expr2) that occur within the first string expression (string_expr1) with a third expression (string_expr3).") :arrow_upper_right:
+[STR_REPLACE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a5857e0a84f210158b54cac40679f568.html "Takes three arguments as input of type BINARY or STRING and replaces any instances of the second string expression (string_expr2) that occur within the first string expression (string_expr1) with a third expression (string_expr3).") :arrow_upper_right:
 

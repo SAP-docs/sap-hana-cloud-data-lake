@@ -132,7 +132,7 @@ Length of the data
 
 <a name="loioa543941884f21015a485f9b55b14d889__iq_refbb_390"/>
 
-## Example
+## Examples
 
 Returns the value 35, the longest string in the company\_name column:
 

@@ -53,5 +53,5 @@ ALTER VIEW "SYS"."SYSINDEXES"( icreator,
 **Related Information**  
 
 
-[SYSINDEXES System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/9a6911ffbe404a22a08ab3ab45b92c4a.html "Each row in the SYSINDEXES view describes one index in the database. As an alternative to this view, you could also use the SYSIDX and SYSIDXCOL system views.") :arrow_upper_right:
+[SYSINDEXES System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/9a6911ffbe404a22a08ab3ab45b92c4a.html "Each row in the SYSINDEXES view describes one index in the database. As an alternative to this view, you could also use the SYSIDX and SYSIDXCOL system views.") :arrow_upper_right:
 

@@ -69,7 +69,7 @@ Refreshing a table includes removing deleted files from the external catalog, ad
 A table with the refresh mode set to `MANUAL` only updates the list of files by using `REFRESH TABLE` statements. SQL on Files ignores newly added files and returns an error if existing files have changed since the last refresh. When the underlying file content is unchanging, or changes at known intervals, using a `MANUAL` refresh provides a performance benefit as SQL on Files doesn't have to check for new or changed files each time a query is executed.
 
 > ### Note:  
-> The `REFRESH TABLE` statement is not necessary for tables created with the refresh mode set to `AUTO`. See the [CREATE (Remote) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/beffc07c515540088d372197c9eee191.html "Create a remote table managed by SQL on Files.") :arrow_upper_right: for more information.
+> The `REFRESH TABLE` statement is not necessary for tables created with the refresh mode set to `AUTO`. See the [CREATE (Remote) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/beffc07c515540088d372197c9eee191.html "Create a remote table managed by SQL on Files.") :arrow_upper_right: for more information.
 
 Files that have been added to the object store but have not been registered in the SQL on Files catalog by a refresh statement are not visible when querying the table. A SELECT query failure occurs if there are files tracked in the catalog that have been deleted or modified in the underlying source.
 
@@ -119,5 +119,5 @@ REFRESH TABLE ExternalSchema1.ExternalTable1 IN FILES_SERVICE;
 
 [DROP \(Remote\) TABLE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\) \[SQL on Files\]](drop-remote-table-statement-for-data-lake-relational-engine-sap-hana-db-managed-sql-on-fi-ca1e55d.md "Drop a remote table from a SQL on Files external catalog.")
 
-[REFRESH (Remote) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/e2756579d6354112a5e5e0f9fe0c2ccb.html "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.") :arrow_upper_right:
+[REFRESH (Remote) TABLE Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/e2756579d6354112a5e5e0f9fe0c2ccb.html "Update the current list of data source files for a SQL on Files remote table by performing a directory scan on all current data sources attached to this remote table.") :arrow_upper_right:
 

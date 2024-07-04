@@ -18,7 +18,7 @@ This data lake Relational Engine database option is set by the system and cannot
 
 ## Default
 
-dbo.sa\_post\_login\_procedure
+sa\_post\_login\_procedure
 
 
 
@@ -26,7 +26,7 @@ dbo.sa\_post\_login\_procedure
 
 ## Remarks
 
-The default post login procedure, dbo.sa\_post\_login\_procedure, executes immediately after a user successfully logs in.
+The default post login procedure, sa\_post\_login\_procedure, executes immediately after a user successfully logs in.
 
 The post login procedure supports the client applications Interactive SQL, and Interactive SQL Classic.
 

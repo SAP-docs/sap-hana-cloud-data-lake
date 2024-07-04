@@ -52,7 +52,7 @@ VARCHAR
 
 <a name="loioa566193184f2101587e8896021cbc6c7__MONTHNAME_examples1"/>
 
-## Example
+## Examples
 
 The following statement returns the value September, when the DATE\_ORDER option is set to the default value of *<ymd\>*:
 
@@ -63,5 +63,5 @@ SELECT MONTHNAME( '1998-09-05' ) FROM iq_dummy;
 **Related Information**  
 
 
-[MONTHNAME Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/2a2b0c17b30f48c296c26c8fb26c7ace.html "Returns the name of the month from the specified date expression.") :arrow_upper_right:
+[MONTHNAME Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/2a2b0c17b30f48c296c26c8fb26c7ace.html "Returns the name of the month from the specified date expression.") :arrow_upper_right:
 

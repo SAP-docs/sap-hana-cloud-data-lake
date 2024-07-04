@@ -127,7 +127,7 @@ Not in the standard.
 
 <a name="loio816b6bb36ce21014a7a7a27482e677e1__create_certificate_examples1"/>
 
-## Example
+## Examples
 
 This example creates a certificate with a JWT purpose.
 
@@ -150,7 +150,7 @@ FROM '-----BEGIN CERTIFICATE-----
 **Related Information**  
 
 
-[DROP CERTIFICATE STATEMENT for Data Lake Relational Engine](drop-certificate-statement-for-data-lake-relational-engine-c22eaf4.md "Drops a certificate from the database.")
+[DROP CERTIFICATE Statement for Data Lake Relational Engine](drop-certificate-statement-for-data-lake-relational-engine-c22eaf4.md "Drops a certificate from the database.")
 
 [CREATE JWT PROVIDER Statement for Data Lake Relational Engine](create-jwt-provider-statement-for-data-lake-relational-engine-49b7ee1.md "Defines a JWT provider in the data lake Relational Engine database.")
 
@@ -162,5 +162,5 @@ FROM '-----BEGIN CERTIFICATE-----
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[CREATE CERTIFICATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/d827f8589599403c94bd8700114c9e46.html "Adds or replaces a certificate in the database using the given file or string.") :arrow_upper_right:
+[CREATE CERTIFICATE Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/d827f8589599403c94bd8700114c9e46.html "Adds or replaces a certificate in the database using the given file or string.") :arrow_upper_right:
 

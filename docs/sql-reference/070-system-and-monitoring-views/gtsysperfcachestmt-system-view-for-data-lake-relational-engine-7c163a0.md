@@ -116,7 +116,7 @@ You must have the SELECT privilege on the view to use this view.
 
 [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md "Grants database object-level privileges on individual objects and schemas to a user or role.")
 
-[Monitoring Statement Performance in Data Lake Relational Engine](https://help.sap.com/viewer/a8982cc084f21015a7b4b7fcdeb0953d/2024_1_QRC/en-US/a50746e62c2248c2a66f34c8e34fb722.html "The statement performance monitoring feature is not an exhaustive, complete audit of slow SQL statements (queries), but it is a useful tool for providing an approximation, or high-level summary, of query workload. Statement performance monitoring flags certain outlier statements with execution times exceeding an established baseline.") :arrow_upper_right:
+[Monitoring Statement Performance in Data Lake Relational Engine](https://help.sap.com/viewer/a8982cc084f21015a7b4b7fcdeb0953d/2024_3_QRC/en-US/a50746e62c2248c2a66f34c8e34fb722.html "The statement performance monitoring feature is not an exhaustive, complete audit of slow SQL statements (queries), but it is a useful tool for providing an approximation, or high-level summary, of query workload. Statement performance monitoring flags certain outlier statements with execution times exceeding an established baseline.") :arrow_upper_right:
 
 [GTSYSPERFCACHEPLAN System View for Data Lake Relational Engine](gtsysperfcacheplan-system-view-for-data-lake-relational-engine-6df8e7a.md "Each row in the GTSYSPERFCACHEPLAN system view contains a graphical plan string for an execution plan of the specified statement.")
 

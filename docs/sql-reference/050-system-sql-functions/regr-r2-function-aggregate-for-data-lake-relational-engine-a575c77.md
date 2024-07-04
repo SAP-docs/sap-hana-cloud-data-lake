@@ -121,7 +121,7 @@ Syntax 2 – The *<window-spec\>* parameter represents usage as a window functio
 
 <a name="loioa575c77684f210158d23e68bbd456148__REGR_R2_examples1"/>
 
-## Example
+## Examples
 
 The following example returns the value 0.19379959710325653:
 
@@ -134,5 +134,5 @@ SELECT REGR_R2( Salary, ( YEAR( NOW() ) - YEAR( BirthDate ) ) )FROM Employees;
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[REGR_R2 Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/e970c79f12d44021b872f41c9f5ce7d9.html "Computes the coefficient of determination (also referred to as R-squared or the goodness-of-fit statistic) for the regression line.") :arrow_upper_right:
+[REGR_R2 Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/e970c79f12d44021b872f41c9f5ce7d9.html "Computes the coefficient of determination (also referred to as R-squared or the goodness-of-fit statistic) for the regression line.") :arrow_upper_right:
 

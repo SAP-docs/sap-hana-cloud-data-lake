@@ -140,7 +140,7 @@ When the value of this option is set to a valid collation name or collation ID, 
 
 <a name="loioa655148384f210158440eac57f6bf73f__iq_refso_941"/>
 
-## Example
+## Examples
 
 Set the sort collation to binary:
 

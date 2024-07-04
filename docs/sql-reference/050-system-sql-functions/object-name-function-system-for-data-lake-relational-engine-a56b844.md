@@ -56,7 +56,7 @@ The database ID.
 
 <a name="loioa56b844884f21015ba6d84cedfda5d23__iq_refbb_829"/>
 
-## Example
+## Examples
 
 The following statement returns the name "customer":
 

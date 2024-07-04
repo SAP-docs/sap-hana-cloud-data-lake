@@ -103,12 +103,6 @@ None
     24;
     ```
 
--   The following example avoids executing a complex query, if it is meaningless:
-
-    ```
-
-    ```
-
 
 **Related Information**  
 

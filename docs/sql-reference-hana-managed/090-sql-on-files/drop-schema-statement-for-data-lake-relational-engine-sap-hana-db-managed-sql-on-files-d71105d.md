@@ -96,5 +96,5 @@ DROP SCHEMA Factory CASCADE IN FILES_SERVICE;
 
 [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](../030-sql-statements/remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md "To run data lake Relational Engine SQL statements using the SAP HANA database REMOTE_EXECUTE or REMOTE_EXECUTE_DDL procedure, you embed the SQL syntax within the procedure.")
 
-[DROP SCHEMA Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/9b97bf4f782643a7b197762f36623071.html "Drop a remote schema, which is a collection of remote tables, in a SQL on Files external catalog.") :arrow_upper_right:
+[DROP SCHEMA Statement for Data Lake Relational Engine \[SQL on Files\]](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/9b97bf4f782643a7b197762f36623071.html "Drop a remote schema, which is a collection of remote tables, in a SQL on Files external catalog.") :arrow_upper_right:
 

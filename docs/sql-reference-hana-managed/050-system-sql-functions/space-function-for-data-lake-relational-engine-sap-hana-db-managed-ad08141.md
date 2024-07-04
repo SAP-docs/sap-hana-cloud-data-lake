@@ -56,7 +56,7 @@ LONG VARCHAR
 
 <a name="loioad081410a2bf423c888257b5d0f621a3__section_zpf_3x5_vrb"/>
 
-## Example
+## Examples
 
 The following statement returns a string containing 10 spaces:
 
@@ -67,5 +67,5 @@ SELECT SPACE( 10 ) FROM iq_dummy;
 **Related Information**  
 
 
-[SPACE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5815e2c84f210158cf48f3c618df22c.html "Returns a specified number of spaces.") :arrow_upper_right:
+[SPACE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a5815e2c84f210158cf48f3c618df22c.html "Returns a specified number of spaces.") :arrow_upper_right:
 

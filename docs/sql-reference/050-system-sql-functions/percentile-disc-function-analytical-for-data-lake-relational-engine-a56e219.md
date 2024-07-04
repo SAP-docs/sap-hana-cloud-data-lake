@@ -80,7 +80,7 @@ The `PERCENTILE_DISC` function is allowed in a subquery, a `HAVING` clause, a vi
 
 <a name="loioa56e219484f21015b3a4f46749d3faf5__PERCENTILE_DISC_examples1"/>
 
-## Example
+## Examples
 
 The following example uses the `PERCENTILE_DISC` function to determine the 10th percentile value for car sales in a region.
 
@@ -125,5 +125,5 @@ South            500
 **Related Information**  
 
 
-[PERCENTILE_DISC Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/bebc33271f5545ff9e6a7fe0bb25b608.html "Given a percentile, returns the value that corresponds to that percentile. Assumes a discrete distribution data model.") :arrow_upper_right:
+[PERCENTILE_DISC Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/bebc33271f5545ff9e6a7fe0bb25b608.html "Given a percentile, returns the value that corresponds to that percentile. Assumes a discrete distribution data model.") :arrow_upper_right:
 

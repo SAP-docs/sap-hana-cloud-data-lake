@@ -12,7 +12,7 @@ Controls behavior of the SQL function ROUND when querying data lake Relational E
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user..
+-   Connected to SAP HANA database as a SAP HANA database user.
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -370,5 +370,5 @@ round\(MyTable,c1,1\)
 
 [SQL Statements in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/sql-statements-in-data-lake-relational-engine-sap-hana-db-managed-2d1725b.md "Data lake Relational Engine supports many SQL statements to allow you to perform such tasks as create database objects, administer your system, and manipulate data.")
 
-[ROUND_TO_EVEN Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a27d00e384f210158811cdeec5401d23.html "Controls behavior of the SQL function ROUND when querying data lake Relational Engine tables.") :arrow_upper_right:
+[ROUND_TO_EVEN Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a27d00e384f210158811cdeec5401d23.html "Controls behavior of the SQL function ROUND when querying data lake Relational Engine tables.") :arrow_upper_right:
 

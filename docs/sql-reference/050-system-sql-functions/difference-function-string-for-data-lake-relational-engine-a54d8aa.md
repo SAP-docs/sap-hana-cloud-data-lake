@@ -117,5 +117,5 @@ The best match is 4.
 
 [DATE\_FIRST\_DAY\_OF\_WEEK Option for Data Lake Relational Engine](../090-database-options/date-first-day-of-week-option-for-data-lake-relational-engine-a632279.md "Determines the first day of the week.")
 
-[DIFFERENCE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/3b8bafe468ce4160b52b7b25a5de50a0.html "Compares two strings, evaluates the similarity between them, and returns a value from 0 to 4.") :arrow_upper_right:
+[DIFFERENCE Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/3b8bafe468ce4160b52b7b25a5de50a0.html "Compares two strings, evaluates the similarity between them, and returns a value from 0 to 4.") :arrow_upper_right:
 

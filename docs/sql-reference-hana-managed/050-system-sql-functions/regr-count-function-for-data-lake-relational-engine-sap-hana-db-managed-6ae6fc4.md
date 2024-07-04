@@ -116,7 +116,7 @@ Syntax 2 – The *<window-spec\>* parameter represents usage as a window functio
 
 <a name="loio6ae6fc4e7e5e41489f2f3481cc6f8a3d__section_ahv_s35_vrb"/>
 
-## Example
+## Examples
 
 The following example returns a value that indicates the number of non-NULL pairs that were used to fit the regression line:
 
@@ -131,5 +131,5 @@ This function returns the value 75.
 
 [WINDOW Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/window-clause-for-data-lake-relational-engine-sap-hana-db-managed-c83b61b.md "Defines all or part of a window for use with window functions such as AVG and RANK in a SELECT statement.")
 
-[REGR_COUNT Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a574c56884f21015b7b6f6bde76a2e6a.html "Returns an integer that represents the number of non-NULL number pairs used to fit the regression line.") :arrow_upper_right:
+[REGR_COUNT Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a574c56884f21015b7b6f6bde76a2e6a.html "Returns an integer that represents the number of non-NULL number pairs used to fit the regression line.") :arrow_upper_right:
 

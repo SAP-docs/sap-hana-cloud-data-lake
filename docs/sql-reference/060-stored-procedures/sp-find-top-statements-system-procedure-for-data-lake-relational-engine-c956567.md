@@ -33,7 +33,7 @@ sp_find_top_statements( <stmt_text>, <stmt_hash> )
 </b></dt>
 <dd>
 
-\(Optional\) A LONG VARCHAR parameter that specifies a SQL statement string. The default is NULL.
+A LONG VARCHAR parameter that specifies a SQL statement string. The default is NULL.
 
 
 
@@ -44,7 +44,7 @@ sp_find_top_statements( <stmt_text>, <stmt_hash> )
 </b></dt>
 <dd>
 
-\(Optional\) An UNSIGNED BIGINT parameter that specifies a statement hash. The default is NULL.
+An UNSIGNED BIGINT parameter that specifies a statement hash. The default is NULL.
 
 
 
@@ -352,9 +352,9 @@ This system procedure returns all of the data collected by the server, unless yo
 
 ## Privileges
 
-Require all of:
+Require all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   MONITOR system privilege
 -   MANAGE PROFILING system privilege
 
@@ -368,7 +368,7 @@ None.
 
 ## Examples
 
-This example uses the sp\_find\_top\_statements system procedure to return performance statistics for each logged statement and plan combination.
+This example returns performance statistics for each logged statement and plan combination.
 
 ```
 CALL sp_find_top_statements();
@@ -384,12 +384,40 @@ stmt\_hash
 </th>
 <th valign="top">
 
-owner\_name
+owner\_
+
+name
 
 </th>
 <th valign="top">
 
-proc\_name
+proc\_
+
+name
+
+</th>
+<th valign="top">
+
+reusable\_
+
+stmt\_id
+
+</th>
+<th valign="top">
+
+plan\_hash
+
+</th>
+<th valign="top">
+
+max\_
+
+seconds
+
+</th>
+<th valign="top">
+
+ 
 
 </th>
 </tr>
@@ -409,109 +437,6 @@ NULL
 NULL
 
 </td>
-</tr>
-<tr>
-<td valign="top">
-
-9223372054034640000
-
-</td>
-<td valign="top">
-
-dbo
-
-</td>
-<td valign="top">
-
-sp\_list\_mutexes\_semaphores
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-9223372099131800000
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-9223372058329610000
-
-</td>
-<td valign="top">
-
-dbo
-
-</td>
-<td valign="top">
-
-sa\_materialized\_view\_info
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-…
-
-</td>
-<td valign="top">
-
-…
-
-</td>
-<td valign="top">
-
-…
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="4">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-reusable\_stmt\_id
-
-</th>
-<th valign="top">
-
-plan\_hash
-
-</th>
-<th valign="top">
-
-max\_seconds
-
-</th>
-<th valign="top">
-
- 
-
-</th>
-</tr>
-<tr>
 <td valign="top">
 
 NULL
@@ -536,6 +461,21 @@ NULL
 <tr>
 <td valign="top">
 
+9223372054034640000
+
+</td>
+<td valign="top">
+
+dbo
+
+</td>
+<td valign="top">
+
+sp\_list\_mutexes\_semaphores
+
+</td>
+<td valign="top">
+
 4
 
 </td>
@@ -558,6 +498,21 @@ NULL
 <tr>
 <td valign="top">
 
+9223372099131800000
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
+NULL
+
+</td>
+<td valign="top">
+
 NULL
 
 </td>
@@ -578,6 +533,21 @@ NULL
 </td>
 </tr>
 <tr>
+<td valign="top">
+
+9223372058329610000
+
+</td>
+<td valign="top">
+
+dbo
+
+</td>
+<td valign="top">
+
+sa\_materialized\_view\_info
+
+</td>
 <td valign="top">
 
 5
@@ -620,25 +590,33 @@ NULL
 …
 
 </td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+…
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
 </tr>
 </table>
 
-The example returns performance statistics for each logged statement that has both of the statements logged:
+This example returns performance statistics for each logged statement that has both of the statements logged:
 
 ```
-SELECT * 
-FROM sp_find_top_statements( ) TS
-INNER JOIN SYS.GTSYSPERFCACHESTMT PS ON TS.stmt_hash = PS.stmt_hash
-ORDER BY TS.stmt_hash;
-```
-
-For all data, use OUTER JOIN.
-
-The following query returns diagnostic information related to the execution of SQL statement:
 
 ```
-SELECT * FROM <table_name> WHERE COL1>20;
-```
+
+For all data, use an OUTER JOIN.
+
+This example returns diagnostic information related to the execution of SQL statement:SELECT \* FROM sp\_find\_top\_statements\( \) TS INNER JOIN SYS.GTSYSPERFCACHESTMT PS ON TS.stmt\_hash = PS.stmt\_hash ORDER BY TS.stmt\_hash;
 
 ```
 CALL sp_find_top_statements('SELECT * FROM <table_name> WHERE COL1>20');

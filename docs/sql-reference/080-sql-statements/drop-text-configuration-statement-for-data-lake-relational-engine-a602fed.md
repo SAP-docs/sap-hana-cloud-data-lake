@@ -50,8 +50,8 @@ To drop a text configuration requires one of the following:
 To drop a text configuration in a schema requires one of the following:
 
 -   You own the schema
--   DROP ANY TEXT CONFIGURATION object-level privilege on the schema
--   DROP ANY OBJECT object-level privilege on the schema
+-   DROP ANY TEXT CONFIGURATION system privilege
+-   DROP ANY OBJECT system privilege
 -   DROP object-level privilege on the schema
 
 See [GRANT System Privilege Statement for Data Lake Relational Engine](grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md) or [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](grant-object-level-privilege-statement-for-data-lake-relational-engine-a3e154f.md) for assistance with granting privileges.
@@ -73,7 +73,8 @@ Automatic commit
 The following example creates and drops the mytextconfig text configuration object:
 
 ```
-CREATE TEXT CONFIGURATION mytextconfig FROM default_char;
+
+                        CREATE TEXT CONFIGURATION mytextconfig FROM default_char;
 DROP TEXT CONFIGURATION mytextconfig;
 ```
 

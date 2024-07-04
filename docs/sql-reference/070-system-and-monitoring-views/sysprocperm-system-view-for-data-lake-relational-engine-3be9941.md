@@ -97,5 +97,5 @@ Indicates the grantee's permissions on the procedure:
 **Related Information**  
 
 
-[SYSPROCPERM System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/69c44e964a2b4f0aa2bcf89a5d1b359a.html "Each row of the SYSPROCPERM system view describes a user who has been granted EXECUTE privilege on a procedure. The underlying system table for this view is ISYSPROCPERM.") :arrow_upper_right:
+[SYSPROCPERM System View for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/69c44e964a2b4f0aa2bcf89a5d1b359a.html "Each row of the SYSPROCPERM system view describes a user who has been granted EXECUTE privilege on a procedure. The underlying system table for this view is ISYSPROCPERM.") :arrow_upper_right:
 

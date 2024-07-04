@@ -102,7 +102,7 @@ Connected directly to data lake Relational Engine **coordinator** as a data lake
 </dd>
 </dl>
 
-See [GRANT System Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a3dfcb0284f21015b74ac3cded42ee69.html "Grants specific system privileges to users or roles, with or without administrative rights.") :arrow_upper_right: or [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right: for assistance with granting privileges.
+See [GRANT System Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a3dfcb0284f21015b74ac3cded42ee69.html "Grants specific system privileges to users or roles, with or without administrative rights.") :arrow_upper_right: or [GRANT Object-Level Privilege Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a3e154f084f21015996d891a5e9d33d2.html "Grants database object-level privileges on individual objects and schemas to a user or role.") :arrow_upper_right: for assistance with granting privileges.
 
 
 
@@ -131,5 +131,5 @@ DROP PROCEDURE myprocedure1;
 
 [CREATE PROCEDURE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-procedure-statement-for-data-lake-relational-engine-sap-hana-db-managed-d172ce3.md "Creates a new user-defined SQL procedure in the database.")
 
-[DROP PROCEDURE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/bf9d79062d4b43c0aaefba8222c8421d.html "Removes a user-defined procedure from the database.") :arrow_upper_right:
+[DROP PROCEDURE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/bf9d79062d4b43c0aaefba8222c8421d.html "Removes a user-defined procedure from the database.") :arrow_upper_right:
 

@@ -13,5 +13,5 @@ The `BYTE_SUBSTR64` and `BYTE_SUBSTR` functions also support the `LONG VARCHAR` 
 **Related Information**  
 
 
-[BYTE_SUBSTR64 and BYTE_SUBSTR Functions \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a539151584f210159a21b0dce081b459.html "BYTE_SUBSTR64 and BYTE_SUBSTR return the long binary byte substring of the LONG BINARY column parameter.") :arrow_upper_right:
+[BYTE_SUBSTR64 and BYTE_SUBSTR Functions \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a539151584f210159a21b0dce081b459.html "BYTE_SUBSTR64 and BYTE_SUBSTR return the long binary byte substring of the LONG BINARY column parameter.") :arrow_upper_right:
 

@@ -90,5 +90,5 @@ DROP TRACE EVENT SESSION my_session;
 
 [ALTER TRACE EVENT SESSION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](alter-trace-event-session-statement-for-data-lake-relational-engine-sap-hana-db-managed-21b2b4f.md "Adds or removes trace events or targets from a session, or starts or stops a trace session.")
 
-[DROP TRACE EVENT SESSION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/816f77f16ce21014902f832b346099c2.html "Drops a trace event session.") :arrow_upper_right:
+[DROP TRACE EVENT SESSION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/816f77f16ce21014902f832b346099c2.html "Drops a trace event session.") :arrow_upper_right:
 

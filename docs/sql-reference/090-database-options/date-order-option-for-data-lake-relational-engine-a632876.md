@@ -149,7 +149,7 @@ DATE\_ORDER is used to determine whether 10/11/12 is Oct 11 1912, Nov 12 1910, o
 
 [GRANT System Privilege Statement for Data Lake Relational Engine](../080-sql-statements/grant-system-privilege-statement-for-data-lake-relational-engine-a3dfcb0.md "Grants specific system privileges to users or roles, with or without administrative rights.")
 
-[DATE_ORDER Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/2d1730263f004bf5a3728cc25edc5ea1.html "Controls the interpretation of date formats.") :arrow_upper_right:
+[DATE_ORDER Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/2d1730263f004bf5a3728cc25edc5ea1.html "Controls the interpretation of date formats.") :arrow_upper_right:
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 

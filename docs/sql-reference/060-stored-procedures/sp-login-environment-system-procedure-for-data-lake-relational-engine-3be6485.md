@@ -26,7 +26,7 @@ sp_login_environment( )
 
 ## Parameters
 
-None
+None.
 
 
 
@@ -34,13 +34,13 @@ None
 
 ## Result Set
 
-None
+None.
 
 
 
 ## Remarks
 
-The dbo.sp\_login\_environment procedure is called by the login\_procedure database option by default.
+The sp\_login\_environment procedure is called by the login\_procedure database option by default.
 
 Do not edit this procedure. Instead, to change the login environment, set the login\_procedure option to point to a different procedure.
 
@@ -48,11 +48,11 @@ Do not edit this procedure. Instead, to change the login environment, set the lo
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 
 
 ## Side Effects
 
-None
+None.
 

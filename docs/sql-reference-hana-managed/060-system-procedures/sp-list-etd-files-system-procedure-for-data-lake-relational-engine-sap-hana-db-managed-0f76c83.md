@@ -147,6 +147,7 @@ Requires all of the following:
 
 -   EXECUTE object-level privilege on the procedure
 -   MANAGE AUDITING system privilege
+-   MANAGE ANY TRACE SESSION system privilege
 
 
 
@@ -154,7 +155,7 @@ Requires all of the following:
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -162,10 +163,10 @@ None
 
 ## Examples
 
-Assume you have a SELECT statement listing all ETD files with a file name beginning with the string '`my_session_20201126_`'. The following statement returns the ETD files for the session:
+This example returns all ETD files fAssume you have a SELECT statement listing all ETD files with a file name beginning with the string '`my_audit_log_`'.
 
 ```
-SELECT * FROM sp_list_etd_files('my_session_20201126_*');
+CALL sp_list_etd_files('my_audit_log_*');
 ```
 
 
@@ -190,51 +191,51 @@ modified\_date\_time
 <tr>
 <td valign="top">
 
-my\_session\_20201126\_181818.173\_auditdb\_eng.etd
+my\_audit\_log\_20240607\_000002.351\_mpx-writer-0-0.etd
 
 </td>
 <td valign="top">
 
-635
+1135648394
 
 </td>
 <td valign="top">
 
-2023-08-13 18:40:21.000+00:00
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-my\_session\_20201126\_184000.000\_auditdb\_eng.etd
-
-</td>
-<td valign="top">
-
-710
-
-</td>
-<td valign="top">
-
-2023-08-26 18:50:52.000+00:00
+2024-06-07 00:00:18.000+00:00
 
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-my\_session\_20201126\_185000.000\_auditdb\_eng.etd
+my\_audit\_log\_20240607\_000001.803\_mpx-coord-0.etd
 
 </td>
 <td valign="top">
 
-260
+1279262720
 
 </td>
 <td valign="top">
 
-2023-09-26 18:50:52.000+00:00
+2024-06-07 20:47:11.000+00:00
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+my\_audit\_log\_20240606\_000001.391\_mpx-writer-0-0.etd
+
+</td>
+<td valign="top">
+
+1267663963
+
+</td>
+<td valign="top">
+
+2024-06-07 00:00:04.000+00:00
 
 </td>
 </tr>
@@ -243,5 +244,5 @@ my\_session\_20201126\_185000.000\_auditdb\_eng.etd
 **Related Information**  
 
 
-[sp_list_etd_files System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/5f0eb4a9f1734b6d9ef6661867578898.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
+[sp_list_etd_files System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/5f0eb4a9f1734b6d9ef6661867578898.html "Lists the event trace data (ETD) files logged to the file container by database auditing.") :arrow_upper_right:
 

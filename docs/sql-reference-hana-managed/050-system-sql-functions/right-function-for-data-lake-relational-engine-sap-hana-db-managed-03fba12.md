@@ -76,7 +76,7 @@ If the string contains multibyte characters, and the proper collation is being u
 
 <a name="loio03fba12b431c4d80bcb8933cd7e984ab__section_cb3_3tt_vrb"/>
 
-## Example
+## Examples
 
 The following statement returns the value "olate":
 
@@ -87,5 +87,5 @@ SELECT RIGHT( 'chocolate', 5 ) FROM iq_dummy;
 **Related Information**  
 
 
-[RIGHT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a57b364f84f210158a90b2b566be1d36.html "Returns the rightmost characters of a string.") :arrow_upper_right:
+[RIGHT Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a57b364f84f210158a90b2b566be1d36.html "Returns the rightmost characters of a string.") :arrow_upper_right:
 

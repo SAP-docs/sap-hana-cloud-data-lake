@@ -109,10 +109,7 @@ If *<connidparm\>* is NULL and *<dbidparm\>* is greater than or equal to zero, t
 
 ## Privileges
 
-Requires all of:
-
--   EXECUTE object-level privilege on the procedure
--   MONITOR system privilege
+Requires EXECUTE object-level privilege on this procedure. To obtain a list of all connection IDs, you also need the MONITOR system privilege.
 
 
 
@@ -120,13 +117,13 @@ Requires all of:
 
 ## Side Effects
 
-None
+None.
 
 
 
 ## Examples
 
-This example uses the sa\_conn\_list system procedure to display a list of connection IDs:
+This example returns a list of connection IDs:
 
 ```
 CALL sa_conn_list( );

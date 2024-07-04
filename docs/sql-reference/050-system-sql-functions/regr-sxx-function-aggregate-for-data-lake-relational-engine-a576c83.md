@@ -122,7 +122,7 @@ Syntax 2 – The *<window-spec\>* parameter represents usage as a window functio
 
 <a name="loioa576c83284f21015b9d5bbf81742e83a__REGR_SXX_example1"/>
 
-## Example
+## Examples
 
 The following example returns the value 5916.4800000000105:
 
@@ -135,5 +135,5 @@ SELECT REGR_SXX( Salary, ( YEAR( NOW() ) - YEAR( BirthDate ) ) )FROM Employees;
 
 [Windowing Aggregate Function Usage in Data Lake Relational Engine](windowing-aggregate-function-usage-in-data-lake-relational-engine-a527f35.md "A major feature of the ISO/ANSI SQL extensions for OLAP is a construct called a window.")
 
-[REGR_SXX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/9bf778da26ef494686fbbecf7f2790b3.html "Computes the slope of the linear regression line, fitted to non-NULL pairs.") :arrow_upper_right:
+[REGR_SXX Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/9bf778da26ef494686fbbecf7f2790b3.html "Computes the slope of the linear regression line, fitted to non-NULL pairs.") :arrow_upper_right:
 

@@ -170,7 +170,7 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 
 
 
-For information on using a procedure that is created when connected as a data lake Relational Engine user, see [User-Defined Procedures in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/44dbf05fa907437b9145f1541cdbb920.html "User-defined procedures perform one or more specific tasks in data lake Relational Engine.") :arrow_upper_right:.
+For information on using a procedure that is created when connected as a data lake Relational Engine user, see [User-Defined Procedures in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/44dbf05fa907437b9145f1541cdbb920.html "User-defined procedures perform one or more specific tasks in data lake Relational Engine.") :arrow_upper_right:.
 
 
 
@@ -197,5 +197,5 @@ Automatic commit
 **Related Information**  
 
 
-[CREATE PROCEDURE Statement \[T-SQL\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a618891584f210158ae1b5a5cdce0a34.html "Creates a new procedure that is compatible with SAP Adaptive Server Enterprise.") :arrow_upper_right:
+[CREATE PROCEDURE Statement \[T-SQL\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a618891584f210158ae1b5a5cdce0a34.html "Creates a new procedure that is compatible with SAP Adaptive Server Enterprise.") :arrow_upper_right:
 

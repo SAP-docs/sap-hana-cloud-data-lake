@@ -103,7 +103,7 @@ SQL – vendor extension to ISO/ANSI SQL grammar
 
 <a name="loioa55d051484f21015b82fe3d1795a7a94__LEAD_example1"/>
 
-## Example
+## Examples
 
 The following example returns salary data from the Employees table, partitions the data by department ID, and orders the data according to employee start date. The LEAD function returns the salary from the next row \(a physical offset of one row\) and displays it under the LEAD \(Salary\) column:
 
@@ -137,5 +137,5 @@ dID        StartDate    Salary      Lead(Salary)
 
 [LAG Function \[Analytical\] for Data Lake Relational Engine](lag-function-analytical-for-data-lake-relational-engine-a55b772.md "An interrow function that returns the value of an attribute in a previous row in the table or table partition.")
 
-[LEAD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/b6a23b08149640eab401cd98acf6b638.html "An interrow function that returns the value of an attribute in a subsequent row in the table or table partition.") :arrow_upper_right:
+[LEAD Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/b6a23b08149640eab401cd98acf6b638.html "An interrow function that returns the value of an attribute in a subsequent row in the table or table partition.") :arrow_upper_right:
 

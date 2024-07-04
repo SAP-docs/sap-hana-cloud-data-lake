@@ -149,9 +149,9 @@ LOGIN POLICY Test1 FORCE PASSWORD CHANGE ON;
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
-[Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
+[Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
 
-[CREATE USER Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/a21f6524ecab45fcaa89b6f9bf4670e8.html "Creates a user.") :arrow_upper_right:
+[CREATE USER Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/a21f6524ecab45fcaa89b6f9bf4670e8.html "Creates a user.") :arrow_upper_right:
 
-[User ID and Password Restrictions and Considerations](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a46126b284f21015bae2a1c9bb31c205.html "A user must have a user ID and password to connect to the database.") :arrow_upper_right:
+[User ID and Password Restrictions and Considerations](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/a46126b284f21015bae2a1c9bb31c205.html "A user must have a user ID and password to connect to the database.") :arrow_upper_right:
 

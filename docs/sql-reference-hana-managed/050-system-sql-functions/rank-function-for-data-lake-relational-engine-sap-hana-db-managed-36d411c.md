@@ -71,7 +71,7 @@ The `OVER` clause indicates that the function operates on a query result set. Th
 
 <a name="loio36d411cb841f42c792858d7cab19b626__section_vbz_fm5_vrb"/>
 
-## Example
+## Examples
 
 This statement illustrates the use of the `RANK` function:
 
@@ -97,5 +97,5 @@ Overbey            M        39300.000  2
 **Related Information**  
 
 
-[RANK Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a57337e084f21015aa46b31299b91d70.html "Ranks items in a group.") :arrow_upper_right:
+[RANK Function \[Analytical\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a57337e084f21015aa46b31299b91d70.html "Ranks items in a group.") :arrow_upper_right:
 

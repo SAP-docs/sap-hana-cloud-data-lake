@@ -60,7 +60,7 @@ If a conversion is possible, the function returns 1; otherwise, it returns 0. If
 
 <a name="loiof82be4309ee34e0dab5a3148c3d56fc6__section_tys_bmh_trb"/>
 
-## Example
+## Examples
 
 The following example tests whether the height\_in\_cms column holds valid numeric data, returning invalid numeric data as NULL, and valid numeric data in int format:
 
@@ -85,5 +85,5 @@ from MyData;
 **Related Information**  
 
 
-[ISNUMERIC Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a55af5d284f21015867a9c978b63f5c1.html "Tests whether a string argument can be converted to a numeric.") :arrow_upper_right:
+[ISNUMERIC Function \[Miscellaneous\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a55af5d284f21015867a9c978b63f5c1.html "Tests whether a string argument can be converted to a numeric.") :arrow_upper_right:
 

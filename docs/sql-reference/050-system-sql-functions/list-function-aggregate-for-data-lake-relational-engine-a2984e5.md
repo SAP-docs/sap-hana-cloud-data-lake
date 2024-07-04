@@ -133,7 +133,7 @@ Data lake Relational Engine does not support optional SQL/2008 feature F442, "Mi
 
 <a name="loioa2984e5584f21015bddde2495874815d__LIST_examples1"/>
 
-## Example
+## Examples
 
 This statement returns the value ***487 Kennedy Court,547 School Street***.
 
@@ -315,5 +315,5 @@ GROUP BY DepartmentID;
 **Related Information**  
 
 
-[LIST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7b4801a3a3a64799b52b9ace7257dfd9.html "Returns a delimited list of values for every row in a group.") :arrow_upper_right:
+[LIST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/7b4801a3a3a64799b52b9ace7257dfd9.html "Returns a delimited list of values for every row in a group.") :arrow_upper_right:
 

@@ -72,7 +72,7 @@ Rows where *<expression\>* is NULL are ignored. Returns NULL for a group contain
 
 <a name="loio6cfcb760c23641ab9c5aaa17d056f4c0__section_dn2_jhn_vrb"/>
 
-## Example
+## Examples
 
 The following statement returns the value 24903.000, representing the minimum salary in the Employees table:
 
@@ -84,5 +84,5 @@ FROM Employees;
 **Related Information**  
 
 
-[MIN Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a5638af584f210158d1fe90a3fb7c0ec.html "Returns the minimum expression value found in each group of rows.") :arrow_upper_right:
+[MIN Function \[Aggregate\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a5638af584f210158d1fe90a3fb7c0ec.html "Returns the minimum expression value found in each group of rows.") :arrow_upper_right:
 

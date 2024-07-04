@@ -65,7 +65,7 @@ None
 
 <a name="loioa4fa3d9e84f21015a4a6a9424156ed9e__iq_refbb_77"/>
 
-## Example
+## Examples
 
 The following query retrieves the names and birth years of the oldest employees:
 

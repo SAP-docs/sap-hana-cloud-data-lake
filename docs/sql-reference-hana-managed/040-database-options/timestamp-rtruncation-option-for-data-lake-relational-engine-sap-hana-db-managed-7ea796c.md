@@ -12,7 +12,7 @@ Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type colum
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user..
+-   Connected to SAP HANA database as a SAP HANA database user.
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -234,11 +234,11 @@ SELECT connection_property('Timestamp_rtruncation');
 **Related Information**  
 
 
-[Set a Database Option](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/0dcb8935b09946e99324f53dd0dc7346.html "You set options with the SET OPTION statement.") :arrow_upper_right:
+[Set a Database Option](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/0dcb8935b09946e99324f53dd0dc7346.html "You set options with the SET OPTION statement.") :arrow_upper_right:
 
-[TIMESTAMP Data Type Precision in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/520ce6c6c90f47769eb2f1ddafa8bf49.html "Precision conflicts between TIMESTAMP data types result in data loss.") :arrow_upper_right:
+[TIMESTAMP Data Type Precision in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/520ce6c6c90f47769eb2f1ddafa8bf49.html "Precision conflicts between TIMESTAMP data types result in data loss.") :arrow_upper_right:
 
-[Date and Time Data Types in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/a51e8fb484f210158a94c1c80914c51d.html "Use date and time data types for storing dates and times.") :arrow_upper_right:
+[Date and Time Data Types in Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a51e8fb484f210158a94c1c80914c51d.html "Use date and time data types for storing dates and times.") :arrow_upper_right:
 
-[TIMESTAMP_RTRUNCATION Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/dbb08c71f0a34f93b2f28d765e123ed0.html "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.") :arrow_upper_right:
+[TIMESTAMP_RTRUNCATION Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/dbb08c71f0a34f93b2f28d765e123ed0.html "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.") :arrow_upper_right:
 

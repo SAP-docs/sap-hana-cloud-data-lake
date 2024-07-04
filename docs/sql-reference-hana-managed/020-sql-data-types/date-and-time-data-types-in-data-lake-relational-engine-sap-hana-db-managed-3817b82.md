@@ -228,7 +228,7 @@ If a string contains only a partial date specification, default values are used 
 **Related Information**  
 
 
-[Collations in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_1_QRC/en-US/665704355a5147879224d7ec0aae629f.html "Data lake Relational Engine databases use CESU8BIN (CESU-8, 8-bit multibyte encoding for Unicode, binary ordering) collation and the Unicode Collation Algorithm (UCA).") :arrow_upper_right:
+[Collations in Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/9220e7fec0fe4503b5c5a6e21d584e63/2024_3_QRC/en-US/665704355a5147879224d7ec0aae629f.html "Data lake Relational Engine databases use CESU8BIN (CESU-8, 8-bit multibyte encoding for Unicode, binary ordering) collation and the Unicode Collation Algorithm (UCA).") :arrow_upper_right:
 
 [TIMESTAMP Special Value in Data Lake Relational Engine \(SAP HANA DB-Managed\)](../010-sql-language-elements/timestamp-special-value-in-data-lake-relational-engine-sap-hana-db-managed-007a831.md "Returns when each row in the table was last modified.")
 

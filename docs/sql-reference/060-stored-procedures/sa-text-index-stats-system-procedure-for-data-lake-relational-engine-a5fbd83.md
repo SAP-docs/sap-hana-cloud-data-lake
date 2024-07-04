@@ -26,7 +26,7 @@ sa_text_index_stats( )
 
 ## Parameters
 
-None
+None.
 
 
 
@@ -292,17 +292,17 @@ The `pending_length`, `deleted_length`, and `last_refresh` values are NULL for I
 
 ## Privileges
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure.
 
 Also requires one of the following:
 
--   MANAGE ANY STATISTICS system privileges
--   CREATE ANY INDEX system privileges
--   ALTER ANY INDEX system privileges
--   DROP ANY INDEX system privileges
--   CREATE ANY OBJECT system privileges
--   ALTER ANY OBJECT system privileges
--   DROP ANY OBJECT system privileges
+-   MANAGE ANY STATISTICS system privilege
+-   CREATE ANY INDEX system privilege
+-   ALTER ANY INDEX system privilege
+-   DROP ANY INDEX system privilege
+-   CREATE ANY OBJECT system privilege
+-   ALTER ANY OBJECT system privilege
+-   DROP ANY OBJECT system privilege
 
 
 
@@ -310,7 +310,7 @@ Also requires one of the following:
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -318,7 +318,7 @@ None
 
 ## Examples
 
-This example uses the sa\_text\_index\_stats system procedure to return statistical information for each TEXT index in the database:
+This example returns statistical information for each TEXT index in the database:
 
 ```
 CALL sa_text_index_stats( );
@@ -329,37 +329,95 @@ CALL sa_text_index_stats( );
 <tr>
 <th valign="top">
 
-owner\_id
+owner\_
+
+id
 
 </th>
 <th valign="top">
 
-table\_id
+table\_
+
+id
 
 </th>
 <th valign="top">
 
-index\_id
+index\_
+
+id
 
 </th>
 <th valign="top">
 
-text\_config\_id
+text\_
+
+config\_id
 
 </th>
 <th valign="top">
 
-owner\_name
+owner\_
+
+name
 
 </th>
 <th valign="top">
 
-table\_name
+table\_
+
+name
 
 </th>
 <th valign="top">
 
-index\_name
+index\_
+
+name
+
+</th>
+<th valign="top">
+
+text\_
+
+config\_
+
+name
+
+</th>
+<th valign="top">
+
+doc\_
+
+count
+
+</th>
+<th valign="top">
+
+doc\_
+
+length
+
+</th>
+<th valign="top">
+
+pending\_
+
+length
+
+</th>
+<th valign="top">
+
+deleted\_
+
+length
+
+</th>
+<th valign="top">
+
+last\_
+
+refresh
 
 </th>
 </tr>
@@ -399,51 +457,6 @@ PRODUCTS
 myTxtIdx
 
 </td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="6">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-text\_config\_name
-
-</th>
-<th valign="top">
-
-doc\_count
-
-</th>
-<th valign="top">
-
-doc\_length
-
-</th>
-<th valign="top">
-
-pending\_length
-
-</th>
-<th valign="top">
-
-deleted\_length
-
-</th>
-<th valign="top">
-
-last\_refresh
-
-</th>
-</tr>
-<tr>
 <td valign="top">
 
 default\_char

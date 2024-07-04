@@ -82,7 +82,7 @@ The name of the login policy. You cannot alter the CUSTOMER\_ROOT login policy.
 </b></dt>
 <dd>
 
-The name of the policy option. See [Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right: for details about each option.
+The name of the policy option. See [Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right: for details about each option.
 
 
 
@@ -93,7 +93,7 @@ The name of the policy option. See [Login Policy Options](https://help.sap.com/v
 </b></dt>
 <dd>
 
-The value assigned to the login policy option. If you specify UNLIMITED, then no limits are used. If you specify DEFAULT, then the default limits are used. See [Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right: for supported values for each option.
+The value assigned to the login policy option. If you specify UNLIMITED, then no limits are used. If you specify DEFAULT, then the default limits are used. See [Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right: for supported values for each option.
 
 NULL and UNLIMITED are not valid for some options.
 
@@ -114,8 +114,8 @@ All new instances include a CUSTOMER\_root login policy, which cannot be modifie
 
 For details on available login policy options for CUSTOMER\_root and user-defined logins and LDAP user authentication, see:
 
--   [Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
--   [LDAP Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a450848584f210159c6ab461ae64c77f.html "Available login policy options for LDAP user authentication.") :arrow_upper_right:
+-   [Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
+-   [LDAP Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/a450848584f210159c6ab461ae64c77f.html "Available login policy options for LDAP user authentication.") :arrow_upper_right:
 
 
 
@@ -162,7 +162,7 @@ max_failed_login_attempts=5;
 
 [DROP LOGIN POLICY Statement for Data Lake Relational Engine](drop-login-policy-statement-for-data-lake-relational-engine-a61cdea.md "Removes a login policy from the database.")
 
-[Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_1_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
+[Login Policy Options](https://help.sap.com/viewer/a89a0a8384f21015b1e7adbeca456f73/2024_3_QRC/en-US/a43f448484f21015924f9951e9b77e32.html "Available options for CUSTOMER_ROOT and user-defined login policies.") :arrow_upper_right:
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 

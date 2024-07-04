@@ -147,64 +147,50 @@ ADD TARGET TILE
 
 ```
 <target-parameter-name> :
-{ filename_prefix
- | flush_on_write
- | ["compressed"] };
+{ filename_prefix = <path-and-filename>
+ | flush_on_write = = { ON | OFF }
+ | ["compressed"] = = { ON | OFF }
 ```
 
-The following target parameters are supported:
 
-
-<table>
-<tr>
-<th valign="top">
-
-*<target-parameter-name\>* 
-
-</th>
-<th valign="top">
-
-*<target-parameter-value\>* 
-
-</th>
-</tr>
-<tr>
-<td valign="top">
+<dl>
+<dt><b>
 
 filename\_prefix
 
-</td>
-<td valign="top">
+</b></dt>
+<dd>
 
-\(Required\) An ETD file name prefix with or without a path. ETD files have the extension `.etd`.
+A log file name prefix with or without a path. All log files have the extension `.etd`. If a full path is not specified, then the directory where the database is located is used as the root directory.
 
-</td>
-</tr>
-<tr>
-<td valign="top">
+
+
+</dd><dt><b>
 
 flush\_on\_write
 
-</td>
-<td valign="top">
+</b></dt>
+<dd>
 
-A boolean \(true or false\) value that controls whether disk buffers are flushed for each event that is logged. The default is false. When flushing is enabled, the performance of the database server may be reduced if many trace events are being logged.
+A Boolean value that controls whether disk buffers are flushed for each event that is logged. The default is ON. When this parameter is turned on, the performance of the database server may be reduced if many trace events are being logged.
 
-</td>
-</tr>
-<tr>
-<td valign="top">
 
-\[compressed\]
 
-</td>
-<td valign="top">
+</dd><dt><b>
 
-A boolean \(true or false\) value that controls compression of the ETD file to conserve disk space. The default is false. Use brackets with this parameter name because it is a keyword in other contexts.
+compressed
 
-</td>
-</tr>
-</table>
+</b></dt>
+<dd>
+
+A Boolean value that controls compression of the log file to conserve disk space. The default is OFF.
+
+
+
+</dd>
+</dl>
+
+The following target parameters are supported:
 
 
 
@@ -264,7 +250,7 @@ Not in the standard.
 
 
 
-## Example
+## Examples
 
 The following example creates a trace event called my\_event, a trace event session called my\_session, and then alters the session to start it:
 
@@ -284,9 +270,9 @@ ALTER TRACE EVENT SESSION my_session STATE = START;
 **Related Information**  
 
 
-[ALTER TRACE EVENT SESSION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8169f4176ce21014b768e5f2b0bf8951.html "Adds or removes trace events or targets from a session, or starts or stops a trace session.") :arrow_upper_right:
-
 [CREATE TEMPORARY TRACE EVENT SESSION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](create-temporary-trace-event-session-statement-for-data-lake-relational-engine-sap-hana-d-0c1bc71.md "Creates a user trace event session.")
 
 [DROP TRACE EVENT SESSION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](drop-trace-event-session-statement-for-data-lake-relational-engine-sap-hana-db-managed-1b596ab.md "Drops a trace event session.")
+
+[ALTER TRACE EVENT SESSION Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/8169f4176ce21014b768e5f2b0bf8951.html "Adds or removes trace events or targets from a session, or starts or stops a trace session.") :arrow_upper_right:
 

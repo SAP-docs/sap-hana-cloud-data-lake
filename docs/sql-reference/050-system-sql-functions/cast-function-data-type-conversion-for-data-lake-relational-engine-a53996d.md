@@ -135,7 +135,7 @@ B NUMERIC(15,2);
 
 [YEARS Function \[Date and Time\] for Data Lake Relational Engine](years-function-date-and-time-for-data-lake-relational-engine-a5926bf.md "Returns a 4-digit number corresponding to the year of a given date/time, returns the number of years between two specified date/times, or adds the specified integer-expression number of years to a date/time.")
 
-[TIMESTAMP_RTRUNCATION Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/7ea796c77e5047c78acff41829be70aa.html "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.") :arrow_upper_right:
+[TIMESTAMP_RTRUNCATION Option for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/7ea796c77e5047c78acff41829be70aa.html "Controls whether INSERT, UPDATE, or CAST operations on TIMESTAMP data type columns fails if loss of precision will result.") :arrow_upper_right:
 
-[CAST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/4a2c75bbed1d4b399e51f704ee7d35dc.html "Returns the value of an expression converted to a supplied data type.") :arrow_upper_right:
+[CAST Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/4a2c75bbed1d4b399e51f704ee7d35dc.html "Returns the value of an expression converted to a supplied data type.") :arrow_upper_right:
 

@@ -628,7 +628,10 @@ depends on the length of the timestamp\_with\_time\_zone\_format option string
 
 ### 
 
-Requires EXECUTE object-level privilege on the procedure.
+Requires EXECUTE object-level privilege on this procedure. Also requires one of the following:
+
+-   You own the underlying table of the query
+-   SELECT object-level privilege on the table
 
 
 
@@ -636,7 +639,7 @@ Requires EXECUTE object-level privilege on the procedure.
 
 ## Side Effects
 
-None
+None.
 
 
 
@@ -644,7 +647,7 @@ None
 
 ## Examples
 
-This example uses the sa\_describe\_query system procedure to describe the information returned when querying all columns in the Dummy table:
+This example returns the result set when querying all columns in the table dummy:
 
 ```
 CALL sa_describe_query( 'SELECT * FROM dummy' );
@@ -657,7 +660,9 @@ The results show the values of the is\_key\_column and is\_added\_key\_column as
 <tr>
 <th valign="top">
 
-column\_number
+column\_
+
+number
 
 </th>
 <th valign="top">
@@ -667,17 +672,27 @@ name
 </th>
 <th valign="top">
 
-domain\_id
+domain\_
+
+id
 
 </th>
 <th valign="top">
 
-domain\_name
+domain\_
+
+name
 
 </th>
 <th valign="top">
 
-domain\_name\_with\_size
+domain\_
+
+name\_
+
+with\_
+
+size
 
 </th>
 <th valign="top">
@@ -688,6 +703,43 @@ width
 <th valign="top">
 
 scale
+
+</th>
+<th valign="top">
+
+declared\_
+
+width
+
+</th>
+<th valign="top">
+
+user\_
+
+type\_
+
+id
+
+</th>
+<th valign="top">
+
+user\_
+
+type\_
+
+name
+
+</th>
+<th valign="top">
+
+correlation\_
+
+name
+
+</th>
+<th valign="top">
+
+...
 
 </th>
 </tr>
@@ -727,51 +779,6 @@ integer
 0
 
 </td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="6">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-declared\_width
-
-</th>
-<th valign="top">
-
-user\_type\_id
-
-</th>
-<th valign="top">
-
-user\_type\_name
-
-</th>
-<th valign="top">
-
-correlation\_name
-
-</th>
-<th valign="top">
-
-base\_table\_id
-
-</th>
-<th valign="top">
-
-base\_column\_id
-
-</th>
-</tr>
-<tr>
 <td valign="top">
 
 4
@@ -794,112 +801,7 @@ DUMMY
 </td>
 <td valign="top">
 
-1200
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="5">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-base\_owner\_name
-
-</th>
-<th valign="top">
-
-base\_table\_name
-
-</th>
-<th valign="top">
-
-base\_column\_name
-
-</th>
-<th valign="top">
-
-nulls\_allowed
-
-</th>
-<th valign="top">
-
-is\_autoincrement
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-SYS
-
-</td>
-<td valign="top">
-
-DUMMY
-
-</td>
-<td valign="top">
-
-dummy\_col
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-</table>
-
-
-<table>
-<tr>
-<th valign="top" colspan="2">
-
-\(Continued\)
-
-</th>
-</tr>
-<tr>
-<th valign="top">
-
-is\_key\_column
-
-</th>
-<th valign="top">
-
-is\_added\_key\_column
-
-</th>
-</tr>
-<tr>
-<td valign="top">
-
-NULL
-
-</td>
-<td valign="top">
-
-NULL
+...
 
 </td>
 </tr>
@@ -908,5 +810,5 @@ NULL
 **Related Information**  
 
 
-[sa_describe_query System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/268f1ef2cade4d43be01e422595d548a.html "Describes the result set for a query with one row describing each output column of the query.") :arrow_upper_right:
+[sa_describe_query System Procedure for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/268f1ef2cade4d43be01e422595d548a.html "Describes the result set for a query with one row describing each output column of the query.") :arrow_upper_right:
 

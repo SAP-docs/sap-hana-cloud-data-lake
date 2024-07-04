@@ -94,7 +94,7 @@ The `BYTE_SUBSTR64` and `BYTE_SUBSTR` functions support both `LONG BINARY` and `
 **Related Information**  
 
 
-[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_1_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
+[Function Support of Large Object Data](https://help.sap.com/viewer/a8937bea84f21015a80bc776cf758d50/2024_3_QRC/en-US/a60363a384f21015a7f7bc6286516522.html "Learn about the functions that support the LONG BINARY and LONG VARCHAR data types.") :arrow_upper_right:
 
 [BYTE\_LENGTH64 Function \[String\] for Data Lake Relational Engine](byte-length64-function-string-for-data-lake-relational-engine-a538947.md "BYTE_LENGTH64 returns an unsigned 64-bit value containing the byte length of the LONG BINARY column parameter.")
 

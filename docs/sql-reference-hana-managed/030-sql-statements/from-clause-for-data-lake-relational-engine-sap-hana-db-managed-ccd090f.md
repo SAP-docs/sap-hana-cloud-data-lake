@@ -2,17 +2,30 @@
 
 # FROM Clause for Data Lake Relational Engine \(SAP HANA DB-Managed\)
 
-Specifies the database tables or views involved in a SELECT statement.
+Specifies the objects involved in a `SELECT`, `DELETE` or `UPDATE` statement.
+
+
+
+<a name="loioccd090fa57a84916b181a47c6ba634e1__section_mqx_zcs_wbc"/>
+
+## Usage
+
+This data lake Relational Engine \(SAP HANA DB-Managed\) SQL statement clause can be used when:
+
+-   Connected to SAP HANA database as a SAP HANA database user..
+-   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
 
 ```
-...FROM <table-expression><table-expression> ::=
-   <data_lake_table_name>
-   | <data_lake_view_name>
+...FROM <table-expression> [,...]
+
+<table-expression> ::=
+   { <table-name>
+   | <view-name>
    | <procedure-name>
    | <common-table-expression>
-   | ( <subquery> ) [ [ AS ] <derived-data-lake-table-name> ( <column_name, ...>) ] ]
+   | ( <subquery> ) [ [ AS ] <derived-table-name> ( <column_name, ...>) ]
    | <derived-table>
    | <join-expression> 
    | ( <table-expression> , ... )
@@ -20,77 +33,75 @@ Specifies the database tables or views involved in a SELECT statement.
    | <apply-expression>
    | <contains-expression>
    | <dml-derived-table>
-   | <openxml-operator>
+   | <openxml-operator> }
 ```
 
 ```
-<data_lake_table_name> ::=
-   [ <userid>.] <data_lake_table_name> ]
+<table-name> ::=
+   [ <owner>.]<table-name> ]
    [ [ AS ] <correlation-name> ]
    [ FORCE INDEX ( <index-name> ) ]
 ```
 
 ```
-<data_lake_view_name> ::=
-   [ <userid>.]<data_lake_view_name> [ [ AS ] <correlation-name> ]
+<view-name> ::=
+   [ <owner>.]<view-name> [ [ AS ] <correlation-name> ]
 ```
 
 ```
 <procedure-name> ::=
-   [  <relational_container_schema_name>, ] <procedure-name> ([ <parameter>, ...])
-   [  WITH(<column-name datatype>, )]
+   [  <owner>.]<procedure-name> ( [ <parameter>, ...])
+   [  WITH (<column-name datatype>, )]
    [ [ AS ] <correlation-name> ]
 ```
 
 ```
 <parameter> ::=
-   <scalar-expression> | <table-parameter>
+   { <scalar-expression> | <table-parameter> }
 ```
 
 ```
 <table-parameter> ::= 
-   TABLE (<select-statement)> [ OVER ( <table-parameter-over> )]
+   TABLE (<select-statement)> [ OVER ( <table-parameter-over> ) ]
 ```
 
 ```
 <table-parameter-over> ::=
-   [ PARTITION BY {ANY
-   | NONE|< table-expression> } ] 
-   [ ORDER BY { <expression> | <integer> } 
-   [ ASC | DESC ] [, ...] ]
+   [ PARTITION BY { ANY | NONE | < table-expression> } ] 
+   [ ORDER BY { <expression> | <integer> } ]
+   [ { ASC | DESC } [, ...] ]
 ```
 
 ```
 <derived-table> ::=
-   ( <select-statement> ) 
-   	[ AS ] <correlation-name> [ ( <column-name>, ... ) ]
+   ( <select-statement> ) [ AS ] <correlation-name> [ ( <column-name>, ... ) ]
 ```
 
 ```
 <join-expression> ::=
    <table-expression> <join-operator> <table-expression>
-   	[ ON <join-condition> ]
+   [ ON <join-condition> ]
 ```
 
 ```
 <join-operator> ::=
-   [ KEY | NATURAL ] [ <join-type> ] JOIN | CROSS JOIN
+   [ { KEY | NATURAL } ] { [ <join-type> ] JOIN | CROSS JOIN }
 ```
 
 ```
 <join-type> ::=
-   INNER
-     | LEFT [ OUTER ]
-     | RIGHT [ OUTER ]
-     | FULL [ OUTER ]
+   { INNER
+   | LEFT [ OUTER ]
+   | RIGHT [ OUTER ]
+   | FULL [ OUTER ] }
 ```
 
 ```
 <openstring-expression> ::=
    OPENSTRING ( { FILE | VALUE } <string-expression> )
-     WITH ( <rowset-schema> ) 
-   	[ OPTION ( <scan-option> ...  ) ]
-   	[ AS ] <correlation-name>
+   WITH ( <rowset-schema> ) 
+   [ OPTION ( <scan-option> ...  ) ]
+   [ AS ] <correlation-name>
 ```
 
 ```
@@ -100,30 +111,30 @@ Specifies the database tables or views involved in a SELECT statement.
 
 ```
 <contains-expression> ::=
-   { <data_lake_table_name>  | <data_lake_view_name> } CONTAINS 
+   { <table-name>  | <view-name> } CONTAINS 
    ( <column-name> [,...], <contains-query> ) 
    [ [ AS ] <score-correlation-name> ]
 ```
 
 ```
 <rowset-schema> ::=
-   <column-schema-list>
-	   | TABLE [<relational_container_schema_name>.]<data_lake_table_name> [ ( <column-list> ) ]
+   { <column-schema-list>
+   | TABLE [<owner>.]<table-name> [ ( <column-list> ) ] }
 ```
 
 ```
 <column-schema-list> ::=
-   { <column-name user-or-base-type> |  filler( ) } [ , ... ]
+   { <column-name user-or-base-type> | filler( ) } [, ... ]
 ```
 
 ```
 <column-list> ::=
-   { <column-name> | filler( ) } [ , ... ]
+   { <column-name> | filler( ) } [, ... ]
 ```
 
 ```
 <scan-option> ::=
-   BYTE ORDER MARK { ON | OFF }
+   { BYTE ORDER MARK { ON | OFF }
    | COMMENTS INTRODUCED BY <comment-prefix>
    | DELIMITED BY <string>
    | ENCODING <encoding>
@@ -135,7 +146,7 @@ Specifies the database tables or views involved in a SELECT statement.
    | QUOTES { ON | OFF }
    | ROW DELIMITED BY string
    | SKIP <integer>
-   | STRIP { ON | OFF | LTRIM | RTRIM | BOTH }
+   | STRIP { ON | OFF | LTRIM | RTRIM | BOTH } }
 ```
 
 ```
@@ -144,25 +155,30 @@ Specifies the database tables or views involved in a SELECT statement.
 
 ```
 <dml-derived-table> ::=
-   ( <dml-statement>  ) REFERENCING ( [ <table-version-names>  | NONE ] )
+   ( <dml-statement>  ) REFERENCING ( [ { <table-version-names>  | NONE } ] )
 ```
 
 ```
 <dml-statement> ::=
-   <insert-statement> 
-   <update-statement>
-   <delete-statement>
+   { <insert-statement> 
+   | <update-statement>
+   } <delete-statement> }
 ```
 
 ```
 <table-version-names> ::=
-   OLD [ AS ] <correlation-name> [ FINAL [ AS ] <correlation-name> ]
-     | FINAL [ AS ] <correlation-name>
+   { OLD [ AS ] <correlation-name> [ FINAL [ AS ] <correlation-name> ]
+   | FINAL [ AS ] <correlation-name> }
 ```
 
 
 
-<a name="loioccd090fa57a84916b181a47c6ba634e1__IQ_Parameters"/>
+> ### Note:  
+> Sections in this topic are minimized. To expand or recollapse a section, click the title next to the right arrow \(*\>*\).
+
+
+
+<a name="loioccd090fa57a84916b181a47c6ba634e1__section_zbh_wds_wbc"/>
 
 ## Parameters
 
@@ -170,18 +186,18 @@ Specifies the database tables or views involved in a SELECT statement.
 <dl>
 <dt><b>
 
-*<data\_lake\_table\_name\>*
+*<table-name\>*
 
 </b></dt>
 <dd>
 
-A base table or temporary table. Tables owned by a different user can be qualified by specifying the user ID. Tables owned by groups to which the current user belongs are found by default without specifying the user ID. \[,...\]
+A base table or temporary table. Tables owned by a different user can be qualified by specifying the user ID. Tables owned by groups to which the current user belongs are found by default without specifying the user ID.
 
 
 
 </dd><dt><b>
 
-*<data\_lake\_view\_name\>*
+*<view-name\>*
 
 </b></dt>
 <dd>
@@ -197,7 +213,7 @@ Specifies a view to include in the query. As with tables, views owned by a diffe
 </b></dt>
 <dd>
 
-A stored procedure that returns a result set. This clause applies to the FROM clause of SELECT statements only. The parentheses following the procedure name are required even if the procedure does not take parameters. DEFAULT can be specified in place of an optional parameter. \[,…\]
+A stored procedure that returns a result set. This clause applies to the FROM clause of SELECT statements only. The parentheses following the procedure name are required even if the procedure does not take parameters. DEFAULT can be specified in place of an optional parameter.
 
 
 
@@ -218,9 +234,6 @@ If a subquery is used to define the TABLE parameter, then the following restrict
 -   The table-parameter clause must be of type IN.
 -   PARTITION BY or ORDER BY clauses must refer to the columns of the derived table and outer references. An expression in the *<expression-list\>* can be an integer K, which refers to the Kth column of the TABLE input parameter.
 
-> ### Note:  
-> A Table UDF can only be referenced in a FROM clause of a SQL statement.
-
 
 
 </dd><dt><b>
@@ -232,7 +245,7 @@ PARTITION BY
 
 Logically specifies how the invocation of the function will be performed by the execution engine. The execution engine must invoke the function for each partition and the function must process a whole partition in each invocation. PARTITION BY or ORDER BY clauses must refer to the columns of the derived table and outer references. An expression in the expression-list can be an integer K, which refers to the Kth column of the TABLE input parameter.
 
-PARTITION BY clause also specifies how the input data must be partitioned such that each invocation of the function will process exactly one partition of data. The function must be invoked the number of times equal to the number of partitions. For TPF, the parallelism characteristics are established through dynamic negotiation between the server and the UDF at the runtime. If the TPF can be executed in parallel, for N input partitions, the function can be instantiated M times, with M <=N. Each instantiation of the function can be invoked more than once, each invocation consuming exactly one partition.
+PARTITION BY clause also specifies how the input data must be partitioned such that each invocation of the function will process exactly one partition of data. The function must be invoked the number of times equal to the number of partitions.
 
 You can specify only one TABLE input parameter for PARTITION BY *<expression-list\>* or PARTITION BY ANY clause. For all other TABLE input parameters you must specify, explicit or implicit PARTITION BY NONE clause.
 
@@ -248,7 +261,7 @@ ORDER BY
 </b></dt>
 <dd>
 
-Specifies that the input data in each partition is expected to be sorted by *<expression-list\>* by the execution engine. The UDF expects each partition to have this physical property. If only one partition exists, the whole input data is ordered based on the ORDER BY specification. ORDER BY clause can be specified for any of the TABLE input parameters with PARTITION BY NONE or without PARTITION BY clause.
+Specifies that the input data in each partition is expected to be sorted by *<expression-list\>* by the execution engine. If only one partition exists, the whole input data is ordered based on the ORDER BY specification. ORDER BY clause can be specified for any of the TABLE input parameters with PARTITION BY NONE or without PARTITION BY clause.
 
 
 
@@ -280,7 +293,7 @@ The `join-type` keywords are:
 -   RIGHT OUTER JOIN – preserves unmatched rows from the right table, but discards unmatched rows from the left table
 -   FULL OUTER JOIN – retains unmatched rows from both the left and the right tables
 
-Do not mix comma-style joins and keyword-style joins in the FROM clause. The same query can be written two ways, each using one of the join styles. The ANSI syntax keyword style join is preferable.
+Do not mix comma-style joins and keyword-style joins in the `FROM` clause. The same query can be written two ways, each using one of the join styles. The ANSI syntax keyword style join is preferable.
 
 The ON clause filters the data of inner, left, right, and full joins. Cross joins do not have an ON clause. In an inner join, the ON clause is equivalent to a WHERE clause. In outer joins, however, the ON and WHERE clauses are different. The ON clause in an outer join filters the rows of a cross product and then includes in the result the unmatched rows extended with nulls. The WHERE clause then eliminates rows from both the matched and unmatched rows produced by the outer join. You must take care to ensure that unmatched rows you want are not eliminated by the predicates in the WHERE clause.
 
@@ -348,41 +361,45 @@ Use this parameter to return a result set from an XML document, by using the OPE
 
 
 
-<a name="loioccd090fa57a84916b181a47c6ba634e1__IQ_Usage"/>
+<a name="loioccd090fa57a84916b181a47c6ba634e1__section_otx_wds_wbc"/>
 
 ## Remarks
 
-The SELECT statement requires a table list to specify which tables are used by the statement.
+The `SELECT` statement requires a table list to specify which tables are used by the statement.
 
 > ### Note:  
 > Although this description refers to tables, it also applies to views unless otherwise noted.
 
-The FROM table list creates a result set consisting of all the columns from all the tables specified. Initially, all combinations of rows in the component tables are in the result set, and the number of combinations is reduced by join conditions and/or WHERE conditions.
+The `FROM` table list creates a result set consisting of all the columns from all the tables specified. Initially, all combinations of rows in the component tables are in the result set, and the number of combinations is usually reduced by join conditions and/or `WHERE` conditions.
 
-Tables owned by a different user can be qualified by specifying the *<userid\>*. Tables owned by roles to which the current user belongs are found by default without specifying the user ID.
+Tables owned by a different user can be qualified by specifying the *<owner\>*. Tables owned by roles to which the current user belongs are found by default without specifying the user ID.
 
-The correlation name is used to give a temporary name to the table for this SQL statement only. This name is useful when referencing columns that must be qualified by a table name but the table name is long and cumbersome to type. The correlation name is also necessary to distinguish between table instances when referencing the same table more than once in the same query. If no correlation name is specified, then the table name is used as the correlation name for the current statement.
+The correlation name is used to give a temporary name to the table for this SQL statement only. This is useful when referencing columns that must be qualified by a table name but the table name is long and cumbersome to type. The correlation name is also necessary to distinguish between table instances when referencing the same table more than once in the same query. If no correlation name is specified, then the table name is used as the correlation name for the current statement.
 
 If the same correlation name is used twice for the same table in a table expression, that table is treated as if it were only listed once. For example, in:
 
 ```
-SELECT * FROM SALESORDERS
-   KEY JOIN SALESORDERITEMS, SALESORDESR
-   KEY JOIN EMPLOYEES
+SELECT *
+FROM SalesOrders
+KEY JOIN SalesOrderItems,
+SalesOrders
+KEY JOIN Employees;
 ```
 
-The two instances of the SALESORDERS table are treated as one instance that is equivalent to:
+The two instances of the `SalesOrders` table are treated as one instance that is equivalent to:
 
 ```
-SELECT * FROM SALESORDERITEMS
-   KEY JOIN SALESORDERS
-   KEY JOIN EMPLOYEES
+SELECT *
+FROM SalesOrderItems
+KEY JOIN SalesOrders
+KEY JOIN Employees;
 ```
 
-By contrast, the following is treated as two instances of the `PERSON` table, with different correlation names HUSBAND and WIFE:
+By contrast, the following is treated as two instances of the `Person` table, with different correlation names HUSBAND and WIFE:
 
 ```
-SELECT * FROM PERSON HUSBAND, PERSON WIFE
+SELECT *
+FROM Person HUSBAND, Person WIFE;
 ```
 
 Join columns require like data types for optimal performance.
@@ -391,104 +408,196 @@ Join columns require like data types for optimal performance.
 
 ### Performance Considerations
 
-Depending on the query, data lake Relational Engine allows from 16 through 64 tables in the FROM clause with the optimizer turned on. However, performance can suffer if you have more than 16–18 tables in the FROM clause in complex queries.
+Depending on the query, data lake Relational Engine allows between 16 and 64 tables in the `FROM` clause with the optimizer turned on; however, performance might suffer if you have more than 16 to 18 tables in the `FROM` clause in very complex queries.
 
 > ### Note:  
-> If you omit the FROM clause, or if all tables in the query are in the SYSTEM dbspace, the query is processed by the SQL front end instead of data lake Relational Engine and could behave differently, especially with respect to syntactic and semantic restrictions and the effects of option settings.
+> If you omit the `FROM` clause, or if all tables in the query are in the `SYSTEM` dbspace, the query is processed by SAP SQL Anywhere instead of data lake Relational Engine and might behave differently, especially with respect to syntactic and semantic restrictions and the effects of option settings.
 > 
-> If you have a query that doesn’t require a FROM clause, you can force the query to be processed by data lake Relational Engine by adding the clause FROM IQ\_DUMMY, where IQ\_DUMMY is a one-row, one-column table that you create in your database.
-
-Must be connected to the database.
+> If you have a query that does not require a `FROM` clause, you can force the query to be processed by data lake Relational Engine by adding the clause `FROM iq_dummy`, where `iq_dummy` is a one-row, one-column table that you create in your database.
 
 
 
-<a name="loioccd090fa57a84916b181a47c6ba634e1__IQ_Standards"/>
+<a name="loioccd090fa57a84916b181a47c6ba634e1__section_fwj_rhs_wbc"/>
+
+## Privileges
+
+
+
+### 
+
+
+<dl>
+<dt><b>
+
+Connected to SAP HANA database as a SAP HANA database user.:
+
+</b></dt>
+<dd>
+
+Requires one of:
+
+-   You are a member of the container administrator role, \(SYSHDL\_*<relational\_container\_name\>*\_ROLE\), for the relational container.
+-   EXECUTE permission on the SAP HANA database REMOTE\_EXECUTE procedure associated with the data lake Relational Engine relational container \(SYSHDL\_*<relational\_container\_name\>*\).
+
+-   See [REMOTE\_EXECUTE Guidance and Examples for Executing SQL Statements](remote-execute-guidance-and-examples-for-executing-sql-statements-fd99ac0.md).
+
+
+
+
+</dd><dt><b>
+
+Connected directly to data lake Relational Engine as a data lake Relational Engine user:
+
+</b></dt>
+<dd>
+
+Besides the privileges required to use the `SELECT`, `DELETE` or `UPDATE` statements, the following clauses require additional privileges:
+
+
+<table>
+<tr>
+<th valign="top">
+
+Clause
+
+</th>
+<th valign="top">
+
+Privilege Required
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+FILE clause of *<openstring-expression\>*
+
+</td>
+<td valign="top">
+
+READ FILE system privilege
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+TABLE clause of *<openstring-expression\>*
+
+</td>
+<td valign="top">
+
+Requires one of the following:
+
+-   You own the referenced tables
+-   SELECT ANY TABLE object privilege.
+
+
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+All other clauses
+
+</td>
+<td valign="top">
+
+None
+
+</td>
+</tr>
+</table>
+
+
+
+</dd>
+</dl>
+
+
+
+<a name="loioccd090fa57a84916b181a47c6ba634e1__section_pvh_ths_wbc"/>
 
 ## Standards
 
 -   SQL – ISO/ANSI SQL compliant
+-   SAP database products – the `JOIN` clause is not supported in some versions of SAP Adaptive Server Enterprise. Instead, you must use the `WHERE` clause to build joins
 
 
 
-<a name="loioccd090fa57a84916b181a47c6ba634e1__IQ_Examples"/>
+<a name="loioccd090fa57a84916b181a47c6ba634e1__section_qk1_5hs_wbc"/>
 
 ## Examples
 
--   The following example shows valid FROM clauses:
+-   The following example shows valid `FROM` clauses:
 
     ```
     ...
-    FROM EMPLOYEES
+    FROM Employees
     ...
     ...
-    FROM EMPLOYEES NATURAL JOIN DEPARTMENTS
+    FROM Employees NATURAL JOIN Departments
     ...
     ...
-    FROM CUSTOMERS
-    KEY JOIN SALESORDERS
-    KEY JOIN SALESORDERITEMS
-    KEY JOIN PRODUCTS
-    ...
+    FROM Customers
+    KEY JOIN SalesOrders
+    KEY JOIN SalesOrderItems
+    KEY JOIN Products
+    ...;
     ```
 
 -   The following example shows a query that illustrates how to use derived tables in a query:
 
     ```
-    SELECT SURNAME, GIVENNAME, NUMBER_OF_ORDERS
-    FROM CUSTOMERS JOIN
-         ( SELECT CUSTOMERID, COUNT(*)
-           FROM SALESORDERS
-            GROUP BY CUSTOMERID )
-         AS SALES_ORDER_COUNTS ( CUSTOMERID,  NUMBER_OF_ORDERS )
-       ON ( CUSTOMERS.ID = SALES_ORDER_COUNTS.CUST_ID )
-       WHERE NUMBER_OF_ORDERS > 3
+    SELECT Surname, GivenName, number_of_orders
+    FROM Customers JOIN
+         ( SELECT CustomerID, count(*)
+           FROM SalesOrders
+            GROUP BY CustomerID )
+         AS sales_order_counts ( CustomerID, 
+                                 number_of_orders )
+    ON ( Customers.ID = sales_order_counts.cust_id )
+    WHERE number_of_orders > 3;
     ```
 
--   The following example shows a query that illustrates a valid FROM clause where the two references to the same table T are treated as two different instances of the same table T:
+-   The following example shows a query that illustrates a valid `FROM` clause where the two references to the same table T are treated as two different instances of the same table T:
 
     ```
-    SELECT * FROM T, MY_PROC(TABLE(SELECT T.Z, T.X FROM T)
-       OVER(PARTITION BY T.Z));
-    ```
-
--   The following example uses a table parameterized function \(TPF\) and illustrates a valid FROM clause:
-
-    ```
-    SELECT * FROM R, SELECT * FROM MY_UDF(1);
-    SELECT * FROM MY_TPF(1, TABLE(SELECT C1, C2 FROM T))
-       (MY_PROC(R.X, TABLE T OVER PARTITION BY T.X)) AS XX;
+    SELECT * FROM T, my_proc(TABLE(SELECT T.Z, T.X FROM T)
+    OVER(PARTITION BY T.Z));
     ```
 
 -   The following example contains a derived table, MyDerivedTable, which ranks products in the Products table by UnitPrice:
 
     ```
     SELECT TOP 3 *
-      FROM ( SELECT DESCRIPTION, 
-             QUANTITY, 
-             UNITPRICE,
-             RANK() OVER ( ORDER BY UNITPRICE ASC ) 
-             AS RANT 
-             FROM PRODUCTS ) AS MYDERIVEDTABLE
-             ORDER BY RANK;
+      FROM ( SELECT Description, 
+             Quantity, 
+             UnitPrice,
+             RANK() OVER ( ORDER BY UnitPrice ASC ) 
+             AS Rank 
+             FROM Products ) AS MyDerivedTable
+             ORDER BY Rank;
     ```
 
--   The following example shows a query that uses a comma-style join:
+-   The following example shows query uses a comma-style join:
 
     ```
     SELECT *
-      FROM PRODUCTS PR, SALESPRDERS SO, SALESORDERITEMS SI
-      WHERE PR.PRODUCTID = SO.PRODUCTID
-        AND PR.PRODUCTID = SI.PRODUCTID;
+      FROM Products pr, SalesOrders so, SalesOrderItems si
+      WHERE pr.ProductID = so.ProductID
+        AND pr.ProductID = si.ProductID;
     ```
 
     The same query can use the preferable keyword-style join:
 
     ```
     SELECT *
-      FROM PRODUCTS PR INNER JOIN SALESPRDERS SO
-        ON (PR.PRODUCTID = SO.PRODUCTID)
-      INNER JOIN SALESORDERITEMS SI
-        ON (PR.PRODUCTID = SI.PRODUCTID);
+      FROM Products pr INNER JOIN SalesOrders so
+        ON (pr.ProductID = so.ProductID)
+      INNER JOIN SalesOrderItems si
+        ON (pr.ProductID = si.ProductID);
     ```
 
 
@@ -496,4 +605,10 @@ Must be connected to the database.
 
 
 [SELECT Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](select-statement-for-data-lake-relational-engine-sap-hana-db-managed-7123f8b.md "Retrieves information from the database.")
+
+[DELETE Statement for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a61b555884f21015bfb8d2d61d09b74c.html "Deletes all the rows from the named table that satisfy the search condition. If no WHERE clause is specified, all rows from the named table are deleted.") :arrow_upper_right:
+
+[UPDATE Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](update-statement-for-data-lake-relational-engine-sap-hana-db-managed-2de4f7a.md "Modifies existing rows of a single table, or a view that contains only one table.")
+
+[FROM Clause for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/a7749cf084f21015b73b899c1520fb06.html "Specifies the objects involved in a SELECT, DELETE or UPDATE statement.") :arrow_upper_right:
 

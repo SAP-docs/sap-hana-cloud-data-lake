@@ -121,5 +121,5 @@ UT,                          TOLOCALTIME(UT)
 **Related Information**  
 
 
-[TOLOCALTIME Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/b472502b94a84aa78fd78db19b985f66.html "Converts a TIMESTAMP WITH TIME ZONE value, or a TIMESTAMP value (which is assumed to be in Coordinated Universal Time (UTC)), to a timestamp value that corresponds to the server’s local time using the standard time or daylight saving time rules for the server’s locale.") :arrow_upper_right:
+[TOLOCALTIME Function \[Date and Time\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/b472502b94a84aa78fd78db19b985f66.html "Converts a TIMESTAMP WITH TIME ZONE value, or a TIMESTAMP value (which is assumed to be in Coordinated Universal Time (UTC)), to a timestamp value that corresponds to the server’s local time using the standard time or daylight saving time rules for the server’s locale.") :arrow_upper_right:
 

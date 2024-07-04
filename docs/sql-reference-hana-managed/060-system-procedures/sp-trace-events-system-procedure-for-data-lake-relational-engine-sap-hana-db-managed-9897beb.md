@@ -288,7 +288,7 @@ Connected directly to data lake Relational Engine **coordinator** as a data lake
 
 Requires all of the following:
 
--   EXECUTE object-level privilege on the procedure
+-   EXECUTE object-level privilege on this procedure
 -   MANAGE ANY TRACE SESSION system privilege
 -   MANAGE AUDITING system privilege
 
@@ -317,7 +317,7 @@ None.
 
 ## Examples
 
-This statement returns a list of all trace events:
+This example returns a list of all trace events:
 
 ```
 CALL sp_trace_events( );
@@ -420,114 +420,6 @@ Warning Console Log messages
 <td valign="top">
 
 150
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-SYS\_ConsoleLog\_Information
-
-</td>
-<td valign="top">
-
-Informational Console Log messages
-
-</td>
-<td valign="top">
-
-200
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-SYS\_Mirroring\_Log
-
-</td>
-<td valign="top">
-
-event for current mirror logging
-
-</td>
-<td valign="top">
-
-250
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-SYS\_RLL\_ReqConnect
-
-</td>
-<td valign="top">
-
-Request of CONNECT
-
-</td>
-<td valign="top">
-
-200
-
-</td>
-<td valign="top">
-
-1
-
-</td>
-<td valign="top">
-
-0
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-SYS\_RLL\_ResConnect
-
-</td>
-<td valign="top">
-
-Response of CONNECT
-
-</td>
-<td valign="top">
-
-200
 
 </td>
 <td valign="top">
@@ -728,5 +620,5 @@ event for current http logging
 **Related Information**  
 
 
-[sp_trace_event_sessions System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/8179c9326ce210149a84c8b4621ed3d9.html "Returns a list of the trace event sessions that are defined for the database.") :arrow_upper_right:
+[sp_trace_event_sessions System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/8179c9326ce210149a84c8b4621ed3d9.html "Returns a list of the trace event sessions that are defined for the database.") :arrow_upper_right:
 

@@ -52,7 +52,7 @@ This function converts its argument to DOUBLE, performs the computation in doubl
 
 <a name="loioa540f97a84f21015bfc68a88c0565f03__COT_example1"/>
 
-## Example
+## Examples
 
 The following statement returns the value 1.74653:
 
@@ -65,5 +65,5 @@ SELECT COT( 0.52 ) FROM iq_dummy;
 
 [Trigonometry Functions in Data Lake Relational Engine](trigonometry-functions-in-data-lake-relational-engine-caafd14.md "Some numeric functions return trigonometric information.")
 
-[COT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/efe32d94c2374ba4a64f6cac2dfe2cbc.html "Returns the cotangent of a number, expressed in radians.") :arrow_upper_right:
+[COT Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/efe32d94c2374ba4a64f6cac2dfe2cbc.html "Returns the cotangent of a number, expressed in radians.") :arrow_upper_right:
 

@@ -65,5 +65,5 @@ LONG BINARY
 **Related Information**  
 
 
-[BYTE_INSERTSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/a8656a236f5a4afdb003988d8f040939.html "Inserts a string into another string at a position specified in bytes.") :arrow_upper_right:
+[BYTE_INSERTSTR Function for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/a8656a236f5a4afdb003988d8f040939.html "Inserts a string into another string at a position specified in bytes.") :arrow_upper_right:
 

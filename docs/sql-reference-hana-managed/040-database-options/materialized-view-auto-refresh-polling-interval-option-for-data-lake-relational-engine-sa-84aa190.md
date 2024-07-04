@@ -12,7 +12,7 @@ Controls the amount of time \(in minutes\) between polling refresh requests exec
 
 This data lake Relational Engine \(SAP HANA DB-Managed\) database option can be set when:
 
--   Connected to SAP HANA database as a SAP HANA database user..
+-   Connected to SAP HANA database as a SAP HANA database user.
 -   Connected directly to data lake Relational Engine as a data lake Relational Engine user.
 
 
@@ -175,7 +175,7 @@ No
 **Related Information**  
 
 
-[MATERIALIZED_VIEW_AUTO_REFRESH_POLLING_INTERVAL Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/beb258e2c5044c44aebc49f3d6318ca2.html "Controls the amount of time (in minutes) between polling refresh requests executed by the materialized view auto refresh manager.") :arrow_upper_right:
+[MATERIALIZED_VIEW_AUTO_REFRESH_POLLING_INTERVAL Option for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/beb258e2c5044c44aebc49f3d6318ca2.html "Controls the amount of time (in minutes) between polling refresh requests executed by the materialized view auto refresh manager.") :arrow_upper_right:
 
 [SET OPTION Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/set-option-statement-for-data-lake-relational-engine-sap-hana-db-managed-84a37a4.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 

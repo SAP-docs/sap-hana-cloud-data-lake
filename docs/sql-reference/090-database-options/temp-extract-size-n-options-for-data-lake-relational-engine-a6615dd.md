@@ -199,7 +199,7 @@ The TEMP\_EXTRACT\_SIZE*<n\>* options are not compatible with TEMP\_EXTRACT\_APP
 
 [SET OPTION Statement for Data Lake Relational Engine](../080-sql-statements/set-option-statement-for-data-lake-relational-engine-a625da7.md "Changes options that affect the behavior of the database and its compatibility with Transact-SQL. Setting the value of an option can change the behavior for all users or an individual user, in either a temporary or permanent scope.")
 
-[TEMP_EXTRACT_SIZE<N> Options for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/c475f53096e540a9840e2f2e4c584ad4.html "Specifies the maximum sizes of the corresponding output files used by the data extraction facility.") :arrow_upper_right:
+[TEMP_EXTRACT_SIZE<N> Options for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/c475f53096e540a9840e2f2e4c584ad4.html "Specifies the maximum sizes of the corresponding output files used by the data extraction facility.") :arrow_upper_right:
 
 [TEMP\_EXTRACT\_NAME<N\> Option for Data Lake Relational Engine](temp-extract-name-n-option-for-data-lake-relational-engine-a65dd19.md "Specifies the data lake Filescontainer object file name, or theAzure block blob name, or the Amazon S3 bucket object name you’re extracting to. You must specify the name when extracting data from data lake Relational Engine to cloud storage.")
 

@@ -142,3 +142,5 @@ GRANT MONITOR TO Jane WITH ADMIN ONLY OPTION;
 
 [REVOKE System Privilege Statement for Data Lake Relational Engine](revoke-system-privilege-statement-for-data-lake-relational-engine-a3eadda.md "Removes specific system privileges from specific users and the right to administer the privilege.")
 
+[GRANT System Privilege Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/c039f62f0ec349a99f4f2bc016176c8c.html "Grants specific system privileges to users or roles, with or without administrative rights.") :arrow_upper_right:
+

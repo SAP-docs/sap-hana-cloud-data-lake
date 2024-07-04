@@ -178,8 +178,15 @@ Connected directly to data lake Relational Engine as a data lake Relational Engi
 </b></dt>
 <dd>
 
-Requires EXECUTE object-level privilege on the procedure, along with one of the following:
+Requires all of the following:
 
+-   EXECUTE object-level privilege on this procedure
+-   ALTER ANY MATERIALIZED VIEW system privilege
+
+You also require one of the following:
+
+-   You own the underlying table of the view
+-   SELECT ANY TABLE system privilege
 -   SELECT object-level privilege on the view and its underlying tables
 -   SELECT object-level privilege on the schema of the materialized view and its underlying tables if the schema is owned by another user
 
@@ -247,5 +254,5 @@ The materialized view mv1 cannot be changed to incremental or immediate because 
 
 [REFRESH MATERIALIZED VIEW Statement for Data Lake Relational Engine \(SAP HANA DB-Managed\)](../030-sql-statements/refresh-materialized-view-statement-for-data-lake-relational-engine-sap-hana-db-managed-817277b.md "Initializes or refreshes the data in a materialized view by executing its query definition.")
 
-[sa_materialized_view_can_have_refresh_build_type System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/7d2d2da5be7e45eaa465aa7f13cde013.html "Checks whether the materialized view supports the specified refresh and build type properties.") :arrow_upper_right:
+[sa_materialized_view_can_have_refresh_build_type System Procedure for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/7d2d2da5be7e45eaa465aa7f13cde013.html "Checks whether the materialized view supports the specified refresh and build type properties.") :arrow_upper_right:
 

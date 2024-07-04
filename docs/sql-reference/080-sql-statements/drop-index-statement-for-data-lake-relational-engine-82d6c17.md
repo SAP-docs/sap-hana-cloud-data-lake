@@ -59,8 +59,6 @@ DROP INDEX is prevented whenever the statement affects a table that is currently
 
 For a nonunique HG index, DROP INDEX fails if an associated unenforced foreign key exists.
 
-> ### Caution:  
-
 
 
 <a name="loio82d6c17a134e4837865c91016a2847c4__dorp_index_priv1"/>
@@ -116,5 +114,5 @@ DROP INDEX myindex1;
 
 [CREATE INDEX Statement for Data Lake Relational Engine](create-index-statement-for-data-lake-relational-engine-a617ca4.md "Creates an index on a specified table, or pair of tables. Once an index is created, it is never referenced in a SQL statement again except to delete it using the DROP INDEX statement.")
 
-[DROP INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_1_QRC/en-US/52fb1c748541447ebde630204fada322.html "Removes an index from the database.") :arrow_upper_right:
+[DROP INDEX Statement for Data Lake Relational Engine (SAP HANA DB-Managed)](https://help.sap.com/viewer/a898e08b84f21015969fa437e89860c8/2024_3_QRC/en-US/52fb1c748541447ebde630204fada322.html "Removes an index from the database.") :arrow_upper_right:
 

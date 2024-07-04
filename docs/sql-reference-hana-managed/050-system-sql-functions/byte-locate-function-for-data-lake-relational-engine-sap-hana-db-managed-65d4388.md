@@ -89,5 +89,5 @@ SELECT BYTE_LOCATE(
 **Related Information**  
 
 
-[BYTE_LOCATE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_1_QRC/en-US/6b6d91ad148841f781fb65d0a68a8b82.html "Returns the position of one BYTE string within another.") :arrow_upper_right:
+[BYTE_LOCATE Function \[String\] for Data Lake Relational Engine](https://help.sap.com/viewer/19b3964099384f178ad08f2d348232a9/2024_3_QRC/en-US/6b6d91ad148841f781fb65d0a68a8b82.html "Returns the position of one BYTE string within another.") :arrow_upper_right:
 
