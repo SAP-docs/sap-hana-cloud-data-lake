@@ -1,8 +1,0 @@
-Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: sap-hana-cloud-data-lake
-Upstream-Contact: Aaron Patkau (aaron.patkau@sap.com)
-Source: https://github.com/sap-docs/sap-hana-cloud-data-lake
-
-Files: *
-Copyright:  2023 SAP SE or an SAP affiliate company and sap-hana-cloud-data-lake contributors
-License: CC-BY-4.0
