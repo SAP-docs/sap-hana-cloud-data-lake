@@ -1,0 +1,10 @@
+version = 1
+SPDX-PackageName = "sap-hana-cloud-data-lake"
+SPDX-PackageSupplier = "Aaron Patkau (aaron.patkau@sap.com)"
+SPDX-PackageDownloadLocation = "https://github.com/sap-docs/sap-hana-cloud-data-lake"
+
+[[annotations]]
+path = "**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023 SAP SE or an SAP affiliate company and sap-hana-cloud-data-lake contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
